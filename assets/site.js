@@ -26,3 +26,17 @@ document.querySelectorAll('.footer-grid').forEach(footer=>{
     if(target){const a=document.createElement('a');a.href='gallery.html';a.textContent='Gallery';target.appendChild(a);}
   }
 });
+
+// Keep Press & Archives available across the canonical site.
+document.querySelectorAll('nav.links').forEach(nav=>{
+  if(!nav.querySelector('a[href="press.html"]')){
+    const press=document.createElement('a'); press.href='press.html'; press.textContent='Press & Archives';
+    const give=nav.querySelector('.givebtn'); if(give) nav.insertBefore(press,give); else nav.appendChild(press);
+  }
+});
+document.querySelectorAll('.footer-grid').forEach(footer=>{
+  if(!footer.querySelector('a[href="press.html"]')){
+    const cols=footer.querySelectorAll('div'); const target=cols[1]||cols[0];
+    if(target){const a=document.createElement('a');a.href='press.html';a.textContent='Press & Archives';target.appendChild(a);}
+  }
+});
