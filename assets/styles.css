@@ -72,3 +72,9 @@ footer{background:#1f302e;color:#edf0ed;padding:58px 0 28px}.footer-grid{display
 .album-page-2{background-image:url('cti-1972-anniversary-celebration-photos-2.jpg');background-size:430% auto}
 .album-crop.crop-1{background-position:25% 30%}.album-crop.crop-2{background-position:62% 30%}.album-crop.crop-3{background-position:24% 48%}.album-crop.crop-4{background-position:62% 48%}.album-crop.crop-5{background-position:22% 69%}.album-crop.crop-6{background-position:62% 69%}
 @media(max-width:650px){.history-row{grid-template-columns:64px 2px 1fr;gap:14px}.history-thumb{width:64px;height:64px}.history-line:before{top:26px}}
+
+/* Individually restored anniversary-album photographs */
+.album-photo{margin:0}
+.album-photo a{display:block;border-radius:10px;overflow:hidden;background:var(--cream);box-shadow:0 3px 12px rgba(0,0,0,.12)}
+.album-photo img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.album-photo figcaption{padding:8px 2px;color:var(--muted);font-size:13px}
