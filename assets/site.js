@@ -33,4 +33,8 @@ document.querySelectorAll('.footer-grid').forEach(footer=>{
   if(target&&!target.querySelector('a[href="press.html"]')){
     const a=document.createElement('a');a.href='press.html';a.textContent='Press & Archives';target.appendChild(a);
   }
+  const connect=cols[2]||target;
+  if(connect&&!connect.querySelector('a[href="rabbi-bio.html#zoom-torah-class"]')){
+    const a=document.createElement('a');a.href='rabbi-bio.html#zoom-torah-class';a.textContent='Weekly Zoom Torah Class';connect.appendChild(a);
+  }
 });
