@@ -9,4 +9,29 @@
 <figure class="gallery-card" id="anniversary-album"><a class="gallery-image-link" href="assets/cti-1972-anniversary-celebration-photos-1.jpg" target="_blank"><img alt="Historic photographs from a CTI anniversary celebration album" loading="lazy" src="assets/cti-1972-anniversary-celebration-photos-1.jpg"/></a><figcaption><div class="section-kicker">Photo Album</div><h3>Anniversary Celebration Album</h3><p>Open the album to view the individual photographs separately.</p></figcaption></figure>
 <figure class="gallery-card" id="cti-2006"><a class="gallery-image-link" href="assets/cti-community-members-photo-2006.jpg" target="_blank"><span class="rotated-photo-frame"><img class="photo-rotate-ccw" alt="Photograph preserved with CTI 2006 kitchen dedication materials, handwritten label preserved" loading="lazy" src="assets/cti-community-members-photo-2006.jpg"/></span></a><figcaption><div class="section-kicker">2006</div><h3>Community Photograph</h3><p>A congregational photograph preserved with the kitchen-dedication materials.</p></figcaption></figure>
 <figure class="gallery-card" id="peabody-1958"><a class="gallery-image-link" href="https://images.openai.com/static-rsc-1/bRKT8q8cQ6YJIjpcUOzByrVd_OyizxLvbTGysp9P80Hhf1x-EnWw1FeVPczy5g2BZjWIHlp6z6jr8zQ6F9anBuv-ae4CAXsDojyfo5NQP-Iba_KCGYax61prm4l6h9PhgaEHZySx32GBZ7zosH856A" target="_blank"><img alt="Menorah lighting at the Peabody Hebrew School in 1958" loading="lazy" src="https://images.openai.com/static-rsc-1/bRKT8q8cQ6YJIjpcUOzByrVd_OyizxLvbTGysp9P80Hhf1x-EnWw1FeVPczy5g2BZjWIHlp6z6jr8zQ6F9anBuv-ae4CAXsDojyfo5NQP-Iba_KCGYax61prm4l6h9PhgaEHZySx32GBZ7zosH856A"/></a><figcaption><div class="section-kicker">Peabody Jewish History</div><h3>Jewish Life in Peabody, 1958</h3><p>Regional Jewish-history context; not identified as a CTI photograph.</p></figcaption></figure>
-</div><div class="notice gallery-note"><strong>Photographs and albums.</strong> Select an image to continue to the person, historical topic, or album it documents. Text-based artifacts are kept in Press & Archives and the History timeline.</div></div></section></main><footer><div class="wrap"><div class="footer-grid"><div><h4>Congregation Tifereth Israel</h4><p>8 Pierpont Street<br/>Peabody, Massachusetts 01960</p><p><a href="mailto:info@ctipeabody.org">info@ctipeabody.org</a><br/><a href="tel:+19785318135">978-531-8135</a></p></div><div><h4>Explore</h4><a href="about.html">About</a><a href="history.html">History</a><a href="leadership.html">Leadership Team</a><a href="gallery.html">Gallery</a></div><div><h4>Connect</h4><a href="newsletter.html">Newsletter</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a><a href="give.html">Membership &amp; Give</a></div></div><div class="copyright">© Congregation Tifereth Israel. All rights reserved.</div></div></footer><script src="assets/site.js"></script></body></html>
+</div><div class="notice gallery-note"><strong>Photographs and albums.</strong> Select an image to continue to the person, historical topic, or album it documents. Text-based artifacts are kept in Press & Archives and the History timeline.</div></div></section><div id="gallery-lightbox" class="gallery-lightbox" hidden role="dialog" aria-modal="true" aria-label="Full-size photograph"><button class="gallery-lightbox-close" type="button" aria-label="Close full-size photograph">×</button><img alt=""/></div></main><footer><div class="wrap"><div class="footer-grid"><div><h4>Congregation Tifereth Israel</h4><p>8 Pierpont Street<br/>Peabody, Massachusetts 01960</p><p><a href="mailto:info@ctipeabody.org">info@ctipeabody.org</a><br/><a href="tel:+19785318135">978-531-8135</a></p></div><div><h4>Explore</h4><a href="about.html">About</a><a href="history.html">History</a><a href="leadership.html">Leadership Team</a><a href="gallery.html">Gallery</a></div><div><h4>Connect</h4><a href="newsletter.html">Newsletter</a><a href="resources.html">Resources</a><a href="contact.html">Contact</a><a href="give.html">Membership &amp; Give</a></div></div><div class="copyright">© Congregation Tifereth Israel. All rights reserved.</div></div></footer><script src="assets/site.js"></script><script>
+(function(){
+  const box=document.getElementById('gallery-lightbox');
+  if(!box) return;
+  const full=box.querySelector('img');
+  const close=()=>{box.hidden=true;full.removeAttribute('src');document.body.style.overflow='';};
+  document.querySelectorAll('.gallery-image-link').forEach(a=>{
+    a.removeAttribute('target');
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      full.src=a.href;
+      full.alt=(a.querySelector('img')||{}).alt||'Full-size photograph';
+      box.hidden=false;
+      document.body.style.overflow='hidden';
+    });
+  });
+  box.querySelector('button').addEventListener('click',close);
+  box.addEventListener('click',e=>{if(e.target===box) close();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!box.hidden) close();});
+})();
+</script><style>
+.gallery-lightbox[hidden]{display:none}
+.gallery-lightbox{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.94);display:flex;align-items:center;justify-content:center;padding:2rem}
+.gallery-lightbox img{max-width:96vw;max-height:94vh;object-fit:contain}
+.gallery-lightbox-close{position:fixed;top:1rem;right:1.25rem;background:transparent;border:0;color:#fff;font-size:2.5rem;cursor:pointer}
+</style></body></html>
