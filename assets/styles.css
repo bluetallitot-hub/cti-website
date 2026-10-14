@@ -89,3 +89,6 @@ footer{background:#1f302e;color:#edf0ed;padding:58px 0 28px}.footer-grid{display
 /* Preserve the full 1922 founders plaque and its handwritten details in the archive index. */
 .archive-index-card .archive-thumb-founders{height:clamp(280px,32vw,390px);object-fit:contain;object-position:center;padding:8px;box-sizing:border-box}
 .archive-index-card .archive-photo-caption{font-size:.9rem;line-height:1.45;margin:0 0 12px}
+
+/* Presidents plaque: show the complete inscription at the same generous scale as the founders plaque. */
+.archive-index-card .archive-thumb-presidents{height:clamp(280px,32vw,390px);object-fit:contain;object-position:center;padding:8px;box-sizing:border-box}
