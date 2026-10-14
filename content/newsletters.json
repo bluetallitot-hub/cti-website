@@ -1,0 +1,25 @@
+{
+  "issues": [
+    {
+      "title": "September 2026 Newsletter",
+      "date": "2026-09-01",
+      "volume": "Volume 56, No. 5",
+      "description": "Includes September and October congregational news, service dates, announcements, birthdays, anniversaries, and Meldathos.",
+      "url": "https://ctipeabody.org/newsletter.pdf"
+    },
+    {
+      "title": "July 2026 Newsletter",
+      "date": "2026-07-01",
+      "volume": "Volume 56, No. 4",
+      "description": "Includes July and August congregational news and service information.",
+      "url": ""
+    },
+    {
+      "title": "May 2026 Newsletter",
+      "date": "2026-05-01",
+      "volume": "",
+      "description": "Archived CTI newsletter issue.",
+      "url": "assets/cti-newsletter-may-2026.pdf"
+    }
+  ]
+}
