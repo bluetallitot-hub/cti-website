@@ -1,0 +1,70 @@
+{
+  "services": [
+    {
+      "date": "2026-10-16",
+      "time": "7:30 PM",
+      "location": "In person",
+      "description": "Monthly Shabbat Service"
+    },
+    {
+      "date": "2026-11-13",
+      "time": "7:30 PM",
+      "location": "In person",
+      "description": "Monthly Shabbat Service"
+    },
+    {
+      "date": "2026-12-11",
+      "time": "7:30 PM",
+      "location": "Zoom only",
+      "description": "Monthly Shabbat Service"
+    },
+    {
+      "date": "2027-01-07",
+      "time": "7:30 PM",
+      "location": "Zoom only",
+      "description": "Monthly Shabbat Service"
+    },
+    {
+      "date": "2027-02-12",
+      "time": "7:30 PM",
+      "location": "Zoom only",
+      "description": "Monthly Shabbat Service"
+    },
+    {
+      "date": "2027-03-12",
+      "time": "7:30 PM",
+      "location": "In person",
+      "description": "Monthly Shabbat Service"
+    },
+    {
+      "date": "2027-04-09",
+      "time": "7:30 PM",
+      "location": "In person",
+      "description": "Monthly Shabbat Service"
+    },
+    {
+      "date": "2027-05-07",
+      "time": "7:30 PM",
+      "location": "In person",
+      "description": "Monthly Shabbat Service"
+    },
+    {
+      "date": "2027-06-11",
+      "time": "7:30 PM",
+      "location": "In person",
+      "description": "Monthly Shabbat Service"
+    },
+    {
+      "date": "2027-07-09",
+      "time": "7:30 PM",
+      "location": "In person",
+      "description": "Monthly Shabbat Service"
+    },
+    {
+      "date": "2027-08-06",
+      "time": "7:30 PM",
+      "location": "In person",
+      "description": "Monthly Shabbat Service"
+    }
+  ]
+}
