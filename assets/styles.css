@@ -92,3 +92,10 @@ footer{background:#1f302e;color:#edf0ed;padding:58px 0 28px}.footer-grid{display
 
 /* Presidents plaque: show the complete inscription at the same generous scale as the founders plaque. */
 .archive-index-card .archive-thumb-presidents{height:clamp(280px,32vw,390px);object-fit:contain;object-position:center;padding:8px;box-sizing:border-box}
+
+/* Rabbi bio: uniform three-card layout, aligned titles, descriptions, and actions. */
+.bio-action-grid>.bio-card{height:100%;gap:0}
+.bio-action-grid>.bio-card .section-kicker{min-height:2.4em}
+.bio-action-grid>.bio-card h3{line-height:1.2;min-height:2.4em;margin:8px 0 12px}
+.bio-action-grid>.bio-card>p:not(.meta){line-height:1.5;flex:1;margin:0 0 18px}
+.bio-action-grid>.bio-card>.btn{display:flex;align-items:center;justify-content:center;min-height:48px;width:100%;box-sizing:border-box;margin-top:auto}
