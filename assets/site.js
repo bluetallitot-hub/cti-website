@@ -1,3 +1,12 @@
+// Use the CTI menorah logo as the browser tab and bookmark icon on every page.
+(function(){
+  const icon=document.querySelector('link[rel="icon"]')||document.createElement('link');
+  icon.rel='icon';
+  icon.type='image/png';
+  icon.href=new URL('assets/CTI-logo-web.png',document.baseURI).href;
+  if(!icon.parentNode)document.head.appendChild(icon);
+})();
+
 const btn=document.querySelector('.menu');
 const nav=document.querySelector('.links');
 if(btn&&nav){btn.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);});}
