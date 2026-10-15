@@ -1,0 +1,91 @@
+name: Verify quarantined media references and restore needed assets
+on:
+  push:
+    paths:
+      - .github/workflows/verify-quarantined-media.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Scan references and restore assets actually needed by pages
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, subprocess, re, hashlib, urllib.parse
+          root=Path('.')
+          manifest_path=Path('assets/possible-duplicates/manifest.json')
+          manifest=json.loads(manifest_path.read_text())
+          tracked=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          text_ext={'.html','.css','.js','.json','.md','.xml','.txt','.yml','.yaml','.svg'}
+          excluded={'assets/possible-duplicates/manifest.json','assets/possible-duplicates/README.md','backup-audit/unused-file-audit.json','backup-audit/unused-file-review.md'}
+          sources={}
+          for name in tracked:
+              p=Path(name)
+              if not name or not p.is_file() or p.suffix.lower() not in text_ext or name in excluded or name.startswith('.github/workflows/') or name.startswith('backup-audit/'):continue
+              try:sources[name]=p.read_text(encoding='utf-8')
+              except UnicodeError:continue
+          report=[]
+          for m in manifest:
+              old=m['original_path'];quarantine=m['quarantine_path'];basename=Path(old).name
+              hits=[]
+              for source,s in sources.items():
+                  variants=[quarantine,old,urllib.parse.quote(quarantine),urllib.parse.quote(old),urllib.parse.quote(basename),basename]
+                  matched=[v for v in variants if v in s]
+                  if matched:hits.append({'file':source,'matches':matched[:3]})
+              # A reference to the quarantined path, original path or exact basename is a reason to restore.
+              if hits:
+                  target=Path(old)
+                  # Normalize nonconforming filenames to descriptive lowercase kebab-case.
+                  stem=target.stem
+                  normalized=re.sub(r'[^a-z0-9]+','-',stem.lower()).strip('-')
+                  if not normalized.startswith(('cti-','i-581-')):normalized='cti-'+normalized
+                  target=target.with_name(normalized+target.suffix.lower())
+                  # Preserve historical archive IDs and avoid accidental overwrites.
+                  if target.exists() and hashlib.sha256(target.read_bytes()).hexdigest()!=m['sha256']:
+                      target=target.with_name(target.stem+'-archive'+target.suffix)
+                  target.parent.mkdir(parents=True,exist_ok=True)
+                  subprocess.run(['git','mv',quarantine,str(target)],check=True)
+                  for source,s in list(sources.items()):
+                      new=s
+                      for v in (quarantine,old):
+                          new=new.replace(v,str(target))
+                          new=new.replace(urllib.parse.quote(v),urllib.parse.quote(str(target)))
+                      if basename!=target.name:
+                          new=new.replace(urllib.parse.quote(basename),urllib.parse.quote(target.name))
+                          # Only replace a bare filename where it is an explicit quoted URL/path token.
+                          new=new.replace('/'+basename,'/'+target.name)
+                      if new!=s:
+                          Path(source).write_text(new)
+                          sources[source]=new
+                  m['status']='restored — referenced'
+                  m['restored_path']=str(target)
+                  m['references']=[x['file'] for x in hits]
+                  status='restored'
+              else:
+                  m['status']='no reference detected — retained for archival/visual review'
+                  status='unreferenced'
+              report.append({'original_path':old,'quarantine_path':quarantine,'bytes':Path(m.get('restored_path',quarantine)).stat().st_size,'status':status,'references':hits,'restored_path':m.get('restored_path')})
+          manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
+          Path('backup-audit').mkdir(exist_ok=True)
+          Path('backup-audit/quarantine-reference-verification.json').write_text(json.dumps(report,indent=2)+'\n')
+          lines=['# Quarantined media verification','',f'Examined {len(report)} files across {len(sources)} tracked text files. Files with detected references are restored; all others remain retained pending visual archival review. No images deleted.','']
+          for x in report:
+              lines.extend(['## '+x['original_path'],'- Status: '+x['status'],'- Size: '+str(x['bytes'])+' bytes','- Restored location: '+str(x['restored_path'] or 'not moved'),'- References: '+(', '.join(h['file'] for h in x['references']) or 'none detected'),''])
+          Path('backup-audit/quarantine-reference-verification.md').write_text('\n'.join(lines))
+          print('Verified',len(report),'assets; restored',sum(x['status']=='restored' for x in report))
+          PY
+      - name: Commit verification report and restored assets
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m 'Verify all quarantined media references and restore needed assets'
+            git push
+          fi
