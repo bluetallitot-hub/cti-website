@@ -42,7 +42,7 @@ jobs:
               new='assets/resources/newsletters/2026/cti-newsletter-july-2026.pdf'
               subprocess.run(['git','mv',old,new],check=True)
               p=Path('content/newsletters.json')
-              data=json.loads(p.read_text())
+              data=json.loads(p.read_text().strip().removesuffix('\\n'))
               match=[x for x in data['issues'] if x.get('date')=='2026-07-01']
               assert len(match)==1
               match[0]['url']=new
