@@ -1,0 +1,318 @@
+[
+  {
+    "original_path": "assets/archive/originals/I-581-01-15-006-web.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/I-581-01-15-006-web.jpg",
+    "bytes": 95269,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/I-581-01-15-007-web.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/I-581-01-15-007-web.jpg",
+    "bytes": 81446,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/I-581-01-15-026-web.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/I-581-01-15-026-web.jpg",
+    "bytes": 290302,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/Vintage Synagogue Bat Mitzvah Clipping.png",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/Vintage Synagogue Bat Mitzvah Clipping.png",
+    "bytes": 2787902,
+    "status": "restored",
+    "references": [
+      {
+        "file": "content/gallery.json",
+        "matches": [
+          "assets/possible-duplicates/assets/archive/originals/Vintage Synagogue Bat Mitzvah Clipping.png",
+          "assets/archive/originals/Vintage Synagogue Bat Mitzvah Clipping.png",
+          "Vintage Synagogue Bat Mitzvah Clipping.png"
+        ]
+      }
+    ],
+    "restored_path": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png"
+  },
+  {
+    "original_path": "assets/archive/originals/article.heic",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/article.heic",
+    "bytes": 21875,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/cti-1972-50th-anniversary-clippings-ticket.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-1972-50th-anniversary-clippings-ticket.jpg",
+    "bytes": 169237,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/cti-1972-50th-anniversary-clippings.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-1972-50th-anniversary-clippings.jpg",
+    "bytes": 172487,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-2.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-2.jpg",
+    "bytes": 163856,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg",
+    "bytes": 956762,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/cti-2022-centennial-article.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-2022-centennial-article.jpg",
+    "bytes": 155004,
+    "status": "restored",
+    "references": [
+      {
+        "file": "archive-2022-jewish-journal-centennial.html",
+        "matches": [
+          "assets/possible-duplicates/assets/archive/originals/cti-2022-centennial-article.jpg",
+          "assets/archive/originals/cti-2022-centennial-article.jpg",
+          "assets/possible-duplicates/assets/archive/originals/cti-2022-centennial-article.jpg"
+        ]
+      }
+    ],
+    "restored_path": "assets/archive/originals/cti-2022-centennial-article.jpg"
+  },
+  {
+    "original_path": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-early-religious-leaders-original.jpg",
+    "bytes": 920505,
+    "status": "restored",
+    "references": [
+      {
+        "file": "content/gallery.json",
+        "matches": [
+          "assets/possible-duplicates/assets/archive/originals/cti-early-religious-leaders-original.jpg",
+          "assets/archive/originals/cti-early-religious-leaders-original.jpg",
+          "assets/possible-duplicates/assets/archive/originals/cti-early-religious-leaders-original.jpg"
+        ]
+      }
+    ],
+    "restored_path": "assets/archive/originals/cti-early-religious-leaders-original.jpg"
+  },
+  {
+    "original_path": "assets/archive/originals/cti-elliot-hershoff-obituary-display.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-elliot-hershoff-obituary-display.jpg",
+    "bytes": 141691,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/cti-leadership-profile-images (1).zip",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-leadership-profile-images (1).zip",
+    "bytes": 16451885,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/cti-october-1994-original-blue.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-october-1994-original-blue.jpg",
+    "bytes": 107002,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/cti-presidents-plaque-original.jpeg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-presidents-plaque-original.jpeg",
+    "bytes": 218402,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/cti-sephardic-temple-honors-patriarch-clipping.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-sephardic-temple-honors-patriarch-clipping.jpg",
+    "bytes": 180811,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/archive/originals/cti-september-1983-original-blue.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-september-1983-original-blue.jpg",
+    "bytes": 144655,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/anniversaries/cti-1972-anniversary-celebration-photos-2.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/images/anniversaries/cti-1972-anniversary-celebration-photos-2.jpg",
+    "bytes": 169413,
+    "status": "restored",
+    "references": [
+      {
+        "file": "assets/styles.css",
+        "matches": [
+          "cti-1972-anniversary-celebration-photos-2.jpg",
+          "cti-1972-anniversary-celebration-photos-2.jpg"
+        ]
+      }
+    ],
+    "restored_path": "assets/images/anniversaries/cti-1972-anniversary-celebration-photos-2.jpg"
+  },
+  {
+    "original_path": "assets/images/anniversaries/cti-1997-75th-anniversary-program-cover.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/images/anniversaries/cti-1997-75th-anniversary-program-cover.jpg",
+    "bytes": 140657,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/anniversaries/cti-2012-90th-anniversary-program.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/images/anniversaries/cti-2012-90th-anniversary-program.jpg",
+    "bytes": 112618,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/branding/CTI-logo-modern-transparent.png",
+    "quarantine_path": "assets/possible-duplicates/assets/images/branding/CTI-logo-modern-transparent.png",
+    "bytes": 384932,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/founders/Congregation Tifereth Israel Founders Plaque.png",
+    "quarantine_path": "assets/possible-duplicates/assets/images/founders/Congregation Tifereth Israel Founders Plaque.png",
+    "bytes": 2285576,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/gallery/Joseph Gibely Reading in the Sanctuary.png",
+    "quarantine_path": "assets/possible-duplicates/assets/images/gallery/Joseph Gibely Reading in the Sanctuary.png",
+    "bytes": 2436744,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.jpg",
+    "bytes": 10881,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/gallery/cti-2006-kitchen-dedication-invitation.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/images/gallery/cti-2006-kitchen-dedication-invitation.jpg",
+    "bytes": 124239,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
+    "bytes": 113387,
+    "status": "restored",
+    "references": [
+      {
+        "file": "content/gallery.json",
+        "matches": [
+          "assets/possible-duplicates/assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
+          "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
+          "assets/possible-duplicates/assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg"
+        ]
+      }
+    ],
+    "restored_path": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg"
+  },
+  {
+    "original_path": "assets/images/gallery/cti-community-members-photo-2006.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/images/gallery/cti-community-members-photo-2006.jpg",
+    "bytes": 141477,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/leadership/2012 Shofar Gift Group Portrait.png",
+    "quarantine_path": "assets/possible-duplicates/assets/images/leadership/2012 Shofar Gift Group Portrait.png",
+    "bytes": 2043792,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/leadership/a_crisp_warmly_lit_professional_portrait_photo_i.png",
+    "quarantine_path": "assets/possible-duplicates/assets/images/leadership/a_crisp_warmly_lit_professional_portrait_photo_i.png",
+    "bytes": 2141460,
+    "status": "restored",
+    "references": [
+      {
+        "file": "leadership.html",
+        "matches": [
+          "a_crisp_warmly_lit_professional_portrait_photo_i.png",
+          "a_crisp_warmly_lit_professional_portrait_photo_i.png"
+        ]
+      }
+    ],
+    "restored_path": "assets/images/leadership/cti-a-crisp-warmly-lit-professional-portrait-photo-i.png"
+  },
+  {
+    "original_path": "assets/images/leadership/cti-joseph-gibely-ii-1979-portrait.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/images/leadership/cti-joseph-gibely-ii-1979-portrait.jpg",
+    "bytes": 56595,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/leadership/rabbi-blue-family.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/images/leadership/rabbi-blue-family.jpg",
+    "bytes": 324998,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/presidents/cti-presidents-plaque-enhanced.png",
+    "quarantine_path": "assets/possible-duplicates/assets/images/presidents/cti-presidents-plaque-enhanced.png",
+    "bytes": 2474291,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  },
+  {
+    "original_path": "assets/images/presidents/cti-presidents-plaque.jpg",
+    "quarantine_path": "assets/possible-duplicates/assets/images/presidents/cti-presidents-plaque.jpg",
+    "bytes": 129255,
+    "status": "unreferenced",
+    "references": [],
+    "restored_path": null
+  }
+]
