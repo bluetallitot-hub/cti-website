@@ -1,4 +1,4 @@
-name: Audit unused CTI files
+name: Audit website reachability and duplicate files
 on:
   workflow_dispatch:
   push:
@@ -11,47 +11,86 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Generate review-only unused-file report
+      - name: Build site graph and content-hash inventory
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          from urllib.parse import unquote
-          import re, json, hashlib
-          root=Path('.')
-          tracked=__import__('subprocess').check_output(['git','ls-files','-z']).decode().split('\0')
-          files=[p for p in tracked if p and Path(p).is_file()]
-          source_ext={'.html','.css','.js','.json','.yml','.yaml','.md','.py'}
-          sources={p:Path(p).read_text(encoding='utf-8',errors='replace') for p in files if Path(p).suffix.lower() in source_ext}
-          candidates=[p for p in files if Path(p).suffix.lower() in {'.html','.pdf','.png','.jpg','.jpeg','.heic','.zip','.webp','.gif','.mp3','.mp4'}]
-          records=[]
-          for p in candidates:
-              references=[]
-              for src,body in sources.items():
-                  if src==p:continue
-                  normalized=unquote(body)
-                  # Match full repository path or relative link from referring file.
-                  rel=__import__('os').path.relpath(p,Path(src).parent).replace('\\','/')
-                  if p in normalized or rel in normalized:
-                      references.append(src)
-              if references:continue
-              if p=='index.html':continue
-              category='PRESERVE — historical original' if p.startswith('assets/archive/originals/') else ('REVIEW — unlinked HTML page' if p.endswith('.html') else 'REVIEW — unreferenced asset')
-              if p.startswith('.github/') or p.startswith('admin/'):category='PRESERVE — administrative'
-              records.append((category,p,Path(p).stat().st_size,hashlib.sha256(Path(p).read_bytes()).hexdigest()))
-          records.sort()
-          out=Path('backup-audit/unused-file-review.md')
-          lines=['# CTI unused-file audit — review only','','Generated from tracked files on GitHub main. No files were deleted.','','**Interpretation:** No literal path reference in other tracked HTML/CSS/JS/JSON/YAML/Markdown/Python files. This does not prove a file is safe to delete: external links, dynamically generated URLs, old bookmarks, archival value and binary-file references are not covered.','','| Classification | Path | Bytes | SHA-256 |','|---|---|---:|---|']
-          for cat,p,n,digest in records:lines.append(f'| {cat} | \`{p}\` | {n} | \`{digest}\` |')
-          lines+=['','## Deletion policy','','Do not delete historical originals, backup artifacts, source material, or unlinked pages without explicit review. Confirm duplicates by SHA-256 before proposing deletion. Keep old public URLs until redirects are approved.']
-          out.write_text('\n'.join(lines)+'\n')
-          print(f'Scanned {len(files)} files and flagged {len(records)} candidates.')
+          from urllib.parse import urlsplit,unquote
+          from html.parser import HTMLParser
+          from collections import defaultdict,deque
+          import subprocess,hashlib,re,json,posixpath
+          paths=[p for p in subprocess.check_output(['git','ls-files','-z']).decode().split('\0') if p]
+          files=set(paths)
+          class Links(HTMLParser):
+            def __init__(self):super().__init__();self.links=[]
+            def handle_starttag(self,tag,attrs):
+              d=dict(attrs)
+              for key in ('href','src','poster','data-src'):
+                if d.get(key):self.links.append(d[key])
+              if d.get('srcset'):
+                self.links.extend(part.strip().split(' ')[0] for part in d['srcset'].split(','))
+          refs=defaultdict(set)
+          def resolve(source,raw):
+            if not raw or raw.startswith(('#','//','data:','mailto:','tel:','javascript:')):return None
+            u=urlsplit(raw)
+            if u.scheme and u.scheme not in ('http','https'):return None
+            if u.scheme in ('http','https'):
+              if u.netloc not in ('bluetallitot-hub.github.io',):return None
+              path=u.path.removeprefix('/cti-website/')
+            else:path=u.path
+            if not path:return None
+            path=unquote(path)
+            if path.startswith('/'):path=path.lstrip('/')
+            else:path=posixpath.normpath(posixpath.join(posixpath.dirname(source),path))
+            return path if path in files else None
+          for p in paths:
+            ext=Path(p).suffix.lower()
+            if ext not in ('.html','.css','.js','.json','.md','.yml','.yaml'):continue
+            s=Path(p).read_text(encoding='utf-8',errors='replace')
+            if ext=='.html':
+              parser=Links();parser.feed(s)
+              for url in parser.links:
+                target=resolve(p,url)
+                if target:refs[p].add(target)
+            for raw in re.findall(r'(?:(?:assets|content|admin)/[^\s\"\x27<>),;]+|(?:\.\./|\./)[^\s\"\x27<>),;]+|[A-Za-z0-9_-]+\.html(?:\?[^\s\"\x27<>]*)?)',s):
+              target=resolve(p,raw)
+              if target:refs[p].add(target)
+            if ext=='.css':
+              for raw in re.findall(r'url\(\s*[\"\x27]?([^\"\x27)]+)',s):
+                target=resolve(p,raw)
+                if target:refs[p].add(target)
+          reachable={'index.html'};queue=deque(reachable)
+          while queue:
+            for target in refs[queue.popleft()]:
+              if target not in reachable:
+                reachable.add(target);queue.append(target)
+          sha=defaultdict(list)
+          for p in paths:
+            if Path(p).is_file():sha[hashlib.sha256(Path(p).read_bytes()).hexdigest()].append(p)
+          dup=[v for v in sha.values() if len(v)>1]
+          unused=[p for p in paths if p not in reachable and p!='index.html']
+          unlinked_html=[p for p in unused if p.endswith('.html')]
+          unused_assets=[p for p in unused if p.startswith('assets/') and not p.endswith('.md')]
+          report=['# CTI file audit — site reachability and duplicate content','','**Review only; nothing deleted.** Starting at index.html, this audit follows discovered local HTML links and static asset references, including references in linked CSS, JS and JSON. Dynamic URL construction, external bookmarks, and references from other sites require manual verification.','','## Summary',f'- Tracked files: {len(paths)}',f'- Reachable through detected references: {len(reachable)}',f'- Unreachable HTML: {len(unlinked_html)}',f'- Unreachable assets: {len(unused_assets)}',f'- Identical-content groups: {len(dup)}','','## Unreachable HTML pages'] 
+          report += ['- \`'+p+'\`' for p in unlinked_html] or ['None']
+          report += ['','## Unreachable assets (candidates for removal from published site)']
+          report += ['- \`'+p+'\`' for p in unused_assets] or ['None']
+          report += ['','## Identical-content duplicate groups']
+          for group in sorted(dup,key=lambda v:-sum(Path(p).stat().st_size for p in v)):
+            report.append('- '+', '.join('\`'+p+'\`' for p in group)+f' ({Path(group[0]).stat().st_size:,} bytes each)')
+          report += ['','## Other unreachable tracked files']
+          report += ['- \`'+p+'\`' for p in unused if p not in unlinked_html and p not in unused_assets] or ['None']
+          report += ['','## Audit limits','','Unreachable means not discovered from the home page by static parsing. Pages may be linked from outside CTI or constructed dynamically. Administrative files and historical originals can be unlinked yet intentional. This report is a deletion proposal input, not authorization to delete.']
+          Path('backup-audit/unused-file-review.md').write_text('\n'.join(report)+'\n')
+          Path('backup-audit/unused-file-audit.json').write_text(json.dumps({'reachable':sorted(reachable),'unreachable_html':unlinked_html,'unreachable_assets':unused_assets,'duplicates':dup,'references':{k:sorted(v) for k,v in refs.items()}},indent=2)+'\n')
+          print('Tracked:',len(paths),'reachable:',len(reachable),'unlinked HTML:',len(unlinked_html),'unlinked assets:',len(unused_assets),'duplicate groups:',len(dup))
           PY
-      - name: Commit audit report only
+      - name: Commit reports, never delete files
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add backup-audit/unused-file-review.md
+          git add backup-audit/unused-file-review.md backup-audit/unused-file-audit.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Audit unused CTI files without deleting'
+            git commit -m 'Replace filename audit with reachability and duplicate report'
             git push
           fi
