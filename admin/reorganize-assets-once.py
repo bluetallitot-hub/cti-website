@@ -45,11 +45,11 @@ for required in ('index.html','resources.html','assets/site.js','assets/styles.c
 missing=[]
 for p in list(root.glob('*.html'))+list(root.glob('content/*.json'))+list(root.glob('admin/*.html')):
     data=p.read_text(encoding='utf-8')
-    for hit in re.findall(r'(?:\\.\\./)?assets/[A-Za-z0-9_ ./()%+-]+?\\.(?:jpg|jpeg|png|heic|pdf|zip)',data,re.I):
+    for hit in re.findall(r'(?:\.\./)?assets/[A-Za-z0-9_ ./()%+-]+?\.(?:jpg|jpeg|png|heic|pdf|zip)',data,re.I):
         q=hit.removeprefix('../')
         if not Path(q).is_file(): missing.append((str(p),hit))
 if missing:
     print('Unresolved asset references:',json.dumps(missing[:60],indent=2))
     raise SystemExit(1)
 print('Migrated',len(moves),'assets and validated references')
-Path('backup-audit/2026-10-15-reorganization-map.json').write_text(json.dumps(moves,indent=2,ensure_ascii=False)+'\\n')
+Path('backup-audit/2026-10-15-reorganization-map.json').write_text(json.dumps(moves,indent=2,ensure_ascii=False)+'\n')
