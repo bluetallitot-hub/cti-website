@@ -1,0 +1,43 @@
+name: Preserve legacy CTI newsletter PDF
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/preserve-legacy-newsletter.yml
+permissions:
+  contents: write
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify September 2026 original PDF
+        run: |
+          mkdir -p assets/resources/newsletters/2026
+          curl --fail --location --retry 3 --max-time 90 'https://ctipeabody.org/newsletter.pdf' -o /tmp/cti-newsletter.pdf
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          pdf=Path('/tmp/cti-newsletter.pdf').read_bytes()
+          if not pdf.startswith(b'%PDF-') or len(pdf)<1000:
+              raise SystemExit('Legacy download is not a valid PDF; refusing to publish')
+          target=Path('assets/resources/newsletters/2026/cti-newsletter-september-2026.pdf')
+          target.write_bytes(pdf)
+          p=Path('content/newsletters.json')
+          data=json.loads(p.read_text())
+          issues=[i for i in data['issues'] if i.get('date')=='2026-09-01']
+          if len(issues)!=1:
+              raise SystemExit('Expected one September 2026 newsletter entry')
+          issues[0]['url']=str(target)
+          p.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\\n')
+          print(f'Preserved {len(pdf)} PDF bytes to {target}')
+          PY
+      - name: Commit PDF and local newsletter link
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/resources/newsletters/2026/cti-newsletter-september-2026.pdf content/newsletters.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Archive September 2026 CTI newsletter PDF locally'
+            git push
+          fi
