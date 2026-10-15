@@ -1,0 +1,57 @@
+name: Audit unused CTI files
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/audit-unused-files.yml
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate review-only unused-file report
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from urllib.parse import unquote
+          import re, json, hashlib
+          root=Path('.')
+          tracked=__import__('subprocess').check_output(['git','ls-files','-z']).decode().split('\0')
+          files=[p for p in tracked if p and Path(p).is_file()]
+          source_ext={'.html','.css','.js','.json','.yml','.yaml','.md','.py'}
+          sources={p:Path(p).read_text(encoding='utf-8',errors='replace') for p in files if Path(p).suffix.lower() in source_ext}
+          candidates=[p for p in files if Path(p).suffix.lower() in {'.html','.pdf','.png','.jpg','.jpeg','.heic','.zip','.webp','.gif','.mp3','.mp4'}]
+          records=[]
+          for p in candidates:
+              references=[]
+              for src,body in sources.items():
+                  if src==p:continue
+                  normalized=unquote(body)
+                  # Match full repository path or relative link from referring file.
+                  rel=__import__('os').path.relpath(p,Path(src).parent).replace('\\','/')
+                  if p in normalized or rel in normalized:
+                      references.append(src)
+              if references:continue
+              if p=='index.html':continue
+              category='PRESERVE — historical original' if p.startswith('assets/archive/originals/') else ('REVIEW — unlinked HTML page' if p.endswith('.html') else 'REVIEW — unreferenced asset')
+              if p.startswith('.github/') or p.startswith('admin/'):category='PRESERVE — administrative'
+              records.append((category,p,Path(p).stat().st_size,hashlib.sha256(Path(p).read_bytes()).hexdigest()))
+          records.sort()
+          out=Path('backup-audit/unused-file-review.md')
+          lines=['# CTI unused-file audit — review only','','Generated from tracked files on GitHub main. No files were deleted.','','**Interpretation:** No literal path reference in other tracked HTML/CSS/JS/JSON/YAML/Markdown/Python files. This does not prove a file is safe to delete: external links, dynamically generated URLs, old bookmarks, archival value and binary-file references are not covered.','','| Classification | Path | Bytes | SHA-256 |','|---|---|---:|---|']
+          for cat,p,n,digest in records:lines.append(f'| {cat} | \`{p}\` | {n} | \`{digest}\` |')
+          lines+=['','## Deletion policy','','Do not delete historical originals, backup artifacts, source material, or unlinked pages without explicit review. Confirm duplicates by SHA-256 before proposing deletion. Keep old public URLs until redirects are approved.']
+          out.write_text('\n'.join(lines)+'\n')
+          print(f'Scanned {len(files)} files and flagged {len(records)} candidates.')
+          PY
+      - name: Commit audit report only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add backup-audit/unused-file-review.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'Audit unused CTI files without deleting'
+            git push
+          fi
