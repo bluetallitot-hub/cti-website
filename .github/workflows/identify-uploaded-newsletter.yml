@@ -1,0 +1,53 @@
+name: Identify and file uploaded CTI newsletter
+on:
+  push:
+    paths:
+      - .github/workflows/identify-uploaded-newsletter.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  identify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify issue before renaming and linking
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('assets/resources/newsletters/2026/newsletter.pdf')
+          if not p.exists() or not p.read_bytes().startswith(b'%PDF-'):
+              raise SystemExit('Missing or invalid uploaded newsletter PDF')
+          PY
+          pdftotext -f 1 -l 3 -layout assets/resources/newsletters/2026/newsletter.pdf /tmp/cti-newsletter-text.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          import re,json,subprocess
+          text=Path('/tmp/cti-newsletter-text.txt').read_text(errors='replace')
+          print('First 1200 characters of extracted text:',text[:1200])
+          july=bool(re.search(r'JULY\s*[,/ -]*2026|2026\s*[,/ -]*JULY',text,re.I))
+          vol=bool(re.search(r'VOLUME\s*56\s*(?:NO\.?|NUMBER|#)\s*4\b',text,re.I))
+          if not (july and vol):
+              print('Not confidently verified as July 2026 Volume 56 No. 4. Leaving file untouched.')
+              Path('backup-audit/newsletter-identification.txt').write_text('Uploaded newsletter not automatically classified. Extracted first three pages:\n\n'+text[:12000])
+          else:
+              old='assets/resources/newsletters/2026/newsletter.pdf'
+              new='assets/resources/newsletters/2026/cti-newsletter-july-2026.pdf'
+              subprocess.run(['git','mv',old,new],check=True)
+              p=Path('content/newsletters.json')
+              data=json.loads(p.read_text())
+              match=[x for x in data['issues'] if x.get('date')=='2026-07-01']
+              assert len(match)==1
+              match[0]['url']=new
+              p.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n')
+              print('Confirmed July 2026, Volume 56 No. 4; renamed and linked.')
+          PY
+      - name: Commit verified update or identification report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m 'Identify uploaded newsletter and link July issue when verified'
+            git push
+          fi
