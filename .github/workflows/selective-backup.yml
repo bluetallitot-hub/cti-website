@@ -1,0 +1,52 @@
+name: Build selective CTI recovery backup
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/selective-backup.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out frozen pre-reorganization snapshot
+        uses: actions/checkout@v4
+        with:
+          ref: 49022bdf5a85c96a47c2f031a9c0acc7df81e82f
+          persist-credentials: false
+      - name: Package site except separately preserved siddurim and machzorim
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, zipfile
+          root=pathlib.Path('.')
+          excluded={
+            'DSP-SH.pdf',
+            'assets/DSP-SH.pdf',
+            'assets/DSP-HD.pdf',
+            'assets/DSP-YK.pdf',
+            'assets/CTI-Rosh-Hashanah-Machzor-Compressed (2).pdf'
+          }
+          files=sorted(p for p in root.rglob('*') if p.is_file() and '.git' not in p.parts)
+          selected=[p for p in files if p.as_posix() not in excluded]
+          manifest={'source_commit':'49022bdf5a85c96a47c2f031a9c0acc7df81e82f',
+                    'excluded_files':sorted(excluded),
+                    'files':[{'path':p.as_posix(),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in selected]}
+          out=pathlib.Path('/tmp/cti-website-backup-excluding-siddurim-machzorim.zip')
+          with zipfile.ZipFile(out,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
+            for p in selected:z.write(p,p.as_posix())
+            z.writestr('BACKUP-MANIFEST.json',json.dumps(manifest,indent=2)+'\n')
+          print('Files:',len(selected),'Uncompressed bytes:',sum(p.stat().st_size for p in selected))
+          print('ZIP bytes:',out.stat().st_size,'SHA256:',hashlib.sha256(out.read_bytes()).hexdigest())
+          PY
+      - name: Publish backup artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cti-website-backup-excluding-siddurim-machzorim
+          path: /tmp/cti-website-backup-excluding-siddurim-machzorim.zip
+          retention-days: 90
+          if-no-files-found: error
