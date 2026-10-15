@@ -1,0 +1,26 @@
+name: Reorganize CTI assets once
+on:
+  push:
+    paths:
+      - admin/reorganize-assets-once.py
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  reorganize:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Reorganize and verify all asset references
+        run: python3 admin/reorganize-assets-once.py
+      - name: Commit verified reorganization
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Reorganize CTI assets into images resources and archive"
+            git push
+          fi
