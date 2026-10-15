@@ -1,0 +1,50 @@
+name: Quarantine possible duplicate images
+on:
+  push:
+    paths:
+      - .github/workflows/quarantine-possible-duplicates.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  move:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Move 33 flagged media files and retain reference manifest
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,subprocess,hashlib
+          data=json.loads(Path('backup-audit/unused-file-audit.json').read_text())
+          items=[p for p in data['unreachable_assets'] if Path(p).suffix.lower() in ('.png','.jpg','.jpeg','.heic','.zip')]
+          assert len(items)==33,(len(items),items)
+          manifest=[]
+          for old in items:
+              src=Path(old)
+              assert src.is_file(),old
+              new=Path('assets/possible-duplicates')/old
+              new.parent.mkdir(parents=True,exist_ok=True)
+              digest=hashlib.sha256(src.read_bytes()).hexdigest()
+              subprocess.run(['git','mv',old,str(new)],check=True)
+              manifest.append({'original_path':old,'quarantine_path':str(new),'sha256':digest,'status':'pending visual review'})
+          Path('assets/possible-duplicates/manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+          Path('assets/possible-duplicates/README.md').write_text('# Possible duplicate media — pending review\n\nThese 33 files were flagged as unreachable by the 2026-10-15 static website audit. They are NOT verified visual duplicates, and no media has been deleted. Original paths and SHA-256 hashes are recorded in manifest.json. The folder preserves original subdirectory organization for reversibility. Historical originals require preservation review before any deletion.\n')
+          # Update any exact path references, including non-reachable pages, so moving does not create broken references.
+          for p in subprocess.check_output(['git','ls-files','-z']).decode().split('\0'):
+              if not p or not Path(p).is_file() or Path(p).suffix.lower() not in ('.html','.css','.js','.json','.md','.yml','.yaml'):continue
+              if p in ('assets/possible-duplicates/manifest.json','assets/possible-duplicates/README.md','backup-audit/unused-file-audit.json','backup-audit/unused-file-review.md'):continue
+              f=Path(p);s=f.read_text(encoding='utf-8',errors='replace');new_s=s
+              for m in manifest:new_s=new_s.replace(m['original_path'],m['quarantine_path'])
+              if new_s!=s:f.write_text(new_s)
+          print('Moved',len(manifest),'files')
+          PY
+      - name: Commit reversible quarantine
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m 'Move 33 unreferenced media files to possible duplicates review folder'
+            git push
+          fi
