@@ -8,7 +8,7 @@ media_folder: assets/uploads
 public_folder: /cti-website/assets/uploads
 site_url: https://bluetallitot-hub.github.io/cti-website/
 display_url: https://bluetallitot-hub.github.io/cti-website/
-logo_url: /cti-website/assets/CTI-logo-web.png
+logo_url: /cti-website/assets/images/branding/CTI-logo-web.png
 collections:
   - name: settings
     label: Website Settings
