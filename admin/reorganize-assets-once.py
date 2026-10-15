@@ -32,7 +32,7 @@ for f in sorted(assets.iterdir()):
 text_ext={'.html','.css','.js','.json','.md','.yml','.yaml','.xml','.txt'}
 for p in root.rglob('*'):
     if not p.is_file() or '.git' in p.parts or p.suffix.lower() not in text_ext: continue
-    if p.parts[0]=='backup-audit': continue # immutable audit
+    if p.parts[0] in ('backup-audit','.github'): continue # immutable audit and protected workflows
     try: old=p.read_text(encoding='utf-8')
     except UnicodeDecodeError: continue
     new=old
