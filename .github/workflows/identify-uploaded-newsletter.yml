@@ -19,7 +19,13 @@ jobs:
           if not p.exists() or not p.read_bytes().startswith(b'%PDF-'):
               raise SystemExit('Missing or invalid uploaded newsletter PDF')
           PY
-          pdftotext -f 1 -l 3 -layout assets/resources/newsletters/2026/newsletter.pdf /tmp/cti-newsletter-text.txt
+          python3 -m pip install --quiet pymupdf
+          python3 - <<'PY'
+          import fitz
+          d=fitz.open('assets/resources/newsletters/2026/newsletter.pdf')
+          text='\n'.join(page.get_text() for page in list(d)[:3])
+          open('/tmp/cti-newsletter-text.txt','w').write(text)
+          PY
           python3 - <<'PY'
           from pathlib import Path
           import re,json,subprocess
@@ -29,6 +35,7 @@ jobs:
           vol=bool(re.search(r'VOLUME\s*56\s*(?:NO\.?|NUMBER|#)\s*4\b',text,re.I))
           if not (july and vol):
               print('Not confidently verified as July 2026 Volume 56 No. 4. Leaving file untouched.')
+              Path('backup-audit').mkdir(exist_ok=True)
               Path('backup-audit/newsletter-identification.txt').write_text('Uploaded newsletter not automatically classified. Extracted first three pages:\n\n'+text[:12000])
           else:
               old='assets/resources/newsletters/2026/newsletter.pdf'
