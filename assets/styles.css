@@ -108,3 +108,6 @@ footer{background:#1f302e;color:#edf0ed;padding:58px 0 28px}.footer-grid{display
 
 /* Matching extended parchment surround for the founders and presidents plaques. */
 .archive-index-card .archive-thumb-founders,.archive-index-card .archive-thumb-presidents{background:#f4efe4;object-fit:contain;object-position:center;padding:20px;}
+
+/* Newspaper transcription: publication date opens the article; title remains in page hero. */
+.archive-article-date{font-size:.88rem;font-weight:700;letter-spacing:.015em;color:var(--muted,#59636a);margin:0 0 1rem;padding-bottom:.65rem;border-bottom:1px solid rgba(0,0,0,.12)}
