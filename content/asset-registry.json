@@ -1546,10 +1546,10 @@
         "assets/images/presidents/cti-presidents-plaque-enhanced.png"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Unlinked by static audit; preserve until visual and archival review. Redundant plaque variant deleted 2026-10-16; original ARC-0033 and canonical PRE-0001 retained.",
       "sha256": "098806136bd9c0f268d8f6396fb987bc2d443158aa7f15b0134afd71ee862465",
       "bytes": 2474291,
-      "status": "quarantined"
+      "status": "deleted"
     },
     {
       "id": "PRE-0003",
@@ -1563,10 +1563,10 @@
         "assets/images/presidents/cti-presidents-plaque.jpg"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Unlinked by static audit; preserve until visual and archival review. Redundant plaque variant deleted 2026-10-16; original ARC-0033 and canonical PRE-0001 retained.",
       "sha256": "eec1f6f3e709fdd497fd02363c507e4307156199e8e886848ec6f9f94a0e8858",
       "bytes": 129255,
-      "status": "quarantined"
+      "status": "deleted"
     },
     {
       "id": "RES-0003",
