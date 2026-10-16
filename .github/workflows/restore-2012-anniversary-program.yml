@@ -1,0 +1,70 @@
+name: Restore 2012 anniversary program image
+on:
+  push:
+    paths:
+      - '.github/workflows/restore-2012-anniversary-program.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pillow opencv-python-headless numpy
+      - name: Crop and deskew original photograph
+        run: |
+          python - <<'PY'
+          import cv2, numpy as np
+          from PIL import Image, ImageOps
+          from pathlib import Path
+          src=Path('assets/possible-duplicates/assets/images/anniversaries/cti-2012-90th-anniversary-program.jpg')
+          archive=Path('assets/archive/originals/cti-2012-90th-anniversary-program-original.jpg')
+          output=Path('assets/images/anniversaries/cti-2012-90th-anniversary-program-restored.jpg')
+          archive.parent.mkdir(parents=True,exist_ok=True)
+          output.parent.mkdir(parents=True,exist_ok=True)
+          archive.write_bytes(src.read_bytes())
+          im=ImageOps.exif_transpose(Image.open(src)).convert('RGB')
+          a=np.array(im)
+          gray=cv2.cvtColor(a,cv2.COLOR_RGB2GRAY)
+          blur=cv2.GaussianBlur(gray,(5,5),0)
+          edges=cv2.Canny(blur,35,110)
+          contours,_=cv2.findContours(edges,cv2.RETR_LIST,cv2.CHAIN_APPROX_SIMPLE)
+          candidate=None
+          for c in sorted(contours,key=cv2.contourArea,reverse=True)[:40]:
+              area=cv2.contourArea(c)
+              if area<.20*a.shape[0]*a.shape[1]:continue
+              peri=cv2.arcLength(c,True)
+              approx=cv2.approxPolyDP(c,.025*peri,True)
+              if len(approx)==4:
+                  candidate=approx[:,0,:].astype('float32');break
+          if candidate is not None:
+              pts=candidate
+              s=pts.sum(axis=1);diff=np.diff(pts,axis=1).reshape(-1)
+              rect=np.array([pts[np.argmin(s)],pts[np.argmin(diff)],pts[np.argmax(s)],pts[np.argmax(diff)]],dtype='float32')
+              tl,tr,br,bl=rect
+              w=int(max(np.linalg.norm(br-bl),np.linalg.norm(tr-tl)))
+              h=int(max(np.linalg.norm(tr-br),np.linalg.norm(tl-bl)))
+              if w>200 and h>200:
+                  M=cv2.getPerspectiveTransform(rect,np.array([[0,0],[w-1,0],[w-1,h-1],[0,h-1]],dtype='float32'))
+                  a=cv2.warpPerspective(a,M,(w,h),flags=cv2.INTER_CUBIC)
+          else:
+              # Fallback: trim a narrow photographic border, leaving all printed content.
+              h,w=a.shape[:2]
+              margin=int(min(h,w)*.02)
+              a=a[margin:h-margin,margin:w-margin]
+          Image.fromarray(a).save(output,quality=94,optimize=True,subsampling=0)
+          print('Original preserved:',archive,'restored:',output,'size:',a.shape)
+          PY
+      - name: Commit preserved original and corrected photograph
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/archive/originals/cti-2012-90th-anniversary-program-original.jpg assets/images/anniversaries/cti-2012-90th-anniversary-program-restored.jpg
+          git diff --cached --quiet || git commit -m 'Preserve original and publish cropped, straightened 2012 program photograph'
+          git push
