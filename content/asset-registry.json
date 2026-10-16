@@ -1127,74 +1127,6 @@
       "status": "published"
     },
     {
-      "id": "ARC-0024",
-      "collection": "ARC",
-      "title": "I 581 01 15 026 web",
-      "path": "assets/possible-duplicates/assets/archive/originals/I-581-01-15-026-web.jpg",
-      "original_filename": "I-581-01-15-026-web.jpg",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/archive/originals/I-581-01-15-026-web.jpg"
-      ],
-      "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
-      "sha256": "4603cc4168a5b3c0f9ade4fd2b8cb9bedbf21b1edba09e6abd8340fd9c655c32",
-      "bytes": 290302,
-      "status": "quarantined"
-    },
-    {
-      "id": "ARC-0025",
-      "collection": "ARC",
-      "title": "article",
-      "path": "assets/possible-duplicates/assets/archive/originals/article.heic",
-      "original_filename": "article.heic",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/archive/originals/article.heic"
-      ],
-      "roles": [],
-      "notes": "Deleted at user request",
-      "sha256": "c19b8d45f854e0d644d5a22a9bf2ed91bd21e4b6cc82795b43f00e6485b97663",
-      "bytes": 21875,
-      "status": "deleted"
-    },
-    {
-      "id": "ARC-0026",
-      "collection": "ARC",
-      "title": "cti 1972 50th anniversary clippings ticket",
-      "path": "assets/possible-duplicates/assets/archive/originals/cti-1972-50th-anniversary-clippings-ticket.jpg",
-      "original_filename": "cti-1972-50th-anniversary-clippings-ticket.jpg",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/archive/originals/cti-1972-50th-anniversary-clippings-ticket.jpg"
-      ],
-      "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
-      "sha256": "fba3cf74287ec455646e0ec63dc15247b09724dc4e0d87905517242e0f3b6b87",
-      "bytes": 169237,
-      "status": "quarantined"
-    },
-    {
-      "id": "ARC-0027",
-      "collection": "ARC",
-      "title": "cti 1972 50th anniversary clippings",
-      "path": "assets/possible-duplicates/assets/archive/originals/cti-1972-50th-anniversary-clippings.jpg",
-      "original_filename": "cti-1972-50th-anniversary-clippings.jpg",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/archive/originals/cti-1972-50th-anniversary-clippings.jpg"
-      ],
-      "roles": [],
-      "notes": "Redundant quarantine copy removed after confirming published equivalent.",
-      "sha256": "8d380d654da27ea6f98c92a8922036e90439f481bb90289a160bc0a72a76e940",
-      "bytes": 172487,
-      "status": "deleted"
-    },
-    {
       "id": "ARC-0028",
       "collection": "ARC",
       "title": "cti 1992 origins peabody sephardic congregation 2",
@@ -1209,13 +1141,13 @@
       "notes": "Original article has been taken out for rephotography at synagogue. Retain existing scan as reference until improved complete article photographs are obtained and verified; then update historical archive entry.",
       "sha256": "55a68c1c8f003a0ac25f4de8d634ce9839d7b67301c8bf8716c2da44a4163a5b",
       "bytes": 163856,
-      "status": "pending-better-photographs"
+      "status": "quarantined"
     },
     {
       "id": "ARC-0029",
       "collection": "ARC",
       "title": "cti 1997 program timeline photos original blue",
-      "path": "assets/possible-duplicates/assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg",
+      "path": "assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg",
       "original_filename": "cti-1997-program-timeline-photos-original-blue.jpg",
       "source_reference": null,
       "source_drive_id": null,
@@ -1247,27 +1179,10 @@
       "status": "published"
     },
     {
-      "id": "ARC-0031",
-      "collection": "ARC",
-      "title": "cti leadership profile images (1)",
-      "path": "assets/possible-duplicates/assets/archive/originals/cti-leadership-profile-images (1).zip",
-      "original_filename": "cti-leadership-profile-images (1).zip",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/archive/originals/cti-leadership-profile-images (1).zip"
-      ],
-      "roles": [],
-      "notes": "Deleted at user request",
-      "sha256": "8f3fa7dc48738b317b15974f1b20ecd800906eaf17d7c68e30fd240977058532",
-      "bytes": 16451885,
-      "status": "deleted"
-    },
-    {
       "id": "ARC-0032",
       "collection": "ARC",
       "title": "cti october 1994 original blue",
-      "path": "assets/possible-duplicates/assets/archive/originals/cti-october-1994-original-blue.jpg",
+      "path": "assets/archive/originals/cti-october-1994-original-blue.jpg",
       "original_filename": "cti-october-1994-original-blue.jpg",
       "source_reference": null,
       "source_drive_id": null,
@@ -1280,23 +1195,6 @@
       "bytes": 107002,
       "status": "restored-to-archive",
       "restored_path": "assets/archive/originals/cti-october-1994-original-blue.jpg"
-    },
-    {
-      "id": "ARC-0033",
-      "collection": "ARC",
-      "title": "cti presidents plaque original",
-      "path": "assets/possible-duplicates/assets/archive/originals/cti-presidents-plaque-original.jpeg",
-      "original_filename": "cti-presidents-plaque-original.jpeg",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/archive/originals/cti-presidents-plaque-original.jpeg"
-      ],
-      "roles": [],
-      "notes": "Redundant quarantined copy removed at user request; canonical plaque display files retained where needed.",
-      "sha256": "a651db9c081fff1e5f4cf8ecd802bb4cdc215e920d4e7cdc60a505cd91712ac9",
-      "bytes": 218402,
-      "status": "deleted"
     },
     {
       "id": "ARC-0034",
@@ -1313,13 +1211,13 @@
       "notes": "Keep existing clipping as reference. Photograph full clipping straight-on, readable article text, and photo/caption close-ups at synagogue; create historical archive entry after improved photos arrive.",
       "sha256": "c537248646bba8f2609352bf3b23df160e6dabeea72dfaa3f4fbf30f00ae0d6c",
       "bytes": 180811,
-      "status": "pending-better-photographs"
+      "status": "quarantined"
     },
     {
       "id": "ARC-0035",
       "collection": "ARC",
       "title": "cti september 1983 original blue",
-      "path": "assets/possible-duplicates/assets/archive/originals/cti-september-1983-original-blue.jpg",
+      "path": "assets/archive/originals/cti-september-1983-original-blue.jpg",
       "original_filename": "cti-september-1983-original-blue.jpg",
       "source_reference": null,
       "source_drive_id": null,
@@ -1332,91 +1230,6 @@
       "bytes": 144655,
       "status": "restored-to-archive",
       "restored_path": "assets/archive/originals/cti-september-1983-original-blue.jpg"
-    },
-    {
-      "id": "GAL-0031",
-      "collection": "GAL",
-      "title": "cti 1997 75th anniversary program cover",
-      "path": "assets/possible-duplicates/assets/images/anniversaries/cti-1997-75th-anniversary-program-cover.jpg",
-      "original_filename": "cti-1997-75th-anniversary-program-cover.jpg",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/images/anniversaries/cti-1997-75th-anniversary-program-cover.jpg"
-      ],
-      "roles": [],
-      "notes": "Redundant quarantine copy removed after confirming published equivalent.",
-      "sha256": "ed0bf2164d0c3ca58fb01a5f2f2fdacb93ea5747041054a1ec98c886ac04845c",
-      "bytes": 140657,
-      "status": "deleted"
-    },
-    {
-      "id": "RES-0002",
-      "collection": "RES",
-      "title": "CTI logo modern transparent",
-      "path": "assets/possible-duplicates/assets/images/branding/CTI-logo-modern-transparent.png",
-      "original_filename": "CTI-logo-modern-transparent.png",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/images/branding/CTI-logo-modern-transparent.png"
-      ],
-      "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
-      "sha256": "5e9346b7aaef65e4f54f428c7ec205081ae9a157ef44f5dc83ee6cac571578bc",
-      "bytes": 384932,
-      "status": "quarantined"
-    },
-    {
-      "id": "FND-0003",
-      "collection": "FND",
-      "title": "Congregation Tifereth Israel Founders Plaque",
-      "path": "assets/possible-duplicates/assets/images/founders/Congregation Tifereth Israel Founders Plaque.png",
-      "original_filename": "Congregation Tifereth Israel Founders Plaque.png",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/images/founders/Congregation Tifereth Israel Founders Plaque.png"
-      ],
-      "roles": [],
-      "notes": "Redundant quarantined copy removed at user request; canonical plaque display files retained where needed.",
-      "sha256": "2c906f6aa321955da1d91d8428663c836c864a1563cd85868d1518cedea6093e",
-      "bytes": 2285576,
-      "status": "deleted"
-    },
-    {
-      "id": "GAL-0033",
-      "collection": "GAL",
-      "title": "Joseph Gibely Reading in the Sanctuary",
-      "path": "assets/possible-duplicates/assets/images/gallery/Joseph Gibely Reading in the Sanctuary.png",
-      "original_filename": "Joseph Gibely Reading in the Sanctuary.png",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/images/gallery/Joseph Gibely Reading in the Sanctuary.png"
-      ],
-      "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
-      "sha256": "1128aca0a297017a0216fab9e9becf1bce367dc7ff7bd1664b3eb7be74a0434c",
-      "bytes": 2436744,
-      "status": "quarantined"
-    },
-    {
-      "id": "GAL-0034",
-      "collection": "GAL",
-      "title": "cti 1976 joseph gibely photo enhanced",
-      "path": "assets/possible-duplicates/assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.jpg",
-      "original_filename": "cti-1976-joseph-gibely-photo-enhanced.jpg",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.jpg"
-      ],
-      "roles": [],
-      "notes": "Redundant quarantine copy removed after confirming published equivalent.",
-      "sha256": "cef1dab82c037aaf0ce2139c73510cfbe32ebab6ac756720fda066218e8fb1d0",
-      "bytes": 10881,
-      "status": "deleted"
     },
     {
       "id": "GAL-0035",
@@ -1434,23 +1247,6 @@
       "sha256": "1758a47a6fddd6b143f581942acab25ba6cd6232383eaaa91dc72d272e72aab9",
       "bytes": 124239,
       "status": "published"
-    },
-    {
-      "id": "GAL-0036",
-      "collection": "GAL",
-      "title": "cti community members photo 2006",
-      "path": "assets/possible-duplicates/assets/images/gallery/cti-community-members-photo-2006.jpg",
-      "original_filename": "cti-community-members-photo-2006.jpg",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/images/gallery/cti-community-members-photo-2006.jpg"
-      ],
-      "roles": [],
-      "notes": "Same photo as published 2006 kitchen dedication image; scrapbook variant removed.",
-      "sha256": "ecf48540ee13983ea17bb848dcc2d1917ced65a0245926262ca7e93c2bf00588",
-      "bytes": 141477,
-      "status": "deleted"
     },
     {
       "id": "LDR-0019",
@@ -1473,7 +1269,7 @@
       "id": "LDR-0020",
       "collection": "LDR",
       "title": "cti joseph gibely ii 1979 portrait",
-      "path": "assets/possible-duplicates/assets/images/leadership/cti-joseph-gibely-ii-1979-portrait.jpg",
+      "path": "assets/archive/originals/cti-joseph-gibely-ii-1979-portrait.jpg",
       "original_filename": "cti-joseph-gibely-ii-1979-portrait.jpg",
       "source_reference": null,
       "source_drive_id": null,
@@ -1486,57 +1282,6 @@
       "bytes": 56595,
       "status": "restored-to-archive",
       "restored_path": "assets/archive/originals/cti-joseph-gibely-ii-1979-portrait.jpg"
-    },
-    {
-      "id": "LDR-0021",
-      "collection": "LDR",
-      "title": "rabbi blue family",
-      "path": "assets/possible-duplicates/assets/images/leadership/rabbi-blue-family.jpg",
-      "original_filename": "rabbi-blue-family.jpg",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/images/leadership/rabbi-blue-family.jpg"
-      ],
-      "roles": [],
-      "notes": "Redundant quarantined copy removed at user request; canonical plaque display files retained where needed.",
-      "sha256": "0947910ec673f13c0388903818ed16fb99eb41d10bfe8355b6bef90e3a5fef49",
-      "bytes": 324998,
-      "status": "deleted"
-    },
-    {
-      "id": "PRE-0002",
-      "collection": "PRE",
-      "title": "cti presidents plaque enhanced",
-      "path": "assets/possible-duplicates/assets/images/presidents/cti-presidents-plaque-enhanced.png",
-      "original_filename": "cti-presidents-plaque-enhanced.png",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/images/presidents/cti-presidents-plaque-enhanced.png"
-      ],
-      "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review. Redundant plaque variant deleted 2026-10-16; original ARC-0033 and canonical PRE-0001 retained.",
-      "sha256": "098806136bd9c0f268d8f6396fb987bc2d443158aa7f15b0134afd71ee862465",
-      "bytes": 2474291,
-      "status": "deleted"
-    },
-    {
-      "id": "PRE-0003",
-      "collection": "PRE",
-      "title": "cti presidents plaque",
-      "path": "assets/possible-duplicates/assets/images/presidents/cti-presidents-plaque.jpg",
-      "original_filename": "cti-presidents-plaque.jpg",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/images/presidents/cti-presidents-plaque.jpg"
-      ],
-      "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review. Redundant plaque variant deleted 2026-10-16; original ARC-0033 and canonical PRE-0001 retained.",
-      "sha256": "eec1f6f3e709fdd497fd02363c507e4307156199e8e886848ec6f9f94a0e8858",
-      "bytes": 129255,
-      "status": "deleted"
     },
     {
       "id": "RES-0003",
@@ -1717,6 +1462,51 @@
       "sha256": "2e93c26d2a45604906a941cd02f7d01d14c004f613409316d47fe345d259e2a4",
       "bytes": 7248689,
       "status": "published"
+    },
+    {
+      "id": "AST-0037",
+      "collection": "AST",
+      "title": "Cti 2024 Elliot Hershoff Obituary Clipping",
+      "path": "assets/archive/originals/cti-2024-elliot-hershoff-obituary-clipping.png",
+      "original_filename": "cti-2024-elliot-hershoff-obituary-clipping.png",
+      "source_reference": null,
+      "source_drive_id": null,
+      "legacy_paths": [],
+      "roles": [],
+      "notes": "Discovered during Phase 3 registry reconciliation; provenance not independently reviewed.",
+      "sha256": "7cc4c1f031db20ef8004bc78f451a91009573b29a96f3965c3fa02ee31661f37",
+      "bytes": 507249,
+      "status": "preserved"
+    },
+    {
+      "id": "AST-0038",
+      "collection": "AST",
+      "title": "Cti 2012 90Th Anniversary Program Original",
+      "path": "assets/archive/originals/cti-2012-90th-anniversary-program-original.jpg",
+      "original_filename": "cti-2012-90th-anniversary-program-original.jpg",
+      "source_reference": null,
+      "source_drive_id": null,
+      "legacy_paths": [],
+      "roles": [],
+      "notes": "Discovered during Phase 3 registry reconciliation; provenance not independently reviewed.",
+      "sha256": "c26bc9c8a09500f4a7e2f894221ab5557953b14b54fb554e106591c619523b36",
+      "bytes": 112618,
+      "status": "preserved"
+    },
+    {
+      "id": "AST-0039",
+      "collection": "AST",
+      "title": "Cti 2012 90Th Anniversary Program Cropped",
+      "path": "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
+      "original_filename": "cti-2012-90th-anniversary-program-cropped.jpg",
+      "source_reference": null,
+      "source_drive_id": null,
+      "legacy_paths": [],
+      "roles": [],
+      "notes": "Discovered during Phase 3 registry reconciliation; provenance not independently reviewed.",
+      "sha256": "d45d2ada96be26e8d80052ed46f0ae54926ceb1bba0f60d4fbaef655de45b559",
+      "bytes": 126996,
+      "status": "preserved"
     }
   ]
 }
