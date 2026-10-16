@@ -18,15 +18,16 @@
       "id": "archive-1979-joseph-gibely-address",
       "title": "Joseph Gibely address on CTI and Sephardic history",
       "subtitle": "",
-      "citation": "Primary source: Jewish Community of Peabody (Mass.) Records, I-581, Box 1, Folder 15, images 012–023, Wyner Family Jewish Heritage Center. The PDF preserves the twelve scans in archival sequence.",
+      "citation": "Primary source: Jewish Community of Peabody (Mass.) Records, I-581, Box 1, Folder 15, images 012–023, Wyner Family Jewish Heritage Center. The PDF preserves the twelve scans in archival sequence. Additional related photograph: CTI synagogue building, circa 1980 (estimated), I-581, Box 1, Folder 15, image 006.",
       "scans": [
         "assets/archive/originals/cti-1979-joseph-gibely-address.pdf",
-        "assets/archive/originals/cti-1979-gibely-address-original-page.jpg"
+        "assets/archive/originals/cti-1979-gibely-address-original-page.jpg",
+        "assets/archive/originals/I-581-01-15-006-web.jpg"
       ],
       "transcription": "content/archives/transcriptions/archive-1979-joseph-gibely-address.txt",
       "status": "published",
       "legacy_page": "archives/archive-1979-joseph-gibely-address.html",
-      "review": "extracted from published HTML; requires source-image comparison"
+      "review": "1979 address source images retained; related circa-1980 building photograph restored to canonical record. Transcript requires comparison to original scans."
     },
     {
       "id": "archive-1995-ashkenazi-sephardic-traditions",
