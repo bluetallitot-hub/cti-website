@@ -8,6 +8,7 @@
   if(!x||!/^content\/archives\/transcriptions\/[a-z0-9-]+\.txt$/.test(x.transcription))throw Error('Record not found');
   const txt=await fetch(x.transcription).then(r=>{if(!r.ok)throw Error('Transcription unavailable');return r.text()});
   el('title').textContent=x.title;el('subtitle').textContent=x.subtitle||'';el('citation').textContent=x.citation||'Source citation pending review';
+  if(x.id==='archive-elliot-hershoff-obituary'){const p=document.createElement('p');const a=document.createElement('a');a.href='https://jewishjournal.org/wp-content/uploads/2024/10/2024_10.17_JewishJournal.pdf#page=18';a.target='_blank';a.rel='noopener noreferrer';a.textContent='Read the original Jewish Journal issue (PDF, page 18) →';p.append(a);el('citation').after(p)}
   document.title=x.title+' | CTI Archives';
   for(const src of x.scans||[]){
    if(!/^assets\/archive\/[a-zA-Z0-9_./-]+\.(jpg|jpeg|png|webp|pdf)$/i.test(src)||src.includes('..'))continue;
