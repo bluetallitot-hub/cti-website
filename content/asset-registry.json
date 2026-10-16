@@ -1308,10 +1308,10 @@
         "assets/archive/originals/cti-presidents-plaque-original.jpeg"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Redundant quarantined copy removed at user request; canonical plaque display files retained where needed.",
       "sha256": "a651db9c081fff1e5f4cf8ecd802bb4cdc215e920d4e7cdc60a505cd91712ac9",
       "bytes": 218402,
-      "status": "quarantined"
+      "status": "deleted"
     },
     {
       "id": "ARC-0034",
@@ -1410,10 +1410,10 @@
         "assets/images/founders/Congregation Tifereth Israel Founders Plaque.png"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Redundant quarantined copy removed at user request; canonical plaque display files retained where needed.",
       "sha256": "2c906f6aa321955da1d91d8428663c836c864a1563cd85868d1518cedea6093e",
       "bytes": 2285576,
-      "status": "quarantined"
+      "status": "deleted"
     },
     {
       "id": "GAL-0033",
@@ -1529,10 +1529,10 @@
         "assets/images/leadership/rabbi-blue-family.jpg"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Redundant quarantined copy removed at user request; canonical plaque display files retained where needed.",
       "sha256": "0947910ec673f13c0388903818ed16fb99eb41d10bfe8355b6bef90e3a5fef49",
       "bytes": 324998,
-      "status": "quarantined"
+      "status": "deleted"
     },
     {
       "id": "PRE-0002",
