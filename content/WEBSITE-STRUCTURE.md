@@ -17,3 +17,9 @@ Do not delete or move existing root pages without preserving their URLs using re
 
 ## Intake
 All new media must follow `content/ASSET-INTAKE-PROCEDURE.md` and receive a permanent asset registry ID before publication.
+
+## Biography separation — enforced editorial rule
+The rabbi's biography is a distinct editorial and page type, not a member of the lay-leadership biography collection. Do not include Rabbi Phillip Blue in `content/leadership-bios.json` or `content/biography-directory.json`, and do not generate a `biographies/phillip-blue.html` page. Preserve `rabbi-bio.html` and `rabbi.html` and their separate formatting, wording, and navigation. The Leadership Team page may display a rabbi card but must link that card directly to `rabbi-bio.html`.
+
+## Root cleanup sequence
+After link audits, replace obsolete root-level individual lay-leadership biographies with compatibility forwarding pages to `biographies/<person>.html`. Do not redirect or move the rabbi's pages. Move historical and sermon content only after all relative asset links and inbound references are mapped and tested.
