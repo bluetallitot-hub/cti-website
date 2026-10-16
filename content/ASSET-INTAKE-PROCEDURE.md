@@ -28,3 +28,16 @@ Published filename pattern: `<ID>-<short-lowercase-kebab-description>.<extension
 - Rename live files only with an atomic reference migration and validation.
 - Intake editors must not publish unregistered filenames.
 - Run a link and registry audit before merging changes.
+
+## Operational intake (Phase 2)
+Use `intake/` as a temporary staging directory on a local checkout. Staged files must not be linked from public pages. To preview an intake record:
+
+```sh
+python3 scripts/asset-intake.py --file intake/photo.jpg --collection GAL --title "Descriptive verified title" --source "Donor or archive citation"
+```
+
+Review duplicate matches before continuing. For a nonduplicate file, run the same command with `--apply` to allocate its permanent ID, move it to the appropriate asset folder, and create a `pending-review` registry record. Commit the file and registry together. **Do not publish a pending-review file**: first verify Drive preservation, rights, caption, provenance, and historical identities; then set the record to `published` and add the public gallery/archive reference in the same reviewed change. Use `python3 scripts/validate-assets.py` to check registry integrity.
+
+The existing browser-only gallery/archive editors are not authoritative intake tools and cannot safely allocate IDs or perform repository-wide SHA-256 checks. Their manual upload paths must be treated as legacy workflows pending replacement by an authenticated intake interface. Never upload a new image directly through them without registration. The registry build workflow inventories existing files, but must not be used as a substitute for this controlled intake process.
+
+The 27 quarantined assets remain preserved pending visual review. A matching SHA-256 indicates exact bytes, not necessarily a historically identical photograph; visually similar images require human review.
