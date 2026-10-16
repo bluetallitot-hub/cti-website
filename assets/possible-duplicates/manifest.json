@@ -3,25 +3,25 @@
     "original_path": "assets/archive/originals/I-581-01-15-006-web.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/I-581-01-15-006-web.jpg",
     "sha256": "3c93abde2bd303e01577e21fd492faa0e40a9994079e258fb4bf486fa3a56d36",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/I-581-01-15-007-web.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/I-581-01-15-007-web.jpg",
     "sha256": "ddde54dfdfb5c8db6e618ead9d1f4227248dcecc3cfdc838add66a6cc3f82036",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/I-581-01-15-026-web.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/I-581-01-15-026-web.jpg",
     "sha256": "4603cc4168a5b3c0f9ade4fd2b8cb9bedbf21b1edba09e6abd8340fd9c655c32",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/Vintage Synagogue Bat Mitzvah Clipping.png",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/Vintage Synagogue Bat Mitzvah Clipping.png",
     "sha256": "2188259aa7e57f4c56f559215c50a1cc07a515b7480667978cf7245282811559",
-    "status": "restored \u2014 referenced",
+    "status": "restored — referenced",
     "restored_path": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
     "references": [
       "content/gallery.json"
@@ -31,37 +31,37 @@
     "original_path": "assets/archive/originals/article.heic",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/article.heic",
     "sha256": "c19b8d45f854e0d644d5a22a9bf2ed91bd21e4b6cc82795b43f00e6485b97663",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/cti-1972-50th-anniversary-clippings-ticket.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-1972-50th-anniversary-clippings-ticket.jpg",
     "sha256": "fba3cf74287ec455646e0ec63dc15247b09724dc4e0d87905517242e0f3b6b87",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/cti-1972-50th-anniversary-clippings.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-1972-50th-anniversary-clippings.jpg",
     "sha256": "8d380d654da27ea6f98c92a8922036e90439f481bb90289a160bc0a72a76e940",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-2.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-2.jpg",
     "sha256": "55a68c1c8f003a0ac25f4de8d634ce9839d7b67301c8bf8716c2da44a4163a5b",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg",
     "sha256": "3cea83d0ef6656a8c499f840ba64c0c11bab5fab204b34bfcd22ae0c15383eea",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/cti-2022-centennial-article.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-2022-centennial-article.jpg",
     "sha256": "d1935f78b7f779fed718b879643f63a2e812277b401ee08c9ced1a98b618d4d7",
-    "status": "restored \u2014 referenced",
+    "status": "restored — referenced",
     "restored_path": "assets/archive/originals/cti-2022-centennial-article.jpg",
     "references": [
       "archive-2022-jewish-journal-centennial.html"
@@ -71,7 +71,7 @@
     "original_path": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-early-religious-leaders-original.jpg",
     "sha256": "9d2b7489a4662944569e9dc40e2beb30c9ab56c2f1fae816319c074b76123d78",
-    "status": "restored \u2014 referenced",
+    "status": "restored — referenced",
     "restored_path": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
     "references": [
       "content/gallery.json"
@@ -81,43 +81,43 @@
     "original_path": "assets/archive/originals/cti-elliot-hershoff-obituary-display.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-elliot-hershoff-obituary-display.jpg",
     "sha256": "819e6e0ac95cdd6c5323c5c35e88bf7664dbafe136930749afa4b31c2c9828c2",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/cti-leadership-profile-images (1).zip",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-leadership-profile-images (1).zip",
     "sha256": "8f3fa7dc48738b317b15974f1b20ecd800906eaf17d7c68e30fd240977058532",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/cti-october-1994-original-blue.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-october-1994-original-blue.jpg",
     "sha256": "36b416b9bbf2e70eae8849c94708fcf4c3d1f1e6ebc4e28c5e46218c549a760a",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/cti-presidents-plaque-original.jpeg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-presidents-plaque-original.jpeg",
     "sha256": "a651db9c081fff1e5f4cf8ecd802bb4cdc215e920d4e7cdc60a505cd91712ac9",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/cti-sephardic-temple-honors-patriarch-clipping.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-sephardic-temple-honors-patriarch-clipping.jpg",
     "sha256": "c537248646bba8f2609352bf3b23df160e6dabeea72dfaa3f4fbf30f00ae0d6c",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/archive/originals/cti-september-1983-original-blue.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-september-1983-original-blue.jpg",
     "sha256": "e15008de94f6494c7aea6da016538249b4d853e924f4debb1e6b5af9dad52128",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/anniversaries/cti-1972-anniversary-celebration-photos-2.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/anniversaries/cti-1972-anniversary-celebration-photos-2.jpg",
     "sha256": "f62703c46fadf5a8aa11c9c883ec6241c1bd256e506884cf49b59a1108a4d8d7",
-    "status": "restored \u2014 referenced",
+    "status": "restored — referenced",
     "restored_path": "assets/images/anniversaries/cti-1972-anniversary-celebration-photos-2.jpg",
     "references": [
       "assets/styles.css"
@@ -127,49 +127,49 @@
     "original_path": "assets/images/anniversaries/cti-1997-75th-anniversary-program-cover.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/anniversaries/cti-1997-75th-anniversary-program-cover.jpg",
     "sha256": "ed0bf2164d0c3ca58fb01a5f2f2fdacb93ea5747041054a1ec98c886ac04845c",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/anniversaries/cti-2012-90th-anniversary-program.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/anniversaries/cti-2012-90th-anniversary-program.jpg",
     "sha256": "c26bc9c8a09500f4a7e2f894221ab5557953b14b54fb554e106591c619523b36",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/branding/CTI-logo-modern-transparent.png",
     "quarantine_path": "assets/possible-duplicates/assets/images/branding/CTI-logo-modern-transparent.png",
     "sha256": "5e9346b7aaef65e4f54f428c7ec205081ae9a157ef44f5dc83ee6cac571578bc",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/founders/Congregation Tifereth Israel Founders Plaque.png",
     "quarantine_path": "assets/possible-duplicates/assets/images/founders/Congregation Tifereth Israel Founders Plaque.png",
     "sha256": "2c906f6aa321955da1d91d8428663c836c864a1563cd85868d1518cedea6093e",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/gallery/Joseph Gibely Reading in the Sanctuary.png",
     "quarantine_path": "assets/possible-duplicates/assets/images/gallery/Joseph Gibely Reading in the Sanctuary.png",
     "sha256": "1128aca0a297017a0216fab9e9becf1bce367dc7ff7bd1664b3eb7be74a0434c",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.jpg",
     "sha256": "cef1dab82c037aaf0ce2139c73510cfbe32ebab6ac756720fda066218e8fb1d0",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/gallery/cti-2006-kitchen-dedication-invitation.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/gallery/cti-2006-kitchen-dedication-invitation.jpg",
     "sha256": "1758a47a6fddd6b143f581942acab25ba6cd6232383eaaa91dc72d272e72aab9",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
     "sha256": "ee569f7e8c241d18dc94a1f636da92a8a7587a7ace36929b955b16666b11b8ff",
-    "status": "restored \u2014 referenced",
+    "status": "restored — referenced",
     "restored_path": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
     "references": [
       "content/gallery.json"
@@ -179,19 +179,19 @@
     "original_path": "assets/images/gallery/cti-community-members-photo-2006.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/gallery/cti-community-members-photo-2006.jpg",
     "sha256": "ecf48540ee13983ea17bb848dcc2d1917ced65a0245926262ca7e93c2bf00588",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/leadership/2012 Shofar Gift Group Portrait.png",
     "quarantine_path": "assets/possible-duplicates/assets/images/leadership/2012 Shofar Gift Group Portrait.png",
     "sha256": "da3ff767c2a1d33bab54d80c5d10de2f20a7bccbc4ee7703efabdfac48743c7d",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/leadership/a_crisp_warmly_lit_professional_portrait_photo_i.png",
     "quarantine_path": "assets/possible-duplicates/assets/images/leadership/a_crisp_warmly_lit_professional_portrait_photo_i.png",
     "sha256": "e4b0d732f7a17eeb6a46b0451b01f937d677ead58c81043238053b61f4089744",
-    "status": "restored \u2014 referenced",
+    "status": "restored — referenced",
     "restored_path": "assets/images/leadership/cti-a-crisp-warmly-lit-professional-portrait-photo-i.png",
     "references": [
       "leadership.html"
@@ -201,24 +201,26 @@
     "original_path": "assets/images/leadership/cti-joseph-gibely-ii-1979-portrait.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/leadership/cti-joseph-gibely-ii-1979-portrait.jpg",
     "sha256": "57140691b386ab9c00818f550907e55376251a115f2b7b328ca0aa4fb6c1229e",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/leadership/rabbi-blue-family.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/leadership/rabbi-blue-family.jpg",
     "sha256": "0947910ec673f13c0388903818ed16fb99eb41d10bfe8355b6bef90e3a5fef49",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "no reference detected — retained for archival/visual review"
   },
   {
     "original_path": "assets/images/presidents/cti-presidents-plaque-enhanced.png",
     "quarantine_path": "assets/possible-duplicates/assets/images/presidents/cti-presidents-plaque-enhanced.png",
     "sha256": "098806136bd9c0f268d8f6396fb987bc2d443158aa7f15b0134afd71ee862465",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "deleted — redundant website variant; historical original and canonical display retained",
+    "deleted_on": "2026-10-16"
   },
   {
     "original_path": "assets/images/presidents/cti-presidents-plaque.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/presidents/cti-presidents-plaque.jpg",
     "sha256": "eec1f6f3e709fdd497fd02363c507e4307156199e8e886848ec6f9f94a0e8858",
-    "status": "no reference detected \u2014 retained for archival/visual review"
+    "status": "deleted — redundant website variant; historical original and canonical display retained",
+    "deleted_on": "2026-10-16"
   }
 ]
