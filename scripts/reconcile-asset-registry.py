@@ -17,7 +17,7 @@ used=set()
 entries=[]
 max_id=0
 for a in old:
-    m=re.match(r"^[A-Z]+-(\\d+)$",str(a.get("id","")))
+    m=re.match(r"^[A-Z]+-(\d+)$",str(a.get("id","")))
     if m:max_id=max(max_id,int(m.group(1)))
     path=a.get("path")
     if not path:continue
@@ -46,5 +46,5 @@ for digest,paths in sorted(by_hash.items()):
         entries.append({"id":f"AST-{max_id:04d}","collection":"AST","title":Path(path).stem.replace("-"," ").replace("_"," ").title(),"path":path,"original_filename":Path(path).name,"source_reference":None,"source_drive_id":None,"legacy_paths":[],"roles":[],"notes":"Discovered during Phase 3 registry reconciliation; provenance not independently reviewed.","sha256":digest,"bytes":(root/path).stat().st_size,"status":"quarantined" if "possible-duplicates/" in path else "preserved"})
         used.add(path)
 db["assets"]=entries
-dbpath.write_text(json.dumps(db,indent=2,ensure_ascii=False)+"\\n")
+dbpath.write_text(json.dumps(db,indent=2,ensure_ascii=False)+"\n")
 print(f"Reconciled {len(old)} entries into {len(entries)}; media files untouched")
