@@ -1,6 +1,9 @@
 name: Reconcile CTI asset registry
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/reconcile-asset-registry.py'
 permissions:
   contents: write
 jobs:
