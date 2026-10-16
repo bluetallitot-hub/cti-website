@@ -1,0 +1,40 @@
+name: CTI phased optimization - page organization
+on:
+  push:
+    paths:
+      - .github/workflows/optimize-site-phase1.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  organize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Organize content and audit links
+        run: python3 scripts/site-maintenance.py --migrate
+      - name: Verify migrations and preservation
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('content/page-migration-map.json').read_text())
+          for x in d['pages']:
+              assert Path(x['legacy']).exists(),x
+              assert Path(x['canonical']).exists(),x
+              assert '<base href="../">' in Path(x['canonical']).read_text(),x
+              assert x['canonical'] in Path(x['legacy']).read_text(),x
+          assert Path('rabbi-bio.html').exists()
+          assert Path('rabbi.html').exists()
+          assert not Path('biographies/phillip-blue.html').exists()
+          print('Verified',len(d['pages']),'migrated pages and preserved rabbi separation')
+          PY
+      - name: Commit migration and baseline audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add archives press sermons resources content/page-migration-map.json backup-audit/site-validation.json *.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Organize CTI historical and sermon content with stable legacy URLs'
+            git push
+          fi
