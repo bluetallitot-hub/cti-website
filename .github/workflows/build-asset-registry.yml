@@ -1,0 +1,68 @@
+name: Build CTI central asset registry
+on:
+  push:
+    paths:
+      - .github/workflows/build-asset-registry.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inventory and register existing assets
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, hashlib, re, subprocess
+          registry=Path('content/asset-registry.json')
+          old=json.loads(registry.read_text()) if registry.exists() else {'version':1,'assets':[]}
+          existing={a['path']:a for a in old['assets'] if a.get('path')}
+          tracked=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          extensions={'.png','.jpg','.jpeg','.webp','.heic','.gif','.svg','.pdf','.zip','.mp3','.mp4'}
+          files=sorted(p for p in tracked if p.startswith('assets/') and Path(p).suffix.lower() in extensions and Path(p).is_file())
+          def collection(p):
+              if '/possible-duplicates/' in p:
+                  p=p.split('/possible-duplicates/',1)[1]
+              if '/founders/' in p:return 'FND'
+              if '/presidents/' in p:return 'PRE'
+              if '/leadership/' in p:return 'LDR'
+              if '/gallery/' in p or '/anniversaries/' in p:return 'GAL'
+              if '/archive/' in p:return 'ARC'
+              return 'RES'
+          counters={k:max([int(a['id'].split('-')[-1]) for a in old['assets'] if re.fullmatch(k+r'-\d{4}',a.get('id',''))] or [0]) for k in ['ARC','GAL','PRE','FND','LDR','RES']}
+          items=[]
+          for p in files:
+              f=Path(p);c=collection(p)
+              if p in existing:
+                  a=existing[p].copy()
+              else:
+                  counters[c]+=1
+                  a={'id':f'{c}-{counters[c]:04d}','collection':c,'title':f.stem.replace('-',' ').replace('_',' '),'path':p,'original_filename':f.name,'source_reference':None,'source_drive_id':None,'legacy_paths':[],'roles':[],'notes':'Imported from existing repository; provenance and identity require review.'}
+              a['sha256']=hashlib.sha256(f.read_bytes()).hexdigest()
+              a['bytes']=f.stat().st_size
+              a['status']='quarantined' if '/possible-duplicates/' in p else a.get('status','published')
+              items.append(a)
+          # Include known historical source paths and the original quarantined filenames.
+          manifest=Path('assets/possible-duplicates/manifest.json')
+          if manifest.exists():
+              bypath={a['path']:a for a in items}
+              for m in json.loads(manifest.read_text()):
+                  p=m.get('restored_path') or m['quarantine_path']
+                  if p in bypath:
+                      a=bypath[p]
+                      if m['original_path'] not in a['legacy_paths']:a['legacy_paths'].append(m['original_path'])
+                      if a['status']=='quarantined':a['notes']='Unlinked by static audit; preserve until visual and archival review.'
+          registry.write_text(json.dumps({'version':1,'policy':'content/ASSET-INTAKE-PROCEDURE.md','assets':items},indent=2,ensure_ascii=False)+'\n')
+          print('Registered',len(items),'files; quarantined',sum(a['status']=='quarantined' for a in items))
+          PY
+      - name: Commit registry
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add content/asset-registry.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Create central CTI asset inventory with permanent IDs and SHA-256 fingerprints'
+            git push
+          fi
