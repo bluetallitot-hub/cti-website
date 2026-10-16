@@ -14,7 +14,7 @@
   $('name').textContent=x.name;$('role').textContent=x.role||'Board Member';
   document.title=x.name+' | CTI Leadership';
   if(x.photo&&/^assets\/images\/leadership\/[^/]+$/i.test(x.photo)&&!x.photo.includes('..')){
-   const img=document.createElement('img');img.src=x.photo;img.alt=x.name;img.loading='lazy';img.style.cssText='width:100%;border-radius:12px';$('portrait').append(img)
+   const img=document.createElement('img');img.src=x.photo+'?v='+encodeURIComponent(b.photoVersion||'1');img.alt=x.name;img.loading='lazy';img.style.cssText='width:100%;border-radius:12px';$('portrait').append(img)
   }
   for(const paragraph of (b.fullBio||b.bio||'').split(/\n\s*\n/)){
    const p=document.createElement('p');p.textContent=paragraph;$('bio').append(p)
