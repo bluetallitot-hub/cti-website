@@ -1453,7 +1453,7 @@
       "id": "GAL-0035",
       "collection": "GAL",
       "title": "cti 2006 kitchen dedication invitation",
-      "path": "assets/possible-duplicates/assets/images/gallery/cti-2006-kitchen-dedication-invitation.jpg",
+      "path": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
       "original_filename": "cti-2006-kitchen-dedication-invitation.jpg",
       "source_reference": null,
       "source_drive_id": null,
@@ -1461,10 +1461,10 @@
         "assets/images/gallery/cti-2006-kitchen-dedication-invitation.jpg"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Unlinked by static audit; preserve until visual and archival review. Preserved original invitation; linked from 2006 gallery photo.",
       "sha256": "1758a47a6fddd6b143f581942acab25ba6cd6232383eaaa91dc72d272e72aab9",
       "bytes": 124239,
-      "status": "quarantined"
+      "status": "published"
     },
     {
       "id": "GAL-0036",
