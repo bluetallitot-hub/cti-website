@@ -13,8 +13,9 @@
       "caption": "Joseph Gibely in the CTI sanctuary, 1976."
     },
     {
-      "image": "https://www.jhcns.org/art-Sephardic-Peabody/Cong-Tifereth-Israel-May-09_x602.jpg",
-      "caption": "Congregation Tifereth Israel, 8 Pierpont Street, Peabody."
+      "image": "assets/images/gallery/cti-building-8-pierpont-street.png",
+      "caption": "Congregation Tifereth Israel, 8 Pierpont Street, Peabody.",
+      "source_url": "https://www.jhcns.org/art-Sephardic-Peabody/Cong-Tifereth-Israel-May-09_x602.jpg"
     },
     {
       "image": "assets/archive/originals/I-581-01-15-024-web.jpg",
@@ -29,7 +30,7 @@
       }
     },
     {
-      "image": "https://images.openai.com/static-rsc-1/bRKT8q8cQ6YJIjpcUOzByrVd_OyizxLvbTGysp9P80Hhf1x-EnWw1FeVPczy5g2BZjWIHlp6z6jr8zQ6F9anBuv-ae4CAXsDojyfo5NQP-Iba_KCGYax61prm4l6h9PhgaEHZySx32GBZ7zosH856A",
+      "image": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
       "caption": "Menorah lighting at the Peabody Hebrew School, 1958. Regional Jewish history, not identified as CTI."
     },
     {
