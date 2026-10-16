@@ -1,0 +1,24 @@
+name: CTI asset registry integrity
+on:
+  push:
+    paths:
+      - 'assets/**'
+      - 'content/asset-registry.json'
+      - 'scripts/validate-assets.py'
+      - '.github/workflows/asset-integrity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check asset registry and quarantine integrity
+        run: python3 scripts/validate-assets.py
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cti-asset-integrity
+          path: backup-audit/asset-registry-validation.json
