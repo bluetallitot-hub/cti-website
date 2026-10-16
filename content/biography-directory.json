@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "people": [
+    {
+      "name": "Jerry Pressman",
+      "role": "President",
+      "url": "biographies/jerry-pressman.html",
+      "photo": "assets/images/leadership/jerry-pressman-profile.png",
+      "source": "content/leadership-bios.json"
+    },
+    {
+      "name": "Betty Polonsky",
+      "role": "Vice President",
+      "url": "biographies/betty-polonsky.html",
+      "photo": "assets/images/leadership/betty-polonsky-profile.png",
+      "source": "content/leadership-bios.json"
+    },
+    {
+      "name": "Harvey Elefson",
+      "role": "Treasurer",
+      "url": "biographies/harvey-elefson.html",
+      "photo": "assets/images/leadership/harvey-elefson-profile.png",
+      "source": "content/leadership-bios.json"
+    },
+    {
+      "name": "Joanne Pressman",
+      "role": "Secretary",
+      "url": "biographies/joanne-pressman.html",
+      "photo": "assets/images/leadership/joanne-pressman-profile.png",
+      "source": "content/leadership-bios.json"
+    },
+    {
+      "name": "Millie Becker",
+      "role": "Board Member",
+      "url": "biographies/millie-becker.html",
+      "photo": "assets/images/leadership/millie-becker-profile.png",
+      "source": "content/leadership-bios.json"
+    },
+    {
+      "name": "Doris Hershoff",
+      "role": "Board Member",
+      "url": "biographies/doris-hershoff.html",
+      "photo": "assets/images/leadership/doris-hershoff-profile.png",
+      "source": "content/leadership-bios.json"
+    },
+    {
+      "name": "David Podradchik",
+      "role": "Board Member",
+      "url": "biographies/david-podradchik.html",
+      "photo": "assets/images/leadership/david-podradchik-profile.png",
+      "source": "content/leadership-bios.json"
+    },
+    {
+      "name": "Jay Polonsky",
+      "role": "Board Member",
+      "url": "biographies/jay-polonsky.html",
+      "photo": "assets/images/leadership/jay-polonsky-profile.png",
+      "source": "content/leadership-bios.json"
+    },
+    {
+      "name": "Marvin Menovich",
+      "role": "Board Member",
+      "url": "biographies/marvin-menovich.html",
+      "photo": null,
+      "source": "content/leadership-bios.json"
+    },
+    {
+      "name": "Wendy Tirck",
+      "role": "Board Member",
+      "url": "biographies/wendy-tirck.html",
+      "photo": null,
+      "source": "content/leadership-bios.json"
+    },
+    {
+      "name": "Fran Arsenault-Shaheen",
+      "role": "Board Member",
+      "url": "biographies/fran-arsenault-shaheen.html",
+      "photo": null,
+      "source": "content/leadership-bios.json"
+    }
+  ]
+}
