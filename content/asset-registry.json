@@ -1351,23 +1351,6 @@
       "status": "deleted"
     },
     {
-      "id": "GAL-0032",
-      "collection": "GAL",
-      "title": "cti 2012 90th anniversary program",
-      "path": "assets/possible-duplicates/assets/images/anniversaries/cti-2012-90th-anniversary-program.jpg",
-      "original_filename": "cti-2012-90th-anniversary-program.jpg",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/images/anniversaries/cti-2012-90th-anniversary-program.jpg"
-      ],
-      "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
-      "sha256": "c26bc9c8a09500f4a7e2f894221ab5557953b14b54fb554e106591c619523b36",
-      "bytes": 112618,
-      "status": "quarantined"
-    },
-    {
       "id": "RES-0002",
       "collection": "RES",
       "title": "CTI logo modern transparent",
