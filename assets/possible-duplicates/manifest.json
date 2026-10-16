@@ -135,12 +135,6 @@
     "notes": "Redundant quarantine copy removed after confirming published equivalent."
   },
   {
-    "original_path": "assets/images/anniversaries/cti-2012-90th-anniversary-program.jpg",
-    "quarantine_path": "assets/possible-duplicates/assets/images/anniversaries/cti-2012-90th-anniversary-program.jpg",
-    "sha256": "c26bc9c8a09500f4a7e2f894221ab5557953b14b54fb554e106591c619523b36",
-    "status": "no reference detected — retained for archival/visual review"
-  },
-  {
     "original_path": "assets/images/branding/CTI-logo-modern-transparent.png",
     "quarantine_path": "assets/possible-duplicates/assets/images/branding/CTI-logo-modern-transparent.png",
     "sha256": "5e9346b7aaef65e4f54f428c7ec205081ae9a157ef44f5dc83ee6cac571578bc",
