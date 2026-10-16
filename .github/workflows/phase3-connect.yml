@@ -1,0 +1,40 @@
+name: CTI Phase 3 connect shared readers
+on:
+  push:
+    paths:
+      - .github/workflows/phase3-connect.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  connect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Connect archive and biography links
+        run: python3 scripts/phase3-connect.py
+      - name: Verify public readers and protected pages
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          d=json.loads(Path('content/biography-directory.json').read_text())
+          a=json.loads(Path('content/archives/index.json').read_text())
+          s=Path('leadership.html').read_text()
+          p=Path('press.html').read_text()
+          for x in d['people']:
+              assert 'leader-profile.html?id='+x['id'] in s,x['id']
+              assert Path(x['url']).exists(),x['url']
+          for x in a['items']:
+              assert 'historical-record.html?id='+x['id'] in p,x['id']
+          assert 'href="rabbi-bio.html"' in s
+          assert Path('rabbi-bio.html').exists()
+          assert Path('rabbi.html').exists()
+          print('Verified',len(d['people']),'lay readers and',len(a['items']),'archive links')
+          PY
+      - name: Commit reader connections
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add leadership.html press.html history.html content/biography-directory.json
+          if ! git diff --cached --quiet; then git commit -m 'Connect historical and lay leadership indexes to shared readers'; git push; fi
