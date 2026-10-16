@@ -100,7 +100,8 @@
     "original_path": "assets/archive/originals/cti-presidents-plaque-original.jpeg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-presidents-plaque-original.jpeg",
     "sha256": "a651db9c081fff1e5f4cf8ecd802bb4cdc215e920d4e7cdc60a505cd91712ac9",
-    "status": "no reference detected — retained for archival/visual review"
+    "status": "deleted",
+    "notes": "Redundant quarantined copy removed at user request; canonical plaque display files retained where needed."
   },
   {
     "original_path": "assets/archive/originals/cti-sephardic-temple-honors-patriarch-clipping.jpg",
@@ -146,7 +147,8 @@
     "original_path": "assets/images/founders/Congregation Tifereth Israel Founders Plaque.png",
     "quarantine_path": "assets/possible-duplicates/assets/images/founders/Congregation Tifereth Israel Founders Plaque.png",
     "sha256": "2c906f6aa321955da1d91d8428663c836c864a1563cd85868d1518cedea6093e",
-    "status": "no reference detected — retained for archival/visual review"
+    "status": "deleted",
+    "notes": "Redundant quarantined copy removed at user request; canonical plaque display files retained where needed."
   },
   {
     "original_path": "assets/images/gallery/Joseph Gibely Reading in the Sanctuary.png",
@@ -212,7 +214,8 @@
     "original_path": "assets/images/leadership/rabbi-blue-family.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/leadership/rabbi-blue-family.jpg",
     "sha256": "0947910ec673f13c0388903818ed16fb99eb41d10bfe8355b6bef90e3a5fef49",
-    "status": "no reference detected — retained for archival/visual review"
+    "status": "deleted",
+    "notes": "Redundant quarantined copy removed at user request; canonical plaque display files retained where needed."
   },
   {
     "original_path": "assets/images/presidents/cti-presidents-plaque-enhanced.png",
