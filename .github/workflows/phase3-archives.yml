@@ -1,0 +1,36 @@
+name: CTI Phase 3 archival extraction
+on:
+  push:
+    paths:
+      - .github/workflows/phase3-archives.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract source-preserving archival records
+        run: python3 scripts/extract-archives.py
+      - name: Verify records and source scans
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          d=json.loads(Path('content/archives/index.json').read_text())
+          assert len(d['items'])>=7
+          for x in d['items']:
+              assert Path(x['legacy_page']).is_file(),x['id']
+              assert Path(x['transcription']).is_file(),x['id']
+              assert len(Path(x['transcription']).read_text())>80,x['id']
+              for p in x['scans']:assert Path(p).is_file(),p
+          assert Path('rabbi-bio.html').is_file()
+          print('Verified',len(d['items']),'records and all referenced scans')
+          PY
+      - name: Commit extracted data
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add content/archives
+          if ! git diff --cached --quiet; then git commit -m 'Extract historical archive texts and source metadata'; git push; fi
