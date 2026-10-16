@@ -1,0 +1,130 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "legacy": "album-anniversary-celebration.html",
+      "canonical": "archives/album-anniversary-celebration.html",
+      "sha256_original": "80f8583d8e8ab820ca64976980a3fe80b48b423960fc0675cdc87fd01d78f6d4"
+    },
+    {
+      "legacy": "archive-1976-sephardic-jews.html",
+      "canonical": "archives/archive-1976-sephardic-jews.html",
+      "sha256_original": "d328702c2b08ff222f115ead0ddb8a495be70e20b8bcd9cb88824eec6069688a"
+    },
+    {
+      "legacy": "archive-1979-joseph-gibely-address.html",
+      "canonical": "archives/archive-1979-joseph-gibely-address.html",
+      "sha256_original": "8da782a407f34274a13a11608c053c50a711c50d02d3f04d7dd2955f6900187d"
+    },
+    {
+      "legacy": "archive-1995-ashkenazi-sephardic-traditions.html",
+      "canonical": "archives/archive-1995-ashkenazi-sephardic-traditions.html",
+      "sha256_original": "7ab7d1f4b0493391ef254893c6a126727e97465eeb2eca7ef74510fb6ac86da0"
+    },
+    {
+      "legacy": "archive-1997-75th-anniversary.html",
+      "canonical": "archives/archive-1997-75th-anniversary.html",
+      "sha256_original": "8474c1e984cfc7830353810dabe56232adca2ff0ef855daabb6ea89dde10e872"
+    },
+    {
+      "legacy": "archive-2001-constantinople-to-peabody.html",
+      "canonical": "archives/archive-2001-constantinople-to-peabody.html",
+      "sha256_original": "05c1f040b66d7c12e27ec0a471ea3be1454e3b7cbc396f45b7ad33a100dbc05c"
+    },
+    {
+      "legacy": "archive-2018-hershoff-letter.html",
+      "canonical": "archives/archive-2018-hershoff-letter.html",
+      "sha256_original": "61dbe664273d9e377451f5a0d61d32d6deda1be351200bcab4c9dbc51f9b7488"
+    },
+    {
+      "legacy": "archive-2019-sephardic-traditions.html",
+      "canonical": "archives/archive-2019-sephardic-traditions.html",
+      "sha256_original": "bea5ba93f5875c544a0573bb5087d9f29fa42e4bd9cefbcd0c2b4c8abb0461e4"
+    },
+    {
+      "legacy": "archive-2022-jewish-journal-centennial.html",
+      "canonical": "archives/archive-2022-jewish-journal-centennial.html",
+      "sha256_original": "305de12b84a85f0518249759c397555cd17a046dc70c539663a6deb66933d293"
+    },
+    {
+      "legacy": "dvar-torah-2026-06-19-korach.html",
+      "canonical": "sermons/dvar-torah-2026-06-19-korach.html",
+      "sha256_original": "d23472062897f672dc979c89b255f9f522471de850fc6e51ffb7e3d7a4a54512"
+    },
+    {
+      "legacy": "dvar-torah-2026-07-17-hope-is-not-optimism.html",
+      "canonical": "sermons/dvar-torah-2026-07-17-hope-is-not-optimism.html",
+      "sha256_original": "9f53511d7bcbc279218897046dbeb67bf858d7c756f59ca640250e5d1361d95c"
+    },
+    {
+      "legacy": "dvar-torah-2026-08-14-forgotten-new-year.html",
+      "canonical": "sermons/dvar-torah-2026-08-14-forgotten-new-year.html",
+      "sha256_original": "8bec6421432134182fa3d4855b5f590f15836ad5a1011dd577f398d7686bdbc1"
+    },
+    {
+      "legacy": "dvar-torah-2026-10-bereishit-naked-cunning-growing-up.html",
+      "canonical": "sermons/dvar-torah-2026-10-bereishit-naked-cunning-growing-up.html",
+      "sha256_original": "350e81d2c9b9c3e2187040cc33f4d8b4ae50819dc801ad584847f1fecc81c96f"
+    },
+    {
+      "legacy": "dvar-torah-2026-10-noach-who-belongs-inside-your-ark.html",
+      "canonical": "sermons/dvar-torah-2026-10-noach-who-belongs-inside-your-ark.html",
+      "sha256_original": "c0406f3a51e8bfe122cfe18810780fd95ba834eaf9b66af84cc10bb667ad4e63"
+    },
+    {
+      "legacy": "melodies-friday-evening.html",
+      "canonical": "resources/melodies-friday-evening.html",
+      "sha256_original": "dfd32e9d3e34f06d4ebfc9beaf5536bb44e2d761d8a5e18b0216504be2c5a83f"
+    },
+    {
+      "legacy": "melodies-rosh-hashanah.html",
+      "canonical": "resources/melodies-rosh-hashanah.html",
+      "sha256_original": "cfdf10242a5c2b5efc77fed3d7db12ad1265f3e1d93d70a4d9f82c2f62809c9e"
+    },
+    {
+      "legacy": "melodies-yom-kippur.html",
+      "canonical": "resources/melodies-yom-kippur.html",
+      "sha256_original": "02501e33b2725dff4802c1ec33aa608152dc88c7b68da72065d2c4de367e0cec"
+    },
+    {
+      "legacy": "press-1972-golden-anniversary.html",
+      "canonical": "press/press-1972-golden-anniversary.html",
+      "sha256_original": "a3cb7e45b0b5526efc362a897519314baaa9b6dce0cc5d69fc20d9597bd35442"
+    },
+    {
+      "legacy": "press-1981-still-growing.html",
+      "canonical": "press/press-1981-still-growing.html",
+      "sha256_original": "5a67bf0e10fcb04d347de5e0fe7571df747489db52c3c62da0d290ddaf5e4b0f"
+    },
+    {
+      "legacy": "press-1992-origins.html",
+      "canonical": "press/press-1992-origins.html",
+      "sha256_original": "30ab3ab468509edb6a70c2c907c6df43585468a437436dd1bd746844834c8b7b"
+    },
+    {
+      "legacy": "press-2012-milestones.html",
+      "canonical": "press/press-2012-milestones.html",
+      "sha256_original": "7d17c11899137e3e33699263478bd2af2c2575e43d9975e63d7b249f01e3938c"
+    },
+    {
+      "legacy": "press-2022-centennial.html",
+      "canonical": "press/press-2022-centennial.html",
+      "sha256_original": "b362fde94bcc32ae0d8ff6674cb85dc4243089a05f88f4f01d0a983f261ac5da"
+    },
+    {
+      "legacy": "sermon-2026-rosh-hashanah-day-1-pakad.html",
+      "canonical": "sermons/sermon-2026-rosh-hashanah-day-1-pakad.html",
+      "sha256_original": "c638e0e56e8bad702bf53d0482ed6af813f5fe18b7d88653037563e67c5b5f50"
+    },
+    {
+      "legacy": "sermon-2026-rosh-hashanah-day-2-teshuvah.html",
+      "canonical": "sermons/sermon-2026-rosh-hashanah-day-2-teshuvah.html",
+      "sha256_original": "e993140d035cc0dd48e70e3cf8fa9a46747ded346c43b3fa5ba2f3a4a8106dcc"
+    },
+    {
+      "legacy": "sermon-2026-yom-kippur-mechilah.html",
+      "canonical": "sermons/sermon-2026-yom-kippur-mechilah.html",
+      "sha256_original": "5019faaf0fd185eae293bb140038477358cc042e27825d7d8167f812ab35dd4a"
+    }
+  ]
+}
