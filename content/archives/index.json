@@ -71,12 +71,14 @@
       "id": "archive-2018-hershoff-letter",
       "title": "Peabody congregation feels ignored",
       "subtitle": "Jewish Journal · November 1, 2018 · Elliot Hershoff, President, Congregation Tifereth Israel",
-      "citation": "",
-      "scans": [],
+      "citation": "Jewish Journal, November 1, 2018. Letter to the Editor by Elliot Hershoff. Original article: https://jewishjournal.org/2018/11/01/letter-to-the-editor-peabody-congregation-feels-ignored/",
+      "scans": [
+        "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg"
+      ],
       "transcription": "content/archives/transcriptions/archive-2018-hershoff-letter.txt",
       "status": "published",
       "legacy_page": "archives/archive-2018-hershoff-letter.html",
-      "review": "extracted from published HTML; requires source-image comparison"
+      "review": "Existing article image registered in canonical reader; transcription extracted from legacy article, requires source comparison."
     },
     {
       "id": "archive-2019-sephardic-traditions",
