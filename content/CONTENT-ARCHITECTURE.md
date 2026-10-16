@@ -30,7 +30,7 @@
 
 ## Phase 3 status — 2026-10-16
 
-**Do not remove the eight `archives/archive-*.html` historical article pages.** The shared `historical-record.html` reader is not yet a feature-equivalent replacement. The curated legacy pages preserve source-specific photo captions, original document links, layouts, and program details; `press.html` intentionally points to them again after the October 2026 regression. The 2019 photograph still depends on an external host and needs a locally preserved, verified copy before migration.
+**Do not remove the eight `archives/archive-*.html` historical article pages.** The shared `historical-record.html` reader is not yet a feature-equivalent replacement. The curated legacy pages preserve source-specific photo captions, original document links, layouts, and program details; `press.html` intentionally points to them again after the October 2026 regression. The 2019 article now displays a temporary photograph placeholder while awaiting new CTI photographs; do not restore an externally hosted image or substitute an unverified one.
 
 The original 1979 page includes the circa-1980 building photograph `assets/archive/originals/I-581-01-15-006-web.jpg`. The 1997 page preserves the 75th anniversary program, timeline, and historic 1983/1994 photographs. The 2018 page includes its newspaper clipping. Keep the 2022 Weekly News and Jewish Journal articles separate, with separate scans and transcripts.
 
