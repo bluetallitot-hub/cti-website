@@ -1172,10 +1172,10 @@
         "assets/archive/originals/article.heic"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Deleted at user request",
       "sha256": "c19b8d45f854e0d644d5a22a9bf2ed91bd21e4b6cc82795b43f00e6485b97663",
       "bytes": 21875,
-      "status": "quarantined"
+      "status": "deleted"
     },
     {
       "id": "ARC-0026",
@@ -1275,10 +1275,10 @@
         "assets/archive/originals/cti-leadership-profile-images (1).zip"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Deleted at user request",
       "sha256": "8f3fa7dc48738b317b15974f1b20ecd800906eaf17d7c68e30fd240977058532",
       "bytes": 16451885,
-      "status": "quarantined"
+      "status": "deleted"
     },
     {
       "id": "ARC-0032",
