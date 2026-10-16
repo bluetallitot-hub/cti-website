@@ -1,0 +1,82 @@
+name: Standardize leadership biographies and root structure
+on:
+  push:
+    paths:
+      - .github/workflows/standardize-biographies.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  standardize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create canonical biography pages and update leadership links
+        run: |
+          python3 - <<'PY'
+          import json,re,html
+          from pathlib import Path
+          data=json.loads(Path('content/leadership-bios.json').read_text())
+          roles=['President','Vice President','Treasurer','Secretary']+['Board Member']*7
+          photos={'Jerry Pressman':'jerry-pressman-profile.png','Betty Polonsky':'betty-polonsky-profile.png','Harvey Elefson':'harvey-elefson-profile.png','Joanne Pressman':'joanne-pressman-profile.png','Millie Becker':'millie-becker-profile.png','Doris Hershoff':'doris-hershoff-profile.png','David Podradchik':'david-podradchik-profile.png','Jay Polonsky':'jay-polonsky-profile.png'}
+          def slug(s):return re.sub(r'[^a-z0-9]+','-',s.lower()).strip('-')
+          directory=Path('biographies');directory.mkdir(exist_ok=True)
+          leadership=Path('leadership.html');page=leadership.read_text()
+          catalog=[]
+          for i,person in enumerate(data['leaders']):
+              name=person['name'];s=slug(name);role=roles[i];bio=person.get('fullBio') or person.get('bio','')
+              image='assets/images/leadership/'+photos[name] if name in photos else None
+              img=('<figure style="max-width:340px;margin:1.5rem 0"><img style="width:100%;border-radius:12px" src="../'+image+'" alt="'+html.escape(name,quote=True)+'" loading="lazy"></figure>') if image and Path(image).exists() else ''
+              paragraphs=''.join('<p>'+html.escape(p)+'</p>' for p in re.split(r'\n\s*\n',bio) if p.strip())
+              body='''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'''+html.escape(name)+''' | CTI Biography</title><meta name="description" content="Biography of '''+html.escape(name,quote=True)+''' at Congregation Tifereth Israel."><link rel="stylesheet" href="../assets/styles.css"></head><body><a class="skip" href="#main">Skip to content</a><header><div class="wrap nav"><a class="brand" href="../index.html"><img class="brand-logo" src="../assets/images/branding/CTI-logo-web.png" alt="Congregation Tifereth Israel"></a><nav class="links"><a href="../index.html">Home</a><a href="../leadership.html">Leadership Team</a><a href="../history.html">History</a></nav></div></header><main id="main"><section class="page-hero"><div class="wrap"><div class="eyebrow">'''+html.escape(role)+'''</div><h1>'''+html.escape(name)+'''</h1><p class="lead">Congregation Tifereth Israel</p></div></section><section><div class="wrap content">'''+img+paragraphs+'''<p><a href="../leadership.html">← Back to Leadership Team</a></p></div></section></main><script src="../assets/site.js"></script></body></html>'''
+              (directory/(s+'.html')).write_text(body)
+              url='biographies/'+s+'.html'
+              catalog.append({'name':name,'role':role,'url':url,'photo':image,'source':'content/leadership-bios.json'})
+              page=page.replace('href="leader-bio.html?name='+name.replace(' ','%20')+'"','href="'+url+'"')
+              if name in ['Jerry Pressman','Betty Polonsky','Harvey Elefson','Joanne Pressman']:
+                  page=page.replace('href="'+s+'.html"','href="'+url+'"')
+          leadership.write_text(page)
+          Path('content/biography-directory.json').write_text(json.dumps({'version':1,'people':catalog},indent=2)+'\n')
+          Path('content/WEBSITE-STRUCTURE.md').write_text('''# CTI website directory plan
+
+          ## Root
+          Keep `index.html` and the primary navigation entry pages at root for stable URLs and simple GitHub Pages hosting.
+
+          ## Collections
+          - `biographies/`: canonical standardized person biography pages, slugged `first-last.html`.
+          - `content/biography-directory.json`: authoritative biography URL, name, role and photo index.
+          - `content/leadership-bios.json`: current approved biography text; do not fabricate missing details.
+          - `assets/`: published media and archival originals, identified through `content/asset-registry.json`.
+          - `backup-audit/`: inventory and verification reports; administrative, not public navigation.
+          - Future migration: `archives/`, `sermons/`, `press/`, `resources/` for their corresponding content pages.
+
+          ## URL compatibility
+          Do not delete or move existing root pages without preserving their URLs using redirects or forwarding pages and verifying all internal references. Existing root biography pages remain accessible while links from the leadership page transition to `biographies/`. Preserve founder and president chronological galleries and their original ordering.
+
+          ## Intake
+          All new media must follow `content/ASSET-INTAKE-PROCEDURE.md` and receive a permanent asset registry ID before publication.
+          '''.replace('          ',''))
+          print('Created',len(catalog),'standardized biography pages')
+          PY
+      - name: Validate biography links
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          d=json.loads(Path('content/biography-directory.json').read_text())
+          page=Path('leadership.html').read_text()
+          for x in d['people']:
+              assert Path(x['url']).is_file(),x
+              assert 'href="'+x['url']+'"' in page,x
+              if x['photo']:assert Path(x['photo']).is_file(),x
+          print('Verified',len(d['people']),'biography URLs and photo paths')
+          PY
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add biographies content/biography-directory.json content/WEBSITE-STRUCTURE.md leadership.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Add standardized leadership biography pages and directory plan'
+            git push
+          fi
