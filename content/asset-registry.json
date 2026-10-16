@@ -1327,10 +1327,10 @@
         "assets/archive/originals/cti-sephardic-temple-honors-patriarch-clipping.jpg"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Keep existing clipping as reference. Photograph full clipping straight-on, readable article text, and photo/caption close-ups at synagogue; create historical archive entry after improved photos arrive.",
       "sha256": "c537248646bba8f2609352bf3b23df160e6dabeea72dfaa3f4fbf30f00ae0d6c",
       "bytes": 180811,
-      "status": "quarantined"
+      "status": "pending-better-photographs"
     },
     {
       "id": "ARC-0035",
