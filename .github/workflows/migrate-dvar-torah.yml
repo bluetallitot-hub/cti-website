@@ -1,0 +1,40 @@
+name: Convert CTI sermons to shared template
+on:
+  push:
+    paths:
+      - .github/workflows/migrate-dvar-torah.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Convert approved pages and remove obsolete HTML
+        run: python3 scripts/migrate-dvar-torah.py
+      - name: Verify every archive entry and markdown source
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('content/dvar-torah/index.json').read_text())
+          assert len(d['items'])==8
+          t=Path('torah.html').read_text()
+          for e in d['items']:
+              assert Path(e['file']).is_file()
+              assert len(Path(e['file']).read_text())>300,e['id']
+              if e['id']!='dvar-torah-2026-10-noach-who-belongs-inside-your-ark':
+                  assert 'dvar-torah.html?id='+e['id'] in t,e['id']
+          assert not list(Path('.').glob('dvar-torah-2026-*.html'))
+          assert not list(Path('sermons').glob('dvar-torah-*.html'))
+          assert Path('rabbi-bio.html').is_file()
+          print('Verified',len(d['items']),'Markdown texts and reader links')
+          PY
+      - name: Commit content conversion
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Replace standalone sermon HTML with Markdown and shared reader'
+          git push
