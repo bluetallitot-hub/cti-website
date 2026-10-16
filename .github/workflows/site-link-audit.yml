@@ -1,0 +1,19 @@
+name: CTI Phase 3 local link audit
+on:
+  push:
+    paths:
+      - '**.html'
+      - 'assets/**'
+      - 'content/**'
+      - 'scripts/audit-site-links.py'
+      - '.github/workflows/site-link-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify internal HTML and structured content references
+        run: python3 scripts/audit-site-links.py
