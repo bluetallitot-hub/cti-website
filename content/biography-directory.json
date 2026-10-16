@@ -1,82 +1,104 @@
 {
-  "version": 1,
+  "version": 2,
   "people": [
     {
       "name": "Jerry Pressman",
       "role": "President",
-      "url": "biographies/jerry-pressman.html",
+      "url": "leader-profile.html?id=jerry-pressman",
       "photo": "assets/images/leadership/jerry-pressman-profile.png",
-      "source": "content/leadership-bios.json"
+      "source": "content/leadership-bios.json",
+      "id": "jerry-pressman",
+      "display_order": 1
     },
     {
       "name": "Betty Polonsky",
       "role": "Vice President",
-      "url": "biographies/betty-polonsky.html",
+      "url": "leader-profile.html?id=betty-polonsky",
       "photo": "assets/images/leadership/betty-polonsky-profile.png",
-      "source": "content/leadership-bios.json"
+      "source": "content/leadership-bios.json",
+      "id": "betty-polonsky",
+      "display_order": 2
     },
     {
       "name": "Harvey Elefson",
       "role": "Treasurer",
-      "url": "biographies/harvey-elefson.html",
+      "url": "leader-profile.html?id=harvey-elefson",
       "photo": "assets/images/leadership/harvey-elefson-profile.png",
-      "source": "content/leadership-bios.json"
+      "source": "content/leadership-bios.json",
+      "id": "harvey-elefson",
+      "display_order": 3
     },
     {
       "name": "Joanne Pressman",
       "role": "Secretary",
-      "url": "biographies/joanne-pressman.html",
+      "url": "leader-profile.html?id=joanne-pressman",
       "photo": "assets/images/leadership/joanne-pressman-profile.png",
-      "source": "content/leadership-bios.json"
+      "source": "content/leadership-bios.json",
+      "id": "joanne-pressman",
+      "display_order": 4
     },
     {
       "name": "Millie Becker",
       "role": "Board Member",
-      "url": "biographies/millie-becker.html",
+      "url": "leader-profile.html?id=millie-becker",
       "photo": "assets/images/leadership/millie-becker-profile.png",
-      "source": "content/leadership-bios.json"
+      "source": "content/leadership-bios.json",
+      "id": "millie-becker",
+      "display_order": 5
     },
     {
       "name": "Doris Hershoff",
       "role": "Board Member",
-      "url": "biographies/doris-hershoff.html",
+      "url": "leader-profile.html?id=doris-hershoff",
       "photo": "assets/images/leadership/doris-hershoff-profile.png",
-      "source": "content/leadership-bios.json"
+      "source": "content/leadership-bios.json",
+      "id": "doris-hershoff",
+      "display_order": 6
     },
     {
       "name": "David Podradchik",
       "role": "Board Member",
-      "url": "biographies/david-podradchik.html",
+      "url": "leader-profile.html?id=david-podradchik",
       "photo": "assets/images/leadership/david-podradchik-profile.png",
-      "source": "content/leadership-bios.json"
+      "source": "content/leadership-bios.json",
+      "id": "david-podradchik",
+      "display_order": 7
     },
     {
       "name": "Jay Polonsky",
       "role": "Board Member",
-      "url": "biographies/jay-polonsky.html",
+      "url": "leader-profile.html?id=jay-polonsky",
       "photo": "assets/images/leadership/jay-polonsky-profile.png",
-      "source": "content/leadership-bios.json"
+      "source": "content/leadership-bios.json",
+      "id": "jay-polonsky",
+      "display_order": 8
     },
     {
       "name": "Marvin Menovich",
       "role": "Board Member",
-      "url": "biographies/marvin-menovich.html",
+      "url": "leader-profile.html?id=marvin-menovich",
       "photo": null,
-      "source": "content/leadership-bios.json"
+      "source": "content/leadership-bios.json",
+      "id": "marvin-menovich",
+      "display_order": 9
     },
     {
       "name": "Wendy Tirck",
       "role": "Board Member",
-      "url": "biographies/wendy-tirck.html",
+      "url": "leader-profile.html?id=wendy-tirck",
       "photo": null,
-      "source": "content/leadership-bios.json"
+      "source": "content/leadership-bios.json",
+      "id": "wendy-tirck",
+      "display_order": 10
     },
     {
       "name": "Fran Arsenault-Shaheen",
       "role": "Board Member",
-      "url": "biographies/fran-arsenault-shaheen.html",
+      "url": "leader-profile.html?id=fran-arsenault-shaheen",
       "photo": "assets/images/leadership/cti-a-crisp-warmly-lit-professional-portrait-photo-i.png",
-      "source": "content/leadership-bios.json"
+      "source": "content/leadership-bios.json",
+      "id": "fran-arsenault-shaheen",
+      "display_order": 11
     }
   ]
 }
