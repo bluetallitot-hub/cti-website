@@ -1206,10 +1206,10 @@
         "assets/archive/originals/cti-1972-50th-anniversary-clippings.jpg"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Redundant quarantine copy removed after confirming published equivalent.",
       "sha256": "8d380d654da27ea6f98c92a8922036e90439f481bb90289a160bc0a72a76e940",
       "bytes": 172487,
-      "status": "quarantined"
+      "status": "deleted"
     },
     {
       "id": "ARC-0028",
@@ -1243,7 +1243,8 @@
       "notes": "Unlinked by static audit; preserve until visual and archival review.",
       "sha256": "3cea83d0ef6656a8c499f840ba64c0c11bab5fab204b34bfcd22ae0c15383eea",
       "bytes": 956762,
-      "status": "quarantined"
+      "status": "restored-to-archive",
+      "restored_path": "assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg"
     },
     {
       "id": "ARC-0030",
@@ -1294,7 +1295,8 @@
       "notes": "Unlinked by static audit; preserve until visual and archival review.",
       "sha256": "36b416b9bbf2e70eae8849c94708fcf4c3d1f1e6ebc4e28c5e46218c549a760a",
       "bytes": 107002,
-      "status": "quarantined"
+      "status": "restored-to-archive",
+      "restored_path": "assets/archive/originals/cti-october-1994-original-blue.jpg"
     },
     {
       "id": "ARC-0033",
@@ -1345,7 +1347,8 @@
       "notes": "Unlinked by static audit; preserve until visual and archival review.",
       "sha256": "e15008de94f6494c7aea6da016538249b4d853e924f4debb1e6b5af9dad52128",
       "bytes": 144655,
-      "status": "quarantined"
+      "status": "restored-to-archive",
+      "restored_path": "assets/archive/originals/cti-september-1983-original-blue.jpg"
     },
     {
       "id": "GAL-0031",
@@ -1359,10 +1362,10 @@
         "assets/images/anniversaries/cti-1997-75th-anniversary-program-cover.jpg"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Redundant quarantine copy removed after confirming published equivalent.",
       "sha256": "ed0bf2164d0c3ca58fb01a5f2f2fdacb93ea5747041054a1ec98c886ac04845c",
       "bytes": 140657,
-      "status": "quarantined"
+      "status": "deleted"
     },
     {
       "id": "GAL-0032",
@@ -1444,10 +1447,10 @@
         "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.jpg"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Redundant quarantine copy removed after confirming published equivalent.",
       "sha256": "cef1dab82c037aaf0ce2139c73510cfbe32ebab6ac756720fda066218e8fb1d0",
       "bytes": 10881,
-      "status": "quarantined"
+      "status": "deleted"
     },
     {
       "id": "GAL-0035",
@@ -1515,7 +1518,8 @@
       "notes": "Unlinked by static audit; preserve until visual and archival review.",
       "sha256": "57140691b386ab9c00818f550907e55376251a115f2b7b328ca0aa4fb6c1229e",
       "bytes": 56595,
-      "status": "quarantined"
+      "status": "restored-to-archive",
+      "restored_path": "assets/archive/originals/cti-joseph-gibely-ii-1979-portrait.jpg"
     },
     {
       "id": "LDR-0021",
