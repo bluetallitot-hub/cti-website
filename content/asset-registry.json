@@ -1487,7 +1487,7 @@
       "id": "LDR-0019",
       "collection": "LDR",
       "title": "2012 Shofar Gift Group Portrait",
-      "path": "assets/possible-duplicates/assets/images/leadership/2012 Shofar Gift Group Portrait.png",
+      "path": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
       "original_filename": "2012 Shofar Gift Group Portrait.png",
       "source_reference": null,
       "source_drive_id": null,
@@ -1498,7 +1498,7 @@
       "notes": "Unlinked by static audit; preserve until visual and archival review.",
       "sha256": "da3ff767c2a1d33bab54d80c5d10de2f20a7bccbc4ee7703efabdfac48743c7d",
       "bytes": 2043792,
-      "status": "quarantined"
+      "status": "published"
     },
     {
       "id": "LDR-0020",
