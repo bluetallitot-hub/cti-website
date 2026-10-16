@@ -1127,23 +1127,6 @@
       "status": "quarantined"
     },
     {
-      "id": "ARC-0023",
-      "collection": "ARC",
-      "title": "I 581 01 15 007 web",
-      "path": "assets/possible-duplicates/assets/archive/originals/I-581-01-15-007-web.jpg",
-      "original_filename": "I-581-01-15-007-web.jpg",
-      "source_reference": null,
-      "source_drive_id": null,
-      "legacy_paths": [
-        "assets/archive/originals/I-581-01-15-007-web.jpg"
-      ],
-      "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
-      "sha256": "ddde54dfdfb5c8db6e618ead9d1f4227248dcecc3cfdc838add66a6cc3f82036",
-      "bytes": 81446,
-      "status": "quarantined"
-    },
-    {
       "id": "ARC-0024",
       "collection": "ARC",
       "title": "I 581 01 15 026 web",
