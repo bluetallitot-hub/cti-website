@@ -43,7 +43,8 @@
     "original_path": "assets/archive/originals/cti-1972-50th-anniversary-clippings.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-1972-50th-anniversary-clippings.jpg",
     "sha256": "8d380d654da27ea6f98c92a8922036e90439f481bb90289a160bc0a72a76e940",
-    "status": "no reference detected — retained for archival/visual review"
+    "status": "deleted",
+    "notes": "Redundant quarantine copy removed after confirming published equivalent."
   },
   {
     "original_path": "assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-2.jpg",
@@ -55,7 +56,8 @@
     "original_path": "assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg",
     "sha256": "3cea83d0ef6656a8c499f840ba64c0c11bab5fab204b34bfcd22ae0c15383eea",
-    "status": "no reference detected — retained for archival/visual review"
+    "status": "restored-to-archive",
+    "restored_path": "assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg"
   },
   {
     "original_path": "assets/archive/originals/cti-2022-centennial-article.jpg",
@@ -94,7 +96,8 @@
     "original_path": "assets/archive/originals/cti-october-1994-original-blue.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-october-1994-original-blue.jpg",
     "sha256": "36b416b9bbf2e70eae8849c94708fcf4c3d1f1e6ebc4e28c5e46218c549a760a",
-    "status": "no reference detected — retained for archival/visual review"
+    "status": "restored-to-archive",
+    "restored_path": "assets/archive/originals/cti-october-1994-original-blue.jpg"
   },
   {
     "original_path": "assets/archive/originals/cti-presidents-plaque-original.jpeg",
@@ -113,7 +116,8 @@
     "original_path": "assets/archive/originals/cti-september-1983-original-blue.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/archive/originals/cti-september-1983-original-blue.jpg",
     "sha256": "e15008de94f6494c7aea6da016538249b4d853e924f4debb1e6b5af9dad52128",
-    "status": "no reference detected — retained for archival/visual review"
+    "status": "restored-to-archive",
+    "restored_path": "assets/archive/originals/cti-september-1983-original-blue.jpg"
   },
   {
     "original_path": "assets/images/anniversaries/cti-1972-anniversary-celebration-photos-2.jpg",
@@ -129,7 +133,8 @@
     "original_path": "assets/images/anniversaries/cti-1997-75th-anniversary-program-cover.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/anniversaries/cti-1997-75th-anniversary-program-cover.jpg",
     "sha256": "ed0bf2164d0c3ca58fb01a5f2f2fdacb93ea5747041054a1ec98c886ac04845c",
-    "status": "no reference detected — retained for archival/visual review"
+    "status": "deleted",
+    "notes": "Redundant quarantine copy removed after confirming published equivalent."
   },
   {
     "original_path": "assets/images/anniversaries/cti-2012-90th-anniversary-program.jpg",
@@ -160,7 +165,8 @@
     "original_path": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.jpg",
     "sha256": "cef1dab82c037aaf0ce2139c73510cfbe32ebab6ac756720fda066218e8fb1d0",
-    "status": "no reference detected — retained for archival/visual review"
+    "status": "deleted",
+    "notes": "Redundant quarantine copy removed after confirming published equivalent."
   },
   {
     "original_path": "assets/images/gallery/cti-2006-kitchen-dedication-invitation.jpg",
@@ -208,7 +214,8 @@
     "original_path": "assets/images/leadership/cti-joseph-gibely-ii-1979-portrait.jpg",
     "quarantine_path": "assets/possible-duplicates/assets/images/leadership/cti-joseph-gibely-ii-1979-portrait.jpg",
     "sha256": "57140691b386ab9c00818f550907e55376251a115f2b7b328ca0aa4fb6c1229e",
-    "status": "no reference detected — retained for archival/visual review"
+    "status": "restored-to-archive",
+    "restored_path": "assets/archive/originals/cti-joseph-gibely-ii-1979-portrait.jpg"
   },
   {
     "original_path": "assets/images/leadership/rabbi-blue-family.jpg",
