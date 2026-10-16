@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "archive-1976-sephardic-jews",
+      "title": "After centuries of persecution, Peabody is home for Sephardic Jews",
+      "subtitle": "The Peabody Times · October 4, 1976 · Byline unknown · Page 3",
+      "citation": "Primary source: Jewish Community of Peabody (Mass.) Records I-581, Box 1, Folder 15, image 033, Wyner Family Jewish Heritage Center.",
+      "scans": [
+        "assets/archive/originals/I-581-01-15-033-web.jpg"
+      ],
+      "transcription": "content/archives/transcriptions/archive-1976-sephardic-jews.txt",
+      "status": "published",
+      "legacy_page": "archives/archive-1976-sephardic-jews.html",
+      "review": "extracted from published HTML; requires source-image comparison"
+    },
+    {
+      "id": "archive-1979-joseph-gibely-address",
+      "title": "Joseph Gibely address on CTI and Sephardic history",
+      "subtitle": "",
+      "citation": "Primary source: Jewish Community of Peabody (Mass.) Records, I-581, Box 1, Folder 15, images 012–023, Wyner Family Jewish Heritage Center. The PDF preserves the twelve scans in archival sequence.",
+      "scans": [
+        "assets/archive/originals/cti-1979-joseph-gibely-address.pdf",
+        "assets/archive/originals/cti-1979-gibely-address-original-page.jpg"
+      ],
+      "transcription": "content/archives/transcriptions/archive-1979-joseph-gibely-address.txt",
+      "status": "published",
+      "legacy_page": "archives/archive-1979-joseph-gibely-address.html",
+      "review": "extracted from published HTML; requires source-image comparison"
+    },
+    {
+      "id": "archive-1995-ashkenazi-sephardic-traditions",
+      "title": "Peabody home to both Ashkenazi, Sephardic traditions",
+      "subtitle": "By Judith S. Antonelli · Advocate Staff · Our Towns: Peabody",
+      "citation": "Original source: The Jewish Advocate, April 14–20, 1995, page 12. Archival scan I-581-01-15-035.",
+      "scans": [
+        "assets/archive/originals/I-581-01-15-035-web.jpg"
+      ],
+      "transcription": "content/archives/transcriptions/archive-1995-ashkenazi-sephardic-traditions.txt",
+      "status": "published",
+      "legacy_page": "archives/archive-1995-ashkenazi-sephardic-traditions.html",
+      "review": "extracted from published HTML; requires source-image comparison"
+    },
+    {
+      "id": "archive-1997-75th-anniversary",
+      "title": "75th Anniversary",
+      "subtitle": "“Honoring the Past — Planning the Future”",
+      "citation": "",
+      "scans": [
+        "assets/archive/originals/cti-1997-75th-anniversary-program-web.pdf"
+      ],
+      "transcription": "content/archives/transcriptions/archive-1997-75th-anniversary.txt",
+      "status": "published",
+      "legacy_page": "archives/archive-1997-75th-anniversary.html",
+      "review": "extracted from published HTML; requires source-image comparison"
+    },
+    {
+      "id": "archive-2001-constantinople-to-peabody",
+      "title": "From Constantinople to Peabody: Congregation Tifereth Israel",
+      "subtitle": "By Gary Band · Jewish Journal Staff",
+      "citation": "Source: The Jewish Journal, January 19, 2001, p. 25, continued on p. 26. Preserved archival image I-581-01-15-034.",
+      "scans": [
+        "assets/archive/originals/I-581-01-15-034-web.jpg"
+      ],
+      "transcription": "content/archives/transcriptions/archive-2001-constantinople-to-peabody.txt",
+      "status": "published",
+      "legacy_page": "archives/archive-2001-constantinople-to-peabody.html",
+      "review": "extracted from published HTML; requires source-image comparison"
+    },
+    {
+      "id": "archive-2018-hershoff-letter",
+      "title": "Peabody congregation feels ignored",
+      "subtitle": "Jewish Journal · November 1, 2018 · Elliot Hershoff, President, Congregation Tifereth Israel",
+      "citation": "",
+      "scans": [],
+      "transcription": "content/archives/transcriptions/archive-2018-hershoff-letter.txt",
+      "status": "published",
+      "legacy_page": "archives/archive-2018-hershoff-letter.html",
+      "review": "extracted from published HTML; requires source-image comparison"
+    },
+    {
+      "id": "archive-2019-sephardic-traditions",
+      "title": "Sephardic traditions live on at Tifereth Israel in Peabody",
+      "subtitle": "Jewish Journal · August 29, 2019 · Michael Wittner",
+      "citation": "",
+      "scans": [],
+      "transcription": "content/archives/transcriptions/archive-2019-sephardic-traditions.txt",
+      "status": "published",
+      "legacy_page": "archives/archive-2019-sephardic-traditions.html",
+      "review": "extracted from published HTML; requires source-image comparison"
+    },
+    {
+      "id": "archive-2022-jewish-journal-centennial",
+      "title": "Peabody’s Tifereth Israel to mark its 100th anniversary",
+      "subtitle": "Jewish Journal · June 9, 2022 · Steven A. Rosenberg, Journal Staff",
+      "citation": "",
+      "scans": [
+        "assets/archive/originals/cti-2022-centennial-article.jpg"
+      ],
+      "transcription": "content/archives/transcriptions/archive-2022-jewish-journal-centennial.txt",
+      "status": "published",
+      "legacy_page": "archives/archive-2022-jewish-journal-centennial.html",
+      "review": "extracted from published HTML; requires source-image comparison"
+    }
+  ]
+}
