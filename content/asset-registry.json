@@ -1478,10 +1478,10 @@
         "assets/images/gallery/cti-community-members-photo-2006.jpg"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Same photo as published 2006 kitchen dedication image; scrapbook variant removed.",
       "sha256": "ecf48540ee13983ea17bb848dcc2d1917ced65a0245926262ca7e93c2bf00588",
       "bytes": 141477,
-      "status": "quarantined"
+      "status": "deleted"
     },
     {
       "id": "LDR-0019",
