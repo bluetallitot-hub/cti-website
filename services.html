@@ -4,7 +4,7 @@
   const next = document.getElementById('next-service');
   const format = new Intl.DateTimeFormat('en-US', {weekday:'long', month:'long', day:'numeric', year:'numeric', timeZone:'UTC'});
   fetch('content/services.json', {cache:'no-cache'}).then(r => {if(!r.ok) throw new Error('Schedule unavailable');return r.json()}).then(data => {
-    const services = data.services.filter(s => /^\\d{4}-\\d{2}-\\d{2}$/.test(s.date)).sort((a,b) => a.date.localeCompare(b.date));
+    const services = data.services.filter(s => /^\d{4}-\d{2}-\d{2}$/.test(s.date)).sort((a,b) => a.date.localeCompare(b.date));
     if(!services.length) return;
     const today = new Date(); const todayKey = today.getFullYear()+'-'+String(today.getMonth()+1).padStart(2,'0')+'-'+String(today.getDate()).padStart(2,'0');
     const label = s => format.format(new Date(s.date+'T12:00:00Z'))+' · '+s.time+(s.location === 'Zoom only' ? ' (Zoom only)' : s.location === 'Hybrid' ? ' (Hybrid)' : '');
