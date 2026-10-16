@@ -101,6 +101,18 @@
       "status": "published",
       "legacy_page": "archives/archive-2022-jewish-journal-centennial.html",
       "review": "extracted from published HTML; requires source-image comparison"
+    },
+    {
+      "id": "archive-elliot-hershoff-obituary",
+      "title": "Elliot Hershoff — Historical Obituary",
+      "subtitle": "Former CTI president, 2004–2022 · Publication details pending verification",
+      "citation": "Historical obituary clipping from the CTI collection. Publication, date, and original source not yet verified.",
+      "scans": [
+        "assets/possible-duplicates/assets/archive/originals/cti-elliot-hershoff-obituary-display.jpg"
+      ],
+      "transcription": "content/archives/transcriptions/archive-elliot-hershoff-obituary.txt",
+      "status": "published",
+      "review": "Original image retained; transcription and publication citation pending verification. Do not treat summary as source transcription."
     }
   ]
 }
