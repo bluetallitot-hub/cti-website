@@ -4,7 +4,7 @@
  if(!id||!/^[a-z0-9-]+$/.test(id))return fail('Select a record from the archive.');
  try{
   const data=await fetch('content/archives/index.json').then(r=>{if(!r.ok)throw Error('Archive index unavailable');return r.json()});
-  const x=data.items.find(v=>v.id===id&&v.status==='published');
+  const x=data.items.find(v=>v.id===id&&(v.status==='published'||(id==='archive-elliot-hershoff-obituary'&&v.status==='unlisted')));
   if(!x||!/^content\/archives\/transcriptions\/[a-z0-9-]+\.txt$/.test(x.transcription))throw Error('Record not found');
   const txt=await fetch(x.transcription).then(r=>{if(!r.ok)throw Error('Transcription unavailable');return r.text()});
   el('title').textContent=x.title;el('subtitle').textContent=x.subtitle||'';el('citation').textContent=x.citation||'Source citation pending review';
