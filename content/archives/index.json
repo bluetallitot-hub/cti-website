@@ -45,14 +45,16 @@
       "id": "archive-1997-75th-anniversary",
       "title": "75th Anniversary",
       "subtitle": "“Honoring the Past — Planning the Future”",
-      "citation": "",
+      "citation": "Congregation Tifereth Israel 75th Anniversary Program, May 18, 1997. Program cover, complete program PDF, and anniversary invitation.",
       "scans": [
-        "assets/archive/originals/cti-1997-75th-anniversary-program-web.pdf"
+        "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
+        "assets/archive/originals/cti-1997-75th-anniversary-program-web.pdf",
+        "assets/archive/originals/cti-1997-75th-anniversary-invitation.jpg"
       ],
       "transcription": "content/archives/transcriptions/archive-1997-75th-anniversary.txt",
       "status": "published",
       "legacy_page": "archives/archive-1997-75th-anniversary.html",
-      "review": "extracted from published HTML; requires source-image comparison"
+      "review": "Existing program cover and invitation linked alongside the full original program PDF; original archival image I-581-01-15-007 remains available in Google Drive."
     },
     {
       "id": "archive-2001-constantinople-to-peabody",
