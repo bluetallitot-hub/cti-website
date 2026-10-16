@@ -113,18 +113,6 @@
       "transcription": "content/archives/transcriptions/archive-elliot-hershoff-obituary.txt",
       "status": "unlisted",
       "review": "Verified transcription from supplied clipping. Keep original bulletin-board image. Clean clipping image expected via assets/new/cti-2024-elliot-hershoff-obituary-clipping.png; do not replace displayed original until processed."
-    },
-    {
-      "id": "archive-2012-90th-anniversary-program",
-      "title": "Congregation Tifereth Israel — 90th Anniversary Program (2012)",
-      "subtitle": "Congregation Tifereth Israel · Peabody, Massachusetts · 1922–2012",
-      "citation": "CTI historical collection. Original photograph of the 2012 90th anniversary program cover; corrected derivative provided for readability.",
-      "scans": [
-        "assets/images/anniversaries/cti-2012-90th-anniversary-program-restored.jpg",
-        "assets/archive/originals/cti-2012-90th-anniversary-program-original.jpg"
-      ],
-      "status": "published",
-      "review": "Cover photograph only; full interior pages of program not yet available. Verify crop and image correction visually."
     }
   ]
 }
