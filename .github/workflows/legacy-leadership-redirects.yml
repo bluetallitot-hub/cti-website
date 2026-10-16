@@ -1,0 +1,36 @@
+name: Preserve legacy leadership biography URLs
+on:
+  push:
+    paths:
+      - .github/workflows/legacy-leadership-redirects.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  redirects:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace legacy lay biography pages with compatibility forwarding pages
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import html
+          people=['jerry-pressman','betty-polonsky','harvey-elefson','joanne-pressman']
+          for slug in people:
+              target='biographies/'+slug+'.html'
+              assert Path(target).is_file(),target
+              name=slug.replace('-',' ').title()
+              Path(slug+'.html').write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url='+target+'"><link rel="canonical" href="'+target+'"><title>'+html.escape(name)+' | CTI</title></head><body><main><p>This biography has moved to <a href="'+target+'">'+html.escape(name)+'</a>.</p></main></body></html>\n')
+          assert 'rabbi-bio.html' not in people
+          print('Preserved',len(people),'legacy lay biography URLs; rabbi pages untouched')
+          PY
+      - name: Commit compatibility pages
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add jerry-pressman.html betty-polonsky.html harvey-elefson.html joanne-pressman.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Forward legacy lay leadership URLs to canonical biography directory'
+            git push
+          fi
