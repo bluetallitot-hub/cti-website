@@ -58,7 +58,14 @@ jobs:
               h,w=a.shape[:2]
               margin=int(min(h,w)*.02)
               a=a[margin:h-margin,margin:w-margin]
-          Image.fromarray(a).save(output,quality=94,optimize=True,subsampling=0)
+          # Photographic correction only: brightness, color balance and mild sharpening.
+          from PIL import ImageEnhance, ImageFilter
+          result=Image.fromarray(a)
+          result=ImageEnhance.Brightness(result).enhance(1.08)
+          result=ImageEnhance.Contrast(result).enhance(1.08)
+          result=ImageEnhance.Color(result).enhance(1.05)
+          result=result.filter(ImageFilter.UnsharpMask(radius=1.25,percent=115,threshold=3))
+          result.save(output,quality=94,optimize=True,subsampling=0)
           print('Original preserved:',archive,'restored:',output,'size:',a.shape)
           PY
       - name: Commit preserved original and corrected photograph
