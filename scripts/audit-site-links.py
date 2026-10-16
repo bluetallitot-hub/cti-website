@@ -33,7 +33,7 @@ def inspect(target, source, field, base=None):
     else:
         candidate = source.parent / rel
     resolved = candidate.resolve()
-    if not resolved.is_relative_to(root.resolve()) or not resolved.is_file():
+    if not resolved.is_relative_to(root.resolve()) or not resolved.exists():
         issues.append({"source": str(source.relative_to(root)), "field": field, "target": target})
 
 for page in pages:
