@@ -30,7 +30,11 @@
     },
     {
       "image": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
-      "caption": "November 11, 2006 — CTI kitchen renovation dedication. Congregational photograph."
+      "caption": "2006 — CTI kitchen dedication. An invitation in the historical collection identifies a June 11, 2006 celebration honoring Sheryl Becker.",
+      "related_document": {
+        "label": "View original 2006 kitchen dedication invitation",
+        "url": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg"
+      }
     },
     {
       "image": "https://images.openai.com/static-rsc-1/bRKT8q8cQ6YJIjpcUOzByrVd_OyizxLvbTGysp9P80Hhf1x-EnWw1FeVPczy5g2BZjWIHlp6z6jr8zQ6F9anBuv-ae4CAXsDojyfo5NQP-Iba_KCGYax61prm4l6h9PhgaEHZySx32GBZ7zosH856A",
