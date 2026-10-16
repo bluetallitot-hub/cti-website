@@ -1113,7 +1113,7 @@
       "id": "ARC-0022",
       "collection": "ARC",
       "title": "I 581 01 15 006 web",
-      "path": "assets/possible-duplicates/assets/archive/originals/I-581-01-15-006-web.jpg",
+      "path": "assets/archive/originals/I-581-01-15-006-web.jpg",
       "original_filename": "I-581-01-15-006-web.jpg",
       "source_reference": null,
       "source_drive_id": null,
@@ -1121,10 +1121,10 @@
         "assets/archive/originals/I-581-01-15-006-web.jpg"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Historic building photograph, circa 1980 estimated; linked from 1979 historical page.",
       "sha256": "3c93abde2bd303e01577e21fd492faa0e40a9994079e258fb4bf486fa3a56d36",
       "bytes": 95269,
-      "status": "quarantined"
+      "status": "published"
     },
     {
       "id": "ARC-0024",
