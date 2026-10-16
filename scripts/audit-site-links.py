@@ -25,8 +25,7 @@ def inspect(target, source, field, base=None):
     rel = unquote(parsed.path)
     if not rel:
         return
-    checked += 1
-    if rel.startswith("/"):
+    if base and rel == "../":\n        return  # HTML <base href="../"> is a valid base declaration, not a resource\n    checked += 1\n    if rel.startswith("/"):
         candidate = root / rel.lstrip("/")
     elif base:
         candidate = root / rel
