@@ -1223,10 +1223,10 @@
         "assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-2.jpg"
       ],
       "roles": [],
-      "notes": "Unlinked by static audit; preserve until visual and archival review.",
+      "notes": "Original article has been taken out for rephotography at synagogue. Retain existing scan as reference until improved complete article photographs are obtained and verified; then update historical archive entry.",
       "sha256": "55a68c1c8f003a0ac25f4de8d634ce9839d7b67301c8bf8716c2da44a4163a5b",
       "bytes": 163856,
-      "status": "quarantined"
+      "status": "pending-better-photographs"
     },
     {
       "id": "ARC-0029",
