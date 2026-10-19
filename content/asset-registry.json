@@ -1567,6 +1567,21 @@
       "sha256": "f61ae385e64cf7972b1c231bf77dac62cb27b2d753c6b11547df3fa1bc8f9acf",
       "bytes": 1516661,
       "status": "preserved"
+    },
+    {
+      "id": "AST-0044",
+      "collection": "AST",
+      "title": "Marvin Board Profile",
+      "path": "assets/new/marvin-board-profile.png",
+      "original_filename": "marvin-board-profile.png",
+      "source_reference": null,
+      "source_drive_id": null,
+      "legacy_paths": [],
+      "roles": [],
+      "notes": "Discovered during Phase 3 registry reconciliation; provenance not independently reviewed.",
+      "sha256": "825b627635f97bb90e1578cebe2eef1a81972666b0a3edab212ea8442938b221",
+      "bytes": 2148362,
+      "status": "preserved"
     }
   ]
 }
