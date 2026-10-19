@@ -5,7 +5,7 @@
 The standard board-portrait background is **the background from Jerry Pressman's existing board portrait**, not a generic synagogue scene or a new studio backdrop.
 
 - Source/reference portrait: `assets/images/leadership/jerry-pressman-profile.png`
-- Approved background-only reconstruction: `assets/images/leadership/board-portrait-background-jerry-reference.png` **(image pending upload)**
+- Approved background-only reconstruction: `assets/images/leadership/board-portrait-background-jerry-reference.png`
 - Expected image format: square PNG, 1244 × 1244 pixels.
 - Approval: October 19, 2026. User explicitly approved the background-only result based on Jerry's portrait.
 - This is a reconstruction of the obscured center, not an exact photograph of the room.
@@ -20,6 +20,6 @@ The standard board-portrait background is **the background from Jerry Pressman's
 
 ## Publishing status
 
-This document is saved in the website repository. **The approved background PNG is not yet committed**: the connected GitHub file-writing interface supports text, but does not accept an image file directly from the local image-generation workspace. Upload the approved PNG once to `assets/new/`; then move it to the canonical asset path and remove the staging copy.
+This document is saved in the website repository. **The approved background PNG is committed** at `assets/images/leadership/board-portrait-background-jerry-reference.png`. Reuse this file for future board portraits.
 
 Reference: `content/HOSTING-MIGRATION.md`.
