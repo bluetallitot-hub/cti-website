@@ -37,3 +37,8 @@
 .plaque-slot.memorial-lit::before{left:0}
 .plaque-slot.memorial-lit::after{right:0}
 .plaque-slot.memorial-lit button{position:relative;z-index:2}
+
+/* Fine-tune plaque name placement by row against the photographed board. */
+.plaque-slot[style*="grid-row: 1"] button{transform:translateY(2px)}
+.plaque-slot[style*="grid-row: 2"] button{transform:translateY(-2px)}
+.plaque-slot[style*="grid-row: 3"] button,.plaque-slot[style*="grid-row: 4"] button,.plaque-slot[style*="grid-row: 5"] button,.plaque-slot[style*="grid-row: 6"] button{transform:translateY(-3px)}
