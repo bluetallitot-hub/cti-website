@@ -22,3 +22,6 @@
 /* Names sit directly on the brass plaques already present in the board image. */
 .plaque-slot button{background:transparent;border:0;border-radius:0;box-shadow:none;color:#30200f;text-shadow:0 1px 1px #f8df9a;padding:1px 2px;width:81%;height:66%}
 .plaque-slot button:hover,.plaque-slot button:focus-visible{background:rgba(255,244,200,.12);filter:none}
+
+/* Center month lettering on the original brass nameplate without moving its arrow targets. */
+.month-overlay span{position:relative;top:-8px;transform:none;display:flex;align-items:center;justify-content:center;line-height:1}
