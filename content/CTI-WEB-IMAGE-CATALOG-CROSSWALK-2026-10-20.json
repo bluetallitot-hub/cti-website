@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-20",
+  "catalogSource": "Google Drive CTI Web Image Catalog - Filenames, Descriptions, Sources & Rights (1yT_KyQX0d-lOqjIzffV2iuGldq20Ip_4t7RTt-4cxp8)",
+  "scope": "13 external web research leads, not all generated CTI assets",
+  "catalogEntries": [
+    {
+      "catalogNumber": 1,
+      "catalogFilename": "CTI_2019_Ark_Hershoff_Pressman_JewishJournal.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 2,
+      "catalogFilename": "CTI_2022_Centennial_JewishJournal_01.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 3,
+      "catalogFilename": "CTI_2022_Centennial_JewishJournal_02.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 4,
+      "catalogFilename": "Peabody_1958_HebrewSchool_Menorah_PeabodyHistorical.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [
+        "assets/images/gallery/peabody-hebrew-school-menorah-1958.png"
+      ],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 5,
+      "catalogFilename": "CTI_2018_JewishJournal_Letter_Image.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [
+        "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg"
+      ],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 6,
+      "catalogFilename": "CTI_undated_8Pierpont_Exterior_JHCNS.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [
+        "assets/images/gallery/cti-building-8-pierpont-street.png"
+      ],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 7,
+      "catalogFilename": "CTI_undated_IsraelBenatar_Gravestone_JHCNS.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 8,
+      "catalogFilename": "CTI_undated_Exterior_ShalomMagazine.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 9,
+      "catalogFilename": "CTI_undated_IsraelBenatar_Gravestone_ShalomMagazine.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 10,
+      "catalogFilename": "Peabody_1945_8Pierpont_Nazarene_YearbookAd.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 11,
+      "catalogFilename": "Rabbi_DovPikelny_JewishHeritageCenter.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 12,
+      "catalogFilename": "Rabbi_HowardKosovske_2018_SinaiTemple.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    },
+    {
+      "catalogNumber": 13,
+      "catalogFilename": "Victor_Havian_Gravestone_FindAGrave.jpg",
+      "driveStatus": "catalog entry only; catalog states binary not copied to this folder",
+      "githubExactFilenameMatch": false,
+      "githubPotentialRelatedAsset": [],
+      "relationship": "unverified; similarity of subject is not proof of same image",
+      "publicationRights": "pending permission"
+    }
+  ],
+  "driveSearchNote": "Drive image search has more than 100 results, dominated in first page by unrelated DSP liturgy page images; global image inventory not yet exhausted",
+  "notes": [
+    "None of the 13 standardized catalog filenames exactly match the 95 image filenames currently inventoried in GitHub.",
+    "Catalog expressly says image binaries were not copied into its Drive folder; this does not prove images are absent elsewhere.",
+    "Three GitHub images share a plausible subject with catalog entries but require visual/source verification.",
+    "All 13 catalog leads remain pending reuse-rights verification.",
+    "This crosswalk is separate from existing content/asset-registry.json and does not change published images."
+  ]
+}
