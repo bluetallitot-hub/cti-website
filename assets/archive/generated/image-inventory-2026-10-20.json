@@ -1,0 +1,959 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-20",
+  "scope": "GitHub main branch only; Google Drive and prior ChatGPT outputs not yet reconciled",
+  "policy": "Do not overwrite originals or infer provenance/approval from filenames",
+  "count": 95,
+  "assets": [
+    {
+      "path": "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
+      "gitBlobSha": "7aee742f827e6b9fb4e4abc37a1ac3711c429461",
+      "bytes": 713667,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/I-581-01-15-006-web.jpg",
+      "gitBlobSha": "443f9543c06dcf0dbe41d6ca3966ce59871a3c86",
+      "bytes": 95269,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/I-581-01-15-024-web.jpg",
+      "gitBlobSha": "56c9336c23deb039621e3bdf3891d14e71694379",
+      "bytes": 91722,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/I-581-01-15-025-web.jpg",
+      "gitBlobSha": "58ad5952fd32eb095d15030796da1d17e304c974",
+      "bytes": 164901,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/I-581-01-15-033-web.jpg",
+      "gitBlobSha": "48b8a276f272f6d167fd5dc0f46bad9773bfe7e4",
+      "bytes": 199104,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/I-581-01-15-034-web.jpg",
+      "gitBlobSha": "b0b2947eef4b0991ad55f7b8e46f8322db1c648b",
+      "bytes": 197965,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/I-581-01-15-035-web.jpg",
+      "gitBlobSha": "8644fe56281aa524580e41a5f8d132f7b20be93a",
+      "bytes": 202027,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-1972-salem-news-golden-anniversary-original.jpg",
+      "gitBlobSha": "82a465d05c1652ddf4c69d056f7ff5a7c13da658",
+      "bytes": 600210,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-1979-gibely-address-original-page.jpg",
+      "gitBlobSha": "e8372f62f40b0030162811fe9daf21b794c10121",
+      "bytes": 393586,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg",
+      "gitBlobSha": "20cdd22fc701e06c44cb97d96bbe3c0d813e6103",
+      "bytes": 1084666,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg",
+      "gitBlobSha": "d6e1c12ccba577885fd1a90dbbd6657ad0c66702",
+      "bytes": 5023286,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-1.jpg",
+      "gitBlobSha": "02b8fe5ef5042ba0a904ee9445cb573cba508bcb",
+      "bytes": 165776,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-1997-75th-anniversary-invitation.jpg",
+      "gitBlobSha": "8b390bb3450c6599a86bf216f227ec2ccf5b27a5",
+      "bytes": 123393,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg",
+      "gitBlobSha": "aa85cecce638042952d7f320ac8bdeff3da03ae4",
+      "bytes": 956762,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
+      "gitBlobSha": "c5bc14b4be6f833ac8feee6de6083548f935a1f8",
+      "bytes": 124239,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-2012-90th-anniversary-program-original.jpg",
+      "gitBlobSha": "b88da156c4bf98309f9812dd89e2743fc386f94c",
+      "bytes": 112618,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-2022-centennial-article.jpg",
+      "gitBlobSha": "aea8be8da3de01021a206cbc0609f331e20ba6e3",
+      "bytes": 155004,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg",
+      "gitBlobSha": "7a0e73231457aabcac74d9b34ec443176934d9e6",
+      "bytes": 870476,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-2024-elliot-hershoff-obituary-clipping.png",
+      "gitBlobSha": "c103f4b5f53079616e739bc3b6e9806aa9134ed1",
+      "bytes": 507249,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
+      "gitBlobSha": "a9a678d1b0406bc2be93a35a7cab553d619ed7cd",
+      "bytes": 920505,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-elliot-hershoff-obituary-original.jpg",
+      "gitBlobSha": "a5e60af6f985f3ff60c4e8fb245d851546f97ff9",
+      "bytes": 141691,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-joseph-gibely-ii-1979-portrait.jpg",
+      "gitBlobSha": "a0c2e0a35e64db1757755b9b610dacb4dee08827",
+      "bytes": 56595,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg",
+      "gitBlobSha": "12b6589f60974eafe7b02cdb9075bb662b7bd0ed",
+      "bytes": 952451,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-october-1994-original-blue.jpg",
+      "gitBlobSha": "359e4d69246a1c840128077b8e12f8375c95c831",
+      "bytes": 107002,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-september-1983-original-blue.jpg",
+      "gitBlobSha": "82248095c1ddd783c4e1f4d9036d91f7e9890295",
+      "bytes": 144655,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
+      "gitBlobSha": "b8c7d4799dd821f84502b9666389c7b298f038df",
+      "bytes": 2787902,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/david-leon-original.png",
+      "gitBlobSha": "ec3cb4c81017e1715b4e92e30639fe46ec41da1b",
+      "bytes": 1195318,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/joseph-havian-original.png",
+      "gitBlobSha": "d23a3ef590feeb7177e8b55308025d26c0603fe0",
+      "bytes": 1352141,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/morris-gibely-original.png",
+      "gitBlobSha": "0e98175ecd6daf2d1981d818b873b092ec415c81",
+      "bytes": 219262,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/archive/originals/ralph-bencangey-original.png",
+      "gitBlobSha": "c97731019ec81db4ac9285c578edf3f866c8c0e7",
+      "bytes": 1217062,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
+      "gitBlobSha": "9a4e7f76a2c875b47af1c5b621ba5ce2e47c6135",
+      "bytes": 1002911,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-1972-anniversary-celebration-photos-1.jpg",
+      "gitBlobSha": "f96c8838164e9501f53bc350c75ec101b0f7ca98",
+      "bytes": 159915,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-1972-anniversary-celebration-photos-2.jpg",
+      "gitBlobSha": "0a97836480da48f6de1106382053f35549a5854b",
+      "bytes": 169413,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
+      "gitBlobSha": "045bb24acabcc520c2a4b8338117bdfadb2dd22e",
+      "bytes": 2700451,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-2012-90th-anniversary-officers.jpg",
+      "gitBlobSha": "3b4368824b5843beccbe143d1a5c2484526d8e30",
+      "bytes": 118767,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
+      "gitBlobSha": "466df4287af15e3d4efacbfef921325c306ad72a",
+      "bytes": 126996,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-2012-shuls-mark-historic-milestones.jpg",
+      "gitBlobSha": "3a37192e0cb49b622f2c3def8a6dfe8d6a8d2394",
+      "bytes": 165499,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-2022-building-ai-retouched.jpg",
+      "gitBlobSha": "508e27c8713c4c279f04bc226fa7e856c2436047",
+      "bytes": 575902,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-2022-centennial-officers-honorees.jpg",
+      "gitBlobSha": "e3384441b9d4fcec3ab5be718c491d01e83146e4",
+      "bytes": 875346,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-01.jpg",
+      "gitBlobSha": "d888611a48b5d517e4a291d691a2166a623734d2",
+      "bytes": 103609,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-02.jpg",
+      "gitBlobSha": "5798828987766c011466716f01f7934ca9a5b807",
+      "bytes": 94370,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-03.jpg",
+      "gitBlobSha": "d59814ccf4d5a0b03dc74a657cf9569a62d4f53f",
+      "bytes": 153968,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-04.jpg",
+      "gitBlobSha": "dbd30b525bd47963093b43b671053f9bd07fb2ed",
+      "bytes": 113420,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-05.jpg",
+      "gitBlobSha": "3511b653ce081e4e216936026bfbc870da388d0e",
+      "bytes": 123124,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-06.jpg",
+      "gitBlobSha": "e251c4ed34755c0e09556a46628605643d5e0e81",
+      "bytes": 109171,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-07.jpg",
+      "gitBlobSha": "d9186febbeffac187d90cbce58c582b2410f2ef0",
+      "bytes": 91018,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-08.jpg",
+      "gitBlobSha": "44a0401adcfdf243cc114adc8f9b5b6dd0a797ce",
+      "bytes": 117727,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-09.jpg",
+      "gitBlobSha": "5c28e021f63899b2d67a4ad09e3f4aff728942cb",
+      "bytes": 135385,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-10.jpg",
+      "gitBlobSha": "a2d960b723e6ab5f4c665ae609d37063aaa17da6",
+      "bytes": 124850,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-11.jpg",
+      "gitBlobSha": "1f703f170d89f0382a7c113fce880a35fe0d50ac",
+      "bytes": 111065,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-12.jpg",
+      "gitBlobSha": "ecf1484c48af70ac327f350bde3aff364a07f806",
+      "bytes": 124096,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/archives/cti-1986-leo-gibely-newspaper-restored.png",
+      "gitBlobSha": "a641339bad238ddfbe7ef8332e66f8133264effa",
+      "bytes": 2040510,
+      "classification": "restored-or-enhanced",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
+      "gitBlobSha": "49bb249cb481edf3496c3b020e0e9b1e61e30be9",
+      "bytes": 3165908,
+      "classification": "restored-or-enhanced",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/branding/CTI-logo-web.png",
+      "gitBlobSha": "9ab2bb5805281073d7fa93fe18eb6b8d3bd921a0",
+      "bytes": 8096,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/founders/cti-founders-charter-members-plaque.jpg",
+      "gitBlobSha": "2511717feb08d2b4b3c95313e8999195e3fa4953",
+      "bytes": 115001,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/founders/cti-founders-plaque-ready-for-github.png",
+      "gitBlobSha": "6370902d5bc50b83c999494a7379cd9a1e15a1ca",
+      "bytes": 1315794,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/Congregation Renovation in Peabody.png",
+      "gitBlobSha": "635411fc9f0741034dfe3ca7191c1ce2fedc105d",
+      "bytes": 2999919,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
+      "gitBlobSha": "d2016474ee9165a656903619bdc54e574e3df021",
+      "bytes": 2287491,
+      "classification": "restored-or-enhanced",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
+      "gitBlobSha": "eb4c66de6a683596c37543060f45e06866afaf43",
+      "bytes": 2506036,
+      "classification": "restored-or-enhanced",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-1976-service-honorees-restored.png",
+      "gitBlobSha": "8ccfca12d475892319b1a6be3d2568a43fc0be23",
+      "bytes": 2864413,
+      "classification": "restored-or-enhanced",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
+      "gitBlobSha": "616c034eabc5a5bddea6667077195de49faef012",
+      "bytes": 459424,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
+      "gitBlobSha": "f80f2cece3c25fd3b5c1661868aca7227438a3dd",
+      "bytes": 31682,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
+      "gitBlobSha": "c856260c01be3a0e20b3c4da9bcc1834c9eaabe2",
+      "bytes": 903016,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
+      "gitBlobSha": "6c20d0a4c7bc0feeb16fa7c67e126728ff1dd555",
+      "bytes": 2043792,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg",
+      "gitBlobSha": "4c041939828e3cec7ea9a401363b1d994369f894",
+      "bytes": 219272,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
+      "gitBlobSha": "a26b284609f18a4a7b47461cbc18abf062e903cc",
+      "bytes": 113387,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-building-8-pierpont-street.png",
+      "gitBlobSha": "90c3dcf5af1e100c60e2e1e65c517f97542c3e8c",
+      "bytes": 780576,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
+      "gitBlobSha": "88e9b979da153150b93c1cea6702cf25934e7989",
+      "bytes": 2856101,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+      "gitBlobSha": "ca75883c4f496af30afd474a6566f70d6556f7b3",
+      "bytes": 192593,
+      "classification": "restored-or-enhanced",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+      "gitBlobSha": "19ca8834a272093bc9879ea47f80231b25544e82",
+      "bytes": 210961,
+      "classification": "restored-or-enhanced",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+      "gitBlobSha": "e7cc0a9aba5d697db70d21ce9123e80315dafab7",
+      "bytes": 98042,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/Synagogue Shofar Ceremony Group Portrait.png",
+      "gitBlobSha": "8a246793f4d4126ee1f8c19fe80e11b8ad7d6aaa",
+      "bytes": 2292912,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
+      "gitBlobSha": "1cb9efd01471f0d360e34550336e5b2dfbb5cf1b",
+      "bytes": 2292791,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/Warm Vintage Portrait of an Older Gentleman.png",
+      "gitBlobSha": "586e4a787c2deb791ffd054e8bd8108330062c6c",
+      "bytes": 2186044,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/betty-polonsky-profile.png",
+      "gitBlobSha": "9d4e1f8c786b1f2d751c1de1406cbfd3b07dfc58",
+      "bytes": 1936261,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/board-portrait-background-jerry-reference.png",
+      "gitBlobSha": "acd4f52c98acfda32299cbbd2d03ec62a3fff5fa",
+      "bytes": 1516661,
+      "classification": "prototype-or-reference",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/cti-a-crisp-warmly-lit-professional-portrait-photo-i.png",
+      "gitBlobSha": "3aeb7555f202c30d344d4ee61a3cfac3ac438cc9",
+      "bytes": 2141460,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/cti-fran-profile-portrait.png",
+      "gitBlobSha": "8a38e5990dd1d3c8c00a30bdb048355ad7c46d24",
+      "bytes": 2115720,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/david-leon-gallery.png",
+      "gitBlobSha": "cf00992b9ec6ede6b3fe8b09b23326c96aec0e61",
+      "bytes": 839447,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/david-podradchik-profile.png",
+      "gitBlobSha": "d6d5910e63c812ad4c435abf0aaf6def02ec6295",
+      "bytes": 1908123,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/doris-hershoff-profile.png",
+      "gitBlobSha": "59419e44774f66f3ef39df0db7052bb8001930b1",
+      "bytes": 2964591,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/harvey-elefson-profile.png",
+      "gitBlobSha": "29151b5b11949056ef79c59c8f5e16904e1aee09",
+      "bytes": 1942960,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/jay-polonsky-profile.png",
+      "gitBlobSha": "bc206d744a2777855cfd38810e184f3dfa3dec69",
+      "bytes": 1903622,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/jerry-pressman-profile.png",
+      "gitBlobSha": "edf1cc4d492ad37da1950982f4991a549184d656",
+      "bytes": 1687556,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/joanne-pressman-profile.png",
+      "gitBlobSha": "0ec64a48633447fb05c0ede6abd648606fd24bb8",
+      "bytes": 1958923,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/joseph-havian-gallery.png",
+      "gitBlobSha": "da6689e799629a879ae31bc8849e62d7fe823e8c",
+      "bytes": 715304,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/marvin-board-profile.png",
+      "gitBlobSha": "8ed7304611d47352c54635e7b0eac8d4441b3378",
+      "bytes": 2148362,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/millie-becker-profile.png",
+      "gitBlobSha": "01562d6a53ba3f98604aad97237caa319cf1ff77",
+      "bytes": 2154012,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/morris-gibely-gallery.png",
+      "gitBlobSha": "88bb3805223ec07562dba7c6ad0eb31893aa0d67",
+      "bytes": 656214,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/rabbi-blue-family-web.jpg",
+      "gitBlobSha": "cc340a19f298ccf4e9e9c82bf714dd28b3b76b9e",
+      "bytes": 15588,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/rabbi-blue-profile.jpg",
+      "gitBlobSha": "c3db8e24bad1f9bdac76b6933ac8d7d2d33e6f17",
+      "bytes": 83867,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/leadership/ralph-bencangey-gallery.png",
+      "gitBlobSha": "05632fef64aabd6a2a823baaea18be516a5dd85a",
+      "bytes": 802208,
+      "classification": "unreviewed",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/images/presidents/cti-presidents-plaque-ready-for-github.png",
+      "gitBlobSha": "05e1db2d1a5b95b256efbc7c60328e11fece5a4d",
+      "bytes": 1326679,
+      "classification": "website-ready-or-derived",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/possible-duplicates/assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-2.jpg",
+      "gitBlobSha": "163a7765e697913d3c2cdbbe9fa0977e859507cf",
+      "bytes": 163856,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    },
+    {
+      "path": "assets/possible-duplicates/assets/archive/originals/cti-sephardic-temple-honors-patriarch-clipping.jpg",
+      "gitBlobSha": "e8c53f14b873a4d31fa80665686de24fb22c1e04",
+      "bytes": 180811,
+      "classification": "original",
+      "source": "GitHub repository",
+      "approvalStatus": "requires-review",
+      "derivedFrom": null,
+      "websiteUsage": "not-yet-audited"
+    }
+  ]
+}
