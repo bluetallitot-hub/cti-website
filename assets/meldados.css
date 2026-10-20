@@ -29,3 +29,11 @@
 /* Memorial plaque names: prefer one word on each line, without changing the detail view. */
 .plaque-slot button strong{display:block;width:100%;max-width:100%;font-weight:600;line-height:1.12;overflow-wrap:normal;word-break:normal;white-space:normal}
 .plaque-slot button{overflow-wrap:normal;word-spacing:100vw}
+
+/* Overlay a warm glow on the two existing white lamps flanking a memorial plaque.
+   Only the plaques whose Hebrew anniversary falls in the current Sunday–Saturday week light up. */
+.plaque-slot.memorial-lit{position:relative}
+.plaque-slot.memorial-lit::before,.plaque-slot.memorial-lit::after{content:"";position:absolute;top:50%;width:12%;height:35%;transform:translateY(-50%);border-radius:50%;pointer-events:none;background:radial-gradient(ellipse,rgba(255,255,248,.98) 0%,rgba(255,250,196,.85) 19%,rgba(255,216,104,.44) 43%,rgba(255,195,80,0) 75%);filter:drop-shadow(0 0 5px rgba(255,230,125,.85));z-index:1}
+.plaque-slot.memorial-lit::before{left:0}
+.plaque-slot.memorial-lit::after{right:0}
+.plaque-slot.memorial-lit button{position:relative;z-index:2}
