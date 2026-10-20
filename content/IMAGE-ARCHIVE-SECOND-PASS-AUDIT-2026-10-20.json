@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-20",
+  "scope": "Second-pass scan of 34 archive, press, content and biography files beyond initial 14-file audit",
+  "status": "verified references only; no media modified",
+  "findings": {
+    "archiveSource": "content/archives/index.json includes scans and archival citations, even though content/asset-registry.json source_reference is null",
+    "gallerySource": "content/gallery.json contains photo captions and in some cases source_url",
+    "archivePages": [
+      "archives/archive-1976-sephardic-jews.html",
+      "archives/archive-1979-joseph-gibely-address.html",
+      "archives/archive-1995-ashkenazi-sephardic-traditions.html",
+      "archives/archive-1997-75th-anniversary.html",
+      "archives/archive-2001-constantinople-to-peabody.html",
+      "archives/archive-2018-hershoff-letter.html",
+      "archives/archive-2022-jewish-journal-centennial.html"
+    ],
+    "originalDerivedPairs": [
+      {
+        "original": "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg",
+        "derived": "assets/images/archives/cti-1986-leo-gibely-newspaper-restored.png",
+        "evidence": "Both listed together in content/archives/index.json",
+        "verification": "documented association; pixel derivation not verified"
+      },
+      {
+        "original": "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg",
+        "derived": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
+        "evidence": "Both listed together in content/archives/index.json",
+        "verification": "documented association; pixel derivation not verified"
+      },
+      {
+        "original": "assets/archive/originals/cti-september-1983-original-blue.jpg",
+        "derived": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+        "evidence": "Matching subject/date filenames and archive page display",
+        "verification": "candidate; requires visual comparison"
+      },
+      {
+        "original": "assets/archive/originals/cti-october-1994-original-blue.jpg",
+        "derived": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+        "evidence": "Matching subject/date filenames and archive page display",
+        "verification": "candidate; requires visual comparison"
+      }
+    ],
+    "additionalConfirmedReferences": [
+      {
+        "file": "content/gallery.json",
+        "example": "assets/images/gallery/cti-building-8-pierpont-street.png"
+      },
+      {
+        "file": "content/biography-directory.json",
+        "example": "assets/images/leadership/cti-fran-profile-portrait.png"
+      },
+      {
+        "file": "content/archives/index.json",
+        "example": "assets/archive/originals/cti-elliot-hershoff-obituary-original.jpg"
+      },
+      {
+        "file": "press/press-1992-origins.html",
+        "example": "assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg"
+      },
+      {
+        "file": "archives/archive-1997-75th-anniversary.html",
+        "example": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg"
+      }
+    ]
+  },
+  "nextActions": [
+    "Scan remaining low-priority pages and administrative scripts for references.",
+    "Join citations in content/archives/index.json and source_url fields in content/gallery.json into provenance sidecar, without asserting image rights.",
+    "Visually verify candidate original/restoration pairs.",
+    "Keep quarantined and apparently unlinked files intact."
+  ],
+  "safety": "No files, published pages, paths, or existing asset-registry entries modified."
+}
