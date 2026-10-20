@@ -1762,6 +1762,36 @@
       "sha256": "b62d5cd1bf9598e9f21e586695c53811c0140dc88cab5ea7ee05ce3344fa873b",
       "bytes": 457149,
       "status": "preserved"
+    },
+    {
+      "id": "AST-0057",
+      "collection": "AST",
+      "title": "Cti Meldados Master Board",
+      "path": "assets/new/cti-meldados-master-board.png",
+      "original_filename": "cti-meldados-master-board.png",
+      "source_reference": null,
+      "source_drive_id": null,
+      "legacy_paths": [],
+      "roles": [],
+      "notes": "Discovered during Phase 3 registry reconciliation; provenance not independently reviewed.",
+      "sha256": "8ae4b3814f224dfd3f416a78603b53971437b02596ef8922d1dcf544153b5cbf",
+      "bytes": 2177687,
+      "status": "preserved"
+    },
+    {
+      "id": "AST-0058",
+      "collection": "AST",
+      "title": "Cti Meldados Master Board",
+      "path": "assets/new/cti-meldados-master-board.webp",
+      "original_filename": "cti-meldados-master-board.webp",
+      "source_reference": null,
+      "source_drive_id": null,
+      "legacy_paths": [],
+      "roles": [],
+      "notes": "Discovered during Phase 3 registry reconciliation; provenance not independently reviewed.",
+      "sha256": "8bf216d770ab7b40061deef4529065f6222261ea9bbe0fc392911de2cbf1d7f6",
+      "bytes": 315084,
+      "status": "preserved"
     }
   ]
 }
