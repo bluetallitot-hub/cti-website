@@ -1,0 +1,1115 @@
+{
+  "auditDate": "2026-10-20",
+  "scope": "14 selected website HTML/CSS/JS files, not all repository pages",
+  "scannedFiles": [
+    "index.html",
+    "gallery.html",
+    "history.html",
+    "archive-founders.html",
+    "archive-presidents.html",
+    "leadership.html",
+    "press.html",
+    "assets/site.js",
+    "assets/leadership-cards.js",
+    "assets/styles.css",
+    "assets/archive-reader.js",
+    "assets/meldados.js",
+    "album-anniversary-celebration.html",
+    "archives/album-anniversary-celebration.html"
+  ],
+  "counts": {
+    "images": 95,
+    "exactPathReferenced": 56,
+    "filenameOnlyReferenced": 2,
+    "notFoundInSample": 38,
+    "registered": 95,
+    "sourceReferenceOrDriveIdPresent": 0
+  },
+  "limitations": [
+    "Registry status published/preserved is not an independent rights or live-use determination.",
+    "The unreferenced-in-sample group is not an unused-assets list.",
+    "Filename-only references need path-resolution checks.",
+    "Original/derivative relationships require verification, not just filename similarity.",
+    "No image paths, original files, website pages, or registry statuses were changed."
+  ],
+  "assets": [
+    {
+      "registryId": "ARC-0001",
+      "path": "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "ARC-0002",
+      "path": "assets/archive/originals/I-581-01-15-024-web.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "history.html",
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "ARC-0003",
+      "path": "assets/archive/originals/I-581-01-15-025-web.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "history.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "ARC-0004",
+      "path": "assets/archive/originals/I-581-01-15-033-web.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0005",
+      "path": "assets/archive/originals/I-581-01-15-034-web.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0006",
+      "path": "assets/archive/originals/I-581-01-15-035-web.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0007",
+      "path": "assets/archive/originals/cti-1972-salem-news-golden-anniversary-original.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0008",
+      "path": "assets/archive/originals/cti-1979-gibely-address-original-page.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0010",
+      "path": "assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0011",
+      "path": "assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-1.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "history.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "ARC-0012",
+      "path": "assets/archive/originals/cti-1997-75th-anniversary-invitation.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "history.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "ARC-0014",
+      "path": "assets/archive/originals/cti-2022-centennial-article.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0015",
+      "path": "assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0016",
+      "path": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0017",
+      "path": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0018",
+      "path": "assets/archive/originals/david-leon-original.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archive-founders.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "ARC-0019",
+      "path": "assets/archive/originals/joseph-havian-original.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archive-founders.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "ARC-0020",
+      "path": "assets/archive/originals/morris-gibely-original.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archive-founders.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "ARC-0021",
+      "path": "assets/archive/originals/ralph-bencangey-original.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archive-founders.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0001",
+      "path": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "GAL-0002",
+      "path": "assets/images/anniversaries/cti-1972-anniversary-celebration-photos-1.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "history.html"
+      ],
+      "filenameOnlyReferences": [
+        "assets/styles.css"
+      ],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0003",
+      "path": "assets/images/anniversaries/cti-1972-anniversary-celebration-photos-2.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [
+        "assets/styles.css"
+      ],
+      "usageConclusion": "filename found; inspect relative reference"
+    },
+    {
+      "registryId": "GAL-0004",
+      "path": "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0005",
+      "path": "assets/images/anniversaries/cti-2012-90th-anniversary-officers.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "history.html",
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0006",
+      "path": "assets/images/anniversaries/cti-2012-shuls-mark-historic-milestones.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "GAL-0007",
+      "path": "assets/images/anniversaries/cti-2022-building-ai-retouched.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0008",
+      "path": "assets/images/anniversaries/cti-2022-centennial-officers-honorees.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "history.html",
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0009",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-01.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0010",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-02.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0011",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-03.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0012",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-04.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0013",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-05.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0014",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-06.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0015",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-07.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0016",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-08.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0017",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-09.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0018",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-10.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0019",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-11.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0020",
+      "path": "assets/images/anniversaries/cti-anniversary-album-photo-12.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "RES-0001",
+      "path": "assets/images/branding/CTI-logo-web.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "index.html",
+        "gallery.html",
+        "history.html",
+        "leadership.html",
+        "press.html",
+        "assets/site.js",
+        "archives/album-anniversary-celebration.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "FND-0001",
+      "path": "assets/images/founders/cti-founders-charter-members-plaque.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "history.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "FND-0002",
+      "path": "assets/images/founders/cti-founders-plaque-ready-for-github.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0021",
+      "path": "assets/images/gallery/Congregation Renovation in Peabody.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0022",
+      "path": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0023",
+      "path": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0024",
+      "path": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "history.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0025",
+      "path": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0026",
+      "path": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "history.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "GAL-0027",
+      "path": "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "GAL-0028",
+      "path": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "GAL-0029",
+      "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "GAL-0030",
+      "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "LDR-0001",
+      "path": "assets/images/leadership/Synagogue Shofar Ceremony Group Portrait.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "LDR-0002",
+      "path": "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archive-presidents.html",
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0003",
+      "path": "assets/images/leadership/Warm Vintage Portrait of an Older Gentleman.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archive-presidents.html",
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0004",
+      "path": "assets/images/leadership/betty-polonsky-profile.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "leadership.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0005",
+      "path": "assets/images/leadership/cti-a-crisp-warmly-lit-professional-portrait-photo-i.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "leadership.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0006",
+      "path": "assets/images/leadership/david-leon-gallery.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archive-founders.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0007",
+      "path": "assets/images/leadership/david-podradchik-profile.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "leadership.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0008",
+      "path": "assets/images/leadership/doris-hershoff-profile.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "leadership.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0009",
+      "path": "assets/images/leadership/harvey-elefson-profile.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "leadership.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0010",
+      "path": "assets/images/leadership/jay-polonsky-profile.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "leadership.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0011",
+      "path": "assets/images/leadership/jerry-pressman-profile.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archive-presidents.html",
+        "leadership.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0012",
+      "path": "assets/images/leadership/joanne-pressman-profile.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "leadership.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0013",
+      "path": "assets/images/leadership/joseph-havian-gallery.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archive-founders.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0014",
+      "path": "assets/images/leadership/millie-becker-profile.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "leadership.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0015",
+      "path": "assets/images/leadership/morris-gibely-gallery.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archive-founders.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0016",
+      "path": "assets/images/leadership/rabbi-blue-family-web.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "LDR-0017",
+      "path": "assets/images/leadership/rabbi-blue-profile.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "leadership.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "LDR-0018",
+      "path": "assets/images/leadership/ralph-bencangey-gallery.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "archive-founders.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "PRE-0001",
+      "path": "assets/images/presidents/cti-presidents-plaque-ready-for-github.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "ARC-0022",
+      "path": "assets/archive/originals/I-581-01-15-006-web.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0028",
+      "path": "assets/possible-duplicates/assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-2.jpg",
+      "registryStatus": "quarantined",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0029",
+      "path": "assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg",
+      "registryStatus": "restored-to-archive",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0030",
+      "path": "assets/archive/originals/cti-elliot-hershoff-obituary-original.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0032",
+      "path": "assets/archive/originals/cti-october-1994-original-blue.jpg",
+      "registryStatus": "restored-to-archive",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0034",
+      "path": "assets/possible-duplicates/assets/archive/originals/cti-sephardic-temple-honors-patriarch-clipping.jpg",
+      "registryStatus": "quarantined",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "ARC-0035",
+      "path": "assets/archive/originals/cti-september-1983-original-blue.jpg",
+      "registryStatus": "restored-to-archive",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "GAL-0035",
+      "path": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "LDR-0019",
+      "path": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
+      "registryStatus": "published",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "LDR-0020",
+      "path": "assets/archive/originals/cti-joseph-gibely-ii-1979-portrait.jpg",
+      "registryStatus": "restored-to-archive",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "AST-0037",
+      "path": "assets/archive/originals/cti-2024-elliot-hershoff-obituary-clipping.png",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "AST-0038",
+      "path": "assets/archive/originals/cti-2012-90th-anniversary-program-original.jpg",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "AST-0039",
+      "path": "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "AST-0040",
+      "path": "assets/images/gallery/cti-building-8-pierpont-street.png",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "AST-0041",
+      "path": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "AST-0042",
+      "path": "assets/images/gallery/cti-1976-service-honorees-restored.png",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "AST-0043",
+      "path": "assets/images/leadership/board-portrait-background-jerry-reference.png",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "AST-0044",
+      "path": "assets/images/leadership/marvin-board-profile.png",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "leadership.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "AST-0045",
+      "path": "assets/images/leadership/cti-fran-profile-portrait.png",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "AST-0046",
+      "path": "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "AST-0047",
+      "path": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "AST-0048",
+      "path": "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    },
+    {
+      "registryId": "AST-0049",
+      "path": "assets/images/archives/cti-1986-leo-gibely-newspaper-restored.png",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [
+        "press.html"
+      ],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "referenced in sampled website source"
+    },
+    {
+      "registryId": "AST-0050",
+      "path": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
+      "registryStatus": "preserved",
+      "sourceReference": null,
+      "sourceDriveId": null,
+      "exactReferences": [],
+      "filenameOnlyReferences": [],
+      "usageConclusion": "not found in sampled source; not proof unused"
+    }
+  ]
+}
