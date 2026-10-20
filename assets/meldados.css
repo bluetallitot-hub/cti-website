@@ -11,3 +11,6 @@
 .month-overlay button{color:transparent;position:relative;z-index:2;cursor:pointer}
 .month-overlay button:focus-visible{outline:2px solid #3a2614;outline-offset:-2px}
 .month-overlay span{font-weight:600;color:#302012;text-shadow:0 1px 1px #f6d68a}
+
+/* Raise the dynamic Hebrew month label within the brass nameplate. */
+.month-overlay span{transform:translateY(-19%)}
