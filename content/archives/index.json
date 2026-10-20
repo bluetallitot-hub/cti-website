@@ -58,6 +58,32 @@
       "review": "Existing program cover and invitation linked alongside the full original program PDF; original archival image I-581-01-15-007 remains available in Google Drive."
     },
     {
+      "id": "archive-1986-leo-gibely-study",
+      "title": "Sephardic temple honors its unofficial patriarch",
+      "subtitle": "By Cynthia Garber · News Correspondent · June 29 (year inferred as 1986)",
+      "citation": "Original photographed newspaper clipping preserved. The year 1986 is inferred from the article's reference to CTI's 64-year history, not verified from a dated issue. The cleaned display image is AI-reconstructed; the original is authoritative.",
+      "scans": [
+        "assets/images/archives/cti-1986-leo-gibely-newspaper-restored.png",
+        "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg"
+      ],
+      "transcription": "content/archives/transcriptions/archive-1986-leo-gibely-study.txt",
+      "status": "published",
+      "review": "Provisional transcription, not yet verified word-for-word against original scan. Restored display image is AI reconstructed."
+    },
+    {
+      "id": "archive-ladies-auxiliary-officers",
+      "title": "Ladies' Auxiliary officers — historical photograph",
+      "subtitle": "Undated newspaper photograph · Identification and date pending verification",
+      "citation": "Original photographed newspaper clipping preserved. Restored black-and-white image is digitally reconstructed. Colorized version is in the gallery. Names and date require verification against the original caption.",
+      "scans": [
+        "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
+        "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg"
+      ],
+      "transcription": "content/archives/transcriptions/archive-ladies-auxiliary-officers.txt",
+      "status": "published",
+      "review": "Caption not yet transcribed; do not infer identities or date."
+    },
+    {
       "id": "archive-2001-constantinople-to-peabody",
       "title": "From Constantinople to Peabody: Congregation Tifereth Israel",
       "subtitle": "By Gary Band · Jewish Journal Staff",

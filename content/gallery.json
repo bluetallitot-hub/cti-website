@@ -52,6 +52,14 @@
     {
       "image": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
       "caption": "2012 — Shofar gift group portrait from the Congregation Tifereth Israel historical collection."
+    },
+    {
+      "image": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
+      "caption": "CTI Ladies' Auxiliary officers, historical newspaper group photograph. Digitally restored and colorized interpretation; date and individual identities pending verification.",
+      "related_document": {
+        "label": "View original and black-and-white archive photographs",
+        "url": "historical-record.html?id=archive-ladies-auxiliary-officers"
+      }
     }
   ]
 }
