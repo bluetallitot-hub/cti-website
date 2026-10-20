@@ -19,6 +19,7 @@ const canonicalNav=[
   ['services.html','Services'],
   ['torah.html','D’var Torah'],
   ['resources.html','Resources'],
+  ['meldados.html','Meldados'],
   ['newsletter.html','Newsletter'],
   ['gallery.html','Gallery'],
   ['press.html','Press & Archives'],
