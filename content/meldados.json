@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "people": [
     {
       "id": "elliot-hershoff",
@@ -12,7 +12,17 @@
       "biography": "Elliot Hershoff (1934 or 1935–2024) was a longtime leader of Congregation Tifereth Israel in Peabody, serving as its president for 18 years. Born in Boston to Abraham and Bessie (Sochin) Hershoff, he lived in Peabody and had previously lived in Roxbury. Elliot and his wife, Doris (Yonis) Hershoff, shared 66 years of marriage. He served in the United States Army National Guard and was involved with the Jewish War Veterans, Knights of Pythias, Mount Tabor Lodge, and Friends of the Senior Center in Peabody. He was the father of Randy Hershoff and Ronda Middleton, and was remembered by his grandchildren and great-grandchildren.",
       "photo": "",
       "source": "CTI archival transcription of Jewish Journal of Greater Boston obituary, October 17, 2024, p. 18",
-      "reviewStatus": "biography-from-archival-obituary; Hebrew name, remembrance dedication and portrait pending approval"
+      "reviewStatus": "draft",
+      "hebrewYearOfDeath": null,
+      "imageName": "",
+      "dateOfBirth": "",
+      "biographyTitle": "",
+      "plaqueInscription": "",
+      "displayOrder": null,
+      "notes": "Hebrew memorial date and biography require review against source; do not publish until approved.",
+      "approved": false
     }
-  ]
+  ],
+  "description": "CTI Meldados memorial records. Only records with reviewStatus approved or published are shown publicly.",
+  "imageDirectory": "assets/images/meldados/portraits/"
 }
