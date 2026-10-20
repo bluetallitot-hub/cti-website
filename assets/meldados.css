@@ -25,3 +25,7 @@
 
 /* Center month lettering on the original brass nameplate without moving its arrow targets. */
 .month-overlay span{position:relative;top:-8px;transform:none;display:flex;align-items:center;justify-content:center;line-height:1}
+
+/* Memorial plaque names: prefer one word on each line, without changing the detail view. */
+.plaque-slot button strong{display:block;width:100%;max-width:100%;font-weight:600;line-height:1.12;overflow-wrap:normal;word-break:normal;white-space:normal}
+.plaque-slot button{overflow-wrap:normal;word-spacing:100vw}
