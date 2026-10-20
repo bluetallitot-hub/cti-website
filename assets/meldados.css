@@ -14,3 +14,7 @@
 
 /* Raise the dynamic Hebrew month label within the brass nameplate. */
 .month-overlay span{transform:translateY(-19%)}
+
+/* Align the selector higher on the lower brass plate (visible positional correction). */
+.month-overlay{top:82.5%}
+.month-overlay span{transform:none}
