@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tour Our Sanctuary | Congregation Tifereth Israel</title>
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#f7f2e8;background:#101820}
+*{box-sizing:border-box}body{margin:0}button{font:inherit;cursor:pointer}
+header{position:absolute;z-index:5;left:0;right:0;top:0;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(#09141bdc,transparent);gap:12px}
+h1{font-size:clamp(18px,2vw,26px);margin:0;font-weight:550}header small{display:block;color:#d5c9af;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.btn{border:1px solid #e5d7bd88;background:#172934d9;color:white;border-radius:999px;padding:10px 16px}
+#stage{height:100dvh;min-height:450px;position:relative;overflow:hidden;cursor:grab;touch-action:none;background:#111}
+#stage:active{cursor:grabbing}#scene{position:absolute;width:100%;height:100%;object-fit:contain;transform-origin:center;user-select:none;pointer-events:none;transition:opacity .2s}
+#shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(transparent 65%,#0a131cdb)}
+#hotspots{position:absolute;inset:0;pointer-events:none} .hotspot{pointer-events:auto;position:absolute;transform:translate(-50%,-50%);border:1px solid #fff9;background:#132f42e8;color:white;border-radius:40px;padding:10px 14px;box-shadow:0 2px 18px #0008;white-space:nowrap;font-size:13px}
+.hotspot:hover,.btn:hover{background:#345368}
+footer{position:absolute;bottom:0;left:0;right:0;padding:20px 24px;display:flex;justify-content:space-between;align-items:end;gap:16px;z-index:3}
+#sceneTitle{font-size:clamp(22px,3vw,36px);margin:0 0 4px}#sceneDesc{margin:0;color:#d5dbe0;max-width:560px;font-size:14px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;justify-content:end}
+nav{position:absolute;z-index:4;bottom:110px;left:24px;display:flex;gap:8px;flex-wrap:wrap;max-width:900px}
+nav button{border:1px solid #ffffff55;color:white;background:#12212ccc;border-radius:8px;padding:9px 11px;font-size:12px}nav button.active{background:#ad8751;color:#101820}
+#note{position:absolute;z-index:3;top:90px;left:24px;max-width:370px;background:#10212ac7;padding:10px 14px;border-radius:8px;font-size:12px;color:#e5dfd1}
+@media(max-width:700px){header{padding:12px}#note{top:74px;left:12px;right:12px}nav{left:12px;right:12px;bottom:160px}footer{padding:12px;display:block}.controls{justify-content:start;margin-top:10px}nav button{padding:7px}}
+</style></head><body>
+<main id="stage" aria-label="Sanctuary photographic tour">
+<img id="scene" alt="Sanctuary interior">
+<div id="shade"></div><div id="hotspots"></div>
+<header><div><small>Congregation Tifereth Israel</small><h1>Explore Our Sanctuary</h1></div><button class="btn" onclick="toggleFull()">⛶ Full screen</button></header>
+<div id="note">Explore CTI through photographs. Drag to pan, zoom in, or choose another viewpoint. A full 360° capture is planned for a future update.</div>
+<nav id="nav" aria-label="Tour locations"></nav>
+<footer><div><h2 id="sceneTitle"></h2><p id="sceneDesc"></p></div><div class="controls"><button class="btn" onclick="zoom(-.25)">− Zoom</button><button class="btn" onclick="reset()">Reset view</button><button class="btn" onclick="zoom(.25)">+ Zoom</button></div></footer>
+</main>
+<script>
+const scenes=[
+{id:"entrance",name:"Center Aisle",desc:"Looking toward the ark and bimah.",links:[["Approach the bimah","bimah",50,55],["Turn toward rear","rear",85,70],["This week’s D’var Torah","torah.html",50,46]]},
+{id:"bimah",name:"The Bimah and Ark",desc:"A closer view of the sanctuary's focal point.",links:[["Ark curtain detail","ark-curtain",50,54],["This week’s D’var Torah","torah.html",50,47],["Side seating","side",14,72],["Back to aisle","entrance",80,75]]},
+{id:"rear",name:"Rear of the Sanctuary",desc:"Memorial board, stained glass, and congregation seating.",links:[["Stained glass detail","stained-glass",51,54],["Memorial board","meldados.html",75,56],["Siddurim","resources.html",44,69],["Face the ark","entrance",80,76]]},
+{id:"side",name:"Side of the Sanctuary",desc:"The windows, seating, and bimah from the side.",links:[["Approach the bimah","bimah",80,60],["Center aisle","entrance",30,80]]},
+{id:"stained-glass",name:"Stained Glass and Books",desc:"A closer view of the rear sanctuary wall.",links:[["Return to rear","rear",83,74],["Siddurim","resources.html",43,67]]},
+{id:"ark-curtain",name:"Ark Curtain",desc:"Embroidered parochet, including its dedication.",links:[["Return to bimah","bimah",85,75]]}
+];
+const stage=document.getElementById('stage'),img=document.getElementById('scene'),nav=document.getElementById('nav'),hotspots=document.getElementById('hotspots');
+let current=0,scale=1,x=0,y=0,drag=null;
+function paint(){img.style.transform=`translate(${x}px,${y}px) scale(${scale})`}
+function reset(){scale=1;x=0;y=0;paint()}
+function zoom(n){scale=Math.min(3,Math.max(1,scale+n));if(scale===1){x=0;y=0}paint()}
+function show(i){current=i;const s=scenes[i];img.src='images/'+s.id+'.jpg';img.alt=s.name;document.getElementById('sceneTitle').textContent=s.name;document.getElementById('sceneDesc').textContent=s.desc;reset();nav.innerHTML='';scenes.forEach((v,j)=>{let b=document.createElement('button');b.textContent=v.name;b.className=j===i?'active':'';b.onclick=()=>show(j);nav.appendChild(b)});hotspots.innerHTML='';s.links.forEach(([label,id,left,top])=>{let b=document.createElement('button');b.className='hotspot';b.textContent='➜ '+label;b.style.left=left+'%';b.style.top=top+'%';b.onclick=()=>{const index=scenes.findIndex(v=>v.id===id);if(index>=0)show(index);else window.location.href='../'+id;};hotspots.appendChild(b)});location.hash=s.id}
+function toggleFull(){if(!document.fullscreenElement)stage.requestFullscreen?.();else document.exitFullscreen?.()}
+stage.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;drag={px:e.clientX,py:e.clientY,x,y};stage.setPointerCapture(e.pointerId)});
+stage.addEventListener('pointermove',e=>{if(!drag)return;x=drag.x+e.clientX-drag.px;y=drag.y+e.clientY-drag.py;paint()});
+stage.addEventListener('pointerup',()=>drag=null);
+stage.addEventListener('pointercancel',()=>drag=null);
+stage.addEventListener('wheel',e=>{e.preventDefault();zoom(e.deltaY<0?.15:-.15)},{passive:false});
+show(Math.max(0,scenes.findIndex(v=>v.id===location.hash.slice(1))));
+</script></body></html>
