@@ -21,6 +21,29 @@ function upcomingAnniversary(r){
  return null;
 }
 const englishDate=d=>new Intl.DateTimeFormat('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'}).format(d);
+// Extend published monthly dates using the same first-Shabbat Hebrew-calendar rule as Services.
+function rollingMemorialServices(published){
+ const output=published.slice().sort((a,b)=>a.date.localeCompare(b.date));
+ const last=output.length?output[output.length-1].date:'';
+ const existing=new Set(output.map(s=>s.date));
+ const today=new Date();today.setHours(12,0,0,0);
+ const start=new Date(today);start.setDate(start.getDate()-35);
+ const end=new Date(today);end.setDate(end.getDate()+430);
+ const iso=d=>[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');
+ for(let d=start;d<=end;d.setDate(d.getDate()+1)){
+  const h=parts(d);
+  if(h.day!==1)continue;
+  const saturday=new Date(d);
+  saturday.setDate(d.getDate()+(6-d.getDay()+7)%7);
+  const friday=new Date(saturday);friday.setDate(saturday.getDate()-1);
+  const date=iso(friday);
+  if(date>last&&!existing.has(date)){
+   output.push({date,time:'7:30 PM',location:'In person',description:'Monthly Shabbat Service'});
+   existing.add(date);
+  }
+ }
+ return output.sort((a,b)=>a.date.localeCompare(b.date));
+}
 function observance(r){
  const anniversary=upcomingAnniversary(r);
  if(!anniversary)return null;
@@ -75,5 +98,5 @@ if(labels){labels.replaceChildren();for(let col=0;col<8;col++){
 for(let col=0;col<8;col++){for(let row=0;row<6;row++){const slot=txt('div','', 'plaque-slot');slot.style.gridColumn=String(col+1);slot.style.gridRow=String(row+1);const r=columns[col][row];if(r){if(litDates.has(normalize(r.hebrewMonth)+':'+r.hebrewDay)){slot.classList.add('memorial-lit');slot.title='Memorial lights illuminated this week'}const b=document.createElement('button');b.type='button';b.dataset.recordId=String(r.id);b.setAttribute('aria-pressed','false');b.append(txt('strong',r.englishName));b.title=r.englishName+' — '+r.hebrewDay+' '+m;b.onclick=()=>selectRecord(r);slot.append(b)}slot.append(txt('span','', 'memorial-bulb bulb-left'),txt('span','', 'memorial-bulb bulb-right'));grid.append(slot)}}
 const overflow=list.slice(48);$('list-heading').textContent='Meldados for '+m;const ul=document.createElement('ul');for(const r of list){const li=document.createElement('li');const b=document.createElement('button');b.textContent=r.hebrewDay+' '+m+' — '+r.englishName;b.onclick=()=>selectRecord(r);li.append(b);ul.append(li)}$('month-list').replaceChildren(list.length?ul:txt('p','No approved memorial records have been entered for this month.'));if(overflow.length)$('month-list').append(txt('p','The board has 48 plaques; '+overflow.length+' additional memorial(s) remain accessible in the list above.','muted'));const today=parts(new Date());$('today-note').textContent='Today’s Hebrew date (without sunset adjustment): '+today.day+' '+today.month+' '+today.year;const todayRecords=records.filter(r=>normalize(r.hebrewMonth)===today.month&&r.hebrewDay===today.day);const tu=document.createElement('ul');for(const r of todayRecords){const li=document.createElement('li');const b=document.createElement('button');b.textContent=r.englishName;b.onclick=()=>{selected=months.indexOf(today.month);render();selectRecord(r)};li.append(b);tu.append(li)}$('today-list').replaceChildren(todayRecords.length?tu:txt('p','No memorials listed for today.'));$('memorial-detail').hidden=true;active=null}
 function profile(){const params=new URLSearchParams(location.search),r=records.find(x=>x.id===params.get('id')),area=$('profile-content');if(!area)return;if(!r){area.replaceChildren(txt('p','No approved memorial record found.'));return}document.title=r.englishName+' — CTI Meldados';if(params.get('month'))$('back').href='meldados.html?month='+encodeURIComponent(params.get('month'));const brass=txt('div','', 'plaque enlarged');brass.append(txt('strong',r.englishName),txt('span',r.hebrewName||''),txt('small',r.hebrewDay+' '+r.hebrewMonth));const info=txt('section','');info.append(txt('h2',r.englishName),txt('p','Hebrew memorial date: '+r.hebrewDay+' '+r.hebrewMonth),txt('p','Date of death: '+(r.dateOfDeath||'Not provided')),txt('p',r.biography||''));if(r.photo){const im=document.createElement('img');im.src=r.photo;im.className='memorial-portrait';im.alt='Portrait of '+r.englishName;info.append(im)}area.replaceChildren(brass,info)}
-Promise.all([fetch('content/meldados.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unable to load memorial records');return r.json()}),fetch('content/services.json',{cache:'no-store'}).then(r=>r.ok?r.json():{services:[]}).catch(()=>({services:[]}))]).then(([data,schedule])=>{services=(schedule.services||[]).filter(s=>/^\d{4}-\d{2}-\d{2}$/.test(s.date));records=(data.people||[]).filter(approved);if($('plaque-grid')){const query=new URLSearchParams(location.search).get('month');selected=Math.max(0,months.indexOf(query||parts(new Date()).month));$('previous').onclick=()=>{selected=(selected+11)%12;render()};$('next').onclick=()=>{selected=(selected+1)%12;render()};render()}else profile()}).catch(e=>{const n=$('month-list')||$('profile-content');if(n)n.textContent=e.message});
+Promise.all([fetch('content/meldados.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unable to load memorial records');return r.json()}),fetch('content/services.json',{cache:'no-store'}).then(r=>r.ok?r.json():{services:[]}).catch(()=>({services:[]}))]).then(([data,schedule])=>{services=rollingMemorialServices((schedule.services||[]).filter(s=>/^\d{4}-\d{2}-\d{2}$/.test(s.date)));records=(data.people||[]).filter(approved);if($('plaque-grid')){const query=new URLSearchParams(location.search).get('month');selected=Math.max(0,months.indexOf(query||parts(new Date()).month));$('previous').onclick=()=>{selected=(selected+11)%12;render()};$('next').onclick=()=>{selected=(selected+1)%12;render()};render()}else profile()}).catch(e=>{const n=$('month-list')||$('profile-content');if(n)n.textContent=e.message});
 })();
