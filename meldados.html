@@ -13,4 +13,22 @@
 <section id="memorial-detail" class="memorial-detail" aria-live="polite" hidden></section>
 <section class="month-directory"><h2 id="list-heading">Meldados for Tishrei</h2><div id="month-list"></div></section>
 <section class="today-memorials"><h2>Today's Meldados</h2><p id="today-note"></p><div id="today-list"></div></section>
-</main><script src="assets/site.js?v=20261020-nav2"></script><script src="assets/service-calendar.js?v=20261021a"></script><script src="assets/meldados.js?v=20261021-reverted"></script></body></html>
+</main><script src="assets/site.js?v=20261020-nav2"></script><script src="assets/service-calendar.js?v=20261021a"></script><script src="assets/meldados.js?v=20261021-reverted"></script><script>
+/* Position directions a fixed 30px below the month plate, independent of image size. */
+(function(){
+ const board=document.querySelector('.board-art');
+ const plate=board&&board.querySelector('.month-overlay');
+ const instructions=document.querySelector('.board-instructions');
+ if(!board||!plate||!instructions)return;
+ function align(){
+  const boardBottom=board.getBoundingClientRect().bottom;
+  const plateBottom=plate.getBoundingClientRect().bottom;
+  const gap=30;
+  instructions.style.marginTop=(gap-(boardBottom-plateBottom))+'px';
+ }
+ if(document.readyState==='complete')align();
+ else window.addEventListener('load',align,{once:true});
+ if('ResizeObserver' in window)new ResizeObserver(align).observe(board);
+ window.addEventListener('resize',align);
+})();
+</script></body></html>
