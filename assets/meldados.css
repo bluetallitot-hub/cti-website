@@ -215,3 +215,9 @@
 /* Final month plate alignment: preserve arrow hit areas, center month text lower inside brass. */
 .board-art .month-overlay span{transform:translateY(55%)!important}
 .board-art .month-overlay button:hover,.board-art .month-overlay button:active{background:transparent!important}
+
+/* Larger invisible month-arrow targets; do not alter the approved board artwork. */
+.board-art .month-overlay{overflow:visible}
+.board-art .month-overlay button{position:relative!important;min-width:44px;min-height:44px;justify-self:center;align-self:center;touch-action:manipulation}
+.board-art .month-overlay button:focus-visible{outline:2px solid #302012;outline-offset:2px;border-radius:4px}
+@media(max-width:600px){.board-art .month-overlay button{min-width:40px;min-height:40px}}
