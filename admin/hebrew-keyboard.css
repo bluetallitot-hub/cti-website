@@ -1,0 +1,8 @@
+/* CTI accessible on-screen Hebrew keyboard */
+.cti-hebrew-input{width:100%}
+.cti-hebrew-toggle{display:block;margin:7px 0;padding:7px 12px;border:1px solid #8b9ba3;border-radius:6px;background:#edf3f6;color:#173344;font:inherit;cursor:pointer}
+.cti-hebrew-panel{direction:rtl;margin:8px 0;padding:10px;border:1px solid #c8d0d4;border-radius:9px;background:#f7f8f9;max-width:100%;box-sizing:border-box}
+.cti-hebrew-panel[hidden]{display:none}
+.cti-hebrew-row{display:flex;justify-content:center;gap:4px;flex-wrap:wrap;margin:5px 0}
+.cti-hebrew-row button{min-width:34px;min-height:39px;padding:5px 8px;margin:0;border:1px solid #b7c4cc;border-radius:5px;background:white;color:#162e3b;font:22px Arial,sans-serif;cursor:pointer}
+.cti-hebrew-row button:hover,.cti-hebrew-row button:focus-visible{background:#dcecf3;outline:2px solid #365d70}
