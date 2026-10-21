@@ -49,11 +49,11 @@
    if(manualMonths.has(g.id))continue;
    byId.set(g.id,g);
   }
-  for(const s of source)byId.set(s.id||'manual:'+s.date+':'+s.description,s);
+  for(const s of source){const id=s.id||'manual:'+s.date+':'+s.description;byId.set(id,{...s,id});}
   for(const override of overrides){
    if(override.cancelled){byId.delete(override.id);continue;}
    const prior=byId.get(override.id);
-   if(prior)byId.set(override.id,{...prior,...override,generated:false});
+   byId.set(override.id,{...(prior||{id:override.id}),...override,generated:false});
   }
   return [...byId.values()].filter(s=>s.date>=from&&s.date<=until).sort((a,b)=>a.date.localeCompare(b.date)||a.description.localeCompare(b.description));
  }
