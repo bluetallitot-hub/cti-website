@@ -49,3 +49,25 @@
 
 /* Inset each dynamic brass date plaque: 4px on either side, 3px at top. */
 .date-range-labels span{box-sizing:border-box;margin-left:4px;margin-right:4px;margin-top:3px;height:calc(100% - 3px)}
+
+/* Clean wood board: every month has 8 x 6 built-in dynamic brass plaques. */
+.board-art{isolation:isolate}
+.plaque-grid{left:10.5%;top:30%;width:79%;height:55%;column-gap:1.3%;row-gap:2.4%}
+.plaque-slot{position:relative;overflow:visible}
+.plaque-slot::before{content:"";position:absolute;left:10%;right:10%;top:13%;bottom:13%;border:1px solid #9a6a32;border-radius:3px;background:linear-gradient(110deg,#e9c675 0%,#b98032 45%,#e6c174 85%,#a77535 100%);box-shadow:inset 0 1px 2px #fff7,0 2px 3px #0005}
+.plaque-slot button{position:relative;z-index:2;width:78%;height:74%;font-size:clamp(5px,.77vw,12px);background:transparent}
+.plaque-slot.memorial-lit::before{left:10%;right:10%;top:13%;bottom:13%;width:auto;height:auto;transform:none;border-radius:3px;filter:none;background:linear-gradient(110deg,#f0d487,#c48b3e 45%,#e9c87d 85%,#ae7e3a);box-shadow:inset 0 1px 2px #fff7,0 2px 3px #0005}
+.plaque-slot.memorial-lit::after{display:none}
+.memorial-bulb{position:absolute;top:50%;width:8%;height:23%;border-radius:48%;transform:translateY(-50%);background:radial-gradient(ellipse at 40% 30%,#fffef5,#d9d4bc 45%,#9e9881 80%);border:1px solid #9a947f;box-shadow:inset -1px -1px 2px #7776;z-index:3;pointer-events:none}
+.bulb-left{left:0}.bulb-right{right:0}
+.plaque-slot.memorial-lit .memorial-bulb{background:radial-gradient(ellipse,#fff 0%,#fff8d1 36%,#f8ce63 75%);box-shadow:0 0 7px 3px #ffd36cbb,0 0 13px #ffc95c99;border-color:#ffe4a4}
+.date-range-labels{left:10.5%;top:25.5%;width:79%;height:3.3%;column-gap:1.3%}
+.date-range-labels span{border:1px solid #9c6d33;box-shadow:inset 0 1px 2px #fff7,0 2px 3px #0004}
+.month-overlay{left:40%;top:88.3%;width:20%;height:4.5%;background:linear-gradient(105deg,#c18b3b,#f6d889 28%,#e7b95e 55%,#c38a39);border:1px solid #a36d29;border-radius:3px;box-shadow:inset 0 1px 2px #fff8}
+.month-overlay button{color:#302012}
+.month-overlay span{top:0}
+.memorial-observance{margin:20px 0;padding:16px 20px;border-left:4px solid #b68e51;background:#f7f0e3}
+.memorial-observance h3{font-size:1.45rem;margin:0 0 8px}
+.memorial-observance h4{margin:16px 0 4px}
+.memorial-observance .observance-date{font-size:1.3rem;font-weight:700}
+@media(max-width:700px){.memorial-bulb{border-width:.5px}.plaque-slot button{font-size:clamp(3px,1vw,6px)}}
