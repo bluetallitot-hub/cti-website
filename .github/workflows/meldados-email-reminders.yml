@@ -1,0 +1,23 @@
+name: CTI Meldados Email Reminders
+on:
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reminders:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prepare or send Meldados reminders
+        env:
+          CTI_EMAIL_ENABLED: ${{ vars.CTI_EMAIL_ENABLED }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          CTI_EMAIL_FROM: ${{ secrets.CTI_EMAIL_FROM }}
+          CTI_FAMILY_RECIPIENTS: ${{ secrets.CTI_FAMILY_RECIPIENTS }}
+          CTI_CONGREGATION_RECIPIENTS: ${{ secrets.CTI_CONGREGATION_RECIPIENTS }}
+        run: node scripts/meldados-email-reminders.cjs
