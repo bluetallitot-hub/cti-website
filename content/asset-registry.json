@@ -1837,6 +1837,21 @@
       "sha256": "d69adb8f7a7c97293fe8e6d47555d9d9a7be10323951266f6267418af9e70a53",
       "bytes": 1981478,
       "status": "preserved"
+    },
+    {
+      "id": "AST-0062",
+      "collection": "AST",
+      "title": "Ornate Mahogany Memorial Display Board",
+      "path": "assets/new/Ornate Mahogany Memorial Display Board.png",
+      "original_filename": "Ornate Mahogany Memorial Display Board.png",
+      "source_reference": null,
+      "source_drive_id": null,
+      "legacy_paths": [],
+      "roles": [],
+      "notes": "Discovered during Phase 3 registry reconciliation; provenance not independently reviewed.",
+      "sha256": "53cfcd21f51c1f58819c2e8c1f82b39fe2e897f0967f341bdb487cda6509f8b7",
+      "bytes": 1912449,
+      "status": "preserved"
     }
   ]
 }
