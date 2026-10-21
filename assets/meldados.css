@@ -71,3 +71,36 @@
 .memorial-observance h4{margin:16px 0 4px}
 .memorial-observance .observance-date{font-size:1.3rem;font-weight:700}
 @media(max-width:700px){.memorial-bulb{border-width:.5px}.plaque-slot button{font-size:clamp(3px,1vw,6px)}}
+
+/* 2026-10-21: restore original board proportions and plaque alignment. */
+.board-art>img{clip-path:polygon(0% 20%,2% 17%,4% 13%,7% 12%,11% 17%,16% 15%,22% 10%,29% 11%,36% 9%,43% 4%,45% 5%,45% 2%,55% 2%,55% 5%,58% 4%,65% 9%,71% 11%,78% 10%,84% 15%,89% 17%,93% 12%,96% 13%,98% 17%,100% 20%,99% 85%,99.5% 87%,0.5% 87%,1% 85%)}
+.plaque-grid{left:5.2%;top:29.4%;width:89.6%;height:46.8%;column-gap:1.55%;row-gap:3.6%}
+.plaque-slot{position:relative;overflow:visible}
+.plaque-slot::before,.plaque-slot.memorial-lit::before{content:"";position:absolute;left:11%;right:11%;top:12%;bottom:12%;width:auto;height:auto;transform:none;filter:none;border:1px solid #96662e;border-radius:3px;background:linear-gradient(110deg,#e6b861 0%,#f9df9b 22%,#c89343 52%,#edc575 80%,#a66e2e 100%);box-shadow:inset 0 1px 2px #fff9,inset 0 -1px 2px #86532266,0 2px 3px #0006}
+.plaque-slot::after,.plaque-slot.memorial-lit::after{display:none}
+.plaque-slot button{position:relative;z-index:2;width:78%;height:76%;font-size:clamp(5px,.79vw,12px);color:#32210f;background:transparent;border:1px solid transparent;box-shadow:none;word-spacing:normal;transition:background-color .22s ease,color .22s ease,border-color .22s ease}
+.plaque-slot button:hover{background:#fff3}
+.plaque-slot button.is-selected,.plaque-slot button[aria-pressed="true"]{background:#16120f;color:#e7bf6b;text-shadow:none;border:1px solid #e0b666;border-radius:3px}
+.plaque-slot button.is-selected strong{color:inherit}
+.plaque-slot[style*="grid-row:"] button{transform:none}
+.memorial-bulb{position:absolute;top:50%;height:20%;width:5.7%;transform:translateY(-50%);z-index:3;border:1px solid #d9c6a65e;border-radius:48% 48% 43% 43%;background:linear-gradient(90deg,#fff2 0%,#fff0 25%,#fff3 52%,#fff0 77%,#fff2 100%);box-shadow:inset 1px 0 #fff4,inset -1px 0 #33200b44;pointer-events:none}
+.bulb-left{left:1%}.bulb-right{right:1%}
+.plaque-slot.memorial-lit .memorial-bulb{background:radial-gradient(ellipse at 50% 45%,#fffbe5 0%,#ffedab 38%,#f4b33c 76%,#df8b1c 100%);border-color:#ffe6a4;box-shadow:0 0 5px 2px #ffdf81c9,0 0 13px #ffc95c77;animation:memorial-flicker 4.2s ease-in-out infinite alternate}
+.plaque-slot.memorial-lit .bulb-right{animation-delay:-1.7s}
+@keyframes memorial-flicker{0%,100%{filter:brightness(1);opacity:1}20%{filter:brightness(.95);opacity:.94}45%{filter:brightness(1.06);opacity:1}67%{filter:brightness(.97);opacity:.97}83%{filter:brightness(1.03);opacity:1}}
+@media(prefers-reduced-motion:reduce){.plaque-slot.memorial-lit .memorial-bulb{animation:none}.plaque-slot button{transition:none}}
+.date-range-labels{left:5.2%;top:24.6%;width:89.6%;height:3.55%;column-gap:1.55%}
+.date-range-labels span{margin:0 9%;height:85%;background:linear-gradient(110deg,#e8bc65,#f9df9b 32%,#c99444 65%,#efca79);border:1px solid #996a31;border-radius:3px;box-shadow:inset 0 1px #fff9,0 2px 3px #0006}
+.month-overlay{left:40.25%;top:80.05%;width:19.5%;height:4.7%;background:transparent;border:0;box-shadow:none;padding:0 3px}
+.month-overlay button{color:transparent}
+.month-overlay span{position:static;top:auto;transform:none;color:#302012;font-weight:600;text-shadow:0 1px #f7df9c}
+.detail-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:22px;align-items:start}
+.detail-biography-box,.detail-service-box{border:1px solid #d9c7a9;border-radius:8px;background:#faf6ef;padding:22px;min-width:0}
+.detail-biography-box .detail-plaque{max-width:400px;margin:0 auto 20px}
+.detail-biography-box .detail-portrait{text-align:center;margin:16px auto}
+.detail-biography-box .detail-portrait img{max-width:100%;max-height:300px;object-fit:contain;border-radius:4px}
+.detail-biography h3,.detail-service-box h3{font:normal 1.6rem Georgia,serif;margin:0 0 14px}
+.detail-biography p,.detail-service-box p{line-height:1.6}
+.detail-service-box h4{margin:22px 0 5px;font:600 1.1rem Georgia,serif}
+.detail-service-box .observance-date{font:600 1.4rem Georgia,serif;color:#684318}
+@media(max-width:700px){.detail-layout{grid-template-columns:1fr}.detail-biography-box,.detail-service-box{padding:16px}.plaque-slot button{font-size:clamp(3px,.75vw,6px)}}
