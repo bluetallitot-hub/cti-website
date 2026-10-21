@@ -225,3 +225,9 @@
 /* The approved board PNG contains blank space below its wooden base. Pull the instructions up without altering the image or overlays. */
 .board-stage{margin-bottom:clamp(-155px,-12vw,-32px)}
 .board-instructions{position:relative;margin-top:0}
+
+/* Reliable navigation: hit targets extend around the visible arrows and sit above all board overlays. */
+.board-art .month-overlay{z-index:100;pointer-events:none;overflow:visible}
+.board-art .month-overlay button{pointer-events:auto!important;position:relative!important;z-index:101!important;min-width:52px!important;min-height:52px!important;cursor:pointer;touch-action:manipulation}
+.board-art .month-overlay span{pointer-events:none}
+@media(max-width:700px){.board-art .month-overlay button{min-width:44px!important;min-height:44px!important}}
