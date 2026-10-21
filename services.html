@@ -19,7 +19,7 @@
     const existingDates = new Set(existing.map(s=>s.date));
     const lastPublished = existing.length ? existing[existing.length-1].date : '';
     const today = dateAt(eastern.format(new Date()));
-    const end = shift(today, 760);
+    const end = shift(today, 370);
     const start = shift(today, -35);
     let lastMonth = '';
     for(let d=start;d<=end;d=shift(d,1)) {
@@ -60,7 +60,7 @@
     const todayKey=eastern.format(new Date());
     const upcoming=generatedServices(existing).filter(s=>s.date>=todayKey);
     if(!upcoming.length){list.textContent='No upcoming services are currently scheduled.';next.textContent='Next service: Check back for upcoming dates.';return;}
-    list.replaceChildren(...upcoming.slice(0,32).map(s=>{
+    list.replaceChildren(...upcoming.map(s=>{
       const p=document.createElement('p'),strong=document.createElement('strong');
       strong.textContent=label(s);p.append(strong);
       if(s.description && s.description!=='Monthly Shabbat Service') p.append(document.createTextNode(' — '+s.description));
