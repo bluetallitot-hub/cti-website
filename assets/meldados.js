@@ -3,7 +3,7 @@
 const $=id=>document.getElementById(id);
 const months=['Tishrei','Cheshvan','Kislev','Tevet','Shevat','Adar','Nisan','Iyar','Sivan','Tammuz','Av','Elul'];
 const fmt=new Intl.DateTimeFormat('en-u-ca-hebrew',{month:'long',day:'numeric',year:'numeric'});
-const normalize=m=>(m||'').replace(/^Adar(?: I| II)?$/,'Adar').replace(/Heshvan/,'Cheshvan').replace(/Tamuz/,'Tammuz').replace(/Tishri/,'Tishrei');
+const normalize=m=>(m||'').replace(/^Adar(?: I| II)?$/,'Adar').replace(/Heshvan/,'Cheshvan').replace(/Tamuz/,'Tammuz').replace(/Tishri/,'Tishrei').replace(/Nissan/,'Nisan');
 const parts=date=>{const p=fmt.formatToParts(date);return{month:normalize(p.find(x=>x.type==='month').value),day:Number(p.find(x=>x.type==='day').value),year:p.find(x=>x.type==='year').value}};
 const txt=(tag,value,cls)=>{const n=document.createElement(tag);n.textContent=value;if(cls)n.className=cls;return n};
 const approved=r=>r.reviewStatus==='approved'||r.reviewStatus==='published'||r.reviewStatus==='stub';
