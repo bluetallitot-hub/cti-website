@@ -20,5 +20,6 @@
  }
  function init(){const input=document.getElementById('hebrewName');if(input)attach(input)}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+ const observer=new MutationObserver(()=>init());observer.observe(document.documentElement,{childList:true,subtree:true});
  window.CTIHebrewKeyboard={attach};
 })();
