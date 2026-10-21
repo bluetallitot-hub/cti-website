@@ -221,3 +221,7 @@
 .board-art .month-overlay button{position:relative!important;min-width:44px;min-height:44px;justify-self:center;align-self:center;touch-action:manipulation}
 .board-art .month-overlay button:focus-visible{outline:2px solid #302012;outline-offset:2px;border-radius:4px}
 @media(max-width:600px){.board-art .month-overlay button{min-width:40px;min-height:40px}}
+
+/* The approved board PNG contains blank space below its wooden base. Pull the instructions up without altering the image or overlays. */
+.board-stage{margin-bottom:clamp(-155px,-12vw,-32px)}
+.board-instructions{position:relative;margin-top:0}
