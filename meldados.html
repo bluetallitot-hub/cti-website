@@ -23,7 +23,7 @@
  function align(){
   const boardBottom=board.getBoundingClientRect().bottom;
   const plateBottom=plate.getBoundingClientRect().bottom;
-  const gap=30;
+  const gap=85;
   instructions.style.marginTop=(gap-(boardBottom-plateBottom))+'px';
  }
  if(document.readyState==='complete')align();
