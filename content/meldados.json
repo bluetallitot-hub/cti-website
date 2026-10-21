@@ -2015,7 +2015,7 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Verify potential duplicate or source spelling."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Verify potential duplicate or source spelling. Correct Hebrew memorial date of 5 Sivan confirmed October 21, 2026; conflicting 5 Adar entry removed."
     },
     {
       "id": "yahrzeit-markshapiro-tammuz-7",
@@ -2080,22 +2080,6 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied."
-    },
-    {
-      "id": "yahrzeit-maryrosenberg-adar-5",
-      "englishName": "Mary Rosenberg",
-      "hebrewName": "",
-      "hebrewDay": 5,
-      "hebrewMonth": "Adar",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
-      "rememberedBy": "",
-      "biography": "",
-      "photo": "",
-      "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
-      "reviewStatus": "approved",
-      "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Verify potential duplicate or source spelling."
     },
     {
       "id": "yahrzeit-kaybecker-nissan-10",
