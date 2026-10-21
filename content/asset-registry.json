@@ -1822,6 +1822,21 @@
       "sha256": "bad55c4868eb21f89dde0ef4231b963b2eb1d4bdd0b8be082b7af55ab2dd87d3",
       "bytes": 1594594,
       "status": "preserved"
+    },
+    {
+      "id": "AST-0061",
+      "collection": "AST",
+      "title": "Empty Wooden Memorial Display Board (1)",
+      "path": "assets/new/Empty Wooden Memorial Display Board (1).png",
+      "original_filename": "Empty Wooden Memorial Display Board (1).png",
+      "source_reference": null,
+      "source_drive_id": null,
+      "legacy_paths": [],
+      "roles": [],
+      "notes": "Discovered during Phase 3 registry reconciliation; provenance not independently reviewed.",
+      "sha256": "d69adb8f7a7c97293fe8e6d47555d9d9a7be10323951266f6267418af9e70a53",
+      "bytes": 1981478,
+      "status": "preserved"
     }
   ]
 }
