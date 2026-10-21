@@ -47,7 +47,7 @@ if(weekday==='Thursday'){
 const enabled=process.env.CTI_EMAIL_ENABLED==='true';
 console.log(JSON.stringify({date:local,weekly:weekday==='Thursday',memorialsFound:notices.length,familyReminders:seven.length,preparedMessages:messages.length,sendingEnabled:enabled}));
 if(!enabled){console.log('DRY RUN: no emails sent.');process.exit(0)}
-const apiKey=process.env.RESEND_API_KEY,from=process.env.CTI_EMAIL_FROM;
+const apiKey=process.env.RESEND_API_KEY,from='meldathos@ctipeabody.org';
 if(!apiKey||!from||!email(from))throw Error('Email enabled but RESEND_API_KEY or CTI_EMAIL_FROM is missing');
 function send(message){return new Promise((resolve,reject)=>{
  const body=JSON.stringify({from,to:message.to,subject:message.subject,html:message.html});
