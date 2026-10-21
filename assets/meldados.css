@@ -107,3 +107,25 @@
 
 /* Center the Hebrew month name lower within the brass selector plate. */
 .month-overlay span{transform:translateY(18%);}
+
+/* Memorial reading layout: compact floated observance, unrestricted flowing biography. */
+.memorial-detail .detail-layout{display:flow-root;min-height:0}
+.memorial-detail .detail-service-box{float:right;clear:right;width:clamp(205px,27%,290px);box-sizing:border-box;margin:0 0 18px 24px;padding:14px 16px;background:#faf6ef;border:1px solid #d9c7a9;border-radius:7px;font-size:.85rem;line-height:1.42}
+.memorial-detail .detail-service-box h3{font:normal 1.18rem Georgia,serif;margin:0 0 9px}
+.memorial-detail .detail-service-box h4{font:600 .91rem Georgia,serif;margin:13px 0 3px}
+.memorial-detail .detail-service-box p{font-size:.85rem;line-height:1.45;margin:5px 0}
+.memorial-detail .detail-service-box .observance-date{font:600 1.02rem Georgia,serif}
+.memorial-detail .detail-top-row{display:flex;align-items:flex-start;gap:16px;margin:0 0 18px;max-width:calc(100% - 320px)}
+.memorial-detail .detail-top-row .detail-plaque,.memorial-detail .detail-top-row .detail-portrait{box-sizing:border-box;width:min(100%,190px);aspect-ratio:1/1;flex:1 1 0;min-width:0;min-height:0;margin:0;display:flex;align-items:center;justify-content:center}
+.memorial-detail .detail-top-row .detail-plaque{flex-direction:column;padding:12px;gap:8px;overflow-wrap:anywhere}
+.memorial-detail .detail-top-row .detail-portrait{border:1px solid #d9c7a9;border-radius:4px;background:#f5f0e8;overflow:hidden;text-align:center;color:#756e65;font-size:.8rem}
+.memorial-detail .detail-top-row .detail-portrait img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
+.memorial-detail .detail-biography{display:block;min-width:0;max-width:none;overflow:visible}
+.memorial-detail .detail-biography h3{font:normal 1.55rem Georgia,serif;margin:0 0 12px}
+.memorial-detail .detail-biography p{line-height:1.65;white-space:pre-line}
+.memorial-detail .detail-layout::after{content:"";display:block;clear:both}
+@media(max-width:700px){.memorial-detail .detail-service-box{float:none;width:100%;margin:0 0 18px}.memorial-detail .detail-top-row{max-width:100%;gap:12px}.memorial-detail .detail-top-row .detail-plaque,.memorial-detail .detail-top-row .detail-portrait{max-width:190px}.memorial-detail .detail-biography{width:100%}}
+/* The arrows are the alignment reference: month text shares their centerline. */
+.month-overlay{align-items:center}
+.month-overlay span{position:static;top:auto;transform:none;align-self:center;display:flex;align-items:center;justify-content:center;height:100%;line-height:1;padding:0;margin:0}
+.month-overlay button{align-self:center;display:flex;align-items:center;justify-content:center;height:100%;line-height:1}
