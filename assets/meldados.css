@@ -104,3 +104,6 @@
 .detail-service-box h4{margin:22px 0 5px;font:600 1.1rem Georgia,serif}
 .detail-service-box .observance-date{font:600 1.4rem Georgia,serif;color:#684318}
 @media(max-width:700px){.detail-layout{grid-template-columns:1fr}.detail-biography-box,.detail-service-box{padding:16px}.plaque-slot button{font-size:clamp(3px,.75vw,6px)}}
+
+/* Center the Hebrew month name lower within the brass selector plate. */
+.month-overlay span{transform:translateY(18%);}
