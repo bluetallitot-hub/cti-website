@@ -1,4 +1,4 @@
-/* CTI Meldados email reminders. Private recipients supplied only via Actions secrets. */
+/* CTI Meldathos email reminders. Private recipients supplied only via Actions secrets. */
 'use strict';
 const fs=require('node:fs');
 const https=require('node:https');
@@ -32,7 +32,7 @@ const messages=[];
 const seven=notices.filter(x=>x.days===7);
 for(const n of seven){
  const to=unique(Array.isArray(families[n.id])?families[n.id]:[]);
- if(to.length)messages.push({to,subject:'CTI Meldado reminder — '+n.name,html:'<p>This is a reminder that the Meldado for <strong>'+safe(n.name)+'</strong> falls on '+safe(fmt(new Date(n.date+'T12:00:00Z')))+'.</p><p>The memorial candle is traditionally lit the preceding evening. Please check the <a href="https://bluetallitot-hub.github.io/cti-website/services.html">CTI service calendar</a> for the upcoming Kaddish service.</p><p>Congregation Tifereth Israel</p>'});
+ if(to.length)messages.push({to,subject:'CTI Meldatho reminder — '+n.name,html:'<p>This is a reminder that the Meldatho for <strong>'+safe(n.name)+'</strong> falls on '+safe(fmt(new Date(n.date+'T12:00:00Z')))+'.</p><p>The memorial candle is traditionally lit the preceding evening. Please check the <a href="https://bluetallitot-hub.github.io/cti-website/services.html">CTI service calendar</a> for the upcoming Kaddish service.</p><p>Congregation Tifereth Israel</p>'});
 }
 // Weekly Thursday digest of memorial anniversaries over the coming Friday–Thursday.
 const weekday=new Intl.DateTimeFormat('en-US',{weekday:'long',timeZone:'America/New_York'}).format(today);
@@ -41,7 +41,7 @@ if(weekday==='Thursday'){
  if(weekly.length&&Array.isArray(congregation)){
   const lines=weekly.map(n=>'<li>'+safe(n.name)+' — '+safe(fmt(new Date(n.date+'T12:00:00Z')))+'</li>').join('');
   // One recipient per message: no disclosure of private list addresses.
-  for(const recipient of unique(congregation))messages.push({to:[recipient],subject:'CTI weekly Meldados',html:'<p>We remember the following loved ones this coming week:</p><ul>'+lines+'</ul><p><a href="https://bluetallitot-hub.github.io/cti-website/services.html">View CTI service schedule</a></p><p>Congregation Tifereth Israel</p>'});
+  for(const recipient of unique(congregation))messages.push({to:[recipient],subject:'CTI weekly Meldathos',html:'<p>We remember the following loved ones this coming week:</p><ul>'+lines+'</ul><p><a href="https://bluetallitot-hub.github.io/cti-website/services.html">View CTI service schedule</a></p><p>Congregation Tifereth Israel</p>'});
  }
 }
 const enabled=process.env.CTI_EMAIL_ENABLED==='true';
