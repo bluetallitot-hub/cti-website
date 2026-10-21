@@ -20,7 +20,7 @@
     if(!next){date.textContent='Upcoming Services';title.textContent='New dates to be announced';description.textContent='Check the full service schedule for updates.';return;}
     date.textContent=dayFormat.format(new Date(next.date+'T12:00:00Z'));
     title.textContent=(next.description||'Monthly Shabbat Service')+' · '+next.time;
-    description.textContent='Our next scheduled service is '+date.textContent+' at '+next.time+(next.location==='Zoom only'?' (Zoom only)':next.location==='Hybrid'?' (Hybrid)':'')+'. See the full service schedule for upcoming dates.';
+    description.textContent=next.location==='Zoom only'?'Joining us online? We would be happy to send you the Zoom link.':'If you can’t make it in person, we would be happy to send you a Zoom link.';
   }).catch(()=>{date.textContent='Upcoming Services';title.textContent='See the current service schedule';description.textContent='View scheduled dates and locations on our Services page.';});
 })();
 </script><script>
