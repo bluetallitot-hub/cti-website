@@ -181,3 +181,7 @@
  #memorial-detail .detail-top-row>.detail-service-box h4{font-size:1.05rem}
  #memorial-detail .detail-top-row>.detail-service-box .observance-date{font-size:1.12rem}
 }
+
+/* Memorial contribution action in Upcoming Meldado square */
+#memorial-detail .detail-service-box .memorial-update-button{display:block;align-self:stretch;text-align:center;margin:10px 0 0;padding:11px 12px;border-radius:7px;background:#243f4d;color:#fff!important;font-weight:700;font-size:clamp(.75rem,1vw,1rem);line-height:1.25;text-decoration:none;box-shadow:0 2px 5px #0002}
+#memorial-detail .detail-service-box .memorial-update-button:hover,#memorial-detail .detail-service-box .memorial-update-button:focus-visible{background:#365d70;outline-offset:3px}
