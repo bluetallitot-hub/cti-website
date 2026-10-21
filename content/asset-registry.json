@@ -1852,6 +1852,21 @@
       "sha256": "53cfcd21f51c1f58819c2e8c1f82b39fe2e897f0967f341bdb487cda6509f8b7",
       "bytes": 1912449,
       "status": "preserved"
+    },
+    {
+      "id": "AST-0063",
+      "collection": "AST",
+      "title": "Fixed",
+      "path": "assets/new/fixed.png",
+      "original_filename": "fixed.png",
+      "source_reference": null,
+      "source_drive_id": null,
+      "legacy_paths": [],
+      "roles": [],
+      "notes": "Discovered during Phase 3 registry reconciliation; provenance not independently reviewed.",
+      "sha256": "271680a52f31b898eafe7b3e6dd52fd9dd2caf80da3fe7d267fb6fec13d1edda",
+      "bytes": 1854634,
+      "status": "preserved"
     }
   ]
 }
