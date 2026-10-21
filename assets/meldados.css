@@ -185,3 +185,9 @@
 /* Memorial contribution action in Upcoming Meldado square */
 #memorial-detail .detail-service-box .memorial-update-button{display:block;align-self:stretch;text-align:center;margin:10px 0 0;padding:11px 12px;border-radius:7px;background:#243f4d;color:#fff!important;font-weight:700;font-size:clamp(.75rem,1vw,1rem);line-height:1.25;text-decoration:none;box-shadow:0 2px 5px #0002}
 #memorial-detail .detail-service-box .memorial-update-button:hover,#memorial-detail .detail-service-box .memorial-update-button:focus-visible{background:#365d70;outline-offset:3px}
+
+/* Keep the decorative checkerboard outside the wooden board from rendering. */
+.board-art>img{clip-path:polygon(0% 22%,4% 15%,7% 12%,10% 17%,15% 16%,21% 10%,27% 10%,32% 12%,37% 10%,42% 4%,46% 3%,45% 0%,55% 0%,54% 3%,58% 4%,63% 10%,68% 12%,73% 10%,79% 10%,85% 16%,90% 17%,93% 12%,96% 15%,100% 22%,100% 100%,0% 100%)}
+/* Center the Hebrew month within the bottom brass plate, not above it. */
+.board-art .month-overlay{top:81.4%;height:4.2%;align-items:center}
+.board-art .month-overlay span{display:flex;align-items:center;justify-content:center;height:100%;line-height:1}
