@@ -2,17 +2,72 @@
 (function () {
   const list = document.getElementById('service-list');
   const next = document.getElementById('next-service');
-  const format = new Intl.DateTimeFormat('en-US', {weekday:'long', month:'long', day:'numeric', year:'numeric', timeZone:'UTC'});
-  fetch('content/services.json', {cache:'no-cache'}).then(r => {if(!r.ok) throw new Error('Schedule unavailable');return r.json()}).then(data => {
-    const services = data.services.filter(s => /^\d{4}-\d{2}-\d{2}$/.test(s.date)).sort((a,b) => a.date.localeCompare(b.date));
-    if(!services.length){list.textContent='No services are currently scheduled.';next.textContent='Next service: Check back for upcoming dates.';return;}
-    const todayKey = new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-    const label = s => format.format(new Date(s.date+'T12:00:00Z'))+' · '+s.time+(s.location === 'Zoom only' ? ' (Zoom only)' : s.location === 'Hybrid' ? ' (Hybrid)' : '');
-    const future=services.filter(s => s.date >= todayKey);
-    list.replaceChildren(...future.map(s => {const p=document.createElement('p');const strong=document.createElement('strong');strong.textContent=label(s);p.appendChild(strong);return p}));
-    if(!future.length) list.textContent='No upcoming services are currently scheduled.';
-    const upcoming=future[0];
-    next.textContent=upcoming ? 'Next service: '+format.format(new Date(upcoming.date+'T12:00:00Z'))+' at '+upcoming.time+' — '+(upcoming.description||'Monthly Shabbat Service')+(upcoming.location==='Zoom only'?' (Zoom only)':upcoming.location==='Hybrid'?' (Hybrid)':'') : 'Next service: Check back for upcoming dates.';
-  }).catch(err => console.warn('Showing published schedule fallback:',err));
+  const eastern = new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'});
+  const gregorian = new Intl.DateTimeFormat('en-US', {weekday:'long',month:'long',day:'numeric',year:'numeric',timeZone:'UTC'});
+  const hebrew = new Intl.DateTimeFormat('en-u-ca-hebrew', {month:'long',day:'numeric',year:'numeric',timeZone:'UTC'});
+  const dayMs = 86400000;
+  const key = date => date.toISOString().slice(0,10);
+  const dateAt = s => new Date(s+'T12:00:00Z');
+  const shift = (date,days) => new Date(date.getTime()+days*dayMs);
+  const hebrewParts = date => {
+    const parts = hebrew.formatToParts(date);
+    return {day:Number(parts.find(p=>p.type==='day').value),month:parts.find(p=>p.type==='month').value,year:Number(parts.find(p=>p.type==='year').value)};
+  };
+  const label = s => gregorian.format(dateAt(s.date))+' · '+(s.time||'Time to be confirmed')+(s.location==='Zoom only'?' (Zoom only)':s.location==='Hybrid'?' (Hybrid)':'');
+  function generatedServices(existing) {
+    const results = existing.slice();
+    const existingDates = new Set(existing.map(s=>s.date));
+    const lastPublished = existing.length ? existing[existing.length-1].date : '';
+    const today = dateAt(eastern.format(new Date()));
+    const end = shift(today, 760);
+    const start = shift(today, -35);
+    let lastMonth = '';
+    for(let d=start;d<=end;d=shift(d,1)) {
+      const h=hebrewParts(d);
+      const monthKey=h.year+'-'+h.month;
+      if(h.day===1 && monthKey!==lastMonth) {
+        lastMonth=monthKey;
+        // First Shabbat of the Hebrew month: Friday immediately before it.
+        const daysToSaturday=(6-d.getUTCDay()+7)%7;
+        const friday=shift(d,daysToSaturday-1);
+        const fridayKey=key(friday);
+        if(fridayKey>lastPublished && !existingDates.has(fridayKey)) {
+          results.push({date:fridayKey,time:'7:30 PM',location:'In person',description:'Monthly Shabbat Service',generated:true});
+        }
+      }
+      // Holidays begin at sunset the preceding civil day.
+      const holiday=[];
+      if(h.month==='Tishri' && h.day===1) {
+        holiday.push({date:key(shift(d,-1)),description:'Rosh Hashanah — First Night (Evening)'});
+        holiday.push({date:key(d),description:'Rosh Hashanah — First Day (Morning)'});
+      }
+      if(h.month==='Tishri' && h.day===2) holiday.push({date:key(d),description:'Rosh Hashanah — Second Day (Morning)'});
+      if(h.month==='Tishri' && h.day===10) {
+        holiday.push({date:key(shift(d,-1)),description:'Yom Kippur — Kol Nidre (Evening)'});
+        holiday.push({date:key(d),description:'Yom Kippur — Morning'});
+      }
+      for(const service of holiday) {
+        if(service.date<key(today)) continue;
+        // A manual entry with the same holiday description and date takes precedence.
+        if(existing.some(s=>s.date===service.date && s.description===service.description)) continue;
+        results.push({...service,time:'',location:'To be confirmed',generated:true});
+      }
+    }
+    return results.sort((a,b)=>a.date.localeCompare(b.date) || a.description.localeCompare(b.description));
+  }
+  fetch('content/services.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Schedule unavailable');return r.json()}).then(data=>{
+    const existing=(data.services||[]).filter(s=>/^\d{4}-\d{2}-\d{2}$/.test(s.date)).sort((a,b)=>a.date.localeCompare(b.date));
+    const todayKey=eastern.format(new Date());
+    const upcoming=generatedServices(existing).filter(s=>s.date>=todayKey);
+    if(!upcoming.length){list.textContent='No upcoming services are currently scheduled.';next.textContent='Next service: Check back for upcoming dates.';return;}
+    list.replaceChildren(...upcoming.slice(0,32).map(s=>{
+      const p=document.createElement('p'),strong=document.createElement('strong');
+      strong.textContent=label(s);p.append(strong);
+      if(s.description && s.description!=='Monthly Shabbat Service') p.append(document.createTextNode(' — '+s.description));
+      return p;
+    }));
+    const s=upcoming[0];
+    next.textContent='Next service: '+gregorian.format(dateAt(s.date))+(s.time?' at '+s.time:' — time to be confirmed')+' — '+(s.description||'Monthly Shabbat Service')+(s.location==='Zoom only'?' (Zoom only)':s.location==='Hybrid'?' (Hybrid)':'');
+  }).catch(err=>{console.warn('Service schedule unavailable:',err);list.textContent='Please contact CTI for the current service schedule.';next.textContent='Service schedule temporarily unavailable.'});
 })();
 </script></body></html>
