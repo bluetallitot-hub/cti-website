@@ -1,1 +1,0 @@
-CTI sanctuary tour — interim photographic prototype. Place this folder at the website root and link from about.html to sanctuary-tour/index.html (rename folder to sanctuary-tour). The rear image is an interim tripod-retouched photo. Hotspots link to ../torah.html, ../meldados.html and ../resources.html. This is NOT a true spherical 360 tour. Replace photos and viewer later.
