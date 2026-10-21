@@ -34,23 +34,24 @@ function selectRecord(r){
  document.querySelectorAll('.plaque-slot button').forEach(b=>{const chosen=b.dataset.recordId===String(r.id);b.classList.toggle('is-selected',chosen);b.setAttribute('aria-pressed',String(chosen))});
  const area=$('memorial-detail');if(!area)return;area.hidden=false;area.replaceChildren();
  const heading=txt('h2','In Loving Memory'),layout=txt('div','', 'detail-layout');
- const left=txt('div','', 'detail-biography-box'),brass=txt('div','', 'detail-plaque');
- brass.append(txt('strong',r.englishName));if(r.hebrewName)brass.append(txt('span',r.hebrewName));brass.append(txt('small',r.hebrewDay+' '+r.hebrewMonth));left.append(brass);
- if(r.photo){const portrait=txt('div','', 'detail-portrait');const im=document.createElement('img');im.src=r.photo;im.alt='Portrait of '+r.englishName;portrait.append(im);left.append(portrait)}
+ const top=txt('div','', 'detail-top-row'),brass=txt('div','', 'detail-plaque');
+ brass.append(txt('strong',r.englishName));if(r.hebrewName)brass.append(txt('span',r.hebrewName));brass.append(txt('small',r.hebrewDay+' '+r.hebrewMonth));top.append(brass);
+ if(r.photo){const portrait=txt('div','', 'detail-portrait');const im=document.createElement('img');im.src=r.photo;im.alt='Portrait of '+r.englishName;portrait.append(im);top.append(portrait)}
+ if(!r.photo){const portrait=txt('div','', 'detail-portrait detail-portrait-empty');portrait.append(txt('span','Photograph may be added'));top.append(portrait)}
  const bio=txt('div','', 'detail-biography');bio.append(txt('h3','Biography'));
  if(r.biographyTitle&&r.biographyTitle!==r.englishName)bio.append(txt('h4',r.biographyTitle));
  if(r.hebrewName)bio.append(txt('p',r.hebrewName));
  bio.append(txt('p','Hebrew memorial date: '+r.hebrewDay+' '+r.hebrewMonth));
  if(r.dateOfDeath)bio.append(txt('p','Date of death: '+r.dateOfDeath));
  if(r.rememberedBy)bio.append(txt('p','Remembered by: '+r.rememberedBy));
- bio.append(txt('p',r.biography||'Biography to be added after verification.'));left.append(bio);
+ bio.append(txt('p',r.biography||'Biography to be added after verification.'));
  const right=txt('div','', 'detail-service-box'),dates=observance(r);
  right.append(txt('h3','Upcoming Meldado'));
  if(dates){right.append(txt('p',englishDate(dates.anniversary),'observance-date'),txt('h4','Memorial Candle'),txt('p','Please light a memorial candle on the evening of '+englishDate(dates.evening)+'.'),txt('h4','Congregational Kaddish'));
  if(dates.service){const d=new Date(dates.service.date+'T12:00:00');right.append(txt('p','The congregation will remember your loved one and recite Kaddish at our scheduled service on '+englishDate(d)+'.'))}
  else right.append(txt('p','Please contact Congregation Tifereth Israel for information about the memorial Kaddish service.'))}
  else right.append(txt('p','Please contact the congregation for the upcoming memorial anniversary date.'));
- layout.append(left,right);area.append(heading,layout);area.scrollIntoView({behavior:'smooth',block:'start'});
+ layout.append(right,top,bio);area.append(heading,layout);area.scrollIntoView({behavior:'smooth',block:'start'});
 }
 function render(){const m=months[selected];$('month-label').textContent=m;history.replaceState(null,'','?month='+encodeURIComponent(m));const list=monthRecords();const grid=$('plaque-grid');grid.replaceChildren();const litDates=meldadoWeekDates();
 const columns=Array.from({length:8},()=>[]);
