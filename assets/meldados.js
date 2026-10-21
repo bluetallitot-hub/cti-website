@@ -35,7 +35,7 @@ function selectRecord(r){
  const area=$('memorial-detail');if(!area)return;area.hidden=false;area.replaceChildren();
  const heading=txt('h2','In Loving Memory'),layout=txt('div','', 'detail-layout');
  const top=txt('div','', 'detail-top-row'),brass=txt('div','', 'detail-plaque');
- brass.append(txt('strong',r.englishName));if(r.hebrewName&&r.hebrewName.trim())brass.append(txt('span',r.hebrewName,'plaque-hebrew-name'));if(r.dateOfBirth&&String(r.dateOfBirth).trim())brass.append(txt('small','Born: '+r.dateOfBirth,'plaque-birth-date'));brass.append(txt('small','Meldado: '+r.hebrewDay+' '+r.hebrewMonth,'plaque-memorial-date'));top.append(brass);
+ brass.append(txt('strong',r.englishName));if(r.hebrewName&&r.hebrewName.trim())brass.append(txt('span',r.hebrewName,'plaque-hebrew-name'));if(r.dateOfBirth&&String(r.dateOfBirth).trim())brass.append(txt('small','Born: '+r.dateOfBirth,'plaque-birth-date'));brass.append(txt('small',r.hebrewDay+' '+r.hebrewMonth,'plaque-memorial-date'));top.append(brass);
  if(r.photo){const portrait=txt('div','', 'detail-portrait');const im=document.createElement('img');im.src=r.photo;im.alt='Portrait of '+r.englishName;portrait.append(im);top.append(portrait)}
  if(!r.photo){const portrait=txt('div','', 'detail-portrait detail-portrait-empty');portrait.append(txt('span','Photograph may be added'));top.append(portrait)}
  const bio=txt('div','', 'detail-biography');bio.append(txt('h3','Biography'));
