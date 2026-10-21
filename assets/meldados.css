@@ -211,3 +211,7 @@
 
 /* Actual plate is at ~80–85% of the image height, not 92%. */
 .board-art .month-overlay{top:79.9%;height:4.8%;left:40.2%;width:19.6%;grid-template-columns:19% minmax(0,1fr) 19%}
+
+/* Final month plate alignment: preserve arrow hit areas, center month text lower inside brass. */
+.board-art .month-overlay span{transform:translateY(55%)!important}
+.board-art .month-overlay button:hover,.board-art .month-overlay button:active{background:transparent!important}
