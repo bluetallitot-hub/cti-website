@@ -10,7 +10,7 @@ const b64=bytes=>btoa(String.fromCharCode(...bytes)).replace(/=/g,'').replace(/\
 const un64=s=>Uint8Array.from(atob(s.replace(/-/g,'+').replace(/_/g,'/')+'='.repeat((4-s.length%4)%4)),c=>c.charCodeAt(0));
 const eq=(a,b)=>a.length===b.length&&a.every((v,i)=>v===b[i]);
 const json=(obj,status=200,headers={})=>new Response(JSON.stringify(obj),{status,headers:{'content-type':'application/json; charset=utf-8','cache-control':'no-store',...headers}});
-const hmac=async(secret,msg)=>{const key=await crypto.subtle.importKey('raw',enc.encode(secret),'HMAC',{hash:'SHA-256'},false,['sign']);return new Uint8Array(await crypto.subtle.sign('HMAC',key,enc.encode(msg)))};
+const hmac=async(secret,msg)=>{const key=await crypto.subtle.importKey('raw',enc.encode(secret),{name:'HMAC',hash:'SHA-256'},false,['sign']);return new Uint8Array(await crypto.subtle.sign('HMAC',key,enc.encode(msg)))};
 async function passwordCheck(input,secret){if(!secret)return false;const digest=await hmac(secret,'CTI password check');const candidate=await hmac(input,'CTI password check');return eq(digest,candidate)}
 async function issue(role,secret){const payload=b64(enc.encode(JSON.stringify({role,exp:Date.now()+8*3600e3,nonce:crypto.randomUUID()})));return payload+'.'+b64(await hmac(secret,payload))}
 async function verify(req,env){const token=(req.headers.get('authorization')||'').replace(/^Bearer\s+/i,'');const [p,s]=token.split('.');if(!p||!s||!env.SESSION_SECRET)return null;try{if(!eq(un64(s),await hmac(env.SESSION_SECRET,p)))return null;const data=JSON.parse(new TextDecoder().decode(un64(p)));return data.exp>Date.now()&&['admin','meldados'].includes(data.role)?data.role:null}catch{return null}}
