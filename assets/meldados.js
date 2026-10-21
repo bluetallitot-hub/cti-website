@@ -51,7 +51,7 @@ function selectRecord(r){
  if(dates.service){const d=new Date(dates.service.date+'T12:00:00');right.append(txt('p','The congregation will remember your loved one and recite Kaddish at our scheduled service on '+englishDate(d)+'.'))}
  else right.append(txt('p','Please contact Congregation Tifereth Israel for information about the memorial Kaddish service.'))}
  else right.append(txt('p','Please contact the congregation for the upcoming memorial anniversary date.'));
- top.append(right);layout.append(top,bio);const edit=document.createElement('a');edit.href='admin/meldados-editor.html?id='+encodeURIComponent(r.id);edit.textContent='Contribute or correct memorial information';edit.className='memorial-edit-link';area.append(heading,layout,edit);area.scrollIntoView({behavior:'smooth',block:'start'});
+ const edit=document.createElement('a');edit.href='admin/meldados-editor.html?id='+encodeURIComponent(r.id);edit.textContent='Update the information';edit.className='memorial-update-button';edit.setAttribute('aria-label','Update information for '+r.englishName+' (subject to administrator approval)');right.append(edit);top.append(right);layout.append(top,bio);area.append(heading,layout);area.scrollIntoView({behavior:'smooth',block:'start'});
 }
 function render(){const m=months[selected];$('month-label').textContent=m;history.replaceState(null,'','?month='+encodeURIComponent(m));const list=monthRecords();const grid=$('plaque-grid');grid.replaceChildren();const litDates=meldadoWeekDates();
 const columns=Array.from({length:8},()=>[]);
