@@ -215,19 +215,3 @@
 /* Final month plate alignment: preserve arrow hit areas, center month text lower inside brass. */
 .board-art .month-overlay span{transform:translateY(55%)!important}
 .board-art .month-overlay button:hover,.board-art .month-overlay button:active{background:transparent!important}
-
-/* Larger invisible month-arrow targets; do not alter the approved board artwork. */
-.board-art .month-overlay{overflow:visible}
-.board-art .month-overlay button{position:relative!important;min-width:44px;min-height:44px;justify-self:center;align-self:center;touch-action:manipulation}
-.board-art .month-overlay button:focus-visible{outline:2px solid #302012;outline-offset:2px;border-radius:4px}
-@media(max-width:600px){.board-art .month-overlay button{min-width:40px;min-height:40px}}
-
-/* The approved board PNG contains blank space below its wooden base. Pull the instructions up without altering the image or overlays. */
-.board-stage{margin-bottom:clamp(-155px,-12vw,-32px)}
-.board-instructions{position:relative;margin-top:0}
-
-/* Reliable navigation: hit targets extend around the visible arrows and sit above all board overlays. */
-.board-art .month-overlay{z-index:100;pointer-events:none;overflow:visible}
-.board-art .month-overlay button{pointer-events:auto!important;position:relative!important;z-index:101!important;min-width:52px!important;min-height:52px!important;cursor:pointer;touch-action:manipulation}
-.board-art .month-overlay span{pointer-events:none}
-@media(max-width:700px){.board-art .month-overlay button{min-width:44px!important;min-height:44px!important}}
