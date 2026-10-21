@@ -51,7 +51,7 @@ function selectRecord(r){
  if(dates.service){const d=new Date(dates.service.date+'T12:00:00');right.append(txt('p','The congregation will remember your loved one and recite Kaddish at our scheduled service on '+englishDate(d)+'.'))}
  else right.append(txt('p','Please contact Congregation Tifereth Israel for information about the memorial Kaddish service.'))}
  else right.append(txt('p','Please contact the congregation for the upcoming memorial anniversary date.'));
- layout.append(right,top,bio);area.append(heading,layout);area.scrollIntoView({behavior:'smooth',block:'start'});
+ top.append(right);layout.append(top,bio);area.append(heading,layout);area.scrollIntoView({behavior:'smooth',block:'start'});
 }
 function render(){const m=months[selected];$('month-label').textContent=m;history.replaceState(null,'','?month='+encodeURIComponent(m));const list=monthRecords();const grid=$('plaque-grid');grid.replaceChildren();const litDates=meldadoWeekDates();
 const columns=Array.from({length:8},()=>[]);
