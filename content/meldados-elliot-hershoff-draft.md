@@ -12,4 +12,4 @@ Status: **UNLINKED STAGING RECORD — biography sourced; Hebrew name, remembranc
 
 **Biographical facts from the obituary:** Born in Boston, son of Abraham and Bessie (Sochin) Hershoff. Married Doris (Yonis) Hershoff for 66 years. President of CTI for 18 years. Army National Guard, Jewish War Veterans, Knights of Pythias, Mount Tabor Lodge, Friends of the Senior Center in Peabody. Father of Randy Hershoff and Ronda Middleton; obituary also lists grandchildren and great-grandchildren.
 
-The birth year is not asserted because the obituary only gives age 89. This record is for testing the unlinked Meldados board and memorial profile, not a public announcement. Do not invent a Hebrew name, portrait or remembrance dedication.
+The birth year is not asserted because the obituary only gives age 89. This record is for testing the unlinked Meldathos board and memorial profile, not a public announcement. Do not invent a Hebrew name, portrait or remembrance dedication.
