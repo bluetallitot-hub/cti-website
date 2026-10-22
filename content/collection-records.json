@@ -145,7 +145,7 @@
     {
       "id": "CTI-003",
       "collection": "gallery",
-      "status": "active",
+      "status": "inactive",
       "title": "Joseph Gibely in the CTI sanctuary, 1976.",
       "caption": "Joseph Gibely in the CTI sanctuary, 1976.",
       "date": "1976",
@@ -205,7 +205,9 @@
         "status": "existing-caption-pending-source-comparison",
         "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
         "verbatimOriginalCaption": false
-      }
+      },
+      "duplicateOf": "CTI-015",
+      "recordIdentityNote": "Same 1976 Joseph Gibely sanctuary photograph used by CTI-015. Retained as an inactive legacy gallery record for provenance and existing links; do not publish as a separate historical item."
     },
     {
       "id": "CTI-004",
@@ -1070,7 +1072,12 @@
         }
       ],
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "relatedRecords": [
+        "CTI-003"
+      ],
+      "galleryPhotoLegacyRecord": "CTI-003",
+      "photoRelationshipNote": "The enhanced 1976 Joseph Gibely sanctuary photograph was previously published separately as CTI-003. This is the same photograph associated with this October 4, 1976 Peabody Times article; retain one canonical historical record."
     },
     {
       "id": "CTI-016",
