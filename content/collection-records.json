@@ -339,7 +339,7 @@
       "caption": "Menorah lighting at the Peabody Hebrew School, 1958. Regional Jewish history, not identified as CTI.",
       "date": "1958",
       "description": "1958 menorah lighting at the Peabody Hebrew School. Regional Jewish history; affiliation with CTI is not established.",
-      "source": "",
+      "source": "Peabody Hebrew School historical photograph (CTI affiliation unverified)",
       "citation": "",
       "attribution": "",
       "transcript": "",
@@ -670,7 +670,7 @@
       "description": "The Peabody Times feature on Sephardic families' migration from Turkey and the history of Congregation Tifereth Israel, preserved in the Wyner Family Jewish Heritage Center collection.",
       "source": "The Peabody Times",
       "citation": "The Peabody Times, October 4, 1976, p. 3; Wyner Family Jewish Heritage Center, Jewish Community of Peabody Records I-581, Box 1, Folder 15, image 033",
-      "attribution": "",
+      "attribution": "Byline unknown",
       "transcript": "",
       "indexImage": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
       "archiveImage": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
@@ -680,13 +680,19 @@
         "cti-1976-joseph-gibely-photo-enhanced.png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/I-581-01-15-033-web.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-015-THM-1.png",
-      "preservationStatus": "awaiting-original-verification",
+      "preservationStatus": "source-scan-present-provenance-documented",
       "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/archive/originals/I-581-01-15-033-web.jpg",
+          "note": "Existing source scan or program cover; printed caption not yet transcribed"
+        },
         {
           "type": "THM",
           "version": 1,
@@ -705,7 +711,7 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "source-file-verified-caption-not-yet-transcribed"
     },
     {
       "id": "CTI-016",
@@ -721,7 +727,7 @@
       "transcript": "",
       "indexImage": "assets/images/leadership/Warm Vintage Portrait of an Older Gentleman.png",
       "archiveImage": "assets/images/leadership/Warm Vintage Portrait of an Older Gentleman.png",
-      "pdf": null,
+      "pdf": "assets/archive/originals/cti-1979-joseph-gibely-address.pdf",
       "sourcePage": "archives/archive-1979-joseph-gibely-address.html",
       "originalFilenames": [
         "Warm Vintage Portrait of an Older Gentleman.png"
@@ -762,7 +768,7 @@
         "verifiedInDrive": true
       },
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "twelve-page-document-present-individual-page-caption-unverified"
     },
     {
       "id": "CTI-017",
@@ -972,13 +978,19 @@
         "cti-1995-jewish-advocate-headline.jpg"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/I-581-01-15-035-web.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-021-THM-1.png",
-      "preservationStatus": "awaiting-original-verification",
+      "preservationStatus": "source-scan-present-provenance-documented",
       "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/archive/originals/I-581-01-15-035-web.jpg",
+          "note": "Existing source scan or program cover; printed caption not yet transcribed"
+        },
         {
           "type": "THM",
           "version": 1,
@@ -997,7 +1009,7 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "source-file-verified-caption-not-yet-transcribed"
     },
     {
       "id": "CTI-022",
@@ -1013,19 +1025,25 @@
       "transcript": "",
       "indexImage": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
       "archiveImage": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
-      "pdf": null,
+      "pdf": "assets/archive/originals/cti-1997-75th-anniversary-program-web.pdf",
       "sourcePage": "archives/archive-1997-75th-anniversary.html",
       "originalFilenames": [
         "a_clean_minimalist_scanned_photocopied_invitatio.png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-022-THM-1.png",
-      "preservationStatus": "awaiting-original-verification",
+      "preservationStatus": "source-scan-present-provenance-documented",
       "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
+          "note": "Existing source scan or program cover; printed caption not yet transcribed"
+        },
         {
           "type": "THM",
           "version": 1,
@@ -1044,7 +1062,7 @@
       },
       "existingImageCandidate": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "source-file-verified-caption-not-yet-transcribed"
     },
     {
       "id": "CTI-023",
@@ -1066,13 +1084,19 @@
         "CTI-1914-Gibely-Family-Original-Enhanced.png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/I-581-01-15-034-web.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-023-THM-1.png",
-      "preservationStatus": "existing-original-candidate-needs-verification",
+      "preservationStatus": "source-scan-present-provenance-documented",
       "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/archive/originals/I-581-01-15-034-web.jpg",
+          "note": "Existing source scan or program cover; printed caption not yet transcribed"
+        },
         {
           "type": "THM",
           "version": 1,
@@ -1091,7 +1115,7 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "source-file-verified-caption-not-yet-transcribed"
     },
     {
       "id": "CTI-024",
@@ -1231,7 +1255,7 @@
       },
       "existingImageCandidate": "assets/images/archive/CTI-026-2019-jewish-journal-photo.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "locally-preserved-photograph-original-publication-file-unverified"
     },
     {
       "id": "CTI-027",
