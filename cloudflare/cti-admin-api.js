@@ -68,6 +68,45 @@ if(url.pathname==='/newsletter/import-meldados'&&request.method==='POST'){
 }
 const validEventDate=d=>typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&Number(d.slice(0,4))>=2000&&Number.isFinite(Date.parse(d+'T12:00:00Z'))&&new Date(d+'T12:00:00Z').toISOString().slice(0,10)===d;
 const validEventTime=t=>!t||/^(?:0?[1-9]|1[0-2])(?::[0-5]\d)?\s*(?:AM|PM)$/i.test(t);
+if(url.pathname==='/leadership/list'&&request.method==='GET'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const [bios,directory]=await Promise.all([gh(env,'content/leadership-bios.json'),gh(env,'content/biography-directory.json')]);
+ const data=JSON.parse(new TextDecoder().decode(un64(bios.content.replace(/\s/g,''))));
+ const people=JSON.parse(new TextDecoder().decode(un64(directory.content.replace(/\s/g,'')))).people;
+ return respond({leaders:data.leaders.map(x=>({...x,role:people.find(p=>p.name===x.name)?.role||'',photo:people.find(p=>p.name===x.name)?.photo||null}))});
+}
+if(url.pathname==='/leadership/update'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json();
+ if(typeof b.name!=='string'||typeof b.bio!=='string'||typeof b.fullBio!=='string'||b.bio.length>180||b.fullBio.length>12000||!b.bio.trim()||!b.fullBio.trim())return respond({error:'Check biography text and length'},400);
+ const file=await gh(env,'content/leadership-bios.json');
+ const data=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
+ const leader=data.leaders.find(x=>x.name===b.name);
+ if(!leader)return respond({error:'Leader not found'},404);
+ leader.bio=b.bio.trim();leader.fullBio=b.fullBio.trim();
+ await save(env,'content/leadership-bios.json',JSON.stringify(data,null,2)+'\n',file.sha,'Update leadership biography: '+b.name);
+ return respond({ok:true});
+}
+if(url.pathname==='/leadership/photo'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json();
+ if(typeof b.name!=='string'||typeof b.image!=='string'||b.image.length>5000000||!/^iVBORw0KGgo[A-Za-z0-9+/=]*$/.test(b.image))return respond({error:'Select a PNG photograph smaller than 3.5 MB'},400);
+ const directoryFile=await gh(env,'content/biography-directory.json');
+ const directory=JSON.parse(new TextDecoder().decode(un64(directoryFile.content.replace(/\s/g,''))));
+ const person=directory.people.find(x=>x.name===b.name);
+ if(!person||!/^[-a-z0-9]+$/.test(person.id))return respond({error:'Leader not found'},404);
+ const path='assets/images/leadership/'+person.id+'-profile.png';
+ let sha;
+ try{sha=(await gh(env,path)).sha}catch(e){if(e.status!==404)throw e}
+ await gh(env,path,'PUT',{message:'Update leadership photograph: '+b.name,content:b.image,...(sha?{sha}:{}),branch:'main'});
+ const fresh=await gh(env,'content/biography-directory.json');
+ const current=JSON.parse(new TextDecoder().decode(un64(fresh.content.replace(/\s/g,''))));
+ const target=current.people.find(x=>x.name===b.name);
+ if(!target)return respond({error:'Photograph saved, but profile refresh needs attention'},409);
+ target.photo=path;
+ await save(env,'content/biography-directory.json',JSON.stringify(current,null,2)+'\n',fresh.sha,'Refresh leadership photograph: '+b.name);
+ return respond({ok:true});
+}
 if(url.pathname==='/events/list'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const f=await gh(env,'content/events.json');const d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));return respond({events:d.events||[]})}
 if(url.pathname==='/events/add'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
