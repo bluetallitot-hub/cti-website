@@ -220,9 +220,9 @@ if(url.pathname==='/collections/submit'&&request.method==='POST'){
   paths.push(path);
  }
  d.items=d.items||[];
- d.items.push({id,collection:b.collection,status:'unapproved',title:b.title.trim(),date:b.date.trim(),description:b.description.trim(),source:b.source.trim(),citation:b.citation.trim(),attribution:b.attribution.trim(),caption:b.caption.trim(),transcript:b.transcript.trim(),image:paths[0],files:paths,submittedAt:new Date().toISOString()});
+ d.items.push({id,collection:b.collection,status:'active',title:b.title.trim(),date:b.date.trim(),description:b.description.trim(),source:b.source.trim(),citation:b.citation.trim(),attribution:b.attribution.trim(),caption:b.caption.trim(),transcript:b.transcript.trim(),image:paths[0],files:paths,submittedAt:new Date().toISOString()});
  await save(env,collectionPath,JSON.stringify(d,null,2)+'\n',f.sha,'Queue CTI collection submission '+id);
- return respond({ok:true,id,status:'unapproved'});
+ return respond({ok:true,id,status:'active'});
 }
 
 if(url.pathname==='/publish'&&request.method==='POST'){if(role!=='admin')return respond({error:'Administrator access required'},403);const b=await request.json();if(!adminFiles.has(b.path)||typeof b.content!=='string'||b.content.length>2000000||typeof b.expectedSha!=='string')return respond({error:'File or content not allowed'},400);JSON.parse(b.content);const file=await gh(env,b.path);if(file.sha!==b.expectedSha)return respond({error:'File changed since it was opened'},409);await save(env,b.path,b.content,file.sha,'CTI administration: update '+b.path);return respond({ok:true})}
