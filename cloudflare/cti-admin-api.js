@@ -70,15 +70,15 @@ if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();
  if(typeof b.pdf!=='string'||b.pdf.length>10500000||!b.pdf.startsWith('JVBERi0'))return respond({error:'Select a PDF smaller than 7 MB'},400);
- if(!/^\\d{4}-(0[1-9]|1[0-2])$/.test(b.month||''))return respond({error:'Newsletter month not identified'},400);
+ if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(b.month||''))return respond({error:'Newsletter month not identified'},400);
  const date=b.month+'-01',title=new Date(date+'T12:00:00Z').toLocaleString('en-US',{month:'long',year:'numeric',timeZone:'UTC'})+' Newsletter';
  const path='assets/resources/newsletters/'+b.month.slice(0,4)+'/cti-newsletter-'+b.month+'.pdf';
  const index=await gh(env,'content/newsletters.json');
- const data=JSON.parse(new TextDecoder().decode(un64(index.content.replace(/\\s/g,''))));
+ const data=JSON.parse(new TextDecoder().decode(un64(index.content.replace(/\s/g,''))));
  if(data.issues.some(x=>x.date===date))return respond({error:'This month already has a newsletter'},409);
  await gh(env,path,'PUT',{message:'Upload '+title,content:b.pdf,branch:'main'});
  data.issues.unshift({title,date,volume:String(b.volume||'').slice(0,80),description:'CTI congregational newsletter.',url:path});
- await save(env,'content/newsletters.json',JSON.stringify(data,null,2)+'\\n',index.sha,'Publish '+title);
+ await save(env,'content/newsletters.json',JSON.stringify(data,null,2)+'\n',index.sha,'Publish '+title);
  return respond({ok:true,title});
 }
 if(url.pathname==='/publish'&&request.method==='POST'){if(role!=='admin')return respond({error:'Administrator access required'},403);const b=await request.json();if(!adminFiles.has(b.path)||typeof b.content!=='string'||b.content.length>2000000||typeof b.expectedSha!=='string')return respond({error:'File or content not allowed'},400);JSON.parse(b.content);const file=await gh(env,b.path);if(file.sha!==b.expectedSha)return respond({error:'File changed since it was opened'},409);await save(env,b.path,b.content,file.sha,'CTI administration: update '+b.path);return respond({ok:true})}
