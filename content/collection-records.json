@@ -897,7 +897,7 @@
         "cti-1972-golden-anniversary-ticket-retouched.png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/cti-1972-salem-news-golden-anniversary-original.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
@@ -940,7 +940,9 @@
         "status": "no-existing-caption",
         "note": "No existing display caption; source caption not yet transcribed.",
         "verbatimOriginalCaption": false
-      }
+      },
+      "articleHtml": "<p class=\"archive-article-date\"><time>October 3, 1972</time></p><p>PEABODY — In 1911, a small band of Jews came to this area from Turkey.</p><p>These people, who traced their lineage back to pre-Christian Spain, formed the original congregation of Tifereth Israel, on Pierpont St., which celebrates its 50th anniversary this past weekend.</p><p>Special synagogue services included memorial prayers for Mrs. Vickie Freedman, recently deceased president of the synagogue Women's Auxiliary. Also held was installation of officers. Installed were: President, Joseph Gibely II; vice president, Isaac Hasday; secretary, Victor Havian, and treasurer, Jack Yonis.</p><p>A dinner-dance was held Sunday to culminate the weekend festivities.</p><p>Congregants of the Tifereth Israel Synagogue are descended from Spanish (Sephardic) Jews who lived in that country prior to the fall of Jerusalem in 70 B.C. There they flourished and numbered among them physicians, bankers, skilled artisans and the greatest of Jewish scholars. The Spanish Inquisition (about the time of the discovery of America) saw the Jews dispersed throughout western Europe and Palestine.</p><p>The ancestors of the Peabody Congregation traveled to Turkey, where they took their places among the workers of that community.</p><p>The lure of America gripped the Sephardic Jew of Turkey and in 1911 the first of their number, Leon Eskenas and Myer Benater arrived in this area where they were soon joined by their wives Rebecca Eskenas and Regine Benater.</p><p>Shortly thereafter, the Gibely, Eskenazi, Yonis, Hasday, Leon, Havian, Pernitchi, Savy, Fermon and Erera families arrived and from this small group the sephardic synagogue, Congregation Tifereth Israel of Peabody and Salem emerged. (This synagogue is the only sephardic congregation north of Rhode Island.)</p><p>The Sephardic Jews have retained many of the customs acquired during the years their ancestors spent in Spain and the congregants speak a fluent “Ladino” (Spanish) despite the fact that not one of their number has set foot on the Spanish mainland in almost 5 centuries.</p><p>Tifereth Israel has never numbered more than 35 adult male members, although this number has remained constant and active in the 50 years since the congregation's inception. With the exception of the Leon, Erera and Menater families, whose descendants have moved out of the Salem-Peabody area, the children and grand-children of the congregation founders still remain active members of the synagogue.</p><p>Of the original group who arrived here in 1911, only Rebecca Eskenas is alive today. She is living in retirement in Florida.</p><p class=\"meta\"><strong>Transcription status:</strong> AI Transcription · Approved for publication</p>",
+      "articleMigrationSource": "press/press-1972-golden-anniversary.html"
     },
     {
       "id": "CTI-015",
@@ -1197,7 +1199,7 @@
       "source": "Historical newspaper clipping (publication not yet verified)",
       "citation": "",
       "attribution": "",
-      "transcript": "",
+      "transcript": "EDITORIAL NOTE — Draft transcription pending comparison with the original newspaper clipping. Date: June 29, year tentatively inferred as 1986; not printed on supplied clipping. The restored image is an AI reconstruction, not a reliable source for exact lettering.\n\nPEABODY — Sunday, June 29, will be a big day at Congregation Tifereth Israel on Pierpont Street.\n\nIt will be what Joe Gibely II, congregation president, describes as “one of the most important and pleasurable milestones in the 64-year history of the synagogue.”\n\nThe Leo Gibely Study, presented by Rabbi Dov and Barbara Pikelny, will be dedicated and an open house, featuring the newly renovated function room on the first floor, will take place.\n\nEveryone is excited about the day’s events and delighted that “Uncle Leo” is being honored.\n\nFor the past three decades, octogenarian Leo Gibely has acted as spiritual advisor to the congregation. As the synagogue’s patriarch, he sets the religious standards and rules for the congregation, chants a portion of the service in the Sephardic style and maintains the continuity of the community.\n\n“Uncle Leo still conducts worship services with Rabbi and Barbara Pikelny and myself and it’s a pleasure to sit back and listen to him belt out tunes, Sephardic style, during the holidays. If you want to hear chanting like that, you’d have to visit Sephardic congregations in New York, Alabama, or Israel, and we look forward to it year after year. It’s more Turkish or Arabic sounding than what one expects from the conventional worship,” Joe Gibely said.\n\nWithout a doubt, Uncle Leo is the oldest member of the synagogue, which was established in February of 1922 by Jews from Constantinople, (now Istanbul) Turkey. The congregants are descendants of Jews who fled Spain during the Inquisition, 500 years ago. Their language, other than the religious language of Hebrew and the secular language of English, continues to be Ladino, which derives from the pure Castilian Spanish of their ancestors and includes a mixture of Greek, Turkish and now English.\n\n“As a child, ‘Uncle Leo’ Gibely (as he is known to everyone) received private tutoring in the Talmud because his parents were determined that he would never forget his heritage. When he was in Constantinople, he worked on Persian rugs — sewing and cutting. After arriving in the United States in 1916, he attended night school to learn English and met another Sephardic Jew, Esther, whom he married in 1923. They had four children, Joseph, Victor, Aaron and Rose and celebrated their golden wedding anniversary in 1973. Esther died the following year.\n\nGibely worked in the leather industry until his retirement from A.C. Lawrence in 1965; and in 1978, at the age of 77, he had a triple by-pass and valve operation for a very painful heart condition, according to his nephew, Joe, who adds, “Uncle Leo’s number one love, besides his family, is his total dedication to his synagogue.”\n\nJoe Gibely describes the congregation’s patriarch, as, “Truly and without fanfare, a man who best exemplifies that which is good in all of us and today, in this troubled world, more of his type would eradicate a good deal of the problems that beset us. He is God fearing, kind, sincere, honest, hard working, fair, understanding, amiable and above all, an outstanding American and a good Jew. Presentation of the study by Rabbi and Barbara couldn’t have a more deserving recipient.”\n\nIn addition to viewing the Leo Gibely Study, visitors will be able to view the other work recently completed at the synagogue. Two rooms, two closets and three alcoves have been transformed. The lavatories have been relocated; there is a new ceiling, new lights, new floor, new doors, a new and modern kitchen and new paneling.\n\n“All this and more was necessary for the beautiful and larger function room now on the first floor,” said an excited Joe Gibely, who adds, “One has to see it to believe it. It was a cooperative charity, determination and planning by the members of the congregation that brought this about.”",
       "indexImage": "assets/images/archives/cti-1986-leo-gibely-newspaper-restored.png",
       "archiveImage": "assets/images/archives/cti-1986-leo-gibely-newspaper-restored.png",
       "pdf": null,
@@ -1206,7 +1208,7 @@
         "cti-1986-leo-gibely-newspaper-restored.png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
@@ -1264,7 +1266,7 @@
       "source": "CTI historical photograph collection (publication unidentified)",
       "citation": "",
       "attribution": "",
-      "transcript": "",
+      "transcript": "Ladies' Auxiliary officers — archival photograph.\n\nThe original photographed newspaper clipping and a digitally restored black-and-white version are preserved here. The colorized interpretation is displayed separately in the CTI Photo Gallery.\n\nThe original newspaper caption, names, publication, and date have not yet been independently transcribed and verified. Do not treat the restored or colorized images as evidence for those details.",
       "indexImage": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
       "archiveImage": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
       "pdf": null,
@@ -1273,7 +1275,7 @@
         "cti-ladies-auxiliary-officers-restored-bw.png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
@@ -1653,7 +1655,7 @@
         "cti-2012-90th-anniversary-program-cropped.jpg"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/images/anniversaries/cti-2012-shuls-mark-historic-milestones.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
@@ -1696,7 +1698,9 @@
         "status": "no-existing-caption",
         "note": "No existing display caption; source caption not yet transcribed.",
         "verbatimOriginalCaption": false
-      }
+      },
+      "articleHtml": "<h2>Archive notes</h2><p>The Jewish Journal feature marks historic synagogue milestones on the North Shore, including Congregation Tifereth Israel’s 90th anniversary.</p><p>The CTI-relevant portion is preserved on this page with the surviving scan rather than sending readers away from the congregation’s archive.</p><p><em>A complete line-by-line transcription is still being verified.</em></p><h3>CTI 90th Anniversary Program (2012)</h3><p><a href=\"assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg\">View the 2012 anniversary program cover</a></p><p><a href=\"assets/archive/originals/cti-2012-90th-anniversary-program-original.jpg\">View the original, unedited program photograph</a></p>",
+      "articleMigrationSource": "press/press-2012-milestones.html"
     },
     {
       "id": "CTI-025",
