@@ -36,8 +36,12 @@ if(url.pathname==='/announcements/email'&&request.method==='POST'){
  const body=await request.json();
  if(typeof body.announcement!=='string'||!body.announcement.trim()||body.announcement.length>1000)return respond({error:'Enter an announcement before sending email'},400);
  if(!env.RESEND_API_KEY)return respond({error:'Email is not configured yet. The website announcement can still be published.'},503);
- const recipients=['phil.bluerecycling@gmail.com']; // Temporary test-only list. Do not add congregation addresses here.
- const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:'CTI Services <rabbi@ctipeabody.org>',to:recipients,subject:'CTI Service Announcement',text:body.announcement.trim()+'\\n\\nCongregation Tifereth Israel\\nhttps://bluetallitot-hub.github.io/cti-website/services.html'})});
+ const recipients=(env.CTI_ANNOUNCEMENT_RECIPIENTS||'').split(',').map(s=>s.trim()).filter(Boolean);
+ if(!recipients.length)return respond({error:'Test recipient list is not configured'},503);
+ if(recipients.some(s=>!^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)))return respond({error:'Invalid recipient email configuration'},503);
+ const sender=env.CTI_EMAIL_FROM;
+ if(!sender||!/^([^<>]*<)?[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+>?$/.test(sender))return respond({error:'Sender address is not configured'},503);
+ const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:sender,to:recipients,subject:'CTI Service Announcement',text:body.announcement.trim()+'\\n\\nCongregation Tifereth Israel\\nhttps://bluetallitot-hub.github.io/cti-website/services.html'})});
  const result=await response.json();
  if(!response.ok)return respond({error:'Email was not sent: '+(result.message||response.status)},502);
  return respond({ok:true,recipientCount:recipients.length});
