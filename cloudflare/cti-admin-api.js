@@ -57,13 +57,13 @@ if(url.pathname==='/newsletter/import-events'&&request.method==='POST'){
 if(url.pathname==='/newsletter/import-meldados'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();if(!Array.isArray(b.people)||b.people.length>150)return respond({error:'Invalid memorial entries'},400);
- const file=await gh(env,'content/meldados.json'),doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));let added=0,exceptions=[];
+ const file=await gh(env,'content/meldados.json'),doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));let added=0,updated=0,exceptions=[];
  const norm=s=>String(s||'').toLowerCase().replace(/[^a-z]/g,'');
  for(const p of b.people){if(typeof p.name!=='string'||p.name.length>120||!Number.isInteger(p.day)||p.day<1||p.day>30||!months.has(p.month)||typeof p.source!=='string'||p.source.length>150)continue;
- const sameName=doc.people.find(x=>norm(x.englishName)===norm(p.name));if(sameName){if(sameName.hebrewDay!==p.day||sameName.hebrewMonth!==p.month)exceptions.push(p.name+': memorial date differs');continue}
+ const sameName=doc.people.find(x=>norm(x.englishName)===norm(p.name));if(sameName){if(sameName.hebrewDay!==p.day||sameName.hebrewMonth!==p.month){exceptions.push(p.name+': memorial date differs');continue}if(p.rememberedBy&&typeof p.rememberedBy==='string'&&p.rememberedBy.length<=500){if(!sameName.rememberedBy){sameName.rememberedBy=p.rememberedBy;updated++}else if(sameName.rememberedBy.trim()!==p.rememberedBy.trim())exceptions.push(p.name+': Remembered By differs')}continue}
  const match=doc.people.some(x=>x.hebrewDay===p.day&&x.hebrewMonth===p.month&&(norm(x.englishName)===norm(p.name)));if(match)continue;
- doc.people.push({id:'newsletter-'+crypto.randomUUID(),englishName:p.name,hebrewName:'',hebrewDay:p.day,hebrewMonth:p.month,hebrewYearOfDeath:null,dateOfDeath:'',rememberedBy:'',biography:'',photo:'',source:p.source,reviewStatus:'approved',approved:true,notes:'Imported from newsletter; death year not supplied.'});added++}
- if(added)await save(env,'content/meldados.json',JSON.stringify(doc,null,2)+'\\n',file.sha,'Import newsletter memorial records');return respond({ok:true,added,exceptions});
+ doc.people.push({id:'newsletter-'+crypto.randomUUID(),englishName:p.name,hebrewName:'',hebrewDay:p.day,hebrewMonth:p.month,hebrewYearOfDeath:null,dateOfDeath:'',rememberedBy:typeof p.rememberedBy==='string'?p.rememberedBy.slice(0,500):'',biography:'',photo:'',source:p.source,reviewStatus:'approved',approved:true,notes:'Imported from newsletter; death year not supplied.'});added++}
+ if(added||updated)await save(env,'content/meldados.json',JSON.stringify(doc,null,2)+'\\n',file.sha,'Import newsletter memorial records');return respond({ok:true,added,updated,exceptions});
 }
 if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
