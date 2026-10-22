@@ -152,7 +152,9 @@
     },
     {
       "id": "CTI-026",
-      "status": "no-index-image"
+      "status": "generated",
+      "source": "assets/images/archive/CTI-026-2019-jewish-journal-photo.png",
+      "thumbnail": "assets/collections/CTI-026-THM-1.png"
     },
     {
       "id": "CTI-027",

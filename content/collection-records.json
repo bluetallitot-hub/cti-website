@@ -1149,8 +1149,8 @@
       "citation": "August 29, 2019; article by Michael Wittner",
       "attribution": "Michael Wittner",
       "transcript": "",
-      "indexImage": "assets/new/CTI-026-2019-jewish-journal-photo.png",
-      "archiveImage": "assets/new/CTI-026-2019-jewish-journal-photo.png",
+      "indexImage": "assets/images/archive/CTI-026-2019-jewish-journal-photo.png",
+      "archiveImage": "assets/images/archive/CTI-026-2019-jewish-journal-photo.png",
       "pdf": null,
       "sourcePage": "archives/archive-2019-sephardic-traditions.html",
       "originalFilenames": [
@@ -1161,14 +1161,14 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/new/CTI-026-THM-1.png",
+      "thumbnailImage": "assets/collections/CTI-026-THM-1.png",
       "preservationStatus": "local-copy-preserved-original-source-unverified",
       "imageVersions": [
         {
           "type": "THM",
           "version": 1,
-          "path": "assets/new/CTI-026-THM-1.png",
-          "derivedFrom": "assets/new/CTI-026-2019-jewish-journal-photo.png"
+          "path": "assets/collections/CTI-026-THM-1.png",
+          "derivedFrom": "assets/images/archive/CTI-026-2019-jewish-journal-photo.png"
         }
       ],
       "thumbnailSpecification": {
@@ -1179,7 +1179,7 @@
         "background": "appropriate neutral or complementary",
         "retouched": true
       },
-      "existingImageCandidate": "assets/new/CTI-026-2019-jewish-journal-photo.png"
+      "existingImageCandidate": "assets/images/archive/CTI-026-2019-jewish-journal-photo.png"
     },
     {
       "id": "CTI-027",
