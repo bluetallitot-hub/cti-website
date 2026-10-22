@@ -1736,7 +1736,12 @@
           "driveUrl": "https://drive.google.com/file/d/1kVKT7C2FVyUUu6exyT13cXuFjAfW8nco/view?usp=drivesdk",
           "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
         }
-      ]
+      ],
+      "photoAlbum": true,
+      "photoAlbumImage": "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
+      "photoAlbumOriginalImage": "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
+      "photoAlbumCaption": "Morris Gibely and family, 1914",
+      "photoAlbumNote": "Associated historical family photograph from the 2001 article; gallery image opens its preserved photograph, not the newspaper clipping."
     },
     {
       "id": "CTI-024",
