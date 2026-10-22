@@ -32,7 +32,7 @@ function load(){
   published={services:data.services||[],overrides:data.overrides||[],announcement:data.announcement||''};document.getElementById('announcement').value=published.announcement;
   working=CTIServiceCalendar.build(published).map(s=>({...s}));
   cancelled=new Set((published.overrides||[]).filter(o=>o.cancelled).map(o=>o.id));
-  render();status.textContent='Loaded rolling 12-month calendar, including saved overrides.';
+  render();status.textContent='Schedule generated automatically. Any edits will override the automatic schedule.';
  }).catch(e=>{status.textContent='Unable to load calendar: '+e.message});
 }
 document.getElementById('add').onclick=()=>{
