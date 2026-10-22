@@ -169,6 +169,39 @@ if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
  return respond({ok:true,title,reusedExistingPdf});
 }
 
+const masterPath='content/collection-records.json';
+const masterFields={collection:12,status:20,title:180,date:100,caption:1500,description:10000,source:500,citation:3000,attribution:500,transcript:150000,indexImage:500,archiveImage:500,pdf:500};
+if(url.pathname==='/master/list'&&request.method==='GET'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const f=await gh(env,masterPath);return respond(decodeCollection(f));
+}
+if(url.pathname==='/master/save'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json(),f=await gh(env,masterPath),d=decodeCollection(f);
+ const record=(d.items||[]).find(x=>x.id===b.id);
+ if(!record)return respond({error:'Unknown record number'},404);
+ if(typeof b.changes!=='object'||!b.changes)return respond({error:'Missing changes'},400);
+ for(const [key,value] of Object.entries(b.changes)){
+  if(!(key in masterFields)||typeof value!=='string'||value.length>masterFields[key])return respond({error:'Invalid '+key},400);
+  if(key==='collection'&&!['gallery','archive'].includes(value))return respond({error:'Invalid collection'},400);
+  if(key==='status'&&!['active','inactive','unapproved'].includes(value))return respond({error:'Invalid status'},400);
+  if(['indexImage','archiveImage','pdf'].includes(key)&&value&&(!/^(assets\/|https:\/\/)/.test(value)||value.includes('..')))return respond({error:'Invalid file reference'},400);
+  record[key]=value;
+ }
+ await save(env,masterPath,JSON.stringify(d,null,2)+'\\n',f.sha,'Update CTI master record '+b.id);
+ return respond({ok:true,id:b.id});
+}
+if(url.pathname==='/master/create'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json();
+ if(!['gallery','archive'].includes(b.collection))return respond({error:'Invalid collection'},400);
+ const f=await gh(env,masterPath),d=decodeCollection(f),number=d.nextRecordNumber||1;
+ const id='CTI-'+String(number).padStart(3,'0');
+ d.nextRecordNumber=number+1;d.items=d.items||[];
+ d.items.push({id,collection:b.collection,status:'active',title:'New record',date:'',caption:'',description:'',source:'',citation:'',attribution:'',transcript:'',indexImage:'',archiveImage:'',pdf:null,sourcePage:null,originalFilenames:[],files:[]});
+ await save(env,masterPath,JSON.stringify(d,null,2)+'\\n',f.sha,'Create CTI master record '+id);
+ return respond({ok:true,id});
+}
 const collectionPath='content/collection-submissions.json';
 const decodeCollection=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
 if(url.pathname==='/collections/list'&&request.method==='GET'){
