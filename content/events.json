@@ -1,3 +1,12 @@
 {
-  "events": []
+  "events": [
+    {
+      "id": "event-b3c77f30-35f4-4fe1-bd7d-e950a2bd22b1",
+      "title": "CTI Admin Test",
+      "date": "0026-10-22",
+      "time": "5:00 PM",
+      "location": "CTI Social Hall",
+      "description": "This is a test"
+    }
+  ]
 }
