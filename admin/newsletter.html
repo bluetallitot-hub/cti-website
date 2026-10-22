@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Archive Newsletter | CTI Administration</title>
 <style>body{font:17px system-ui,sans-serif;margin:0;background:#f6f7f9;color:#193444}main{max-width:680px;margin:35px auto;padding:20px}.panel{background:#fff;border:1px solid #d9e0e4;border-radius:12px;padding:24px}input,button{font:inherit}input[type=file]{display:block;margin:18px 0;width:100%}button{background:#174a66;color:#fff;border:0;border-radius:7px;padding:13px 20px;cursor:pointer}button:disabled{opacity:.5}a{color:#135c7a}#status{line-height:1.5;font-weight:600}footer{margin-top:32px;padding-top:16px;border-top:1px solid #d9e0e4}</style></head>
-<body><main><h1>Archive Newsletter</h1><p>Choose a newsletter PDF. CTI will read the issue month and year from the first-page masthead, then file the original PDF in the correct archive location.</p><section class="panel"><label for="pdf"><strong>Newsletter PDF</strong></label><input id="pdf" type="file" accept=".pdf,application/pdf"><p id="details" aria-live="polite"></p><button id="upload" type="button" disabled>Upload to Newsletter Archive</button><p id="status" role="status"></p></section><footer><a href="index.html">← Back to Administration</a></footer></main>
+<body><main><h1>Archive Newsletter</h1><p>Choose a newsletter PDF. CTI will read the issue month and year from the first-page masthead, then file the original PDF in the correct archive location.</p><section class="panel"><label for="pdf"><strong>Newsletter PDF</strong></label><input id="pdf" type="file" accept=".pdf,application/pdf"><div id="details" hidden><p><strong>Detected newsletter details</strong> — review or correct before uploading.</p><label>Month <select id="issue-month"></select></label> <label>Year <input id="issue-year" type="number" min="1900" max="2100" style="width:6em"></label><p><label>Volume <input id="issue-volume" type="number" min="1" max="9999" style="width:6em"></label> <label>Number <input id="issue-number" type="number" min="1" max="999" style="width:6em"></label></p><p id="detected"></p></div><button id="upload" type="button" disabled>Upload to Newsletter Archive</button><p id="status" role="status"></p></section><footer><a href="index.html">← Back to Administration</a></footer></main>
 <script src="cti-auth.js?v=1"></script><script type="module">
 import * as pdfjs from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.min.mjs';
 pdfjs.GlobalWorkerOptions.workerSrc='https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.min.mjs';
 const pdf=document.getElementById('pdf'),button=document.getElementById('upload'),details=document.getElementById('details'),status=document.getElementById('status');
-const months='January February March April May June July August September October November December'.split(' ');
+const months='January February March April May June July August September October November December'.split(' ');const monthInput=document.getElementById('issue-month'),yearInput=document.getElementById('issue-year'),volumeInput=document.getElementById('issue-volume'),numberInput=document.getElementById('issue-number'),detected=document.getElementById('detected');months.forEach((m,i)=>{const o=document.createElement('option');o.value=String(i+1).padStart(2,'0');o.textContent=m;monthInput.append(o)});
 let issue=null;
 const datePattern=/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s*,?\s*((?:19|20)\d{2})\b/gi;
 function findIssue(items,pageHeight){
@@ -20,7 +20,7 @@ function findIssue(items,pageHeight){
  return null;
 }
 pdf.onchange=async()=>{
- issue=null;button.disabled=true;details.textContent='';status.textContent='';
+ issue=null;button.disabled=true;details.hidden=true;status.textContent='';
  const file=pdf.files?.[0];if(!file)return;
  if(file.size>7*1024*1024){status.textContent='The PDF exceeds the 7 MB upload limit.';return}
  try{
@@ -29,20 +29,20 @@ pdf.onchange=async()=>{
   const found=findIssue(content.items,page.view[3]);
   if(!found){status.textContent='Could not identify the issue month and year from the first page. Please check the PDF.';return}
   const v=found.text.match(/\bvol(?:ume)?\.?\s*(\d+)\s*(?:[,;:.\-]\s*)?no\.?\s*(\d+)\b/i);
-  issue={month:found.month,volume:v?'Volume '+v[1]+', No. '+v[2]:''};
-  details.textContent='Detected issue: '+found.label+(issue.volume?' — '+issue.volume:'')+'. Confirm before uploading.';
+  issue={month:found.month};monthInput.value=found.month.slice(5);yearInput.value=found.month.slice(0,4);volumeInput.value=v?v[1]:'';numberInput.value=v?v[2]:'';detected.textContent='Detected: '+found.label+' · Volume '+(v?v[1]:'not found')+' · Number '+(v?v[2]:'not found')+'. You can edit any field.';details.hidden=false;
   button.disabled=false;
  }catch(e){status.textContent='Could not read this PDF: '+e.message}
 };
 button.onclick=async()=>{
  if(!issue||!pdf.files?.[0])return;
+ const year=Number(yearInput.value),volume=volumeInput.value.trim(),number=numberInput.value.trim();if(!Number.isInteger(year)||year<1900||year>2100||!monthInput.value){status.textContent='Please enter a valid month and year.';return}if((volume&&!/^\d{1,4}$/.test(volume))||(number&&!/^\d{1,3}$/.test(number))){status.textContent='Please enter valid volume and issue numbers.';return}const correctedMonth=year+'-'+monthInput.value,correctedVolume=volume?'Volume '+volume+(number?', No. '+number:''):(number?'No. '+number:'');
  button.disabled=true;status.textContent='Uploading the original newsletter PDF…';
  try{
   const bytes=new Uint8Array(await pdf.files[0].arrayBuffer());
   let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));
-  const result=await CTIAuth.api('/newsletter/upload',{pdf:btoa(binary),month:issue.month,volume:issue.volume});
+  const result=await CTIAuth.api('/newsletter/upload',{pdf:btoa(binary),month:correctedMonth,volume:correctedVolume});
   status.textContent=result.title+' archived successfully. Website updates may take a few minutes.';
-  issue=null;pdf.value='';details.textContent='';
+  issue=null;pdf.value='';details.hidden=true;
  }catch(e){status.textContent='Upload unsuccessful: '+e.message;button.disabled=false}
 };
 </script></body></html>
