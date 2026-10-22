@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "nextRecordNumber": 28,
   "items": [
     {
@@ -21,7 +21,22 @@
       "originalFilenames": [
         "cti-vintage-synagogue-bat-mitzvah-clipping.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-002",
@@ -42,7 +57,22 @@
       "originalFilenames": [
         "Congregation Renovation in Peabody.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-003",
@@ -63,7 +93,22 @@
       "originalFilenames": [
         "cti-1976-joseph-gibely-photo-enhanced.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-004",
@@ -84,7 +129,22 @@
       "originalFilenames": [
         "cti-1976-service-honorees-restored.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-005",
@@ -105,7 +165,22 @@
       "originalFilenames": [
         "cti-building-8-pierpont-street.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-006",
@@ -126,7 +201,22 @@
       "originalFilenames": [
         "I-581-01-15-024-web.jpg"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-007",
@@ -147,7 +237,22 @@
       "originalFilenames": [
         "cti-2006-kitchen-dedication-photo.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-008",
@@ -168,7 +273,22 @@
       "originalFilenames": [
         "peabody-hebrew-school-menorah-1958.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-009",
@@ -189,7 +309,22 @@
       "originalFilenames": [
         "cti-1994-pikelny-recognition.jpg"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-010",
@@ -210,7 +345,22 @@
       "originalFilenames": [
         "cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-011",
@@ -231,7 +381,22 @@
       "originalFilenames": [
         "cti-early-religious-leaders-original.jpg"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-012",
@@ -252,7 +417,22 @@
       "originalFilenames": [
         "cti-2012-shofar-gift-group-portrait.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-013",
@@ -273,7 +453,22 @@
       "originalFilenames": [
         "cti-ladies-auxiliary-officers-colorized.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-014",
@@ -294,7 +489,22 @@
       "originalFilenames": [
         "cti-1972-golden-anniversary-ticket-retouched.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-015",
@@ -315,7 +525,22 @@
       "originalFilenames": [
         "cti-1976-joseph-gibely-photo-enhanced.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-016",
@@ -336,7 +561,22 @@
       "originalFilenames": [
         "Warm Vintage Portrait of an Older Gentleman.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-017",
@@ -357,7 +597,22 @@
       "originalFilenames": [
         "Congregation Renovation in Peabody.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-018",
@@ -378,7 +633,22 @@
       "originalFilenames": [
         "cti-1986-leo-gibely-newspaper-restored.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-019",
@@ -399,7 +669,22 @@
       "originalFilenames": [
         "cti-ladies-auxiliary-officers-restored-bw.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-020",
@@ -420,7 +705,22 @@
       "originalFilenames": [
         "I-581-01-15-024-web.jpg"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-021",
@@ -441,7 +741,22 @@
       "originalFilenames": [
         "cti-1995-jewish-advocate-headline.jpg"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-022",
@@ -462,7 +777,22 @@
       "originalFilenames": [
         "a_clean_minimalist_scanned_photocopied_invitatio.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-023",
@@ -483,7 +813,22 @@
       "originalFilenames": [
         "CTI-1914-Gibely-Family-Original-Enhanced.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-024",
@@ -504,7 +849,22 @@
       "originalFilenames": [
         "cti-2012-90th-anniversary-program-cropped.jpg"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-025",
@@ -525,7 +885,22 @@
       "originalFilenames": [
         "Warm Portrait of a Smiling Elderly Gentleman.png"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-026",
@@ -544,7 +919,22 @@
       "pdf": null,
       "sourcePage": "archives/archive-2019-sephardic-traditions.html",
       "originalFilenames": [],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     },
     {
       "id": "CTI-027",
@@ -565,7 +955,29 @@
       "originalFilenames": [
         "cti-2022-building-ai-retouched.jpg"
       ],
-      "files": []
+      "files": [],
+      "originalImage": null,
+      "originalImageCaption": null,
+      "originalCaptionCorrections": [],
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "preservationStatus": "awaiting-original-verification",
+      "imageVersions": [],
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true,
+        "background": "appropriate neutral or complementary",
+        "retouched": true
+      }
     }
-  ]
+  ],
+  "assetPolicy": {
+    "original": "Complete unaltered source image including any embedded printed caption, borders and annotations; immutable and never deleted",
+    "originalCaption": "Verbatim source caption, append-only after capture; corrections stored separately",
+    "restored": "Retouched presentation image, versioned",
+    "index": "Retouched attractive 4:3 800x600 thumbnail without added caption or title; letterbox with appropriate background, never distort",
+    "fileNaming": "CTI-001-ORG-1, CTI-001-IMG-1, CTI-001-THM-1, CTI-001-PDF-1; replacement versions use -v2, -v3; never overwrite originals"
+  }
 }
