@@ -188,7 +188,8 @@ if(url.pathname==='/collections/status'&&request.method==='POST'){
  else{
   const path=b.collection==='gallery'?'content/gallery.json':'content/archive-additions.json';
   const existing=decodeCollection(await gh(env,path));
-  const found=(existing.items||[]).some(x=>(b.collection==='gallery'?x.image:x.id)===b.id);
+  const legacyArchive=new Set(['press-1972-golden-anniversary.html','archives/archive-1976-sephardic-jews.html','archives/archive-1979-joseph-gibely-address.html','press-1981-still-growing.html','press-1992-origins.html','archives/archive-1995-ashkenazi-sephardic-traditions.html','archives/archive-1997-75th-anniversary.html','archives/archive-2001-constantinople-to-peabody.html','press-2012-milestones.html','archives/archive-2018-hershoff-letter.html','archives/archive-2019-sephardic-traditions.html','press/press-2022-centennial.html','archive-founders.html','archive-presidents.html']);
+  const found=(existing.items||[]).some(x=>(b.collection==='gallery'?x.image:x.id)===b.id)||(b.collection==='archive'&&legacyArchive.has(b.id));
   if(!found)return respond({error:'Item not found'},404);
   previous=d.visibility[b.collection][b.id]||'active';
  }
