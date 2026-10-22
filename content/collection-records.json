@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "nextRecordNumber": 29,
+  "nextRecordNumber": 38,
   "items": [
     {
       "id": "CTI-001",
@@ -2026,6 +2026,312 @@
       "captionProvenance": {
         "status": "awaiting-original-caption-transcription",
         "note": "Newspaper headline visually confirmed from Drive scan; no article text yet."
+      }
+    },
+    {
+      "id": "CTI-029",
+      "collection": "gallery",
+      "status": "unapproved",
+      "title": "Unidentified reception gathering",
+      "caption": "",
+      "date": "Unknown",
+      "description": "People gathered near a buffet table; identities, occasion and date unconfirmed.",
+      "source": "JHC I-581, Box 1, Folder 15 (Google Drive archival scan)",
+      "citation": "I-581-01-15-001.jpg",
+      "attribution": "",
+      "providedBy": "",
+      "transcript": "",
+      "articleHtml": "",
+      "originalImage": null,
+      "archiveItemImage": null,
+      "thumbnailImage": null,
+      "restoredImage": null,
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "I-581-01-15-001.jpg",
+          "driveFileId": "1c3S9eDobgvLYMqWlWIkHKGRgPn_643wA",
+          "driveUrl": "https://drive.google.com/file/d/1c3S9eDobgvLYMqWlWIkHKGRgPn_643wA/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        }
+      ],
+      "preservationStatus": "source-in-drive-awaiting-review-and-publication",
+      "captionProvenance": {
+        "status": "unapproved-awaiting-admin-identification",
+        "note": "Identification is provisional; original source scan retained in Google Drive."
+      }
+    },
+    {
+      "id": "CTI-030",
+      "collection": "gallery",
+      "status": "unapproved",
+      "title": "Unidentified audience gathering",
+      "caption": "",
+      "date": "Unknown",
+      "description": "Seated audience at an indoor event; participants and date unconfirmed.",
+      "source": "JHC I-581, Box 1, Folder 15 (Google Drive archival scan)",
+      "citation": "I-581-01-15-002.jpg",
+      "attribution": "",
+      "providedBy": "",
+      "transcript": "",
+      "articleHtml": "",
+      "originalImage": null,
+      "archiveItemImage": null,
+      "thumbnailImage": null,
+      "restoredImage": null,
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "I-581-01-15-002.jpg",
+          "driveFileId": "1OhtBLjqktwz3HbHVF9i2DL6gN-Fxsj5D",
+          "driveUrl": "https://drive.google.com/file/d/1OhtBLjqktwz3HbHVF9i2DL6gN-Fxsj5D/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        }
+      ],
+      "preservationStatus": "source-in-drive-awaiting-review-and-publication",
+      "captionProvenance": {
+        "status": "unapproved-awaiting-admin-identification",
+        "note": "Identification is provisional; original source scan retained in Google Drive."
+      }
+    },
+    {
+      "id": "CTI-031",
+      "collection": "archive",
+      "status": "unapproved",
+      "title": "Handwritten reverse of an unidentified photograph",
+      "caption": "",
+      "date": "Unknown",
+      "description": "Handwritten annotation on reverse of a photographic print; corresponding front and text not confirmed.",
+      "source": "JHC I-581, Box 1, Folder 15 (Google Drive archival scan)",
+      "citation": "I-581-01-15-003.jpg",
+      "attribution": "",
+      "providedBy": "",
+      "transcript": "",
+      "articleHtml": "",
+      "originalImage": null,
+      "archiveItemImage": null,
+      "thumbnailImage": null,
+      "restoredImage": null,
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "I-581-01-15-003.jpg",
+          "driveFileId": "1aA0R8m0J6zM6ptWBzkLtLW754cDuU3NF",
+          "driveUrl": "https://drive.google.com/file/d/1aA0R8m0J6zM6ptWBzkLtLW754cDuU3NF/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        }
+      ],
+      "preservationStatus": "source-in-drive-awaiting-review-and-publication",
+      "captionProvenance": {
+        "status": "unapproved-awaiting-admin-identification",
+        "note": "Identification is provisional; original source scan retained in Google Drive."
+      }
+    },
+    {
+      "id": "CTI-032",
+      "collection": "gallery",
+      "status": "unapproved",
+      "title": "Joseph Gibely and Nathan Cass at podium, 1979",
+      "caption": "",
+      "date": "March 1, 1979 (handwritten caption)",
+      "description": "Handwritten source caption reads '3/1/79 Joseph Gibely Pres. Nathan Cass'. Context and identities should be reviewed.",
+      "source": "JHC I-581, Box 1, Folder 15 (Google Drive archival scan)",
+      "citation": "I-581-01-15-004.jpg",
+      "attribution": "",
+      "providedBy": "",
+      "transcript": "",
+      "articleHtml": "",
+      "originalImage": null,
+      "archiveItemImage": null,
+      "thumbnailImage": null,
+      "restoredImage": null,
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "I-581-01-15-004.jpg",
+          "driveFileId": "1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla",
+          "driveUrl": "https://drive.google.com/file/d/1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        }
+      ],
+      "preservationStatus": "source-in-drive-awaiting-review-and-publication",
+      "captionProvenance": {
+        "status": "unapproved-awaiting-admin-identification",
+        "note": "Identification is provisional; original source scan retained in Google Drive."
+      }
+    },
+    {
+      "id": "CTI-033",
+      "collection": "gallery",
+      "status": "unapproved",
+      "title": "Unidentified formal gathering",
+      "caption": "",
+      "date": "Unknown",
+      "description": "People in formal attire; occasion, names and date unconfirmed.",
+      "source": "JHC I-581, Box 1, Folder 15 (Google Drive archival scan)",
+      "citation": "I-581-01-15-005.jpg",
+      "attribution": "",
+      "providedBy": "",
+      "transcript": "",
+      "articleHtml": "",
+      "originalImage": null,
+      "archiveItemImage": null,
+      "thumbnailImage": null,
+      "restoredImage": null,
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "I-581-01-15-005.jpg",
+          "driveFileId": "1Q8qWhl-jaJwlSfOmIhqMjumVtQ97XIsB",
+          "driveUrl": "https://drive.google.com/file/d/1Q8qWhl-jaJwlSfOmIhqMjumVtQ97XIsB/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        }
+      ],
+      "preservationStatus": "source-in-drive-awaiting-review-and-publication",
+      "captionProvenance": {
+        "status": "unapproved-awaiting-admin-identification",
+        "note": "Identification is provisional; original source scan retained in Google Drive."
+      }
+    },
+    {
+      "id": "CTI-034",
+      "collection": "archive",
+      "status": "unapproved",
+      "title": "Annotated reverse of a historical photograph",
+      "caption": "",
+      "date": "Unknown",
+      "description": "Reverse of a photographic print with handwritten annotation; pairing and wording require review.",
+      "source": "JHC I-581, Box 1, Folder 15 (Google Drive archival scan)",
+      "citation": "I-581-01-15-006.jpg",
+      "attribution": "",
+      "providedBy": "",
+      "transcript": "",
+      "articleHtml": "",
+      "originalImage": null,
+      "archiveItemImage": null,
+      "thumbnailImage": null,
+      "restoredImage": null,
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "I-581-01-15-006.jpg",
+          "driveFileId": "1Y1jETYnlaHNutJiPI_hEPy-OfzqGOmy9",
+          "driveUrl": "https://drive.google.com/file/d/1Y1jETYnlaHNutJiPI_hEPy-OfzqGOmy9/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        }
+      ],
+      "preservationStatus": "source-in-drive-awaiting-review-and-publication",
+      "captionProvenance": {
+        "status": "unapproved-awaiting-admin-identification",
+        "note": "Identification is provisional; original source scan retained in Google Drive."
+      }
+    },
+    {
+      "id": "CTI-035",
+      "collection": "gallery",
+      "status": "unapproved",
+      "title": "Unidentified indoor group photograph",
+      "caption": "",
+      "date": "Unknown",
+      "description": "Group of people indoors; names and date unconfirmed.",
+      "source": "JHC I-581, Box 1, Folder 15 (Google Drive archival scan)",
+      "citation": "I-581-01-15-007.jpg",
+      "attribution": "",
+      "providedBy": "",
+      "transcript": "",
+      "articleHtml": "",
+      "originalImage": null,
+      "archiveItemImage": null,
+      "thumbnailImage": null,
+      "restoredImage": null,
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "I-581-01-15-007.jpg",
+          "driveFileId": "158r8qgFpLEPSnb9dl0vs0uqhzju0H3GF",
+          "driveUrl": "https://drive.google.com/file/d/158r8qgFpLEPSnb9dl0vs0uqhzju0H3GF/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        }
+      ],
+      "preservationStatus": "source-in-drive-awaiting-review-and-publication",
+      "captionProvenance": {
+        "status": "unapproved-awaiting-admin-identification",
+        "note": "Identification is provisional; original source scan retained in Google Drive."
+      }
+    },
+    {
+      "id": "CTI-036",
+      "collection": "gallery",
+      "status": "unapproved",
+      "title": "Unidentified gathering at a table",
+      "caption": "",
+      "date": "Unknown",
+      "description": "Group gathered around a table; names and date unconfirmed.",
+      "source": "JHC I-581, Box 1, Folder 15 (Google Drive archival scan)",
+      "citation": "I-581-01-15-008.jpg",
+      "attribution": "",
+      "providedBy": "",
+      "transcript": "",
+      "articleHtml": "",
+      "originalImage": null,
+      "archiveItemImage": null,
+      "thumbnailImage": null,
+      "restoredImage": null,
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "I-581-01-15-008.jpg",
+          "driveFileId": "1guPkHsazf_u5UYuAuvkAzrTrWz1Zmfo6",
+          "driveUrl": "https://drive.google.com/file/d/1guPkHsazf_u5UYuAuvkAzrTrWz1Zmfo6/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        }
+      ],
+      "preservationStatus": "source-in-drive-awaiting-review-and-publication",
+      "captionProvenance": {
+        "status": "unapproved-awaiting-admin-identification",
+        "note": "Identification is provisional; original source scan retained in Google Drive."
+      }
+    },
+    {
+      "id": "CTI-037",
+      "collection": "archive",
+      "status": "unapproved",
+      "title": "Ladino and Hebrew gravestone documentation",
+      "caption": "",
+      "date": "Unknown",
+      "description": "Handwritten description of a Ladino/Hebrew-inscribed gravestone in Danvers, accompanied by photographs and a separate note about Jacob Behar. Relationship of documents to be verified.",
+      "source": "JHC I-581, Box 1, Folder 15 (Google Drive archival scan)",
+      "citation": "I-581-01-15-028.jpg; I-581-01-15-029.jpg; I-581-01-15-030.jpg; I-581-01-15-032.jpg",
+      "attribution": "",
+      "providedBy": "",
+      "transcript": "",
+      "articleHtml": "",
+      "originalImage": null,
+      "archiveItemImage": null,
+      "thumbnailImage": null,
+      "restoredImage": null,
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "I-581-01-15-028.jpg",
+          "driveFileId": "1lInlRrup7obdix-ZZrF3MwobJJOJKA04",
+          "driveUrl": "https://drive.google.com/file/d/1lInlRrup7obdix-ZZrF3MwobJJOJKA04/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        },
+        {
+          "fileName": "I-581-01-15-029.jpg",
+          "driveFileId": "1hKHQsmvELogPOSV6FB5OFAhggfSlqE-T",
+          "driveUrl": "https://drive.google.com/file/d/1hKHQsmvELogPOSV6FB5OFAhggfSlqE-T/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        },
+        {
+          "fileName": "I-581-01-15-030.jpg",
+          "driveFileId": "1ykEu6ibaz9jtKAp5CVyafaSIGYUQ5VkW",
+          "driveUrl": "https://drive.google.com/file/d/1ykEu6ibaz9jtKAp5CVyafaSIGYUQ5VkW/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        },
+        {
+          "fileName": "I-581-01-15-032.jpg",
+          "driveFileId": "1IQF9HqISmccARXDCZo2erwL31IEC5Ju3",
+          "driveUrl": "https://drive.google.com/file/d/1IQF9HqISmccARXDCZo2erwL31IEC5Ju3/view",
+          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+        }
+      ],
+      "preservationStatus": "source-in-drive-awaiting-review-and-publication",
+      "captionProvenance": {
+        "status": "unapproved-awaiting-admin-identification",
+        "note": "Identification is provisional; original source scan retained in Google Drive."
       }
     }
   ],
