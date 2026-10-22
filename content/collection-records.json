@@ -22,13 +22,19 @@
         "cti-vintage-synagogue-bat-mitzvah-clipping.png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-001-THM-1.png",
-      "preservationStatus": "existing-original-candidate-needs-verification",
+      "preservationStatus": "repository-source-file-present-originality-unverified",
       "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
+          "note": "Existing repository source image; full archival authenticity and printed caption pending review"
+        },
         {
           "type": "THM",
           "version": 1,
@@ -47,7 +53,7 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed"
     },
     {
       "id": "CTI-002",
@@ -246,7 +252,7 @@
       "date": "",
       "description": "Archival photograph of an early congregation building, with its historical label retained in the source image.",
       "source": "CTI historical photograph collection (individual provenance unverified)",
-      "citation": "",
+      "citation": "Jewish Community of Peabody Records I-581, Box 1, Folder 15, image 024; verify article association before publication",
       "attribution": "",
       "transcript": "",
       "indexImage": "assets/archive/originals/I-581-01-15-024-web.jpg",
@@ -257,13 +263,19 @@
         "I-581-01-15-024-web.jpg"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/I-581-01-15-024-web.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-006-THM-1.png",
-      "preservationStatus": "existing-original-candidate-needs-verification",
+      "preservationStatus": "repository-source-file-present-originality-unverified",
       "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/archive/originals/I-581-01-15-024-web.jpg",
+          "note": "Existing repository source image; full archival authenticity and printed caption pending review"
+        },
         {
           "type": "THM",
           "version": 1,
@@ -282,7 +294,7 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/I-581-01-15-024-web.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed"
     },
     {
       "id": "CTI-007",
@@ -298,7 +310,7 @@
       "transcript": "",
       "indexImage": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
       "archiveImage": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
-      "pdf": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
+      "pdf": null,
       "sourcePage": null,
       "originalFilenames": [
         "cti-2006-kitchen-dedication-photo.png"
@@ -329,7 +341,12 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "associatedSourceDocument": {
+        "path": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
+        "type": "image/jpeg",
+        "description": "Original kitchen-dedication invitation; not a PDF"
+      }
     },
     {
       "id": "CTI-008",
@@ -492,13 +509,19 @@
         "cti-early-religious-leaders-original.jpg"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-011-THM-1.png",
-      "preservationStatus": "existing-original-candidate-needs-verification",
+      "preservationStatus": "repository-source-file-present-originality-unverified",
       "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
+          "note": "Existing repository source image; full archival authenticity and printed caption pending review"
+        },
         {
           "type": "THM",
           "version": 1,
@@ -517,7 +540,7 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed"
     },
     {
       "id": "CTI-012",
@@ -580,7 +603,7 @@
       "transcript": "",
       "indexImage": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
       "archiveImage": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
-      "pdf": "historical-record.html?id=archive-ladies-auxiliary-officers",
+      "pdf": null,
       "sourcePage": null,
       "originalFilenames": [
         "cti-ladies-auxiliary-officers-colorized.png"
@@ -611,7 +634,8 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "associatedHistoricalRecord": "historical-record.html?id=archive-ladies-auxiliary-officers"
     },
     {
       "id": "CTI-014",
@@ -733,13 +757,19 @@
         "Warm Vintage Portrait of an Older Gentleman.png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/cti-1979-gibely-address-original-page.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-016-THM-1.png",
-      "preservationStatus": "awaiting-original-verification",
+      "preservationStatus": "repository-source-file-present-originality-unverified",
       "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/archive/originals/cti-1979-gibely-address-original-page.jpg",
+          "note": "Existing repository source image; full archival authenticity and printed caption pending review"
+        },
         {
           "type": "THM",
           "version": 1,
@@ -758,9 +788,9 @@
       },
       "existingImageCandidate": "assets/images/leadership/Warm Vintage Portrait of an Older Gentleman.png",
       "associatedSourceDocument": {
-        "googleDriveId": "10U5tL4vEJp5TmwHVhViDFtw4eqXuUdbr",
-        "title": "Joseph Gibely Address — 12-page archival PDF",
-        "verifiedInDrive": true
+        "path": "assets/archive/originals/cti-1979-gibely-address-original-page.jpg",
+        "type": "image/jpeg",
+        "description": "One page of the original annotated address typescript"
       },
       "associatedTranscription": {
         "googleDriveId": "1XLyeDvKazM8XFcULVKpfgqIcf03uxg6I",
@@ -768,7 +798,7 @@
         "verifiedInDrive": true
       },
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "twelve-page-document-present-individual-page-caption-unverified"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed"
     },
     {
       "id": "CTI-017",
@@ -779,7 +809,7 @@
       "date": "May 26, 1981",
       "description": "The Salem Evening News report on the congregation's growth, published May 26, 1981.",
       "source": "The Salem Evening News",
-      "citation": "",
+      "citation": "The Salem Evening News, May 26, 1981; Jewish Community of Peabody Records I-581, Box 1, Folder 15, image 025",
       "attribution": "",
       "transcript": "",
       "indexImage": "assets/images/gallery/Congregation Renovation in Peabody.png",
@@ -790,13 +820,19 @@
         "Congregation Renovation in Peabody.png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/I-581-01-15-025-web.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-017-THM-1.png",
-      "preservationStatus": "awaiting-original-verification",
+      "preservationStatus": "repository-source-file-present-originality-unverified",
       "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/archive/originals/I-581-01-15-025-web.jpg",
+          "note": "Existing repository source image; full archival authenticity and printed caption pending review"
+        },
         {
           "type": "THM",
           "version": 1,
@@ -815,7 +851,7 @@
       },
       "existingImageCandidate": "assets/images/gallery/Congregation Renovation in Peabody.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed"
     },
     {
       "id": "CTI-018",
@@ -920,7 +956,7 @@
       "date": "October 31, 1992",
       "description": "The Salem Evening News feature commemorating 500 years since the 1492 Edict of Expulsion, published October 31, 1992.",
       "source": "The Salem Evening News",
-      "citation": "",
+      "citation": "The Salem Evening News, October 31, 1992; stitched historical article scan preserved in CTI repository",
       "attribution": "",
       "transcript": "",
       "indexImage": "assets/archive/originals/I-581-01-15-024-web.jpg",
@@ -931,13 +967,19 @@
         "I-581-01-15-024-web.jpg"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-020-THM-1.png",
-      "preservationStatus": "existing-original-candidate-needs-verification",
+      "preservationStatus": "repository-source-file-present-originality-unverified",
       "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg",
+          "note": "Existing repository source image; full archival authenticity and printed caption pending review"
+        },
         {
           "type": "THM",
           "version": 1,
@@ -956,7 +998,7 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/I-581-01-15-024-web.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed"
     },
     {
       "id": "CTI-021",
