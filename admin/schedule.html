@@ -94,7 +94,7 @@ document.getElementById('publish-schedule').onclick=async()=>{
   await CTIAuth.api('/publish',{path:'content/services.json',content:JSON.stringify(output,null,2)+'\n',expectedSha:file.sha});
   published=output;
   cancelled=new Set(output.overrides.filter(o=>o.cancelled).map(o=>o.id));
-  status.textContent='Schedule published successfully to GitHub. The public website will update shortly.';
+  status.textContent='Schedule saved successfully. Please allow up to 5 minutes for the website to refresh.';
  }catch(e){status.textContent='Schedule was not published: '+e.message}
  finally{button.disabled=false}
 };
