@@ -1553,8 +1553,8 @@
       "citation": "April 14–20, 1995, p. 12; archival scan I-581-01-15-035",
       "attribution": "Judith S. Antonelli",
       "transcript": "",
-      "indexImage": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
-      "archiveImage": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
+      "indexImage": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+      "archiveImage": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
       "pdf": null,
       "sourcePage": "archives/archive-1995-ashkenazi-sephardic-traditions.html",
       "originalFilenames": [
@@ -1566,7 +1566,7 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/collections/CTI-021-THM-1.png",
+      "thumbnailImage": "assets/collections/CTI-008-THM-1.png",
       "preservationStatus": "source-scan-present-provenance-documented",
       "imageVersions": [
         {
@@ -1578,9 +1578,9 @@
         {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-021-THM-1.png",
-          "derivedFrom": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
-          "method": "full-image contain with softened background"
+          "path": "assets/collections/CTI-008-THM-1.png",
+          "derivedFrom": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+          "method": "Index thumbnail from enhanced related 1958 Peabody Hebrew School photograph"
         }
       ],
       "thumbnailSpecification": {
@@ -1591,7 +1591,7 @@
         "background": "appropriate neutral or complementary",
         "retouched": true
       },
-      "existingImageCandidate": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
+      "existingImageCandidate": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
       "thumbnailStatus": "local-file-linked",
       "originalStatus": "source-file-verified-caption-not-yet-transcribed",
       "assetInventory": {
@@ -1600,12 +1600,16 @@
         ],
         "presentationFiles": [
           "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
-          "assets/collections/CTI-021-THM-1.png"
+          "assets/collections/CTI-021-THM-1.png",
+          "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+          "assets/collections/CTI-008-THM-1.png"
         ],
         "fileReferences": [
           "assets/archive/originals/I-581-01-15-035-web.jpg",
           "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
-          "assets/collections/CTI-021-THM-1.png"
+          "assets/collections/CTI-021-THM-1.png",
+          "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+          "assets/collections/CTI-008-THM-1.png"
         ],
         "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
         "captionVerification": "printed caption not transcribed",
@@ -1661,7 +1665,13 @@
           "provenanceNote": "Related Peabody Jewish history, not documented as a photograph from the 1995 article or as a CTI event."
         }
       ],
-      "recordMergeNote": "CTI-008 merged as a separately attributed related historical photograph. The 1995 article and the 1958 photo are distinct sources; do not describe the photo as an illustration from the article."
+      "recordMergeNote": "CTI-008 merged as a separately attributed related historical photograph. The 1995 article and the 1958 photo are distinct sources; do not describe the photo as an illustration from the article.",
+      "articleImage": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
+      "presentationOrder": [
+        "enhanced-photo-index",
+        "article-secondary"
+      ],
+      "displayRelationshipNote": "Use enhanced 1958 Peabody Hebrew School photo as archive index image; 1995 article is secondary linked content. Sources remain historically distinct."
     },
     {
       "id": "CTI-022",
