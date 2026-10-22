@@ -26,9 +26,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-001-THM-1.png",
       "preservationStatus": "existing-original-candidate-needs-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-001-THM-1.png",
+          "derivedFrom": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -63,9 +71,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-002-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-002-THM-1.png",
+          "derivedFrom": "assets/images/gallery/Congregation Renovation in Peabody.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -100,9 +116,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-003-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-003-THM-1.png",
+          "derivedFrom": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -137,9 +161,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-004-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-004-THM-1.png",
+          "derivedFrom": "assets/images/gallery/cti-1976-service-honorees-restored.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -174,9 +206,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-005-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-005-THM-1.png",
+          "derivedFrom": "assets/images/gallery/cti-building-8-pierpont-street.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -211,9 +251,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-006-THM-1.png",
       "preservationStatus": "existing-original-candidate-needs-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-006-THM-1.png",
+          "derivedFrom": "assets/archive/originals/I-581-01-15-024-web.jpg",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -248,9 +296,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-007-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-007-THM-1.png",
+          "derivedFrom": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -285,9 +341,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-008-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-008-THM-1.png",
+          "derivedFrom": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -322,9 +386,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-009-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-009-THM-1.png",
+          "derivedFrom": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -359,9 +431,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-010-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-010-THM-1.png",
+          "derivedFrom": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -396,9 +476,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-011-THM-1.png",
       "preservationStatus": "existing-original-candidate-needs-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-011-THM-1.png",
+          "derivedFrom": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -433,9 +521,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-012-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-012-THM-1.png",
+          "derivedFrom": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -470,9 +566,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-013-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-013-THM-1.png",
+          "derivedFrom": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -507,9 +611,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-014-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-014-THM-1.png",
+          "derivedFrom": "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -544,9 +656,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-015-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-015-THM-1.png",
+          "derivedFrom": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -581,9 +701,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-016-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-016-THM-1.png",
+          "derivedFrom": "assets/images/leadership/Warm Vintage Portrait of an Older Gentleman.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -628,9 +756,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-017-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-017-THM-1.png",
+          "derivedFrom": "assets/images/gallery/Congregation Renovation in Peabody.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -665,9 +801,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-018-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-018-THM-1.png",
+          "derivedFrom": "assets/images/archives/cti-1986-leo-gibely-newspaper-restored.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -702,9 +846,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-019-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-019-THM-1.png",
+          "derivedFrom": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -739,9 +891,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-020-THM-1.png",
       "preservationStatus": "existing-original-candidate-needs-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-020-THM-1.png",
+          "derivedFrom": "assets/archive/originals/I-581-01-15-024-web.jpg",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -776,9 +936,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-021-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-021-THM-1.png",
+          "derivedFrom": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -813,9 +981,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-022-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-022-THM-1.png",
+          "derivedFrom": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -850,9 +1026,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-023-THM-1.png",
       "preservationStatus": "existing-original-candidate-needs-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-023-THM-1.png",
+          "derivedFrom": "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -887,9 +1071,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-024-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-024-THM-1.png",
+          "derivedFrom": "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -924,9 +1116,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-025-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-025-THM-1.png",
+          "derivedFrom": "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -995,9 +1195,17 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/collections/CTI-027-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [],
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/collections/CTI-027-THM-1.png",
+          "derivedFrom": "assets/images/anniversaries/cti-2022-building-ai-retouched.jpg",
+          "method": "full-image contain with softened background"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
