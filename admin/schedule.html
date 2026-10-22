@@ -36,7 +36,7 @@ function render(){
   const tr=document.createElement('tr');
   for(const [key,type] of [['date','date'],['time','text'],['location','select'],['description','text']]){
    const td=document.createElement('td');let el;
-   if(type==='select'){el=document.createElement('select');for(const val of ['In person','Zoom only','Hybrid','To be confirmed']){const opt=document.createElement('option');opt.value=val;opt.textContent=val;el.append(opt)}}
+   if(type==='select'){el=document.createElement('select');for(const val of ['In person','Zoom only','In Person and on Zoom','To be confirmed']){const opt=document.createElement('option');opt.value=val;opt.textContent=val;el.append(opt)}}
    else{el=document.createElement('input');el.type=type;el.className=key==='time'?'time':key==='description'?'desc':''}
    el.value=s[key]||'';el.setAttribute('aria-label',key+' for service '+(i+1));
    el.addEventListener('input',()=>{s[key]=el.value;preview()});td.append(el);tr.append(td);
