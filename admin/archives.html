@@ -13,7 +13,7 @@ const container=$('photoReview');container.replaceChildren();
 const entries=[],seen=new Set();
 function add(label,path,drive=false){
  if(!path)return;
- const key=drive?'drive:'+path:'site:'+path.replace(/^\\/+/, '');
+ const key=drive?'drive:'+path:'site:'+path.replace(/^\/+/,'');
  if(seen.has(key))return;
  seen.add(key);entries.push({label,path,drive});
 }
@@ -29,7 +29,7 @@ for(const item of entries){
  heading.textContent=item.label;cap.append(heading);
  const link=document.createElement('a');link.href=item.drive?item.path:imageUrl(item.path);link.target='_blank';link.rel='noopener noreferrer';
  if(item.drive){const note=document.createElement('div');note.className='unavailable';note.textContent='Original stored in Google Drive — open source file';link.append(note)}
- else if(/\\.pdf(?:[?#]|$)/i.test(item.path)){const note=document.createElement('div');note.textContent='Open PDF document';link.append(note)}
+ else if(/\.pdf(?:[?#]|$)/i.test(item.path)){const note=document.createElement('div');note.textContent='Open PDF document';link.append(note)}
  else{const img=document.createElement('img');img.src=imageUrl(item.path);img.alt=item.label+' for '+x.id;img.onerror=()=>{img.remove();const note=document.createElement('div');note.className='unavailable';note.textContent='Preview unavailable — open file';link.append(note)};link.append(img)}
  figure.append(link);const filename=document.createElement('span');filename.textContent=item.drive?item.label:item.path;cap.append(filename);figure.append(cap);container.append(figure)
 }
