@@ -68,6 +68,11 @@
         ],
         "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -128,6 +133,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -188,6 +198,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -248,6 +263,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -308,6 +328,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -376,6 +401,11 @@
         ],
         "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -441,6 +471,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -501,6 +536,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -561,6 +601,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -621,6 +666,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -689,6 +739,11 @@
         ],
         "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -749,6 +804,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -810,6 +870,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -870,6 +935,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -941,6 +1011,11 @@
         "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
         "captionVerification": "printed caption not transcribed",
         "originalFilenameReconciled": true
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1022,6 +1097,11 @@
         "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
         "captionVerification": "printed caption not transcribed",
         "originalFilenameReconciled": true
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1093,6 +1173,11 @@
         "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
         "captionVerification": "printed caption not transcribed",
         "originalFilenameReconciled": true
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1153,6 +1238,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1213,6 +1303,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1285,6 +1380,11 @@
         "captionVerification": "printed caption not transcribed",
         "originalFilenameReconciled": true,
         "sourceNote": "1992 stitched scan is the article source; image 024 may represent another historical record and should not be conflated."
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1356,6 +1456,11 @@
         "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
         "captionVerification": "printed caption not transcribed",
         "originalFilenameReconciled": true
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1427,6 +1532,11 @@
         "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
         "captionVerification": "printed caption not transcribed",
         "originalFilenameReconciled": true
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1498,6 +1608,11 @@
         "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
         "captionVerification": "printed caption not transcribed",
         "originalFilenameReconciled": true
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1558,6 +1673,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1618,6 +1738,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1677,6 +1802,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "existing-caption-pending-source-comparison",
+        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "verbatimOriginalCaption": false
       }
     },
     {
@@ -1737,6 +1867,11 @@
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
+      },
+      "captionProvenance": {
+        "status": "no-existing-caption",
+        "note": "No existing display caption; source caption not yet transcribed.",
+        "verbatimOriginalCaption": false
       }
     }
   ],
