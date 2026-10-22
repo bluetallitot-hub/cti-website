@@ -168,6 +168,62 @@ if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
  await save(env,'content/newsletters.json',JSON.stringify(data,null,2)+'\n',index.sha,'Publish '+title);
  return respond({ok:true,title,reusedExistingPdf});
 }
+
+const collectionPath='content/collection-submissions.json';
+const decodeCollection=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\\s/g,''))));
+if(url.pathname==='/collections/list'&&request.method==='GET'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const [index,gallery,archives]=await Promise.all([gh(env,collectionPath),gh(env,'content/gallery.json'),gh(env,'content/archive-additions.json')]);
+ const state=decodeCollection(index),g=decodeCollection(gallery),a=decodeCollection(archives);
+ return respond({items:state.items||[],visibility:state.visibility||{},gallery:g.items||[],archives:a.items||[]});
+}
+if(url.pathname==='/collections/status'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json();
+ if(!['gallery','archive'].includes(b.collection)||typeof b.id!=='string'||!['active','inactive'].includes(b.status))return respond({error:'Invalid status request'},400);
+ const f=await gh(env,collectionPath),d=decodeCollection(f);d.visibility=d.visibility||{gallery:{},archive:{}};d.visibility.gallery=d.visibility.gallery||{};d.visibility.archive=d.visibility.archive||{};
+ const record=(d.items||[]).find(x=>x.id===b.id&&x.collection===b.collection);
+ let previous;
+ if(record){previous=record.status||'unapproved';}
+ else{
+  const path=b.collection==='gallery'?'content/gallery.json':'content/archive-additions.json';
+  const existing=decodeCollection(await gh(env,path));
+  const found=(existing.items||[]).some(x=>(b.collection==='gallery'?x.image:x.id)===b.id);
+  if(!found)return respond({error:'Item not found'},404);
+  previous=d.visibility[b.collection][b.id]||'active';
+ }
+ if(!((previous==='unapproved'||previous==='inactive')&&b.status==='active'||previous==='active'&&b.status==='inactive'))return respond({error:'This status change is not allowed'},409);
+ if(record)record.status=b.status;else d.visibility[b.collection][b.id]=b.status;
+ await save(env,collectionPath,JSON.stringify(d,null,2)+'\\n',f.sha,'Update CTI collection visibility');
+ return respond({ok:true});
+}
+if(url.pathname==='/collections/submit'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json();
+ if(!['gallery','archive'].includes(b.collection))return respond({error:'Select Gallery or Archive'},400);
+ for(const [key,max] of Object.entries({title:180,date:60,description:3000,source:400,citation:2000,attribution:500,caption:1500,transcript:100000}))
+  if(typeof b[key]!=='string'||b[key].length>max)return respond({error:'Invalid '+key},400);
+ if(!b.title.trim()||!b.caption.trim())return respond({error:'Title and caption are required'},400);
+ if(!Array.isArray(b.files)||b.files.length<1||b.files.length>6)return respond({error:'Select one to six files'},400);
+ let total=0;
+ for(const file of b.files){
+  if(typeof file.name!=='string'||typeof file.data!=='string'||!/^[-a-zA-Z0-9_. ]{1,120}\\.(jpg|jpeg|png|webp|pdf)$/i.test(file.name)||!(/^[A-Za-z0-9+/]+={0,2}$/.test(file.data)))return respond({error:'Invalid file'},400);
+  if(b.collection==='gallery'&&/\\.pdf$/i.test(file.name))return respond({error:'Gallery accepts photographs only'},400);
+  total+=file.data.length;
+ }
+ if(total>10000000)return respond({error:'Total file size exceeds approximately 7 MB'},400);
+ const f=await gh(env,collectionPath),d=decodeCollection(f),id='cti-'+crypto.randomUUID(),paths=[];
+ for(let i=0;i<b.files.length;i++){
+  const ext=b.files[i].name.split('.').pop().toLowerCase(),path='assets/collections/'+id+'-'+(i+1)+'.'+ext;
+  await gh(env,path,'PUT',{message:'Preserve CTI collection original '+id,content:b.files[i].data,branch:'main'});
+  paths.push(path);
+ }
+ d.items=d.items||[];
+ d.items.push({id,collection:b.collection,status:'unapproved',title:b.title.trim(),date:b.date.trim(),description:b.description.trim(),source:b.source.trim(),citation:b.citation.trim(),attribution:b.attribution.trim(),caption:b.caption.trim(),transcript:b.transcript.trim(),image:paths[0],files:paths,submittedAt:new Date().toISOString()});
+ await save(env,collectionPath,JSON.stringify(d,null,2)+'\\n',f.sha,'Queue CTI collection submission '+id);
+ return respond({ok:true,id,status:'unapproved'});
+}
+
 if(url.pathname==='/publish'&&request.method==='POST'){if(role!=='admin')return respond({error:'Administrator access required'},403);const b=await request.json();if(!adminFiles.has(b.path)||typeof b.content!=='string'||b.content.length>2000000||typeof b.expectedSha!=='string')return respond({error:'File or content not allowed'},400);JSON.parse(b.content);const file=await gh(env,b.path);if(file.sha!==b.expectedSha)return respond({error:'File changed since it was opened'},409);await save(env,b.path,b.content,file.sha,'CTI administration: update '+b.path);return respond({ok:true})}
 return respond({error:'Not found'},404)
 }catch(e){return respond({error:e.message||'Unexpected error'},e.status===409?409:e.status===404?404:400)}}};
