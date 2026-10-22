@@ -53,7 +53,22 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "repository-source-file-verified-caption-untranscribed"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed",
+      "assetInventory": {
+        "sourceFiles": [
+          "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png"
+        ],
+        "presentationFiles": [
+          "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
+          "assets/collections/CTI-001-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
+          "assets/collections/CTI-001-THM-1.png"
+        ],
+        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-002",
@@ -100,7 +115,20 @@
       },
       "existingImageCandidate": "assets/images/gallery/Congregation Renovation in Peabody.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/Congregation Renovation in Peabody.png",
+          "assets/collections/CTI-002-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/Congregation Renovation in Peabody.png",
+          "assets/collections/CTI-002-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-003",
@@ -147,7 +175,20 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
+          "assets/collections/CTI-003-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
+          "assets/collections/CTI-003-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-004",
@@ -194,7 +235,20 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-1976-service-honorees-restored.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/cti-1976-service-honorees-restored.png",
+          "assets/collections/CTI-004-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-1976-service-honorees-restored.png",
+          "assets/collections/CTI-004-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-005",
@@ -241,7 +295,20 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-building-8-pierpont-street.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/cti-building-8-pierpont-street.png",
+          "assets/collections/CTI-005-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-building-8-pierpont-street.png",
+          "assets/collections/CTI-005-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-006",
@@ -294,7 +361,22 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/I-581-01-15-024-web.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "repository-source-file-verified-caption-untranscribed"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed",
+      "assetInventory": {
+        "sourceFiles": [
+          "assets/archive/originals/I-581-01-15-024-web.jpg"
+        ],
+        "presentationFiles": [
+          "assets/archive/originals/I-581-01-15-024-web.jpg",
+          "assets/collections/CTI-006-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/archive/originals/I-581-01-15-024-web.jpg",
+          "assets/collections/CTI-006-THM-1.png"
+        ],
+        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-007",
@@ -346,6 +428,19 @@
         "path": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
         "type": "image/jpeg",
         "description": "Original kitchen-dedication invitation; not a PDF"
+      },
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
+          "assets/collections/CTI-007-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
+          "assets/collections/CTI-007-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
       }
     },
     {
@@ -393,7 +488,20 @@
       },
       "existingImageCandidate": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+          "assets/collections/CTI-008-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+          "assets/collections/CTI-008-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-009",
@@ -440,7 +548,20 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
+          "assets/collections/CTI-009-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
+          "assets/collections/CTI-009-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-010",
@@ -487,7 +608,20 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
+          "assets/collections/CTI-010-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
+          "assets/collections/CTI-010-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-011",
@@ -540,7 +674,22 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "repository-source-file-verified-caption-untranscribed"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed",
+      "assetInventory": {
+        "sourceFiles": [
+          "assets/archive/originals/cti-early-religious-leaders-original.jpg"
+        ],
+        "presentationFiles": [
+          "assets/archive/originals/cti-early-religious-leaders-original.jpg",
+          "assets/collections/CTI-011-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/archive/originals/cti-early-religious-leaders-original.jpg",
+          "assets/collections/CTI-011-THM-1.png"
+        ],
+        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-012",
@@ -587,7 +736,20 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
+          "assets/collections/CTI-012-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
+          "assets/collections/CTI-012-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-013",
@@ -635,7 +797,20 @@
       "existingImageCandidate": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
       "thumbnailStatus": "local-file-linked",
       "originalStatus": "unverified-do-not-count-as-confirmed-absent",
-      "associatedHistoricalRecord": "historical-record.html?id=archive-ladies-auxiliary-officers"
+      "associatedHistoricalRecord": "historical-record.html?id=archive-ladies-auxiliary-officers",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
+          "assets/collections/CTI-013-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
+          "assets/collections/CTI-013-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-014",
@@ -682,7 +857,20 @@
       },
       "existingImageCandidate": "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
+          "assets/collections/CTI-014-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
+          "assets/collections/CTI-014-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-015",
@@ -701,7 +889,8 @@
       "pdf": null,
       "sourcePage": "archives/archive-1976-sephardic-jews.html",
       "originalFilenames": [
-        "cti-1976-joseph-gibely-photo-enhanced.png"
+        "cti-1976-joseph-gibely-photo-enhanced.png",
+        "I-581-01-15-033-web.jpg"
       ],
       "files": [],
       "originalImage": "assets/archive/originals/I-581-01-15-033-web.jpg",
@@ -735,7 +924,24 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "source-file-verified-caption-not-yet-transcribed"
+      "originalStatus": "source-file-verified-caption-not-yet-transcribed",
+      "assetInventory": {
+        "sourceFiles": [
+          "assets/archive/originals/I-581-01-15-033-web.jpg"
+        ],
+        "presentationFiles": [
+          "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
+          "assets/collections/CTI-015-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/archive/originals/I-581-01-15-033-web.jpg",
+          "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
+          "assets/collections/CTI-015-THM-1.png"
+        ],
+        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "captionVerification": "printed caption not transcribed",
+        "originalFilenameReconciled": true
+      }
     },
     {
       "id": "CTI-016",
@@ -754,7 +960,8 @@
       "pdf": "assets/archive/originals/cti-1979-joseph-gibely-address.pdf",
       "sourcePage": "archives/archive-1979-joseph-gibely-address.html",
       "originalFilenames": [
-        "Warm Vintage Portrait of an Older Gentleman.png"
+        "Warm Vintage Portrait of an Older Gentleman.png",
+        "cti-1979-gibely-address-original-page.jpg"
       ],
       "files": [],
       "originalImage": "assets/archive/originals/cti-1979-gibely-address-original-page.jpg",
@@ -798,7 +1005,24 @@
         "verifiedInDrive": true
       },
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "repository-source-file-verified-caption-untranscribed"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed",
+      "assetInventory": {
+        "sourceFiles": [
+          "assets/archive/originals/cti-1979-gibely-address-original-page.jpg"
+        ],
+        "presentationFiles": [
+          "assets/images/leadership/Warm Vintage Portrait of an Older Gentleman.png",
+          "assets/collections/CTI-016-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/archive/originals/cti-1979-gibely-address-original-page.jpg",
+          "assets/images/leadership/Warm Vintage Portrait of an Older Gentleman.png",
+          "assets/collections/CTI-016-THM-1.png"
+        ],
+        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "captionVerification": "printed caption not transcribed",
+        "originalFilenameReconciled": true
+      }
     },
     {
       "id": "CTI-017",
@@ -817,7 +1041,8 @@
       "pdf": null,
       "sourcePage": "press-1981-still-growing.html",
       "originalFilenames": [
-        "Congregation Renovation in Peabody.png"
+        "Congregation Renovation in Peabody.png",
+        "I-581-01-15-025-web.jpg"
       ],
       "files": [],
       "originalImage": "assets/archive/originals/I-581-01-15-025-web.jpg",
@@ -851,7 +1076,24 @@
       },
       "existingImageCandidate": "assets/images/gallery/Congregation Renovation in Peabody.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "repository-source-file-verified-caption-untranscribed"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed",
+      "assetInventory": {
+        "sourceFiles": [
+          "assets/archive/originals/I-581-01-15-025-web.jpg"
+        ],
+        "presentationFiles": [
+          "assets/images/gallery/Congregation Renovation in Peabody.png",
+          "assets/collections/CTI-017-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/archive/originals/I-581-01-15-025-web.jpg",
+          "assets/images/gallery/Congregation Renovation in Peabody.png",
+          "assets/collections/CTI-017-THM-1.png"
+        ],
+        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "captionVerification": "printed caption not transcribed",
+        "originalFilenameReconciled": true
+      }
     },
     {
       "id": "CTI-018",
@@ -898,7 +1140,20 @@
       },
       "existingImageCandidate": "assets/images/archives/cti-1986-leo-gibely-newspaper-restored.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/archives/cti-1986-leo-gibely-newspaper-restored.png",
+          "assets/collections/CTI-018-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/archives/cti-1986-leo-gibely-newspaper-restored.png",
+          "assets/collections/CTI-018-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-019",
@@ -945,7 +1200,20 @@
       },
       "existingImageCandidate": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
+          "assets/collections/CTI-019-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
+          "assets/collections/CTI-019-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-020",
@@ -964,7 +1232,8 @@
       "pdf": null,
       "sourcePage": "press-1992-origins.html",
       "originalFilenames": [
-        "I-581-01-15-024-web.jpg"
+        "I-581-01-15-024-web.jpg",
+        "cti-1992-in-search-of-a-home-stitched.jpg"
       ],
       "files": [],
       "originalImage": "assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg",
@@ -998,7 +1267,25 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/I-581-01-15-024-web.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "repository-source-file-verified-caption-untranscribed"
+      "originalStatus": "repository-source-file-verified-caption-untranscribed",
+      "assetInventory": {
+        "sourceFiles": [
+          "assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg"
+        ],
+        "presentationFiles": [
+          "assets/archive/originals/I-581-01-15-024-web.jpg",
+          "assets/collections/CTI-020-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg",
+          "assets/archive/originals/I-581-01-15-024-web.jpg",
+          "assets/collections/CTI-020-THM-1.png"
+        ],
+        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "captionVerification": "printed caption not transcribed",
+        "originalFilenameReconciled": true,
+        "sourceNote": "1992 stitched scan is the article source; image 024 may represent another historical record and should not be conflated."
+      }
     },
     {
       "id": "CTI-021",
@@ -1017,7 +1304,8 @@
       "pdf": null,
       "sourcePage": "archives/archive-1995-ashkenazi-sephardic-traditions.html",
       "originalFilenames": [
-        "cti-1995-jewish-advocate-headline.jpg"
+        "cti-1995-jewish-advocate-headline.jpg",
+        "I-581-01-15-035-web.jpg"
       ],
       "files": [],
       "originalImage": "assets/archive/originals/I-581-01-15-035-web.jpg",
@@ -1051,7 +1339,24 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "source-file-verified-caption-not-yet-transcribed"
+      "originalStatus": "source-file-verified-caption-not-yet-transcribed",
+      "assetInventory": {
+        "sourceFiles": [
+          "assets/archive/originals/I-581-01-15-035-web.jpg"
+        ],
+        "presentationFiles": [
+          "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
+          "assets/collections/CTI-021-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/archive/originals/I-581-01-15-035-web.jpg",
+          "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
+          "assets/collections/CTI-021-THM-1.png"
+        ],
+        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "captionVerification": "printed caption not transcribed",
+        "originalFilenameReconciled": true
+      }
     },
     {
       "id": "CTI-022",
@@ -1070,7 +1375,8 @@
       "pdf": "assets/archive/originals/cti-1997-75th-anniversary-program-web.pdf",
       "sourcePage": "archives/archive-1997-75th-anniversary.html",
       "originalFilenames": [
-        "a_clean_minimalist_scanned_photocopied_invitatio.png"
+        "a_clean_minimalist_scanned_photocopied_invitatio.png",
+        "1997-75th-anniversary-cover.jpg"
       ],
       "files": [],
       "originalImage": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
@@ -1104,7 +1410,24 @@
       },
       "existingImageCandidate": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "source-file-verified-caption-not-yet-transcribed"
+      "originalStatus": "source-file-verified-caption-not-yet-transcribed",
+      "assetInventory": {
+        "sourceFiles": [
+          "assets/images/anniversaries/1997-75th-anniversary-cover.jpg"
+        ],
+        "presentationFiles": [
+          "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
+          "assets/collections/CTI-022-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
+          "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
+          "assets/collections/CTI-022-THM-1.png"
+        ],
+        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "captionVerification": "printed caption not transcribed",
+        "originalFilenameReconciled": true
+      }
     },
     {
       "id": "CTI-023",
@@ -1123,7 +1446,8 @@
       "pdf": null,
       "sourcePage": "archives/archive-2001-constantinople-to-peabody.html",
       "originalFilenames": [
-        "CTI-1914-Gibely-Family-Original-Enhanced.png"
+        "CTI-1914-Gibely-Family-Original-Enhanced.png",
+        "I-581-01-15-034-web.jpg"
       ],
       "files": [],
       "originalImage": "assets/archive/originals/I-581-01-15-034-web.jpg",
@@ -1157,7 +1481,24 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "source-file-verified-caption-not-yet-transcribed"
+      "originalStatus": "source-file-verified-caption-not-yet-transcribed",
+      "assetInventory": {
+        "sourceFiles": [
+          "assets/archive/originals/I-581-01-15-034-web.jpg"
+        ],
+        "presentationFiles": [
+          "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
+          "assets/collections/CTI-023-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/archive/originals/I-581-01-15-034-web.jpg",
+          "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
+          "assets/collections/CTI-023-THM-1.png"
+        ],
+        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "captionVerification": "printed caption not transcribed",
+        "originalFilenameReconciled": true
+      }
     },
     {
       "id": "CTI-024",
@@ -1204,7 +1545,20 @@
       },
       "existingImageCandidate": "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
+          "assets/collections/CTI-024-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
+          "assets/collections/CTI-024-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-025",
@@ -1251,7 +1605,20 @@
       },
       "existingImageCandidate": "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
+          "assets/collections/CTI-025-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
+          "assets/collections/CTI-025-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-026",
@@ -1270,7 +1637,7 @@
       "pdf": null,
       "sourcePage": "archives/archive-2019-sephardic-traditions.html",
       "originalFilenames": [
-        "CTI_2019_Ark_Hershoff_Pressman_JewishJournal.jpg (catalogued proposed filename; local copy not verified)"
+        "CTI-026-2019-jewish-journal-photo.png (locally preserved copy; publication original unverified)"
       ],
       "files": [],
       "originalImage": null,
@@ -1297,7 +1664,20 @@
       },
       "existingImageCandidate": "assets/images/archive/CTI-026-2019-jewish-journal-photo.png",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "locally-preserved-photograph-original-publication-file-unverified"
+      "originalStatus": "locally-preserved-photograph-original-publication-file-unverified",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/archive/CTI-026-2019-jewish-journal-photo.png",
+          "assets/collections/CTI-026-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/archive/CTI-026-2019-jewish-journal-photo.png",
+          "assets/collections/CTI-026-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     },
     {
       "id": "CTI-027",
@@ -1344,7 +1724,20 @@
       },
       "existingImageCandidate": "assets/images/anniversaries/cti-2022-building-ai-retouched.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent"
+      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/anniversaries/cti-2022-building-ai-retouched.jpg",
+          "assets/collections/CTI-027-THM-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/anniversaries/cti-2022-building-ai-retouched.jpg",
+          "assets/collections/CTI-027-THM-1.png"
+        ],
+        "sourceVerification": "no confirmed original-source file linked",
+        "captionVerification": "printed caption not transcribed"
+      }
     }
   ],
   "assetPolicy": {
