@@ -170,7 +170,7 @@ if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
 }
 
 const masterPath='content/collection-records.json';
-const masterFields={collection:12,status:20,title:180,date:100,caption:1500,description:10000,source:500,citation:3000,attribution:500,transcript:150000,indexImage:500,archiveImage:500,pdf:500};
+const masterFields={collection:12,status:20,title:180,date:100,caption:1500,description:10000,source:500,citation:3000,attribution:500,transcript:150000,indexImage:500,archiveImage:500,restoredImage:500,thumbnailImage:500,pdf:500};
 if(url.pathname==='/master/list'&&request.method==='GET'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const f=await gh(env,masterPath);return respond(decodeCollection(f));
@@ -185,7 +185,7 @@ if(url.pathname==='/master/save'&&request.method==='POST'){
   if(!(key in masterFields)||typeof value!=='string'||value.length>masterFields[key])return respond({error:'Invalid '+key},400);
   if(key==='collection'&&!['gallery','archive'].includes(value))return respond({error:'Invalid collection'},400);
   if(key==='status'&&!['active','inactive','unapproved'].includes(value))return respond({error:'Invalid status'},400);
-  if(['indexImage','archiveImage','pdf'].includes(key)&&value&&(!/^(assets\/|https:\/\/)/.test(value)||value.includes('..')))return respond({error:'Invalid file reference'},400);
+  if(['indexImage','archiveImage','restoredImage','thumbnailImage','pdf'].includes(key)&&value&&(!/^(assets\/|https:\/\/)/.test(value)||value.includes('..')))return respond({error:'Invalid file reference'},400);
   record[key]=value;
  }
  await save(env,masterPath,JSON.stringify(d,null,2)+'\n',f.sha,'Update CTI master record '+b.id);
@@ -194,20 +194,26 @@ if(url.pathname==='/master/save'&&request.method==='POST'){
 if(url.pathname==='/master/upload'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json(),f=await gh(env,masterPath),d=decodeCollection(f),record=(d.items||[]).find(x=>x.id===b.id);
- if(!record||!['indexImage','archiveImage','pdf'].includes(b.slot))return respond({error:'Invalid record or file slot'},400);
+ if(!record||!['originalImage','restoredImage','thumbnailImage','indexImage','archiveImage','pdf'].includes(b.slot))return respond({error:'Invalid record or file slot'},400);
  if(typeof b.name!=='string'||typeof b.data!=='string'||b.data.length>10000000)return respond({error:'File too large or invalid'},400);
  const ext=b.name.split('.').pop().toLowerCase();
  if(!['jpg','jpeg','png','webp','pdf'].includes(ext)||(b.slot==='pdf'&&ext!=='pdf')||(b.slot!=='pdf'&&ext==='pdf')||!/^[A-Za-z0-9+/]+={0,2}$/.test(b.data))return respond({error:'Invalid file type'},400);
- const type=b.slot==='pdf'?'PDF':'IMG';
+ const type=b.slot==='pdf'?'PDF':b.slot==='originalImage'?'ORG':b.slot==='thumbnailImage'||b.slot==='indexImage'?'THM':'IMG';
  record.files=record.files||[];
  const slotFiles=record.files.filter(x=>x.slot===b.slot);
  const next=slotFiles.length+1;
- const path='assets/collections/'+record.id+'-'+type+'-'+(b.slot==='indexImage'?'2':'1')+(next>1?'-v'+next:'')+'.'+ext;
+ if(b.slot==='originalImage'&&slotFiles.length)return respond({error:'Archival original is immutable; additional originals require a separate source accession'},409);
+ if(b.slot==='originalImage'&&typeof b.originalCaption!=='string')return respond({error:'Original caption transcription required; use an empty string if none'},400);
+ if(b.slot==='originalImage'&&b.originalCaption.length>5000)return respond({error:'Original caption too long'},400);
+ const path='assets/collections/'+record.id+'-'+type+'-'+'1'+(next>1?'-v'+next:'')+'.'+ext;
  await gh(env,path,'PUT',{message:'Preserve CTI original '+record.id,content:b.data,branch:'main'});
  const previous=record.files.findLast(x=>x.slot===b.slot&&x.active);
  if(previous){previous.active=false;previous.superseded=true;}
  record.files.push({slot:b.slot,path,originalName:b.name,active:true,version:next});
  record[b.slot]=path;
+ if(b.slot==='originalImage'){record.originalImageCaption=b.originalCaption;record.preservationStatus='original-preserved';}
+ if(b.slot==='thumbnailImage')record.indexImage=path;
+ if(b.slot==='restoredImage')record.archiveImage=path;
  await save(env,masterPath,JSON.stringify(d,null,2)+'\n',f.sha,'Attach CTI numbered asset '+record.id);
  return respond({ok:true,path,id:record.id});
 }
@@ -218,7 +224,7 @@ if(url.pathname==='/master/create'&&request.method==='POST'){
  const f=await gh(env,masterPath),d=decodeCollection(f),number=d.nextRecordNumber||1;
  const id='CTI-'+String(number).padStart(3,'0');
  d.nextRecordNumber=number+1;d.items=d.items||[];
- d.items.push({id,collection:b.collection,status:'active',title:'New record',date:'',caption:'',description:'',source:'',citation:'',attribution:'',transcript:'',indexImage:'',archiveImage:'',pdf:null,sourcePage:null,originalFilenames:[],files:[]});
+ d.items.push({id,collection:b.collection,status:'active',title:'New record',date:'',caption:'',description:'',source:'',citation:'',attribution:'',transcript:'',indexImage:'',archiveImage:'',originalImage:null,originalImageCaption:null,originalCaptionCorrections:[],restoredImage:null,thumbnailImage:null,preservationStatus:'awaiting-original-verification',imageVersions:[],thumbnailSpecification:{width:800,height:600,aspectRatio:'4:3',noAddedText:true,background:'appropriate neutral or complementary',retouched:true},pdf:null,sourcePage:null,originalFilenames:[],files:[]});
  await save(env,masterPath,JSON.stringify(d,null,2)+'\n',f.sha,'Create CTI master record '+id);
  return respond({ok:true,id});
 }
