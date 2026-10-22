@@ -72,105 +72,105 @@
       "id": "manual:2026-11-13:Monthly Shabbat Service",
       "date": "2026-11-13",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Monthly Shabbat Service"
     },
     {
       "id": "manual:2026-12-11:Monthly Shabbat Service",
       "date": "2026-12-11",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Monthly Shabbat Service"
     },
     {
       "id": "manual:2027-03-12:Monthly Shabbat Service",
       "date": "2027-03-12",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Monthly Shabbat Service"
     },
     {
       "id": "manual:2027-04-09:Monthly Shabbat Service",
       "date": "2027-04-09",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Monthly Shabbat Service"
     },
     {
       "id": "manual:2027-05-07:Monthly Shabbat Service",
       "date": "2027-05-07",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Monthly Shabbat Service"
     },
     {
       "id": "manual:2027-06-11:Monthly Shabbat Service",
       "date": "2027-06-11",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Monthly Shabbat Service"
     },
     {
       "id": "manual:2027-07-09:Monthly Shabbat Service",
       "date": "2027-07-09",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Monthly Shabbat Service"
     },
     {
       "id": "manual:2027-08-06:Monthly Shabbat Service",
       "date": "2027-08-06",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Monthly Shabbat Service"
     },
     {
       "id": "monthly:5787-Elul",
       "date": "2027-09-03",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Monthly Shabbat Service"
     },
     {
       "id": "monthly:5788-Tishri",
       "date": "2027-10-01",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Monthly Shabbat Service"
     },
     {
       "id": "holiday:5788:rh-eve",
       "date": "2027-10-01",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Rosh Hashanah — First Night (Evening)"
     },
     {
       "id": "holiday:5788:rh-day1",
       "date": "2027-10-02",
       "time": "9:30 AM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Rosh Hashanah — First Day (Morning)"
     },
     {
       "id": "holiday:5788:rh-day2",
       "date": "2027-10-03",
       "time": "9:30 AM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Rosh Hashanah — Second Day (Morning)"
     },
     {
       "id": "holiday:5788:yk-eve",
       "date": "2027-10-10",
       "time": "7:30 PM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Yom Kippur — Kol Nidre (Evening)"
     },
     {
       "id": "holiday:5788:yk-day",
       "date": "2027-10-11",
       "time": "9:30 AM",
-      "location": "Hybrid",
+      "location": "In Person and on Zoom",
       "description": "Yom Kippur — Morning"
     }
   ],
