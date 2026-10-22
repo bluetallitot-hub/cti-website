@@ -194,7 +194,7 @@ if(url.pathname==='/collections/status'&&request.method==='POST'){
  }
  if(!((previous==='unapproved'||previous==='inactive')&&b.status==='active'||previous==='active'&&b.status==='inactive'))return respond({error:'This status change is not allowed'},409);
  if(record)record.status=b.status;else d.visibility[b.collection][b.id]=b.status;
- await save(env,collectionPath,JSON.stringify(d,null,2)+'\\n',f.sha,'Update CTI collection visibility');
+ await save(env,collectionPath,JSON.stringify(d,null,2)+'\n',f.sha,'Update CTI collection visibility');
  return respond({ok:true});
 }
 if(url.pathname==='/collections/submit'&&request.method==='POST'){
@@ -220,7 +220,7 @@ if(url.pathname==='/collections/submit'&&request.method==='POST'){
  }
  d.items=d.items||[];
  d.items.push({id,collection:b.collection,status:'unapproved',title:b.title.trim(),date:b.date.trim(),description:b.description.trim(),source:b.source.trim(),citation:b.citation.trim(),attribution:b.attribution.trim(),caption:b.caption.trim(),transcript:b.transcript.trim(),image:paths[0],files:paths,submittedAt:new Date().toISOString()});
- await save(env,collectionPath,JSON.stringify(d,null,2)+'\\n',f.sha,'Queue CTI collection submission '+id);
+ await save(env,collectionPath,JSON.stringify(d,null,2)+'\n',f.sha,'Queue CTI collection submission '+id);
  return respond({ok:true,id,status:'unapproved'});
 }
 
