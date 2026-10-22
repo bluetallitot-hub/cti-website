@@ -177,6 +177,32 @@ if(url.pathname==='/collections/list'&&request.method==='GET'){
  const state=decodeCollection(index),g=decodeCollection(gallery),a=decodeCollection(archives);
  return respond({items:state.items||[],visibility:state.visibility||{},gallery:g.items||[],archives:a.items||[]});
 }
+if(url.pathname==='/collections/edit'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json();
+ if(!['gallery','archive'].includes(b.collection)||typeof b.id!=='string'||b.id.length>500)return respond({error:'Invalid record'},400);
+ const fields={title:180,date:60,description:3000,caption:1500,attribution:500,source:400,citation:2000,transcript:100000};
+ const updates={};
+ for(const [key,value] of Object.entries(b.changes||{})){
+  if(!(key in fields)||typeof value!=='string'||value.length>fields[key])return respond({error:'Invalid field: '+key},400);
+  updates[key]=value;
+ }
+ if(!Object.keys(updates).length)return respond({error:'No changes'},400);
+ const f=await gh(env,collectionPath),d=decodeCollection(f);
+ const record=(d.items||[]).find(x=>x.id===b.id&&x.collection===b.collection);
+ if(record)Object.assign(record,updates);
+ else {
+  const path=b.collection==='gallery'?'content/gallery.json':'content/archive-additions.json';
+  const legacy=await gh(env,path),entries=decodeCollection(legacy);
+  const item=(entries.items||[]).find(x=>(b.collection==='gallery'?x.image:x.id)===b.id);
+  if(!item)return respond({error:'This special or static archive page cannot be edited here'},404);
+  Object.assign(item,updates);
+  await save(env,path,JSON.stringify(entries,null,2)+'\n',legacy.sha,'Update CTI collection record metadata');
+  return respond({ok:true});
+ }
+ await save(env,collectionPath,JSON.stringify(d,null,2)+'\n',f.sha,'Update CTI collection record metadata');
+ return respond({ok:true});
+}
 if(url.pathname==='/collections/status'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();
@@ -188,7 +214,7 @@ if(url.pathname==='/collections/status'&&request.method==='POST'){
  else{
   const path=b.collection==='gallery'?'content/gallery.json':'content/archive-additions.json';
   const existing=decodeCollection(await gh(env,path));
-  const legacyArchive=new Set(['press-1972-golden-anniversary.html','archives/archive-1976-sephardic-jews.html','archives/archive-1979-joseph-gibely-address.html','press-1981-still-growing.html','press-1992-origins.html','archives/archive-1995-ashkenazi-sephardic-traditions.html','archives/archive-1997-75th-anniversary.html','archives/archive-2001-constantinople-to-peabody.html','press-2012-milestones.html','archives/archive-2018-hershoff-letter.html','archives/archive-2019-sephardic-traditions.html','press/press-2022-centennial.html','archive-founders.html','archive-presidents.html']);
+  const legacyArchive=new Set(['press-1972-golden-anniversary.html','archives/archive-1976-sephardic-jews.html','archives/archive-1979-joseph-gibely-address.html','press-1981-still-growing.html','press-1992-origins.html','archives/archive-1995-ashkenazi-sephardic-traditions.html','archives/archive-1997-75th-anniversary.html','archives/archive-2001-constantinople-to-peabody.html','press-2012-milestones.html','archives/archive-2018-hershoff-letter.html','archives/archive-2019-sephardic-traditions.html','press/press-2022-centennial.html']);
   const found=(existing.items||[]).some(x=>(b.collection==='gallery'?x.image:x.id)===b.id)||(b.collection==='archive'&&legacyArchive.has(b.id));
   if(!found)return respond({error:'Item not found'},404);
   previous=d.visibility[b.collection][b.id]||'active';
