@@ -36,7 +36,9 @@ if(url.pathname==='/announcements/email'&&request.method==='POST'){
  const body=await request.json();
  if(typeof body.announcement!=='string'||!body.announcement.trim()||body.announcement.length>1000)return respond({error:'Enter an announcement before sending email'},400);
  if(!env.RESEND_API_KEY)return respond({error:'Email is not configured yet. The website announcement can still be published.'},503);
- const recipients=(env.CTI_ANNOUNCEMENT_RECIPIENTS||'').split(',').map(s=>s.trim()).filter(Boolean);
+ const listFile=await gh(env,'content/email-lists.json');
+ const lists=JSON.parse(new TextDecoder().decode(un64(listFile.content.replace(/\s/g,''))));
+ const recipients=(lists.announcementTest||[]).filter(s=>typeof s==='string').map(s=>s.trim()).filter(Boolean);
  if(!recipients.length)return respond({error:'Test recipient list is not configured'},503);
  if(recipients.some(s=>!^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)))return respond({error:'Invalid recipient email configuration'},503);
  const sender=env.CTI_EMAIL_FROM;
