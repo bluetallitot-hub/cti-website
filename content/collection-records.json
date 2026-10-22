@@ -1145,7 +1145,11 @@
           "driveUrl": "https://drive.google.com/file/d/10U5tL4vEJp5TmwHVhViDFtw4eqXuUdbr/view?usp=drivesdk",
           "relation": "Related working transcription or original document"
         }
-      ]
+      ],
+      "primaryArchivalDocument": "assets/archive/originals/cti-1979-joseph-gibely-address.pdf",
+      "primaryDocumentDriveFileId": "10U5tL4vEJp5TmwHVhViDFtw4eqXuUdbr",
+      "sourcePageScanRange": "I-581-01-15-012.jpg through I-581-01-15-023.jpg",
+      "sourcePageCount": 12
     },
     {
       "id": "CTI-017",
