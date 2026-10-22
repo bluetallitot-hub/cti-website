@@ -13,3 +13,10 @@ Closing page of a speech thanking North Shore Jewish Historical Society and CTI 
 
 ## I-581-01-15-028.jpg
 Handwritten descriptive sheet about a Ladino/Hebrew headstone in Sons of Jacob / Temple Shalom cemetery in Danvers. References CTI at 8 Pierpont Street, chartered 1922. Separate historical subject; inspect neighboring scans for associated photograph before making a public record.
+
+## Additional scans reviewed
+
+- **I-581-01-15-022.jpg:** Final pages of a historical speech or address, with numbered page 11 and discussion of Sephardic customs. Likely contiguous with scan 023; page sequence and author attribution require verification.
+- **I-581-01-15-029.jpg:** Historical photograph of a gravestone with Hebrew inscription. This appears to accompany descriptive sheet 028; do not treat the gravestone as a CTI building photograph.
+- **I-581-01-15-030.jpg:** Another view of the gravestone and surrounding cemetery setting; associated with the 028 descriptive sheet and 029 photograph.
+- **I-581-01-15-031.jpg:** Newspaper clipping headed “Peabody Temple To Mark Its 60th Anniversary”; article references congregation's 60th anniversary. Distinct archival article candidate, not a portrait for Photo Album. Date and source require verification from complete scan.
