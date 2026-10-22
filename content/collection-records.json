@@ -1163,7 +1163,7 @@
       "description": "The Salem Evening News report on the congregation's growth, published May 26, 1981.",
       "source": "The Salem Evening News",
       "citation": "The Salem Evening News, May 26, 1981; Jewish Community of Peabody Records I-581, Box 1, Folder 15, image 025",
-      "attribution": "",
+      "attribution": "Nelson Benton, News Staff",
       "transcript": "",
       "indexImage": "assets/images/gallery/Congregation Renovation in Peabody.png",
       "archiveImage": "assets/images/gallery/Congregation Renovation in Peabody.png",
@@ -1175,7 +1175,7 @@
       ],
       "files": [],
       "originalImage": "assets/archive/originals/I-581-01-15-025-web.jpg",
-      "originalImageCaption": null,
+      "originalImageCaption": "Members of Congregation Tifereth Israel, from left, Brenda Barry of Salem, Millie Becker of Danvers and Jerry Pressman of Peabody renovate facilities at 8 Pierpont St., Peabody, in preparation for the religious school scheduled to open in September. An open house is scheduled for May 26.",
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-017-THM-1.png",
@@ -1224,9 +1224,9 @@
         "originalFilenameReconciled": true
       },
       "captionProvenance": {
-        "status": "no-existing-caption",
-        "note": "No existing display caption; source caption not yet transcribed.",
-        "verbatimOriginalCaption": false
+        "status": "verified-from-original-newspaper-scan",
+        "verbatimOriginalCaption": true,
+        "note": "Printed photo caption on the May 26, 1981 Salem Evening News clipping, JHC I-581-01-15-025; separate from article headline."
       },
       "articleHtml": "<p class=\"archive-article-date\"><time>May 26, 1981</time></p>\n<p><strong>PEABODY —</strong> In 1911 Leon Eskenas and Myer Benater arrived from Turkey to found the first community of Spanish Jews on the North Shore.</p>\n<p>Eleven years later, Eskenas, together with Morris Gibely, David Leon, Nissim Eskenazi, Joseph Havian, Robert Hasday and Joseph Pernitchi established Congregation Tifereth Israel as a place of worship for the members of their community from Peabody and Salem. Today, their descendants carry on their work, and have just embarked on a membership drive which they hope will ensure the continued existence of their congregation for many years to come.</p>\n<p>Among the leaders of the revival movement at Temple Congregation Tifereth Israel are sisters Millie Becker of Danvers and Joanne Pressman of Peabody, whose grandfathers were among the founders of the congregation.</p>\n<p>Originally located over a gas station on Boston Street in Salem, the temple is now located in the building at 8 Pierpont St., which it purchased from the Church of the Nazarene when that group moved into new quarters on Route 114 about 20 years ago.</p>\n<p>Members of the congregation have spent the past week painting and making other improvements to the interior of the building in preparation for an open house Tuesday (May 26, at 8 p.m.).</p>\n<p>They are hoping to be able to start a religious school under the direction of Rabbi Dov B. Pikelny, formerly of Temple Shalom in Salem.</p>\n<p>But according to Becker, they need 20 families in order to start the school, and with only 24 people in the congregation, they have a long way to go. Having known Pikelny for years, however, Becker said she is certain people will be impressed by him. “The children just adore him,” she added.</p>\n<p>The members of Congregation Tifereth Israel are used to working hard for what they have, and getting by with much less than many of the more popular Orthodox, Reform or Conservative temples in the area.</p>\n<p>The congregation, for instance, has never had its own rabbi, depending on the senior members or, on occasion, student rabbis to conduct the weekly services.</p>\n<p>The history of the Spanish or Sephardic Jews dates back to before the fall of Jerusalem in 70 B.C.</p>\n<p>According to an account contained in a 1970 edition of the temple’s newsletter (which is still published on a bimonthly basis), “Throughout the centuries their culture grew and developed, and in the 10th century began the 200-year period known as the ‘Golden Age of Medieval Judaism.’”</p>\n<p>“Although not acknowledged as citizens, Jews were generally tolerated by the Moslems then ruling Spain. There were sporadic outbursts against the Jews by groups of fanatics which ran the gamut from confiscation of property to massacre and expulsion from their homes.</p>\n<p>“From the borders of Spain these wanderers split and went in many directions, some to the Netherlands, others to Western European countries, some to Palestine, but most of them travelled to Turkey. Here they retained many of the customs and habits acquired throughout the centuries in Spain, and even to this day they speak Ladino.”</p>\n<p>The Spanish Jews were among the early immigrants to the United States, and by 1840 most of the 15,000 Jews in the United States were Sephardim.</p>\n<p>The people who started the local Sephardic community came at a much later date.</p>\n<p>One of them, according to temple records, lost his house at the corner of Boston and Essex streets in the Great Salem Fire of 1914. And one of the congregation Tifereth Israel, Morris Gibely, was the first Jewish police officer in the history of the Salem Police Department.</p>\n<p>Today, many of the same last names can be seen among the list of those active in the congregation.</p>\n<p class=\"meta\"><strong>Transcription status:</strong> AI Transcription · Approved for publication</p>",
       "articleMigrationSource": "press/press-1981-still-growing.html",
@@ -1245,7 +1245,9 @@
       "relatedLegacyRecordIds": [
         "CTI-002"
       ],
-      "recordIdentityNote": "CTI-002 is the photographic presentation of the same 1981 Salem Evening News archival item; CTI-017 is canonical. Original clipping and transcription retained here."
+      "recordIdentityNote": "CTI-002 is the photographic presentation of the same 1981 Salem Evening News archival item; CTI-017 is canonical. Original clipping and transcription retained here.",
+      "photoSourceReference": "JHC I-581-01-15-025.jpg, original newspaper clipping with printed photograph and caption",
+      "photoSourceDriveFileId": "17tMEfTLNr8HuxzP3csRQnSJH10As2z22"
     },
     {
       "id": "CTI-018",
