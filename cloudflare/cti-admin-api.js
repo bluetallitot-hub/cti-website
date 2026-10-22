@@ -169,6 +169,7 @@ if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
  return respond({ok:true,title,reusedExistingPdf});
 }
 
+const decodeCollection=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
 const masterPath='content/collection-records.json';
 const masterFields={collection:12,status:20,title:180,date:100,caption:1500,description:10000,source:500,citation:3000,attribution:500,transcript:150000,indexImage:500,archiveImage:500,restoredImage:500,thumbnailImage:500,pdf:500};
 if(url.pathname==='/master/list'&&request.method==='GET'){
@@ -229,7 +230,7 @@ if(url.pathname==='/master/create'&&request.method==='POST'){
  return respond({ok:true,id});
 }
 const collectionPath='content/collection-submissions.json';
-const decodeCollection=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
+
 if(url.pathname==='/collections/list'&&request.method==='GET'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const [index,gallery,archives]=await Promise.all([gh(env,collectionPath),gh(env,'content/gallery.json'),gh(env,'content/archive-additions.json')]);
