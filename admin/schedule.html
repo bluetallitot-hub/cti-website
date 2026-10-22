@@ -1,5 +1,9 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CTI Admin — Service Schedule</title><style>body{font:16px system-ui,sans-serif;margin:0;background:#f6f7f9;color:#192d3b}main{max-width:1050px;margin:auto;padding:28px 18px}h1{margin-bottom:4px}p{line-height:1.5}.panel{background:white;border:1px solid #d9dfe4;border-radius:12px;padding:18px;margin:18px 0}table{border-collapse:collapse;width:100%}th{text-align:left;font-size:13px}td,th{padding:7px;border-bottom:1px solid #e2e7ea}input,select{font:inherit;padding:8px;border:1px solid #b9c4cb;border-radius:5px;max-width:100%;box-sizing:border-box}input[type=date]{width:160px}input.time{width:110px}input.desc{width:220px}button,.button{display:inline-block;padding:10px 14px;border:0;border-radius:6px;background:#174a66;color:white;font:inherit;cursor:pointer;text-decoration:none;margin:4px}button.secondary{background:#596c77}button.danger{background:#944444}small{color:#576b78}textarea{font:inherit;width:100%;min-height:90px;padding:12px;border:1px solid #b9c4cb;border-radius:6px;box-sizing:border-box}.scroll{overflow:auto}#status{font-weight:600}a{color:#125477}</style></head><body><main><p><a href="../index.html">CTI Website</a> / Administration</p><h1>Service Schedule Editor</h1><p>Edit published dates and automatically generated services. Changed dates, times, and cancellations are retained as manual overrides. <strong>This editor exports changes for publication; it does not directly write to GitHub.</strong> The downloaded <code>services.json</code> must be uploaded to GitHub at <code>content/services.json</code>.</p><section class="panel"><h2>Service Announcement</h2><p>Share an important update with congregants, such as a weather-related change or a Zoom-only service. Leave blank when there is no announcement.</p><label for="announcement">Announcement shown on the Services page</label><textarea id="announcement" maxlength="1000" placeholder="For example: Due to snow, this Friday’s service will be held on Zoom only."></textarea><p><small>Remember to update the service location below if the announcement changes how services will be held.</small></p></section><section class="panel"><h2>Schedule</h2><div class="scroll"><table><thead><tr><th>Date</th><th>Time</th><th>Location</th><th>Description</th><th></th></tr></thead><tbody id="rows"></tbody></table></div><p><button id="add">Add service</button><button class="secondary" id="reload">Reload published schedule</button><label class="button" style="cursor:pointer">Import JSON <input type="file" id="import" accept=".json,application/json" hidden></label></p></section><section class="panel"><h2>Public-page preview</h2><p id="next">Loading…</p><div id="preview"></div></section><section class="panel"><h2>Save changes</h2><p>Exporting creates a file; it does not change the live site until you replace <code>content/services.json</code> in GitHub.</p><button id="download">Download services.json</button><p id="status" role="status"></p><p><a href="#" data-repo-path="edit/main/content/services.json" target="_blank" rel="noopener">Open the GitHub schedule file</a> · <a href="../services.html">View public services page</a></p></section></main><script src="../assets/service-calendar.js?v=20261021a"></script><script>
-let published={services:[],overrides:[],announcement:''},working=[],cancelled=new Set();
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CTI Admin — Service Schedule</title><style>body{font:16px system-ui,sans-serif;margin:0;background:#f6f7f9;color:#192d3b}main{max-width:1120px;margin:auto;padding:28px 18px}h1{margin-bottom:4px}p{line-height:1.5}.panel{background:white;border:1px solid #d9dfe4;border-radius:12px;padding:18px;margin:18px 0}table{border-collapse:collapse;width:100%}th{text-align:left;font-size:13px}td,th{padding:7px;border-bottom:1px solid #e2e7ea}input,select{font:inherit;padding:8px;border:1px solid #b9c4cb;border-radius:5px;max-width:100%;box-sizing:border-box}input[type=date]{width:160px}input.time{width:110px}input.desc{width:220px}button,.button{display:inline-block;padding:10px 14px;border:0;border-radius:6px;background:#174a66;color:white;font:inherit;cursor:pointer;text-decoration:none;margin:4px}button.secondary{background:#596c77}button.danger{background:#944444}small{color:#576b78}.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.intro{color:#526572;max-width:700px}.notice{background:#eef4f6;padding:14px;border-radius:8px}.panel h2{margin-top:0}.preview-line{border-bottom:1px solid #e4e8eb;padding:8px 0}.savebar{display:flex;gap:12px;align-items:center;flex-wrap:wrap}button:disabled{opacity:.55;cursor:wait}textarea{font:inherit;width:100%;min-height:90px;padding:12px;border:1px solid #b9c4cb;border-radius:6px;box-sizing:border-box}.scroll{overflow:auto}#status{font-weight:600}a{color:#125477}</style></head><body><main><p><a href="index.html">← Back to Administration</a></p><h1>Service Schedule</h1><p class="intro">Manage upcoming services and share important updates with the congregation.</p>
+<section class="panel"><h2>Service Announcement</h2><p>Use this for weather notices, changes to service arrangements, or other important information. Leave it blank to remove the announcement.</p><label for="announcement"><strong>Message to congregants</strong></label><textarea id="announcement" maxlength="1000" placeholder="Due to snow, Friday evening services will be held on Zoom only."></textarea><p><small>If a service is moving online, also change its location in the schedule below.</small></p></section>
+<section class="panel"><h2>Upcoming Services</h2><p>Change a service's date, time, location, or description. Use Cancel to remove a scheduled service.</p><div class="scroll"><table><thead><tr><th>Date</th><th>Time</th><th>Location</th><th>Service</th><th></th></tr></thead><tbody id="rows"></tbody></table></div><div class="actions"><button id="add">+ Add Service</button><button class="secondary" id="reload">Discard Changes</button></div></section>
+<section class="panel"><h2>Preview</h2><p class="intro">This is how the upcoming schedule will read to visitors.</p><div id="announcement-preview" class="notice" hidden></div><p id="next">Loading…</p><div id="preview"></div></section>
+<section class="panel"><h2>Save Changes</h2><p>Save your updates to the congregation website. They may take a few minutes to appear.</p><div class="savebar"><button id="publish">Save and Publish</button><a href="../services.html" target="_blank" rel="noopener">View Services Page ↗</a></div><p id="status" role="status"></p></section></main><script src="cti-auth.js?v=1"></script><script src="../assets/service-calendar.js?v=20261021a"></script><script>
+let published={services:[],overrides:[],announcement:''},working=[],cancelled=new Set(),expectedSha=null;
 const rows=document.getElementById('rows'),status=document.getElementById('status');
 const dateOK=s=>/^\d{4}-\d{2}-\d{2}$/.test(s||'');
 function render(){
@@ -20,31 +24,30 @@ function render(){
  preview();
 }
 function preview(){
+ const note=document.getElementById('announcement-preview'),message=document.getElementById('announcement').value.trim();note.textContent=message;note.hidden=!message;
  const ordered=[...working].filter(s=>dateOK(s.date)).sort((a,b)=>a.date.localeCompare(b.date));
  const next=ordered[0],fmt=d=>new Intl.DateTimeFormat('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(d+'T12:00:00Z'));
  document.getElementById('next').textContent=next?'Next listed service: '+fmt(next.date)+' — '+next.description:'No services in preview.';
- const list=document.getElementById('preview');list.replaceChildren(...ordered.slice(0,20).map(s=>{const p=document.createElement('p');p.textContent=fmt(s.date)+' · '+(s.time||'Time to be confirmed')+' — '+s.description;return p}));
+ const list=document.getElementById('preview');list.replaceChildren(...ordered.slice(0,20).map(s=>{const p=document.createElement('p');p.className='preview-line';p.textContent=fmt(s.date)+' · '+(s.time||'Time to be confirmed')+' · '+(s.location||'Location to be confirmed')+' — '+s.description;return p}));
 }
-function load(){
+document.getElementById('announcement').addEventListener('input',preview);
+async function load(){
  status.textContent='Loading published calendar…';
- fetch('../content/services.json?refresh='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(data=>{
-  published={services:data.services||[],overrides:data.overrides||[],announcement:data.announcement||''};document.getElementById('announcement').value=published.announcement;
+ try{const file=await CTIAuth.api('/file',{path:'content/services.json'});expectedSha=file.sha;const data=JSON.parse(file.content);
+  published={services:data.services||[],overrides:data.overrides||[],announcement:data.announcement||''};
+  document.getElementById('announcement').value=published.announcement;
   working=CTIServiceCalendar.build(published).map(s=>({...s}));
   cancelled=new Set((published.overrides||[]).filter(o=>o.cancelled).map(o=>o.id));
-  render();status.textContent='Loaded rolling 12-month calendar, including saved overrides.';
- }).catch(e=>{status.textContent='Unable to load calendar: '+e.message});
+  render();status.textContent='Schedule loaded.';
+ }catch(e){status.textContent='Unable to load schedule: '+e.message;}
 }
 document.getElementById('add').onclick=()=>{
  working.push({id:'manual:'+Date.now(),date:'',time:'7:30 PM',location:'In person',description:'Special Service'});render();
 };
 document.getElementById('reload').onclick=()=>{if(confirm('Discard unsaved edits?'))load()};
-document.getElementById('import').onchange=async e=>{
- const file=e.target.files[0];if(!file)return;
- try{const data=JSON.parse(await file.text());published={services:data.services||[],overrides:data.overrides||[]};working=CTIServiceCalendar.build(published).map(s=>({...s}));cancelled=new Set(published.overrides.filter(o=>o.cancelled).map(o=>o.id));render();status.textContent='Imported calendar.'}
- catch(err){status.textContent='Import failed: '+err.message}e.target.value='';
-};
-document.getElementById('download').onclick=()=>{
- if(working.some(s=>!dateOK(s.date)||!s.description||!s.location)){status.textContent='Correct missing dates, descriptions or locations.';return}
+document.getElementById('publish').onclick=async()=>{
+ if(working.some(s=>!dateOK(s.date)||!s.description||!s.location)){status.textContent='Please complete the date, location, and description for each service.';return}
+ if(!expectedSha){status.textContent='Please reload the schedule before saving.';return}
  const overrides=new Map((published.overrides||[]).map(o=>[o.id,o]));
  const originals=new Map(CTIServiceCalendar.build({services:published.services,overrides:[]}).map(s=>[s.id,s]));
  for(const id of cancelled)overrides.set(id,{id,cancelled:true});
@@ -56,10 +59,10 @@ document.getElementById('download').onclick=()=>{
   else overrides.delete(s.id);
  }
  const output={services:manual,overrides:[...overrides.values()],announcement:document.getElementById('announcement').value.trim()};
- const blob=new Blob([JSON.stringify(output,null,2)+'\n'],{type:'application/json'});
- const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='services.json';a.click();
- setTimeout(()=>URL.revokeObjectURL(a.href),1000);
- status.textContent='Exported services.json. Upload it to content/services.json on GitHub to publish.';
+ const button=document.getElementById('publish');button.disabled=true;status.textContent='Saving your changes…';
+ try{await CTIAuth.api('/publish',{path:'content/services.json',content:JSON.stringify(output,null,2)+'\n',expectedSha});status.textContent='Changes saved. They should appear on the website shortly.';await load();}
+ catch(e){status.textContent='Unable to save: '+e.message}
+ finally{button.disabled=false}
 };
-load();
+CTIAuth.requireRole(true).then(load).catch(()=>{status.textContent='Please sign in as a website administrator.'});
 </script></body></html>
