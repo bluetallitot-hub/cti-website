@@ -66,6 +66,24 @@ if(url.pathname==='/newsletter/import-meldados'&&request.method==='POST'){
  if(Array.isArray(b.rememberedByUpdates)&&b.rememberedByUpdates.length<=150)for(const proposal of b.rememberedByUpdates){if(typeof proposal.recordId!=='string'||typeof proposal.name!=='string'||typeof proposal.rememberedBy!=='string'||!proposal.rememberedBy.trim()||proposal.rememberedBy.length>500)continue;const record=doc.people.find(x=>x.id===proposal.recordId&&norm(x.englishName)===norm(proposal.name));if(!record){exceptions.push(proposal.name+': memorial identity not confirmed');continue}if(record.rememberedBy){if(record.rememberedBy.trim()!==proposal.rememberedBy.trim())exceptions.push(proposal.name+': Remembered By differs');continue}record.rememberedBy=proposal.rememberedBy.trim();updated++}
  if(added||updated)await save(env,'content/meldados.json',JSON.stringify(doc,null,2)+'\\n',file.sha,'Import newsletter memorial records');return respond({ok:true,added,updated,exceptions});
 }
+if(url.pathname==='/events/list'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const f=await gh(env,'content/events.json');const d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));return respond({events:d.events||[]})}
+if(url.pathname==='/events/add'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json();
+ if(typeof b.title!=='string'||!b.title.trim()||b.title.length>140||typeof b.date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(b.date)||Number.isNaN(Date.parse(b.date+'T12:00:00Z')))return respond({error:'A valid event name and date are required'},400);
+ for(const [k,max] of [['time',80],['location',160],['description',1500]])if(typeof b[k]!=='string'||b[k].length>max)return respond({error:'Invalid '+k},400);
+ const f=await gh(env,'content/events.json'),d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));if(!Array.isArray(d.events))d.events=[];
+ if(d.events.some(e=>e.date===b.date&&e.title.toLowerCase().trim()===b.title.toLowerCase().trim()))return respond({error:'An event with that title and date already exists'},409);
+ d.events.push({id:'event-'+crypto.randomUUID(),title:b.title.trim(),date:b.date,time:b.time.trim(),location:b.location.trim(),description:b.description.trim()});
+ await save(env,'content/events.json',JSON.stringify(d,null,2)+'\n',f.sha,'Add upcoming CTI event: '+b.title.trim());return respond({ok:true});
+}
+if(url.pathname==='/events/delete'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);const b=await request.json();
+ if(typeof b.id!=='string'||typeof b.date!=='string'||typeof b.title!=='string')return respond({error:'Invalid event'},400);
+ const f=await gh(env,'content/events.json'),d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));const i=d.events.findIndex(e=>e.id===b.id&&e.date===b.date&&e.title===b.title);
+ if(i<0)return respond({error:'Event no longer exists. Reload the list.'},409);d.events.splice(i,1);
+ await save(env,'content/events.json',JSON.stringify(d,null,2)+'\n',f.sha,'Remove CTI event: '+b.title);return respond({ok:true});
+}
 if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();
