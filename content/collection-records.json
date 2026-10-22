@@ -831,10 +831,10 @@
       "id": "CTI-013",
       "collection": "gallery",
       "status": "active",
-      "title": "CTI Ladies' Auxiliary officers, historical newspaper group photograph. Digitally restored and colorized interp",
+      "title": "Ladies' Auxiliary officers — historical photograph",
       "caption": "CTI Ladies' Auxiliary officers, historical newspaper group photograph. Digitally restored and colorized interpretation; date and individual identities pending verification.",
       "date": "",
-      "description": "CTI Ladies' Auxiliary officers in a historical newspaper group photograph. The displayed version is digitally restored and colorized.",
+      "description": "Historical Ladies' Auxiliary officers photograph. The colorized gallery presentation and black-and-white archival restoration represent the same original image, preserved together in the source binder with the Leo Gibely dedication article (CTI-018). Their proximity does not establish that the Ladies' Auxiliary organized that event.",
       "source": "CTI historical photograph collection (individual provenance unverified)",
       "citation": "",
       "attribution": "",
@@ -891,7 +891,29 @@
         "status": "existing-caption-pending-source-comparison",
         "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
         "verbatimOriginalCaption": false
-      }
+      },
+      "relatedRecords": [
+        "CTI-018",
+        "CTI-019"
+      ],
+      "alternateImageVersions": [
+        {
+          "type": "original",
+          "path": "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg",
+          "verification": "pending"
+        },
+        {
+          "type": "black-and-white restoration",
+          "path": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
+          "record": "CTI-019"
+        },
+        {
+          "type": "colorized interpretation",
+          "path": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
+          "record": "CTI-013"
+        }
+      ],
+      "binderContext": "Filed together with the Leo Gibely article (CTI-018); organizational connection not established by the article."
     },
     {
       "id": "CTI-014",
@@ -1323,16 +1345,22 @@
       },
       "articleHtml": "",
       "articleMigrationSource": "historical-record.html",
-      "archiveItemImage": "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg"
+      "archiveItemImage": "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg",
+      "relatedRecords": [
+        "CTI-013",
+        "CTI-019"
+      ],
+      "binderContext": "Filed together with the Ladies' Auxiliary officers photograph; the article does not identify the Ladies' Auxiliary as organizers of the dedication.",
+      "portraitResearchStatus": "A verified portrait of Leo Gibely has not yet been identified; do not substitute an unidentified person or use the Ladies' Auxiliary photograph as a portrait."
     },
     {
       "id": "CTI-019",
       "collection": "archive",
-      "status": "active",
+      "status": "inactive",
       "title": "Ladies' Auxiliary officers",
       "caption": "",
       "date": "Undated · CTI historical photograph",
-      "description": "Historical group photograph of Ladies' Auxiliary officers; date not established.",
+      "description": "Archival black-and-white presentation of the same Ladies' Auxiliary photograph represented by CTI-013. Preserved as an inactive legacy archive record to retain existing paths and historical asset references; do not count as a separate photograph.",
       "source": "CTI historical photograph collection (publication unidentified)",
       "citation": "",
       "attribution": "",
@@ -1391,7 +1419,12 @@
       },
       "articleHtml": "",
       "articleMigrationSource": "historical-record.html",
-      "archiveItemImage": "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg"
+      "archiveItemImage": "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg",
+      "duplicateOf": "CTI-013",
+      "relatedRecords": [
+        "CTI-013",
+        "CTI-018"
+      ]
     },
     {
       "id": "CTI-020",
