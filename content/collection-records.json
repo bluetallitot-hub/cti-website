@@ -78,7 +78,7 @@
     {
       "id": "CTI-002",
       "collection": "gallery",
-      "status": "active",
+      "status": "inactive",
       "title": "Brenda Barry, Millie Becker, and Jerry Pressman renovating CTI at 8 Pierpont Street, 1981.",
       "caption": "Brenda Barry, Millie Becker, and Jerry Pressman renovating CTI at 8 Pierpont Street, 1981.",
       "date": "1981",
@@ -138,7 +138,9 @@
         "status": "existing-caption-pending-source-comparison",
         "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
         "verbatimOriginalCaption": false
-      }
+      },
+      "duplicateOf": "CTI-017",
+      "recordIdentityNote": "Retained for provenance and old links; merged into CTI-017. Do not approve or publish independently."
     },
     {
       "id": "CTI-003",
@@ -1236,7 +1238,14 @@
           "driveUrl": "https://drive.google.com/file/d/17tMEfTLNr8HuxzP3csRQnSJH10As2z22/view?usp=drivesdk",
           "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
         }
-      ]
+      ],
+      "photoAlbum": true,
+      "photoAlbumCaption": "Brenda Barry, Millie Becker, and Jerry Pressman renovating CTI at 8 Pierpont Street, 1981.",
+      "photoAlbumImage": "assets/images/gallery/Congregation Renovation in Peabody.png",
+      "relatedLegacyRecordIds": [
+        "CTI-002"
+      ],
+      "recordIdentityNote": "CTI-002 is the photographic presentation of the same 1981 Salem Evening News archival item; CTI-017 is canonical. Original clipping and transcription retained here."
     },
     {
       "id": "CTI-018",
