@@ -170,7 +170,7 @@ if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
 }
 
 const collectionPath='content/collection-submissions.json';
-const decodeCollection=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\\s/g,''))));
+const decodeCollection=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
 if(url.pathname==='/collections/list'&&request.method==='GET'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const [index,gallery,archives]=await Promise.all([gh(env,collectionPath),gh(env,'content/gallery.json'),gh(env,'content/archive-additions.json')]);
@@ -207,8 +207,8 @@ if(url.pathname==='/collections/submit'&&request.method==='POST'){
  if(!Array.isArray(b.files)||b.files.length<1||b.files.length>6)return respond({error:'Select one to six files'},400);
  let total=0;
  for(const file of b.files){
-  if(typeof file.name!=='string'||typeof file.data!=='string'||!/^[-a-zA-Z0-9_. ]{1,120}\\.(jpg|jpeg|png|webp|pdf)$/i.test(file.name)||!(/^[A-Za-z0-9+/]+={0,2}$/.test(file.data)))return respond({error:'Invalid file'},400);
-  if(b.collection==='gallery'&&/\\.pdf$/i.test(file.name))return respond({error:'Gallery accepts photographs only'},400);
+  if(typeof file.name!=='string'||typeof file.data!=='string'||!/^[-a-zA-Z0-9_. ]{1,120}\.(jpg|jpeg|png|webp|pdf)$/i.test(file.name)||!(/^[A-Za-z0-9+/]+={0,2}$/.test(file.data)))return respond({error:'Invalid file'},400);
+  if(b.collection==='gallery'&&/\.pdf$/i.test(file.name))return respond({error:'Gallery accepts photographs only'},400);
   total+=file.data.length;
  }
  if(total>10000000)return respond({error:'Total file size exceeds approximately 7 MB'},400);
