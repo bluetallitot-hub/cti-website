@@ -558,7 +558,11 @@
         "status": "existing-caption-pending-source-comparison",
         "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
         "verbatimOriginalCaption": false
-      }
+      },
+      "relatedRecords": [
+        "CTI-021"
+      ],
+      "relationshipNote": "Related regional Peabody Jewish history: see CTI-021, the 1995 Jewish Advocate feature on Ashkenazi and Sephardic traditions. This 1958 Peabody Hebrew School menorah photograph is not documented as a CTI event or as illustrating that article."
     },
     {
       "id": "CTI-009",
@@ -1622,7 +1626,11 @@
         }
       ],
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "relatedRecords": [
+        "CTI-008"
+      ],
+      "relationshipNote": "Related regional Peabody Jewish history: see CTI-008, a 1958 Peabody Hebrew School menorah photograph. The photo is not documented as a CTI event or as part of this 1995 article."
     },
     {
       "id": "CTI-022",
