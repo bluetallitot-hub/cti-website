@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "nextRecordNumber": 28,
+  "nextRecordNumber": 29,
   "items": [
     {
       "id": "CTI-001",
@@ -1996,6 +1996,37 @@
       "articleHtml": "<p class=\"archive-article-date\"><time>February 10, 2022</time></p><p>Congregation Tifereth Israel, a Sephardic synagogue, is turning 100 years old on Feb. 15.</p><p>To celebrate the occasion, the temple will be holding an anniversary dinner at the Continental Restaurant on Jun. 12, 2022. More details about the dinner will be released in their newsletter.</p><p>Congregation Tifereth Israel was founded on Feb. 15, 1922 by several Sephardic Jewish families who had immigrated to Peabody and Salem primarily from the country of Turkey.</p><p>Sephardic Jews, or Sephardim, are members of the Jewish Diaspora whose ancestors settled in the Iberian Peninsula, known today as Spain and Portugal. The term Sephardim comes from the Hebrew word Sefarad, or Spain.</p><p>Sephardic Jews also lived in Turkey and Greece and, in the early 1910s, some immigrated to the United States because of the uprisings, revolutions and wars in Turkey.</p><p>According to the Jewish Heritage Center of the North Shore, located in Lynn, one of the cities Sephardic Jewish immigrants were attracted to was Peabody, namely because of the leather industry. Many Sephardic settlers were shoemakers by trade.</p><p>“The prosperity of the town was thus attributed to the leather businesses, which continued to grow,” the Heritage Center said. “The more factories, the more businesses.”</p><p>As for Congregation Tifereth Israel, many of those same immigrants who fled Turkey went on to found the synagogue. They were forced to live as Catholics in Spain but carried their traditions in secret with their families. The Congregation’s foundation came at a time when Sephardic Jews were not as comfortable with the newly-formed Ashkenazi synagogue. Ashkenazi Jews are those who descend from Eastern European countries such as Poland, Russia or Lithuania.</p><p>Sephardic services vary from Ashkenazi styles; for instance, Sephardic Jews may speak Ladino — a Judeo-Spanish language — as opposed to Yiddish, a Judeo-Germanic language spoken by many Ashkenazi families.</p><p>Despite their differences, Tifereth Israel is on very good terms with the Ashkenazi community in Peabody and welcomes them into their congregation, as they too are family. From humble beginnings to finding community in Peabody, this congregation has lasted for 100 years and seeks to keep moving forward year after year, generation after generation.</p>",
       "articleMigrationSource": "press/press-2022-centennial.html",
       "archiveItemImage": "assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg"
+    },
+    {
+      "id": "CTI-028",
+      "collection": "archive",
+      "status": "draft",
+      "title": "Peabody Temple To Mark Its 60th Anniversary",
+      "caption": "",
+      "date": "1982 (inferred from 1922 founding; verify printed date)",
+      "description": "Newspaper clipping about Congregation Tifereth Israel's 60th anniversary. Original JHC archive scan I-581-01-15-031.jpg. Source publication, exact date, full transcription and rights review pending.",
+      "source": "Unidentified newspaper clipping in JHC I-581 Box 1 Folder 15",
+      "citation": "I-581-01-15-031.jpg; newspaper title and date pending verification",
+      "attribution": "",
+      "transcript": "",
+      "articleHtml": "",
+      "originalImage": null,
+      "archiveItemImage": null,
+      "restoredImage": null,
+      "thumbnailImage": null,
+      "providedBy": "",
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "I-581-01-15-031.jpg",
+          "driveFileId": "1PTo7FCxKWA9Jl1doxRPy-vscKLDRd1qt",
+          "relation": "Original clipping scan; source publication and printed date pending verification"
+        }
+      ],
+      "preservationStatus": "original-in-google-drive-not-yet-published",
+      "captionProvenance": {
+        "status": "awaiting-original-caption-transcription",
+        "note": "Newspaper headline visually confirmed from Drive scan; no article text yet."
+      }
     }
   ],
   "assetPolicy": {
