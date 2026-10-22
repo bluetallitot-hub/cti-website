@@ -418,7 +418,9 @@
           "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
         }
       ],
-      "providedBy": "Joe Gibely"
+      "providedBy": "Joe Gibely",
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-007",
@@ -1044,7 +1046,9 @@
           "driveUrl": "https://drive.google.com/file/d/1atKuuvmv6h7y1-iZNE-VvOvJukoYZxKh/view?usp=drivesdk",
           "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
         }
-      ]
+      ],
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-016",
@@ -1151,7 +1155,9 @@
       "primaryArchivalDocument": "assets/archive/originals/cti-1979-joseph-gibely-address.pdf",
       "primaryDocumentDriveFileId": "10U5tL4vEJp5TmwHVhViDFtw4eqXuUdbr",
       "sourcePageScanRange": "I-581-01-15-012.jpg through I-581-01-15-023.jpg",
-      "sourcePageCount": 12
+      "sourcePageCount": 12,
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-017",
@@ -1247,7 +1253,9 @@
       ],
       "recordIdentityNote": "CTI-002 is the photographic presentation of the same 1981 Salem Evening News archival item; CTI-017 is canonical. Original clipping and transcription retained here.",
       "photoSourceReference": "JHC I-581-01-15-025.jpg, original newspaper clipping with printed photograph and caption",
-      "photoSourceDriveFileId": "17tMEfTLNr8HuxzP3csRQnSJH10As2z22"
+      "photoSourceDriveFileId": "17tMEfTLNr8HuxzP3csRQnSJH10As2z22",
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-018",
@@ -1483,7 +1491,9 @@
           "relation": "Drive source for 1992 stitched article"
         }
       ],
-      "providedBy": "I. Herbster"
+      "providedBy": "I. Herbster",
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-021",
@@ -1570,7 +1580,9 @@
           "driveUrl": "https://drive.google.com/file/d/1tJ_5tMkDwGzLn3WUYhAt4MTMYPJQr89z/view?usp=drivesdk",
           "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
         }
-      ]
+      ],
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-022",
@@ -1741,7 +1753,9 @@
       "photoAlbumImage": "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
       "photoAlbumOriginalImage": "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
       "photoAlbumCaption": "Morris Gibely and family, 1914",
-      "photoAlbumNote": "Associated historical family photograph from the 2001 article; gallery image opens its preserved photograph, not the newspaper clipping."
+      "photoAlbumNote": "Associated historical family photograph from the 2001 article; gallery image opens its preserved photograph, not the newspaper clipping.",
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-024",
@@ -2046,7 +2060,9 @@
       "captionProvenance": {
         "status": "awaiting-original-caption-transcription",
         "note": "Newspaper headline visually confirmed from Drive scan; no article text yet."
-      }
+      },
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-029",
@@ -2078,7 +2094,9 @@
       "captionProvenance": {
         "status": "unapproved-awaiting-admin-identification",
         "note": "Identification is provisional; original source scan retained in Google Drive."
-      }
+      },
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-030",
@@ -2110,7 +2128,9 @@
       "captionProvenance": {
         "status": "unapproved-awaiting-admin-identification",
         "note": "Identification is provisional; original source scan retained in Google Drive."
-      }
+      },
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-031",
@@ -2142,7 +2162,9 @@
       "captionProvenance": {
         "status": "unapproved-awaiting-admin-identification",
         "note": "Identification is provisional; original source scan retained in Google Drive."
-      }
+      },
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-032",
@@ -2174,7 +2196,9 @@
       "captionProvenance": {
         "status": "unapproved-awaiting-admin-identification",
         "note": "Identification is provisional; original source scan retained in Google Drive."
-      }
+      },
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-033",
@@ -2206,7 +2230,9 @@
       "captionProvenance": {
         "status": "unapproved-awaiting-admin-identification",
         "note": "Identification is provisional; original source scan retained in Google Drive."
-      }
+      },
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-034",
@@ -2238,7 +2264,9 @@
       "captionProvenance": {
         "status": "unapproved-awaiting-admin-identification",
         "note": "Identification is provisional; original source scan retained in Google Drive."
-      }
+      },
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-035",
@@ -2270,7 +2298,9 @@
       "captionProvenance": {
         "status": "unapproved-awaiting-admin-identification",
         "note": "Identification is provisional; original source scan retained in Google Drive."
-      }
+      },
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-036",
@@ -2302,7 +2332,9 @@
       "captionProvenance": {
         "status": "unapproved-awaiting-admin-identification",
         "note": "Identification is provisional; original source scan retained in Google Drive."
-      }
+      },
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     },
     {
       "id": "CTI-037",
@@ -2352,7 +2384,9 @@
       "captionProvenance": {
         "status": "unapproved-awaiting-admin-identification",
         "note": "Identification is provisional; original source scan retained in Google Drive."
-      }
+      },
+      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
+      "archiveAcknowledgmentSource": "JHC archival material"
     }
   ],
   "assetPolicy": {
