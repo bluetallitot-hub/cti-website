@@ -1142,25 +1142,27 @@
       "collection": "archive",
       "status": "active",
       "title": "Sephardic traditions live on at Tifereth Israel in Peabody",
-      "caption": "",
+      "caption": "Elliot Hershoff, Doris Hershoff, and Joanne Pressman near the ark at CTI, photographed for the 2019 Jewish Journal feature.",
       "date": "2019 · Jewish Journal",
-      "description": "",
+      "description": "Photograph of Elliot Hershoff, Doris Hershoff, and Joanne Pressman near the ark at Congregation Tifereth Israel, accompanying the August 29, 2019 Jewish Journal article.",
       "source": "Jewish Journal",
       "citation": "August 29, 2019; article by Michael Wittner",
       "attribution": "Michael Wittner",
       "transcript": "",
-      "indexImage": "",
-      "archiveImage": "",
+      "indexImage": "https://images.openai.com/static-rsc-1/XxoSSTbFAB6YwXVdnJS3zWBcEzXrugtlNLZS7C6sr5FXPH_KdsVv-6LD-SUSnBqX2PMk1l3ph0C7BhdKxu07uYAFj-LvhOLhyFR-85NVViZdZ9yspgyj74j2-EBeMyNV",
+      "archiveImage": "https://images.openai.com/static-rsc-1/XxoSSTbFAB6YwXVdnJS3zWBcEzXrugtlNLZS7C6sr5FXPH_KdsVv-6LD-SUSnBqX2PMk1l3ph0C7BhdKxu07uYAFj-LvhOLhyFR-85NVViZdZ9yspgyj74j2-EBeMyNV",
       "pdf": null,
       "sourcePage": "archives/archive-2019-sephardic-traditions.html",
-      "originalFilenames": [],
+      "originalFilenames": [
+        "CTI_2019_Ark_Hershoff_Pressman_JewishJournal.jpg (catalogued proposed filename; local copy not verified)"
+      ],
       "files": [],
       "originalImage": null,
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": null,
-      "preservationStatus": "awaiting-original-verification",
+      "preservationStatus": "external-image-referenced-original-not-preserved",
       "imageVersions": [],
       "thumbnailSpecification": {
         "width": 800,
@@ -1169,7 +1171,8 @@
         "noAddedText": true,
         "background": "appropriate neutral or complementary",
         "retouched": true
-      }
+      },
+      "existingImageCandidate": "https://images.openai.com/static-rsc-1/XxoSSTbFAB6YwXVdnJS3zWBcEzXrugtlNLZS7C6sr5FXPH_KdsVv-6LD-SUSnBqX2PMk1l3ph0C7BhdKxu07uYAFj-LvhOLhyFR-85NVViZdZ9yspgyj74j2-EBeMyNV"
     },
     {
       "id": "CTI-027",
