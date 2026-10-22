@@ -1,0 +1,59 @@
+name: File CTI-026 intake assets
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/file-cti-026-intake.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Move and register preserved files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path(".")
+          source=root/"assets/new/CTI-026-2019-jewish-journal-photo.png"
+          thumbnail=root/"assets/new/CTI-026-THM-1.png"
+          assert source.is_file() and thumbnail.is_file(), "CTI-026 files missing from intake"
+          destination=root/"assets/images/archive/CTI-026-2019-jewish-journal-photo.png"
+          thumb_dest=root/"assets/collections/CTI-026-THM-1.png"
+          destination.parent.mkdir(parents=True,exist_ok=True)
+          thumb_dest.parent.mkdir(parents=True,exist_ok=True)
+          source.rename(destination)
+          thumbnail.rename(thumb_dest)
+          homepage=root/"index.html"
+          homepage.write_text(homepage.read_text().replace("assets/new/CTI-026-2019-jewish-journal-photo.png",destination.as_posix()))
+          db=root/"content/collection-records.json"
+          data=json.loads(db.read_text())
+          item=next(x for x in data["items"] if x["id"]=="CTI-026")
+          for key in ("indexImage","archiveImage","existingImageCandidate"):
+            item[key]=destination.as_posix()
+          item["thumbnailImage"]=thumb_dest.as_posix()
+          for v in item.get("imageVersions",[]):
+            if v.get("type")=="THM":
+              v["path"]=thumb_dest.as_posix()
+              v["derivedFrom"]=destination.as_posix()
+          db.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n")
+          manifest=root/"content/thumbnail-build-manifest.json"
+          if manifest.exists():
+            m=json.loads(manifest.read_text())
+            for entry in m.get("items",[]):
+              if entry.get("id")=="CTI-026":
+                entry.update({"status":"generated","source":destination.as_posix(),"thumbnail":thumb_dest.as_posix()})
+            manifest.write_text(json.dumps(m,ensure_ascii=False,indent=2)+"\n")
+          PY
+      - name: Commit filed assets and metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A assets/new/CTI-026-2019-jewish-journal-photo.png assets/new/CTI-026-THM-1.png assets/images/archive/CTI-026-2019-jewish-journal-photo.png assets/collections/CTI-026-THM-1.png index.html content/collection-records.json content/thumbnail-build-manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "File CTI-026 intake assets into permanent collection directories"
+            git push
+          fi
