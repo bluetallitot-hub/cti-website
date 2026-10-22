@@ -1149,8 +1149,8 @@
       "citation": "August 29, 2019; article by Michael Wittner",
       "attribution": "Michael Wittner",
       "transcript": "",
-      "indexImage": "https://images.openai.com/static-rsc-1/XxoSSTbFAB6YwXVdnJS3zWBcEzXrugtlNLZS7C6sr5FXPH_KdsVv-6LD-SUSnBqX2PMk1l3ph0C7BhdKxu07uYAFj-LvhOLhyFR-85NVViZdZ9yspgyj74j2-EBeMyNV",
-      "archiveImage": "https://images.openai.com/static-rsc-1/XxoSSTbFAB6YwXVdnJS3zWBcEzXrugtlNLZS7C6sr5FXPH_KdsVv-6LD-SUSnBqX2PMk1l3ph0C7BhdKxu07uYAFj-LvhOLhyFR-85NVViZdZ9yspgyj74j2-EBeMyNV",
+      "indexImage": "assets/new/CTI-026-2019-jewish-journal-photo.png",
+      "archiveImage": "assets/new/CTI-026-2019-jewish-journal-photo.png",
       "pdf": null,
       "sourcePage": "archives/archive-2019-sephardic-traditions.html",
       "originalFilenames": [
@@ -1161,9 +1161,16 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": null,
-      "preservationStatus": "external-image-referenced-original-not-preserved",
-      "imageVersions": [],
+      "thumbnailImage": "assets/new/CTI-026-THM-1.png",
+      "preservationStatus": "local-copy-preserved-original-source-unverified",
+      "imageVersions": [
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/new/CTI-026-THM-1.png",
+          "derivedFrom": "assets/new/CTI-026-2019-jewish-journal-photo.png"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -1172,7 +1179,7 @@
         "background": "appropriate neutral or complementary",
         "retouched": true
       },
-      "existingImageCandidate": "https://images.openai.com/static-rsc-1/XxoSSTbFAB6YwXVdnJS3zWBcEzXrugtlNLZS7C6sr5FXPH_KdsVv-6LD-SUSnBqX2PMk1l3ph0C7BhdKxu07uYAFj-LvhOLhyFR-85NVViZdZ9yspgyj74j2-EBeMyNV"
+      "existingImageCandidate": "assets/new/CTI-026-2019-jewish-journal-photo.png"
     },
     {
       "id": "CTI-027",
