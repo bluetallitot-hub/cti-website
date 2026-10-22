@@ -24,7 +24,8 @@ document.getElementById('publish-announcement').onclick=async()=>{
   published.announcement=data.announcement;published.announcementExpiresAfter=data.announcementExpiresAfter;
   message.textContent=announcement?'Announcement published. It will disappear after the next scheduled service.':'Announcement removed from the website.';
   if(sendEmail){try{const sent=await CTIAuth.api('/announcements/email',{announcement});message.textContent+=' Test email sent to '+sent.recipientCount+' recipient.';}catch(emailError){message.textContent+=' Email was not sent: '+emailError.message;}}
-  document.getElementById('email-announcement').checked=false;
+  emailCheckbox.checked=false;
+  announcementButton.textContent='Publish Announcement Only';
  }catch(e){message.textContent='Unable to publish: '+e.message}
  finally{button.disabled=false}
 };
