@@ -40,7 +40,7 @@ if(url.pathname==='/announcements/email'&&request.method==='POST'){
  const recipients=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]').filter(s=>typeof s==='string').map(s=>s.trim()).filter(Boolean);
  if(!recipients.length)return respond({error:'Test recipient list is not configured'},503);
  if(recipients.some(s=>!^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)))return respond({error:'Invalid recipient email configuration'},503);
- const sender=env.CTI_EMAIL_FROM;
+ const sender=env.CTI_ANNOUNCE_EMAIL_FROM;
  if(!sender||!/^([^<>]*<)?[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+>?$/.test(sender))return respond({error:'Sender address is not configured'},503);
  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:sender,to:recipients,subject:'CTI Service Announcement',text:body.announcement.trim()+'\\n\\nCongregation Tifereth Israel\\nhttps://bluetallitot-hub.github.io/cti-website/services.html'})});
  const result=await response.json();
