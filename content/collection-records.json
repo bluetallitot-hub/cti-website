@@ -140,7 +140,8 @@
         "verbatimOriginalCaption": false
       },
       "duplicateOf": "CTI-017",
-      "recordIdentityNote": "Retained for provenance and old links; merged into CTI-017. Do not approve or publish independently."
+      "recordIdentityNote": "Retained for provenance and old links; merged into CTI-017. Do not approve or publish independently.",
+      "relatedArchiveRecordId": "CTI-017"
     },
     {
       "id": "CTI-003",
@@ -207,7 +208,8 @@
         "verbatimOriginalCaption": false
       },
       "duplicateOf": "CTI-015",
-      "recordIdentityNote": "Same 1976 Joseph Gibely sanctuary photograph used by CTI-015. Retained as an inactive legacy gallery record for provenance and existing links; do not publish as a separate historical item."
+      "recordIdentityNote": "Same 1976 Joseph Gibely sanctuary photograph used by CTI-015. Retained as an inactive legacy gallery record for provenance and existing links; do not publish as a separate historical item.",
+      "relatedArchiveRecordId": "CTI-015"
     },
     {
       "id": "CTI-004",
@@ -564,7 +566,8 @@
       ],
       "relationshipNote": "1958 photograph retained within CTI-021 relatedHistoricalImages; not documented as appearing in the 1995 article.",
       "duplicateOf": "CTI-021",
-      "recordIdentityNote": "Merged into CTI-021 as a related regional historical image, NOT an identical photograph or duplicate source. Legacy record retained for provenance and old links; no independent publication."
+      "recordIdentityNote": "Merged into CTI-021 as a related regional historical image, NOT an identical photograph or duplicate source. Legacy record retained for provenance and old links; no independent publication.",
+      "relatedArchiveRecordId": "CTI-021"
     },
     {
       "id": "CTI-009",
@@ -1016,7 +1019,7 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/collections/CTI-015-THM-1.png",
+      "thumbnailImage": "assets/collections/CTI-003-THM-1.png",
       "preservationStatus": "source-scan-present-provenance-documented",
       "imageVersions": [
         {
@@ -1083,7 +1086,28 @@
         "CTI-003"
       ],
       "galleryPhotoLegacyRecord": "CTI-003",
-      "photoRelationshipNote": "The enhanced 1976 Joseph Gibely sanctuary photograph was previously published separately as CTI-003. This is the same photograph associated with this October 4, 1976 Peabody Times article; retain one canonical historical record."
+      "photoRelationshipNote": "The enhanced 1976 Joseph Gibely sanctuary photograph was previously published separately as CTI-003. This is the same photograph associated with this October 4, 1976 Peabody Times article; retain one canonical historical record.",
+      "relatedGalleryRecordId": "CTI-003",
+      "galleryPhoto": {
+        "legacyRecordId": "CTI-003",
+        "title": "Joseph Gibely in the CTI sanctuary, 1976.",
+        "caption": "Joseph Gibely in the CTI sanctuary, 1976.",
+        "date": "1976",
+        "description": "Photograph of Joseph Gibely inside the Congregation Tifereth Israel sanctuary in 1976.",
+        "source": "CTI historical photograph collection (individual provenance unverified)",
+        "enhancedImage": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
+        "thumbnail": "assets/collections/CTI-003-THM-1.png",
+        "originalImage": null,
+        "originalFilenames": [
+          "cti-1976-joseph-gibely-photo-enhanced.png"
+        ],
+        "provenanceNote": "Historical photograph associated with this article."
+      },
+      "presentationOrder": [
+        "enhanced-photo-index",
+        "article-secondary"
+      ],
+      "articleImage": "assets/archive/originals/I-581-01-15-033-web.jpg"
     },
     {
       "id": "CTI-016",
@@ -1219,7 +1243,7 @@
       "originalImageCaption": "Members of Congregation Tifereth Israel, from left, Brenda Barry of Salem, Millie Becker of Danvers and Jerry Pressman of Peabody renovate facilities at 8 Pierpont St., Peabody, in preparation for the religious school scheduled to open in September. An open house is scheduled for May 26.",
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/collections/CTI-017-THM-1.png",
+      "thumbnailImage": "assets/collections/CTI-002-THM-1.png",
       "preservationStatus": "repository-source-file-present-originality-unverified",
       "imageVersions": [
         {
@@ -1290,7 +1314,31 @@
       "photoSourceReference": "JHC I-581-01-15-025.jpg, original newspaper clipping with printed photograph and caption",
       "photoSourceDriveFileId": "17tMEfTLNr8HuxzP3csRQnSJH10As2z22",
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "relatedGalleryRecordId": "CTI-002",
+      "galleryPhoto": {
+        "legacyRecordId": "CTI-002",
+        "title": "Brenda Barry, Millie Becker, and Jerry Pressman renovating CTI at 8 Pierpont Street, 1981.",
+        "caption": "Brenda Barry, Millie Becker, and Jerry Pressman renovating CTI at 8 Pierpont Street, 1981.",
+        "date": "1981",
+        "description": "Brenda Barry, Millie Becker, and Jerry Pressman during renovations at Congregation Tifereth Israel, 8 Pierpont Street, in 1981.",
+        "source": "CTI historical photograph collection (individual provenance unverified)",
+        "enhancedImage": "assets/images/gallery/Congregation Renovation in Peabody.png",
+        "thumbnail": "assets/collections/CTI-002-THM-1.png",
+        "originalImage": null,
+        "originalFilenames": [
+          "Congregation Renovation in Peabody.png"
+        ],
+        "provenanceNote": "Historical photograph associated with this article."
+      },
+      "presentationOrder": [
+        "enhanced-photo-index",
+        "article-secondary"
+      ],
+      "articleImage": "assets/archive/originals/I-581-01-15-025-web.jpg",
+      "relatedRecords": [
+        "CTI-002"
+      ]
     },
     {
       "id": "CTI-018",
@@ -1633,7 +1681,9 @@
       ],
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
       "archiveAcknowledgmentSource": "JHC archival material",
-      "relatedRecords": [],
+      "relatedRecords": [
+        "CTI-008"
+      ],
       "relationshipNote": "Related regional Peabody Jewish history: see CTI-008, a 1958 Peabody Hebrew School menorah photograph. The photo is not documented as a CTI event or as part of this 1995 article.",
       "relatedHistoricalImages": [
         {
@@ -1671,7 +1721,23 @@
         "enhanced-photo-index",
         "article-secondary"
       ],
-      "displayRelationshipNote": "Use enhanced 1958 Peabody Hebrew School photo as archive index image; 1995 article is secondary linked content. Sources remain historically distinct."
+      "displayRelationshipNote": "Use enhanced 1958 Peabody Hebrew School photo as archive index image; 1995 article is secondary linked content. Sources remain historically distinct.",
+      "relatedGalleryRecordId": "CTI-008",
+      "galleryPhoto": {
+        "legacyRecordId": "CTI-008",
+        "title": "Menorah lighting at the Peabody Hebrew School, 1958. Regional Jewish history, not identified as CTI.",
+        "caption": "Menorah lighting at the Peabody Hebrew School, 1958. Regional Jewish history, not identified as CTI.",
+        "date": "1958",
+        "description": "1958 menorah lighting at the Peabody Hebrew School. Regional Jewish history; affiliation with CTI is not established.",
+        "source": "Peabody Hebrew School historical photograph (CTI affiliation unverified)",
+        "enhancedImage": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+        "thumbnail": "assets/collections/CTI-008-THM-1.png",
+        "originalImage": null,
+        "originalFilenames": [
+          "peabody-hebrew-school-menorah-1958.png"
+        ],
+        "provenanceNote": "Related regional photo, not an illustration originally published with the article."
+      }
     },
     {
       "id": "CTI-022",
