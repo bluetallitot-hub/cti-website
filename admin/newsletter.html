@@ -6,7 +6,7 @@
 import * as pdfjs from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.min.mjs';
 pdfjs.GlobalWorkerOptions.workerSrc='https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.min.mjs';
 const pdf=document.getElementById('pdf'),button=document.getElementById('upload'),details=document.getElementById('details'),status=document.getElementById('status');
-const months='January February March April May June July August September October November December'.split(' ');const monthInput=document.getElementById('issue-month'),yearInput=document.getElementById('issue-year'),volumeInput=document.getElementById('issue-volume'),numberInput=document.getElementById('issue-number'),detected=document.getElementById('detected');months.forEach((m,i)=>{const o=document.createElement('option');o.value=String(i+1).padStart(2,'0');o.textContent=m;monthInput.append(o)});
+const months='January February March April May June July August September October November December'.split(' ');const monthInput=document.getElementById('issue-month'),yearInput=document.getElementById('issue-year'),volumeInput=document.getElementById('issue-volume'),numberInput=document.getElementById('issue-number'),detected=document.getElementById('detected');monthInput.add(new Option('Select month',''));months.forEach((m,i)=>{const o=document.createElement('option');o.value=String(i+1).padStart(2,'0');o.textContent=m;monthInput.append(o)});
 let issue=null;
 const datePattern=/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s*,?\s*((?:19|20)\d{2})\b/gi;
 function findIssue(items,pageHeight){
@@ -27,7 +27,7 @@ pdf.onchange=async()=>{
   const doc=await pdfjs.getDocument({data:new Uint8Array(await file.arrayBuffer())}).promise;
   const page=await doc.getPage(1),content=await page.getTextContent();
   const found=findIssue(content.items,page.view[3]);
-  if(!found){status.textContent='Could not identify the issue month and year from the first page. Please check the PDF.';return}
+  if(!found){issue={month:''};monthInput.value='';yearInput.value='';volumeInput.value='';numberInput.value='';detected.textContent='Date not detected. Enter the month and year manually before uploading.';details.hidden=false;button.disabled=false;return}
   const v=found.text.match(/\bvol(?:ume)?\.?\s*(\d+)\s*(?:[,;:.\-]\s*)?no\.?\s*(\d+)\b/i);
   issue={month:found.month};monthInput.value=found.month.slice(5);yearInput.value=found.month.slice(0,4);volumeInput.value=v?v[1]:'';numberInput.value=v?v[2]:'';detected.textContent='Detected: '+found.label+' · Volume '+(v?v[1]:'not found')+' · Number '+(v?v[2]:'not found')+'. You can edit any field.';details.hidden=false;
   button.disabled=false;
