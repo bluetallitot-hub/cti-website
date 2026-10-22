@@ -71,22 +71,22 @@ if(url.pathname==='/events/add'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();
  if(typeof b.title!=='string'||!b.title.trim()||b.title.length>140||typeof b.date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(b.date)||Number(b.date.slice(0,4))<2000||Number.isNaN(Date.parse(b.date+'T12:00:00Z'))||new Date(b.date+'T12:00:00Z').toISOString().slice(0,10)!==b.date)return respond({error:'A valid event name and date are required'},400);
- for(const [k,max] of [['time',80],['location',160],['description',1500]])if(typeof b[k]!=='string'||b[k].length>max)return respond({error:'Invalid '+k},400);
+ for(const [k,max] of [['time',80],['endTime',80],['location',160],['description',1500]])if(typeof b[k]!=='string'||b[k].length>max)return respond({error:'Invalid '+k},400);
  const f=await gh(env,'content/events.json'),d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));if(!Array.isArray(d.events))d.events=[];
  if(d.events.some(e=>e.date===b.date&&e.title.toLowerCase().trim()===b.title.toLowerCase().trim()))return respond({error:'An event with that title and date already exists'},409);
- d.events.push({id:'event-'+crypto.randomUUID(),title:b.title.trim(),date:b.date,time:b.time.trim(),location:b.location.trim(),description:b.description.trim()});
+ d.events.push({id:'event-'+crypto.randomUUID(),title:b.title.trim(),date:b.date,time:b.time.trim(),endTime:b.endTime.trim(),location:b.location.trim(),description:b.description.trim()});
  await save(env,'content/events.json',JSON.stringify(d,null,2)+'\n',f.sha,'Add upcoming CTI event: '+b.title.trim());return respond({ok:true});
 }
 if(url.pathname==='/events/edit'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();
  if(typeof b.id!=='string'||typeof b.originalDate!=='string'||typeof b.originalTitle!=='string'||typeof b.title!=='string'||!b.title.trim()||b.title.length>140||typeof b.date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(b.date)||Number(b.date.slice(0,4))<2000||!Number.isFinite(Date.parse(b.date+'T12:00:00Z'))||new Date(b.date+'T12:00:00Z').toISOString().slice(0,10)!==b.date)return respond({error:'Enter a valid event name and date'},400);
- for(const [k,max] of [['time',80],['location',160],['description',1500]])if(typeof b[k]!=='string'||b[k].length>max)return respond({error:'Invalid '+k},400);
+ for(const [k,max] of [['time',80],['endTime',80],['location',160],['description',1500]])if(typeof b[k]!=='string'||b[k].length>max)return respond({error:'Invalid '+k},400);
  const f=await gh(env,'content/events.json'),d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
  const e=d.events.find(x=>x.id===b.id&&x.date===b.originalDate&&x.title===b.originalTitle);
  if(!e)return respond({error:'Event changed since you opened it. Reload and try again.'},409);
  if(d.events.some(x=>x.id!==b.id&&x.date===b.date&&x.title.toLowerCase().trim()===b.title.toLowerCase().trim()))return respond({error:'An event with that name and date already exists'},409);
- Object.assign(e,{title:b.title.trim(),date:b.date,time:b.time.trim(),location:b.location.trim(),description:b.description.trim()});
+ Object.assign(e,{title:b.title.trim(),date:b.date,time:b.time.trim(),endTime:b.endTime.trim(),location:b.location.trim(),description:b.description.trim()});
  await save(env,'content/events.json',JSON.stringify(d,null,2)+'\n',f.sha,'Edit CTI event: '+e.title);
  return respond({ok:true});
 }
