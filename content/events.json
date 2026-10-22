@@ -17,14 +17,6 @@
       "description": "Temporary test event for checking editing and deletion. Not a real CTI event."
     },
     {
-      "id": "cti-test-lecture-2026",
-      "title": "TEST ONLY — Guest Lecture",
-      "date": "2026-11-15",
-      "time": "11:00 AM",
-      "location": "CTI Sanctuary",
-      "description": "Temporary test event for checking editing and deletion. Not a real CTI event."
-    },
-    {
       "id": "cti-test-coffee-2026",
       "title": "TEST ONLY — Coffee Hour",
       "date": "2026-11-22",
