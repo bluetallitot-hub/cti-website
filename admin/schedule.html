@@ -31,7 +31,6 @@ document.getElementById('publish-announcement').onclick=async()=>{
 };
 document.getElementById('clear-announcement').onclick=async()=>{
  const button=document.getElementById('clear-announcement'),message=document.getElementById('announcement-status');
- if(!confirm('Remove the announcement from the website?'))return;
  button.disabled=true;message.textContent='Removing announcement…';
  try{
   await CTIAuth.requireRole(true);
