@@ -19,13 +19,15 @@ pdf.onchange=async()=>{
   const page=await doc.getPage(1),content=await page.getTextContent();
   const text=content.items.map(x=>x.str).join(' ').replace(/\s+/g,' ');
   
-  const matches=[...text.matchAll(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+((?:19|20)\d{2})\b/gi)];
-  const unique=[...new Set(matches.map(m=>m[2]+'-'+String(names.findIndex(n=>n.toLowerCase()===m[1].toLowerCase())+1).padStart(2,'0')))];
-  if(unique.length!==1){status.textContent='Could not confidently identify a single issue month on the first page. Please contact the website administrator.';return}
-  month=unique[0];
+  // Issue date is in the masthead; dates elsewhere on page are not issue dates.
+  const masthead=content.items.filter(x=>x.str&&x.transform?.[5]>(page.view[3]*0.62)).sort((a,b)=>b.transform[5]-a.transform[5]).map(x=>x.str).join(' ');
+  const pattern=/\\b(January|February|March|April|May|June|July|August|September|October|November|December)\\s*[,\\s]+\\s*((?:19|20)\\d{2})\\b/gi;
+  const issue=[...masthead.matchAll(pattern)][0]||[...text.matchAll(pattern)][0];
+  if(!issue){status.textContent='Issue month not found. Please check the PDF masthead.';return}
+  month=issue[2]+'-'+String(names.findIndex(n=>n.toLowerCase()===issue[1].toLowerCase())+1).padStart(2,'0');
   const v=text.match(/\b(?:vol(?:ume)?\.?\s*\d+\s*[,;:-]?\s*(?:no\.?|number|issue|#)\s*\d+)/i);volume=v?v[0]:'';
   const p=document.createElement('p');p.textContent='Issue identified: '+names[Number(month.slice(5))-1]+' '+month.slice(0,4)+(volume?' — '+volume:'');details.append(p);
-  const pages=[];for(let i=1;i<=doc.numPages;i++){const pg=await doc.getPage(i),tc=await pg.getTextContent();pages.push(tc.items.filter(t=>t.str?.trim()).map(t=>({str:t.str.trim(),x:t.transform[4],y:pg.view[3]-t.transform[5]})))}parsed=parseCTINewsletter(pages,month);try{const state=await CTIAuth.api('/meldados/state');reconcile(state.people||[]);reconcileDonations(state.people||[])}catch(e){parsed.exceptions.push('Meldathos database could not be loaded: '+e.message)}box('summary').textContent='Pages: '+doc.numPages+' · '+text.slice(0,300);show('events',parsed.events);show('meldados',parsed.meldados.map(x=>x.name+' — '+x.day+' '+x.month+' ('+x.status+')'+(x.rememberedBy?' — Remembered By: '+x.rememberedBy:'')));show('birthdays',[...parsed.birthdays.map(x=>'Birthday: '+x.text),...parsed.anniversaries.map(x=>'Anniversary: '+x.text)]);show('exceptions',parsed.exceptions);show('donations',parsed.donations.map(x=>x.name+' — remembered by '+x.rememberedBy+' ('+x.relationship+')'));box('analysis').hidden=false;box('import-events').disabled=!parsed.events.length;box('import-meldados').disabled=!parsed.meldados.some(x=>x.importable||x.rememberedByUpdate)&&!parsed.donations.some(x=>x.update);button.disabled=false;
+  const pages=[];for(let i=1;i<=doc.numPages;i++){const pg=await doc.getPage(i),tc=await pg.getTextContent();pages.push(tc.items.filter(t=>t.str?.trim()).map(t=>({str:t.str.trim(),x:t.transform[4],y:pg.view[3]-t.transform[5]})))}parsed=parseCTINewsletter(pages,month);try{const state=await CTIAuth.api('/meldados/state');reconcile(state.people||[]);reconcileDonations(state.people||[])}catch(e){parsed.exceptions.push('Meldathos database could not be loaded: '+e.message)}box('summary').textContent='Pages: '+doc.numPages+' · '+text.slice(0,300);show('events',parsed.events);show('meldados',parsed.meldados.map(x=>x.name+' — '+x.day+' '+x.month+' ('+x.status+')'+(x.rememberedBy?' — Remembered By: '+x.rememberedBy:'')));show('birthdays',[...parsed.birthdays.map(x=>'Birthday: '+(x.name+' — '+x.date)),...parsed.anniversaries.map(x=>'Anniversary: '+x.name+' — '+x.date)]);show('exceptions',parsed.exceptions);show('donations',parsed.donations.map(x=>x.name+' — remembered by '+x.rememberedBy+' ('+x.relationship+')'));box('analysis').hidden=false;box('import-events').disabled=!parsed.events.length;box('import-meldados').disabled=!parsed.meldados.some(x=>x.importable||x.rememberedByUpdate)&&!parsed.donations.some(x=>x.update);button.disabled=false;
  }catch(e){status.textContent='Unable to read this PDF: '+e.message}
 };
 
