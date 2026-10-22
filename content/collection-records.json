@@ -2013,6 +2013,12 @@
           "path": "assets/collections/CTI-025-THM-1.png",
           "derivedFrom": "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
           "method": "full-image contain with softened background"
+        },
+        {
+          "type": "ARTICLE",
+          "version": 1,
+          "path": "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg",
+          "note": "Original published-letter image, separate from portrait photograph"
         }
       ],
       "thumbnailSpecification": {
@@ -2027,14 +2033,17 @@
       "thumbnailStatus": "local-file-linked",
       "originalStatus": "unverified-do-not-count-as-confirmed-absent",
       "assetInventory": {
-        "sourceFiles": [],
+        "sourceFiles": [
+          "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg"
+        ],
         "presentationFiles": [
           "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
           "assets/collections/CTI-025-THM-1.png"
         ],
         "fileReferences": [
           "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
-          "assets/collections/CTI-025-THM-1.png"
+          "assets/collections/CTI-025-THM-1.png",
+          "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg"
         ],
         "sourceVerification": "no confirmed original-source file linked",
         "captionVerification": "printed caption not transcribed"
@@ -2046,7 +2055,22 @@
       },
       "articleHtml": "<p class=\"archive-article-date\"><time>November 1, 2018</time></p><p>On October 18, 2018, the Jewish Journal published an article by Michael Wittner titled “Jewish Peabody: Pride and Perseverance.” I was dismayed to read that there were only three synagogues in Peabody, when there are four. Our synagogue, Congregation Tifereth Israel, is a small but active congregation on Pierpont Street in Peabody.</p><p>Our synagogue is 96 years old and has been at the same location for over 60 years. We are a small but active community. We hold services every Friday night and Saturday morning, as well as all the holidays. We have an active Sisterhood and Men’s Club, and have several social events throughout the year.</p><p>We are currently without a rabbi, and are searching for one. Our congregation is made up of Jews from all backgrounds, including Sephardic and Ashkenazi. We are a welcoming congregation, and invite anyone who is interested to attend our services and events.</p><p>I hope this letter sheds some light on who we are.</p><p><strong>Elliot Hershoff</strong><br>President<br>Congregation Tifereth Israel<br>Peabody</p><p><a href=\"https://jewishjournal.org/2018/11/01/letter-to-the-editor-peabody-congregation-feels-ignored/\">View the original at Jewish Journal →</a></p>",
       "articleMigrationSource": "archives/archive-2018-hershoff-letter.html",
-      "archiveItemImage": "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg"
+      "archiveItemImage": "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg",
+      "galleryPhoto": {
+        "title": "Elliot Hershoff — portrait associated with his 2018 letter",
+        "caption": "Portrait of Elliot Hershoff associated with his 2018 letter to the Jewish Journal.",
+        "enhancedImage": "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
+        "thumbnail": "assets/collections/CTI-025-THM-1.png",
+        "originalImage": null,
+        "provenanceNote": "Portrait used for presentation; photographic original and identification verification remain outstanding. Do not identify the newspaper clipping as the original portrait."
+      },
+      "relatedGalleryRecordId": "CTI-025",
+      "articleImage": "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg",
+      "presentationOrder": [
+        "enhanced-photo-index",
+        "article-secondary"
+      ],
+      "recordPresentationNote": "Archive index uses portrait thumbnail linking to gallery photograph; article title links to archived letter. Original newspaper clipping remains secondary archive source; no verified original portrait is available."
     },
     {
       "id": "CTI-026",
