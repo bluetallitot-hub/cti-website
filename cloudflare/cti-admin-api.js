@@ -94,10 +94,25 @@ if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
  const index=await gh(env,'content/newsletters.json');
  const data=JSON.parse(new TextDecoder().decode(un64(index.content.replace(/\s/g,''))));
  if(data.issues.some(x=>x.date===date))return respond({error:'This month already has a newsletter'},409);
- await gh(env,path,'PUT',{message:'Upload '+title,content:b.pdf,branch:'main'});
+ // An archived PDF may exist even when its index entry was removed.
+ // Reuse only if the uploaded bytes match the existing Git blob exactly.
+ let existing=null;
+ try{existing=await gh(env,path)}catch(e){if(e.status!==404)throw e}
+ let reusedExistingPdf=false;
+ if(existing){
+   const bytes=un64(b.pdf),prefix=enc.encode('blob '+bytes.length+'\0');
+   const blob=new Uint8Array(prefix.length+bytes.length);
+   blob.set(prefix);blob.set(bytes,prefix.length);
+   const hash=new Uint8Array(await crypto.subtle.digest('SHA-1',blob));
+   const sha=Array.from(hash,x=>x.toString(16).padStart(2,'0')).join('');
+   if(sha!==existing.sha)return respond({error:'A different PDF is already stored for this issue month. The original was preserved. Contact the administrator to review the conflict.'},409);
+   reusedExistingPdf=true;
+ }else{
+   await gh(env,path,'PUT',{message:'Upload '+title,content:b.pdf,branch:'main'});
+ }
  data.issues.unshift({title,date,volume:String(b.volume||'').slice(0,80),description:'CTI congregational newsletter.',url:path});
  await save(env,'content/newsletters.json',JSON.stringify(data,null,2)+'\n',index.sha,'Publish '+title);
- return respond({ok:true,title});
+ return respond({ok:true,title,reusedExistingPdf});
 }
 if(url.pathname==='/publish'&&request.method==='POST'){if(role!=='admin')return respond({error:'Administrator access required'},403);const b=await request.json();if(!adminFiles.has(b.path)||typeof b.content!=='string'||b.content.length>2000000||typeof b.expectedSha!=='string')return respond({error:'File or content not allowed'},400);JSON.parse(b.content);const file=await gh(env,b.path);if(file.sha!==b.expectedSha)return respond({error:'File changed since it was opened'},409);await save(env,b.path,b.content,file.sha,'CTI administration: update '+b.path);return respond({ok:true})}
 return respond({error:'Not found'},404)
