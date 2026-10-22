@@ -66,5 +66,7 @@
       "location": "In person",
       "description": "Monthly Shabbat Service"
     }
-  ]
+  ],
+  "announcement": "test announcement",
+  "announcementExpiresAfter": "2026-11-13"
 }
