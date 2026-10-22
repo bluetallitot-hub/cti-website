@@ -357,7 +357,7 @@
       ],
       "files": [],
       "originalImage": "assets/archive/originals/I-581-01-15-024-web.jpg",
-      "originalImageCaption": null,
+      "originalImageCaption": "CONGREGATION TIFERETH ISRAEL — 1922",
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-006-THM-1.png",
@@ -416,7 +416,8 @@
           "driveUrl": "https://drive.google.com/file/d/1SW9UJ2czwOPa1bk5ysIjcPl_Rlm_qoLp/view?usp=drivesdk",
           "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
         }
-      ]
+      ],
+      "providedBy": "Joe Gibely"
     },
     {
       "id": "CTI-007",
@@ -1450,12 +1451,6 @@
       "articleMigrationSource": "press/press-1992-origins.html",
       "archiveItemImage": "assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg",
       "googleDriveSourceFiles": [
-        {
-          "fileName": "I-581-01-15-024.jpg",
-          "driveFileId": "1SW9UJ2czwOPa1bk5ysIjcPl_Rlm_qoLp",
-          "driveUrl": "https://drive.google.com/file/d/1SW9UJ2czwOPa1bk5ysIjcPl_Rlm_qoLp/view?usp=drivesdk",
-          "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
-        },
         {
           "fileName": "I-581-01-15-026.jpg",
           "driveFileId": "1PTo7FCxKWA9Jl1doxRPy-vscKLDRd1qt",
