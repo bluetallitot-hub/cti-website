@@ -232,6 +232,12 @@ if(url.pathname==='/collections/submit'&&request.method==='POST'){
   if(typeof b[key]!=='string'||b[key].length>max)return respond({error:'Invalid '+key},400);
  if(!b.title.trim()||!b.caption.trim())return respond({error:'Title and caption are required'},400);
  if(!Array.isArray(b.files)||b.files.length<1||b.files.length>6)return respond({error:'Select one to six files'},400);
+ if(b.collection==='archive'){
+  if(!b.fileRoles||b.fileRoles.index!==0||b.fileRoles.original!==1||!Number.isInteger(b.fileRoles.index)||!Number.isInteger(b.fileRoles.original)||b.files.length<2||b.files.length>3||!(b.fileRoles.pdf===null||(b.fileRoles.pdf===2&&b.files.length===3)))return respond({error:'Archive requires index and original pictures, with optional PDF'},400);
+  const image=/\\.(jpg|jpeg|png|webp)$/i;
+  if(!image.test(b.files[0].name)||!image.test(b.files[1].name)||(b.files.length===3&&!/\\.pdf$/i.test(b.files[2].name)))return respond({error:'Choose two images and an optional PDF'},400);
+ }
+
  let total=0;
  for(const file of b.files){
   if(typeof file.name!=='string'||typeof file.data!=='string'||!/^[-a-zA-Z0-9_. ]{1,120}\.(jpg|jpeg|png|webp|pdf)$/i.test(file.name)||!(/^[A-Za-z0-9+/]+={0,2}$/.test(file.data)))return respond({error:'Invalid file'},400);
@@ -246,7 +252,7 @@ if(url.pathname==='/collections/submit'&&request.method==='POST'){
   paths.push(path);
  }
  d.items=d.items||[];
- d.items.push({id,collection:b.collection,status:'active',title:b.title.trim(),date:b.date.trim(),description:b.description.trim(),source:b.source.trim(),citation:b.citation.trim(),attribution:b.attribution.trim(),caption:b.caption.trim(),transcript:b.transcript.trim(),image:paths[0],files:paths,submittedAt:new Date().toISOString()});
+ d.items.push({id,collection:b.collection,status:'active',title:b.title.trim(),date:b.date.trim(),description:b.description.trim(),source:b.source.trim(),citation:b.citation.trim(),attribution:b.attribution.trim(),caption:b.caption.trim(),transcript:b.transcript.trim(),image:b.collection==='archive'?paths[1]:paths[0],indexImage:b.collection==='archive'?paths[0]:null,archiveImage:b.collection==='archive'?paths[1]:null,pdf:b.collection==='archive'&&paths[2]?paths[2]:null,files:paths,submittedAt:new Date().toISOString()});
  await save(env,collectionPath,JSON.stringify(d,null,2)+'\n',f.sha,'Queue CTI collection submission '+id);
  return respond({ok:true,id,status:'active'});
 }
