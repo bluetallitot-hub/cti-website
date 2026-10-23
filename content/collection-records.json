@@ -418,8 +418,10 @@
         {
           "fileName": "I-581-01-15-024.jpg",
           "driveFileId": "1SW9UJ2czwOPa1bk5ysIjcPl_Rlm_qoLp",
-          "driveUrl": "https://drive.google.com/file/d/1SW9UJ2czwOPa1bk5ysIjcPl_Rlm_qoLp/view?usp=drivesdk",
-          "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
+          "driveUrl": "https://drive.google.com/file/d/1SW9UJ2czwOPa1bk5ysIjcPl_Rlm_qoLp/view",
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": "assets/archive/originals/I-581-01-15-024-web.jpg",
+          "repositoryStatus": "verified-present"
         }
       ],
       "providedBy": "Joe Gibely",
@@ -1108,8 +1110,10 @@
         {
           "fileName": "I-581-01-15-033.jpg",
           "driveFileId": "1atKuuvmv6h7y1-iZNE-VvOvJukoYZxKh",
-          "driveUrl": "https://drive.google.com/file/d/1atKuuvmv6h7y1-iZNE-VvOvJukoYZxKh/view?usp=drivesdk",
-          "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
+          "driveUrl": "https://drive.google.com/file/d/1atKuuvmv6h7y1-iZNE-VvOvJukoYZxKh/view",
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": "assets/archive/originals/I-581-01-15-033-web.jpg",
+          "repositoryStatus": "verified-present"
         }
       ],
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
@@ -1242,6 +1246,22 @@
           "driveFileId": "10U5tL4vEJp5TmwHVhViDFtw4eqXuUdbr",
           "driveUrl": "https://drive.google.com/file/d/10U5tL4vEJp5TmwHVhViDFtw4eqXuUdbr/view?usp=drivesdk",
           "relation": "Related working transcription or original document"
+        },
+        {
+          "fileName": "I-581-01-15-012.jpg",
+          "driveFileId": "11YKnoH2vCBbiAyy7lDsapADvTYmqxre0",
+          "driveUrl": "https://drive.google.com/file/d/11YKnoH2vCBbiAyy7lDsapADvTYmqxre0/view",
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
+        },
+        {
+          "fileName": "I-581-01-15-023.jpg",
+          "driveFileId": "1YnOaWyeQ6i20dzieFZWyEfdV3hxsWD_t",
+          "driveUrl": "https://drive.google.com/file/d/1YnOaWyeQ6i20dzieFZWyEfdV3hxsWD_t/view",
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "primaryArchivalDocument": "assets/archive/originals/cti-1979-joseph-gibely-address.pdf",
@@ -1333,8 +1353,10 @@
         {
           "fileName": "I-581-01-15-025.jpg",
           "driveFileId": "17tMEfTLNr8HuxzP3csRQnSJH10As2z22",
-          "driveUrl": "https://drive.google.com/file/d/17tMEfTLNr8HuxzP3csRQnSJH10As2z22/view?usp=drivesdk",
-          "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
+          "driveUrl": "https://drive.google.com/file/d/17tMEfTLNr8HuxzP3csRQnSJH10As2z22/view",
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": "assets/archive/originals/I-581-01-15-025-web.jpg",
+          "repositoryStatus": "verified-present"
         }
       ],
       "photoAlbum": true,
@@ -1600,22 +1622,34 @@
       "archiveItemImage": "assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg",
       "googleDriveSourceFiles": [
         {
-          "fileName": "I-581-01-15-026.jpg",
-          "driveFileId": "1PTo7FCxKWA9Jl1doxRPy-vscKLDRd1qt",
-          "driveUrl": "https://drive.google.com/file/d/1PTo7FCxKWA9Jl1doxRPy-vscKLDRd1qt/view?usp=drivesdk",
-          "relation": "Drive source for 1992 stitched article"
-        },
-        {
-          "fileName": "I-581-01-15-027.jpg",
-          "driveFileId": "1S9fou-l29YMxm285q0IO3ADIyNKRso2j",
-          "driveUrl": "https://drive.google.com/file/d/1S9fou-l29YMxm285q0IO3ADIyNKRso2j/view?usp=drivesdk",
-          "relation": "Drive source for 1992 stitched article"
-        },
-        {
           "fileName": "I-581-01-15-026-027-stitched-1992-In-Search-of-a-Home.jpg",
           "driveFileId": "1wylck_ujo6x9Q5B9jF9A73QAW0CqeIi_",
           "driveUrl": "https://drive.google.com/file/d/1wylck_ujo6x9Q5B9jF9A73QAW0CqeIi_/view?usp=drivesdk",
           "relation": "Drive source for 1992 stitched article"
+        },
+        {
+          "fileName": "I-581-01-15-024.jpg",
+          "driveFileId": "1SW9UJ2czwOPa1bk5ysIjcPl_Rlm_qoLp",
+          "driveUrl": "https://drive.google.com/file/d/1SW9UJ2czwOPa1bk5ysIjcPl_Rlm_qoLp/view",
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": "assets/archive/originals/I-581-01-15-024-web.jpg",
+          "repositoryStatus": "verified-present"
+        },
+        {
+          "fileName": "I-581-01-15-026.jpg",
+          "driveFileId": "1PTo7FCxKWA9Jl1doxRPy-vscKLDRd1qt",
+          "driveUrl": "https://drive.google.com/file/d/1PTo7FCxKWA9Jl1doxRPy-vscKLDRd1qt/view",
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
+        },
+        {
+          "fileName": "I-581-01-15-027.jpg",
+          "driveFileId": "1S9fou-l29YMxm285q0IO3ADIyNKRso2j",
+          "driveUrl": "https://drive.google.com/file/d/1S9fou-l29YMxm285q0IO3ADIyNKRso2j/view",
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "providedBy": "I. Herbster",
@@ -1708,8 +1742,10 @@
         {
           "fileName": "I-581-01-15-035.jpg",
           "driveFileId": "1tJ_5tMkDwGzLn3WUYhAt4MTMYPJQr89z",
-          "driveUrl": "https://drive.google.com/file/d/1tJ_5tMkDwGzLn3WUYhAt4MTMYPJQr89z/view?usp=drivesdk",
-          "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
+          "driveUrl": "https://drive.google.com/file/d/1tJ_5tMkDwGzLn3WUYhAt4MTMYPJQr89z/view",
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": "assets/archive/originals/I-581-01-15-035-web.jpg",
+          "repositoryStatus": "verified-present"
         }
       ],
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
@@ -1933,8 +1969,10 @@
         {
           "fileName": "I-581-01-15-034.jpg",
           "driveFileId": "1kVKT7C2FVyUUu6exyT13cXuFjAfW8nco",
-          "driveUrl": "https://drive.google.com/file/d/1kVKT7C2FVyUUu6exyT13cXuFjAfW8nco/view?usp=drivesdk",
-          "relation": "Drive-held source counterpart; item identity must still be confirmed against scan"
+          "driveUrl": "https://drive.google.com/file/d/1kVKT7C2FVyUUu6exyT13cXuFjAfW8nco/view",
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": "assets/archive/originals/I-581-01-15-034-web.jpg",
+          "repositoryStatus": "verified-present"
         }
       ],
       "photoAlbum": true,
@@ -2290,8 +2328,11 @@
       "googleDriveSourceFiles": [
         {
           "fileName": "I-581-01-15-031.jpg",
-          "driveFileId": "1PTo7FCxKWA9Jl1doxRPy-vscKLDRd1qt",
-          "relation": "Original clipping scan; source publication and printed date pending verification"
+          "driveFileId": "1aDHlofzL0ad0JLqVUehHY32Yl8IFi7Iw",
+          "driveUrl": "https://drive.google.com/file/d/1aDHlofzL0ad0JLqVUehHY32Yl8IFi7Iw/view",
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "preservationStatus": "original-in-google-drive-not-yet-published",
@@ -2325,7 +2366,9 @@
           "fileName": "I-581-01-15-001.jpg",
           "driveFileId": "1c3S9eDobgvLYMqWlWIkHKGRgPn_643wA",
           "driveUrl": "https://drive.google.com/file/d/1c3S9eDobgvLYMqWlWIkHKGRgPn_643wA/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "preservationStatus": "source-in-drive-awaiting-review-and-publication",
@@ -2359,7 +2402,9 @@
           "fileName": "I-581-01-15-002.jpg",
           "driveFileId": "1OhtBLjqktwz3HbHVF9i2DL6gN-Fxsj5D",
           "driveUrl": "https://drive.google.com/file/d/1OhtBLjqktwz3HbHVF9i2DL6gN-Fxsj5D/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "preservationStatus": "source-in-drive-awaiting-review-and-publication",
@@ -2393,7 +2438,9 @@
           "fileName": "I-581-01-15-003.jpg",
           "driveFileId": "1aA0R8m0J6zM6ptWBzkLtLW754cDuU3NF",
           "driveUrl": "https://drive.google.com/file/d/1aA0R8m0J6zM6ptWBzkLtLW754cDuU3NF/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "preservationStatus": "source-in-drive-awaiting-review-and-publication",
@@ -2427,7 +2474,9 @@
           "fileName": "I-581-01-15-004.jpg",
           "driveFileId": "1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla",
           "driveUrl": "https://drive.google.com/file/d/1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "preservationStatus": "source-in-drive-awaiting-review-and-publication",
@@ -2461,7 +2510,9 @@
           "fileName": "I-581-01-15-005.jpg",
           "driveFileId": "1Q8qWhl-jaJwlSfOmIhqMjumVtQ97XIsB",
           "driveUrl": "https://drive.google.com/file/d/1Q8qWhl-jaJwlSfOmIhqMjumVtQ97XIsB/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "preservationStatus": "source-in-drive-awaiting-review-and-publication",
@@ -2495,7 +2546,9 @@
           "fileName": "I-581-01-15-006.jpg",
           "driveFileId": "1Y1jETYnlaHNutJiPI_hEPy-OfzqGOmy9",
           "driveUrl": "https://drive.google.com/file/d/1Y1jETYnlaHNutJiPI_hEPy-OfzqGOmy9/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": "assets/archive/originals/I-581-01-15-006-web.jpg",
+          "repositoryStatus": "verified-present"
         }
       ],
       "preservationStatus": "source-in-drive-awaiting-review-and-publication",
@@ -2529,7 +2582,9 @@
           "fileName": "I-581-01-15-007.jpg",
           "driveFileId": "158r8qgFpLEPSnb9dl0vs0uqhzju0H3GF",
           "driveUrl": "https://drive.google.com/file/d/158r8qgFpLEPSnb9dl0vs0uqhzju0H3GF/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "preservationStatus": "source-in-drive-awaiting-review-and-publication",
@@ -2563,7 +2618,9 @@
           "fileName": "I-581-01-15-008.jpg",
           "driveFileId": "1guPkHsazf_u5UYuAuvkAzrTrWz1Zmfo6",
           "driveUrl": "https://drive.google.com/file/d/1guPkHsazf_u5UYuAuvkAzrTrWz1Zmfo6/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "preservationStatus": "source-in-drive-awaiting-review-and-publication",
@@ -2597,25 +2654,33 @@
           "fileName": "I-581-01-15-028.jpg",
           "driveFileId": "1lInlRrup7obdix-ZZrF3MwobJJOJKA04",
           "driveUrl": "https://drive.google.com/file/d/1lInlRrup7obdix-ZZrF3MwobJJOJKA04/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         },
         {
           "fileName": "I-581-01-15-029.jpg",
           "driveFileId": "1hKHQsmvELogPOSV6FB5OFAhggfSlqE-T",
           "driveUrl": "https://drive.google.com/file/d/1hKHQsmvELogPOSV6FB5OFAhggfSlqE-T/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         },
         {
           "fileName": "I-581-01-15-030.jpg",
           "driveFileId": "1ykEu6ibaz9jtKAp5CVyafaSIGYUQ5VkW",
           "driveUrl": "https://drive.google.com/file/d/1ykEu6ibaz9jtKAp5CVyafaSIGYUQ5VkW/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         },
         {
           "fileName": "I-581-01-15-032.jpg",
           "driveFileId": "1IQF9HqISmccARXDCZo2erwL31IEC5Ju3",
           "driveUrl": "https://drive.google.com/file/d/1IQF9HqISmccARXDCZo2erwL31IEC5Ju3/view",
-          "relation": "Original scan in canonical JHC Drive archive; visual identification provisional"
+          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "preservationStatus": "source-in-drive-awaiting-review-and-publication",
