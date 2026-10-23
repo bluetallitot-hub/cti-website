@@ -426,7 +426,19 @@
       ],
       "providedBy": "Joe Gibely",
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [
+          {
+            "fileName": "I-581-01-15-024.jpg",
+            "path": "assets/archive/originals/I-581-01-15-024-web.jpg",
+            "driveFileId": "1SW9UJ2czwOPa1bk5ysIjcPl_Rlm_qoLp"
+          }
+        ],
+        "driveOnlyFiles": [],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-007",
@@ -1144,7 +1156,19 @@
         "article-secondary"
       ],
       "articleImage": "assets/archive/originals/I-581-01-15-033-web.jpg",
-      "recordPresentationNote": "Archive index thumbnail opens gallery detail for enhanced Joseph Gibely portrait; article title opens transcribed 1976 Peabody Times article. Archival newspaper scan remains secondary original article source."
+      "recordPresentationNote": "Archive index thumbnail opens gallery detail for enhanced Joseph Gibely portrait; article title opens transcribed 1976 Peabody Times article. Archival newspaper scan remains secondary original article source.",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [
+          {
+            "fileName": "I-581-01-15-033.jpg",
+            "path": "assets/archive/originals/I-581-01-15-033-web.jpg",
+            "driveFileId": "1atKuuvmv6h7y1-iZNE-VvOvJukoYZxKh"
+          }
+        ],
+        "driveOnlyFiles": [],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-016",
@@ -1269,7 +1293,34 @@
       "sourcePageScanRange": "I-581-01-15-012.jpg through I-581-01-15-023.jpg",
       "sourcePageCount": 12,
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [],
+        "driveOnlyFiles": [
+          {
+            "fileName": "CTI-1979-Joseph-Gibely-Address-transcription-working.html",
+            "driveFileId": "1XLyeDvKazM8XFcULVKpfgqIcf03uxg6I",
+            "driveUrl": "https://drive.google.com/file/d/1XLyeDvKazM8XFcULVKpfgqIcf03uxg6I/view?usp=drivesdk"
+          },
+          {
+            "fileName": "CTI-1979-Joseph-Gibely-Address-12-page-archive.pdf",
+            "driveFileId": "10U5tL4vEJp5TmwHVhViDFtw4eqXuUdbr",
+            "driveUrl": "https://drive.google.com/file/d/10U5tL4vEJp5TmwHVhViDFtw4eqXuUdbr/view?usp=drivesdk"
+          },
+          {
+            "fileName": "I-581-01-15-012.jpg",
+            "driveFileId": "11YKnoH2vCBbiAyy7lDsapADvTYmqxre0",
+            "driveUrl": "https://drive.google.com/file/d/11YKnoH2vCBbiAyy7lDsapADvTYmqxre0/view"
+          },
+          {
+            "fileName": "I-581-01-15-023.jpg",
+            "driveFileId": "1YnOaWyeQ6i20dzieFZWyEfdV3hxsWD_t",
+            "driveUrl": "https://drive.google.com/file/d/1YnOaWyeQ6i20dzieFZWyEfdV3hxsWD_t/view"
+          }
+        ],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-017",
@@ -1393,7 +1444,19 @@
       "articleImage": "assets/archive/originals/I-581-01-15-025-web.jpg",
       "relatedRecords": [
         "CTI-002"
-      ]
+      ],
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [
+          {
+            "fileName": "I-581-01-15-025.jpg",
+            "path": "assets/archive/originals/I-581-01-15-025-web.jpg",
+            "driveFileId": "17tMEfTLNr8HuxzP3csRQnSJH10As2z22"
+          }
+        ],
+        "driveOnlyFiles": [],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-018",
@@ -1654,7 +1717,35 @@
       ],
       "providedBy": "I. Herbster",
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [
+          {
+            "fileName": "I-581-01-15-024.jpg",
+            "path": "assets/archive/originals/I-581-01-15-024-web.jpg",
+            "driveFileId": "1SW9UJ2czwOPa1bk5ysIjcPl_Rlm_qoLp"
+          }
+        ],
+        "driveOnlyFiles": [
+          {
+            "fileName": "I-581-01-15-026-027-stitched-1992-In-Search-of-a-Home.jpg",
+            "driveFileId": "1wylck_ujo6x9Q5B9jF9A73QAW0CqeIi_",
+            "driveUrl": "https://drive.google.com/file/d/1wylck_ujo6x9Q5B9jF9A73QAW0CqeIi_/view?usp=drivesdk"
+          },
+          {
+            "fileName": "I-581-01-15-026.jpg",
+            "driveFileId": "1PTo7FCxKWA9Jl1doxRPy-vscKLDRd1qt",
+            "driveUrl": "https://drive.google.com/file/d/1PTo7FCxKWA9Jl1doxRPy-vscKLDRd1qt/view"
+          },
+          {
+            "fileName": "I-581-01-15-027.jpg",
+            "driveFileId": "1S9fou-l29YMxm285q0IO3ADIyNKRso2j",
+            "driveUrl": "https://drive.google.com/file/d/1S9fou-l29YMxm285q0IO3ADIyNKRso2j/view"
+          }
+        ],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-021",
@@ -1806,6 +1897,18 @@
           "peabody-hebrew-school-menorah-1958.png"
         ],
         "provenanceNote": "Related regional photo, not an illustration originally published with the article."
+      },
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [
+          {
+            "fileName": "I-581-01-15-035.jpg",
+            "path": "assets/archive/originals/I-581-01-15-035-web.jpg",
+            "driveFileId": "1tJ_5tMkDwGzLn3WUYhAt4MTMYPJQr89z"
+          }
+        ],
+        "driveOnlyFiles": [],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
       }
     },
     {
@@ -1981,7 +2084,19 @@
       "photoAlbumCaption": "Morris Gibely and family, 1914",
       "photoAlbumNote": "Associated historical family photograph from the 2001 article; gallery image opens its preserved photograph, not the newspaper clipping.",
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [
+          {
+            "fileName": "I-581-01-15-034.jpg",
+            "path": "assets/archive/originals/I-581-01-15-034-web.jpg",
+            "driveFileId": "1kVKT7C2FVyUUu6exyT13cXuFjAfW8nco"
+          }
+        ],
+        "driveOnlyFiles": [],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-024",
@@ -2366,7 +2481,19 @@
         "note": "Newspaper headline visually confirmed from Drive scan; no article text yet."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [],
+        "driveOnlyFiles": [
+          {
+            "fileName": "I-581-01-15-031.jpg",
+            "driveFileId": "1aDHlofzL0ad0JLqVUehHY32Yl8IFi7Iw",
+            "driveUrl": "https://drive.google.com/file/d/1aDHlofzL0ad0JLqVUehHY32Yl8IFi7Iw/view"
+          }
+        ],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-029",
@@ -2402,7 +2529,19 @@
         "note": "Identification is provisional; original source scan retained in Google Drive."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [],
+        "driveOnlyFiles": [
+          {
+            "fileName": "I-581-01-15-001.jpg",
+            "driveFileId": "1c3S9eDobgvLYMqWlWIkHKGRgPn_643wA",
+            "driveUrl": "https://drive.google.com/file/d/1c3S9eDobgvLYMqWlWIkHKGRgPn_643wA/view"
+          }
+        ],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-030",
@@ -2438,7 +2577,19 @@
         "note": "Identification is provisional; original source scan retained in Google Drive."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [],
+        "driveOnlyFiles": [
+          {
+            "fileName": "I-581-01-15-002.jpg",
+            "driveFileId": "1OhtBLjqktwz3HbHVF9i2DL6gN-Fxsj5D",
+            "driveUrl": "https://drive.google.com/file/d/1OhtBLjqktwz3HbHVF9i2DL6gN-Fxsj5D/view"
+          }
+        ],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-031",
@@ -2474,7 +2625,19 @@
         "note": "Identification is provisional; original source scan retained in Google Drive."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [],
+        "driveOnlyFiles": [
+          {
+            "fileName": "I-581-01-15-003.jpg",
+            "driveFileId": "1aA0R8m0J6zM6ptWBzkLtLW754cDuU3NF",
+            "driveUrl": "https://drive.google.com/file/d/1aA0R8m0J6zM6ptWBzkLtLW754cDuU3NF/view"
+          }
+        ],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-032",
@@ -2510,7 +2673,19 @@
         "note": "Identification is provisional; original source scan retained in Google Drive."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [],
+        "driveOnlyFiles": [
+          {
+            "fileName": "I-581-01-15-004.jpg",
+            "driveFileId": "1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla",
+            "driveUrl": "https://drive.google.com/file/d/1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla/view"
+          }
+        ],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-033",
@@ -2546,7 +2721,19 @@
         "note": "Identification is provisional; original source scan retained in Google Drive."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [],
+        "driveOnlyFiles": [
+          {
+            "fileName": "I-581-01-15-005.jpg",
+            "driveFileId": "1Q8qWhl-jaJwlSfOmIhqMjumVtQ97XIsB",
+            "driveUrl": "https://drive.google.com/file/d/1Q8qWhl-jaJwlSfOmIhqMjumVtQ97XIsB/view"
+          }
+        ],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-034",
@@ -2582,7 +2769,19 @@
         "note": "Identification is provisional; original source scan retained in Google Drive."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [
+          {
+            "fileName": "I-581-01-15-006.jpg",
+            "path": "assets/archive/originals/I-581-01-15-006-web.jpg",
+            "driveFileId": "1Y1jETYnlaHNutJiPI_hEPy-OfzqGOmy9"
+          }
+        ],
+        "driveOnlyFiles": [],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-035",
@@ -2618,7 +2817,19 @@
         "note": "Identification is provisional; original source scan retained in Google Drive."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [],
+        "driveOnlyFiles": [
+          {
+            "fileName": "I-581-01-15-007.jpg",
+            "driveFileId": "158r8qgFpLEPSnb9dl0vs0uqhzju0H3GF",
+            "driveUrl": "https://drive.google.com/file/d/158r8qgFpLEPSnb9dl0vs0uqhzju0H3GF/view"
+          }
+        ],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-036",
@@ -2654,7 +2865,19 @@
         "note": "Identification is provisional; original source scan retained in Google Drive."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [],
+        "driveOnlyFiles": [
+          {
+            "fileName": "I-581-01-15-008.jpg",
+            "driveFileId": "1guPkHsazf_u5UYuAuvkAzrTrWz1Zmfo6",
+            "driveUrl": "https://drive.google.com/file/d/1guPkHsazf_u5UYuAuvkAzrTrWz1Zmfo6/view"
+          }
+        ],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     },
     {
       "id": "CTI-037",
@@ -2714,7 +2937,34 @@
         "note": "Identification is provisional; original source scan retained in Google Drive."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material"
+      "archiveAcknowledgmentSource": "JHC archival material",
+      "archivalOriginals": {
+        "verifiedRepositoryFiles": [],
+        "driveOnlyFiles": [
+          {
+            "fileName": "I-581-01-15-028.jpg",
+            "driveFileId": "1lInlRrup7obdix-ZZrF3MwobJJOJKA04",
+            "driveUrl": "https://drive.google.com/file/d/1lInlRrup7obdix-ZZrF3MwobJJOJKA04/view"
+          },
+          {
+            "fileName": "I-581-01-15-029.jpg",
+            "driveFileId": "1hKHQsmvELogPOSV6FB5OFAhggfSlqE-T",
+            "driveUrl": "https://drive.google.com/file/d/1hKHQsmvELogPOSV6FB5OFAhggfSlqE-T/view"
+          },
+          {
+            "fileName": "I-581-01-15-030.jpg",
+            "driveFileId": "1ykEu6ibaz9jtKAp5CVyafaSIGYUQ5VkW",
+            "driveUrl": "https://drive.google.com/file/d/1ykEu6ibaz9jtKAp5CVyafaSIGYUQ5VkW/view"
+          },
+          {
+            "fileName": "I-581-01-15-032.jpg",
+            "driveFileId": "1IQF9HqISmccARXDCZo2erwL31IEC5Ju3",
+            "driveUrl": "https://drive.google.com/file/d/1IQF9HqISmccARXDCZo2erwL31IEC5Ju3/view"
+          }
+        ],
+        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "reconciled": "2026-10-22"
+      }
     }
   ],
   "assetPolicy": {
