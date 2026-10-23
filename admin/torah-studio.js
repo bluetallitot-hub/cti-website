@@ -30,7 +30,7 @@ async function loadSourceMarkdown(r){
       const response=await fetch('../'+emailPath,{cache:'no-store'});
       if(response.ok&&sequence===sourceLoadSequence){$('body').value=await response.text();render()}
     }catch(e){console.warn('Email Edition unavailable',e)}
-    $('status').textContent='Loaded '+sourcePath+(sha?'. GitHub commit is available.':'. Draft saving is available; GitHub commit requires the updated admin API.');
+    $('status').textContent='Loaded Reader Edition from '+sourcePath+'. Edit and save a separate draft; publishing requires explicit approval.';
   }catch(error){
     if(sequence!==sourceLoadSequence)return;
     $('status').textContent='Could not load '+sourcePath+' ('+error.message+'). The editor is blank; no source file was changed.';
@@ -38,7 +38,7 @@ async function loadSourceMarkdown(r){
 }
 const originalFill=fill;fill=function(r){originalFill(r);$('summary').value=r.description||'';loadSourceMarkdown(r);};
 $('commitTorah').onclick=async()=>{
-  $('status').textContent='Direct publication of edited Markdown is disabled until a separate authenticated approval-and-publish workflow is verified.';
+  $('status').textContent='Direct publication is disabled until an approval workflow is implemented.';
   return;
   const button=$('commitTorah'),record=records.find(r=>CTITorahFiles.key(r)===$('record').value);
   if(!record||!loadedSource||loadedSource.path!==CTITorahFiles.path(record)){$('status').textContent='Select an existing D’var Torah and wait for its Markdown to load.';return}
