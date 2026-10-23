@@ -79,6 +79,20 @@
       ]
     },
     {
+      "book": 1,
+      "portion": 3,
+      "year": 2026,
+      "name": "Lech Lecha",
+      "date": "2026-10-23",
+      "description": "Abram, David, and the responsibility to protect those entrusted to our care.",
+      "title": "With Great Power Comes Great Responsibility",
+      "eyebrow": "D’var Torah · Lech Lecha · October 2026",
+      "byline": "A Reader’s Edition · Rabbi Phillip Blue",
+      "category": "weekly",
+      "podcast": null,
+      "legacyIds": []
+    },
+    {
       "holidayCode": "RH1",
       "year": 2026,
       "name": "Pakad",
