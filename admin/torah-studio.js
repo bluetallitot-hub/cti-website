@@ -45,6 +45,7 @@ $('commitTorah').onclick=async()=>{
   }catch(e){$('status').textContent='Commit failed: '+e.message+'. Your edits remain in the editor.'}
   finally{button.disabled=false}
 };
+$('savePodcast').onclick=async()=>{const record=records.find(r=>CTITorahFiles.key(r)===$('record').value),url=$('podcast').value.trim();if(!record){$('status').textContent='Select an existing D’var Torah first.';return}if(url&&!/^https:\/\//i.test(url)){$('status').textContent='Enter a valid HTTPS podcast URL.';return}if(!catalogSha){$('status').textContent='Admin API unavailable; cannot publish podcast link.';return}if(!confirm((url?'Publish':'Remove')+' podcast link for “'+record.title+'”?'))return;const button=$('savePodcast');button.disabled=true;try{const result=await CTIAuth.api('/torah/podcast',{recordId:CTITorahFiles.key(record),podcast:url,expectedSha:catalogSha});catalogSha=result.sha;record.podcast=url||null;$('status').textContent='Podcast link saved. The public Listen to Podcast button will appear after GitHub Pages updates.'}catch(e){$('status').textContent='Podcast update failed: '+e.message}finally{button.disabled=false}};
 function updatePublicationUI(){
  const r=records.find(x=>CTITorahFiles.key(x)===$('record').value);
  const button=$('togglePublish'),label=$('publicationState');
