@@ -54,6 +54,21 @@ if(url.pathname==='/torah/publication'&&request.method==='POST'){
  const saved=await save(env,'content/dvar-torah/index.json',JSON.stringify(catalog,null,2)+'\\n',file.sha,(b.published?'Publish':'Unpublish')+' CTI Dvar Torah: '+b.recordId);
  return respond({ok:true,sha:saved.content.sha,commit:saved.commit.sha,published:b.published});
 }
+if(url.pathname==='/torah/podcast'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json();
+ if(typeof b.recordId!=='string'||!/^[-a-z0-9]{3,100}$/.test(b.recordId)||typeof b.expectedSha!=='string'||!/^[a-f0-9]{40}$/.test(b.expectedSha)||typeof b.podcast!=='string'||(b.podcast!==''&&(!/^https:\/\//i.test(b.podcast)||b.podcast.length>2048)))return respond({error:'Invalid podcast update'},400);
+ const file=await gh(env,'content/dvar-torah/index.json');
+ if(file.sha!==b.expectedSha)return respond({error:'Catalog changed. Reload before saving the podcast URL.'},409);
+ const catalog=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
+ const key=r=>r.holidayCode?'holiday-'+String(r.holidayCode).toLowerCase()+'-'+r.year+'-'+String(r.name).toLowerCase().replace(/[^a-z0-9]+/g,'-'):'torah-'+r.book+'-'+String(r.portion).padStart(2,'0')+'-'+r.year;
+ const item=catalog.items.find(r=>key(r)===b.recordId);
+ if(!item)return respond({error:'Dvar Torah not found'},404);
+ if((item.podcast||'')===b.podcast)return respond({ok:true,sha:file.sha,unchanged:true});
+ item.podcast=b.podcast||null;
+ const saved=await save(env,'content/dvar-torah/index.json',JSON.stringify(catalog,null,2)+'\n',file.sha,'Update CTI Dvar Torah podcast: '+b.recordId);
+ return respond({ok:true,sha:saved.content.sha,commit:saved.commit.sha});
+}
 if(url.pathname==='/torah/commit'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();
