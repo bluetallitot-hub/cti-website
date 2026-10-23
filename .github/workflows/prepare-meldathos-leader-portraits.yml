@@ -1,0 +1,24 @@
+name: Prepare Meldathos leader portraits
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow
+      - run: python scripts/prepare_meldathos_leader_portraits.py
+      - name: Commit generated portraits and memorial links
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/meldados.json assets/images/meldados/
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate standardized Meldathos portraits from leadership originals"
+            git push
+          fi
