@@ -36,7 +36,7 @@ if(url.pathname==='/torah/source'&&request.method==='GET'){
 if(url.pathname==='/torah/catalog'&&request.method==='GET'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const file=await gh(env,'content/dvar-torah/index.json');
- const data=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));
+ const data=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
  return respond({sha:file.sha,items:data.items||[]});
 }
 if(url.pathname==='/torah/publication'&&request.method==='POST'){
@@ -45,7 +45,7 @@ if(url.pathname==='/torah/publication'&&request.method==='POST'){
  if(typeof b.recordId!=='string'||!/^[-a-z0-9]{3,100}$/.test(b.recordId)||typeof b.published!=='boolean'||typeof b.expectedSha!=='string'||! /^[a-f0-9]{40}$/.test(b.expectedSha))return respond({error:'Invalid publication request'},400);
  const file=await gh(env,'content/dvar-torah/index.json');
  if(file.sha!==b.expectedSha)return respond({error:'The Dvar Torah catalog changed. Reload before changing publication status.'},409);
- const catalog=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));
+ const catalog=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
  const key=r=>r.holidayCode?'holiday-'+String(r.holidayCode).toLowerCase()+'-'+r.year+'-'+String(r.name).toLowerCase().replace(/[^a-z0-9]+/g,'-'):'torah-'+r.book+'-'+String(r.portion).padStart(2,'0')+'-'+r.year;
  const item=catalog.items.find(r=>key(r)===b.recordId);
  if(!item)return respond({error:'Dvar Torah not found'},404);
@@ -77,7 +77,7 @@ stage='fetch memorial database';
 const file=await gh(env,'content/meldados.json');
 if(file.sha!==b.expectedSha)return respond({error:'Memorials changed since you loaded this page. Reload before saving.'},409);
 stage='decode memorial database';
-const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));
+const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
 stage='apply memorial changes';
 const person=doc.people.find(p=>p.id===b.recordId);
 if(!person)return respond({error:'Memorial not found'},404);
@@ -108,14 +108,14 @@ if(url.pathname==='/announcements/email'&&request.method==='POST'){
 if(url.pathname==='/newsletter/import-events'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();if(!Array.isArray(b.events)||b.events.length>100) return respond({error:'Invalid events'},400);
- const file=await gh(env,'content/events.json');const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));let added=0;
+ const file=await gh(env,'content/events.json');const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));let added=0;
  for(const e of b.events){if(typeof e.title!=='string'||e.title.length>160||!/^\\d{4}-\\d{2}-\\d{2}$/.test(e.date)||typeof e.source!=='string')continue;if(doc.events.some(x=>x.date===e.date&&x.title===e.title))continue;doc.events.push({date:e.date,title:e.title,time:'',location:'',description:'',source:e.source});added++}
  if(added)await save(env,'content/events.json',JSON.stringify(doc,null,2)+'\\n',file.sha,'Import newsletter events');return respond({ok:true,added});
 }
 if(url.pathname==='/newsletter/import-meldados'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();if(!Array.isArray(b.people)||b.people.length>150)return respond({error:'Invalid memorial entries'},400);
- const file=await gh(env,'content/meldados.json'),doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));let added=0,updated=0,exceptions=[];
+ const file=await gh(env,'content/meldados.json'),doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));let added=0,updated=0,exceptions=[];
  const norm=s=>String(s||'').toLowerCase().replace(/[^a-z]/g,'');
  for(const p of b.people){if(typeof p.name!=='string'||p.name.length>120||!Number.isInteger(p.day)||p.day<1||p.day>30||!months.has(p.month)||typeof p.source!=='string'||p.source.length>150)continue;
  const sameName=doc.people.find(x=>norm(x.englishName)===norm(p.name));if(sameName){if(sameName.hebrewDay!==p.day||sameName.hebrewMonth!==p.month){exceptions.push(p.name+': memorial date differs');continue}if(p.rememberedBy&&typeof p.rememberedBy==='string'&&p.rememberedBy.length<=500){if(!sameName.rememberedBy){sameName.rememberedBy=p.rememberedBy;updated++}else if(sameName.rememberedBy.trim()!==p.rememberedBy.trim())exceptions.push(p.name+': Remembered By differs')}continue}
