@@ -6,7 +6,7 @@
  try{
   const index=await fetch('content/dvar-torah/index.json').then(r=>{if(!r.ok)throw Error('Index unavailable');return r.json()});
   const item=CTITorahFiles.find(index.items,id);
-  if(!item||!/^content\/dvar-torah\/[A-Za-z0-9/() .'-]+\.md$/.test(CTITorahFiles.path(item)))throw Error('D’var Torah not found');
+  if(!item||item.status==='unpublished'||!/^content\/dvar-torah\/[A-Za-z0-9/() .'-]+\.md$/.test(CTITorahFiles.path(item)))throw Error('D’var Torah not found');
   const md=await fetch(CTITorahFiles.path(item)).then(r=>{if(!r.ok)throw Error('Text unavailable');return r.text()});
   $('title').textContent=item.title;
   $('byline').textContent=item.byline||'Rabbi Phillip Blue';
