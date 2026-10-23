@@ -66,6 +66,40 @@ if(url.pathname==='/torah/commit'&&request.method==='POST'){
 if(url.pathname==='/github-check'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const f=await gh(env,'content/meldados.json');return respond({ok:true,repository:env.GITHUB_REPOSITORY,sha:f.sha,access:'read'});}
 if(url.pathname==='/meldados/state'&&request.method==='GET'){const f=await gh(env,'content/meldados.json');return respond({sha:f.sha,people:JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))).people})}
 
+if(url.pathname==='/meldados/create'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ try{
+ const b=await request.json(),name=String(b.englishName||'').trim().replace(/\\s+/g,' ');
+ if(!name||name.length>200)return respond({error:'Enter a valid name'},400);
+ let month=String(b.hebrewMonth||''),day=Number(b.hebrewDay),dateOfDeath='';
+ if(b.mode==='english'){
+   if(typeof b.dateOfDeath!=='string'||!/^\\d{4}-\\d{2}-\\d{2}$/.test(b.dateOfDeath)||!['before','after'].includes(b.sunset))return respond({error:'Enter a valid English date and sunset selection'},400);
+   const d=new Date(b.dateOfDeath+'T12:00:00Z');
+   if(!Number.isFinite(d.getTime())||d.toISOString().slice(0,10)!==b.dateOfDeath)return respond({error:'Invalid date'},400);
+   dateOfDeath=b.dateOfDeath;
+   if(b.sunset==='after')d.setUTCDate(d.getUTCDate()+1);
+   const parts=new Intl.DateTimeFormat('en-u-ca-hebrew',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).formatToParts(d);
+   const rawMonth=parts.find(x=>x.type==='month')?.value||'';
+   const mapping={'Tishri':'Tishrei','Heshvan':'Cheshvan','Cheshvan':'Cheshvan','Tevet':'Tevet','Shvat':'Shevat','Shevat':'Shevat','Adar I':'Adar I','Adar II':'Adar II','Adar':'Adar','Nisan':'Nisan','Iyar':'Iyar','Sivan':'Sivan','Tamuz':'Tammuz','Tammuz':'Tammuz','Av':'Av','Elul':'Elul','Kislev':'Kislev'};
+   month=mapping[rawMonth]||rawMonth;day=Number(parts.find(x=>x.type==='day')?.value);
+ }else if(b.mode!=='hebrew')return respond({error:'Choose a date entry method'},400);
+ if(!months.has(month)||!Number.isInteger(day)||day<1||day>30)return respond({error:'Invalid Hebrew memorial date'},400);
+ const file=await gh(env,'content/meldados.json');
+ if(file.truncated)return respond({error:'Memorial database too large to update safely'},500);
+ const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));
+ const normalized=x=>String(x||'').toLocaleLowerCase('en').replace(/[^a-z0-9]/g,'');
+ const matches=doc.people.filter(p=>normalized(p.englishName)===normalized(name));
+ if(matches.length)return respond({error:'A memorial with this name already exists. Review the existing record before creating another: '+matches.map(p=>p.englishName+' ('+p.id+')').join(', ')},409);
+ const base=name.normalize('NFKD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,90);
+ if(!base)return respond({error:'Name cannot be converted into a memorial ID'},400);
+ const taken=new Set(doc.people.map(p=>p.id));
+ let id=base,n=2;while(taken.has(id)){id=base+'-'+n++;if(n>9999)return respond({error:'Cannot assign a unique memorial ID'},409)}
+ const person={id,englishName:name,hebrewName:'',hebrewDay:day,hebrewMonth:month,hebrewYearOfDeath:null,dateOfDeath,rememberedBy:'',biography:'',photo:'',source:'CTI administrator entry',reviewStatus:'approved',approved:true,notes:dateOfDeath?'Entered using English date of death ('+b.sunset+' sunset).':''};
+ doc.people.push(person);
+ await save(env,'content/meldados.json',JSON.stringify(doc,null,2)+'\\n',file.sha,'Add Meldatho: '+id);
+ return respond({ok:true,id,englishName:name,hebrewDay:day,hebrewMonth:month});
+ }catch(e){return respond({error:'Could not add Meldatho: '+(e?.message||'Unknown error')},500)}
+}
 if(url.pathname==='/meldados/update'&&request.method==='POST'){
 let stage='parse request';
 try{
