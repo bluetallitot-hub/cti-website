@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Memorial Tribute | Congregation Tifereth Israel</title>
+<style>
+:root{font-family:Georgia,"Times New Roman",serif;color:#242e35;background:#ecebe6}*{box-sizing:border-box}
+body{margin:0}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:1rem;max-width:850px;margin:18px auto;font:15px system-ui,sans-serif}.toolbar a{color:#21475a}.toolbar button{padding:12px 18px;border:0;border-radius:6px;background:#21475a;color:white;cursor:pointer}
+.sheet{width:min(100% - 24px,8.5in);min-height:11in;margin:0 auto 30px;padding:.7in .8in;background:white;box-shadow:0 4px 24px #0002;position:relative}
+.eyebrow{text-align:center;text-transform:uppercase;letter-spacing:.13em;font:12px system-ui,sans-serif;color:#64717a}
+.rule{border:0;border-top:2px solid #b49759;margin:18px 0 30px}
+h1{text-align:center;font-size:34px;margin:10px 0 4px;line-height:1.2}
+.hebrew{text-align:center;font-size:22px;direction:rtl;margin:8px 0}.sub{text-align:center;color:#68747b;font-size:15px}
+.hero{display:flex;align-items:flex-start;justify-content:center;gap:32px;margin:28px 0}.portrait{width:180px;height:225px;object-fit:contain;background:#f6f3ec;border:1px solid #e4ded0}.candle{width:85px;flex:none;align-self:center}
+.meta{text-align:center;font-size:15px;line-height:1.7}.bio{margin-top:24px;white-space:pre-line;line-height:1.65;font-size:16px}.bio h2{font-size:20px;color:#384a56}
+.footer{margin-top:36px;border-top:1px solid #d9d2c2;padding-top:14px;text-align:center;color:#697780;font-size:12px}
+@media(max-width:600px){.sheet{padding:30px 24px}.hero{gap:14px}.portrait{width:145px;height:185px}h1{font-size:28px}}
+@page{size:letter;margin:0}
+@media print{body{background:white}.toolbar{display:none}.sheet{width:8.5in;min-height:11in;margin:0;box-shadow:none;break-after:page}a{color:inherit}}
+</style></head><body>
+<div class="toolbar"><a href="meldados.html">← Return to Meldathos</a><button type="button" onclick="window.print()">Print / Save as PDF</button></div>
+<main class="sheet" id="tribute"><div class="eyebrow">Congregation Tifereth Israel · Peabody, Massachusetts</div><hr class="rule"><div class="eyebrow">In Loving Memory</div><h1 id="name"></h1><div id="hebrew" class="hebrew" hidden></div><p class="sub">May their memory be a blessing</p>
+<div class="hero"><img id="portrait" class="portrait" alt="" hidden><svg class="candle" viewBox="0 0 100 180" role="img" aria-label="Yahrzeit memorial candle" xmlns="http://www.w3.org/2000/svg"><path d="M50 12C31 35 43 46 50 52c12-11 18-24 0-40Z" fill="#c89b43"/><path d="M50 28c-6 11-4 18 0 21 6-5 8-12 0-21Z" fill="#f6d891"/><rect x="21" y="60" width="58" height="102" rx="5" fill="#f4f0e7" stroke="#a99d8a" stroke-width="2"/><path d="M21 73h58" stroke="#d6c7ad"/><path d="M21 149h58" stroke="#d6c7ad"/><text x="50" y="119" text-anchor="middle" font-size="9" font-family="serif" fill="#716657">זכרון</text><path d="M45 59V49h10v10" stroke="#69615b" fill="none" stroke-width="2"/></svg></div>
+<div id="meta" class="meta"></div><section class="bio" id="bio"></section><div class="footer">Congregation Tifereth Israel · Remembering those who came before us</div></main>
+<script>
+const q=new URLSearchParams(location.search);const id=q.get('id');
+const text=(el,s)=>document.getElementById(el).textContent=s;
+const line=(parent,label,value)=>{if(value){const d=document.createElement('div');const strong=document.createElement('strong');strong.textContent=label+': ';d.append(strong,document.createTextNode(value));parent.append(d)}};
+fetch('content/meldados.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Memorial database unavailable');return r.json()}).then(data=>{
+const r=(data.people||[]).find(p=>p.id===id&&['approved','published','stub'].includes(p.reviewStatus));if(!r)throw Error('Approved memorial record not found');
+text('name',r.englishName);document.title=r.englishName+' — Memorial Tribute — CTI';
+if(r.hebrewName){text('hebrew',r.hebrewName);document.getElementById('hebrew').hidden=false}
+if(r.photo){const img=document.getElementById('portrait');img.src=r.photo;img.alt='Portrait of '+r.englishName;img.hidden=false}
+const m=document.getElementById('meta');line(m,'Hebrew memorial date',(r.hebrewDay&&r.hebrewMonth)?r.hebrewDay+' '+r.hebrewMonth:'');line(m,'Date of birth',r.dateOfBirth);line(m,'Date of death',r.dateOfDeath);line(m,'Remembered by',r.rememberedBy);
+if(r.biography){const b=document.getElementById('bio');const h=document.createElement('h2');h.textContent='A Life Remembered';const p=document.createElement('p');p.textContent=r.biography;b.append(h,p)}
+}).catch(e=>{text('name','Memorial unavailable');text('meta',e.message)});
+</script></body></html>
