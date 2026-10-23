@@ -1,101 +1,124 @@
 {
-  "version": 1,
+  "version": 2,
   "items": [
     {
-      "id": "dvar-torah-2026-06-19-korach",
+      "book": 4,
+      "portion": 5,
+      "year": 2026,
+      "name": "Korach",
+      "date": "2026-06-19",
+      "description": "Korach’s challenge opens a reflection on leadership, community, and beginning a relationship together.",
       "title": "Parashat Korach and Meeting a New Congregation",
       "eyebrow": "D’var Torah · June 19, 2026",
       "byline": "Parashat Korach · Rabbi Phillip Blue",
       "category": "weekly",
-      "file": "content/dvar-torah/Numbers/4-05-26-Reader (Korach).md",
       "podcast": null,
-      "legacyFile": "content/dvar-torah/2026/dvar-torah-2026-06-19-korach.md",
-      "readerFile": "content/dvar-torah/Numbers/4-05-26-Reader (Korach).md",
-      "emailFile": null
+      "legacyIds": [
+        "dvar-torah-2026-06-19-korach"
+      ]
     },
     {
-      "id": "dvar-torah-2026-07-17-hope-is-not-optimism",
+      "book": 5,
+      "portion": 2,
+      "year": 2026,
+      "name": "Vaetchanan",
+      "date": "2026-07-17",
+      "description": "Jewish hope is not a prediction that things will improve, but a commitment to help make them better.",
       "title": "Hope Is Not Optimism",
       "eyebrow": "D’var Torah · July 17, 2026",
       "byline": "Parashat Va’etchanan · Shabbat Nachamu · Rabbi Phillip Blue",
       "category": "weekly",
-      "file": "content/dvar-torah/Deuteronomy/5-02-26-Reader (Vaetchanan).md",
       "podcast": null,
-      "legacyFile": "content/dvar-torah/2026/dvar-torah-2026-07-17-hope-is-not-optimism.md",
-      "readerFile": "content/dvar-torah/Deuteronomy/5-02-26-Reader (Vaetchanan).md",
-      "emailFile": null
+      "legacyIds": [
+        "dvar-torah-2026-07-17-hope-is-not-optimism"
+      ]
     },
     {
-      "id": "dvar-torah-2026-08-14-forgotten-new-year",
+      "holidayCode": "ELUL",
+      "year": 2026,
+      "name": "Forgotten New Year",
+      "date": "2026-08-14",
+      "description": "A lesser-known Jewish new year invites us to reconsider how we mark time and prepare for renewal.",
       "title": "A Forgotten New Year and a Timeless Lesson",
       "eyebrow": "D’var Torah · August 14, 2026",
       "byline": "Rosh Chodesh Elul · Rabbi Phillip Blue",
       "category": "weekly",
-      "file": "content/dvar-torah/Holiday/ELUL-26 (Forgotten New Year)-Reader.md",
       "podcast": null,
-      "legacyFile": "content/dvar-torah/2026/dvar-torah-2026-08-14-forgotten-new-year.md",
-      "readerFile": "content/dvar-torah/Holiday/ELUL-26 (Forgotten New Year)-Reader.md",
-      "emailFile": null
+      "legacyIds": [
+        "dvar-torah-2026-08-14-forgotten-new-year"
+      ]
     },
     {
-      "id": "dvar-torah-2026-10-bereishit-naked-cunning-growing-up",
+      "book": 1,
+      "portion": 1,
+      "year": 2026,
+      "name": "Bereishit",
+      "description": "The Garden of Eden becomes a story of parenting, lost innocence, and growing into independence.",
       "title": "Naked, Cunning, and Growing Up",
       "eyebrow": "D’var Torah · Bereishit · October 2026",
       "byline": "A Reader’s Edition · Rabbi Phillip Blue",
       "category": "weekly",
-      "file": "content/dvar-torah/Genesis/1-01-26-Reader (Bereishit).md",
       "podcast": "https://podcasts.apple.com/us/podcast/naked-cunning-and-growing-up/id6821008829?i=1000794065688",
-      "legacyFile": "content/dvar-torah/2026/dvar-torah-2026-10-bereishit-naked-cunning-growing-up.md",
-      "readerFile": "content/dvar-torah/Genesis/1-01-26-Reader (Bereishit).md",
-      "emailFile": null
+      "legacyIds": [
+        "dvar-torah-2026-10-bereishit-naked-cunning-growing-up"
+      ]
     },
     {
-      "id": "dvar-torah-2026-10-noach-who-belongs-inside-your-ark",
+      "book": 1,
+      "portion": 2,
+      "year": 2026,
+      "name": "Noach",
+      "description": "An invitation to think about responsibility, community, and who we make room for.",
       "title": "Who Belongs Inside Your Ark?",
       "eyebrow": "D’var Torah · Noach · October 2026",
       "byline": "Rabbi Phillip Blue",
       "category": "weekly",
-      "file": "content/dvar-torah/Genesis/1-02-26-Reader (Noach).md",
       "podcast": "https://podcasts.apple.com/us/podcast/the-blue-thread/id6821008829?i=1000796854641",
-      "legacyFile": "content/dvar-torah/2026/dvar-torah-2026-10-noach-who-belongs-inside-your-ark.md",
-      "readerFile": "content/dvar-torah/Genesis/1-02-26-Reader (Noach).md",
-      "emailFile": null
+      "legacyIds": [
+        "dvar-torah-2026-10-noach-who-belongs-inside-your-ark"
+      ]
     },
     {
-      "id": "sermon-2026-rosh-hashanah-day-1-pakad",
+      "holidayCode": "RH1",
+      "year": 2026,
+      "name": "Pakad",
+      "description": "Remembering matters most when it moves us to see others and act.",
       "title": "Pakad: From Remembering to Showing Up",
       "eyebrow": "High Holiday Sermon · 2026",
       "byline": "Rosh Hashanah Day 1, 2026 · Rabbi Phillip Blue",
       "category": "holiday",
-      "file": "content/dvar-torah/Holiday/RH1-26 (Pakad)-Reader.md",
       "podcast": "https://podcasts.apple.com/us/podcast/the-blue-thread/id6821008829?i=1000796231523",
-      "legacyFile": "content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-1-pakad.md",
-      "readerFile": "content/dvar-torah/Holiday/RH1-26 (Pakad)-Reader.md",
-      "emailFile": null
+      "legacyIds": [
+        "sermon-2026-rosh-hashanah-day-1-pakad"
+      ]
     },
     {
-      "id": "sermon-2026-rosh-hashanah-day-2-teshuvah",
+      "holidayCode": "RH2",
+      "year": 2026,
+      "name": "Teshuvah",
+      "description": "Teshuvah asks us not only to return, but to respond and repair what we can.",
       "title": "Teshuvah: Response, Return, Restoration",
       "eyebrow": "High Holiday Sermon · 2026",
       "byline": "Rosh Hashanah Day 2, 2026 · Rabbi Phillip Blue",
       "category": "holiday",
-      "file": "content/dvar-torah/Holiday/RH2-26 (Teshuvah)-Reader.md",
       "podcast": "https://podcasts.apple.com/us/podcast/teshuvah-what-if-you-dont-have-the-answer/id6821008829?i=1000796697280",
-      "legacyFile": "content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-2-teshuvah.md",
-      "readerFile": "content/dvar-torah/Holiday/RH2-26 (Teshuvah)-Reader.md",
-      "emailFile": null
+      "legacyIds": [
+        "sermon-2026-rosh-hashanah-day-2-teshuvah"
+      ]
     },
     {
-      "id": "sermon-2026-yom-kippur-mechilah",
+      "holidayCode": "YK",
+      "year": 2026,
+      "name": "Mechila",
+      "description": "Forgiveness begins a difficult conversation about responsibility and what comes after hurt.",
       "title": "Mechilah: What Happens Next?",
       "eyebrow": "High Holiday Sermon · 2026",
       "byline": "Yom Kippur 2026 · Rabbi Phillip Blue",
       "category": "holiday",
-      "file": "content/dvar-torah/Holiday/YK-26 (Mechila)-Reader.md",
       "podcast": null,
-      "legacyFile": "content/dvar-torah/2026/sermon-2026-yom-kippur-mechilah.md",
-      "readerFile": "content/dvar-torah/Holiday/YK-26 (Mechila)-Reader.md",
-      "emailFile": null
+      "legacyIds": [
+        "sermon-2026-yom-kippur-mechilah"
+      ]
     }
   ]
 }
