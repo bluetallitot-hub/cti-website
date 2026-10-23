@@ -15,7 +15,8 @@
       "podcast": null,
       "legacyIds": [
         "dvar-torah-2026-06-19-korach"
-      ]
+      ],
+      "status": "published"
     },
     {
       "book": 5,
@@ -31,7 +32,8 @@
       "podcast": null,
       "legacyIds": [
         "dvar-torah-2026-07-17-hope-is-not-optimism"
-      ]
+      ],
+      "status": "published"
     },
     {
       "holidayCode": "ELUL",
@@ -46,7 +48,8 @@
       "podcast": null,
       "legacyIds": [
         "dvar-torah-2026-08-14-forgotten-new-year"
-      ]
+      ],
+      "status": "published"
     },
     {
       "book": 1,
@@ -61,7 +64,8 @@
       "podcast": "https://podcasts.apple.com/us/podcast/naked-cunning-and-growing-up/id6821008829?i=1000794065688",
       "legacyIds": [
         "dvar-torah-2026-10-bereishit-naked-cunning-growing-up"
-      ]
+      ],
+      "status": "published"
     },
     {
       "book": 1,
@@ -76,7 +80,8 @@
       "podcast": "https://podcasts.apple.com/us/podcast/the-blue-thread/id6821008829?i=1000796854641",
       "legacyIds": [
         "dvar-torah-2026-10-noach-who-belongs-inside-your-ark"
-      ]
+      ],
+      "status": "published"
     },
     {
       "book": 1,
@@ -90,7 +95,8 @@
       "byline": "A Reader’s Edition · Rabbi Phillip Blue",
       "category": "weekly",
       "podcast": null,
-      "legacyIds": []
+      "legacyIds": [],
+      "status": "published"
     },
     {
       "holidayCode": "RH1",
@@ -104,7 +110,8 @@
       "podcast": "https://podcasts.apple.com/us/podcast/the-blue-thread/id6821008829?i=1000796231523",
       "legacyIds": [
         "sermon-2026-rosh-hashanah-day-1-pakad"
-      ]
+      ],
+      "status": "published"
     },
     {
       "holidayCode": "RH2",
@@ -118,7 +125,8 @@
       "podcast": "https://podcasts.apple.com/us/podcast/teshuvah-what-if-you-dont-have-the-answer/id6821008829?i=1000796697280",
       "legacyIds": [
         "sermon-2026-rosh-hashanah-day-2-teshuvah"
-      ]
+      ],
+      "status": "published"
     },
     {
       "holidayCode": "YK",
@@ -132,7 +140,8 @@
       "podcast": null,
       "legacyIds": [
         "sermon-2026-yom-kippur-mechilah"
-      ]
+      ],
+      "status": "published"
     }
   ]
 }
