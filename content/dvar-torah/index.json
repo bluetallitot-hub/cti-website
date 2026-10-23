@@ -31,10 +31,10 @@
       "eyebrow": "D’var Torah · August 14, 2026",
       "byline": "Rosh Chodesh Elul · Rabbi Phillip Blue",
       "category": "weekly",
-      "file": "content/dvar-torah/Holidays/26-Reader (Rosh Chodesh Elul).md",
+      "file": "content/dvar-torah/Holiday/ELUL-26 (Forgotten New Year)-Reader.md",
       "podcast": null,
       "legacyFile": "content/dvar-torah/2026/dvar-torah-2026-08-14-forgotten-new-year.md",
-      "readerFile": "content/dvar-torah/Holidays/26-Reader (Rosh Chodesh Elul).md",
+      "readerFile": "content/dvar-torah/Holiday/ELUL-26 (Forgotten New Year)-Reader.md",
       "emailFile": null
     },
     {
@@ -67,10 +67,10 @@
       "eyebrow": "High Holiday Sermon · 2026",
       "byline": "Rosh Hashanah Day 1, 2026 · Rabbi Phillip Blue",
       "category": "holiday",
-      "file": "content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 1).md",
+      "file": "content/dvar-torah/Holiday/RH1-26 (Pakad)-Reader.md",
       "podcast": "https://podcasts.apple.com/us/podcast/the-blue-thread/id6821008829?i=1000796231523",
       "legacyFile": "content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-1-pakad.md",
-      "readerFile": "content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 1).md",
+      "readerFile": "content/dvar-torah/Holiday/RH1-26 (Pakad)-Reader.md",
       "emailFile": null
     },
     {
@@ -79,10 +79,10 @@
       "eyebrow": "High Holiday Sermon · 2026",
       "byline": "Rosh Hashanah Day 2, 2026 · Rabbi Phillip Blue",
       "category": "holiday",
-      "file": "content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 2).md",
+      "file": "content/dvar-torah/Holiday/RH2-26 (Teshuvah)-Reader.md",
       "podcast": "https://podcasts.apple.com/us/podcast/teshuvah-what-if-you-dont-have-the-answer/id6821008829?i=1000796697280",
       "legacyFile": "content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-2-teshuvah.md",
-      "readerFile": "content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 2).md",
+      "readerFile": "content/dvar-torah/Holiday/RH2-26 (Teshuvah)-Reader.md",
       "emailFile": null
     },
     {
@@ -91,10 +91,10 @@
       "eyebrow": "High Holiday Sermon · 2026",
       "byline": "Yom Kippur 2026 · Rabbi Phillip Blue",
       "category": "holiday",
-      "file": "content/dvar-torah/Holidays/26-Reader (Yom Kippur).md",
+      "file": "content/dvar-torah/Holiday/YK-26 (Mechila)-Reader.md",
       "podcast": null,
       "legacyFile": "content/dvar-torah/2026/sermon-2026-yom-kippur-mechilah.md",
-      "readerFile": "content/dvar-torah/Holidays/26-Reader (Yom Kippur).md",
+      "readerFile": "content/dvar-torah/Holiday/YK-26 (Mechila)-Reader.md",
       "emailFile": null
     }
   ]
