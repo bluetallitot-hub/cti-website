@@ -21,6 +21,7 @@ def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
     OUT.mkdir(parents=True, exist_ok=True)
     processed = set()
+    skipped = []
     for person in data["people"]:
         mid = person.get("id", "")
         if mid not in IDS:
@@ -30,7 +31,8 @@ def main():
             raise ValueError(f"{mid}: expected original leadership portrait, got {source_path!r}")
         source = ROOT / source_path
         if not source.is_file():
-            raise FileNotFoundError(f"{mid}: {source}")
+            skipped.append(f"{mid}: source missing: {source_path}")
+            continue
         target = OUT / (mid + ".jpg")
         with Image.open(source) as image:
             image = ImageOps.exif_transpose(image).convert("RGB")
@@ -43,6 +45,10 @@ def main():
     missing = IDS - processed
     if missing:
         raise ValueError(f"Missing memorial records: {sorted(missing)}")
+    if skipped:
+        print("Skipped missing source photographs (no record changed):")
+        for item in skipped:
+            print("  " + item)
     DATA.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 if __name__ == "__main__":
