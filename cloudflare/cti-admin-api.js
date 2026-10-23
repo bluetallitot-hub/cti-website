@@ -4,7 +4,7 @@
 // Configure SITE_ORIGIN and GITHUB_REPOSITORY as Worker environment variables.
 const enc=new TextEncoder();
 const months=new Set(['Tishrei','Cheshvan','Kislev','Tevet','Shevat','Adar','Adar I','Adar II','Nisan','Iyar','Sivan','Tammuz','Av','Elul']);
-const communityFields=new Set(['hebrewName','dateOfBirth','dateOfDeath','hebrewDay','hebrewMonth','hebrewYearOfDeath','rememberedBy','biographyTitle','biography']);
+const communityFields=new Set(['englishName','hebrewName','dateOfBirth','dateOfDeath','hebrewDay','hebrewMonth','hebrewYearOfDeath','rememberedBy','biographyTitle','biography']);
 const adminFiles=new Set(['content/services.json','content/meldados.json']);
 const githubBase64=bytes=>{let binary='';const chunkSize=8192;for(let i=0;i<bytes.length;i+=chunkSize)binary+=String.fromCharCode(...bytes.subarray(i,i+chunkSize));return btoa(binary)};
 const b64=bytes=>githubBase64(bytes).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
