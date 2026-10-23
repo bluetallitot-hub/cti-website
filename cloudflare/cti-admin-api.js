@@ -33,10 +33,12 @@ const sendMail=async(to,subject,body)=>{
 };
 const token=()=>crypto.randomUUID()+crypto.randomUUID();
 const subKey=async(email)=>'subscriber:'+b64(new Uint8Array(await crypto.subtle.digest('SHA-256',enc.encode(email))));
+const serviceMonths=new Set(['Tishrei','Cheshvan','Kislev','Tevet','Shevat','Adar','Nisan','Iyar','Sivan','Tammuz','Av','Elul']);
+const validMonths=value=>Array.isArray(value)&&value.length<=12&&value.every(m=>typeof m==='string'&&serviceMonths.has(m))&&new Set(value).size===value.length;
 if(url.pathname==='/meldathos/subscribe'&&request.method==='POST'){
  if(!subs)return respond({error:'Subscriptions are not configured yet'},503);
  const b=await request.json(),email=String(b.email||'').trim().toLowerCase(),name=String(b.name||'').trim();
- if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||email.length>254||!name||name.length>120||b.consent!==true||!Array.isArray(b.memorialIds)||!b.memorialIds.length||b.memorialIds.length>500)return respond({error:'Please provide your name, valid email, and selected memorials'},400);
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||email.length>254||!name||name.length>120||b.consent!==true||!Array.isArray(b.memorialIds)||b.memorialIds.length>500||!validMonths(b.serviceMonths||[])||(!b.memorialIds.length&&!(b.serviceMonths||[]).length))return respond({error:'Please provide your name, valid email, and selected memorials'},400);
  const ids=[...new Set(b.memorialIds)];
  if(ids.length!==b.memorialIds.length||ids.some(id=>typeof id!=='string'||id.length>150))return respond({error:'Invalid memorial selection'},400);
  const file=await gh(env,'content/meldados.json');
@@ -44,7 +46,7 @@ if(url.pathname==='/meldathos/subscribe'&&request.method==='POST'){
  const valid=new Set(people.filter(p=>['approved','published','stub'].includes(p.reviewStatus)).map(p=>p.id));
  if(ids.some(id=>!valid.has(id)))return respond({error:'A selected memorial is unavailable'},400);
  const confirmation=token(),key=await subKey(email);
- await subs.put('pending:'+confirmation,JSON.stringify({email,name,ids,key}),{expirationTtl:86400});
+ await subs.put('pending:'+confirmation,JSON.stringify({email,name,ids,serviceMonths:b.serviceMonths||[],key}),{expirationTtl:86400});
  try{await sendMail(email,'Confirm your CTI Meldatho reminders','Please confirm your Meldatho reminder selections by opening this link within 24 hours:\n\n'+site+'/subscribe-meldados.html?confirm='+encodeURIComponent(confirmation)+'\n\nIf you did not request this, ignore this email.')}catch(e){await subs.delete('pending:'+confirmation);throw e}
  return respond({ok:true});
 }
@@ -56,7 +58,7 @@ if(url.pathname==='/meldathos/confirm'&&request.method==='POST'){
  if(!pending)return respond({error:'Confirmation expired or already used'},410);
  const previous=await subs.get(pending.key,'json');
  const manage=previous?.manageToken||token();
- await subs.put(pending.key,JSON.stringify({email:pending.email,name:pending.name,ids:pending.ids,manageToken:manage,confirmedAt:new Date().toISOString()}));
+ await subs.put(pending.key,JSON.stringify({email:pending.email,name:pending.name,ids:pending.ids,serviceMonths:pending.serviceMonths||[],manageToken:manage,confirmedAt:new Date().toISOString()}));
  await subs.put('manage:'+manage,pending.key);
  await subs.delete('pending:'+confirmation);
  await sendMail(pending.email,'Your CTI Meldatho reminders are confirmed','Your reminders are active. You will receive a reminder seven days before each selected Hebrew memorial anniversary.\n\nManage or unsubscribe here:\n'+site+'/subscribe-meldados.html?manage='+encodeURIComponent(manage));
@@ -70,14 +72,14 @@ if(url.pathname==='/meldathos/manage'&&['GET','POST'].includes(request.method)){
  if(!key)return respond({error:'Management link not found'},404);
  const record=await subs.get(key,'json');
  if(!record||record.manageToken!==manage)return respond({error:'Subscription unavailable'},404);
- if(request.method==='GET')return respond({name:record.name,email:record.email,memorialIds:record.ids});
+ if(request.method==='GET')return respond({name:record.name,email:record.email,memorialIds:record.ids,serviceMonths:record.serviceMonths||[]});
  if(b.unsubscribe===true){await subs.delete(key);await subs.delete('manage:'+manage);return respond({ok:true,unsubscribed:true})}
- if(!Array.isArray(b.memorialIds)||b.memorialIds.length>500||!b.memorialIds.length)return respond({error:'Choose at least one memorial or unsubscribe'},400);
+ if(!Array.isArray(b.memorialIds)||b.memorialIds.length>500||!validMonths(b.serviceMonths||[])||(!b.memorialIds.length&&!(b.serviceMonths||[]).length))return respond({error:'Choose at least one memorial or unsubscribe'},400);
  const ids=[...new Set(b.memorialIds)];
  const f=await gh(env,'content/meldados.json'),people=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))).people||[];
  const valid=new Set(people.filter(p=>['approved','published','stub'].includes(p.reviewStatus)).map(p=>p.id));
  if(ids.length!==b.memorialIds.length||ids.some(id=>typeof id!=='string'||!valid.has(id)))return respond({error:'Invalid memorial selection'},400);
- record.ids=ids;await subs.put(key,JSON.stringify(record));return respond({ok:true});
+ record.ids=ids;record.serviceMonths=b.serviceMonths||[];await subs.put(key,JSON.stringify(record));return respond({ok:true});
 }
 
 const role=await verify(request,env);if(!role)return respond({error:'Please sign in'},401);
