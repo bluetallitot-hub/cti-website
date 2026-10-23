@@ -7,8 +7,11 @@
       "eyebrow": "D’var Torah · June 19, 2026",
       "byline": "Parashat Korach · Rabbi Phillip Blue",
       "category": "weekly",
-      "file": "content/dvar-torah/2026/dvar-torah-2026-06-19-korach.md",
-      "podcast": null
+      "file": "content/dvar-torah/Numbers/4-05-26-Reader (Korach).md",
+      "podcast": null,
+      "legacyFile": "content/dvar-torah/2026/dvar-torah-2026-06-19-korach.md",
+      "readerFile": "content/dvar-torah/Numbers/4-05-26-Reader (Korach).md",
+      "emailFile": null
     },
     {
       "id": "dvar-torah-2026-07-17-hope-is-not-optimism",
@@ -16,8 +19,11 @@
       "eyebrow": "D’var Torah · July 17, 2026",
       "byline": "Parashat Va’etchanan · Shabbat Nachamu · Rabbi Phillip Blue",
       "category": "weekly",
-      "file": "content/dvar-torah/2026/dvar-torah-2026-07-17-hope-is-not-optimism.md",
-      "podcast": null
+      "file": "content/dvar-torah/Deuteronomy/5-02-26-Reader (Vaetchanan).md",
+      "podcast": null,
+      "legacyFile": "content/dvar-torah/2026/dvar-torah-2026-07-17-hope-is-not-optimism.md",
+      "readerFile": "content/dvar-torah/Deuteronomy/5-02-26-Reader (Vaetchanan).md",
+      "emailFile": null
     },
     {
       "id": "dvar-torah-2026-08-14-forgotten-new-year",
@@ -25,8 +31,11 @@
       "eyebrow": "D’var Torah · August 14, 2026",
       "byline": "Rosh Chodesh Elul · Rabbi Phillip Blue",
       "category": "weekly",
-      "file": "content/dvar-torah/2026/dvar-torah-2026-08-14-forgotten-new-year.md",
-      "podcast": null
+      "file": "content/dvar-torah/Holidays/26-Reader (Rosh Chodesh Elul).md",
+      "podcast": null,
+      "legacyFile": "content/dvar-torah/2026/dvar-torah-2026-08-14-forgotten-new-year.md",
+      "readerFile": "content/dvar-torah/Holidays/26-Reader (Rosh Chodesh Elul).md",
+      "emailFile": null
     },
     {
       "id": "dvar-torah-2026-10-bereishit-naked-cunning-growing-up",
@@ -34,8 +43,11 @@
       "eyebrow": "D’var Torah · Bereishit · October 2026",
       "byline": "A Reader’s Edition · Rabbi Phillip Blue",
       "category": "weekly",
-      "file": "content/dvar-torah/2026/dvar-torah-2026-10-bereishit-naked-cunning-growing-up.md",
-      "podcast": "https://podcasts.apple.com/us/podcast/naked-cunning-and-growing-up/id6821008829?i=1000794065688"
+      "file": "content/dvar-torah/Genesis/1-01-26-Reader (Bereishit).md",
+      "podcast": "https://podcasts.apple.com/us/podcast/naked-cunning-and-growing-up/id6821008829?i=1000794065688",
+      "legacyFile": "content/dvar-torah/2026/dvar-torah-2026-10-bereishit-naked-cunning-growing-up.md",
+      "readerFile": "content/dvar-torah/Genesis/1-01-26-Reader (Bereishit).md",
+      "emailFile": null
     },
     {
       "id": "dvar-torah-2026-10-noach-who-belongs-inside-your-ark",
@@ -43,8 +55,11 @@
       "eyebrow": "D’var Torah · Noach · October 2026",
       "byline": "Rabbi Phillip Blue",
       "category": "weekly",
-      "file": "content/dvar-torah/2026/dvar-torah-2026-10-noach-who-belongs-inside-your-ark.md",
-      "podcast": "https://podcasts.apple.com/us/podcast/the-blue-thread/id6821008829?i=1000796854641"
+      "file": "content/dvar-torah/Genesis/1-02-26-Reader (Noach).md",
+      "podcast": "https://podcasts.apple.com/us/podcast/the-blue-thread/id6821008829?i=1000796854641",
+      "legacyFile": "content/dvar-torah/2026/dvar-torah-2026-10-noach-who-belongs-inside-your-ark.md",
+      "readerFile": "content/dvar-torah/Genesis/1-02-26-Reader (Noach).md",
+      "emailFile": null
     },
     {
       "id": "sermon-2026-rosh-hashanah-day-1-pakad",
@@ -52,8 +67,11 @@
       "eyebrow": "High Holiday Sermon · 2026",
       "byline": "Rosh Hashanah Day 1, 2026 · Rabbi Phillip Blue",
       "category": "holiday",
-      "file": "content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-1-pakad.md",
-      "podcast": "https://podcasts.apple.com/us/podcast/the-blue-thread/id6821008829?i=1000796231523"
+      "file": "content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 1).md",
+      "podcast": "https://podcasts.apple.com/us/podcast/the-blue-thread/id6821008829?i=1000796231523",
+      "legacyFile": "content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-1-pakad.md",
+      "readerFile": "content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 1).md",
+      "emailFile": null
     },
     {
       "id": "sermon-2026-rosh-hashanah-day-2-teshuvah",
@@ -61,8 +79,11 @@
       "eyebrow": "High Holiday Sermon · 2026",
       "byline": "Rosh Hashanah Day 2, 2026 · Rabbi Phillip Blue",
       "category": "holiday",
-      "file": "content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-2-teshuvah.md",
-      "podcast": "https://podcasts.apple.com/us/podcast/teshuvah-what-if-you-dont-have-the-answer/id6821008829?i=1000796697280"
+      "file": "content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 2).md",
+      "podcast": "https://podcasts.apple.com/us/podcast/teshuvah-what-if-you-dont-have-the-answer/id6821008829?i=1000796697280",
+      "legacyFile": "content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-2-teshuvah.md",
+      "readerFile": "content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 2).md",
+      "emailFile": null
     },
     {
       "id": "sermon-2026-yom-kippur-mechilah",
@@ -70,8 +91,11 @@
       "eyebrow": "High Holiday Sermon · 2026",
       "byline": "Yom Kippur 2026 · Rabbi Phillip Blue",
       "category": "holiday",
-      "file": "content/dvar-torah/2026/sermon-2026-yom-kippur-mechilah.md",
-      "podcast": null
+      "file": "content/dvar-torah/Holidays/26-Reader (Yom Kippur).md",
+      "podcast": null,
+      "legacyFile": "content/dvar-torah/2026/sermon-2026-yom-kippur-mechilah.md",
+      "readerFile": "content/dvar-torah/Holidays/26-Reader (Yom Kippur).md",
+      "emailFile": null
     }
   ]
 }
