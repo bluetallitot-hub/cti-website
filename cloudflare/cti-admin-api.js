@@ -23,6 +23,63 @@ function checkChanges(changes){if(!changes||Array.isArray(changes)||typeof chang
 export default {async fetch(request,env){const ORIGIN=env.SITE_ORIGIN;if(!ORIGIN)return json({error:'Site origin is not configured'},503);const origin=request.headers.get('origin');const headers={'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type','vary':'Origin'};if(request.method==='OPTIONS')return new Response(null,{status:204,headers});if(origin&&origin!==ORIGIN)return json({error:'Origin not allowed'},403,headers);const url=new URL(request.url);const respond=(o,s=200)=>json(o,s,headers);try{
 if(url.pathname==='/health')return respond({ok:true,service:'CTI administration API'});
 if(url.pathname==='/login'&&request.method==='POST'){const body=await request.json();if(typeof body.password!=='string'||body.password.length>256)return respond({error:'Invalid password'},400);let role=null;if(await passwordCheck(body.password,env.ADMIN_PASSWORD))role='admin';else if(await passwordCheck(body.password,env.MELDADOS_PASSWORD))role='meldados';if(!role)return respond({error:'Incorrect password'},401);if(!env.SESSION_SECRET)return respond({error:'Server session secret is not configured'},503);return respond({token:await issue(role,env.SESSION_SECRET),role,expiresIn:28800})}
+
+const subs=env.CTI_MELDATHO_SUBSCRIPTIONS;
+const site=ORIGIN.replace(/\\/$/,'');
+const sendMail=async(to,subject,body)=>{
+ if(!env.RESEND_API_KEY||!env.CTI_MELDATHO_EMAIL_FROM)throw Error('Reminder email service is not configured');
+ const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_MELDATHO_EMAIL_FROM,to:[to],subject,text:body})});
+ if(!response.ok)throw Error('Unable to send confirmation email');
+};
+const token=()=>crypto.randomUUID()+crypto.randomUUID();
+const subKey=async(email)=>'subscriber:'+b64(new Uint8Array(await crypto.subtle.digest('SHA-256',enc.encode(email))));
+if(url.pathname==='/meldathos/subscribe'&&request.method==='POST'){
+ if(!subs)return respond({error:'Subscriptions are not configured yet'},503);
+ const b=await request.json(),email=String(b.email||'').trim().toLowerCase(),name=String(b.name||'').trim();
+ if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)||email.length>254||!name||name.length>120||b.consent!==true||!Array.isArray(b.memorialIds)||!b.memorialIds.length||b.memorialIds.length>500)return respond({error:'Please provide your name, valid email, and selected memorials'},400);
+ const ids=[...new Set(b.memorialIds)];
+ if(ids.length!==b.memorialIds.length||ids.some(id=>typeof id!=='string'||id.length>150))return respond({error:'Invalid memorial selection'},400);
+ const file=await gh(env,'content/meldados.json');
+ const people=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,'')))).people||[];
+ const valid=new Set(people.filter(p=>['approved','published','stub'].includes(p.reviewStatus)).map(p=>p.id));
+ if(ids.some(id=>!valid.has(id)))return respond({error:'A selected memorial is unavailable'},400);
+ const confirmation=token(),key=await subKey(email);
+ await subs.put('pending:'+confirmation,JSON.stringify({email,name,ids,key}),{expirationTtl:86400});
+ try{await sendMail(email,'Confirm your CTI Meldatho reminders','Please confirm your Meldatho reminder selections by opening this link within 24 hours:\\n\\n'+site+'/subscribe-meldados.html?confirm='+encodeURIComponent(confirmation)+'\\n\\nIf you did not request this, ignore this email.')}catch(e){await subs.delete('pending:'+confirmation);throw e}
+ return respond({ok:true});
+}
+if(url.pathname==='/meldathos/confirm'&&request.method==='POST'){
+ if(!subs)return respond({error:'Subscriptions are not configured'},503);
+ const b=await request.json(),confirmation=String(b.token||'');
+ if(!/^[a-f0-9-]{72}$/.test(confirmation))return respond({error:'Invalid confirmation link'},400);
+ const pending=await subs.get('pending:'+confirmation,'json');
+ if(!pending)return respond({error:'Confirmation expired or already used'},410);
+ const previous=await subs.get(pending.key,'json');
+ const manage=previous?.manageToken||token();
+ await subs.put(pending.key,JSON.stringify({email:pending.email,name:pending.name,ids:pending.ids,manageToken:manage,confirmedAt:new Date().toISOString()}));
+ await subs.put('manage:'+manage,pending.key);
+ await subs.delete('pending:'+confirmation);
+ await sendMail(pending.email,'Your CTI Meldatho reminders are confirmed','Your reminders are active. You will receive a reminder seven days before each selected Hebrew memorial anniversary.\\n\\nManage or unsubscribe here:\\n'+site+'/subscribe-meldados.html?manage='+encodeURIComponent(manage));
+ return respond({ok:true});
+}
+if(url.pathname==='/meldathos/manage'&&['GET','POST'].includes(request.method)){
+ if(!subs)return respond({error:'Subscriptions are not configured'},503);
+ const b=request.method==='POST'?await request.json():null,manage=String(b?.token||url.searchParams.get('token')||'');
+ if(!/^[a-f0-9-]{72}$/.test(manage))return respond({error:'Invalid management link'},400);
+ const key=await subs.get('manage:'+manage);
+ if(!key)return respond({error:'Management link not found'},404);
+ const record=await subs.get(key,'json');
+ if(!record||record.manageToken!==manage)return respond({error:'Subscription unavailable'},404);
+ if(request.method==='GET')return respond({name:record.name,email:record.email,memorialIds:record.ids});
+ if(b.unsubscribe===true){await subs.delete(key);await subs.delete('manage:'+manage);return respond({ok:true,unsubscribed:true})}
+ if(!Array.isArray(b.memorialIds)||b.memorialIds.length>500||!b.memorialIds.length)return respond({error:'Choose at least one memorial or unsubscribe'},400);
+ const ids=[...new Set(b.memorialIds)];
+ const f=await gh(env,'content/meldados.json'),people=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\\s/g,'')))).people||[];
+ const valid=new Set(people.filter(p=>['approved','published','stub'].includes(p.reviewStatus)).map(p=>p.id));
+ if(ids.length!==b.memorialIds.length||ids.some(id=>typeof id!=='string'||!valid.has(id)))return respond({error:'Invalid memorial selection'},400);
+ record.ids=ids;await subs.put(key,JSON.stringify(record));return respond({ok:true});
+}
+
 const role=await verify(request,env);if(!role)return respond({error:'Please sign in'},401);
 if(url.pathname==='/session')return respond({role});
 if(url.pathname==='/file'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const path=url.searchParams.get('path');if(!adminFiles.has(path))return respond({error:'File not allowed'},400);const f=await gh(env,path);return respond({sha:f.sha,content:new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))});}
