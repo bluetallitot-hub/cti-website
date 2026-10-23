@@ -37,23 +37,7 @@ async function loadSourceMarkdown(r){
   }
 }
 const originalFill=fill;fill=function(r){originalFill(r);$('summary').value=r.description||'';loadSourceMarkdown(r);};
-$('commitTorah').onclick=async()=>{
-  $('status').textContent='Direct publication is disabled until an approval workflow is implemented.';
-  return;
-  const button=$('commitTorah'),record=records.find(r=>CTITorahFiles.key(r)===$('record').value);
-  if(!record||!loadedSource||loadedSource.path!==CTITorahFiles.path(record)){$('status').textContent='Select an existing D’var Torah and wait for its Markdown to load.';return}
-  const content=$('sermon').value;
-  if(!content.trim()){$('status').textContent='Cannot commit empty Markdown.';return}
-  if(content===loadedSource.original){$('status').textContent='No Markdown changes to commit.';return}
-  if(!loadedSource.sha){$('status').textContent='GitHub commit is not available until the updated CTI admin API is deployed. Save a draft or download Markdown instead.';return}
-  if(!confirm('Commit changes to '+loadedSource.path+' on GitHub main? This will publish the revised D’var Torah.'))return;
-  button.disabled=true;$('status').textContent='Committing Markdown to GitHub…';
-  try{const result=await CTIAuth.api('/torah/commit',{path:loadedSource.path,expectedSha:loadedSource.sha,content});
-    loadedSource={...loadedSource,sha:result.sha,original:content};
-    $('status').textContent='Committed successfully to GitHub: '+result.commit+'. The public site will update after deployment.';
-  }catch(e){$('status').textContent='Commit failed: '+e.message+'. Your edits remain in the editor.'}
-  finally{button.disabled=false}
-};
+$('commitTorah').onclick=()=>{$('status').textContent='Direct publication is disabled until an authenticated approval workflow is implemented.'};
 function renderReaderPreview(){
  const el=$('readerPreview');if(!el)return;el.replaceChildren();
  const markdown=$('sermon').value.replace(/\r\n/g,'\n');
