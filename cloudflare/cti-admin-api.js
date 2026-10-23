@@ -82,7 +82,22 @@ if(url.pathname==='/meldathos/manage'&&['GET','POST'].includes(request.method)){
  record.ids=ids;record.serviceMonths=b.serviceMonths||[];await subs.put(key,JSON.stringify(record));return respond({ok:true});
 }
 
-const role=await verify(request,env);if(!role)return respond({error:'Please sign in'},401);
+const role=await verify(request,env);
+if(url.pathname==='/meldathos/subscribers'&&request.method==='GET'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!env.CTI_MELDATHO_SUBSCRIPTIONS)return respond({error:'Private subscription storage is not configured'},503);
+ const entries=[];let cursor;
+ do{
+  const page=await env.CTI_MELDATHO_SUBSCRIPTIONS.list({prefix:'subscriber:',limit:1000,...(cursor?{cursor}:{})});
+  for(const item of page.keys){const record=await env.CTI_MELDATHO_SUBSCRIPTIONS.get(item.name,'json');if(record&&record.confirmedAt)entries.push({name:record.name,email:record.email,memorialIds:record.ids||[],serviceMonths:record.serviceMonths||[],confirmedAt:record.confirmedAt})}
+  cursor=page.list_complete?null:page.cursor;
+ }while(cursor);
+ const month=url.searchParams.get('month'),memorial=url.searchParams.get('memorial');
+ if(month&&!serviceMonths.has(month))return respond({error:'Invalid Hebrew month'},400);
+ const filtered=entries.filter(r=>(!month||r.serviceMonths.includes(month))&&(!memorial||r.memorialIds.includes(memorial)));
+ return respond({count:filtered.length,subscribers:filtered});
+}
+if(!role)return respond({error:'Please sign in'},401);
 if(url.pathname==='/session')return respond({role});
 if(url.pathname==='/file'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const path=url.searchParams.get('path');if(!adminFiles.has(path))return respond({error:'File not allowed'},400);const f=await gh(env,path);return respond({sha:f.sha,content:new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))});}
 if(url.pathname==='/torah/source'&&request.method==='GET'){
