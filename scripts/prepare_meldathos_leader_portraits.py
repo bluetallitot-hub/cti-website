@@ -21,11 +21,13 @@ def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
     OUT.mkdir(parents=True, exist_ok=True)
     processed = set()
+    seen = set()
     skipped = []
     for person in data["people"]:
         mid = person.get("id", "")
         if mid not in IDS:
             continue
+        seen.add(mid)
         source_path = person.get("photo", "")
         if not source_path.startswith("assets/images/leadership/"):
             raise ValueError(f"{mid}: expected original leadership portrait, got {source_path!r}")
@@ -42,7 +44,7 @@ def main():
         person["photo"] = target.relative_to(ROOT).as_posix()
         processed.add(mid)
         print(f"{person.get('englishName')}: {source_path} -> {person['photo']}")
-    missing = IDS - processed
+    missing = IDS - seen
     if missing:
         raise ValueError(f"Missing memorial records: {sorted(missing)}")
     if skipped:
