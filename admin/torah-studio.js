@@ -53,6 +53,12 @@ function renderReaderPreview(){
  }
 }
 $('sermon').addEventListener('input',renderReaderPreview);
+for(const button of document.querySelectorAll('[data-format]'))button.onclick=()=>{const input=$('body'),a=input.selectionStart,b=input.selectionEnd,selection=input.value.slice(a,b),kind=button.dataset.format;let replacement;if(kind==='bold')replacement='**'+(selection||'bold text')+'**';else if(kind==='italic')replacement='*'+(selection||'italic text')+'*';else if(kind==='heading')replacement='## '+(selection||'Heading');else replacement='['+(selection||'link text')+'](https://example.com)';input.setRangeText(replacement,a,b,'select');input.focus();render()};
+function formatEmailPreview(){const p=$('preview');if(!p)return;const raw=$('body').value;const text=raw.replace(/\\r\\n/g,'\\n');const lines=text.split(/\\n\\s*\\n/);p.replaceChildren();const heading=document.createElement('h2');heading.textContent=$('title').value||'D’var Torah';p.append(heading);for(const block of [ $('opening').value,...lines,$('closing').value,$('signature').value ]){if(!block.trim())continue;const match=block.match(/^(#{1,3})\\s+([\\s\\S]*)$/);const node=document.createElement(match?'h'+match[1].length:'p');const source=match?match[2]:block;for(const part of source.split(/(\\*\\*[^*]+\\*\\*|\\*[^*]+\\*|\\[[^\\]]+\\]\\(https:\\/\\/[^)]+\\))/g)){if(/^\\*\\*[^*]+\\*\\*$/.test(part)){const el=document.createElement('strong');el.textContent=part.slice(2,-2);node.append(el)}else if(/^\\*[^*]+\\*$/.test(part)){const el=document.createElement('em');el.textContent=part.slice(1,-1);node.append(el)}else if(/^\\[[^\\]]+\\]\\(https:\\/\\/[^)]+\\)$/.test(part)){const m=part.match(/^\\[([^\\]]+)\\]\\((https:\\/\\/[^)]+)\\)$/),a=document.createElement('a');a.textContent=m[1];a.href=m[2];node.append(a)}else node.append(document.createTextNode(part))}p.append(node)}}
+$('copyFormattedEmail').onclick=async()=>{formatEmailPreview();const html=$('preview').innerHTML;try{await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([emailText()],{type:'text/plain'})})]);$('status').textContent='Formatted email copied.'}catch(e){$('status').textContent='Formatted copy unavailable in this browser. Use Download email HTML.'}};
+$('body').addEventListener('input',formatEmailPreview);
+$('previewBtn').onclick=formatEmailPreview;
+
 function updatePublicationUI(){
  const r=records.find(x=>CTITorahFiles.key(x)===$('record').value);
  const button=$('togglePublish'),label=$('publicationState');
