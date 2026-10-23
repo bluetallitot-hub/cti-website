@@ -57,7 +57,7 @@ if(url.pathname==='/torah/publication'&&request.method==='POST'){
 if(url.pathname==='/torah/commit'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();
- if(typeof b.path!=='string'||!/^content\\/dvar-torah\\/(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Holiday|Holidays|2026)\\/[A-Za-z0-9 ()'._-]+\\.md$/.test(b.path)||typeof b.expectedSha!=='string'||! /^[a-f0-9]{40}$/.test(b.expectedSha)||typeof b.content!=='string'||!b.content.trim()||b.content.length>200000)return respond({error:'Invalid Markdown commit'},400);
+ if(typeof b.path!=='string'||!/^content\/dvar-torah\/(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Holiday|Holidays|2026)\/[A-Za-z0-9 ()'._-]+\.md$/.test(b.path)||typeof b.expectedSha!=='string'||! /^[a-f0-9]{40}$/.test(b.expectedSha)||typeof b.content!=='string'||!b.content.trim()||b.content.length>200000)return respond({error:'Invalid Markdown commit'},400);
  const file=await gh(env,b.path);
  if(file.sha!==b.expectedSha)return respond({error:'This Markdown file changed on GitHub after you loaded it. Reload before committing.'},409);
  const saved=await save(env,b.path,b.content,file.sha,'Update CTI Dvar Torah: '+b.path.split('/').pop());
