@@ -7,7 +7,7 @@ from PIL import Image, ImageOps
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "content/meldados.json"
 OUT = ROOT / "assets/images/meldados"
-SIZE = (600, 600)
+SIZE = (600, 600)  # Match square memorial-board and printable tribute photos
 # Initial verified cross-links between leadership photos and memorial records.
 IDS = {
     "newsletter-elliot-hershoff-tishrei",
