@@ -1059,6 +1059,12 @@
           "path": "assets/collections/CTI-015-THM-1.png",
           "derivedFrom": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
           "method": "full-image contain with softened background"
+        },
+        {
+          "type": "ARTICLE",
+          "version": 1,
+          "path": "assets/archive/originals/I-581-01-15-033-web.jpg",
+          "note": "Original Peabody Times article scan, not original standalone photograph"
         }
       ],
       "thumbnailSpecification": {
@@ -1083,7 +1089,8 @@
         "fileReferences": [
           "assets/archive/originals/I-581-01-15-033-web.jpg",
           "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
-          "assets/collections/CTI-015-THM-1.png"
+          "assets/collections/CTI-015-THM-1.png",
+          "assets/collections/CTI-003-THM-1.png"
         ],
         "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
         "captionVerification": "printed caption not transcribed",
@@ -1112,11 +1119,11 @@
       ],
       "galleryPhotoLegacyRecord": "CTI-003",
       "photoRelationshipNote": "The enhanced 1976 Joseph Gibely sanctuary photograph was previously published separately as CTI-003. This is the same photograph associated with this October 4, 1976 Peabody Times article; retain one canonical historical record.",
-      "relatedGalleryRecordId": "CTI-003",
+      "relatedGalleryRecordId": "CTI-015",
       "galleryPhoto": {
         "legacyRecordId": "CTI-003",
-        "title": "Joseph Gibely in the CTI sanctuary, 1976.",
-        "caption": "Joseph Gibely in the CTI sanctuary, 1976.",
+        "title": "Joseph Gibely in the CTI sanctuary, 1976",
+        "caption": "Joseph Gibely in the Congregation Tifereth Israel sanctuary, 1976.",
         "date": "1976",
         "description": "Photograph of Joseph Gibely inside the Congregation Tifereth Israel sanctuary in 1976.",
         "source": "CTI historical photograph collection (individual provenance unverified)",
@@ -1126,13 +1133,14 @@
         "originalFilenames": [
           "cti-1976-joseph-gibely-photo-enhanced.png"
         ],
-        "provenanceNote": "Historical photograph associated with this article."
+        "provenanceNote": "Enhanced CTI historical photograph; original standalone photographic source not verified. The Peabody Times scan is the original article source, not the original photograph."
       },
       "presentationOrder": [
         "enhanced-photo-index",
         "article-secondary"
       ],
-      "articleImage": "assets/archive/originals/I-581-01-15-033-web.jpg"
+      "articleImage": "assets/archive/originals/I-581-01-15-033-web.jpg",
+      "recordPresentationNote": "Archive index thumbnail opens gallery detail for enhanced Joseph Gibely portrait; article title opens transcribed 1976 Peabody Times article. Archival newspaper scan remains secondary original article source."
     },
     {
       "id": "CTI-016",
