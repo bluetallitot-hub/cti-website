@@ -31,7 +31,7 @@ if(url.pathname==='/torah/source'&&request.method==='GET'){
  const path=url.searchParams.get('path')||'';
  if(!/^content\\/dvar-torah\\/(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Holiday|Holidays|2026)\\/[A-Za-z0-9 ()'._-]+\\.md$/.test(path))return respond({error:'Invalid Torah Markdown path'},400);
  const file=await gh(env,path);
- return respond({path,sha:file.sha,content:new TextDecoder().decode(un64(file.content.replace(/\\s/g,'')))});
+ return respond({path,sha:file.sha,content:new TextDecoder().decode(un64(file.content.replace(/\s/g,'')))});
 }
 if(url.pathname==='/torah/catalog'&&request.method==='GET'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
@@ -66,7 +66,28 @@ if(url.pathname==='/torah/commit'&&request.method==='POST'){
 if(url.pathname==='/github-check'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const f=await gh(env,'content/meldados.json');return respond({ok:true,repository:env.GITHUB_REPOSITORY,sha:f.sha,access:'read'});}
 if(url.pathname==='/meldados/state'&&request.method==='GET'){const f=await gh(env,'content/meldados.json');return respond({sha:f.sha,people:JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))).people})}
 
-if(url.pathname==='/meldados/update'&&request.method==='POST'){const b=await request.json();if(typeof b.recordId!=='string'||b.recordId.length>150||typeof b.expectedSha!=='string')return respond({error:'Invalid record'},400);checkChanges(b.changes);const file=await gh(env,'content/meldados.json');if(file.sha!==b.expectedSha)return respond({error:'Memorials changed since you loaded this page. Reload before saving.'},409);const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));const person=doc.people.find(p=>p.id===b.recordId);if(!person)return respond({error:'Memorial not found'},404);if(role==='meldados'&&!['approved','published','stub'].includes(person.reviewStatus))return respond({error:'Record is not editable'},403);Object.assign(person,b.changes);await save(env,'content/meldados.json',JSON.stringify(doc,null,2)+'\n',file.sha,'Update memorial information: '+person.id);return respond({ok:true,message:'Memorial changes published to GitHub'})}
+if(url.pathname==='/meldados/update'&&request.method==='POST'){
+let stage='parse request';
+try{
+const b=await request.json();
+stage='validate changes';
+if(typeof b.recordId!=='string'||b.recordId.length>150||typeof b.expectedSha!=='string')return respond({error:'Invalid record'},400);
+checkChanges(b.changes);
+stage='fetch memorial database';
+const file=await gh(env,'content/meldados.json');
+if(file.sha!==b.expectedSha)return respond({error:'Memorials changed since you loaded this page. Reload before saving.'},409);
+stage='decode memorial database';
+const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));
+stage='apply memorial changes';
+const person=doc.people.find(p=>p.id===b.recordId);
+if(!person)return respond({error:'Memorial not found'},404);
+if(role==='meldados'&&!['approved','published','stub'].includes(person.reviewStatus))return respond({error:'Record is not editable'},403);
+Object.assign(person,b.changes);
+stage='encode and publish memorial database';
+await save(env,'content/meldados.json',JSON.stringify(doc,null,2)+'\n',file.sha,'Update memorial information: '+person.id);
+return respond({ok:true,message:'Memorial changes published to GitHub'});
+}catch(e){return respond({error:'Memorial update failed at '+stage+': '+(e?.message||'Unknown error')},500)}
+}
 if(url.pathname==='/meldados/portrait'&&request.method==='POST'){const b=await request.json();if(typeof b.recordId!=='string'||!b.recordId.match(/^[a-zA-Z0-9_-]{1,150}$/)||typeof b.image!=='string'||b.image.length>1400000||!/^data:image\/webp;base64,[A-Za-z0-9+/=]+$/.test(b.image))return respond({error:'Invalid portrait'},400);const file=await gh(env,'content/meldados.json');const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));const person=doc.people.find(p=>p.id===b.recordId);if(!person||role==='meldados'&&!['approved','published','stub'].includes(person.reviewStatus))return respond({error:'Memorial not editable'},403);const path='assets/images/meldados/portraits/'+b.recordId+'.webp';let sha;try{sha=(await gh(env,path)).sha}catch(e){if(e.status!==404)throw e}await gh(env,path,'PUT',{message:'Update memorial portrait: '+b.recordId,content:b.image.split(',')[1],sha,branch:'main'});const fresh=await gh(env,'content/meldados.json');const current=JSON.parse(new TextDecoder().decode(un64(fresh.content.replace(/\s/g,''))));const p=current.people.find(x=>x.id===b.recordId);p.photo=path;await save(env,'content/meldados.json',JSON.stringify(current,null,2)+'\n',fresh.sha,'Publish memorial portrait: '+b.recordId);return respond({ok:true})}
 if(url.pathname==='/announcements/email'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
