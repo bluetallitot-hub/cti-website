@@ -33,6 +33,12 @@ if(url.pathname==='/torah/source'&&request.method==='GET'){
  const file=await gh(env,path);
  return respond({path,sha:file.sha,content:new TextDecoder().decode(un64(file.content.replace(/\\s/g,'')))});
 }
+if(url.pathname==='/torah/catalog'&&request.method==='GET'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const file=await gh(env,'content/dvar-torah/index.json');
+ const data=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));
+ return respond({sha:file.sha,items:data.items||[]});
+}
 if(url.pathname==='/torah/publication'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();
@@ -43,8 +49,8 @@ if(url.pathname==='/torah/publication'&&request.method==='POST'){
  const key=r=>r.holidayCode?'holiday-'+String(r.holidayCode).toLowerCase()+'-'+r.year+'-'+String(r.name).toLowerCase().replace(/[^a-z0-9]+/g,'-'):'torah-'+r.book+'-'+String(r.portion).padStart(2,'0')+'-'+r.year;
  const item=catalog.items.find(r=>key(r)===b.recordId);
  if(!item)return respond({error:'Dvar Torah not found'},404);
- if((item.published!==false)===b.published)return respond({ok:true,sha:file.sha,unchanged:true,published:b.published});
- item.published=b.published;
+ if((item.status!=='unpublished'&&item.published!==false)===b.published)return respond({ok:true,sha:file.sha,unchanged:true,published:b.published});
+ item.status=b.published?'published':'unpublished';delete item.published;
  const saved=await save(env,'content/dvar-torah/index.json',JSON.stringify(catalog,null,2)+'\\n',file.sha,(b.published?'Publish':'Unpublish')+' CTI Dvar Torah: '+b.recordId);
  return respond({ok:true,sha:saved.content.sha,commit:saved.commit.sha,published:b.published});
 }
