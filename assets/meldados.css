@@ -215,3 +215,10 @@
 /* Final month plate alignment: preserve arrow hit areas, center month text lower inside brass. */
 .board-art .month-overlay span{transform:translateY(55%)!important}
 .board-art .month-overlay button:hover,.board-art .month-overlay button:active{background:transparent!important}
+
+/* Keep both memorial actions together at the bottom of the observance tile. */
+#memorial-detail .detail-top-row>.detail-service-box{overflow:visible;justify-content:flex-start}
+#memorial-detail .detail-service-box .memorial-action-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;width:100%;margin-top:auto;padding-top:10px}
+#memorial-detail .detail-service-box .memorial-action-row .memorial-update-button{display:flex;align-items:center;justify-content:center;min-width:0;min-height:42px;box-sizing:border-box;margin:0;padding:8px 6px;font-size:clamp(.64rem,.85vw,.85rem);line-height:1.2;overflow-wrap:anywhere}
+@media(max-width:700px){#memorial-detail .detail-service-box .memorial-action-row{gap:5px;padding-top:5px}#memorial-detail .detail-service-box .memorial-action-row .memorial-update-button{min-height:34px;padding:5px 3px;font-size:clamp(.56rem,1.4vw,.74rem)}}
+@media(max-width:480px){#memorial-detail .detail-service-box .memorial-action-row{gap:10px;padding-top:12px}#memorial-detail .detail-service-box .memorial-action-row .memorial-update-button{font-size:.84rem;padding:10px 8px}}
