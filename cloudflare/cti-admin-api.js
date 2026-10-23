@@ -26,6 +26,22 @@ if(url.pathname==='/login'&&request.method==='POST'){const body=await request.js
 const role=await verify(request,env);if(!role)return respond({error:'Please sign in'},401);
 if(url.pathname==='/session')return respond({role});
 if(url.pathname==='/file'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const path=url.searchParams.get('path');if(!adminFiles.has(path))return respond({error:'File not allowed'},400);const f=await gh(env,path);return respond({sha:f.sha,content:new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))});}
+if(url.pathname==='/torah/source'&&request.method==='GET'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const path=url.searchParams.get('path')||'';
+ if(!/^content\\/dvar-torah\\/(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Holiday|Holidays|2026)\\/[A-Za-z0-9 ()'._-]+\\.md$/.test(path))return respond({error:'Invalid Torah Markdown path'},400);
+ const file=await gh(env,path);
+ return respond({path,sha:file.sha,content:new TextDecoder().decode(un64(file.content.replace(/\\s/g,'')))});
+}
+if(url.pathname==='/torah/commit'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json();
+ if(typeof b.path!=='string'||!/^content\\/dvar-torah\\/(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Holiday|Holidays|2026)\\/[A-Za-z0-9 ()'._-]+\\.md$/.test(b.path)||typeof b.expectedSha!=='string'||! /^[a-f0-9]{40}$/.test(b.expectedSha)||typeof b.content!=='string'||!b.content.trim()||b.content.length>200000)return respond({error:'Invalid Markdown commit'},400);
+ const file=await gh(env,b.path);
+ if(file.sha!==b.expectedSha)return respond({error:'This Markdown file changed on GitHub after you loaded it. Reload before committing.'},409);
+ const saved=await save(env,b.path,b.content,file.sha,'Update CTI Dvar Torah: '+b.path.split('/').pop());
+ return respond({ok:true,sha:saved.content.sha,commit:saved.commit.sha,path:b.path});
+}
 if(url.pathname==='/github-check'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const f=await gh(env,'content/meldados.json');return respond({ok:true,repository:env.GITHUB_REPOSITORY,sha:f.sha,access:'read'});}
 if(url.pathname==='/meldados/state'&&request.method==='GET'){const f=await gh(env,'content/meldados.json');return respond({sha:f.sha,people:JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))).people})}
 
