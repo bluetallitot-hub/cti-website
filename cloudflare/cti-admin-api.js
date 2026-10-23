@@ -69,14 +69,49 @@ if(url.pathname==='/torah/podcast'&&request.method==='POST'){
  const saved=await save(env,'content/dvar-torah/index.json',JSON.stringify(catalog,null,2)+'\n',file.sha,'Update CTI Dvar Torah podcast: '+b.recordId);
  return respond({ok:true,sha:saved.content.sha,commit:saved.commit.sha});
 }
-if(url.pathname==='/torah/commit'&&request.method==='POST'){
+// Reader Edition: protected three-stage editorial workflow. Direct commits are forbidden.
+if(url.pathname==='/torah/commit')return respond({error:'Direct Markdown commits are disabled. Use Save Draft, Approve, Publish.'},410);
+if(['/torah/draft','/torah/approve','/torah/publish'].includes(url.pathname)){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
- const b=await request.json();
- if(typeof b.path!=='string'||!/^content\/dvar-torah\/(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Holiday|Holidays|2026)\/[A-Za-z0-9 ()'._-]+\.md$/.test(b.path)||typeof b.expectedSha!=='string'||! /^[a-f0-9]{40}$/.test(b.expectedSha)||typeof b.content!=='string'||!b.content.trim()||b.content.length>200000)return respond({error:'Invalid Markdown commit'},400);
- const file=await gh(env,b.path);
- if(file.sha!==b.expectedSha)return respond({error:'This Markdown file changed on GitHub after you loaded it. Reload before committing.'},409);
- const saved=await save(env,b.path,b.content,file.sha,'Update CTI Dvar Torah: '+b.path.split('/').pop());
- return respond({ok:true,sha:saved.content.sha,commit:saved.commit.sha,path:b.path});
+ const body=request.method==='POST'?await request.json():{};
+ const recordId=request.method==='GET'?url.searchParams.get('recordId'):body.recordId;
+ if(typeof recordId!=='string'||!/^[-a-z0-9]{3,100}$/.test(recordId))return respond({error:'Invalid record'},400);
+ const index=await gh(env,'content/dvar-torah/index.json');
+ const catalog=JSON.parse(new TextDecoder().decode(un64(index.content.replace(/\s/g,''))));
+ const key=r=>r.holidayCode?'holiday-'+String(r.holidayCode).toLowerCase()+'-'+r.year+'-'+String(r.name).toLowerCase().replace(/[^a-z0-9]+/g,'-'):'torah-'+r.book+'-'+String(r.portion).padStart(2,'0')+'-'+r.year;
+ const item=catalog.items.find(r=>key(r)===recordId);
+ if(!item)return respond({error:'Existing Dvar Torah not found'},404);
+ const bookNames=['','Genesis','Exodus','Leviticus','Numbers','Deuteronomy'];
+ const sourcePath=item.holidayCode?'content/dvar-torah/Holiday/'+item.holidayCode+'-'+String(item.year).slice(-2)+' ('+item.name+')-Reader.md':'content/dvar-torah/'+bookNames[item.book]+'/'+item.book+'-'+String(item.portion).padStart(2,'0')+'-'+String(item.year).slice(-2)+'-Reader ('+item.name+').md';
+ const draftPath='content/dvar-torah/editorial-drafts/'+recordId+'.json';
+ let draftFile=null,draft=null;
+ try{draftFile=await gh(env,draftPath);draft=JSON.parse(new TextDecoder().decode(un64(draftFile.content.replace(/\s/g,''))))}catch(e){if(e.status!==404)throw e}
+ if(request.method==='GET'&&url.pathname==='/torah/draft')return respond({draft,sha:draftFile?.sha||null});
+ if(request.method!=='POST')return respond({error:'Method not allowed'},405);
+ if(url.pathname==='/torah/draft'){
+  if(typeof body.content!=='string'||!body.content.trim()||body.content.length>200000||typeof body.sourceSha!=='string'||!/^[a-f0-9]{40}$/.test(body.sourceSha))return respond({error:'Invalid draft content'},400);
+  if((body.expectedDraftSha||null)!==(draftFile?.sha||null))return respond({error:'Draft changed. Reload before saving.'},409);
+  const source=await gh(env,sourcePath);
+  if(source.sha!==body.sourceSha)return respond({error:'Published Reader Edition changed. Reload before saving.'},409);
+  const next={recordId,sourcePath,sourceSha:source.sha,content:body.content,approved:false,updatedAt:new Date().toISOString()};
+  const saved=await save(env,draftPath,JSON.stringify(next,null,2)+'\n',draftFile?.sha,'Save CTI editorial draft: '+recordId);
+  return respond({ok:true,sha:saved.content.sha,approved:false});
+ }
+ if(!draft||!draftFile)return respond({error:'Save a draft first'},409);
+ if(body.expectedDraftSha!==draftFile.sha)return respond({error:'Draft changed. Reload before continuing.'},409);
+ if(url.pathname==='/torah/approve'){
+  if(draft.approved)return respond({ok:true,sha:draftFile.sha,approved:true});
+  draft.approved=true;draft.approvedAt=new Date().toISOString();
+  const saved=await save(env,draftPath,JSON.stringify(draft,null,2)+'\n',draftFile.sha,'Approve CTI editorial draft: '+recordId);
+  return respond({ok:true,sha:saved.content.sha,approved:true});
+ }
+ if(!draft.approved)return respond({error:'Draft must be approved before publishing'},409);
+ const source=await gh(env,sourcePath);
+ if(source.sha!==draft.sourceSha)return respond({error:'Published source changed since drafting. Reload and review.'},409);
+ const saved=await save(env,sourcePath,draft.content,source.sha,'Publish approved CTI Reader Edition: '+recordId);
+ draft.approved=false;draft.publishedCommit=saved.commit.sha;draft.publishedAt=new Date().toISOString();draft.sourceSha=saved.content.sha;
+ await save(env,draftPath,JSON.stringify(draft,null,2)+'\n',draftFile.sha,'Archive published CTI editorial draft: '+recordId);
+ return respond({ok:true,sha:saved.content.sha,commit:saved.commit.sha});
 }
 if(url.pathname==='/github-check'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const f=await gh(env,'content/meldados.json');return respond({ok:true,repository:env.GITHUB_REPOSITORY,sha:f.sha,access:'read'});}
 if(url.pathname==='/meldados/state'&&request.method==='GET'){const f=await gh(env,'content/meldados.json');return respond({sha:f.sha,people:JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))).people})}
