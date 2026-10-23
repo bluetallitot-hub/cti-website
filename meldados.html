@@ -9,9 +9,10 @@
 </div></div>
 <p class="board-instructions">Choose a month using the arrows on the brass nameplate. Select a named plaque to read the remembrance below.</p>
 <section id="memorial-detail" class="memorial-detail" aria-live="polite" hidden></section>
+<section class="memorial-search" aria-label="Search memorials"><h2>Find a Meldatho</h2><label for="memorial-search-input">Search by name, Hebrew name, or remembered by</label><input id="memorial-search-input" type="search" placeholder="Enter a name" autocomplete="off"><p id="memorial-search-count" aria-live="polite"></p><div id="memorial-search-results"></div></section>
 <section class="month-directory"><h2 id="list-heading">Meldathos for Tishrei</h2><div id="month-list"></div></section>
 <section class="today-memorials"><h2>Today's Meldathos</h2><p id="today-note"></p><div id="today-list"></div></section>
-</main><script src="assets/site.js?v=20261020-nav2"></script><script src="assets/service-calendar.js?v=20261021a"></script><script src="assets/meldados.js?v=20261023-actions"></script><script>
+</main><script src="assets/site.js?v=20261020-nav2"></script><script src="assets/service-calendar.js?v=20261021a"></script><script src="assets/meldados.js?v=20261023-search"></script><script>
 /* Position directions a fixed 30px below the month plate, independent of image size. */
 (function(){
  const board=document.querySelector('.board-art');
