@@ -9,6 +9,7 @@ async function loadSourceMarkdown(r){
   const sequence=++sourceLoadSequence;
   const sourcePath=CTITorahFiles.path(r);
   $('sermon').value='';loadedSource=null;
+  $('body').value='';
   $('status').textContent='Loading website Markdown from '+sourcePath+'…';
   try{
     let markdown,sha=null;
@@ -23,6 +24,12 @@ async function loadSourceMarkdown(r){
     if(sequence!==sourceLoadSequence)return;
     $('sermon').value=markdown;
     loadedSource={path:sourcePath,sha,original:markdown};
+    renderReaderPreview();
+    try {
+      const emailPath=CTITorahFiles.path(r,'Email');
+      const response=await fetch('../'+emailPath,{cache:'no-store'});
+      if(response.ok&&sequence===sourceLoadSequence){$('body').value=await response.text();render()}
+    }catch(e){console.warn('Email Edition unavailable',e)}
     $('status').textContent='Loaded '+sourcePath+(sha?'. GitHub commit is available.':'. Draft saving is available; GitHub commit requires the updated admin API.');
   }catch(error){
     if(sequence!==sourceLoadSequence)return;
@@ -31,6 +38,8 @@ async function loadSourceMarkdown(r){
 }
 const originalFill=fill;fill=function(r){originalFill(r);$('summary').value=r.description||'';loadSourceMarkdown(r);};
 $('commitTorah').onclick=async()=>{
+  $('status').textContent='Direct publication of edited Markdown is disabled until a separate authenticated approval-and-publish workflow is verified.';
+  return;
   const button=$('commitTorah'),record=records.find(r=>CTITorahFiles.key(r)===$('record').value);
   if(!record||!loadedSource||loadedSource.path!==CTITorahFiles.path(record)){$('status').textContent='Select an existing D’var Torah and wait for its Markdown to load.';return}
   const content=$('sermon').value;
@@ -45,6 +54,21 @@ $('commitTorah').onclick=async()=>{
   }catch(e){$('status').textContent='Commit failed: '+e.message+'. Your edits remain in the editor.'}
   finally{button.disabled=false}
 };
+function renderReaderPreview(){
+ const el=$('readerPreview');if(!el)return;el.replaceChildren();
+ const markdown=$('sermon').value.replace(/\r\n/g,'\n');
+ for(const block of markdown.split(/\n\s*\n/)){
+  if(!block.trim())continue;
+  const h=block.match(/^(#{1,3})\s+([\s\S]*)$/);
+  const isQuote=block.startsWith('> ');
+  const node=document.createElement(h?'h'+h[1].length:isQuote?'blockquote':'p');
+  const content=(h?h[2]:isQuote?block.replace(/^>\s?/gm,''):block).replace(/\n/g,' ');
+  const pieces=content.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
+  for(const piece of pieces){if(piece.startsWith('**')&&piece.endsWith('**')){const bold=document.createElement('strong');bold.textContent=piece.slice(2,-2);node.append(bold)}else if(piece.startsWith('*')&&piece.endsWith('*')){const italic=document.createElement('em');italic.textContent=piece.slice(1,-1);node.append(italic)}else node.append(document.createTextNode(piece))}
+  el.append(node);
+ }
+}
+$('sermon').addEventListener('input',renderReaderPreview);
 function updatePublicationUI(){
  const r=records.find(x=>CTITorahFiles.key(x)===$('record').value);
  const button=$('togglePublish'),label=$('publicationState');
@@ -70,11 +94,12 @@ $('togglePublish').onclick=async()=>{
  }catch(e){$('status').textContent='Publication change failed: '+e.message}
  updatePublicationUI();
 };
+$('exportEmailMarkdown').onclick=()=>{const x=state();if(!x.title||!x.body){$('status').textContent='Enter a title and Email Edition text first.';return}const r=records.find(r=>CTITorahFiles.key(r)===$('record').value);download(r?CTITorahFiles.path(r,'Email').split('/').pop():slug(x.title)+'-Email.md',x.body+'\n','text/markdown')};
 $('saveSession').onclick=()=>{sessionStorage.setItem('ctiTorahWorkingDraft',JSON.stringify({recordId:$('record').value,...state()}));$('status').textContent='Working draft saved in this browser tab. Export a JSON backup for long-term storage.'};
-function applyDraft(d){++sourceLoadSequence;loadedSource=null;for(const id of ['date','parasha','title','category','website','podcast','podcastNotes','subject','opening','body','closing','signature','summary','sermon'])if(typeof d[id]==='string')$(id).value=d[id];$('record').value=records.some(r=>CTITorahFiles.key(r)===d.recordId)?d.recordId:'';render();drawList()}
+function applyDraft(d){++sourceLoadSequence;loadedSource=null;for(const id of ['date','parasha','title','category','website','podcast','podcastNotes','subject','opening','body','closing','signature','summary','sermon'])if(typeof d[id]==='string')$(id).value=d[id];$('record').value=records.some(r=>CTITorahFiles.key(r)===d.recordId)?d.recordId:'';render();renderReaderPreview();drawList()}
 $('loadSession').onclick=()=>{try{const d=JSON.parse(sessionStorage.getItem('ctiTorahWorkingDraft')||'null');if(!d)throw Error('No saved draft in this browser tab');applyDraft(d);$('status').textContent='Working draft restored.'}catch(e){$('status').textContent=e.message}};
 $('importDraftButton').onclick=()=>$('importDraft').click();
 $('importDraft').onchange=async()=>{try{const f=$('importDraft').files[0];if(!f)return;if(f.size>1048576)throw Error('Draft is too large');const d=JSON.parse(await f.text());if(!d||d.schemaVersion!==1)throw Error('Not a compatible editorial draft');applyDraft(d);$('status').textContent='Draft imported for review. Nothing published.'}catch(e){$('status').textContent=e.message}};
-$('exportWebsite').onclick=()=>{const x=state();if(!x.title||!x.sermon){$('status').textContent='Enter a title and website D’var Torah text first.';return}download(slug(x.date+'-'+x.title)+'.md','# '+x.title+'\n\n'+x.sermon+'\n','text/markdown')};
+$('exportWebsite').onclick=()=>{const x=state();if(!x.title||!x.sermon){$('status').textContent='Enter a title and website D’var Torah text first.';return}download((records.find(r=>CTITorahFiles.key(r)===$('record').value)?CTITorahFiles.path(records.find(r=>CTITorahFiles.key(r)===$('record').value),'Reader').split('/').pop():slug(x.date+'-'+x.title)+'.md'),x.sermon+'\n','text/markdown')};
 $('exportIndex').onclick=()=>{const x=state(),id=$('record').value||'dvar-torah-'+(x.date||'undated')+'-'+slug(x.title);if(!x.title||!x.date){$('status').textContent='Title and publication date are required for index export.';return}if(x.podcast&&!/^https:\/\//.test(x.podcast)){ $('status').textContent='Podcast URL must use HTTPS.';return}const item={id,title:x.title,eyebrow:(x.category==='holiday'?'Holiday Sermon':'D’var Torah')+' · '+x.date,byline:(x.parasha?x.parasha+' · ':'')+'Rabbi Phillip Blue',category:x.category,file:(()=>{const r=records.find(r=>CTITorahFiles.key(r)===id);return r?CTITorahFiles.path(r):null})(),podcast:x.podcast||null};const next=JSON.parse(JSON.stringify(catalog));const i=next.items.findIndex(r=>CTITorahFiles.key(r)===id);if(i>=0)next.items[i]={...next.items[i],title:item.title,eyebrow:item.eyebrow,byline:item.byline,category:item.category,podcast:item.podcast};else { $('status').textContent='New records require book/portion or holiday metadata before export. Nothing published.';return };download('dvar-torah-index-proposed.json',JSON.stringify(next,null,2)+'\n','application/json');$('status').textContent='Proposed index exported. Upload the Markdown file at the listed path before committing the index. No changes published.'};
 })();
