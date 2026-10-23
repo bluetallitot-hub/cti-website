@@ -29,7 +29,7 @@ if(url.pathname==='/file'&&request.method==='GET'){if(role!=='admin')return resp
 if(url.pathname==='/torah/source'&&request.method==='GET'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const path=url.searchParams.get('path')||'';
- if(!/^content\\/dvar-torah\\/(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Holiday|Holidays|2026)\\/[A-Za-z0-9 ()'._-]+\\.md$/.test(path))return respond({error:'Invalid Torah Markdown path'},400);
+  if(!/^content\/dvar-torah\/(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Holiday|Holidays|2026)\/[A-Za-z0-9 ()'._-]+\.md$/.test(path))return respond({error:'Invalid Torah Markdown path'},400);
  const file=await gh(env,path);
  return respond({path,sha:file.sha,content:new TextDecoder().decode(un64(file.content.replace(/\s/g,'')))});
 }
