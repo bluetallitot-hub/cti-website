@@ -20,7 +20,61 @@ const REPO=env.GITHUB_REPOSITORY;
 if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(REPO||''))throw Error('GitHub repository is not configured');if(!env.GITHUB_TOKEN)throw Error('GitHub publishing credential is not configured');const res=await fetch('https://api.github.com/repos/'+REPO+'/contents/'+path,{method,headers:{authorization:'Bearer '+env.GITHUB_TOKEN,accept:'application/vnd.github+json','x-github-api-version':'2022-11-28','user-agent':'CTI-Admin-Worker','content-type':'application/json'},body:body?JSON.stringify(body):undefined});const data=await res.json();if(!res.ok){const error=new Error(res.status===409?'Content changed while editing. Reload and try again.':'GitHub error: '+(data.message||res.status));error.status=res.status;throw error}return data}
 async function save(env,path,content,sha,message){return gh(env,path,'PUT',{message,content:githubBase64(enc.encode(content)),sha,branch:'main'})}
 function checkChanges(changes){if(!changes||Array.isArray(changes)||typeof changes!=='object')throw Error('Invalid changes');const keys=Object.keys(changes);if(!keys.length||keys.some(k=>!communityFields.has(k)))throw Error('Unauthorized memorial field');for(const [k,v] of Object.entries(changes)){if(['hebrewDay','hebrewYearOfDeath'].includes(k)){if(v!==null&&(!Number.isInteger(v)||v<(k==='hebrewDay'?1:1)||v>(k==='hebrewDay'?30:9999)))throw Error('Invalid Hebrew date')}else if(typeof v!=='string'||v.length> (k==='biography'?12000:500))throw Error('Invalid field value');if(k==='hebrewMonth'&&!months.has(v))throw Error('Invalid Hebrew month');if(k==='englishName'&&!v.trim())throw Error('Name required');if(['dateOfBirth','dateOfDeath'].includes(k)&&v&&!/^\d{4}-\d{2}-\d{2}$/.test(v))throw Error('Date must be YYYY-MM-DD')}}
-export default {async fetch(request,env){const ORIGIN=env.SITE_ORIGIN;if(!ORIGIN)return json({error:'Site origin is not configured'},503);const origin=request.headers.get('origin');const headers={'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type','vary':'Origin'};if(request.method==='OPTIONS')return new Response(null,{status:204,headers});if(origin&&origin!==ORIGIN)return json({error:'Origin not allowed'},403,headers);const url=new URL(request.url);const respond=(o,s=200)=>json(o,s,headers);try{
+
+const reminderMonthNames={'Tishri':'Tishrei','Tishrei':'Tishrei','Heshvan':'Cheshvan','Cheshvan':'Cheshvan','Kislev':'Kislev','Tevet':'Tevet','Teveth':'Tevet','Shevat':'Shevat','Shvat':'Shevat','Adar':'Adar','Adar I':'Adar I','Adar II':'Adar II','Nisan':'Nisan','Nissan':'Nisan','Iyar':'Iyar','Sivan':'Sivan','Tamuz':'Tammuz','Tammuz':'Tammuz','Av':'Av','Elul':'Elul'};
+const reminderFormatter=new Intl.DateTimeFormat('en-u-ca-hebrew',{timeZone:'America/New_York',day:'numeric',month:'long',year:'numeric'});
+function hebrewDateFor(date){
+ const parts=Object.fromEntries(reminderFormatter.formatToParts(date).filter(p=>p.type!=='literal').map(p=>[p.type,p.value]));
+ return {day:Number(parts.day),month:reminderMonthNames[parts.month]||parts.month,year:Number(parts.year)};
+}
+function reminderMatch(person,anniversary){
+ if(!person||!Number.isInteger(person.hebrewDay)||person.hebrewDay!==anniversary.day)return false;
+ const month=person.hebrewMonth;
+ // For an ordinary Adar memorial, observe in Adar II during a leap year.
+ if(month==='Adar')return anniversary.month==='Adar'||anniversary.month==='Adar II';
+ // Do not silently reinterpret explicitly recorded Adar I or Adar II dates.
+ return month===anniversary.month;
+}
+async function sendMeldathoReminders(env,now=new Date()){
+ const kv=env.CTI_MELDATHO_SUBSCRIPTIONS;
+ if(!kv||!env.RESEND_API_KEY||!env.CTI_MELDATHO_EMAIL_FROM||!env.GITHUB_REPOSITORY||!env.GITHUB_TOKEN)throw Error('Meldatho reminders are not fully configured');
+ const target=new Date(now.getTime()+7*86400000),hebrew=hebrewDateFor(target);
+ const dateKey=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(target);
+ const repo=env.GITHUB_REPOSITORY;
+ const fileResponse=await fetch('https://api.github.com/repos/'+repo+'/contents/content/meldados.json',{headers:{authorization:'Bearer '+env.GITHUB_TOKEN,accept:'application/vnd.github+json','user-agent':'CTI-Reminder-Worker'}});
+ if(!fileResponse.ok)throw Error('Unable to read memorial database: '+fileResponse.status);
+ const file=await fileResponse.json();
+ const binary=atob(file.content.replace(/\\s/g,''));
+ const bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));
+ const people=JSON.parse(new TextDecoder().decode(bytes)).people||[];
+ const matches=new Map(people.filter(p=>p.approved===true&&p.reviewStatus==='approved'&&reminderMatch(p,hebrew)).map(p=>[p.id,p]));
+ if(!matches.size)return {dateKey,matched:0,sent:0};
+ let cursor, sent=0;
+ do{
+  const page=await kv.list({prefix:'subscriber:',limit:1000,...(cursor?{cursor}:{})});
+  for(const entry of page.keys){
+   const subscriber=await kv.get(entry.name,'json');
+   if(!subscriber?.confirmedAt||!subscriber.email||!Array.isArray(subscriber.ids))continue;
+   const selected=[...new Set(subscriber.ids)].filter(id=>matches.has(id));
+   if(!selected.length)continue;
+   const receipt='reminder-sent:'+dateKey+':'+entry.name;
+   if(await kv.get(receipt))continue;
+   const names=selected.map(id=>matches.get(id).englishName).filter(Boolean);
+   if(!names.length)continue;
+   const subject='CTI Meldatho reminder — '+names.join(', ').slice(0,140);
+   const manage=subscriber.manageToken?'\n\nManage or unsubscribe: '+(env.SITE_ORIGIN||'https://bluetallitot-hub.github.io').replace(/\\/$/,'')+'/cti-website/subscribe-meldados.html?manage='+encodeURIComponent(subscriber.manageToken):'';
+   const message='Shalom '+subscriber.name+',\n\nThis is your seven-day reminder of the upcoming Hebrew memorial anniversary on '+hebrew.day+' '+hebrew.month+' '+hebrew.year+':\n\n'+names.map(n=>'• '+n).join('\n')+'\n\nMay their memory be for a blessing.\n\nCongregation Tifereth Israel, Peabody'+manage;
+   const result=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_MELDATHO_EMAIL_FROM,to:[subscriber.email],subject,text:message,idempotency_key:'meldatho-'+dateKey+'-'+entry.name.slice(-32)})});
+   if(!result.ok){console.error('Meldatho reminder send failed',result.status,await result.text());continue}
+   await kv.put(receipt,JSON.stringify({sentAt:new Date().toISOString(),memorialIds:selected}),{expirationTtl:400*86400});
+   sent++;
+  }
+  cursor=page.list_complete?null:page.cursor;
+ }while(cursor);
+ return {dateKey,matched:matches.size,sent};
+}
+
+export default {async scheduled(event,env,ctx){ctx.waitUntil(sendMeldathoReminders(env).then(result=>console.log('Meldatho reminders',JSON.stringify(result))).catch(error=>console.error('Meldatho reminder run failed',error.message)))},async fetch(request,env){const ORIGIN=env.SITE_ORIGIN;if(!ORIGIN)return json({error:'Site origin is not configured'},503);const origin=request.headers.get('origin');const headers={'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type','vary':'Origin'};if(request.method==='OPTIONS')return new Response(null,{status:204,headers});if(origin&&origin!==ORIGIN)return json({error:'Origin not allowed'},403,headers);const url=new URL(request.url);const respond=(o,s=200)=>json(o,s,headers);try{
 if(url.pathname==='/health')return respond({ok:true,service:'CTI administration API'});
 if(url.pathname==='/login'&&request.method==='POST'){const body=await request.json();if(typeof body.password!=='string'||body.password.length>256)return respond({error:'Invalid password'},400);let role=null;if(await passwordCheck(body.password,env.ADMIN_PASSWORD))role='admin';else if(await passwordCheck(body.password,env.MELDADOS_PASSWORD))role='meldados';if(!role)return respond({error:'Incorrect password'},401);if(!env.SESSION_SECRET)return respond({error:'Server session secret is not configured'},503);return respond({token:await issue(role,env.SESSION_SECRET),role,expiresIn:28800})}
 
