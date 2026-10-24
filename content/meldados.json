@@ -447,7 +447,8 @@
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2022-09-11 and Hebrew year 5782; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2022-09-11 and Hebrew year 5782; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://obituaries.salemnews.com/obituary/joseph-yonis-1086176030",
+      "obituaryUrl": "https://obituaries.salemnews.com/obituary/joseph-yonis-1086176030"
     },
     {
       "id": "newsletter-louis-shapiro-elul",
@@ -799,7 +800,8 @@
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Solimine / Legacy / Salem News obituary; 2025-09-30, Hebrew year 5786. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Solimine / Legacy / Salem News obituary; 2025-09-30, Hebrew year 5786. Direct source URL not included in pasted handoff for this record; retain source verification task. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://obituaries.salemnews.com/obituary/e-judith-rosen-castiglione-1093254248",
+      "obituaryUrl": "https://obituaries.salemnews.com/obituary/e-judith-rosen-castiglione-1093254248"
     },
     {
       "id": "newsletter-michael-kornblau-tishrei",
@@ -1695,7 +1697,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Published obituary; 2009-01-26, Hebrew year 5769. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Published obituary; 2009-01-26, Hebrew year 5769. Direct source URL not included in pasted handoff for this record; retain source verification task. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.legacy.com/us/obituaries/legacyremembers/rose-hasday-obituary?id=24432185",
+      "obituaryUrl": "https://www.legacy.com/us/obituaries/legacyremembers/rose-hasday-obituary?id=24432185"
     },
     {
       "id": "yahrzeit-idaelefson-adar-1",
@@ -2303,7 +2306,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Jewish Journal obituary/historical notice; reported civil death 2017-11-29 and Hebrew year 5778; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Jewish Journal obituary/historical notice; reported civil death 2017-11-29 and Hebrew year 5778; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://jewishjournal.org/2017/12/01/john-jack-yonis",
+      "obituaryUrl": "https://jewishjournal.org/2017/12/01/john-jack-yonis"
     },
     {
       "id": "yahrzeit-rebeccasholomith-tevet-8",
@@ -2623,7 +2627,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Boston Globe obituary via Legacy; reported civil death 2006-04-13 and Hebrew year 5766; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Boston Globe obituary via Legacy; reported civil death 2006-04-13 and Hebrew year 5766; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.legacy.com/us/obituaries/bostonglobe/name/leonard-gibely-obituary?id=26090070",
+      "obituaryUrl": "https://www.legacy.com/us/obituaries/bostonglobe/name/leonard-gibely-obituary?id=26090070"
     },
     {
       "id": "yahrzeit-nissimeskenazi-iyar-10",
@@ -2983,15 +2988,16 @@
       "hebrewName": "",
       "hebrewDay": 16,
       "hebrewMonth": "Nissan",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
-      "rememberedBy": "",
-      "biography": "",
+      "hebrewYearOfDeath": 5780,
+      "dateOfDeath": "2020-04-10",
+      "rememberedBy": "Aronson, Yonis, Blair, Kellerman, Gelin, Weaver and related nieces, nephews and extended family",
+      "biography": "Lillian Aronson (1917–2020) was a retired U.S. Army Sergeant First Class who served for twenty years. A member of an extended North Shore Jewish family, she spent many years at the Edith Nourse Rogers Memorial Veterans Hospital in Bedford and died at age 102.",
       "photo": "",
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.dignitymemorial.com/obituaries/salem-ma/lillian-aronson-9124965",
+      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/lillian-aronson-9124965"
     },
     {
       "id": "yahrzeit-davidsavy-iyar-15",
@@ -3031,15 +3037,16 @@
       "hebrewName": "",
       "hebrewDay": 18,
       "hebrewMonth": "Tammuz",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
-      "rememberedBy": "",
-      "biography": "",
+      "hebrewYearOfDeath": 5784,
+      "dateOfDeath": "2024-07-24",
+      "rememberedBy": "Wife Millie Becker; children Michael Becker and Jodi Renaud; grandchildren Scarlet Rose, Magnolia Jeanne and Fiona Marie",
+      "biography": "Gerald “Jerry” Becker (1940–2024) served in the U.S. Army and worked in sales, particularly men's clothing. He enjoyed making neckties and quilts, listening to jazz and playing percussion. A lifetime member of Congregation Tifereth Israel, he lived with his family in Danvers and Salem and was buried at Sons of Jacob Cemetery.",
       "photo": "",
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.dignitymemorial.com/obituaries/salem-ma/gerald-becker-11907172",
+      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/gerald-becker-11907172"
     },
     {
       "id": "yahrzeit-victorsavy-kislev-22",
@@ -4239,7 +4246,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Legacy obituary; 2007-06-12, Hebrew year 5767. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Legacy obituary; 2007-06-12, Hebrew year 5767. Direct source URL not included in pasted handoff for this record; retain source verification task. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.legacy.com/us/obituaries/legacyremembers/victor-havian-obituary?id=25485460",
+      "obituaryUrl": "https://www.legacy.com/us/obituaries/legacyremembers/victor-havian-obituary?id=25485460"
     },
     {
       "id": "yahrzeit-maxsholomith-cheshvan-29",
