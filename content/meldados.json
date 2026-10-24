@@ -112,7 +112,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2014-08-02 and Hebrew year 5774; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://obituaries.salemnews.com/obituary/joyce-yonis-772311831",
-      "obituaryUrl": "https://obituaries.salemnews.com/obituary/joyce-yonis-772311831"
+      "obituaryUrl": "https://obituaries.salemnews.com/obituary/joyce-yonis-772311831",
+      "familyFromObituary": true
     },
     {
       "id": "newsletter-regina-savy-av",
@@ -449,7 +450,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2022-09-11 and Hebrew year 5782; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://obituaries.salemnews.com/obituary/joseph-yonis-1086176030",
-      "obituaryUrl": "https://obituaries.salemnews.com/obituary/joseph-yonis-1086176030"
+      "obituaryUrl": "https://obituaries.salemnews.com/obituary/joseph-yonis-1086176030",
+      "familyFromObituary": true
     },
     {
       "id": "newsletter-louis-shapiro-elul",
@@ -609,7 +611,8 @@
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied.  Obituary verified: https://www.dignitymemorial.com/obituaries/salem-ma/harvey-goldberg-11462600 . Obituary-derived family names used in the Remembered by field. This is a family listing, not a verified dedication."
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied.  Obituary verified: https://www.dignitymemorial.com/obituaries/salem-ma/harvey-goldberg-11462600 . Obituary-derived family names used in the Remembered by field. This is a family listing, not a verified dedication.",
+      "familyFromObituary": true
     },
     {
       "id": "newsletter-charles-don-romo-tishrei",
@@ -802,7 +805,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Solimine / Legacy / Salem News obituary; 2025-09-30, Hebrew year 5786. Direct source URL not included in pasted handoff for this record; retain source verification task. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://obituaries.salemnews.com/obituary/e-judith-rosen-castiglione-1093254248",
-      "obituaryUrl": "https://obituaries.salemnews.com/obituary/e-judith-rosen-castiglione-1093254248"
+      "obituaryUrl": "https://obituaries.salemnews.com/obituary/e-judith-rosen-castiglione-1093254248",
+      "familyFromObituary": true
     },
     {
       "id": "newsletter-michael-kornblau-tishrei",
@@ -1027,7 +1031,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Boston-area published obituary; 2006-10-15, Hebrew year 5767. Direct source URL not included in pasted handoff for this record; retain source verification task. Verified original Boston Globe obituary 2026-10-23: https://www.legacy.com/us/obituaries/bostonglobe/name/harold-linsky-obituary?id=25844444",
-      "obituaryUrl": "https://www.legacy.com/us/obituaries/bostonglobe/name/harold-linsky-obituary?id=25844444"
+      "obituaryUrl": "https://www.legacy.com/us/obituaries/bostonglobe/name/harold-linsky-obituary?id=25844444",
+      "familyFromObituary": true
     },
     {
       "id": "newsletter-leonard-stein-tishrei",
@@ -1107,7 +1112,8 @@
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Dignity Memorial / Stanetsky-Hymanson obituary; reported civil death 2016-10-29 and Hebrew year 5777; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Dignity Memorial / Stanetsky-Hymanson obituary; reported civil death 2016-10-29 and Hebrew year 5777; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification.",
+      "familyFromObituary": true
     },
     {
       "id": "newsletter-isaac-eskenazi-cheshvan",
@@ -1251,7 +1257,8 @@
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Dignity Memorial / Stanetsky-Hymanson obituary; reported civil death 2019-11-07 and Hebrew year 5780; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Dignity Memorial / Stanetsky-Hymanson obituary; reported civil death 2019-11-07 and Hebrew year 5780; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification.",
+      "familyFromObituary": true
     },
     {
       "id": "newsletter-ethel-kosovske-cheshvan",
@@ -1395,7 +1402,8 @@
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Stanetsky obituary; 2013-10-19, Hebrew year 5774. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Stanetsky obituary; 2013-10-19, Hebrew year 5774. Direct source URL not included in pasted handoff for this record; retain source verification task.",
+      "familyFromObituary": true
     },
     {
       "id": "newsletter-nathan-gans-cheshvan",
@@ -1411,7 +1419,8 @@
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Salem News and Stanetsky obituary; 2013-10-20, Hebrew year 5774. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Salem News and Stanetsky obituary; 2013-10-20, Hebrew year 5774. Direct source URL not included in pasted handoff for this record; retain source verification task.",
+      "familyFromObituary": true
     },
     {
       "id": "newsletter-leon-eskenas-cheshvan",
@@ -1700,7 +1709,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Published obituary; 2009-01-26, Hebrew year 5769. Direct source URL not included in pasted handoff for this record; retain source verification task. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.legacy.com/us/obituaries/legacyremembers/rose-hasday-obituary?id=24432185",
-      "obituaryUrl": "https://www.legacy.com/us/obituaries/legacyremembers/rose-hasday-obituary?id=24432185"
+      "obituaryUrl": "https://www.legacy.com/us/obituaries/legacyremembers/rose-hasday-obituary?id=24432185",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-idaelefson-adar-1",
@@ -1765,7 +1775,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Newspaper obituary; reported civil death 2019-06-07 and Hebrew year 5779; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://obituaries.gloucestertimes.com/obituary/victoria-linsky-1075077554",
-      "obituaryUrl": "https://obituaries.gloucestertimes.com/obituary/victoria-linsky-1075077554"
+      "obituaryUrl": "https://obituaries.gloucestertimes.com/obituary/victoria-linsky-1075077554",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-josephsavy-tammuz-2",
@@ -1925,7 +1936,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Family/death news article; original obituary not recovered; reported civil death 2018-11-14 and Hebrew year 5779; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Family/death news article; original obituary not recovered; reported civil death 2018-11-14 and Hebrew year 5779; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification.",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-roseharsfield-tevet-5",
@@ -2085,7 +2097,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Boston Globe obituary; 2002-01-15, Hebrew year 5762. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Boston Globe obituary; 2002-01-15, Hebrew year 5762. Direct source URL not included in pasted handoff for this record; retain source verification task.",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-kaybecker-nissan-10",
@@ -2229,7 +2242,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Salem News obituary and death index; 2011-04-14, Hebrew year 5771. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Salem News obituary and death index; 2011-04-14, Hebrew year 5771. Direct source URL not included in pasted handoff for this record; retain source verification task.",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-ralphskippyyonis-iyar-9",
@@ -2294,7 +2308,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Verify potential duplicate or source spelling. Research handoff 2026-10-23: Legacy / Murphy Funeral Home obituary; reported civil death 2026-07-19 and Hebrew year 5786; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.murphyfuneralhome.com/obituaries/andrew-savy",
-      "obituaryUrl": "https://www.murphyfuneralhome.com/obituaries/andrew-savy"
+      "obituaryUrl": "https://www.murphyfuneralhome.com/obituaries/andrew-savy",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-jackyonis-kislev-11",
@@ -2311,7 +2326,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Jewish Journal obituary/historical notice; reported civil death 2017-11-29 and Hebrew year 5778; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://jewishjournal.org/2017/12/01/john-jack-yonis",
-      "obituaryUrl": "https://jewishjournal.org/2017/12/01/john-jack-yonis"
+      "obituaryUrl": "https://jewishjournal.org/2017/12/01/john-jack-yonis",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-rebeccasholomith-tevet-8",
@@ -2456,7 +2472,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Stanetsky obituary; 2015-12-23, Hebrew year 5776. Direct source URL not included in pasted handoff for this record; retain source verification task. Verified Stanetsky obituary, exact identity/family and date 2026-10-23: https://www.dignitymemorial.com/obituaries/salem-ma/robert-hasday-6731487",
-      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/robert-hasday-6731487"
+      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/robert-hasday-6731487",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-samuelstein-shevat-4",
@@ -2553,7 +2570,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2012-07-02 and Hebrew year 5772; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified Salem News obituary 2026-10-23: https://obituaries.salemnews.com/obituary/lillian-yonis-772219251",
-      "obituaryUrl": "https://obituaries.salemnews.com/obituary/lillian-yonis-772219251"
+      "obituaryUrl": "https://obituaries.salemnews.com/obituary/lillian-yonis-772219251",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-barbaraadams-kislev-11",
@@ -2634,7 +2652,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Boston Globe obituary via Legacy; reported civil death 2006-04-13 and Hebrew year 5766; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.legacy.com/us/obituaries/bostonglobe/name/leonard-gibely-obituary?id=26090070",
-      "obituaryUrl": "https://www.legacy.com/us/obituaries/bostonglobe/name/leonard-gibely-obituary?id=26090070"
+      "obituaryUrl": "https://www.legacy.com/us/obituaries/bostonglobe/name/leonard-gibely-obituary?id=26090070",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-nissimeskenazi-iyar-10",
@@ -2666,7 +2685,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Jewish Journal historical feature; obituary not recovered; reported civil death 1945-05-22 and Hebrew year 5705; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Jewish Journal historical feature; obituary not recovered; reported civil death 1945-05-22 and Hebrew year 5705; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification.",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-louisepolonsky-tammuz-15",
@@ -3003,7 +3023,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.dignitymemorial.com/obituaries/salem-ma/lillian-aronson-9124965",
-      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/lillian-aronson-9124965"
+      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/lillian-aronson-9124965",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-davidsavy-iyar-15",
@@ -3052,7 +3073,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.dignitymemorial.com/obituaries/salem-ma/gerald-becker-11907172",
-      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/gerald-becker-11907172"
+      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/gerald-becker-11907172",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-victorsavy-kislev-22",
@@ -3116,7 +3138,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Family obituary; 2009-03-06, Hebrew year 5769. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Family obituary; 2009-03-06, Hebrew year 5769. Direct source URL not included in pasted handoff for this record; retain source verification task.",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-gertrudehamilt-nissan-16",
@@ -3276,7 +3299,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Published death notice and CTI historical dossier; 2001-05-09, Hebrew year 5761. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Published death notice and CTI historical dossier; 2001-05-09, Hebrew year 5761. Direct source URL not included in pasted handoff for this record; retain source verification task.",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-victoreskenas-sivan-16",
@@ -3404,7 +3428,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Funeral-home obituary; 2024-04-25, Hebrew year 5784. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Funeral-home obituary; 2024-04-25, Hebrew year 5784. Direct source URL not included in pasted handoff for this record; retain source verification task.",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-abrahampodradchik-iyar-17",
@@ -3484,7 +3509,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2013-01-04 and Hebrew year 5773; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2013-01-04 and Hebrew year 5773; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification.",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-solomonlevy-shevat-19",
@@ -3757,7 +3783,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Funeral-home obituary; reported civil death 2020-02-15 and Hebrew year 5780; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://lyonsfuneral.com/obits/robert-e-weaver",
-      "obituaryUrl": "https://lyonsfuneral.com/obits/robert-e-weaver"
+      "obituaryUrl": "https://lyonsfuneral.com/obits/robert-e-weaver",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-dwayneemack-adar-16",
@@ -3965,7 +3992,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Obituary verified: https://www.sun-sentinel.com/obituaries/ida-edith-polonsky-peabody-ma . Obituary-derived family names used in the Remembered by field. This is a family listing, not a verified dedication."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Obituary verified: https://www.sun-sentinel.com/obituaries/ida-edith-polonsky-peabody-ma . Obituary-derived family names used in the Remembered by field. This is a family listing, not a verified dedication.",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-sarasavy-kislev-27",
@@ -4254,7 +4282,8 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Legacy obituary; 2007-06-12, Hebrew year 5767. Direct source URL not included in pasted handoff for this record; retain source verification task. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.legacy.com/us/obituaries/legacyremembers/victor-havian-obituary?id=25485460",
-      "obituaryUrl": "https://www.legacy.com/us/obituaries/legacyremembers/victor-havian-obituary?id=25485460"
+      "obituaryUrl": "https://www.legacy.com/us/obituaries/legacyremembers/victor-havian-obituary?id=25485460",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-maxsholomith-cheshvan-29",
