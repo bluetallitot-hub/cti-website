@@ -151,6 +151,48 @@ if(url.pathname==='/meldathos/subscribers'&&request.method==='GET'){
  const filtered=entries.filter(r=>(!month||r.serviceMonths.includes(month))&&(!memorial||r.memorialIds.includes(memorial)));
  return respond({count:filtered.length,subscribers:filtered});
 }
+
+if(url.pathname==='/meldathos/reminder-dashboard'&&request.method==='GET'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!subs)return respond({error:'Subscription storage unavailable'},503);
+ const file=await gh(env,'content/meldados.json');
+ const people=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,'')))).people||[];
+ const approved=people.filter(p=>p.approved===true&&p.reviewStatus==='approved');
+ const counts=new Map(),subscribers=[],history=[];
+ let cursor;
+ do{
+  const page=await subs.list({prefix:'subscriber:',limit:1000,...(cursor?{cursor}:{})});
+  for(const item of page.keys){
+   const s=await subs.get(item.name,'json');if(!s?.confirmedAt)continue;
+   subscribers.push({name:s.name,email:s.email,memorialCount:(s.ids||[]).length,serviceMonths:s.serviceMonths||[],confirmedAt:s.confirmedAt});
+   for(const id of new Set(s.ids||[]))counts.set(id,(counts.get(id)||0)+1);
+  }
+  cursor=page.list_complete?null:page.cursor;
+ }while(cursor);
+ const memorials=approved.filter(p=>counts.has(p.id)).map(p=>({id:p.id,name:p.englishName,hebrewDay:p.hebrewDay,hebrewMonth:p.hebrewMonth,subscriberCount:counts.get(p.id)})).sort((a,b)=>b.subscriberCount-a.subscriberCount||a.name.localeCompare(b.name));
+ const upcoming=[];
+ for(let offset=0;offset<=35;offset++){
+  const date=new Date(Date.now()+offset*86400000),h=hebrewDateFor(date);
+  const dateLabel=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
+  for(const p of approved)if(reminderMatch(p,h)&&counts.has(p.id))upcoming.push({id:p.id,name:p.englishName,date:dateLabel,hebrewDate:h.day+' '+h.month+' '+h.year,subscriberCount:counts.get(p.id),reminderDate:new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(date.getTime()-7*86400000))});
+ }
+ cursor=undefined;
+ do{
+  const page=await subs.list({prefix:'reminder-sent:',limit:1000,...(cursor?{cursor}:{})});
+  for(const item of page.keys){const value=await subs.get(item.name,'json');history.push({date:item.name.split(':')[1],sentAt:value?.sentAt||'',memorialCount:(value?.memorialIds||[]).length})}
+  cursor=page.list_complete?null:page.cursor;
+ }while(cursor);
+ history.sort((a,b)=>b.sentAt.localeCompare(a.sentAt));
+ return respond({subscriberCount:subscribers.length,subscribers,memorials,upcoming,history:history.slice(0,100),historyCount:history.length});
+}
+if(url.pathname==='/meldathos/reminder-test'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json(),email=String(b.email||'').trim().toLowerCase();
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||email.length>254)return respond({error:'Enter a valid test email address'},400);
+ const today=hebrewDateFor(new Date());
+ await sendMail(email,'CTI Meldatho reminder — administrator test','This is a TEST of the CTI seven-day Meldatho notification email system.\n\nNo actual memorial reminder is being issued.\n\nCurrent Hebrew date: '+today.day+' '+today.month+' '+today.year+'\n\nCongregation Tifereth Israel, Peabody');
+ return respond({ok:true});
+}
 if(!role)return respond({error:'Please sign in'},401);
 if(url.pathname==='/session')return respond({role});
 if(url.pathname==='/file'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const path=url.searchParams.get('path');if(!adminFiles.has(path))return respond({error:'File not allowed'},400);const f=await gh(env,path);return respond({sha:f.sha,content:new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))});}
