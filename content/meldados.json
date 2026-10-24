@@ -3509,8 +3509,9 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2013-01-04 and Hebrew year 5773; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification.",
-      "familyFromObituary": true
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2013-01-04 and Hebrew year 5773; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified 2026-10-24: Salem News obituary, published 2013-01-05, confirms Sarah J. Whitcomb died 2013-01-04 (22 Tevet 5773), husband Lee M. Whitcomb, parents Yanto Robert and Jennie Rachel (Savy) Gibely, and children; https://obituaries.salemnews.com/obituary/sarah-whitcomb-772238071.",
+      "familyFromObituary": true,
+      "obituaryUrl": "https://obituaries.salemnews.com/obituary/sarah-whitcomb-772238071"
     },
     {
       "id": "yahrzeit-solomonlevy-shevat-19",
