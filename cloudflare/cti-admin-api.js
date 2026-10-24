@@ -38,7 +38,7 @@ function reminderMatch(person,anniversary){
 async function sendMeldathoReminders(env,now=new Date()){
  const kv=env.CTI_MELDATHO_SUBSCRIPTIONS;
  if(!kv||!env.RESEND_API_KEY||!env.CTI_MELDATHO_EMAIL_FROM||!env.GITHUB_REPOSITORY||!env.GITHUB_TOKEN)throw Error('Meldatho reminders are not fully configured');
- const target=new Date(now.getTime()+7*86400000),hebrew=hebrewDateFor(target);
+ const target=new Date(now.getTime()+8*86400000),hebrew=hebrewDateFor(target);
  const dateKey=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(target);
  const repo=env.GITHUB_REPOSITORY;
  const fileResponse=await fetch('https://api.github.com/repos/'+repo+'/contents/content/meldados.json',{headers:{authorization:'Bearer '+env.GITHUB_TOKEN,accept:'application/vnd.github+json','user-agent':'CTI-Reminder-Worker'}});
@@ -63,7 +63,7 @@ async function sendMeldathoReminders(env,now=new Date()){
    if(!names.length)continue;
    const subject='CTI Meldatho reminder — '+names.join(', ').slice(0,140);
    const manage=subscriber.manageToken?'\n\nManage or unsubscribe: '+(env.SITE_ORIGIN||'https://bluetallitot-hub.github.io').replace(/\/$/,'')+'/cti-website/subscribe-meldados.html?manage='+encodeURIComponent(subscriber.manageToken):'';
-   const message='Shalom '+subscriber.name+',\n\nThis is your seven-day reminder of the upcoming Hebrew memorial anniversary on '+hebrew.day+' '+hebrew.month+' '+hebrew.year+':\n\n'+names.map(n=>'• '+n).join('\n')+'\n\nMay their memory be for a blessing.\n\nCongregation Tifereth Israel, Peabody'+manage;
+   const message='Shalom '+subscriber.name+',\n\nThis is your candle-lighting reminder for the Hebrew memorial anniversary on '+hebrew.day+' '+hebrew.month+' '+hebrew.year+':\n\n'+names.map(n=>'• '+n).join('\n')+'\n\nLight a memorial candle at sundown on the evening before this Hebrew anniversary.\n\nMay their memory be for a blessing.\n\nCongregation Tifereth Israel, Peabody'+manage;
    const result=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_MELDATHO_EMAIL_FROM,to:[subscriber.email],subject,text:message,idempotency_key:'meldatho-'+dateKey+'-'+entry.name.slice(-32)})});
    if(!result.ok){console.error('Meldatho reminder send failed',result.status,await result.text());continue}
    await kv.put(receipt,JSON.stringify({sentAt:new Date().toISOString(),memorialIds:selected}),{expirationTtl:400*86400});
@@ -115,7 +115,7 @@ if(url.pathname==='/meldathos/confirm'&&request.method==='POST'){
  await subs.put(pending.key,JSON.stringify({email:pending.email,name:pending.name,ids:pending.ids,serviceMonths:pending.serviceMonths||[],manageToken:manage,confirmedAt:new Date().toISOString()}));
  await subs.put('manage:'+manage,pending.key);
  await subs.delete('pending:'+confirmation);
- await sendMail(pending.email,'Your CTI Meldatho reminders are confirmed','Your reminders are active. You will receive a reminder seven days before each selected Hebrew memorial anniversary.\n\nManage or unsubscribe here:\n'+site+'/subscribe-meldados.html?manage='+encodeURIComponent(manage));
+ await sendMail(pending.email,'Your CTI Meldatho reminders are confirmed','Your reminders are active. You will receive a candle-lighting reminder eight days before each selected Hebrew memorial anniversary.\n\nManage or unsubscribe here:\n'+site+'/subscribe-meldados.html?manage='+encodeURIComponent(manage));
  return respond({ok:true});
 }
 if(url.pathname==='/meldathos/manage'&&['GET','POST'].includes(request.method)){
@@ -174,7 +174,7 @@ if(url.pathname==='/meldathos/reminder-dashboard'&&request.method==='GET'){
  for(let offset=0;offset<=35;offset++){
   const date=new Date(Date.now()+offset*86400000),h=hebrewDateFor(date);
   const dateLabel=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
-  for(const p of approved)if(reminderMatch(p,h)&&counts.has(p.id))upcoming.push({id:p.id,name:p.englishName,date:dateLabel,hebrewDate:h.day+' '+h.month+' '+h.year,subscriberCount:counts.get(p.id),reminderDate:new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(date.getTime()-7*86400000))});
+  for(const p of approved)if(reminderMatch(p,h)&&counts.has(p.id))upcoming.push({id:p.id,name:p.englishName,date:dateLabel,hebrewDate:h.day+' '+h.month+' '+h.year,subscriberCount:counts.get(p.id),reminderDate:new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(date.getTime()-8*86400000))});
  }
  cursor=undefined;
  do{
@@ -190,7 +190,7 @@ if(url.pathname==='/meldathos/reminder-test'&&request.method==='POST'){
  const b=await request.json(),email=String(b.email||'').trim().toLowerCase();
  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||email.length>254)return respond({error:'Enter a valid test email address'},400);
  const today=hebrewDateFor(new Date());
- await sendMail(email,'CTI Meldatho reminder — administrator test','This is a TEST of the CTI seven-day Meldatho notification email system.\n\nNo actual memorial reminder is being issued.\n\nCurrent Hebrew date: '+today.day+' '+today.month+' '+today.year+'\n\nCongregation Tifereth Israel, Peabody');
+ await sendMail(email,'CTI Meldatho reminder — administrator test','This is a TEST of the CTI eight-day candle-lighting reminder email system.\n\nNo actual memorial reminder is being issued.\n\nCurrent Hebrew date: '+today.day+' '+today.month+' '+today.year+'\n\nCongregation Tifereth Israel, Peabody');
  return respond({ok:true});
 }
 if(!role)return respond({error:'Please sign in'},401);
