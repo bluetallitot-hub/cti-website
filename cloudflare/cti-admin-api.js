@@ -25,7 +25,7 @@ if(url.pathname==='/health')return respond({ok:true,service:'CTI administration 
 if(url.pathname==='/login'&&request.method==='POST'){const body=await request.json();if(typeof body.password!=='string'||body.password.length>256)return respond({error:'Invalid password'},400);let role=null;if(await passwordCheck(body.password,env.ADMIN_PASSWORD))role='admin';else if(await passwordCheck(body.password,env.MELDADOS_PASSWORD))role='meldados';if(!role)return respond({error:'Incorrect password'},401);if(!env.SESSION_SECRET)return respond({error:'Server session secret is not configured'},503);return respond({token:await issue(role,env.SESSION_SECRET),role,expiresIn:28800})}
 
 const subs=env.CTI_MELDATHO_SUBSCRIPTIONS;
-const site=ORIGIN.replace(/\/$/,'');
+const site=ORIGIN.replace(/\/$/,'')+'/cti-website';
 const sendMail=async(to,subject,body)=>{
  if(!env.RESEND_API_KEY||!env.CTI_MELDATHO_EMAIL_FROM)throw Error('Reminder email service is not configured');
  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_MELDATHO_EMAIL_FROM,to:[to],subject,text:body})});
