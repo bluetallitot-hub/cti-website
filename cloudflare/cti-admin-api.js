@@ -44,7 +44,7 @@ async function sendMeldathoReminders(env,now=new Date()){
  const fileResponse=await fetch('https://api.github.com/repos/'+repo+'/contents/content/meldados.json',{headers:{authorization:'Bearer '+env.GITHUB_TOKEN,accept:'application/vnd.github+json','user-agent':'CTI-Reminder-Worker'}});
  if(!fileResponse.ok)throw Error('Unable to read memorial database: '+fileResponse.status);
  const file=await fileResponse.json();
- const binary=atob(file.content.replace(/\\s/g,''));
+ const binary=atob(file.content.replace(/\s/g,''));
  const bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));
  const people=JSON.parse(new TextDecoder().decode(bytes)).people||[];
  const matches=new Map(people.filter(p=>p.approved===true&&p.reviewStatus==='approved'&&reminderMatch(p,hebrew)).map(p=>[p.id,p]));
@@ -62,7 +62,7 @@ async function sendMeldathoReminders(env,now=new Date()){
    const names=selected.map(id=>matches.get(id).englishName).filter(Boolean);
    if(!names.length)continue;
    const subject='CTI Meldatho reminder — '+names.join(', ').slice(0,140);
-   const manage=subscriber.manageToken?'\n\nManage or unsubscribe: '+(env.SITE_ORIGIN||'https://bluetallitot-hub.github.io').replace(/\\/$/,'')+'/cti-website/subscribe-meldados.html?manage='+encodeURIComponent(subscriber.manageToken):'';
+   const manage=subscriber.manageToken?'\n\nManage or unsubscribe: '+(env.SITE_ORIGIN||'https://bluetallitot-hub.github.io').replace(/\/$/,'')+'/cti-website/subscribe-meldados.html?manage='+encodeURIComponent(subscriber.manageToken):'';
    const message='Shalom '+subscriber.name+',\n\nThis is your seven-day reminder of the upcoming Hebrew memorial anniversary on '+hebrew.day+' '+hebrew.month+' '+hebrew.year+':\n\n'+names.map(n=>'• '+n).join('\n')+'\n\nMay their memory be for a blessing.\n\nCongregation Tifereth Israel, Peabody'+manage;
    const result=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_MELDATHO_EMAIL_FROM,to:[subscriber.email],subject,text:message,idempotency_key:'meldatho-'+dateKey+'-'+entry.name.slice(-32)})});
    if(!result.ok){console.error('Meldatho reminder send failed',result.status,await result.text());continue}
