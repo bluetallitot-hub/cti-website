@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CTI Meldatho Notification Administration</title>
+<style>
+:root{font-family:system-ui,-apple-system,sans-serif;color:#193444;background:#f5f7f8}body{margin:0}main{max-width:1100px;margin:32px auto;padding:20px}h1{margin-bottom:8px}h2{font-size:1.3rem}p{line-height:1.5}.panel{background:#fff;border:1px solid #d9e0e4;border-radius:12px;padding:22px;margin:18px 0}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}.stat{background:#eaf1f4;padding:16px;border-radius:9px}.stat strong{display:block;font-size:2rem}table{width:100%;border-collapse:collapse}th,td{padding:10px;text-align:left;border-bottom:1px solid #e4e8ea}th{background:#f1f5f6}section{overflow-x:auto}input,button{font:inherit;padding:10px}input{max-width:350px;width:100%;box-sizing:border-box}button{background:#174a66;color:white;border:0;border-radius:6px;cursor:pointer}button:disabled{opacity:.5}a{color:#145674}small{color:#52636d}#status{font-weight:600}details{margin-top:16px}summary{cursor:pointer;font-weight:600}
+</style></head>
+<body><main id="content" hidden>
+<p><a href="index.html">← Back to Administration</a></p>
+<h1>Meldatho Notification Administration</h1>
+<p>Review confirmed subscriptions, upcoming Hebrew anniversaries, and reminder activity. Subscriber information is private and available only to administrators.</p>
+<p id="status" role="status">Loading notification information…</p>
+<div class="stats"><div class="stat">Confirmed subscribers<strong id="subscriber-count">—</strong></div><div class="stat">Subscribed memorials<strong id="memorial-count">—</strong></div><div class="stat">Recorded deliveries<strong id="delivery-count">—</strong></div></div>
+<div class="panel"><h2>Send a test email</h2><p>This sends a clearly labeled test message to the address you enter. It does not send reminders to subscribers or alter delivery history.</p>
+<form id="test-form"><label for="test-email">Your email address</label><div><input id="test-email" type="email" required autocomplete="email" placeholder="you@example.com"> <button id="send-test" type="submit">Send Test Email</button></div></form><p id="test-status" role="status"></p></div>
+<div class="panel"><h2>Upcoming memorial anniversaries</h2><p>Next 35 days, for memorials with at least one confirmed subscriber. Reminder dates are seven days before each anniversary.</p><section><table><thead><tr><th>Anniversary</th><th>Hebrew date</th><th>Memorial</th><th>Subscribers</th><th>Reminder date</th></tr></thead><tbody id="upcoming"><tr><td colspan="5">Loading…</td></tr></tbody></table></section></div>
+<div class="panel"><h2>Memorial subscriptions</h2><section><table><thead><tr><th>Name</th><th>Hebrew anniversary</th><th>Subscribers</th></tr></thead><tbody id="memorials"></tbody></table></section></div>
+<div class="panel"><h2>Reminder history</h2><p><small>Each row represents a successful email API submission recorded in Cloudflare KV, not independently verified inbox delivery.</small></p><section><table><thead><tr><th>Submitted at</th><th>Anniversary date</th><th>Memorials in email</th></tr></thead><tbody id="history"></tbody></table></section></div>
+<div class="panel"><details><summary>Confirmed subscribers (private)</summary><section><table><thead><tr><th>Name</th><th>Email</th><th>Selected memorials</th><th>Registered</th></tr></thead><tbody id="subscribers"></tbody></table></section></details></div>
+<p><a href="index.html">← Back to Administration</a></p>
+</main><script src="cti-auth.js?v=1"></script><script>
+const el=id=>document.getElementById(id);
+function cell(row,value){const td=document.createElement('td');td.textContent=String(value??'');row.append(td)}
+function fill(id,items,columns){const body=el(id);body.replaceChildren();if(!items.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=columns;td.textContent='No records';tr.append(td);body.append(tr);return}for(const values of items){const tr=document.createElement('tr');values.forEach(v=>cell(tr,v));body.append(tr)}}
+async function refresh(){el('status').textContent='Loading…';try{const d=await CTIAuth.api('/meldathos/reminder-dashboard');el('subscriber-count').textContent=d.subscriberCount;el('memorial-count').textContent=d.memorials.length;el('delivery-count').textContent=d.historyCount;fill('upcoming',d.upcoming.map(x=>[x.date,x.hebrewDate,x.name,x.subscriberCount,x.reminderDate]),5);fill('memorials',d.memorials.map(x=>[x.name,x.hebrewDay+' '+x.hebrewMonth,x.subscriberCount]),3);fill('history',d.history.map(x=>[x.sentAt,x.date,x.memorialCount]),3);fill('subscribers',d.subscribers.map(x=>[x.name,x.email,x.memorialCount,x.confirmedAt]),4);el('status').textContent='Updated '+new Date().toLocaleString()}catch(e){el('status').textContent='Unable to load: '+e.message}}
+CTIAuth.requireRole(true).then(()=>{el('content').hidden=false;refresh()}).catch(()=>{});
+el('test-form').addEventListener('submit',async e=>{e.preventDefault();const b=el('send-test');b.disabled=true;el('test-status').textContent='Sending…';try{await CTIAuth.api('/meldathos/reminder-test',{email:el('test-email').value.trim()});el('test-status').textContent='Test email accepted by Resend. Check your inbox and Resend logs.'}catch(err){el('test-status').textContent='Test failed: '+err.message}finally{b.disabled=false}});
+</script></body></html>
