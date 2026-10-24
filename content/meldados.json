@@ -3664,13 +3664,15 @@
       "hebrewMonth": "Adar",
       "hebrewYearOfDeath": 5780,
       "dateOfDeath": "2020-03-10",
-      "rememberedBy": "",
-      "biography": "Rita L. (Rosenberg) Datz was the wife of the late Maxwell Datz.",
+      "rememberedBy": "Siblings Arlene Malkin and Jerold Rosenberg; late brother Leonard Rosenberg",
+      "biography": "Rita L. (Rosenberg) Datz was the wife of the late Maxwell Datz. Her March 26, 2020 Jewish Journal death notice identifies her as a Peabody resident and names siblings Arlene Malkin, Jerold Rosenberg, and the late Leonard Rosenberg.",
       "photo": "",
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Goldman Funeral Chapel and Boston Globe obituary; 2020-03-10, Hebrew year 5780. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Goldman Funeral Chapel and Boston Globe obituary; 2020-03-10, Hebrew year 5780. Direct source URL not included in pasted handoff for this record; retain source verification task. Verified published death notice: Jewish Journal, March 26, 2020, p. 17, https://jewishjournal.org/wp-content/uploads/2020/03/2020_03.26_JewishJournal.pdf ; Rita L. (Rosenberg) Datz, 95, Peabody, died 2020-03-10 = 14 Adar 5780, exact CTI yahrzeit. Relatives are obituary-listed family, not memorial sponsors. No verified portrait.",
+      "obituaryUrl": "https://jewishjournal.org/wp-content/uploads/2020/03/2020_03.26_JewishJournal.pdf",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-hermanfreedman-nissan-24",
