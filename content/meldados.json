@@ -2552,7 +2552,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2012-07-02 and Hebrew year 5772; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2012-07-02 and Hebrew year 5772; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified Salem News obituary 2026-10-23: https://obituaries.salemnews.com/obituary/lillian-yonis-772219251",
+      "obituaryUrl": "https://obituaries.salemnews.com/obituary/lillian-yonis-772219251"
     },
     {
       "id": "yahrzeit-barbaraadams-kislev-11",
