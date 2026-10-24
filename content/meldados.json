@@ -111,7 +111,8 @@
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2014-08-02 and Hebrew year 5774; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Salem News obituary; reported civil death 2014-08-02 and Hebrew year 5774; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://obituaries.salemnews.com/obituary/joyce-yonis-772311831",
+      "obituaryUrl": "https://obituaries.salemnews.com/obituary/joyce-yonis-772311831"
     },
     {
       "id": "newsletter-regina-savy-av",
@@ -1762,7 +1763,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Newspaper obituary; reported civil death 2019-06-07 and Hebrew year 5779; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Newspaper obituary; reported civil death 2019-06-07 and Hebrew year 5779; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://obituaries.gloucestertimes.com/obituary/victoria-linsky-1075077554",
+      "obituaryUrl": "https://obituaries.gloucestertimes.com/obituary/victoria-linsky-1075077554"
     },
     {
       "id": "yahrzeit-josephsavy-tammuz-2",
@@ -2290,7 +2292,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Verify potential duplicate or source spelling. Research handoff 2026-10-23: Legacy / Murphy Funeral Home obituary; reported civil death 2026-07-19 and Hebrew year 5786; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Verify potential duplicate or source spelling. Research handoff 2026-10-23: Legacy / Murphy Funeral Home obituary; reported civil death 2026-07-19 and Hebrew year 5786; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://www.murphyfuneralhome.com/obituaries/andrew-savy",
+      "obituaryUrl": "https://www.murphyfuneralhome.com/obituaries/andrew-savy"
     },
     {
       "id": "yahrzeit-jackyonis-kislev-11",
@@ -3750,7 +3753,8 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Funeral-home obituary; reported civil death 2020-02-15 and Hebrew year 5780; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Funeral-home obituary; reported civil death 2020-02-15 and Hebrew year 5780; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. Verified obituary URL and exact civil-to-Hebrew date match independently checked 2026-10-23: https://lyonsfuneral.com/obits/robert-e-weaver",
+      "obituaryUrl": "https://lyonsfuneral.com/obits/robert-e-weaver"
     },
     {
       "id": "yahrzeit-dwayneemack-adar-16",
