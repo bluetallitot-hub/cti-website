@@ -45,6 +45,7 @@ function selectRecord(r){
  if(r.dateOfDeath)bio.append(txt('p','Date of death: '+r.dateOfDeath));
  if(r.rememberedBy)bio.append(txt('p','Remembered by: '+r.rememberedBy));
  bio.append(txt('p',r.biography||'Biography to be added after verification.'));
+ if(r.obituaryUrl){try{const sourceUrl=new URL(r.obituaryUrl);if(sourceUrl.protocol==='https:'){const sourceLink=document.createElement('a');sourceLink.href=sourceUrl.href;sourceLink.target='_blank';sourceLink.rel='noopener noreferrer';sourceLink.textContent='Read obituary';sourceLink.className='memorial-obituary-link';bio.append(sourceLink)}}catch(e){/* Ignore invalid source URLs. */}}
  const right=txt('div','', 'detail-service-box'),dates=observance(r);
  right.append(txt('h3','Upcoming Meldatho'));
  if(dates){right.append(txt('p',englishDate(dates.anniversary),'observance-date'),txt('h4','Memorial Candle'),txt('p','Please light a memorial candle on the evening of '+englishDate(dates.evening)+'.'),txt('h4','Congregational Kaddish'));
