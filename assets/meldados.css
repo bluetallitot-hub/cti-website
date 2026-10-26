@@ -231,3 +231,13 @@
 .memorial-search li{border-bottom:1px solid #ddd}
 .memorial-search li button{width:100%;text-align:left;padding:10px 6px;border:0;background:transparent;color:inherit;cursor:pointer;font:inherit}
 .memorial-search li button:hover,.memorial-search li button:focus-visible{background:#eee8da}
+
+/* Upcoming Meldatho: fit long weekday/month dates without pushing actions outside. */
+#memorial-detail .detail-top-row>.detail-service-box{aspect-ratio:auto!important;min-height:100%;height:auto!important;overflow:visible!important;justify-content:flex-start;padding:clamp(10px,1.25vw,18px);gap:3px;font-size:clamp(.76rem,.92vw,.91rem);line-height:1.32}
+#memorial-detail .detail-top-row>.detail-service-box h3{font-size:clamp(1rem,1.35vw,1.3rem)}
+#memorial-detail .detail-top-row>.detail-service-box h4{font-size:clamp(.82rem,1vw,1rem);margin:6px 0 0}
+#memorial-detail .detail-top-row>.detail-service-box p{font-size:inherit;line-height:1.32;overflow-wrap:break-word}
+#memorial-detail .detail-top-row>.detail-service-box .observance-date{font-size:clamp(.82rem,1.08vw,1.05rem);line-height:1.25;overflow-wrap:normal}
+#memorial-detail .detail-top-row>.detail-service-box .memorial-action-row{margin-top:10px;flex-shrink:0}
+@media(max-width:700px){#memorial-detail .detail-top-row>.detail-service-box{font-size:clamp(.7rem,1.65vw,.82rem)}#memorial-detail .detail-top-row>.detail-service-box .observance-date{font-size:clamp(.76rem,1.9vw,.9rem)}}
+@media(max-width:480px){#memorial-detail .detail-top-row>.detail-service-box{min-height:0;font-size:.92rem}#memorial-detail .detail-top-row>.detail-service-box .observance-date{font-size:1rem}}
