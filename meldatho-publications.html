@@ -11,7 +11,7 @@ const root=document.getElementById('publication'),edition=document.getElementByI
 const hebrew=d=>{const parts=new Intl.DateTimeFormat('en-u-ca-hebrew',{timeZone:'America/New_York',day:'numeric',month:'long',year:'numeric'}).formatToParts(d);return {day:Number(parts.find(p=>p.type==='day')?.value),month:parts.find(p=>p.type==='month')?.value||'',year:parts.find(p=>p.type==='year')?.value||''}};
 const civil=d=>new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',month:'long',day:'numeric',year:'numeric'}).format(d);
 const dateFromISO=s=>new Date(s+'T12:00:00Z');const addDays=(d,n)=>new Date(d.getTime()+n*86400000);
-const norm=m=>String(m||'').toLowerCase().replace(/nissan/g,'nisan').replace(/heshvan/g,'cheshvan').replace(/adar 1/g,'adar i').replace(/adar 2/g,'adar ii').trim();
+const norm=m=>String(m||'').toLowerCase().replace(/nissan/g,'nisan').replace(/tishri\b/g,'tishrei').replace(/heshvan/g,'cheshvan').replace(/adar 1/g,'adar i').replace(/adar 2/g,'adar ii').trim();
 const match=(p,h)=>Number(p.hebrewDay)===h.day&&norm(p.hebrewMonth)===norm(h.month);
 const approved=p=>p.approved===true&&p.reviewStatus!=='unapproved'&&p.reviewStatus!=='inactive'&&p.englishName&&p.hebrewDay&&p.hebrewMonth;
 let people=[],services=[];const sampleId=new URLSearchParams(location.search).get('sample');
