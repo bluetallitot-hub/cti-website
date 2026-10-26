@@ -536,7 +536,7 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  const records=await Promise.all(unique.map(async email=>({email,doNotSend:!!(await env.CTI_MAILING_LISTS.get('unsubscribed:'+email))})));
  const recipients=records.filter(x=>!x.doNotSend&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x.email)).map(x=>x.email);
  const configured=!!(env.RESEND_API_KEY&&env.CTI_ANNOUNCE_EMAIL_FROM);
- const enabled=false; // Production lock stays in place until D1 binding, migration, and real-address tests pass.
+ const enabled=false; // Keep sending locked until verified sender and controlled delivery tests.
  if(b.action==='preflight')return respond({ok:true,total:unique.length,suppressed:records.filter(x=>x.doNotSend).length,eligible:recipients.length,configured,enabled,sender:env.CTI_ANNOUNCE_EMAIL_FROM||null,siteOrigin:env.SITE_ORIGIN,attachmentCount:b.type==='custom'?(b.attachments||[]).length:b.type==='newsletter'?1:0,attachmentBytes:b.type==='custom'?(b.attachments||[]).reduce((n,f)=>n+Math.floor(f.content.length*3/4)-(f.content.endsWith('==')?2:f.content.endsWith('=')?1:0),0):null});
  if(b.action!=='send'||b.confirm!==true)return respond({error:'Explicit send confirmation required'},400);
  if(!configured||!enabled)return respond({error:'Live sending is locked pending verified DNS, provider setup, and durable delivery safeguards'},503);
@@ -547,9 +547,14 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  const site=(env.SITE_ORIGIN||'').replace(/\/$/,'')+'/';
  if(!b.html.includes(site+'unsubscribe.html'))return respond({error:'Unsubscribe URL must match configured website origin'},400);
  const draftHash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',enc.encode(b.type+'|'+b.subject+'|'+b.html)))).map(v=>v.toString(16).padStart(2,'0')).join('');
+ const cooldownKey='congregational-email-cooldown:'+b.type;
+ const cooldown=Number(await env.CTI_MAILING_LISTS.get(cooldownKey)||0);
+ const remaining=Math.ceil((cooldown+300000-Date.now())/1000);
+ if(remaining>0)return respond({error:'A '+b.type+' email was recently started. Wait '+Math.ceil(remaining/60)+' minute(s) before sending another of this type.',retryAfterSeconds:remaining},429);
  const lockKey='congregational-email-sent:'+draftHash;
  if(await env.CTI_MAILING_LISTS.get(lockKey))return respond({error:'This exact email already has a send attempt. Review delivery history before trying again.'},409);
  // KV is not an atomic lock; production sending remains disabled until durable idempotency is implemented.
+ await env.CTI_MAILING_LISTS.put(cooldownKey,String(Date.now()),{expirationTtl:600});
  await env.CTI_MAILING_LISTS.put(lockKey,JSON.stringify({status:'started',at:new Date().toISOString(),recipients:recipients.length}));
  let sent=0;let failure=null;
  for(const email of recipients){
