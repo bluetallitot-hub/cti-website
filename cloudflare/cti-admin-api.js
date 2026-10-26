@@ -450,6 +450,21 @@ if(url.pathname==='/events/delete'&&request.method==='POST'){
  if(i<0)return respond({error:'Event no longer exists. Reload the list.'},409);d.events.splice(i,1);
  await save(env,'content/events.json',JSON.stringify(d,null,2)+'\n',f.sha,'Remove CTI event: '+b.title);return respond({ok:true});
 }
+if(url.pathname==='/mailing-list'&&(request.method==='GET'||request.method==='POST')){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!env.CTI_MAILING_LISTS)return respond({error:'Private mailing-list storage is not configured'},503);
+ const key='congregation';
+ if(request.method==='GET'){
+  const emails=JSON.parse(await env.CTI_MAILING_LISTS.get(key)||'[]');
+  return respond({emails:Array.isArray(emails)?emails:[]});
+ }
+ const body=await request.json();
+ if(body.confirm!==true||!Array.isArray(body.emails)||body.emails.length>10000)return respond({error:'Confirm a valid mailing list'},400);
+ const emails=[...new Set(body.emails.map(s=>typeof s==='string'?s.trim().toLowerCase():'').filter(Boolean))].sort();
+ if(emails.some(s=>s.length>254||!(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(s))))return respond({error:'Invalid email address'},400);
+ await env.CTI_MAILING_LISTS.put(key,JSON.stringify(emails));
+ return respond({ok:true,emails});
+}
 if(url.pathname==='/newsletter/email'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();
