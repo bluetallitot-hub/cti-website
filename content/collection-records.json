@@ -22,18 +22,18 @@
         "cti-vintage-synagogue-bat-mitzvah-clipping.png"
       ],
       "files": [],
-      "originalImage": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
+      "originalImage": null,
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-001-THM-1.png",
-      "preservationStatus": "repository-source-file-present-originality-unverified",
+      "preservationStatus": "original-not-verified-do-not-publish-as-original",
       "imageVersions": [
         {
-          "type": "ORG",
+          "type": "SOURCE-CANDIDATE",
           "version": 1,
           "path": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
-          "note": "Existing repository source image; full archival authenticity and printed caption pending review"
+          "note": "Previously labeled original; user confirmed it is not the original. Do not present as original."
         },
         {
           "type": "THM",
@@ -53,7 +53,7 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
       "thumbnailStatus": "regenerated-800x600-review-source-content",
-      "originalStatus": "repository-source-file-verified-caption-untranscribed",
+      "originalStatus": "incorrect-original-flagged-awaiting-authentic-source",
       "assetInventory": {
         "sourceFiles": [
           "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png"
@@ -66,12 +66,12 @@
           "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
           "assets/collections/CTI-001-THM-1.png"
         ],
-        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "sourceVerification": "Previously designated original rejected by user; authentic clipping requires replacement",
         "captionVerification": "printed caption not transcribed"
       },
       "captionProvenance": {
-        "status": "existing-caption-pending-source-comparison",
-        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "status": "original-source-not-verified",
+        "note": "The existing repository image is not the authentic original. Preserve as candidate only; await correct clipping.",
         "verbatimOriginalCaption": false
       }
     },
