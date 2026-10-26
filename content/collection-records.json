@@ -2272,7 +2272,7 @@
       "transcript": "",
       "indexImage": "assets/images/archive/CTI-026-2019-jewish-journal-photo.png",
       "archiveImage": "assets/images/archive/CTI-026-2019-jewish-journal-photo.png",
-      "pdf": null,
+      "pdf": "",
       "sourcePage": "archives/archive-2019-sephardic-traditions.html",
       "originalFilenames": [
         "CTI-026-2019-jewish-journal-photo.png (locally preserved copy; publication original unverified)"
@@ -2351,7 +2351,9 @@
         "originalImage": null,
         "provenanceNote": "Photo associated with 2019 Jewish Journal article; newspaper scan is distinct from the original photo."
       },
-      "relatedGalleryRecordId": "CTI-026"
+      "relatedGalleryRecordId": "CTI-026",
+      "providedBy": "",
+      "archiveAcknowledgment": "Jewish Historic Center"
     },
     {
       "id": "CTI-027",
