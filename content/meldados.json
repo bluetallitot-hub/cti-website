@@ -4612,6 +4612,22 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial day supplied directly; death year and Hebrew name not supplied."
+    },
+    {
+      "id": "judy-castiglione",
+      "englishName": "Judy Castiglione",
+      "hebrewName": "",
+      "hebrewDay": 8,
+      "hebrewMonth": "Tishrei",
+      "hebrewYearOfDeath": null,
+      "dateOfDeath": "",
+      "rememberedBy": "",
+      "biography": "",
+      "photo": "",
+      "source": "CTI administrator entry",
+      "reviewStatus": "approved",
+      "approved": true,
+      "notes": ""
     }
   ],
   "description": "CTI newsletter-sourced memorial names and Hebrew yahrzeit dates; no fictional sample records.",
