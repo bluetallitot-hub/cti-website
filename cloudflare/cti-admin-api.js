@@ -517,7 +517,20 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
    if(!base64||pdf.encoding!=='base64')return respond({error:'Archived newsletter PDF is unavailable'},503);
    newsletterAttachment={filename:b.issueUrl.split('/').pop(),content:base64};
   }
- }else if(b.issueUrl)return respond({error:'PDF attachments are reserved for newsletter emails'},400);
+ }else if(b.issueUrl)return respond({error:'PDF archive selection is reserved for newsletter emails'},400);
+ if(b.type!=='custom'&&b.attachments?.length)return respond({error:'Direct attachments are available only for custom emails'},400);
+ if(b.type==='custom'&&b.attachments!==undefined){
+  if(!Array.isArray(b.attachments)||b.attachments.length>5)return respond({error:'Maximum 5 custom attachments'},400);
+  let total=0;
+  for(const file of b.attachments){
+   if(!file||typeof file.filename!=='string'||!(/^[a-zA-Z0-9 _().-]{1,120}\\.(pdf|jpe?g|png|txt|docx?|xlsx)$/i.test(file.filename))||typeof file.content!=='string'||!/^[A-Za-z0-9+/]*={0,2}$/.test(file.content))return respond({error:'Invalid custom attachment filename or content'},400);
+   const bytes=Math.floor(file.content.length*3/4)-(file.content.endsWith('==')?2:file.content.endsWith('=')?1:0);
+   if(bytes>7*1024*1024)return respond({error:'Custom attachment exceeds 7 MB'},400);
+   total+=bytes;
+  }
+  if(total>7*1024*1024)return respond({error:'Custom attachments exceed 7 MB total'},400);
+ }
+
  const raw=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
  const unique=[...new Set(raw.filter(x=>typeof x==='string').map(x=>x.trim().toLowerCase()))];
  const records=await Promise.all(unique.map(async email=>({email,doNotSend:!!(await env.CTI_MAILING_LISTS.get('unsubscribed:'+email))})));
@@ -541,7 +554,7 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  let sent=0;let failure=null;
  for(const email of recipients){
   try{
-   const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:sender,to:[email],subject:b.subject.trim(),html:b.html,text:b.text,...(newsletterAttachment?{attachments:[newsletterAttachment]}:{})})});
+   const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:sender,to:[email],subject:b.subject.trim(),html:b.html,text:b.text,...(newsletterAttachment?{attachments:[newsletterAttachment]}:b.type==='custom'&&b.attachments?.length?{attachments:b.attachments}:{})})});
    if(!response.ok){const detail=await response.text();failure='Provider rejected delivery at recipient '+(sent+1)+': '+detail.slice(0,250);break}
    sent++;
   }catch(e){failure='Provider request failed at recipient '+(sent+1)+': '+e.message;break}
