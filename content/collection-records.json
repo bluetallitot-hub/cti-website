@@ -40,7 +40,7 @@
           "version": 1,
           "path": "assets/collections/CTI-001-THM-1.png",
           "derivedFrom": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
-          "method": "full-image contain with softened background"
+          "method": "near-white-border-trim and 4:3 center crop; no text added"
         }
       ],
       "thumbnailSpecification": {
@@ -48,11 +48,11 @@
         "height": 600,
         "aspectRatio": "4:3",
         "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
+        "background": "none",
+        "retouched": false
       },
       "existingOriginalCandidate": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "regenerated-800x600-review-source-content",
       "originalStatus": "repository-source-file-verified-caption-untranscribed",
       "assetInventory": {
         "sourceFiles": [
@@ -243,7 +243,7 @@
           "version": 1,
           "path": "assets/collections/CTI-004-THM-1.png",
           "derivedFrom": "assets/images/gallery/cti-1976-service-honorees-restored.png",
-          "method": "full-image contain with softened background"
+          "method": "near-white-border-trim and 4:3 center crop; no text added"
         }
       ],
       "thumbnailSpecification": {
@@ -251,11 +251,11 @@
         "height": 600,
         "aspectRatio": "4:3",
         "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
+        "background": "none",
+        "retouched": false
       },
       "existingImageCandidate": "assets/images/gallery/cti-1976-service-honorees-restored.png",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "regenerated-800x600-review-source-content",
       "originalStatus": "unverified-do-not-count-as-confirmed-absent",
       "assetInventory": {
         "sourceFiles": [],
@@ -640,7 +640,7 @@
           "version": 1,
           "path": "assets/collections/CTI-009-THM-1.png",
           "derivedFrom": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
-          "method": "full-image contain with softened background"
+          "method": "near-white-border-trim and 4:3 center crop; no text added"
         }
       ],
       "thumbnailSpecification": {
@@ -648,11 +648,11 @@
         "height": 600,
         "aspectRatio": "4:3",
         "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
+        "background": "none",
+        "retouched": false
       },
       "existingImageCandidate": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "regenerated-800x600-review-source-content",
       "originalStatus": "unverified-do-not-count-as-confirmed-absent",
       "assetInventory": {
         "sourceFiles": [],
@@ -705,7 +705,7 @@
           "version": 1,
           "path": "assets/collections/CTI-010-THM-1.png",
           "derivedFrom": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
-          "method": "full-image contain with softened background"
+          "method": "near-white-border-trim and 4:3 center crop; no text added"
         }
       ],
       "thumbnailSpecification": {
@@ -713,11 +713,11 @@
         "height": 600,
         "aspectRatio": "4:3",
         "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
+        "background": "none",
+        "retouched": false
       },
       "existingImageCandidate": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "regenerated-800x600-review-source-content",
       "originalStatus": "unverified-do-not-count-as-confirmed-absent",
       "assetInventory": {
         "sourceFiles": [],
@@ -844,7 +844,7 @@
           "version": 1,
           "path": "assets/collections/CTI-012-THM-1.png",
           "derivedFrom": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
-          "method": "full-image contain with softened background"
+          "method": "near-white-border-trim and 4:3 center crop; no text added"
         }
       ],
       "thumbnailSpecification": {
@@ -852,11 +852,11 @@
         "height": 600,
         "aspectRatio": "4:3",
         "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
+        "background": "none",
+        "retouched": false
       },
       "existingImageCandidate": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "regenerated-800x600-review-source-content",
       "originalStatus": "unverified-do-not-count-as-confirmed-absent",
       "assetInventory": {
         "sourceFiles": [],
@@ -909,7 +909,7 @@
           "version": 1,
           "path": "assets/collections/CTI-013-THM-1.png",
           "derivedFrom": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
-          "method": "full-image contain with softened background"
+          "method": "near-white-border-trim and 4:3 center crop; no text added"
         }
       ],
       "thumbnailSpecification": {
@@ -917,11 +917,11 @@
         "height": 600,
         "aspectRatio": "4:3",
         "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
+        "background": "none",
+        "retouched": false
       },
       "existingImageCandidate": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "regenerated-800x600-review-source-content",
       "originalStatus": "unverified-do-not-count-as-confirmed-absent",
       "associatedHistoricalRecord": "historical-record.html?id=archive-ladies-auxiliary-officers",
       "assetInventory": {
