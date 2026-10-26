@@ -450,6 +450,35 @@ if(url.pathname==='/events/delete'&&request.method==='POST'){
  if(i<0)return respond({error:'Event no longer exists. Reload the list.'},409);d.events.splice(i,1);
  await save(env,'content/events.json',JSON.stringify(d,null,2)+'\n',f.sha,'Remove CTI event: '+b.title);return respond({ok:true});
 }
+if(url.pathname==='/newsletter/email'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ const b=await request.json();
+ if(typeof b.issueUrl!=='string'||b.confirm!==true)return respond({error:'Confirm the selected newsletter before emailing the congregation'},400);
+ if(!env.RESEND_API_KEY||!env.CTI_MAILING_LISTS||!env.CTI_ANNOUNCE_EMAIL_FROM)return respond({error:'Congregational email service is not configured'},503);
+ const file=await gh(env,'content/newsletters.json');
+ const archive=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
+ const issue=archive.issues.find(i=>i.url===b.issueUrl);
+ if(!issue)return respond({error:'Newsletter is not in the published archive'},404);
+ if(!/^assets\/resources\/newsletters\/[0-9]{4}\/[a-zA-Z0-9._-]+\.pdf$/.test(issue.url))return respond({error:'Invalid archived newsletter path'},400);
+ const list=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
+ const recipients=[...new Set(list.filter(s=>typeof s==='string').map(s=>s.trim().toLowerCase()).filter(s=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)))];
+ if(!recipients.length)return respond({error:'Congregational newsletter mailing list is empty'},503);
+ const key='newsletter-sent:'+issue.url;
+ const prior=await env.CTI_MAILING_LISTS.get(key);
+ if(prior)return respond({error:'This newsletter has already been emailed to the congregation. Sent record: '+prior},409);
+ const sender=env.CTI_ANNOUNCE_EMAIL_FROM;
+ const base='https://bluetallitot-hub.github.io/cti-website/';
+ const link=base+issue.url;
+ const escape=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+ const title=escape(issue.title);
+ const html='<div style="background:#f6f4ef;padding:30px 12px"><div style="max-width:620px;margin:auto;background:white;padding:32px;text-align:center;font-family:Georgia,serif;color:#193444"><img alt="Congregation Tifereth Israel" src="'+base+'assets/images/branding/CTI-logo-web.png" style="max-width:155px;width:100%"><h1 style="font-size:27px">Buen Shabbat!</h1><p style="font-size:18px">The latest news from Congregation Tifereth Israel</p><div style="border-top:2px solid #b28b4e;margin:24px 0"></div><h2>'+title+'</h2><p>We are pleased to share our congregational newsletter with you.</p><p style="margin:28px"><a href="'+link+'" style="background:#174a66;color:white;padding:13px 24px;text-decoration:none;border-radius:4px">Read the Newsletter</a></p><p style="font-size:13px">If the button does not work, visit <a href="'+link+'">the newsletter PDF</a>.</p><p style="border-top:1px solid #d8c8a8;padding-top:20px">Congregation Tifereth Israel · Peabody, Massachusetts</p></div></div>';
+ const textBody='Buen Shabbat!\n\n'+issue.title+'\n\nRead the Congregation Tifereth Israel newsletter:\n'+link+'\n\nCongregation Tifereth Israel, Peabody';
+ const result=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:sender,to:[sender],bcc:recipients,subject:'CTI — '+issue.title,html,text:textBody})});
+ const response=await result.json();
+ if(!result.ok)return respond({error:'Newsletter email failed: '+(response.message||result.status)},502);
+ await env.CTI_MAILING_LISTS.put(key,JSON.stringify({sentAt:new Date().toISOString(),recipientCount:recipients.length,resendId:response.id}));
+ return respond({ok:true,title:issue.title,recipientCount:recipients.length,sentAt:new Date().toISOString()});
+}
 if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();
