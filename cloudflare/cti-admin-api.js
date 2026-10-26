@@ -494,6 +494,45 @@ if(url.pathname==='/mailing-list'&&(request.method==='GET'||request.method==='PO
  await env.CTI_MAILING_LISTS.put(key,JSON.stringify(emails));
  return respond({ok:true,emails});
 }
+// Unified email workflow. Sending is deliberately gated until domain verification and live testing.
+if(url.pathname==='/congregational-email'&&request.method==='POST'){
+ if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!env.CTI_MAILING_LISTS)return respond({error:'Mailing list storage is not configured'},503);
+ const b=await request.json();
+ if(!['shabbat','newsletter','event','custom'].includes(b.type)||typeof b.subject!=='string'||!b.subject.trim()||b.subject.length>200||typeof b.html!=='string'||b.html.length>80000||typeof b.text!=='string'||b.text.length>20000)return respond({error:'Invalid email draft'},400);
+ if(!/^<div[\\s>]/i.test(b.html.trim())||!b.html.includes('unsubscribe.html'))return respond({error:'Email template or unsubscribe link is missing'},400);
+ const raw=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
+ const unique=[...new Set(raw.filter(x=>typeof x==='string').map(x=>x.trim().toLowerCase()))];
+ const records=await Promise.all(unique.map(async email=>({email,doNotSend:!!(await env.CTI_MAILING_LISTS.get('unsubscribed:'+email))})));
+ const recipients=records.filter(x=>!x.doNotSend&&/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(x.email)).map(x=>x.email);
+ const configured=!!(env.RESEND_API_KEY&&env.CTI_ANNOUNCE_EMAIL_FROM);
+ const enabled=env.CTI_EMAIL_SENDING_ENABLED==='true';
+ if(b.action==='preflight')return respond({ok:true,total:unique.length,suppressed:records.filter(x=>x.doNotSend).length,eligible:recipients.length,configured,enabled,sender:env.CTI_ANNOUNCE_EMAIL_FROM||null,siteOrigin:env.SITE_ORIGIN});
+ if(b.action!=='send'||b.confirm!==true)return respond({error:'Explicit send confirmation required'},400);
+ if(!configured||!enabled)return respond({error:'Live sending is locked pending verified domain, sender configuration, and CTI_EMAIL_SENDING_ENABLED=true'},503);
+ if(!recipients.length)return respond({error:'No eligible recipients'},400);
+ if(recipients.length>100)return respond({error:'For safety, sending is limited to 100 recipients per run until batch delivery is implemented'},400);
+ const sender=env.CTI_ANNOUNCE_EMAIL_FROM;
+ if(!/^[^\\s<>@]+@[^\\s<>@]+\\.[^\\s<>@]+$/.test(sender)&&!/^.{1,80}<[^\\s<>@]+@[^\\s<>@]+\\.[^\\s<>@]+>$/.test(sender))return respond({error:'Invalid sender configuration'},503);
+ const site=(env.SITE_ORIGIN||'').replace(/\\/$/,'')+'/';
+ if(!b.html.includes(site+'unsubscribe.html'))return respond({error:'Unsubscribe URL must match configured website origin'},400);
+ const draftHash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',enc.encode(b.type+'|'+b.subject+'|'+b.html)))).map(v=>v.toString(16).padStart(2,'0')).join('');
+ const lockKey='congregational-email-sent:'+draftHash;
+ if(await env.CTI_MAILING_LISTS.get(lockKey))return respond({error:'This exact email was already sent. Change the draft only if you intend a new mailing.'},409);
+ // A conservative lock prevents accidental double-click sends. Retain partial-failure details.
+ await env.CTI_MAILING_LISTS.put(lockKey,JSON.stringify({status:'started',at:new Date().toISOString(),recipients:recipients.length}));
+ let sent=0;let failure=null;
+ for(const email of recipients){
+  try{
+   const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:sender,to:[email],subject:b.subject.trim(),html:b.html,text:b.text})});
+   if(!response.ok){const detail=await response.text();failure='Provider rejected delivery at recipient '+(sent+1)+': '+detail.slice(0,250);break}
+   sent++;
+  }catch(e){failure='Provider request failed at recipient '+(sent+1)+': '+e.message;break}
+ }
+ const report={status:failure?'partial':'submitted',at:new Date().toISOString(),type:b.type,subject:b.subject,eligible:recipients.length,submitted:sent,error:failure};
+ await env.CTI_MAILING_LISTS.put(lockKey,JSON.stringify(report));
+ return respond({ok:!failure,...report},failure?502:200);
+}
 if(url.pathname==='/newsletter/email'&&request.method==='POST'){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  const b=await request.json();
