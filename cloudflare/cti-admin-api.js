@@ -1,7 +1,10 @@
 // CTI administration API — Cloudflare Worker (module syntax).
 // Secrets: ADMIN_PASSWORD, MELDADOS_PASSWORD, SESSION_SECRET, GITHUB_TOKEN.
 // Passwords and GitHub token are NEVER exposed to the browser.
-// Configure SITE_ORIGIN and GITHUB_REPOSITORY as Worker environment variables.
+// SITE_ORIGIN defaults to the current CTI GitHub Pages website; override when ownership or domain changes.
+// Configure GITHUB_REPOSITORY as a Worker environment variable.
+const DEFAULT_SITE_ORIGIN='https://bluetallitot-hub.github.io/cti-website';
+const siteOrigin=env=>(env.SITE_ORIGIN||DEFAULT_SITE_ORIGIN).replace(/\/$/,'');
 const enc=new TextEncoder();
 const months=new Set(['Tishrei','Cheshvan','Kislev','Tevet','Shevat','Adar','Adar I','Adar II','Nisan','Iyar','Sivan','Tammuz','Av','Elul']);
 const communityFields=new Set(['englishName','hebrewName','dateOfBirth','dateOfDeath','hebrewDay','hebrewMonth','hebrewYearOfDeath','rememberedBy','biographyTitle','biography']);
@@ -62,7 +65,7 @@ async function sendMeldathoReminders(env,now=new Date()){
    const names=selected.map(id=>matches.get(id).englishName).filter(Boolean);
    if(!names.length)continue;
    const subject='CTI Meldatho reminder — '+names.join(', ').slice(0,140);
-   const manage=subscriber.manageToken?'\n\nManage or unsubscribe: '+(env.SITE_ORIGIN||'').replace(/\/$/,'')+'/subscribe-meldados.html?manage='+encodeURIComponent(subscriber.manageToken):'';
+   const manage=subscriber.manageToken?'\n\nManage or unsubscribe: '+siteOrigin(env)+'/subscribe-meldados.html?manage='+encodeURIComponent(subscriber.manageToken):'';
    const message='Shalom '+subscriber.name+',\n\nThis is your candle-lighting reminder for the Hebrew memorial anniversary on '+hebrew.day+' '+hebrew.month+' '+hebrew.year+':\n\n'+names.map(n=>'• '+n).join('\n')+'\n\nLight a memorial candle at sundown on the evening before this Hebrew anniversary.\n\nMay their memory be for a blessing.\n\nCongregation Tifereth Israel, Peabody'+manage;
    const result=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_MELDATHO_EMAIL_FROM,to:[subscriber.email],subject,text:message,idempotency_key:'meldatho-'+dateKey+'-'+entry.name.slice(-32)})});
    if(!result.ok){console.error('Meldatho reminder send failed',result.status,await result.text());continue}
@@ -508,7 +511,7 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
   const archive=JSON.parse(new TextDecoder().decode(un64(archiveFile.content.replace(/\s/g,''))));
   const issue=(archive.issues||[]).find(x=>x.url===b.issueUrl);
   if(!issue)return respond({error:'Selected newsletter is not in the archive'},404);
-  const site=(env.SITE_ORIGIN||'').replace(/\/$/,'')+'/';
+  const site=siteOrigin(env)+'/';
   if(!b.html.includes(site+b.issueUrl))return respond({error:'Newsletter email must link to the same selected PDF that will be attached'},400);
   if(b.action==='send'){
    const pdf=await gh(env,b.issueUrl);
@@ -537,14 +540,14 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  const recipients=records.filter(x=>!x.doNotSend&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x.email)).map(x=>x.email);
  const configured=!!(env.RESEND_API_KEY&&env.CTI_ANNOUNCE_EMAIL_FROM);
  const enabled=false; // Keep sending locked until verified sender and controlled delivery tests.
- if(b.action==='preflight')return respond({ok:true,total:unique.length,suppressed:records.filter(x=>x.doNotSend).length,eligible:recipients.length,configured,enabled,sender:env.CTI_ANNOUNCE_EMAIL_FROM||null,siteOrigin:env.SITE_ORIGIN,attachmentCount:b.type==='custom'?(b.attachments||[]).length:b.type==='newsletter'?1:0,attachmentBytes:b.type==='custom'?(b.attachments||[]).reduce((n,f)=>n+Math.floor(f.content.length*3/4)-(f.content.endsWith('==')?2:f.content.endsWith('=')?1:0),0):null});
+ if(b.action==='preflight')return respond({ok:true,total:unique.length,suppressed:records.filter(x=>x.doNotSend).length,eligible:recipients.length,configured,enabled,sender:env.CTI_ANNOUNCE_EMAIL_FROM||null,siteOrigin:siteOrigin(env),attachmentCount:b.type==='custom'?(b.attachments||[]).length:b.type==='newsletter'?1:0,attachmentBytes:b.type==='custom'?(b.attachments||[]).reduce((n,f)=>n+Math.floor(f.content.length*3/4)-(f.content.endsWith('==')?2:f.content.endsWith('=')?1:0),0):null});
  if(b.action!=='send'||b.confirm!==true)return respond({error:'Explicit send confirmation required'},400);
  if(!configured||!enabled)return respond({error:'Live sending is locked pending verified DNS, provider setup, and durable delivery safeguards'},503);
  if(!recipients.length)return respond({error:'No eligible recipients'},400);
  if(recipients.length>50)return respond({error:'Sending is limited to 50 recipients per run pending a durable batch queue'},400);
  const sender=env.CTI_ANNOUNCE_EMAIL_FROM;
  if(!/^[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+$/.test(sender)&&!/^.{1,80}<[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+>$/.test(sender))return respond({error:'Invalid sender configuration'},503);
- const site=(env.SITE_ORIGIN||'').replace(/\/$/,'')+'/';
+ const site=siteOrigin(env)+'/';
  if(!b.html.includes(site+'unsubscribe.html'))return respond({error:'Unsubscribe URL must match configured website origin'},400);
  const draftHash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',enc.encode(b.type+'|'+b.subject+'|'+b.html)))).map(v=>v.toString(16).padStart(2,'0')).join('');
  const cooldownKey='congregational-email-cooldown:'+b.type;
@@ -586,8 +589,7 @@ if(url.pathname==='/newsletter/email'&&request.method==='POST'){
  const prior=await env.CTI_MAILING_LISTS.get(key);
  if(prior)return respond({error:'This newsletter has already been emailed to the congregation. Sent record: '+prior},409);
  const sender=env.CTI_ANNOUNCE_EMAIL_FROM;
- if(!env.SITE_ORIGIN)return respond({error:'SITE_ORIGIN must be configured for email links'},503);
- const base=env.SITE_ORIGIN.replace(/\/$/,'')+'/';
+ const base=siteOrigin(env)+'/';
  const link=base+issue.url;
  const escape=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
  const title=escape(issue.title);
