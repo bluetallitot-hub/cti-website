@@ -22,7 +22,7 @@ const permitted=(role,area)=>({torah:['rabbi'],email:['rabbi','secretary'],sched
 const routeArea=path=>path.startsWith('/torah/')?'torah':path.startsWith('/newsletter/')||path==='/announcements/email'||path==='/congregational-email'||path==='/mailing-list'||path.startsWith('/unsubscribe/')||path.startsWith('/meldathos/reminder-')||path==='/meldathos/subscribers'?'email':path.startsWith('/events/')?'schedule':path.startsWith('/leadership/')||path.startsWith('/collections/')||path.startsWith('/master/')?'history':path.startsWith('/meldados/')?'meldados':null;
 const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function verify(req,env){
- const token=(req.headers.get('authorization')||'').replace(/^Bearer\\s+/i,'');
+ const token=(req.headers.get('authorization')||'').replace(/^Bearer\s+/i,'');
  const [p,s]=token.split('.');
  if(!p||!s||!env.SESSION_SECRET)return null;
  let data;
