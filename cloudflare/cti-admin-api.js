@@ -308,8 +308,8 @@ if(url.pathname==='/meldados/create'&&request.method==='POST'){
  if(file.truncated)return respond({error:'Memorial database too large to update safely'},500);
  const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
  const normalized=x=>String(x||'').toLocaleLowerCase('en').replace(/[^a-z0-9]/g,'');
- const matches=doc.people.filter(p=>normalized(p.englishName)===normalized(name));
- if(matches.length)return respond({error:'A memorial with this name already exists. Review the existing record before creating another: '+matches.map(p=>p.englishName+' ('+p.id+')').join(', ')},409);
+ const matches=doc.people.filter(p=>{const existing=normalized(p.englishName),incoming=normalized(name);const sameName=existing===incoming;const sameSurname=String(p.englishName||'').trim().split(/\\s+/).pop().toLowerCase()===name.split(/\\s+/).pop().toLowerCase();const sameDate=Number(p.hebrewDay)===day&&String(p.hebrewMonth||'').toLowerCase()===month.toLowerCase();return sameName||(sameSurname&&sameDate)});
+ if(matches.length)return respond({error:'Possible duplicate memorial with the same surname and Hebrew anniversary. Review the existing record before creating another: '+matches.map(p=>p.englishName+' ('+p.id+')').join(', ')},409);
  const base=name.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,90);
  if(!base)return respond({error:'Name cannot be converted into a memorial ID'},400);
  const taken=new Set(doc.people.map(p=>p.id));
