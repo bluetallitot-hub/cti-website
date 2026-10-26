@@ -652,6 +652,7 @@ if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
 
 const decodeCollection=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
 const masterPath='content/collection-records.json';
+const canApproveArchive=role=>role==='rabbi'||role==='secretary';
 const masterFields={collection:12,status:20,title:180,date:100,caption:1500,description:10000,source:500,citation:3000,attribution:500,transcript:150000,indexImage:500,archiveImage:500,restoredImage:500,thumbnailImage:500,pdf:500};
 if(url.pathname==='/master/list'&&request.method==='GET'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
@@ -662,7 +663,8 @@ if(url.pathname==='/master/save'&&request.method==='POST'){
  const b=await request.json(),f=await gh(env,masterPath),d=decodeCollection(f);
  const record=(d.items||[]).find(x=>x.id===b.id);
  if(!record)return respond({error:'Unknown record number'},404);
- if(typeof b.changes!=='object'||!b.changes)return respond({error:'Missing changes'},400);
+ if(typeof b.changes!=='object'||!b.changes||Array.isArray(b.changes))return respond({error:'Missing changes'},400);
+ if(!canApproveArchive(role)&&(record.status!=='unapproved'||Object.prototype.hasOwnProperty.call(b.changes,'status')))return respond({error:'Only Rabbi or Secretary can approve, deactivate, or modify published archive records'},403);
  for(const [key,value] of Object.entries(b.changes)){
   if(!(key in masterFields)||typeof value!=='string'||value.length>masterFields[key])return respond({error:'Invalid '+key},400);
   if(key==='collection'&&!['gallery','archive'].includes(value))return respond({error:'Invalid collection'},400);
@@ -676,6 +678,7 @@ if(url.pathname==='/master/save'&&request.method==='POST'){
 if(url.pathname==='/master/upload'&&request.method==='POST'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json(),f=await gh(env,masterPath),d=decodeCollection(f),record=(d.items||[]).find(x=>x.id===b.id);
+ if(record&&!canApproveArchive(role)&&record.status!=='unapproved')return respond({error:'Only Rabbi or Secretary can modify published archive records'},403);
  if(!record||!['originalImage','restoredImage','thumbnailImage','indexImage','archiveImage','pdf'].includes(b.slot))return respond({error:'Invalid record or file slot'},400);
  if(typeof b.name!=='string'||typeof b.data!=='string'||b.data.length>10000000)return respond({error:'File too large or invalid'},400);
  const ext=b.name.split('.').pop().toLowerCase();
@@ -706,7 +709,7 @@ if(url.pathname==='/master/create'&&request.method==='POST'){
  const f=await gh(env,masterPath),d=decodeCollection(f),number=d.nextRecordNumber||1;
  const id='CTI-'+String(number).padStart(3,'0');
  d.nextRecordNumber=number+1;d.items=d.items||[];
- d.items.push({id,collection:b.collection,status:'active',title:'New record',date:'',caption:'',description:'',source:'',citation:'',attribution:'',transcript:'',indexImage:'',archiveImage:'',originalImage:null,originalImageCaption:null,originalCaptionCorrections:[],restoredImage:null,thumbnailImage:null,preservationStatus:'awaiting-original-verification',imageVersions:[],thumbnailSpecification:{width:800,height:600,aspectRatio:'4:3',noAddedText:true,background:'appropriate neutral or complementary',retouched:true},pdf:null,sourcePage:null,originalFilenames:[],files:[]});
+ d.items.push({id,collection:b.collection,status:'unapproved',title:'New record',date:'',caption:'',description:'',source:'',citation:'',attribution:'',transcript:'',indexImage:'',archiveImage:'',originalImage:null,originalImageCaption:null,originalCaptionCorrections:[],restoredImage:null,thumbnailImage:null,preservationStatus:'awaiting-original-verification',imageVersions:[],thumbnailSpecification:{width:800,height:600,aspectRatio:'4:3',noAddedText:true,background:'appropriate neutral or complementary',retouched:true},pdf:null,sourcePage:null,originalFilenames:[],files:[]});
  await save(env,masterPath,JSON.stringify(d,null,2)+'\n',f.sha,'Create CTI master record '+id);
  return respond({ok:true,id});
 }
@@ -731,13 +734,14 @@ if(url.pathname==='/collections/edit'&&request.method==='POST'){
  if(!Object.keys(updates).length)return respond({error:'No changes'},400);
  const f=await gh(env,collectionPath),d=decodeCollection(f);
  const record=(d.items||[]).find(x=>x.id===b.id&&x.collection===b.collection);
- if(record)Object.assign(record,updates);
+ if(record){if(!canApproveArchive(role)&&record.status!=='unapproved')return respond({error:'Published archive material requires Secretary or Rabbi approval'},403);Object.assign(record,updates);}
  else {
   const path=b.collection==='gallery'?'content/gallery.json':'content/archive-additions.json';
   const legacy=await gh(env,path),entries=decodeCollection(legacy);
   const item=(entries.items||[]).find(x=>(b.collection==='gallery'?x.image:x.id)===b.id);
   if(!item)return respond({error:'This special or static archive page cannot be edited here'},404);
-  Object.assign(item,updates);
+  if(!canApproveArchive(role))return respond({error:'Published archive material requires Secretary or Rabbi approval'},403);
+   Object.assign(item,updates);
   await save(env,path,JSON.stringify(entries,null,2)+'\n',legacy.sha,'Update CTI collection record metadata');
   return respond({ok:true});
  }
@@ -747,6 +751,7 @@ if(url.pathname==='/collections/edit'&&request.method==='POST'){
 if(url.pathname==='/collections/status'&&request.method==='POST'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
+ if(!canApproveArchive(role))return respond({error:'Archive approval and deactivation require Rabbi or Secretary access'},403);
  if(!['gallery','archive'].includes(b.collection)||typeof b.id!=='string'||!['active','inactive'].includes(b.status))return respond({error:'Invalid status request'},400);
  const f=await gh(env,collectionPath),d=decodeCollection(f);d.visibility=d.visibility||{gallery:{},archive:{}};d.visibility.gallery=d.visibility.gallery||{};d.visibility.archive=d.visibility.archive||{};
  const record=(d.items||[]).find(x=>x.id===b.id&&x.collection===b.collection);
@@ -793,9 +798,9 @@ if(url.pathname==='/collections/submit'&&request.method==='POST'){
   paths.push(path);
  }
  d.items=d.items||[];
- d.items.push({id,collection:b.collection,status:'active',title:b.title.trim(),date:b.date.trim(),description:b.description.trim(),source:b.source.trim(),citation:b.citation.trim(),attribution:b.attribution.trim(),caption:b.caption.trim(),transcript:b.transcript.trim(),image:b.collection==='archive'?paths[1]:paths[0],indexImage:b.collection==='archive'?paths[0]:null,archiveImage:b.collection==='archive'?paths[1]:null,pdf:b.collection==='archive'&&paths[2]?paths[2]:null,files:paths,submittedAt:new Date().toISOString()});
+ d.items.push({id,collection:b.collection,status:'unapproved',title:b.title.trim(),date:b.date.trim(),description:b.description.trim(),source:b.source.trim(),citation:b.citation.trim(),attribution:b.attribution.trim(),caption:b.caption.trim(),transcript:b.transcript.trim(),image:b.collection==='archive'?paths[1]:paths[0],indexImage:b.collection==='archive'?paths[0]:null,archiveImage:b.collection==='archive'?paths[1]:null,pdf:b.collection==='archive'&&paths[2]?paths[2]:null,files:paths,submittedAt:new Date().toISOString()});
  await save(env,collectionPath,JSON.stringify(d,null,2)+'\n',f.sha,'Queue CTI collection submission '+id);
- return respond({ok:true,id,status:'active'});
+ return respond({ok:true,id,status:'unapproved'});
 }
 
 if(url.pathname==='/publish'&&request.method==='POST'){if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const b=await request.json();if(!adminFiles.has(b.path)||typeof b.content!=='string'||b.content.length>2000000||typeof b.expectedSha!=='string')return respond({error:'File or content not allowed'},400);JSON.parse(b.content);const file=await gh(env,b.path);if(file.sha!==b.expectedSha)return respond({error:'File changed since it was opened'},409);await save(env,b.path,b.content,file.sha,'CTI administration: update '+b.path);return respond({ok:true})}
