@@ -23,25 +23,6 @@
    }
    $('podcast').append(p);
   }catch(e){console.warn('Podcast lookup unavailable',e)}
-  // Safe, intentionally limited Markdown: no raw HTML injection.
-  function inline(s){
-   const frag=document.createDocumentFragment();
-   const parts=s.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
-   for(const part of parts){
-    if(part.startsWith('**')&&part.endsWith('**')){const b=document.createElement('strong');b.textContent=part.slice(2,-2);frag.append(b)}
-    else if(part.startsWith('*')&&part.endsWith('*')){const e=document.createElement('em');e.textContent=part.slice(1,-1);frag.append(e)}
-    else frag.append(document.createTextNode(part));
-   }
-   return frag;
-  }
-  const blocks=md.replace(/\r\n/g,'\n').split(/\n\s*\n/);
-  for(const block of blocks){
-   if(!block.trim())continue;
-   const h=block.match(/^(#{1,3})\s+([\s\S]*)$/);
-   const q=block.startsWith('> ');
-   const el=document.createElement(h?'h'+h[1].length:q?'blockquote':'p');
-   const text=h?h[2]:q?block.replace(/^>\s?/gm,''):block;
-   el.append(inline(text.replace(/\n/g,' ')));$('text').append(el);
-  }
+  $('text').innerHTML=CTITorahMarkdown.render(md);
  }catch(e){fail(e.message)}
 })();
