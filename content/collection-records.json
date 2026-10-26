@@ -680,9 +680,9 @@
           "originalImage": null,
           "originalPendingUpload": "CTI-009-ORG-1-cropped.jpg",
           "originalDriveFile": {
-            "fileName": "CTI-009-ORG-1.jpg",
-            "driveFileId": "1djafZXWQZUV4qiwO1574oQspjg8Ec6jk",
-            "driveUrl": "https://drive.google.com/file/d/1djafZXWQZUV4qiwO1574oQspjg8Ec6jk/view"
+            "fileName": "CTI-009-PHOTO-1-ORG.jpg",
+            "driveFileId": "18-sTYI-RwwK_bNOKIokfu4XAYQYckAkx",
+            "driveUrl": "https://drive.google.com/file/d/18-sTYI-RwwK_bNOKIokfu4XAYQYckAkx/view"
           },
           "colorDriveFile": {
             "fileName": "CTI-009-COL-1.png",
@@ -698,6 +698,11 @@
             "fileName": "CTI-009-THM-1.png",
             "driveFileId": "1UUPAj2l7_mcN_INTMWBgk4yNv6s2FbwP",
             "driveUrl": "https://drive.google.com/file/d/1UUPAj2l7_mcN_INTMWBgk4yNv6s2FbwP/view"
+          },
+          "sourceArticleDriveFile": {
+            "fileName": "CTI-009-ORG-1.jpg",
+            "driveFileId": "1djafZXWQZUV4qiwO1574oQspjg8Ec6jk",
+            "driveUrl": "https://drive.google.com/file/d/1djafZXWQZUV4qiwO1574oQspjg8Ec6jk/view"
           }
         },
         {
@@ -743,6 +748,11 @@
           "fileName": "CTI-009-THM-1.png",
           "driveFileId": "1UUPAj2l7_mcN_INTMWBgk4yNv6s2FbwP",
           "driveUrl": "https://drive.google.com/file/d/1UUPAj2l7_mcN_INTMWBgk4yNv6s2FbwP/view"
+        },
+        {
+          "fileName": "CTI-009-PHOTO-1-ORG.jpg",
+          "driveFileId": "18-sTYI-RwwK_bNOKIokfu4XAYQYckAkx",
+          "driveUrl": "https://drive.google.com/file/d/18-sTYI-RwwK_bNOKIokfu4XAYQYckAkx/view"
         }
       ]
     },
