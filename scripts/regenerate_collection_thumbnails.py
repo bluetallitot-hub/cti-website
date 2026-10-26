@@ -13,7 +13,9 @@ for rec in data.get('items',[]):
         continue
     dest=rec.get('thumbnailImage')
     src=rec.get('restoredImage') or rec.get('archiveImage') or rec.get('indexImage') or rec.get('originalImage')
-    if not dest or not src: continue
+    if not dest or not src:
+        print('MISSING IMAGE REFERENCE', rec['id'])
+        continue
     source=ROOT/src
     if not source.is_file():
         print('MISSING SOURCE',rec['id'],src)
@@ -24,7 +26,12 @@ for rec in data.get('items',[]):
     probe=ImageChops.difference(im,Image.new('RGB',im.size,(255,255,255))).convert('L')
     bbox=probe.point(lambda v:255 if v>20 else 0).getbbox()
     if bbox: im=im.crop(bbox)
-    # A center crop removes no more than necessary to fill the agreed 4:3 frame.
+    # Preserve document content; do not silently crop newspaper articles or programs.
+    # Photographs are fitted edge-to-edge, while documentary material is flagged
+    # for a separate human-approved crop instead of discarding its text.
+    if rec.get('collection') == 'archive' and not rec.get('restoredImage'):
+        print('REVIEW DOCUMENT CROP', rec['id'], src)
+        continue
     im=ImageOps.fit(im,(800,600),method=Image.Resampling.LANCZOS,centering=(.5,.5))
     output=ROOT/dest
     output.parent.mkdir(parents=True,exist_ok=True)
