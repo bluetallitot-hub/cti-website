@@ -610,16 +610,16 @@
     },
     {
       "id": "CTI-009",
-      "collection": "gallery",
+      "collection": "archive",
       "status": "active",
-      "title": "October 1994 — Honoring Rabbi Dov B. Pikelny and Cantor Barbara Pikelny for 13 years of service. Left to right",
-      "caption": "October 1994 — Honoring Rabbi Dov B. Pikelny and Cantor Barbara Pikelny for 13 years of service. Left to right: Treasurer Jerry Pressman; Cantor Barbara Pikelny; Ladies Auxiliary President Rose Harsfield; Rabbi Emeritus Dov B. Pikelny; and President Joseph Gibely II.",
-      "date": "October 1994",
+      "title": "Tifereth Israel Honors the Pikelnys",
+      "caption": "Congregation Tifereth Israel honored Rabbi Dov B. Pikelny and Barbara D. Pikelny for 13 years of service.",
+      "date": "October 21, 1994",
       "description": "October 1994 recognition of Rabbi Dov B. Pikelny and Cantor Barbara Pikelny for 13 years of service.",
-      "source": "CTI historical photograph collection (individual provenance unverified)",
-      "citation": "",
-      "attribution": "",
-      "transcript": "",
+      "source": "The Journal, October 21, 1994, page 38",
+      "citation": "The Journal, October 21, 1994, p. 38",
+      "attribution": "Photographs by Ray Wallman",
+      "transcript": "Congregation Tifereth Israel, the Sephardic shul of Peabody, celebrated the thirteenth year of involvement of Rabbi Dov B. and Barbara Pikelny. The region’s only Sephardic synagogue at 8 Pierpont Street expressed its appreciation for their contributions to the synagogue and the congregation.\n\nThe social hall was the setting for an overflow crowd of 150 who showed their appreciation to the rabbi and rebbetzin. “It’s a family style congregation,” said Rabbi Pikelny. “The founders of the shul all came from Turkey. They were related or their families married here.”\n\nBarbara Pikelny had been “the only female cantor in the North Shore,” according to Rabbi Pikelny, “until she suffered a stroke several years ago. She never fully recovered, and is now a resident of the Abbott House Nursing Home of Lynn where she is pleased to receive visitors,” he added.\n\nBarbara Pikelny was a great influence in the synagogue until she took ill, said the rabbi. The theme of the event, with the 13 candles for each year that the couple has been involved, also symbolized the areas in which Barbara had an impact on the congregation, said Pikelny.",
       "indexImage": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
       "archiveImage": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
       "pdf": null,
@@ -653,7 +653,7 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
       "thumbnailStatus": "regenerated-800x600-review-source-content",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "originalStatus": "verified-source-awaiting-upload",
       "assetInventory": {
         "sourceFiles": [],
         "presentationFiles": [
@@ -668,10 +668,27 @@
         "captionVerification": "printed caption not transcribed"
       },
       "captionProvenance": {
-        "status": "existing-caption-pending-source-comparison",
-        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
-        "verbatimOriginalCaption": false
-      }
+        "status": "verified-against-original-clipping",
+        "verbatimOriginalCaption": true
+      },
+      "associatedPhotographs": [
+        {
+          "id": "CTI-009-PHOTO-1",
+          "caption": "PIKELNYS HONORED for dedication to Congregation Tifereth Israel of Peabody. From left are: Jerry Pressman, Rose Harsfield, and President Joseph Gibley. Seated are Rabbi Dov and Barbara Pikelny.",
+          "photographer": "Ray Wallman",
+          "enhancedImage": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
+          "originalImage": null,
+          "originalPendingUpload": "CTI-009-ORG-1-cropped.jpg"
+        },
+        {
+          "id": "CTI-009-PHOTO-2",
+          "caption": "LUCKY THIRTEEN: On Sunday, Congregation Tifereth Israel honored Rabbi Dov B. Pikelny and Barbara D. Pikelny for their 13 years of service. Shown are Ladies Auxiliary President Rose Harsfield (lighting candles on the cake), Joanne Pressman (at lectern) and the honorees.",
+          "photographer": "Ray Wallman",
+          "originalImage": null,
+          "originalPendingUpload": "CTI-009-ORG-2-cropped.jpg",
+          "enhancedImage": null
+        }
+      ]
     },
     {
       "id": "CTI-010",
