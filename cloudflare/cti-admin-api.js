@@ -450,6 +450,33 @@ if(url.pathname==='/events/delete'&&request.method==='POST'){
  if(i<0)return respond({error:'Event no longer exists. Reload the list.'},409);d.events.splice(i,1);
  await save(env,'content/events.json',JSON.stringify(d,null,2)+'\n',f.sha,'Remove CTI event: '+b.title);return respond({ok:true});
 }
+if(url.pathname==='/unsubscribe/request'&&request.method==='POST'){
+ if(!env.CTI_MAILING_LISTS||!env.RESEND_API_KEY||!env.CTI_ANNOUNCE_EMAIL_FROM)return respond({error:'Unsubscribe service is not configured'},503);
+ const body=await request.json();const email=String(body.email||'').trim().toLowerCase();
+ if(email.length>254||!(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)))return respond({error:'Enter a valid email address'},400);
+ const list=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
+ if(list.some(s=>typeof s==='string'&&s.trim().toLowerCase()===email)){
+  const token=crypto.randomUUID()+crypto.randomUUID();
+  await env.CTI_MAILING_LISTS.put('unsubscribe-token:'+token,email,{expirationTtl:3600});
+  const link=site+'/unsubscribe.html?token='+encodeURIComponent(token);
+  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:[email],subject:'Confirm your CTI email unsubscribe',text:'To unsubscribe from CTI congregational emails, please confirm here:\\n'+link+'\\n\\nThis does not affect individual Meldatho reminders. If you did not request this, ignore this message.'})});
+  if(!response.ok)return respond({error:'Unable to send confirmation email'},502);
+ }
+ return respond({ok:true,message:'If that address is subscribed, a confirmation link has been emailed.'});
+}
+if(url.pathname==='/unsubscribe/confirm'&&request.method==='POST'){
+ if(!env.CTI_MAILING_LISTS)return respond({error:'Unsubscribe service is not configured'},503);
+ const body=await request.json();const token=String(body.token||'');
+ if(!/^[0-9a-f-]{72}$/.test(token))return respond({error:'Invalid or expired confirmation link'},400);
+ const key='unsubscribe-token:'+token;const email=await env.CTI_MAILING_LISTS.get(key);
+ if(!email)return respond({error:'Invalid or expired confirmation link'},400);
+ const list=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
+ const filtered=list.filter(s=>typeof s==='string'&&s.trim().toLowerCase()!==email);
+ await env.CTI_MAILING_LISTS.put('unsubscribed:'+email,new Date().toISOString());
+ await env.CTI_MAILING_LISTS.put('congregation',JSON.stringify(filtered));
+ await env.CTI_MAILING_LISTS.delete(key);
+ return respond({ok:true,message:'You have been unsubscribed from CTI congregational emails.'});
+}
 if(url.pathname==='/mailing-list'&&(request.method==='GET'||request.method==='POST')){
  if(role!=='admin')return respond({error:'Administrator access required'},403);
  if(!env.CTI_MAILING_LISTS)return respond({error:'Private mailing-list storage is not configured'},503);
@@ -462,6 +489,8 @@ if(url.pathname==='/mailing-list'&&(request.method==='GET'||request.method==='PO
  if(body.confirm!==true||!Array.isArray(body.emails)||body.emails.length>10000)return respond({error:'Confirm a valid mailing list'},400);
  const emails=[...new Set(body.emails.map(s=>typeof s==='string'?s.trim().toLowerCase():'').filter(Boolean))].sort();
  if(emails.some(s=>s.length>254||!(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(s))))return respond({error:'Invalid email address'},400);
+ const suppressed=[];for(const email of emails){if(await env.CTI_MAILING_LISTS.get('unsubscribed:'+email))suppressed.push(email)}
+ if(suppressed.length)return respond({error:'Cannot re-add unsubscribed addresses: '+suppressed.join(', ')},409);
  await env.CTI_MAILING_LISTS.put(key,JSON.stringify(emails));
  return respond({ok:true,emails});
 }
@@ -487,7 +516,7 @@ if(url.pathname==='/newsletter/email'&&request.method==='POST'){
  const escape=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
  const title=escape(issue.title);
  const html='<div style="background:#f6f4ef;padding:30px 12px"><div style="max-width:620px;margin:auto;background:white;padding:32px;text-align:center;font-family:Georgia,serif;color:#193444"><img alt="Congregation Tifereth Israel" src="'+base+'assets/images/branding/CTI-logo-web.png" style="max-width:155px;width:100%"><h1 style="font-size:27px">Buen Shabbat!</h1><p style="font-size:18px">The latest news from Congregation Tifereth Israel</p><div style="border-top:2px solid #b28b4e;margin:24px 0"></div><h2>'+title+'</h2><p>We are pleased to share our congregational newsletter with you.</p><p style="margin:28px"><a href="'+link+'" style="background:#174a66;color:white;padding:13px 24px;text-decoration:none;border-radius:4px">Read the Newsletter</a></p><p style="font-size:13px">If the button does not work, visit <a href="'+link+'">the newsletter PDF</a>.</p><p style="border-top:1px solid #d8c8a8;padding-top:20px">Congregation Tifereth Israel · Peabody, Massachusetts</p></div></div>';
- const textBody='Buen Shabbat!\n\n'+issue.title+'\n\nRead the Congregation Tifereth Israel newsletter:\n'+link+'\n\nCongregation Tifereth Israel, Peabody';
+ const textBody='Buen Shabbat!\n\n'+issue.title+'\n\nRead the Congregation Tifereth Israel newsletter:\n'+link+'\n\nWe know everyone receives more than enough email these days, and we do our best to keep our messages to a minimum. If you feel you are hearing from us too often, unsubscribe at '+base+'unsubscribe.html. We promise we will not take it personally!';
  const result=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:sender,to:[sender],bcc:recipients,subject:'CTI — '+issue.title,html,text:textBody})});
  const response=await result.json();
  if(!result.ok)return respond({error:'Newsletter email failed: '+(response.message||result.status)},502);
