@@ -664,7 +664,7 @@ if(url.pathname==='/master/save'&&request.method==='POST'){
  const record=(d.items||[]).find(x=>x.id===b.id);
  if(!record)return respond({error:'Unknown record number'},404);
  if(typeof b.changes!=='object'||!b.changes||Array.isArray(b.changes))return respond({error:'Missing changes'},400);
- if(!canApproveArchive(role)&&(record.status!=='unapproved'||Object.prototype.hasOwnProperty.call(b.changes,'status')))return respond({error:'Only Rabbi or Secretary can approve, deactivate, or modify published archive records'},403);
+ if(!canApproveArchive(role)&&Object.prototype.hasOwnProperty.call(b.changes,'status'))return respond({error:'Only Rabbi or Secretary can change archive publication status'},403);
  for(const [key,value] of Object.entries(b.changes)){
   if(!(key in masterFields)||typeof value!=='string'||value.length>masterFields[key])return respond({error:'Invalid '+key},400);
   if(key==='collection'&&!['gallery','archive'].includes(value))return respond({error:'Invalid collection'},400);
@@ -678,7 +678,7 @@ if(url.pathname==='/master/save'&&request.method==='POST'){
 if(url.pathname==='/master/upload'&&request.method==='POST'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json(),f=await gh(env,masterPath),d=decodeCollection(f),record=(d.items||[]).find(x=>x.id===b.id);
- if(record&&!canApproveArchive(role)&&record.status!=='unapproved')return respond({error:'Only Rabbi or Secretary can modify published archive records'},403);
+ 
  if(!record||!['originalImage','restoredImage','thumbnailImage','indexImage','archiveImage','pdf'].includes(b.slot))return respond({error:'Invalid record or file slot'},400);
  if(typeof b.name!=='string'||typeof b.data!=='string'||b.data.length>10000000)return respond({error:'File too large or invalid'},400);
  const ext=b.name.split('.').pop().toLowerCase();
@@ -734,13 +734,13 @@ if(url.pathname==='/collections/edit'&&request.method==='POST'){
  if(!Object.keys(updates).length)return respond({error:'No changes'},400);
  const f=await gh(env,collectionPath),d=decodeCollection(f);
  const record=(d.items||[]).find(x=>x.id===b.id&&x.collection===b.collection);
- if(record){if(!canApproveArchive(role)&&record.status!=='unapproved')return respond({error:'Published archive material requires Secretary or Rabbi approval'},403);Object.assign(record,updates);}
+ if(record){Object.assign(record,updates);}
  else {
   const path=b.collection==='gallery'?'content/gallery.json':'content/archive-additions.json';
   const legacy=await gh(env,path),entries=decodeCollection(legacy);
   const item=(entries.items||[]).find(x=>(b.collection==='gallery'?x.image:x.id)===b.id);
   if(!item)return respond({error:'This special or static archive page cannot be edited here'},404);
-  if(!canApproveArchive(role))return respond({error:'Published archive material requires Secretary or Rabbi approval'},403);
+  
    Object.assign(item,updates);
   await save(env,path,JSON.stringify(entries,null,2)+'\n',legacy.sha,'Update CTI collection record metadata');
   return respond({ok:true});
