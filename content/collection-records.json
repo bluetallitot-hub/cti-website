@@ -717,13 +717,20 @@
           },
           "thumbnailDriveFile": {
             "fileName": "CTI-009-THM-1.png",
-            "driveFileId": "1UUPAj2l7_mcN_INTMWBgk4yNv6s2FbwP",
-            "driveUrl": "https://drive.google.com/file/d/1UUPAj2l7_mcN_INTMWBgk4yNv6s2FbwP/view"
+            "driveFileId": "1x-rAZuIuBbm7icO3N6DMEq1igaESvNas",
+            "driveUrl": "https://drive.google.com/file/d/1x-rAZuIuBbm7icO3N6DMEq1igaESvNas/view"
           },
           "sourceArticleDriveFile": {
             "fileName": "CTI-009-ORG-1.jpg",
             "driveFileId": "1djafZXWQZUV4qiwO1574oQspjg8Ec6jk",
             "driveUrl": "https://drive.google.com/file/d/1djafZXWQZUV4qiwO1574oQspjg8Ec6jk/view"
+          },
+          "thumbnailSpecification": {
+            "width": 1200,
+            "height": 800,
+            "aspectRatio": "3:2",
+            "source": "extended-canvas colorized CTI-009 image",
+            "note": "Generated canvas extension; not archival source photograph"
           }
         },
         {
