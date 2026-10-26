@@ -63,7 +63,7 @@ async function importEditions(files,chosen){
    const names=contents.map(x=>(x.kind==='reader'?'Reader':'Email')+' Edition').join(' and ');
    $('status').textContent='Imported '+names+' from Google Drive as editable copies. No draft saved or published; originals remain unchanged.';
    status('Imported '+names+'. Review the Website D’var Torah and Friday Email tabs.');
-   document.querySelector('[data-tab="editor"]').click();
+   document.querySelector('[data-pane="editor"]').scrollIntoView({behavior:'smooth',block:'start'});
  }catch(e){status('Import failed: '+e.message)}
 }
 async function selectFile(f){
