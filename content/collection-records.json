@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "nextRecordNumber": 38,
+  "nextRecordNumber": 39,
   "items": [
     {
       "id": "CTI-001",
@@ -688,6 +688,9 @@
           "originalPendingUpload": "CTI-009-ORG-2-cropped.jpg",
           "enhancedImage": null
         }
+      ],
+      "linkedGalleryIds": [
+        "CTI-038"
       ]
     },
     {
@@ -2983,6 +2986,54 @@
         ],
         "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
         "reconciled": "2026-10-22"
+      }
+    },
+    {
+      "id": "CTI-038",
+      "collection": "gallery",
+      "status": "active",
+      "title": "Lucky Thirteen — Honoring Rabbi Dov and Barbara Pikelny",
+      "caption": "LUCKY THIRTEEN: On Sunday, Congregation Tifereth Israel honored Rabbi Dov B. Pikelny and Barbara D. Pikelny for their 13 years of service. Shown are Ladies Auxiliary President Rose Harsfield (lighting candles on the cake), Joanne Pressman (at lectern) and the honorees (photo by Ray Wallman).",
+      "date": "October 21, 1994",
+      "description": "Rose Harsfield lights candles while Joanne Pressman stands at the lectern and Rabbi Dov B. and Barbara D. Pikelny sit at their thirteenth-year recognition ceremony.",
+      "source": "The Journal, October 21, 1994, page 38",
+      "citation": "The Journal, October 21, 1994, p. 38, photograph captioned 'LUCKY THIRTEEN'",
+      "attribution": "Photograph by Ray Wallman",
+      "linkedArchiveId": "CTI-009",
+      "originalImage": null,
+      "archiveImage": null,
+      "indexImage": null,
+      "thumbnailImage": null,
+      "restoredImage": null,
+      "originalImageCaption": "LUCKY THIRTEEN: On Sunday, Congregation Tifereth Israel honored Rabbi Dov B. Pikelny and Barbara D. Pikelny for their 13 years of service. Shown are Ladies Auxiliary President Rose Harsfield (lighting candles on the cake), Joanne Pressman (at lectern) and the honorees (photo by Ray Wallman).",
+      "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "pendingUpload": "CTI-009-ORG-2-cropped.jpg"
+        },
+        {
+          "type": "COL",
+          "version": 1,
+          "pendingUpload": "CTI-009-COL-2.png",
+          "note": "Color presentation derived from original; verify authenticity before publishing"
+        },
+        {
+          "type": "SEP",
+          "version": 1,
+          "pendingUpload": "CTI-009-SEP-2.png"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "pendingUpload": "CTI-009-THM-2.png",
+          "dimensions": "1200x800"
+        }
+      ],
+      "preservationStatus": "original-and-derivatives-prepared-awaiting-drive-upload",
+      "captionProvenance": {
+        "status": "verified-against-original-clipping",
+        "verbatimOriginalCaption": true
       }
     }
   ],
