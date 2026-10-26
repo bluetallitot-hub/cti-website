@@ -500,11 +500,11 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  if(!env.CTI_MAILING_LISTS)return respond({error:'Mailing list storage is not configured'},503);
  const b=await request.json();
  if(!['shabbat','newsletter','event','custom'].includes(b.type)||typeof b.subject!=='string'||!b.subject.trim()||b.subject.length>200||typeof b.html!=='string'||b.html.length>80000||typeof b.text!=='string'||b.text.length>20000)return respond({error:'Invalid email draft'},400);
- if(!/^<div[\\s>]/i.test(b.html.trim())||!b.html.includes('unsubscribe.html'))return respond({error:'Email template or unsubscribe link is missing'},400);
+ if(!/^<div[\s>]/i.test(b.html.trim())||!b.html.includes('unsubscribe.html'))return respond({error:'Email template or unsubscribe link is missing'},400);
  const raw=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
  const unique=[...new Set(raw.filter(x=>typeof x==='string').map(x=>x.trim().toLowerCase()))];
  const records=await Promise.all(unique.map(async email=>({email,doNotSend:!!(await env.CTI_MAILING_LISTS.get('unsubscribed:'+email))})));
- const recipients=records.filter(x=>!x.doNotSend&&/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(x.email)).map(x=>x.email);
+ const recipients=records.filter(x=>!x.doNotSend&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x.email)).map(x=>x.email);
  const configured=!!(env.RESEND_API_KEY&&env.CTI_ANNOUNCE_EMAIL_FROM);
  const enabled=env.CTI_EMAIL_SENDING_ENABLED==='true';
  if(b.action==='preflight')return respond({ok:true,total:unique.length,suppressed:records.filter(x=>x.doNotSend).length,eligible:recipients.length,configured,enabled,sender:env.CTI_ANNOUNCE_EMAIL_FROM||null,siteOrigin:env.SITE_ORIGIN});
@@ -513,8 +513,8 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  if(!recipients.length)return respond({error:'No eligible recipients'},400);
  if(recipients.length>100)return respond({error:'For safety, sending is limited to 100 recipients per run until batch delivery is implemented'},400);
  const sender=env.CTI_ANNOUNCE_EMAIL_FROM;
- if(!/^[^\\s<>@]+@[^\\s<>@]+\\.[^\\s<>@]+$/.test(sender)&&!/^.{1,80}<[^\\s<>@]+@[^\\s<>@]+\\.[^\\s<>@]+>$/.test(sender))return respond({error:'Invalid sender configuration'},503);
- const site=(env.SITE_ORIGIN||'').replace(/\\/$/,'')+'/';
+ if(!/^[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+$/.test(sender)&&!/^.{1,80}<[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+>$/.test(sender))return respond({error:'Invalid sender configuration'},503);
+ const site=(env.SITE_ORIGIN||'').replace(/\/$/,'')+'/';
  if(!b.html.includes(site+'unsubscribe.html'))return respond({error:'Unsubscribe URL must match configured website origin'},400);
  const draftHash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',enc.encode(b.type+'|'+b.subject+'|'+b.html)))).map(v=>v.toString(16).padStart(2,'0')).join('');
  const lockKey='congregational-email-sent:'+draftHash;
