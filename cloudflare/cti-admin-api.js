@@ -523,7 +523,7 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
   if(!Array.isArray(b.attachments)||b.attachments.length>5)return respond({error:'Maximum 5 custom attachments'},400);
   let total=0;
   for(const file of b.attachments){
-   if(!file||typeof file.filename!=='string'||!(/^[a-zA-Z0-9 _().-]{1,120}\.(pdf|jpe?g|png|txt|docx?|xlsx)$/i.test(file.filename))||typeof file.content!=='string'||!/^[A-Za-z0-9+/]*={0,2}$/.test(file.content))return respond({error:'Invalid custom attachment filename or content'},400);
+   if(!file||typeof file.filename!=='string'||!(/^[a-zA-Z0-9 _().-]{1,120}\.(pdf|jpe?g|png|txt|docx?|xlsx|zip)$/i.test(file.filename))||typeof file.content!=='string'||!/^[A-Za-z0-9+/]*={0,2}$/.test(file.content))return respond({error:'Invalid custom attachment filename or content'},400);
    const bytes=Math.floor(file.content.length*3/4)-(file.content.endsWith('==')?2:file.content.endsWith('=')?1:0);
    if(bytes>7*1024*1024)return respond({error:'Custom attachment exceeds 7 MB'},400);
    total+=bytes;
