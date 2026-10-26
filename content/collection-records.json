@@ -23,11 +23,11 @@
       ],
       "files": [],
       "originalImage": null,
-      "originalImageCaption": null,
+      "originalImageCaption": "LADINO AND HEBREW melodies are sung by the temple’s soloist, Joanne Pressman, on right. She stands at the bimah with her mother Sophie Pernitchi at a joint bat mitzvah. Joanne Pressman represents the fourth generation of Pernitchis to be members of the synagogue. Her grandparents were among the founders.",
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-001-THM-1.png",
-      "preservationStatus": "original-not-verified-do-not-publish-as-original",
+      "preservationStatus": "authentic-original-in-drive-awaiting-site-publication",
       "imageVersions": [
         {
           "type": "SOURCE-CANDIDATE",
@@ -41,6 +41,16 @@
           "path": "assets/collections/CTI-001-THM-1.png",
           "derivedFrom": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
           "method": "near-white-border-trim and 4:3 center crop; no text added"
+        },
+        {
+          "type": "ORG",
+          "version": 1,
+          "driveFile": {
+            "fileName": "CTI-001-ORG-1.jpg",
+            "driveFileId": "1oUoyRbxWcnUQM6QwCvSyQk9-p9Xrpk0M",
+            "driveUrl": "https://drive.google.com/file/d/1oUoyRbxWcnUQM6QwCvSyQk9-p9Xrpk0M/view"
+          },
+          "note": "Authentic user-supplied clipping; do not replace with earlier repository candidate"
         }
       ],
       "thumbnailSpecification": {
@@ -53,7 +63,7 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
       "thumbnailStatus": "regenerated-800x600-review-source-content",
-      "originalStatus": "incorrect-original-flagged-awaiting-authentic-source",
+      "originalStatus": "verified-user-provided-original-clipping-saved-in-drive",
       "assetInventory": {
         "sourceFiles": [
           "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png"
@@ -70,10 +80,21 @@
         "captionVerification": "printed caption not transcribed"
       },
       "captionProvenance": {
-        "status": "original-source-not-verified",
-        "note": "The existing repository image is not the authentic original. Preserve as candidate only; await correct clipping.",
-        "verbatimOriginalCaption": false
-      }
+        "status": "verified-against-user-provided-clipping",
+        "verbatimOriginalCaption": true
+      },
+      "originalDriveFile": {
+        "fileName": "CTI-001-ORG-1.jpg",
+        "driveFileId": "1oUoyRbxWcnUQM6QwCvSyQk9-p9Xrpk0M",
+        "driveUrl": "https://drive.google.com/file/d/1oUoyRbxWcnUQM6QwCvSyQk9-p9Xrpk0M/view"
+      },
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "CTI-001-ORG-1.jpg",
+          "driveFileId": "1oUoyRbxWcnUQM6QwCvSyQk9-p9Xrpk0M",
+          "driveUrl": "https://drive.google.com/file/d/1oUoyRbxWcnUQM6QwCvSyQk9-p9Xrpk0M/view"
+        }
+      ]
     },
     {
       "id": "CTI-002",
