@@ -349,7 +349,9 @@ if(url.pathname==='/announcements/email'&&request.method==='POST'){
  if(typeof body.announcement!=='string'||!body.announcement.trim()||body.announcement.length>1000)return respond({error:'Enter an announcement before sending email'},400);
  if(!env.RESEND_API_KEY)return respond({error:'Email is not configured yet. The website announcement can still be published.'},503);
  if(!env.CTI_MAILING_LISTS)return respond({error:'Private mailing-list storage is not configured'},503);
- const recipients=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]').filter(s=>typeof s==='string').map(s=>s.trim()).filter(Boolean);
+ const list=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
+ const checked=await Promise.all(list.filter(s=>typeof s==='string').map(async s=>({email:s.trim(),blocked:!!(await env.CTI_MAILING_LISTS.get('unsubscribed:'+s.trim().toLowerCase()))})));
+ const recipients=checked.filter(s=>!s.blocked&&s.email).map(s=>s.email);
  if(!recipients.length)return respond({error:'Test recipient list is not configured'},503);
  if(recipients.some(s=>!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s))))return respond({error:'Invalid recipient email configuration'},503);
  const sender=env.CTI_ANNOUNCE_EMAIL_FROM;
