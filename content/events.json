@@ -9,14 +9,6 @@
       "description": "This is a test"
     },
     {
-      "id": "cti-test-dinner-2026",
-      "title": "TEST ONLY — Community Dinner",
-      "date": "2026-11-06",
-      "time": "7:00 PM",
-      "location": "CTI Social Hall",
-      "description": "Temporary test event for checking editing and deletion. Not a real CTI event."
-    },
-    {
       "id": "cti-test-coffee-2026",
       "title": "TEST ONLY — Coffee Hour",
       "date": "2026-11-22",
