@@ -13,7 +13,7 @@
   $('eyebrow').textContent=item.eyebrow||'D’var Torah';
   document.title=item.title+' | Congregation Tifereth Israel';
   if(item.podcast&&/^https:\/\//.test(item.podcast)){
-   const a=document.createElement('a');a.className='btn';a.href=item.podcast;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Listen to podcast ↗';
+   const a=document.createElement('a');a.className='btn';a.href=podcastUrl;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Listen to podcast ↗';
    const p=document.createElement('p');p.append(a);$('podcast').append(p);
   }
   // Safe, intentionally limited Markdown: no raw HTML injection.
