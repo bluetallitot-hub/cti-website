@@ -678,7 +678,27 @@
           "photographer": "Ray Wallman",
           "enhancedImage": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
           "originalImage": null,
-          "originalPendingUpload": "CTI-009-ORG-1-cropped.jpg"
+          "originalPendingUpload": "CTI-009-ORG-1-cropped.jpg",
+          "originalDriveFile": {
+            "fileName": "CTI-009-ORG-1.jpg",
+            "driveFileId": "1djafZXWQZUV4qiwO1574oQspjg8Ec6jk",
+            "driveUrl": "https://drive.google.com/file/d/1djafZXWQZUV4qiwO1574oQspjg8Ec6jk/view"
+          },
+          "colorDriveFile": {
+            "fileName": "CTI-009-COL-1.png",
+            "driveFileId": "1d8kT2ZW5g1ClKO78LCwE1kNmievxMTN_",
+            "driveUrl": "https://drive.google.com/file/d/1d8kT2ZW5g1ClKO78LCwE1kNmievxMTN_/view"
+          },
+          "sepiaDriveFile": {
+            "fileName": "CTI-009-SEP-1.png",
+            "driveFileId": "1QoH1J4HEsM54Yatif4_xIa7PHztBx5e8",
+            "driveUrl": "https://drive.google.com/file/d/1QoH1J4HEsM54Yatif4_xIa7PHztBx5e8/view"
+          },
+          "thumbnailDriveFile": {
+            "fileName": "CTI-009-THM-1.png",
+            "driveFileId": "1UUPAj2l7_mcN_INTMWBgk4yNv6s2FbwP",
+            "driveUrl": "https://drive.google.com/file/d/1UUPAj2l7_mcN_INTMWBgk4yNv6s2FbwP/view"
+          }
         },
         {
           "id": "CTI-009-PHOTO-2",
@@ -686,11 +706,44 @@
           "photographer": "Ray Wallman",
           "originalImage": null,
           "originalPendingUpload": "CTI-009-ORG-2-cropped.jpg",
-          "enhancedImage": null
+          "enhancedImage": null,
+          "originalDriveFile": {
+            "fileName": "CTI-009-ORG-2.jpg",
+            "driveFileId": "1Znxemb8hp_prEktco_p78QAue5vyvdNM",
+            "driveUrl": "https://drive.google.com/file/d/1Znxemb8hp_prEktco_p78QAue5vyvdNM/view"
+          },
+          "linkedGalleryId": "CTI-038"
         }
       ],
       "linkedGalleryIds": [
         "CTI-038"
+      ],
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "CTI-009-ORG-1.jpg",
+          "driveFileId": "1djafZXWQZUV4qiwO1574oQspjg8Ec6jk",
+          "driveUrl": "https://drive.google.com/file/d/1djafZXWQZUV4qiwO1574oQspjg8Ec6jk/view"
+        },
+        {
+          "fileName": "CTI-009-ORG-2.jpg",
+          "driveFileId": "1Znxemb8hp_prEktco_p78QAue5vyvdNM",
+          "driveUrl": "https://drive.google.com/file/d/1Znxemb8hp_prEktco_p78QAue5vyvdNM/view"
+        },
+        {
+          "fileName": "CTI-009-COL-1.png",
+          "driveFileId": "1d8kT2ZW5g1ClKO78LCwE1kNmievxMTN_",
+          "driveUrl": "https://drive.google.com/file/d/1d8kT2ZW5g1ClKO78LCwE1kNmievxMTN_/view"
+        },
+        {
+          "fileName": "CTI-009-SEP-1.png",
+          "driveFileId": "1QoH1J4HEsM54Yatif4_xIa7PHztBx5e8",
+          "driveUrl": "https://drive.google.com/file/d/1QoH1J4HEsM54Yatif4_xIa7PHztBx5e8/view"
+        },
+        {
+          "fileName": "CTI-009-THM-1.png",
+          "driveFileId": "1UUPAj2l7_mcN_INTMWBgk4yNv6s2FbwP",
+          "driveUrl": "https://drive.google.com/file/d/1UUPAj2l7_mcN_INTMWBgk4yNv6s2FbwP/view"
+        }
       ]
     },
     {
@@ -3010,31 +3063,69 @@
         {
           "type": "ORG",
           "version": 1,
-          "pendingUpload": "CTI-009-ORG-2-cropped.jpg"
+          "driveFile": {
+            "fileName": "CTI-038-ORG-1.jpg",
+            "driveFileId": "1_wJ6uNC9P9qjsp1Dd_sXff3_ipkIf3-g",
+            "driveUrl": "https://drive.google.com/file/d/1_wJ6uNC9P9qjsp1Dd_sXff3_ipkIf3-g/view"
+          }
         },
         {
           "type": "COL",
           "version": 1,
-          "pendingUpload": "CTI-009-COL-2.png",
-          "note": "Color presentation derived from original; verify authenticity before publishing"
+          "note": "Color presentation derived from original; verify authenticity before publishing",
+          "driveFile": {
+            "fileName": "CTI-038-COL-1.png",
+            "driveFileId": "1FmfPK7J51h-G7vqH8C6AWW9HX2H5s_Fi",
+            "driveUrl": "https://drive.google.com/file/d/1FmfPK7J51h-G7vqH8C6AWW9HX2H5s_Fi/view"
+          }
         },
         {
           "type": "SEP",
           "version": 1,
-          "pendingUpload": "CTI-009-SEP-2.png"
+          "driveFile": {
+            "fileName": "CTI-038-SEP-1.png",
+            "driveFileId": "1UZLZUC9_hOw4iHFa-00lq7CFVSTo63ee",
+            "driveUrl": "https://drive.google.com/file/d/1UZLZUC9_hOw4iHFa-00lq7CFVSTo63ee/view"
+          }
         },
         {
           "type": "THM",
           "version": 1,
-          "pendingUpload": "CTI-009-THM-2.png",
-          "dimensions": "1200x800"
+          "dimensions": "1200x800",
+          "driveFile": {
+            "fileName": "CTI-038-THM-1.png",
+            "driveFileId": "1E-HPHNYq-xG8e_cUXsiVsDz2TpJwdHGZ",
+            "driveUrl": "https://drive.google.com/file/d/1E-HPHNYq-xG8e_cUXsiVsDz2TpJwdHGZ/view"
+          }
         }
       ],
-      "preservationStatus": "original-and-derivatives-prepared-awaiting-drive-upload",
+      "preservationStatus": "four-image-set-saved-in-google-drive-awaiting-site-publication",
       "captionProvenance": {
         "status": "verified-against-original-clipping",
         "verbatimOriginalCaption": true
-      }
+      },
+      "googleDriveSourceFiles": [
+        {
+          "fileName": "CTI-038-ORG-1.jpg",
+          "driveFileId": "1_wJ6uNC9P9qjsp1Dd_sXff3_ipkIf3-g",
+          "driveUrl": "https://drive.google.com/file/d/1_wJ6uNC9P9qjsp1Dd_sXff3_ipkIf3-g/view"
+        },
+        {
+          "fileName": "CTI-038-COL-1.png",
+          "driveFileId": "1FmfPK7J51h-G7vqH8C6AWW9HX2H5s_Fi",
+          "driveUrl": "https://drive.google.com/file/d/1FmfPK7J51h-G7vqH8C6AWW9HX2H5s_Fi/view"
+        },
+        {
+          "fileName": "CTI-038-SEP-1.png",
+          "driveFileId": "1UZLZUC9_hOw4iHFa-00lq7CFVSTo63ee",
+          "driveUrl": "https://drive.google.com/file/d/1UZLZUC9_hOw4iHFa-00lq7CFVSTo63ee/view"
+        },
+        {
+          "fileName": "CTI-038-THM-1.png",
+          "driveFileId": "1E-HPHNYq-xG8e_cUXsiVsDz2TpJwdHGZ",
+          "driveUrl": "https://drive.google.com/file/d/1E-HPHNYq-xG8e_cUXsiVsDz2TpJwdHGZ/view"
+        }
+      ]
     }
   ],
   "assetPolicy": {
