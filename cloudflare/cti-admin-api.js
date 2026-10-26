@@ -501,6 +501,23 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  const b=await request.json();
  if(!['shabbat','newsletter','event','custom'].includes(b.type)||typeof b.subject!=='string'||!b.subject.trim()||b.subject.length>200||typeof b.html!=='string'||b.html.length>80000||typeof b.text!=='string'||b.text.length>20000)return respond({error:'Invalid email draft'},400);
  if(!/^<div[\s>]/i.test(b.html.trim())||!b.html.includes('unsubscribe.html'))return respond({error:'Email template or unsubscribe link is missing'},400);
+ let newsletterAttachment=null;
+ if(b.type==='newsletter'){
+  if(typeof b.issueUrl!=='string'||!/^assets\/resources\/newsletters\/[0-9]{4}\/[a-zA-Z0-9._-]+\.pdf$/.test(b.issueUrl))return respond({error:'Select a valid archived newsletter PDF'},400);
+  const archiveFile=await gh(env,'content/newsletters.json');
+  const archive=JSON.parse(new TextDecoder().decode(un64(archiveFile.content.replace(/\s/g,''))));
+  const issue=(archive.issues||[]).find(x=>x.url===b.issueUrl);
+  if(!issue)return respond({error:'Selected newsletter is not in the archive'},404);
+  const site=(env.SITE_ORIGIN||'').replace(/\/$/,'')+'/';
+  if(!b.html.includes(site+b.issueUrl))return respond({error:'Newsletter email must link to the same selected PDF that will be attached'},400);
+  if(b.action==='send'){
+   const pdf=await gh(env,b.issueUrl);
+   if(pdf.size>7*1024*1024)return respond({error:'Newsletter PDF exceeds the 7 MB attachment limit'},400);
+   const base64=pdf.content.replace(/\s/g,'');
+   if(!base64||pdf.encoding!=='base64')return respond({error:'Archived newsletter PDF is unavailable'},503);
+   newsletterAttachment={filename:b.issueUrl.split('/').pop(),content:base64};
+  }
+ }else if(b.issueUrl)return respond({error:'PDF attachments are reserved for newsletter emails'},400);
  const raw=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
  const unique=[...new Set(raw.filter(x=>typeof x==='string').map(x=>x.trim().toLowerCase()))];
  const records=await Promise.all(unique.map(async email=>({email,doNotSend:!!(await env.CTI_MAILING_LISTS.get('unsubscribed:'+email))})));
@@ -524,7 +541,7 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  let sent=0;let failure=null;
  for(const email of recipients){
   try{
-   const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:sender,to:[email],subject:b.subject.trim(),html:b.html,text:b.text})});
+   const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:sender,to:[email],subject:b.subject.trim(),html:b.html,text:b.text,...(newsletterAttachment?{attachments:[newsletterAttachment]}:{})})});
    if(!response.ok){const detail=await response.text();failure='Provider rejected delivery at recipient '+(sent+1)+': '+detail.slice(0,250);break}
    sent++;
   }catch(e){failure='Provider request failed at recipient '+(sent+1)+': '+e.message;break}
