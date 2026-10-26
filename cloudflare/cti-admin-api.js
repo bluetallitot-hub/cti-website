@@ -17,7 +17,30 @@ const json=(obj,status=200,headers={})=>new Response(JSON.stringify(obj),{status
 const hmac=async(secret,msg)=>{const key=await crypto.subtle.importKey('raw',enc.encode(secret),{name:'HMAC',hash:'SHA-256'},false,['sign']);return new Uint8Array(await crypto.subtle.sign('HMAC',key,enc.encode(msg)))};
 async function passwordCheck(input,secret){if(!secret)return false;const digest=await hmac(secret,'CTI password check');const candidate=await hmac(input,'CTI password check');return eq(digest,candidate)}
 async function issue(role,secret){const payload=b64(enc.encode(JSON.stringify({role,exp:Date.now()+8*3600e3,nonce:crypto.randomUUID()})));return payload+'.'+b64(await hmac(secret,payload))}
-async function verify(req,env){const token=(req.headers.get('authorization')||'').replace(/^Bearer\s+/i,'');const [p,s]=token.split('.');if(!p||!s||!env.SESSION_SECRET)return null;try{if(!eq(un64(s),await hmac(env.SESSION_SECRET,p)))return null;const data=JSON.parse(new TextDecoder().decode(un64(p)));if(!(data.exp>Date.now()&&['admin','meldados'].includes(data.role)))return null;return data.role}catch{return null}}
+const ADMIN_SESSION_KEY='auth:active-admin-session';
+const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+async function verify(req,env){
+ const token=(req.headers.get('authorization')||'').replace(/^Bearer\\s+/i,'');
+ const [p,s]=token.split('.');
+ if(!p||!s||!env.SESSION_SECRET)return null;
+ let data;
+ try{
+  if(!eq(un64(s),await hmac(env.SESSION_SECRET,p)))return null;
+  data=JSON.parse(new TextDecoder().decode(un64(p)));
+  if(!(data.exp>Date.now()&&['admin','meldados'].includes(data.role)))return null;
+ }catch{return null}
+ if(data.role!=='admin')return data.role;
+ if(!env.CTI_MAILING_LISTS||typeof data.nonce!=='string')return null;
+ // KV is eventually consistent. Retry a recently issued session before rejecting it.
+ // Never accept an admin request unless KV actually confirms the nonce.
+ for(let attempt=0;attempt<5;attempt++){
+  const current=await env.CTI_MAILING_LISTS.get(ADMIN_SESSION_KEY);
+  if(current===data.nonce)return data.role;
+  if(attempt===4)return null;
+  await pause(250*(attempt+1));
+ }
+ return null;
+}
 async function gh(env,path,method='GET',body){
 const REPO=env.GITHUB_REPOSITORY;
 if(!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(REPO||''))throw Error('GitHub repository is not configured');if(!env.GITHUB_TOKEN)throw Error('GitHub publishing credential is not configured');const res=await fetch('https://api.github.com/repos/'+REPO+'/contents/'+path,{method,headers:{authorization:'Bearer '+env.GITHUB_TOKEN,accept:'application/vnd.github+json','x-github-api-version':'2022-11-28','user-agent':'CTI-Admin-Worker','content-type':'application/json'},body:body?JSON.stringify(body):undefined});const data=await res.json();if(!res.ok){const error=new Error(res.status===409?'Content changed while editing. Reload and try again.':'GitHub error: '+(data.message||res.status));error.status=res.status;throw error}return data}
@@ -79,7 +102,14 @@ async function sendMeldathoReminders(env,now=new Date()){
 
 export default {async scheduled(event,env,ctx){ctx.waitUntil(sendMeldathoReminders(env).then(result=>console.log('Meldatho reminders',JSON.stringify(result))).catch(error=>console.error('Meldatho reminder run failed',error.message)))},async fetch(request,env){const ORIGIN=siteOrigin(env);const origin=request.headers.get('origin');const headers={'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type','vary':'Origin'};if(request.method==='OPTIONS')return new Response(null,{status:204,headers});if(origin&&origin!==ORIGIN)return json({error:'Origin not allowed'},403,headers);const url=new URL(request.url);const respond=(o,s=200)=>json(o,s,headers);try{
 if(url.pathname==='/health')return respond({ok:true,service:'CTI administration API'});
-if(url.pathname==='/login'&&request.method==='POST'){const body=await request.json();if(typeof body.password!=='string'||body.password.length>256)return respond({error:'Invalid password'},400);let role=null;if(await passwordCheck(body.password,env.ADMIN_PASSWORD))role='admin';else if(await passwordCheck(body.password,env.MELDADOS_PASSWORD))role='meldados';if(!role)return respond({error:'Incorrect password'},401);if(!env.SESSION_SECRET)return respond({error:'Server session secret is not configured'},503);const session=await issue(role,env.SESSION_SECRET);return respond({token:session,role,expiresIn:28800})}
+if(url.pathname==='/login'&&request.method==='POST'){const body=await request.json();if(typeof body.password!=='string'||body.password.length>256)return respond({error:'Invalid password'},400);let role=null;if(await passwordCheck(body.password,env.ADMIN_PASSWORD))role='admin';else if(await passwordCheck(body.password,env.MELDADOS_PASSWORD))role='meldados';if(!role)return respond({error:'Incorrect password'},401);if(!env.SESSION_SECRET)return respond({error:'Server session secret is not configured'},503);const session=await issue(role,env.SESSION_SECRET);
+ if(role==='admin'){
+  if(!env.CTI_MAILING_LISTS)return respond({error:'Administrator session storage is not configured'},503);
+  const payload=session.split('.')[0];
+  const issued=JSON.parse(new TextDecoder().decode(un64(payload)));
+  await env.CTI_MAILING_LISTS.put(ADMIN_SESSION_KEY,issued.nonce,{expirationTtl:28800});
+ }
+ return respond({token:session,role,expiresIn:28800})}
 
 const subs=env.CTI_MELDATHO_SUBSCRIPTIONS;
 const site=ORIGIN;
