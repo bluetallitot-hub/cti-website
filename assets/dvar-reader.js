@@ -12,10 +12,17 @@
   $('byline').textContent=item.byline||'Rabbi Phillip Blue';
   $('eyebrow').textContent=item.eyebrow||'D’var Torah';
   document.title=item.title+' | Congregation Tifereth Israel';
-  if(item.podcast&&/^https:\/\//.test(item.podcast)){
-   const a=document.createElement('a');a.className='btn';a.href=podcastUrl;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Listen to podcast ↗';
-   const p=document.createElement('p');p.append(a);$('podcast').append(p);
-  }
+  // Podcast availability comes from the RSS-derived catalog, not a hardcoded page.
+  try{
+   const podcastUrl=await CTIPodcast.link(item);
+   const p=document.createElement('p');
+   if(podcastUrl&&/^https:\/\//.test(podcastUrl)){
+    const a=document.createElement('a');a.className='btn';a.href=podcastUrl;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Listen to podcast ↗';p.append(a);
+   }else{
+    const b=document.createElement('button');b.type='button';b.className='btn';b.disabled=true;b.setAttribute('aria-disabled','true');b.textContent='Podcast Coming Soon';b.style.opacity='.55';b.style.cursor='not-allowed';p.append(b);
+   }
+   $('podcast').append(p);
+  }catch(e){console.warn('Podcast lookup unavailable',e)}
   // Safe, intentionally limited Markdown: no raw HTML injection.
   function inline(s){
    const frag=document.createDocumentFragment();
