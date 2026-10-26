@@ -3110,11 +3110,11 @@
         {
           "type": "COL",
           "version": 1,
-          "note": "Color presentation derived from original; verify authenticity before publishing",
+          "note": "AI-enhanced derivative; historical details may differ from authentic original",
           "driveFile": {
             "fileName": "CTI-038-COL-1.png",
-            "driveFileId": "1FmfPK7J51h-G7vqH8C6AWW9HX2H5s_Fi",
-            "driveUrl": "https://drive.google.com/file/d/1FmfPK7J51h-G7vqH8C6AWW9HX2H5s_Fi/view"
+            "driveFileId": "1qC5ZiQHKs4qQRzl9a0B8WnYMTVm13b4P",
+            "driveUrl": "https://drive.google.com/file/d/1qC5ZiQHKs4qQRzl9a0B8WnYMTVm13b4P/view"
           }
         },
         {
@@ -3122,9 +3122,10 @@
           "version": 1,
           "driveFile": {
             "fileName": "CTI-038-SEP-1.png",
-            "driveFileId": "1UZLZUC9_hOw4iHFa-00lq7CFVSTo63ee",
-            "driveUrl": "https://drive.google.com/file/d/1UZLZUC9_hOw4iHFa-00lq7CFVSTo63ee/view"
-          }
+            "driveFileId": "1RwsynhCYAHxhfvrIotU4MBDsPhiaVluC",
+            "driveUrl": "https://drive.google.com/file/d/1RwsynhCYAHxhfvrIotU4MBDsPhiaVluC/view"
+          },
+          "note": "AI-enhanced derivative; historical details may differ from authentic original"
         },
         {
           "type": "THM",
@@ -3132,12 +3133,13 @@
           "dimensions": "1200x800",
           "driveFile": {
             "fileName": "CTI-038-THM-1.png",
-            "driveFileId": "1E-HPHNYq-xG8e_cUXsiVsDz2TpJwdHGZ",
-            "driveUrl": "https://drive.google.com/file/d/1E-HPHNYq-xG8e_cUXsiVsDz2TpJwdHGZ/view"
-          }
+            "driveFileId": "10jXSEBxyeMLIRU4Y9so7Pw1_0g83xoG2",
+            "driveUrl": "https://drive.google.com/file/d/10jXSEBxyeMLIRU4Y9so7Pw1_0g83xoG2/view"
+          },
+          "note": "Approved bottom-cropped thumbnail; 1200 × 800"
         }
       ],
-      "preservationStatus": "four-image-set-saved-in-google-drive-awaiting-site-publication",
+      "preservationStatus": "original-and-approved-derivatives-saved-in-google-drive-awaiting-site-publication",
       "captionProvenance": {
         "status": "verified-against-original-clipping",
         "verbatimOriginalCaption": true
@@ -3150,20 +3152,21 @@
         },
         {
           "fileName": "CTI-038-COL-1.png",
-          "driveFileId": "1FmfPK7J51h-G7vqH8C6AWW9HX2H5s_Fi",
-          "driveUrl": "https://drive.google.com/file/d/1FmfPK7J51h-G7vqH8C6AWW9HX2H5s_Fi/view"
+          "driveFileId": "1qC5ZiQHKs4qQRzl9a0B8WnYMTVm13b4P",
+          "driveUrl": "https://drive.google.com/file/d/1qC5ZiQHKs4qQRzl9a0B8WnYMTVm13b4P/view"
         },
         {
           "fileName": "CTI-038-SEP-1.png",
-          "driveFileId": "1UZLZUC9_hOw4iHFa-00lq7CFVSTo63ee",
-          "driveUrl": "https://drive.google.com/file/d/1UZLZUC9_hOw4iHFa-00lq7CFVSTo63ee/view"
+          "driveFileId": "1RwsynhCYAHxhfvrIotU4MBDsPhiaVluC",
+          "driveUrl": "https://drive.google.com/file/d/1RwsynhCYAHxhfvrIotU4MBDsPhiaVluC/view"
         },
         {
           "fileName": "CTI-038-THM-1.png",
-          "driveFileId": "1E-HPHNYq-xG8e_cUXsiVsDz2TpJwdHGZ",
-          "driveUrl": "https://drive.google.com/file/d/1E-HPHNYq-xG8e_cUXsiVsDz2TpJwdHGZ/view"
+          "driveFileId": "10jXSEBxyeMLIRU4Y9so7Pw1_0g83xoG2",
+          "driveUrl": "https://drive.google.com/file/d/10jXSEBxyeMLIRU4Y9so7Pw1_0g83xoG2/view"
         }
-      ]
+      ],
+      "imageProvenanceNote": "ORG is the authentic user-provided newspaper clipping. SEP and COL are AI-generated interpretations, not documentary evidence; THM derives from approved colorized version."
     }
   ],
   "assetPolicy": {
