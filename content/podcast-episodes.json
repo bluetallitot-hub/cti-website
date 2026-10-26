@@ -1,0 +1,30 @@
+{
+  "source": "https://media.rss.com/the-blue-thread/feed.xml",
+  "episodes": [
+    {
+      "title": "With Great Power Comes Great Responsibility",
+      "url": "https://rss.com/podcasts/the-blue-thread/3259232/",
+      "description": "Parashat Lech Lecha. Abram and Sarai; David and Uriah."
+    },
+    {
+      "title": "Who Belongs Inside Your Ark?",
+      "url": "https://rss.com/podcasts/the-blue-thread/3240565/",
+      "description": "Parashat Noach."
+    },
+    {
+      "title": "Naked, Cunning, and Growing Up",
+      "url": "https://rss.com/podcasts/the-blue-thread/3220323/",
+      "description": "Parashat Bereishit."
+    },
+    {
+      "title": "Teshuvah: What If You Don’t Have the Answer?",
+      "url": "https://rss.com/podcasts/the-blue-thread/3236340/",
+      "description": "Rosh Hashanah teshuvah, response, return and restoration."
+    },
+    {
+      "title": "Pakad: When Remembering Isn't Enough",
+      "url": "https://rss.com/podcasts/the-blue-thread/3232521/",
+      "description": "Rosh Hashanah Pakad, remembering and showing up."
+    }
+  ]
+}
