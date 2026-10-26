@@ -653,7 +653,7 @@ if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
 const decodeCollection=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
 const masterPath='content/collection-records.json';
 const canApproveArchive=role=>role==='rabbi'||role==='secretary';
-const masterFields={collection:12,status:20,title:180,date:100,caption:1500,description:10000,source:500,citation:3000,attribution:500,transcript:150000,indexImage:500,archiveImage:500,restoredImage:500,thumbnailImage:500,pdf:500};
+const masterFields={collection:12,status:20,title:180,date:100,caption:1500,description:10000,source:500,citation:3000,attribution:500,providedBy:500,archiveAcknowledgment:10000,transcript:150000,indexImage:500,archiveImage:500,restoredImage:500,thumbnailImage:500,pdf:500};
 if(url.pathname==='/master/list'&&request.method==='GET'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const f=await gh(env,masterPath);return respond(decodeCollection(f));
