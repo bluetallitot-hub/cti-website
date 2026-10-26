@@ -18,6 +18,8 @@ const hmac=async(secret,msg)=>{const key=await crypto.subtle.importKey('raw',enc
 async function passwordCheck(input,secret){if(!secret)return false;const digest=await hmac(secret,'CTI password check');const candidate=await hmac(input,'CTI password check');return eq(digest,candidate)}
 async function issue(role,secret){const payload=b64(enc.encode(JSON.stringify({role,exp:Date.now()+8*3600e3,nonce:crypto.randomUUID()})));return payload+'.'+b64(await hmac(secret,payload))}
 const ADMIN_SESSION_KEY='auth:active-admin-session';
+const permitted=(role,area)=>({torah:['rabbi'],email:['rabbi','secretary'],schedule:['rabbi','secretary'],history:['rabbi','secretary','board'],meldados:['rabbi','secretary','board','congregant']})[area]?.includes(role)||false;
+const routeArea=path=>path.startsWith('/torah/')?'torah':path.startsWith('/newsletter/')||path==='/announcements/email'||path==='/congregational-email'||path==='/mailing-list'||path.startsWith('/unsubscribe/')||path.startsWith('/meldathos/reminder-')||path==='/meldathos/subscribers'?'email':path.startsWith('/events/')?'schedule':path.startsWith('/leadership/')||path.startsWith('/collections/')||path.startsWith('/master/')?'history':path.startsWith('/meldados/')?'meldados':null;
 const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function verify(req,env){
  const token=(req.headers.get('authorization')||'').replace(/^Bearer\\s+/i,'');
@@ -27,19 +29,9 @@ async function verify(req,env){
  try{
   if(!eq(un64(s),await hmac(env.SESSION_SECRET,p)))return null;
   data=JSON.parse(new TextDecoder().decode(un64(p)));
-  if(!(data.exp>Date.now()&&['admin','meldados'].includes(data.role)))return null;
+  if(!(data.exp>Date.now()&&['rabbi','secretary','board','congregant'].includes(data.role)))return null;
  }catch{return null}
- if(data.role!=='admin')return data.role;
- if(!env.CTI_MAILING_LISTS||typeof data.nonce!=='string')return null;
- // KV is eventually consistent. Retry a recently issued session before rejecting it.
- // Never accept an admin request unless KV actually confirms the nonce.
- for(let attempt=0;attempt<5;attempt++){
-  const current=await env.CTI_MAILING_LISTS.get(ADMIN_SESSION_KEY);
-  if(current===data.nonce)return data.role;
-  if(attempt===4)return null;
-  await pause(250*(attempt+1));
- }
- return null;
+ return data.role;
 }
 async function gh(env,path,method='GET',body){
 const REPO=env.GITHUB_REPOSITORY;
@@ -102,13 +94,7 @@ async function sendMeldathoReminders(env,now=new Date()){
 
 export default {async scheduled(event,env,ctx){ctx.waitUntil(sendMeldathoReminders(env).then(result=>console.log('Meldatho reminders',JSON.stringify(result))).catch(error=>console.error('Meldatho reminder run failed',error.message)))},async fetch(request,env){const ORIGIN=siteOrigin(env);const origin=request.headers.get('origin');const headers={'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type','vary':'Origin'};if(request.method==='OPTIONS')return new Response(null,{status:204,headers});if(origin&&origin!==ORIGIN)return json({error:'Origin not allowed'},403,headers);const url=new URL(request.url);const respond=(o,s=200)=>json(o,s,headers);try{
 if(url.pathname==='/health')return respond({ok:true,service:'CTI administration API'});
-if(url.pathname==='/login'&&request.method==='POST'){const body=await request.json();if(typeof body.password!=='string'||body.password.length>256)return respond({error:'Invalid password'},400);let role=null;if(await passwordCheck(body.password,env.ADMIN_PASSWORD))role='admin';else if(await passwordCheck(body.password,env.MELDADOS_PASSWORD))role='meldados';if(!role)return respond({error:'Incorrect password'},401);if(!env.SESSION_SECRET)return respond({error:'Server session secret is not configured'},503);const session=await issue(role,env.SESSION_SECRET);
- if(role==='admin'){
-  if(!env.CTI_MAILING_LISTS)return respond({error:'Administrator session storage is not configured'},503);
-  const payload=session.split('.')[0];
-  const issued=JSON.parse(new TextDecoder().decode(un64(payload)));
-  await env.CTI_MAILING_LISTS.put(ADMIN_SESSION_KEY,issued.nonce,{expirationTtl:28800});
- }
+if(url.pathname==='/login'&&request.method==='POST'){const body=await request.json();if(typeof body.password!=='string'||body.password.length>256)return respond({error:'Invalid password'},400);let role=null;if(await passwordCheck(body.password,env.ADMIN_PASSWORD))role='rabbi';else if(await passwordCheck(body.password,env.SECRETARY_PASSWORD))role='secretary';else if(await passwordCheck(body.password,env.BOARD_PASSWORD))role='board';else if(await passwordCheck(body.password,env.MELDADOS_PASSWORD))role='congregant';if(!role)return respond({error:'Incorrect password'},401);if(!env.SESSION_SECRET)return respond({error:'Server session secret is not configured'},503);const session=await issue(role,env.SESSION_SECRET);
  return respond({token:session,role,expiresIn:28800})}
 
 const subs=env.CTI_MELDATHO_SUBSCRIPTIONS;
@@ -171,7 +157,7 @@ if(url.pathname==='/meldathos/manage'&&['GET','POST'].includes(request.method)){
 
 const role=await verify(request,env);
 if(url.pathname==='/meldathos/subscribers'&&request.method==='GET'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  if(!env.CTI_MELDATHO_SUBSCRIPTIONS)return respond({error:'Private subscription storage is not configured'},503);
  const entries=[];let cursor;
  do{
@@ -186,7 +172,7 @@ if(url.pathname==='/meldathos/subscribers'&&request.method==='GET'){
 }
 
 if(url.pathname==='/meldathos/reminder-dashboard'&&request.method==='GET'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  if(!subs)return respond({error:'Subscription storage unavailable'},503);
  const file=await gh(env,'content/meldados.json');
  const people=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,'')))).people||[];
@@ -219,7 +205,7 @@ if(url.pathname==='/meldathos/reminder-dashboard'&&request.method==='GET'){
  return respond({subscriberCount:subscribers.length,subscribers,memorials,upcoming,history:history.slice(0,100),historyCount:history.length});
 }
 if(url.pathname==='/meldathos/reminder-test'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json(),email=String(b.email||'').trim().toLowerCase();
  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||email.length>254)return respond({error:'Enter a valid test email address'},400);
  const today=hebrewDateFor(new Date());
@@ -228,22 +214,24 @@ if(url.pathname==='/meldathos/reminder-test'&&request.method==='POST'){
 }
 if(!role)return respond({error:'Please sign in'},401);
 if(url.pathname==='/session')return respond({role});
-if(url.pathname==='/file'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const path=url.searchParams.get('path');if(!adminFiles.has(path))return respond({error:'File not allowed'},400);const f=await gh(env,path);return respond({sha:f.sha,content:new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))});}
+ const area=routeArea(url.pathname);
+ if(area&&!permitted(role,area))return respond({error:'This role cannot access '+area+' administration'},403);
+if(url.pathname==='/file'&&request.method==='GET'){if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const path=url.searchParams.get('path');if(!adminFiles.has(path))return respond({error:'File not allowed'},400);if(!permitted(role,path==='content/services.json'?'schedule':'meldados'))return respond({error:'Access not permitted'},403);const f=await gh(env,path);return respond({sha:f.sha,content:new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))});}
 if(url.pathname==='/torah/source'&&request.method==='GET'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const path=url.searchParams.get('path')||'';
   if(!/^content\/dvar-torah\/(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Holiday|Holidays|2026)\/[A-Za-z0-9 ()'._-]+\.md$/.test(path))return respond({error:'Invalid Torah Markdown path'},400);
  const file=await gh(env,path);
  return respond({path,sha:file.sha,content:new TextDecoder().decode(un64(file.content.replace(/\s/g,'')))});
 }
 if(url.pathname==='/torah/catalog'&&request.method==='GET'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const file=await gh(env,'content/dvar-torah/index.json');
  const data=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
  return respond({sha:file.sha,items:data.items||[]});
 }
 if(url.pathname==='/torah/publication'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(typeof b.recordId!=='string'||!/^[-a-z0-9]{3,100}$/.test(b.recordId)||typeof b.published!=='boolean'||typeof b.expectedSha!=='string'||! /^[a-f0-9]{40}$/.test(b.expectedSha))return respond({error:'Invalid publication request'},400);
  const file=await gh(env,'content/dvar-torah/index.json');
@@ -258,7 +246,7 @@ if(url.pathname==='/torah/publication'&&request.method==='POST'){
  return respond({ok:true,sha:saved.content.sha,commit:saved.commit.sha,published:b.published});
 }
 if(url.pathname==='/torah/podcast'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(typeof b.recordId!=='string'||!/^[-a-z0-9]{3,100}$/.test(b.recordId)||typeof b.expectedSha!=='string'||!/^[a-f0-9]{40}$/.test(b.expectedSha)||typeof b.podcast!=='string'||(b.podcast!==''&&(!/^https:\/\//i.test(b.podcast)||b.podcast.length>2048)))return respond({error:'Invalid podcast update'},400);
  const file=await gh(env,'content/dvar-torah/index.json');
@@ -275,7 +263,7 @@ if(url.pathname==='/torah/podcast'&&request.method==='POST'){
 // Reader Edition: protected three-stage editorial workflow. Direct commits are forbidden.
 if(url.pathname==='/torah/commit')return respond({error:'Direct Markdown commits are disabled. Use Save Draft, Approve, Publish.'},410);
 if(['/torah/draft','/torah/approve','/torah/publish'].includes(url.pathname)){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const body=request.method==='POST'?await request.json():{};
  const recordId=request.method==='GET'?url.searchParams.get('recordId'):body.recordId;
  if(typeof recordId!=='string'||!/^[-a-z0-9]{3,100}$/.test(recordId))return respond({error:'Invalid record'},400);
@@ -316,11 +304,11 @@ if(['/torah/draft','/torah/approve','/torah/publish'].includes(url.pathname)){
  await save(env,draftPath,JSON.stringify(draft,null,2)+'\n',draftFile.sha,'Archive published CTI editorial draft: '+recordId);
  return respond({ok:true,sha:saved.content.sha,commit:saved.commit.sha});
 }
-if(url.pathname==='/github-check'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const f=await gh(env,'content/meldados.json');return respond({ok:true,repository:env.GITHUB_REPOSITORY,sha:f.sha,access:'read'});}
+if(url.pathname==='/github-check'&&request.method==='GET'){if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const f=await gh(env,'content/meldados.json');return respond({ok:true,repository:env.GITHUB_REPOSITORY,sha:f.sha,access:'read'});}
 if(url.pathname==='/meldados/state'&&request.method==='GET'){const f=await gh(env,'content/meldados.json');return respond({sha:f.sha,people:JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))).people})}
 
 if(url.pathname==='/meldados/create'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  try{
  const b=await request.json(),name=String(b.englishName||'').trim().replace(/\s+/g,' ');
  if(!name||name.length>200)return respond({error:'Enter a valid name'},400);
@@ -368,16 +356,16 @@ const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''
 stage='apply memorial changes';
 const person=doc.people.find(p=>p.id===b.recordId);
 if(!person)return respond({error:'Memorial not found'},404);
-if(role==='meldados'&&!['approved','published','stub'].includes(person.reviewStatus))return respond({error:'Record is not editable'},403);
+if(role==='congregant'&&!['approved','published','stub'].includes(person.reviewStatus))return respond({error:'Record is not editable'},403);
 Object.assign(person,b.changes);
 stage='encode and publish memorial database';
 await save(env,'content/meldados.json',JSON.stringify(doc,null,2)+'\n',file.sha,'Update memorial information: '+person.id);
 return respond({ok:true,message:'Memorial changes published to GitHub'});
 }catch(e){return respond({error:'Memorial update failed at '+stage+': '+(e?.message||'Unknown error')},500)}
 }
-if(url.pathname==='/meldados/portrait'&&request.method==='POST'){const b=await request.json();if(typeof b.recordId!=='string'||!b.recordId.match(/^[a-zA-Z0-9_-]{1,150}$/)||typeof b.image!=='string'||b.image.length>1400000||!/^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(b.image))return respond({error:'Invalid portrait'},400);const file=await gh(env,'content/meldados.json');const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));const person=doc.people.find(p=>p.id===b.recordId);if(!person||role==='meldados'&&!['approved','published','stub'].includes(person.reviewStatus))return respond({error:'Memorial not editable'},403);const path='assets/images/meldados/portraits/'+b.recordId+'.jpg';let sha;try{sha=(await gh(env,path)).sha}catch(e){if(e.status!==404)throw e}await gh(env,path,'PUT',{message:'Update memorial portrait: '+b.recordId,content:b.image.split(',')[1],sha,branch:'main'});const fresh=await gh(env,'content/meldados.json');const current=JSON.parse(new TextDecoder().decode(un64(fresh.content.replace(/\s/g,''))));const p=current.people.find(x=>x.id===b.recordId);p.photo=path;await save(env,'content/meldados.json',JSON.stringify(current,null,2)+'\n',fresh.sha,'Publish memorial portrait: '+b.recordId);return respond({ok:true})}
+if(url.pathname==='/meldados/portrait'&&request.method==='POST'){const b=await request.json();if(typeof b.recordId!=='string'||!b.recordId.match(/^[a-zA-Z0-9_-]{1,150}$/)||typeof b.image!=='string'||b.image.length>1400000||!/^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(b.image))return respond({error:'Invalid portrait'},400);const file=await gh(env,'content/meldados.json');const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));const person=doc.people.find(p=>p.id===b.recordId);if(!person||role==='congregant'&&!['approved','published','stub'].includes(person.reviewStatus))return respond({error:'Memorial not editable'},403);const path='assets/images/meldados/portraits/'+b.recordId+'.jpg';let sha;try{sha=(await gh(env,path)).sha}catch(e){if(e.status!==404)throw e}await gh(env,path,'PUT',{message:'Update memorial portrait: '+b.recordId,content:b.image.split(',')[1],sha,branch:'main'});const fresh=await gh(env,'content/meldados.json');const current=JSON.parse(new TextDecoder().decode(un64(fresh.content.replace(/\s/g,''))));const p=current.people.find(x=>x.id===b.recordId);p.photo=path;await save(env,'content/meldados.json',JSON.stringify(current,null,2)+'\n',fresh.sha,'Publish memorial portrait: '+b.recordId);return respond({ok:true})}
 if(url.pathname==='/announcements/email'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const body=await request.json();
  if(typeof body.announcement!=='string'||!body.announcement.trim()||body.announcement.length>1000)return respond({error:'Enter an announcement before sending email'},400);
  if(!env.RESEND_API_KEY)return respond({error:'Email is not configured yet. The website announcement can still be published.'},503);
@@ -395,14 +383,14 @@ if(url.pathname==='/announcements/email'&&request.method==='POST'){
  return respond({ok:true,recipientCount:recipients.length});
 }
 if(url.pathname==='/newsletter/import-events'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();if(!Array.isArray(b.events)||b.events.length>100) return respond({error:'Invalid events'},400);
  const file=await gh(env,'content/events.json');const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));let added=0;
  for(const e of b.events){if(typeof e.title!=='string'||e.title.length>160||!/^\\d{4}-\\d{2}-\\d{2}$/.test(e.date)||typeof e.source!=='string')continue;if(doc.events.some(x=>x.date===e.date&&x.title===e.title))continue;doc.events.push({date:e.date,title:e.title,time:'',location:'',description:'',source:e.source});added++}
  if(added)await save(env,'content/events.json',JSON.stringify(doc,null,2)+'\\n',file.sha,'Import newsletter events');return respond({ok:true,added});
 }
 if(url.pathname==='/newsletter/import-meldados'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();if(!Array.isArray(b.people)||b.people.length>150)return respond({error:'Invalid memorial entries'},400);
  const file=await gh(env,'content/meldados.json'),doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));let added=0,updated=0,exceptions=[];
  const norm=s=>String(s||'').toLowerCase().replace(/[^a-z]/g,'');
@@ -416,14 +404,14 @@ if(url.pathname==='/newsletter/import-meldados'&&request.method==='POST'){
 const validEventDate=d=>typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&Number(d.slice(0,4))>=2000&&Number.isFinite(Date.parse(d+'T12:00:00Z'))&&new Date(d+'T12:00:00Z').toISOString().slice(0,10)===d;
 const validEventTime=t=>!t||/^(?:0?[1-9]|1[0-2])(?::[0-5]\d)?\s*(?:AM|PM)$/i.test(t);
 if(url.pathname==='/leadership/list'&&request.method==='GET'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const [bios,directory]=await Promise.all([gh(env,'content/leadership-bios.json'),gh(env,'content/biography-directory.json')]);
  const data=JSON.parse(new TextDecoder().decode(un64(bios.content.replace(/\s/g,''))));
  const people=JSON.parse(new TextDecoder().decode(un64(directory.content.replace(/\s/g,'')))).people;
  return respond({leaders:data.leaders.map(x=>({...x,role:people.find(p=>p.name===x.name)?.role||'',photo:people.find(p=>p.name===x.name)?.photo||null}))});
 }
 if(url.pathname==='/leadership/update'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(typeof b.name!=='string'||typeof b.bio!=='string'||typeof b.fullBio!=='string'||b.bio.length>180||b.fullBio.length>12000||!b.bio.trim()||!b.fullBio.trim())return respond({error:'Check biography text and length'},400);
  const file=await gh(env,'content/leadership-bios.json');
@@ -435,7 +423,7 @@ if(url.pathname==='/leadership/update'&&request.method==='POST'){
  return respond({ok:true});
 }
 if(url.pathname==='/leadership/photo'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(typeof b.name!=='string'||typeof b.image!=='string'||b.image.length>5000000||!/^iVBORw0KGgo[A-Za-z0-9+/=]*$/.test(b.image))return respond({error:'Select a PNG photograph smaller than 3.5 MB'},400);
  const directoryFile=await gh(env,'content/biography-directory.json');
@@ -454,9 +442,9 @@ if(url.pathname==='/leadership/photo'&&request.method==='POST'){
  await save(env,'content/biography-directory.json',JSON.stringify(current,null,2)+'\n',fresh.sha,'Refresh leadership photograph: '+b.name);
  return respond({ok:true});
 }
-if(url.pathname==='/events/list'&&request.method==='GET'){if(role!=='admin')return respond({error:'Administrator access required'},403);const f=await gh(env,'content/events.json');const d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));return respond({events:d.events||[]})}
+if(url.pathname==='/events/list'&&request.method==='GET'){if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const f=await gh(env,'content/events.json');const d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));return respond({events:d.events||[]})}
 if(url.pathname==='/events/add'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(typeof b.title!=='string'||!b.title.trim()||b.title.length>140||typeof b.date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(b.date)||Number(b.date.slice(0,4))<2000||Number.isNaN(Date.parse(b.date+'T12:00:00Z'))||new Date(b.date+'T12:00:00Z').toISOString().slice(0,10)!==b.date)return respond({error:'A valid event name and date are required'},400);
  for(const [k,max] of [['time',80],['endTime',80],['location',160],['description',1500]])if(typeof b[k]!=='string'||b[k].length>max)return respond({error:'Invalid '+k},400);
@@ -466,7 +454,7 @@ if(url.pathname==='/events/add'&&request.method==='POST'){
  await save(env,'content/events.json',JSON.stringify(d,null,2)+'\n',f.sha,'Add upcoming CTI event: '+b.title.trim());return respond({ok:true});
 }
 if(url.pathname==='/events/edit'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(typeof b.id!=='string'||typeof b.originalDate!=='string'||typeof b.originalTitle!=='string'||typeof b.title!=='string'||!b.title.trim()||b.title.length>140||typeof b.date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(b.date)||Number(b.date.slice(0,4))<2000||!Number.isFinite(Date.parse(b.date+'T12:00:00Z'))||new Date(b.date+'T12:00:00Z').toISOString().slice(0,10)!==b.date)return respond({error:'Enter a valid event name and date'},400);
  for(const [k,max] of [['time',80],['endTime',80],['location',160],['description',1500]])if(typeof b[k]!=='string'||b[k].length>max)return respond({error:'Invalid '+k},400);
@@ -479,7 +467,7 @@ if(url.pathname==='/events/edit'&&request.method==='POST'){
  return respond({ok:true});
 }
 if(url.pathname==='/events/delete'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);const b=await request.json();
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const b=await request.json();
  if(typeof b.id!=='string'||typeof b.date!=='string'||typeof b.title!=='string')return respond({error:'Invalid event'},400);
  if(!validEventDate(b.date)||!validEventDate(b.endDate||b.date)||(b.endDate&&b.endDate<b.date)||!validEventTime(b.time)||!validEventTime(b.endTime))return respond({error:'Check event dates and times'},400);const f=await gh(env,'content/events.json'),d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));const i=d.events.findIndex(e=>e.id===b.id&&e.date===b.date&&e.title===b.title);
  if(i<0)return respond({error:'Event no longer exists. Reload the list.'},409);d.events.splice(i,1);
@@ -511,7 +499,7 @@ if(url.pathname==='/unsubscribe/confirm'&&request.method==='POST'){
  return respond({ok:true,message:'You have been unsubscribed from CTI congregational emails.'});
 }
 if(url.pathname==='/mailing-list'&&(request.method==='GET'||request.method==='POST')){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  if(!env.CTI_MAILING_LISTS)return respond({error:'Private mailing-list storage is not configured'},503);
  const key='congregation';
  if(request.method==='GET'){
@@ -529,7 +517,7 @@ if(url.pathname==='/mailing-list'&&(request.method==='GET'||request.method==='PO
 }
 // Unified email workflow. Sending is deliberately gated until domain verification and live testing.
 if(url.pathname==='/congregational-email'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  if(!env.CTI_MAILING_LISTS)return respond({error:'Mailing list storage is not configured'},503);
  const b=await request.json();
  if(!['shabbat','newsletter','event','custom'].includes(b.type)||typeof b.subject!=='string'||!b.subject.trim()||b.subject.length>200||typeof b.html!=='string'||b.html.length>80000||typeof b.text!=='string'||b.text.length>20000)return respond({error:'Invalid email draft'},400);
@@ -602,7 +590,7 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  return respond({ok:!failure,...report},failure?502:200);
 }
 if(url.pathname==='/newsletter/email'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(typeof b.issueUrl!=='string'||b.confirm!==true)return respond({error:'Confirm the selected newsletter before emailing the congregation'},400);
  if(!env.RESEND_API_KEY||!env.CTI_MAILING_LISTS||!env.CTI_ANNOUNCE_EMAIL_FROM)return respond({error:'Congregational email service is not configured'},503);
@@ -632,7 +620,7 @@ if(url.pathname==='/newsletter/email'&&request.method==='POST'){
  return respond({ok:true,title:issue.title,recipientCount:recipients.length,sentAt:new Date().toISOString()});
 }
 if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(typeof b.pdf!=='string'||b.pdf.length>10500000||!b.pdf.startsWith('JVBERi0'))return respond({error:'Select a PDF smaller than 7 MB'},400);
  if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(b.month||''))return respond({error:'Newsletter month not identified'},400);
@@ -666,11 +654,11 @@ const decodeCollection=f=>JSON.parse(new TextDecoder().decode(un64(f.content.rep
 const masterPath='content/collection-records.json';
 const masterFields={collection:12,status:20,title:180,date:100,caption:1500,description:10000,source:500,citation:3000,attribution:500,transcript:150000,indexImage:500,archiveImage:500,restoredImage:500,thumbnailImage:500,pdf:500};
 if(url.pathname==='/master/list'&&request.method==='GET'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const f=await gh(env,masterPath);return respond(decodeCollection(f));
 }
 if(url.pathname==='/master/save'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json(),f=await gh(env,masterPath),d=decodeCollection(f);
  const record=(d.items||[]).find(x=>x.id===b.id);
  if(!record)return respond({error:'Unknown record number'},404);
@@ -686,7 +674,7 @@ if(url.pathname==='/master/save'&&request.method==='POST'){
  return respond({ok:true,id:b.id});
 }
 if(url.pathname==='/master/upload'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json(),f=await gh(env,masterPath),d=decodeCollection(f),record=(d.items||[]).find(x=>x.id===b.id);
  if(!record||!['originalImage','restoredImage','thumbnailImage','indexImage','archiveImage','pdf'].includes(b.slot))return respond({error:'Invalid record or file slot'},400);
  if(typeof b.name!=='string'||typeof b.data!=='string'||b.data.length>10000000)return respond({error:'File too large or invalid'},400);
@@ -712,7 +700,7 @@ if(url.pathname==='/master/upload'&&request.method==='POST'){
  return respond({ok:true,path,id:record.id});
 }
 if(url.pathname==='/master/create'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(!['gallery','archive'].includes(b.collection))return respond({error:'Invalid collection'},400);
  const f=await gh(env,masterPath),d=decodeCollection(f),number=d.nextRecordNumber||1;
@@ -725,13 +713,13 @@ if(url.pathname==='/master/create'&&request.method==='POST'){
 const collectionPath='content/collection-submissions.json';
 
 if(url.pathname==='/collections/list'&&request.method==='GET'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const [index,gallery,archives]=await Promise.all([gh(env,collectionPath),gh(env,'content/gallery.json'),gh(env,'content/archive-additions.json')]);
  const state=decodeCollection(index),g=decodeCollection(gallery),a=decodeCollection(archives);
  return respond({items:state.items||[],visibility:state.visibility||{},gallery:g.items||[],archives:a.items||[]});
 }
 if(url.pathname==='/collections/edit'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(!['gallery','archive'].includes(b.collection)||typeof b.id!=='string'||b.id.length>500)return respond({error:'Invalid record'},400);
  const fields={title:180,date:60,description:3000,caption:1500,attribution:500,source:400,citation:2000,transcript:100000};
@@ -757,7 +745,7 @@ if(url.pathname==='/collections/edit'&&request.method==='POST'){
  return respond({ok:true});
 }
 if(url.pathname==='/collections/status'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(!['gallery','archive'].includes(b.collection)||typeof b.id!=='string'||!['active','inactive'].includes(b.status))return respond({error:'Invalid status request'},400);
  const f=await gh(env,collectionPath),d=decodeCollection(f);d.visibility=d.visibility||{gallery:{},archive:{}};d.visibility.gallery=d.visibility.gallery||{};d.visibility.archive=d.visibility.archive||{};
@@ -778,7 +766,7 @@ if(url.pathname==='/collections/status'&&request.method==='POST'){
  return respond({ok:true});
 }
 if(url.pathname==='/collections/submit'&&request.method==='POST'){
- if(role!=='admin')return respond({error:'Administrator access required'},403);
+ if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  if(!['gallery','archive'].includes(b.collection))return respond({error:'Select Gallery or Archive'},400);
  for(const [key,max] of Object.entries({title:180,date:60,description:3000,source:400,citation:2000,attribution:500,caption:1500,transcript:100000}))
@@ -810,6 +798,6 @@ if(url.pathname==='/collections/submit'&&request.method==='POST'){
  return respond({ok:true,id,status:'active'});
 }
 
-if(url.pathname==='/publish'&&request.method==='POST'){if(role!=='admin')return respond({error:'Administrator access required'},403);const b=await request.json();if(!adminFiles.has(b.path)||typeof b.content!=='string'||b.content.length>2000000||typeof b.expectedSha!=='string')return respond({error:'File or content not allowed'},400);JSON.parse(b.content);const file=await gh(env,b.path);if(file.sha!==b.expectedSha)return respond({error:'File changed since it was opened'},409);await save(env,b.path,b.content,file.sha,'CTI administration: update '+b.path);return respond({ok:true})}
+if(url.pathname==='/publish'&&request.method==='POST'){if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const b=await request.json();if(!adminFiles.has(b.path)||typeof b.content!=='string'||b.content.length>2000000||typeof b.expectedSha!=='string')return respond({error:'File or content not allowed'},400);JSON.parse(b.content);const file=await gh(env,b.path);if(file.sha!==b.expectedSha)return respond({error:'File changed since it was opened'},409);await save(env,b.path,b.content,file.sha,'CTI administration: update '+b.path);return respond({ok:true})}
 return respond({error:'Not found'},404)
 }catch(e){return respond({error:e.message||'Unexpected error'},e.status===409?409:e.status===404?404:400)}}};
