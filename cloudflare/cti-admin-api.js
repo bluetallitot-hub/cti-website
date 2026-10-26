@@ -536,8 +536,8 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  const records=await Promise.all(unique.map(async email=>({email,doNotSend:!!(await env.CTI_MAILING_LISTS.get('unsubscribed:'+email))})));
  const recipients=records.filter(x=>!x.doNotSend&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x.email)).map(x=>x.email);
  const configured=!!(env.RESEND_API_KEY&&env.CTI_ANNOUNCE_EMAIL_FROM);
- const enabled=false; // Hard lock: enable only after durable idempotency and real-address testing.
- if(b.action==='preflight')return respond({ok:true,total:unique.length,suppressed:records.filter(x=>x.doNotSend).length,eligible:recipients.length,configured,enabled,sender:env.CTI_ANNOUNCE_EMAIL_FROM||null,siteOrigin:env.SITE_ORIGIN});
+ const enabled=false; // Production lock stays in place until D1 binding, migration, and real-address tests pass.
+ if(b.action==='preflight')return respond({ok:true,total:unique.length,suppressed:records.filter(x=>x.doNotSend).length,eligible:recipients.length,configured,enabled,sender:env.CTI_ANNOUNCE_EMAIL_FROM||null,siteOrigin:env.SITE_ORIGIN,attachmentCount:b.type==='custom'?(b.attachments||[]).length:b.type==='newsletter'?1:0,attachmentBytes:b.type==='custom'?(b.attachments||[]).reduce((n,f)=>n+Math.floor(f.content.length*3/4)-(f.content.endsWith('==')?2:f.content.endsWith('=')?1:0),0):null});
  if(b.action!=='send'||b.confirm!==true)return respond({error:'Explicit send confirmation required'},400);
  if(!configured||!enabled)return respond({error:'Live sending is locked pending verified DNS, provider setup, and durable delivery safeguards'},503);
  if(!recipients.length)return respond({error:'No eligible recipients'},400);
