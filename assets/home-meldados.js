@@ -24,15 +24,26 @@ function currentMonth(){
  const effective=sunset!==null&&now.getTime()>=sunset?new Date(now.getTime()+86400000):now;
  return normalize(hebrew.formatToParts(effective).find(x=>x.type==='month').value);
 }
-const list=document.getElementById('home-memorial-list'),heading=document.getElementById('home-memorial-month');if(!list)return;
+const list=document.getElementById('home-plaque-grid'),heading=document.getElementById('home-memorial-month');if(!list)return;
 let people=[],lastMonth='';
 function render(){
  const month=currentMonth();if(month===lastMonth)return;lastMonth=month;
- heading.textContent=month+' Meldados';
+ heading.textContent=month;
  const matching=people.filter(p=>normalize(p.hebrewMonth)===month&&['approved','published','stub'].includes(p.reviewStatus)&&p.approved!==false).sort((a,b)=>Number(a.hebrewDay)-Number(b.hebrewDay)||String(a.englishName).localeCompare(String(b.englishName)));
- list.replaceChildren();
- if(!matching.length){const msg=document.createElement('p');msg.className='home-memorial-message';msg.textContent='No memorials listed for this month.';list.append(msg);return}
- for(const p of matching){const plaque=document.createElement('div');plaque.className='home-memorial-plaque';const name=document.createElement('span'),date=document.createElement('small');name.textContent=p.englishName;date.textContent=p.hebrewDay+' '+month;plaque.append(name,date);list.append(plaque)}
+ const visible=matching.slice(0,48),grid=document.getElementById('home-plaque-grid'),ranges=document.getElementById('home-date-ranges');
+ grid.replaceChildren();ranges.replaceChildren();
+ let index=0;const base=Math.floor(visible.length/8),extra=visible.length%8;
+ for(let col=0;col<8;col++){
+  const count=base+(col<extra?1:0),group=visible.slice(index,index+count);index+=count;
+  const label=document.createElement('span');label.textContent=group.length?(group[0].hebrewDay===group[group.length-1].hebrewDay?String(group[0].hebrewDay):group[0].hebrewDay+'–'+group[group.length-1].hebrewDay):'';ranges.append(label);
+  for(let row=0;row<6;row++){
+   const slot=document.createElement('div');slot.className='plaque-slot';slot.style.gridColumn=String(col+1);slot.style.gridRow=String(row+1);
+   const record=group[row];if(record){const plaque=document.createElement('div');plaque.className='home-plaque';plaque.textContent=record.englishName;plaque.title=record.englishName+' — '+record.hebrewDay+' '+month;slot.append(plaque)}
+   for(const side of ['left','right']){const bulb=document.createElement('span');bulb.className='memorial-bulb bulb-'+side;slot.append(bulb)}
+   grid.append(slot);
+  }
+ }
+ document.getElementById('home-memorial-overflow').textContent=matching.length>48?matching.length-48+' additional memorials appear on the full Meldados page.':'';
 }
 fetch('content/meldados.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Unable to load memorial records');return r.json()}).then(data=>{people=data.people||[];render();setInterval(render,60000)}).catch(()=>{list.textContent='Memorials are temporarily unavailable.'});
 })();
