@@ -471,9 +471,7 @@ if(url.pathname==='/unsubscribe/confirm'&&request.method==='POST'){
  const key='unsubscribe-token:'+token;const email=await env.CTI_MAILING_LISTS.get(key);
  if(!email)return respond({error:'Invalid or expired confirmation link'},400);
  const list=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
- const filtered=list.filter(s=>typeof s==='string'&&s.trim().toLowerCase()!==email);
  await env.CTI_MAILING_LISTS.put('unsubscribed:'+email,new Date().toISOString());
- await env.CTI_MAILING_LISTS.put('congregation',JSON.stringify(filtered));
  await env.CTI_MAILING_LISTS.delete(key);
  return respond({ok:true,message:'You have been unsubscribed from CTI congregational emails.'});
 }
@@ -483,14 +481,14 @@ if(url.pathname==='/mailing-list'&&(request.method==='GET'||request.method==='PO
  const key='congregation';
  if(request.method==='GET'){
   const emails=JSON.parse(await env.CTI_MAILING_LISTS.get(key)||'[]');
-  return respond({emails:Array.isArray(emails)?emails:[]});
+  const records=await Promise.all((Array.isArray(emails)?emails:[]).map(async email=>({email,doNotSend:!!(await env.CTI_MAILING_LISTS.get('unsubscribed:'+email))})));
+  return respond({emails:Array.isArray(emails)?emails:[],records});
  }
  const body=await request.json();
  if(body.confirm!==true||!Array.isArray(body.emails)||body.emails.length>10000)return respond({error:'Confirm a valid mailing list'},400);
  const emails=[...new Set(body.emails.map(s=>typeof s==='string'?s.trim().toLowerCase():'').filter(Boolean))].sort();
  if(emails.some(s=>s.length>254||!(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(s))))return respond({error:'Invalid email address'},400);
- const suppressed=[];for(const email of emails){if(await env.CTI_MAILING_LISTS.get('unsubscribed:'+email))suppressed.push(email)}
- if(suppressed.length)return respond({error:'Cannot re-add unsubscribed addresses: '+suppressed.join(', ')},409);
+
  await env.CTI_MAILING_LISTS.put(key,JSON.stringify(emails));
  return respond({ok:true,emails});
 }
@@ -505,7 +503,8 @@ if(url.pathname==='/newsletter/email'&&request.method==='POST'){
  if(!issue)return respond({error:'Newsletter is not in the published archive'},404);
  if(!/^assets\/resources\/newsletters\/[0-9]{4}\/[a-zA-Z0-9._-]+\.pdf$/.test(issue.url))return respond({error:'Invalid archived newsletter path'},400);
  const list=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
- const recipients=[...new Set(list.filter(s=>typeof s==='string').map(s=>s.trim().toLowerCase()).filter(s=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)))];
+ const eligible=await Promise.all(list.filter(s=>typeof s==='string').map(async s=>({email:s.trim().toLowerCase(),blocked:!!(await env.CTI_MAILING_LISTS.get('unsubscribed:'+s.trim().toLowerCase()))})));
+ const recipients=[...new Set(eligible.filter(s=>!s.blocked).map(s=>s.email).filter(s=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)))];
  if(!recipients.length)return respond({error:'Congregational newsletter mailing list is empty'},503);
  const key='newsletter-sent:'+issue.url;
  const prior=await env.CTI_MAILING_LISTS.get(key);
