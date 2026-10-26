@@ -62,7 +62,7 @@ async function sendMeldathoReminders(env,now=new Date()){
    const names=selected.map(id=>matches.get(id).englishName).filter(Boolean);
    if(!names.length)continue;
    const subject='CTI Meldatho reminder — '+names.join(', ').slice(0,140);
-   const manage=subscriber.manageToken?'\n\nManage or unsubscribe: '+(env.SITE_ORIGIN||'https://bluetallitot-hub.github.io').replace(/\/$/,'')+'/cti-website/subscribe-meldados.html?manage='+encodeURIComponent(subscriber.manageToken):'';
+   const manage=subscriber.manageToken?'\n\nManage or unsubscribe: '+(env.SITE_ORIGIN||'').replace(/\/$/,'')+'/subscribe-meldados.html?manage='+encodeURIComponent(subscriber.manageToken):'';
    const message='Shalom '+subscriber.name+',\n\nThis is your candle-lighting reminder for the Hebrew memorial anniversary on '+hebrew.day+' '+hebrew.month+' '+hebrew.year+':\n\n'+names.map(n=>'• '+n).join('\n')+'\n\nLight a memorial candle at sundown on the evening before this Hebrew anniversary.\n\nMay their memory be for a blessing.\n\nCongregation Tifereth Israel, Peabody'+manage;
    const result=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_MELDATHO_EMAIL_FROM,to:[subscriber.email],subject,text:message,idempotency_key:'meldatho-'+dateKey+'-'+entry.name.slice(-32)})});
    if(!result.ok){console.error('Meldatho reminder send failed',result.status,await result.text());continue}
@@ -586,7 +586,8 @@ if(url.pathname==='/newsletter/email'&&request.method==='POST'){
  const prior=await env.CTI_MAILING_LISTS.get(key);
  if(prior)return respond({error:'This newsletter has already been emailed to the congregation. Sent record: '+prior},409);
  const sender=env.CTI_ANNOUNCE_EMAIL_FROM;
- const base='https://bluetallitot-hub.github.io/cti-website/';
+ if(!env.SITE_ORIGIN)return respond({error:'SITE_ORIGIN must be configured for email links'},503);
+ const base=env.SITE_ORIGIN.replace(/\/$/,'')+'/';
  const link=base+issue.url;
  const escape=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
  const title=escape(issue.title);
