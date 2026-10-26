@@ -506,20 +506,20 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  const records=await Promise.all(unique.map(async email=>({email,doNotSend:!!(await env.CTI_MAILING_LISTS.get('unsubscribed:'+email))})));
  const recipients=records.filter(x=>!x.doNotSend&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x.email)).map(x=>x.email);
  const configured=!!(env.RESEND_API_KEY&&env.CTI_ANNOUNCE_EMAIL_FROM);
- const enabled=env.CTI_EMAIL_SENDING_ENABLED==='true';
+ const enabled=false; // Hard lock: enable only after durable idempotency and real-address testing.
  if(b.action==='preflight')return respond({ok:true,total:unique.length,suppressed:records.filter(x=>x.doNotSend).length,eligible:recipients.length,configured,enabled,sender:env.CTI_ANNOUNCE_EMAIL_FROM||null,siteOrigin:env.SITE_ORIGIN});
  if(b.action!=='send'||b.confirm!==true)return respond({error:'Explicit send confirmation required'},400);
- if(!configured||!enabled)return respond({error:'Live sending is locked pending verified domain, sender configuration, and CTI_EMAIL_SENDING_ENABLED=true'},503);
+ if(!configured||!enabled)return respond({error:'Live sending is locked pending verified DNS, provider setup, and durable delivery safeguards'},503);
  if(!recipients.length)return respond({error:'No eligible recipients'},400);
- if(recipients.length>100)return respond({error:'For safety, sending is limited to 100 recipients per run until batch delivery is implemented'},400);
+ if(recipients.length>50)return respond({error:'Sending is limited to 50 recipients per run pending a durable batch queue'},400);
  const sender=env.CTI_ANNOUNCE_EMAIL_FROM;
  if(!/^[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+$/.test(sender)&&!/^.{1,80}<[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+>$/.test(sender))return respond({error:'Invalid sender configuration'},503);
  const site=(env.SITE_ORIGIN||'').replace(/\/$/,'')+'/';
  if(!b.html.includes(site+'unsubscribe.html'))return respond({error:'Unsubscribe URL must match configured website origin'},400);
  const draftHash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',enc.encode(b.type+'|'+b.subject+'|'+b.html)))).map(v=>v.toString(16).padStart(2,'0')).join('');
  const lockKey='congregational-email-sent:'+draftHash;
- if(await env.CTI_MAILING_LISTS.get(lockKey))return respond({error:'This exact email was already sent. Change the draft only if you intend a new mailing.'},409);
- // A conservative lock prevents accidental double-click sends. Retain partial-failure details.
+ if(await env.CTI_MAILING_LISTS.get(lockKey))return respond({error:'This exact email already has a send attempt. Review delivery history before trying again.'},409);
+ // KV is not an atomic lock; production sending remains disabled until durable idempotency is implemented.
  await env.CTI_MAILING_LISTS.put(lockKey,JSON.stringify({status:'started',at:new Date().toISOString(),recipients:recipients.length}));
  let sent=0;let failure=null;
  for(const email of recipients){
