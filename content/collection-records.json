@@ -3535,7 +3535,7 @@
       "collection": "archive",
       "status": "active",
       "title": "Congregation Tifereth Israel celebrates 100 years of worship",
-      "caption": "",
+      "caption": "CTI officers and honorees at the 100th anniversary celebration, June 12, 2022. Left to right: Treasurer Jay Polonsky; Vice President Betty Polonsky; Secretary Joanne Pressman; President Jerry Pressman; honorees Doris Hershoff and retired president Elliot Hershoff.",
       "date": "February 10, 2022",
       "description": "Adam Bass's February 10, 2022 Weekly News article about CTI's centennial and planned June anniversary dinner.",
       "source": "Weekly News",
@@ -3607,14 +3607,14 @@
       "articleMigrationSource": "press/press-2022-centennial.html",
       "archiveItemImage": "assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg",
       "galleryPhoto": {
-        "title": "Congregation Tifereth Israel building — centennial, 2022",
-        "caption": "Congregation Tifereth Israel building, photographed for its centennial coverage.",
-        "description": "Retouched building photograph associated with the 2022 centennial article.",
+        "title": "CTI officers and honorees — 100th Anniversary, June 12, 2022",
+        "caption": "CTI officers and honorees at the 100th anniversary celebration, June 12, 2022. Left to right: Treasurer Jay Polonsky; Vice President Betty Polonsky; Secretary Joanne Pressman; President Jerry Pressman; honorees Doris Hershoff and retired president Elliot Hershoff.",
+        "description": "Six CTI officers and honorees at the centennial celebration on June 12, 2022.",
         "enhancedImage": "assets/images/anniversaries/cti-2022-building-ai-retouched.jpg",
         "thumbnail": "assets/collections/CTI-027-THM-1.png",
         "originalImage": null,
         "attribution": "Jakob Menendez",
-        "provenanceNote": "Retouched building image; original unretouched photographic source not verified. The newspaper article scan is a separate source, not the original building photograph."
+        "provenanceNote": "User-supplied event photograph with user-supplied identification of all six subjects. Original image awaits Drive staging and standardized GitHub migration; legacy building photograph retained."
       },
       "relatedGalleryRecordId": "CTI-027",
       "articleImage": "assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg",
@@ -3622,7 +3622,7 @@
         "enhanced-photo-index",
         "article-secondary"
       ],
-      "recordPresentationNote": "Archive index uses building photo thumbnail linking to gallery detail; article title links to centennial article. Newspaper scan preserved as secondary document.",
+      "recordPresentationNote": "Feature the user-supplied June 12, 2022 officers-and-honorees photo once staged and published; retain existing building image as legacy asset. Article title links to February 10, 2022 centennial article; event photo links to gallery.",
       "transcriptHtml": "<p class=\"archive-article-date\"><time>February 10, 2022</time></p><p>Congregation Tifereth Israel, a Sephardic synagogue, is turning 100 years old on Feb. 15.</p><p>To celebrate the occasion, the temple will be holding an anniversary dinner at the Continental Restaurant on Jun. 12, 2022. More details about the dinner will be released in their newsletter.</p><p>Congregation Tifereth Israel was founded on Feb. 15, 1922 by several Sephardic Jewish families who had immigrated to Peabody and Salem primarily from the country of Turkey.</p><p>Sephardic Jews, or Sephardim, are members of the Jewish Diaspora whose ancestors settled in the Iberian Peninsula, known today as Spain and Portugal. The term Sephardim comes from the Hebrew word Sefarad, or Spain.</p><p>Sephardic Jews also lived in Turkey and Greece and, in the early 1910s, some immigrated to the United States because of the uprisings, revolutions and wars in Turkey.</p><p>According to the Jewish Heritage Center of the North Shore, located in Lynn, one of the cities Sephardic Jewish immigrants were attracted to was Peabody, namely because of the leather industry. Many Sephardic settlers were shoemakers by trade.</p><p>“The prosperity of the town was thus attributed to the leather businesses, which continued to grow,” the Heritage Center said. “The more factories, the more businesses.”</p><p>As for Congregation Tifereth Israel, many of those same immigrants who fled Turkey went on to found the synagogue. They were forced to live as Catholics in Spain but carried their traditions in secret with their families. The Congregation’s foundation came at a time when Sephardic Jews were not as comfortable with the newly-formed Ashkenazi synagogue. Ashkenazi Jews are those who descend from Eastern European countries such as Poland, Russia or Lithuania.</p><p>Sephardic services vary from Ashkenazi styles; for instance, Sephardic Jews may speak Ladino — a Judeo-Spanish language — as opposed to Yiddish, a Judeo-Germanic language spoken by many Ashkenazi families.</p><p>Despite their differences, Tifereth Israel is on very good terms with the Ashkenazi community in Peabody and welcomes them into their congregation, as they too are family. From humble beginnings to finding community in Peabody, this congregation has lasted for 100 years and seeks to keep moving forward year after year, generation after generation.</p>",
       "transcriptDerivation": "Plain text derived from preserved articleHtml; not independently verified against source scan",
       "transcriptPreservation": {
@@ -3635,7 +3635,26 @@
       },
       "relatedRecords": [
         "CTI-014"
-      ]
+      ],
+      "pendingOriginalPhoto": {
+        "filename": "CTI-027-ORG-1.png",
+        "source": "user-supplied photograph in conversation",
+        "eventDate": "2022-06-12",
+        "status": "awaiting-drive-staging",
+        "peopleLeftToRight": [
+          "Jay Polonsky",
+          "Betty Polonsky",
+          "Joanne Pressman",
+          "Jerry Pressman",
+          "Doris Hershoff",
+          "Elliot Hershoff"
+        ]
+      },
+      "metadataReview": {
+        "status": "new event photograph identified; image staging pending",
+        "date": "2026-10-27",
+        "notes": "Article and transcript preserved. Existing image paths left unchanged until photo is staged and published."
+      }
     },
     {
       "id": "CTI-028",
