@@ -527,15 +527,16 @@
       "pdf": null,
       "sourcePage": null,
       "originalFilenames": [
-        "cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg"
+        "cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
+        "image(20261027-124857).png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "CTI-010-ORG-1.png",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-010-THM-1.png",
-      "preservationStatus": "awaiting-original-verification",
+      "preservationStatus": "original-preserved-in-google-drive",
       "imageVersions": [
         {
           "type": "THM",
@@ -543,6 +544,14 @@
           "path": "assets/collections/CTI-010-THM-1.png",
           "derivedFrom": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
           "method": "near-white-border-trim and 4:3 center crop; no text added"
+        },
+        {
+          "type": "ORG",
+          "version": 1,
+          "fileName": "CTI-010-ORG-1.png",
+          "driveId": "1O6YZaxri5FtIA_I0GGTRDDOkBMO6tUIY",
+          "source": "user-uploaded original, 2026-10-27",
+          "method": "unaltered original"
         }
       ],
       "thumbnailSpecification": {
@@ -555,9 +564,11 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
       "thumbnailStatus": "regenerated-800x600-review-source-content",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "originalStatus": "user-provided-original-saved-google-drive",
       "assetInventory": {
-        "sourceFiles": [],
+        "sourceFiles": [
+          "CTI-010-ORG-1.png"
+        ],
         "presentationFiles": [
           "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
           "assets/collections/CTI-010-THM-1.png"
@@ -566,14 +577,16 @@
           "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
           "assets/collections/CTI-010-THM-1.png"
         ],
-        "sourceVerification": "no confirmed original-source file linked",
+        "sourceVerification": "user-provided original uploaded to Drive staging",
         "captionVerification": "printed caption not transcribed"
       },
       "captionProvenance": {
         "status": "existing-caption-pending-source-comparison",
         "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
         "verbatimOriginalCaption": false
-      }
+      },
+      "originalImageDriveId": "1O6YZaxri5FtIA_I0GGTRDDOkBMO6tUIY",
+      "originalImageDriveUrl": "https://drive.google.com/file/d/1O6YZaxri5FtIA_I0GGTRDDOkBMO6tUIY/view"
     },
     {
       "id": "CTI-011",
