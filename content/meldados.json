@@ -3435,8 +3435,9 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Funeral-home obituary; 2024-04-25, Hebrew year 5784. Direct source URL not included in pasted handoff for this record; retain source verification task.",
-      "familyFromObituary": true
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Funeral-home obituary; 2024-04-25, Hebrew year 5784. Direct source URL not included in pasted handoff for this record; retain source verification task. 2026-10-27 exact verification: Solimine/Nadworny official obituary confirms Raymond R. Castiglione (1924-08-15 to 2024-04-25); civil death is 17 Nissan 5784. E. Judith Castiglione's 2025 Salem News obituary independently identifies Raymond R. Castiglione as her late husband and family members, confirming identity. Sources: https://www.nadwornyfuneralhome.com/obituaries/Raymond-R-Castiglione?obId=31290810 ; https://obituaries.salemnews.com/obituary/e-judith-rosen-castiglione-1093254248. No exact-person photo verified; family relations are obituary-listed, not a memorial dedication.",
+      "familyFromObituary": true,
+      "obituaryUrl": "https://www.nadwornyfuneralhome.com/obituaries/Raymond-R-Castiglione?obId=31290810"
     },
     {
       "id": "yahrzeit-abrahampodradchik-iyar-17",
