@@ -654,7 +654,7 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": "CTI-011-ENH-2.png",
-      "thumbnailImage": "assets/collections/CTI-011-THM-1.png",
+      "thumbnailImage": "CTI-011-THM-1.png",
       "preservationStatus": "original-preserved-in-google-drive",
       "imageVersions": [
         {
@@ -692,6 +692,14 @@
           "driveId": "116g0waJYKpm9IbQCfSSRYzdsay546ZmW",
           "derivedFrom": "CTI-011-ORG-1.png",
           "method": "AI-assisted reconstruction of full historical page, preserving three-portrait layout and text; approved by user"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "fileName": "CTI-011-THM-1.png",
+          "driveId": "1u5XuC1m99ngK3pwMXcrYIkJfzkP43oYC",
+          "derivedFrom": "CTI-011-ENH-2.png",
+          "method": "AI-assisted three-portrait landscape composition, no text; resized to exact 800×600"
         }
       ],
       "thumbnailSpecification": {
@@ -699,11 +707,12 @@
         "height": 600,
         "aspectRatio": "4:3",
         "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
+        "background": "cream archival paper",
+        "retouched": true,
+        "dimensionsVerified": true
       },
       "existingOriginalCandidate": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "approved-size-800x600-saved-to-drive",
       "originalStatus": "user-provided-original-preserved-on-drive",
       "assetInventory": {
         "sourceFiles": [
@@ -730,9 +739,12 @@
       "transcriptStatus": "complete-from-user-provided-scan",
       "originalImageDriveId": "1GfIEXn4tiAhkLqxiqv-rc6wpRh_6y2_B",
       "enhancedImageDriveId": "116g0waJYKpm9IbQCfSSRYzdsay546ZmW",
-      "editorialStatus": "enhanced-and-transcribed-pending-thumbnail",
+      "editorialStatus": "complete-pending-upload",
       "publicationStatus": "pending-final-asset-upload",
-      "publicationNotes": "Use approved CTI-011-ENH-2.png for enhanced presentation; retain CTI-011-ORG-1.png as unchanged archival original. Earlier ENH-1 retained as superseded derivative."
+      "publicationNotes": "Use approved CTI-011-ENH-2.png for enhanced presentation; retain CTI-011-ORG-1.png as unchanged archival original. Earlier ENH-1 retained as superseded derivative.",
+      "thumbnailDriveId": "1u5XuC1m99ngK3pwMXcrYIkJfzkP43oYC",
+      "editorialStatusLabel": "Complete — Pending Upload",
+      "editorialApproval": "approved"
     },
     {
       "id": "CTI-012",
