@@ -3894,13 +3894,13 @@
         }
       ],
       "stagedThumbnail": {
-        "fileName": "CTI-037-THUMB-1.png",
-        "driveFileId": "16UBMbxkDVNUrM48RR2rNZT-zRVecRUT7",
-        "driveUrl": "https://drive.google.com/file/d/16UBMbxkDVNUrM48RR2rNZT-zRVecRUT7/view",
+        "fileName": "CTI-037-THUMB-1-800x600.png",
+        "driveFileId": "1EeVbwp8AABf8uUVOUcR0D2MfnXCYcKBg",
+        "driveUrl": "https://drive.google.com/file/d/1EeVbwp8AABf8uUVOUcR0D2MfnXCYcKBg/view",
         "sourceFileName": "CTI-037-ENH-1.png",
-        "width": 241,
-        "height": 360,
-        "role": "archive-thumbnail",
+        "width": 800,
+        "height": 600,
+        "role": "archive-gallery-timeline-thumbnail",
         "reviewStatus": "pending-inscription-verification"
       }
     },
