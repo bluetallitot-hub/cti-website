@@ -2810,7 +2810,9 @@
         "htmlDeletionSafe": true
       },
       "relatedRecords": [
-        "CTI-014"
+        "CTI-014",
+        "CTI-002",
+        "CTI-003"
       ]
     },
     {
@@ -4092,6 +4094,96 @@
       "photoCollectionApproval": "approved-based-on-completed-work",
       "photoCollectionApprovalDate": "2026-10-27",
       "photoCollectionStatus": "complete-approved"
+    },
+    {
+      "id": "CTI-002",
+      "collection": "gallery",
+      "status": "active",
+      "title": "Preparing for the High Holidays",
+      "date": "September 1983",
+      "caption": "September, 1983: (Left to right) Thomas Bloom, “Uncle” Leo Gibely, Jodi Becker, Joseph Gibely, II, Judi Barry, David Greenbaum, Steven Pressman, and Joel Barry, prepare for High Holiday Services. These young Bar Mitzvah students represent a fourth generation of member participation at Congregation Tifereth Israel.",
+      "description": "September, 1983: (Left to right) Thomas Bloom, “Uncle” Leo Gibely, Jodi Becker, Joseph Gibely, II, Judi Barry, David Greenbaum, Steven Pressman, and Joel Barry, prepare for High Holiday Services. These young Bar Mitzvah students represent a fourth generation of member participation at Congregation Tifereth Israel.",
+      "source": "Congregation Tifereth Israel 75th Anniversary Program (May 18, 1997)",
+      "citation": "75th Anniversary Program, historical photograph caption; September 1983",
+      "attribution": "Congregation Tifereth Israel 75th Anniversary Program",
+      "originalImage": null,
+      "restoredImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+      "indexImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+      "archiveImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+      "thumbnailImage": null,
+      "imageVersions": [
+        {
+          "type": "ENH",
+          "version": 1,
+          "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+          "note": "Existing AI-enhanced and colorized image reproduced in CTI-022; historical original not yet individually located"
+        }
+      ],
+      "captionProvenance": {
+        "status": "transcribed-from-1997-anniversary-program",
+        "verbatimOriginalCaption": true
+      },
+      "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
+      "originalStatus": "original-photograph-not-yet-separately-located",
+      "thumbnailStatus": "not-yet-created",
+      "relatedRecords": [
+        "CTI-022"
+      ],
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg"
+        ],
+        "sourceVerification": "existing asset referenced by CTI-022"
+      }
+    },
+    {
+      "id": "CTI-003",
+      "collection": "gallery",
+      "status": "active",
+      "title": "Honoring Rabbi Dov and Barbara Pikelny",
+      "date": "October 1994",
+      "caption": "October, 1994: Rabbi and Mrs. Dov B. Pikelny receive plaques commemorating their thirteen years of service to Congregation Tifereth Israel. (Left to right) Jerry Pressman, Barbara D. Pikelny, Rose Harsfield, Rabbi Dov B. Pikelny, and Joseph Gibely, II.",
+      "description": "October, 1994: Rabbi and Mrs. Dov B. Pikelny receive plaques commemorating their thirteen years of service to Congregation Tifereth Israel. (Left to right) Jerry Pressman, Barbara D. Pikelny, Rose Harsfield, Rabbi Dov B. Pikelny, and Joseph Gibely, II.",
+      "source": "Congregation Tifereth Israel 75th Anniversary Program (May 18, 1997)",
+      "citation": "75th Anniversary Program, historical photograph caption; October 1994",
+      "attribution": "Congregation Tifereth Israel 75th Anniversary Program",
+      "originalImage": null,
+      "restoredImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+      "indexImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+      "archiveImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+      "thumbnailImage": null,
+      "imageVersions": [
+        {
+          "type": "ENH",
+          "version": 1,
+          "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+          "note": "Existing AI-enhanced and colorized image reproduced in CTI-022; historical original not yet individually located"
+        }
+      ],
+      "captionProvenance": {
+        "status": "transcribed-from-1997-anniversary-program",
+        "verbatimOriginalCaption": true
+      },
+      "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
+      "originalStatus": "original-photograph-not-yet-separately-located",
+      "thumbnailStatus": "not-yet-created",
+      "relatedRecords": [
+        "CTI-022"
+      ],
+      "assetInventory": {
+        "sourceFiles": [],
+        "presentationFiles": [
+          "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg"
+        ],
+        "sourceVerification": "existing asset referenced by CTI-022"
+      }
     }
   ],
   "assetPolicy": {
