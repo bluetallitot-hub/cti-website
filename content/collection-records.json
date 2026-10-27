@@ -163,12 +163,12 @@
     },
     {
       "id": "CTI-007",
-      "collection": "archive",
+      "collection": "gallery",
       "status": "active",
-      "title": "2006 — CTI kitchen dedication. An invitation in the historical collection identifies a June 11, 2006 celebrati",
-      "caption": "2006 — CTI kitchen dedication. An invitation in the historical collection identifies a June 11, 2006 celebration honoring Sheryl Becker.",
+      "title": "CTI Kitchen Dedication — 2006",
+      "caption": "Three congregants pictured at the CTI kitchen dedication in 2006. The associated invitation announces a June 11, 2006 celebration honoring Sheryl Becker. Individuals in the photograph have not yet been identified.",
       "date": "June 11, 2006",
-      "description": "Photograph associated with the CTI kitchen dedication; a historical invitation dates the celebration to June 11, 2006.",
+      "description": "Photograph from the CTI kitchen dedication, with the original dedication invitation preserved as a supporting document. The invitation identifies June 11, 2006 as the celebration date; the photograph's handwritten date should be checked separately.",
       "source": "CTI historical photograph collection (individual provenance unverified)",
       "citation": "",
       "attribution": "",
@@ -181,7 +181,7 @@
         "cti-2006-kitchen-dedication-photo.png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
@@ -189,17 +189,36 @@
       "preservationStatus": "awaiting-original-verification",
       "imageVersions": [
         {
+          "type": "ORG",
+          "version": 1,
+          "driveFile": {
+            "fileName": "CTI-007-ORG-1.png",
+            "driveFileId": "1e-zYDEnEwcQWEDa0CZWoEZscn-0_V6cw",
+            "driveUrl": "https://drive.google.com/file/d/1e-zYDEnEwcQWEDa0CZWoEZscn-0_V6cw/view"
+          },
+          "note": "User-provided photograph scan; preserve without alterations"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "driveFile": {
+            "fileName": "CTI-007-ENH-1.png",
+            "driveFileId": "1VwAoc57zsYjUH3njxw5GrbrxKpyn0acF",
+            "driveUrl": "https://drive.google.com/file/d/1VwAoc57zsYjUH3njxw5GrbrxKpyn0acF/view"
+          },
+          "note": "AI reconstruction approved for display; facial and plaque details may not be historically accurate"
+        },
+        {
           "type": "THM",
           "version": 1,
           "path": "assets/collections/CTI-007-THM-1.png",
-          "derivedFrom": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
-          "method": "full-image contain with softened background"
+          "note": "Existing thumbnail; verify image provenance before publication"
         },
         {
           "type": "DOCUMENT",
           "version": 1,
           "path": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
-          "note": "Original dedication invitation; separate from photograph"
+          "note": "Original invitation supporting Gallery photograph"
         }
       ],
       "thumbnailSpecification": {
@@ -239,7 +258,6 @@
         "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
         "verbatimOriginalCaption": false
       },
-      "archiveItemImage": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
       "galleryPhoto": {
         "title": "CTI kitchen dedication, 2006",
         "caption": "2006 — CTI kitchen dedication. An invitation in the historical collection identifies a June 11, 2006 celebration honoring Sheryl Becker.",
@@ -247,15 +265,19 @@
         "enhancedImage": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
         "thumbnail": "assets/collections/CTI-007-THM-1.png",
         "originalImage": null,
-        "provenanceNote": "Historical photograph source unverified. The 2006 invitation is a separate original document, not the photographic original."
+        "provenanceNote": "Original user-provided scan and AI reconstructed enhanced version preserved separately. Do not present enhanced image as documentary original.",
+        "originalDriveFileId": "1e-zYDEnEwcQWEDa0CZWoEZscn-0_V6cw",
+        "enhancedDriveFileId": "1VwAoc57zsYjUH3njxw5GrbrxKpyn0acF"
       },
-      "relatedGalleryRecordId": "CTI-007",
-      "articleImage": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
-      "presentationOrder": [
-        "enhanced-photo-index",
-        "invitation-secondary"
-      ],
-      "recordPresentationNote": "Photograph thumbnail links to gallery detail; title links to archive record containing the original June 11, 2006 kitchen dedication invitation."
+      "supportingDocuments": [
+        {
+          "title": "Kitchen Dedication Invitation",
+          "type": "invitation",
+          "path": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
+          "placement": "below-main-photograph",
+          "linkLabel": "View original invitation"
+        }
+      ]
     },
     {
       "id": "CTI-008",
