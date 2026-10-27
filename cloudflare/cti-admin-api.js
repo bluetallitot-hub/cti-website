@@ -183,7 +183,7 @@ if((url.pathname==='/subscriptions/request'||url.pathname==='/subscriptions/conf
  if(!Array.isArray(existing))return respond({error:'Subscription list unavailable'},503);
  const emails=[...new Set([...existing.filter(x=>typeof x==='string'),pending.email].map(x=>x.trim().toLowerCase()).filter(Boolean))].sort();
  await store.put(listKey,JSON.stringify(emails));
- await store.delete('unsubscribed:'+pending.email);
+ // A new confirmation must not silently reverse an existing global unsubscribe.
  await store.delete(key);
  return respond({ok:true,message:'Your subscription is confirmed.'});
 }
