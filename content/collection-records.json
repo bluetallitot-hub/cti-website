@@ -2882,16 +2882,30 @@
       "imageVersions": [
         {
           "type": "ORG",
+          "filename": "CTI-023-ORG-1.png",
+          "driveFileId": "1U3ruN6hnQ5GTj5ogjkmagMIPLgj8ZrSk",
+          "description": "User-supplied newspaper article scan, pages 25–26; preserved unaltered",
           "version": 1,
-          "path": "assets/archive/originals/I-581-01-15-034-web.jpg",
-          "note": "Existing source scan or program cover; printed caption not yet transcribed"
+          "driveUrl": "https://drive.google.com/file/d/1U3ruN6hnQ5GTj5ogjkmagMIPLgj8ZrSk/view",
+          "publicationStatus": "staged-in-google-drive; github-standardized-copy-pending"
+        },
+        {
+          "type": "ENH",
+          "filename": "CTI-023-ENH-1.png",
+          "driveFileId": "1B3ouuXSPpQslFr-OsYcuv1PHdC0hb--o",
+          "description": "AI-assisted reconstruction of family photograph; not a literal restoration",
+          "version": 1,
+          "driveUrl": "https://drive.google.com/file/d/1B3ouuXSPpQslFr-OsYcuv1PHdC0hb--o/view",
+          "publicationStatus": "staged-in-google-drive; github-standardized-copy-pending"
         },
         {
           "type": "THM",
+          "filename": "CTI-023-THM-1.png",
+          "driveFileId": "1kwsFSrtRvmzL4Dmhs3_m_oRIj3GPrq1t",
+          "description": "Landscape AI-assisted family portrait thumbnail; not an authentic original photograph",
           "version": 1,
-          "path": "assets/collections/CTI-023-THM-1.png",
-          "derivedFrom": "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
-          "method": "full-image contain with softened background"
+          "driveUrl": "https://drive.google.com/file/d/1kwsFSrtRvmzL4Dmhs3_m_oRIj3GPrq1t/view",
+          "publicationStatus": "staged-in-google-drive; github-standardized-copy-pending"
         }
       ],
       "thumbnailSpecification": {
@@ -2903,7 +2917,7 @@
         "retouched": true
       },
       "existingOriginalCandidate": "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "approved-landscape-thumbnail-staged-in-google-drive; github-publication-pending",
       "originalStatus": "source-scan-present; newspaper text and caption final proofreading pending",
       "assetInventory": {
         "sourceFiles": [
@@ -2918,9 +2932,26 @@
           "assets/archive/originals/CTI-1914-Gibely-Family-Original-Enhanced.png",
           "assets/collections/CTI-023-THM-1.png"
         ],
-        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
-        "captionVerification": "caption-present-in-transcription; source-image-proofreading-pending",
-        "originalFilenameReconciled": true
+        "sourceVerification": "User supplied full article scan; retained as original in Google Drive; legacy GitHub source retained separately",
+        "captionVerification": "caption-transcribed; scan proofreading pending",
+        "originalFilenameReconciled": true,
+        "driveStagingFiles": [
+          {
+            "type": "ORG",
+            "filename": "CTI-023-ORG-1.png",
+            "driveFileId": "1U3ruN6hnQ5GTj5ogjkmagMIPLgj8ZrSk"
+          },
+          {
+            "type": "ENH",
+            "filename": "CTI-023-ENH-1.png",
+            "driveFileId": "1B3ouuXSPpQslFr-OsYcuv1PHdC0hb--o"
+          },
+          {
+            "type": "THM",
+            "filename": "CTI-023-THM-1.png",
+            "driveFileId": "1kwsFSrtRvmzL4Dmhs3_m_oRIj3GPrq1t"
+          }
+        ]
       },
       "captionProvenance": {
         "status": "transcribed-from-existing-article",
@@ -2975,10 +3006,16 @@
       "publicationPages": "25–26",
       "sourceIdentifier": "I-581-01-15-034",
       "metadataReview": {
-        "status": "reconciled; source-proofreading-pending",
+        "status": "image-set-and-related-records-reconciled; transcription-proofreading-and-publication-pending",
         "date": "2026-10-27",
         "notes": "Author, publication, date, pages, JHC source identifier, photograph caption and archival acknowledgment reconciled; transcription retained unchanged to avoid unsupported edits."
-      }
+      },
+      "relatedRecords": [
+        "CTI-016"
+      ],
+      "originalImageDriveId": "1U3ruN6hnQ5GTj5ogjkmagMIPLgj8ZrSk",
+      "enhancedImageDriveId": "1B3ouuXSPpQslFr-OsYcuv1PHdC0hb--o",
+      "thumbnailImageDriveId": "1kwsFSrtRvmzL4Dmhs3_m_oRIj3GPrq1t"
     },
     {
       "id": "CTI-024",
