@@ -1977,15 +1977,16 @@
       "hebrewName": "",
       "hebrewDay": 2,
       "hebrewMonth": "Adar",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
+      "hebrewYearOfDeath": 5781,
+      "dateOfDeath": "2021-02-14",
       "rememberedBy": "",
-      "biography": "",
+      "biography": "Sidney “Sid” Sands (July 24, 1932 – February 14, 2021) was a Peabody resident whose death was reported in The Salem News.",
       "photo": "",
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research verified 2026-10-26: The Salem News obituary/guestbook names Sidney “Sid” Sands of Peabody, born 1932-07-24, died 2021-02-14. Civil date converts exactly to 2 Adar 5781, matching CTI memorial day/month. Publisher guestbook confirms dates and Peabody headline; full obituary body returned 403 to automated extraction. No family relationships or portrait added without obituary text and exact-person photo evidence. https://obituaries.salemnews.com/obituary/sidney-sands-1081634548/guestbook",
+      "obituaryUrl": "https://obituaries.salemnews.com/obituary/sidney-sands-1081634548"
     },
     {
       "id": "yahrzeit-josephgibeleyi-nissan-9",
