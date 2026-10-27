@@ -94,6 +94,12 @@
           "driveFileId": "1oUoyRbxWcnUQM6QwCvSyQk9-p9Xrpk0M",
           "driveUrl": "https://drive.google.com/file/d/1oUoyRbxWcnUQM6QwCvSyQk9-p9Xrpk0M/view"
         }
+      ],
+      "editorialStatus": "complete-pending-upload",
+      "editorialStatusLabel": "Gallery Complete — Pending Upload",
+      "editorialCompletedDate": "2026-10-27",
+      "publicationNotes": [
+        "Verify original image pointer uses approved Drive original, not rejected candidate."
       ]
     },
     {
@@ -159,7 +165,13 @@
         "status": "editorial-caption-based-on-existing-record; original-clipping-not-verified",
         "verbatimOriginalCaption": false,
         "note": "Removed restoration instructions from display caption. Names, date, roles, and photographer credit are inherited from existing record; original printed caption remains unverified."
-      }
+      },
+      "editorialStatus": "complete-pending-upload",
+      "editorialStatusLabel": "Gallery Complete — Pending Upload",
+      "editorialCompletedDate": "2026-10-27",
+      "publicationNotes": [
+        "Correct truncated title; verify standardized image metadata."
+      ]
     },
     {
       "id": "CTI-007",
@@ -315,7 +327,10 @@
         "standardizedAssetUpload": "pending",
         "thumbnailVerification": "pending",
         "expandedGalleryLinkVerification": "pending"
-      }
+      },
+      "publicationNotes": [
+        "Verify document attachment and ORG-1 link in expanded Gallery."
+      ]
     },
     {
       "id": "CTI-008",
@@ -558,7 +573,13 @@
         "rightColumn": {
           "content": "article-transcription"
         }
-      }
+      },
+      "editorialStatus": "complete-pending-upload",
+      "editorialStatusLabel": "Archive Complete — Pending Upload",
+      "editorialCompletedDate": "2026-10-27",
+      "publicationNotes": [
+        "Verify CTI-038 related Gallery link renders beneath left column."
+      ]
     },
     {
       "id": "CTI-010",
@@ -1057,6 +1078,12 @@
           "fileName": "CTI-015-THM-1.png",
           "driveFileId": "1NDy6WjHTtFQeyDezzSwFR-zKToOFQngr"
         }
+      ],
+      "editorialStatus": "complete-pending-upload",
+      "editorialStatusLabel": "Archive Complete — Pending Upload",
+      "editorialCompletedDate": "2026-10-27",
+      "publicationNotes": [
+        "Verify standardized assets and public detail rendering."
       ]
     },
     {
@@ -1347,6 +1374,12 @@
           "fileName": "CTI-017-THM-1.png",
           "driveFileId": "17ySPMkbQuIRJ6qKKW758-IMTUgR3DrJT"
         }
+      ],
+      "editorialStatus": "complete-pending-upload",
+      "editorialStatusLabel": "Archive Complete — Pending Upload",
+      "editorialCompletedDate": "2026-10-27",
+      "publicationNotes": [
+        "Verify standardized assets and public detail rendering."
       ]
     },
     {
@@ -2946,7 +2979,13 @@
           "driveUrl": "https://drive.google.com/file/d/10jXSEBxyeMLIRU4Y9so7Pw1_0g83xoG2/view"
         }
       ],
-      "imageProvenanceNote": "ORG is the authentic user-provided newspaper clipping. SEP and COL are AI-generated interpretations, not documentary evidence; THM derives from approved colorized version."
+      "imageProvenanceNote": "ORG is the authentic user-provided newspaper clipping. SEP and COL are AI-generated interpretations, not documentary evidence; THM derives from approved colorized version.",
+      "editorialStatus": "complete-pending-upload",
+      "editorialStatusLabel": "Gallery Complete — Pending Upload",
+      "editorialCompletedDate": "2026-10-27",
+      "publicationNotes": [
+        "Connect existing thumbnail and index image paths in public renderer."
+      ]
     }
   ],
   "assetPolicy": {
