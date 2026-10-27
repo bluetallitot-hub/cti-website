@@ -381,15 +381,17 @@
       "hebrewName": "",
       "hebrewDay": 8,
       "hebrewMonth": "Elul",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
+      "hebrewYearOfDeath": 5684,
+      "dateOfDeath": "1924-09-07",
       "rememberedBy": "",
-      "biography": "",
-      "photo": "",
+      "biography": "Jacob Behar (died 8 Elul 5684, aged 45) is commemorated by a Hebrew-inscribed gravestone in the Spanish Section of Sons of Jacob/Temple Shalom cemetery in Danvers, Massachusetts. Congregation Tifereth Israel's historical archive preserves the gravestone photograph and Ladino and English epitaph translations (CTI-037).",
+      "photo": "https://drive.google.com/file/d/10eXphIVoA2TJn9Y4Zfj9FoWf7Oe-iuqg/view",
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. "
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied.  Cross-referenced to approved CTI archive record CTI-037; Hebrew date and year supported by archival epitaph translations; civil date requires verification.",
+      "archiveRecordId": "CTI-037",
+      "archiveRecordUrl": "https://bluetallitot-hub.github.io/cti-website/archive.html"
     },
     {
       "id": "newsletter-leo-pernitchi-elul",
