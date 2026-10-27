@@ -218,7 +218,9 @@
           "type": "DOCUMENT",
           "version": 1,
           "path": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
-          "note": "Original invitation supporting Gallery photograph"
+          "note": "Original invitation supporting Gallery photograph; standardized copy pending",
+          "id": "CTI-007-DOC-1",
+          "fileName": "CTI-007-DOC-1.jpg"
         }
       ],
       "thumbnailSpecification": {
@@ -271,11 +273,14 @@
       },
       "supportingDocuments": [
         {
+          "id": "CTI-007-DOC-1",
+          "fileName": "CTI-007-DOC-1.jpg",
           "title": "Kitchen Dedication Invitation",
           "type": "invitation",
-          "path": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
+          "repositoryPath": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
           "placement": "below-main-photograph",
-          "linkLabel": "View original invitation"
+          "linkLabel": "View original invitation",
+          "status": "source-preserved; standardized-file-copy-pending"
         }
       ]
     },
