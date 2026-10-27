@@ -1855,7 +1855,48 @@
         "sourceImage": "assets/archive/originals/cti-1979-gibely-address-original-page.jpg",
         "verification": "source-transcription-not-yet-proofread",
         "htmlDeletionSafe": true
-      }
+      },
+      "relatedRecords": [
+        "CTI-032",
+        "CTI-014",
+        "CTI-015",
+        "CTI-017",
+        "CTI-011",
+        "CTI-023"
+      ],
+      "recordConnections": [
+        {
+          "id": "CTI-032",
+          "type": "probable-same-event",
+          "evidence": "Photo handwritten caption dated 3/1/79 names Joseph Gibely and Nathan Cass; address dated March 1, 1979",
+          "verification": "same-event-not-yet-confirmed-from-image"
+        },
+        {
+          "id": "CTI-014",
+          "type": "historical-reference",
+          "evidence": "Speech explicitly references CTI's golden anniversary seven years earlier"
+        },
+        {
+          "id": "CTI-015",
+          "type": "shared-history",
+          "evidence": "Both document Sephardic origins and migration to Peabody"
+        },
+        {
+          "id": "CTI-017",
+          "type": "shared-history",
+          "evidence": "Later congregational history"
+        },
+        {
+          "id": "CTI-011",
+          "type": "shared-people-and-history",
+          "evidence": "Early CTI religious leadership"
+        },
+        {
+          "id": "CTI-023",
+          "type": "shared-history",
+          "evidence": "Sephardic migration from Constantinople to Peabody"
+        }
+      ]
     },
     {
       "id": "CTI-017",
@@ -3586,7 +3627,17 @@
         ],
         "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
         "reconciled": "2026-10-22"
-      }
+      },
+      "relatedRecords": [
+        "CTI-016"
+      ],
+      "recordConnections": [
+        {
+          "id": "CTI-016",
+          "type": "probable-same-event",
+          "verification": "not-yet-confirmed"
+        }
+      ]
     },
     {
       "id": "CTI-033",
