@@ -4135,7 +4135,7 @@
             "driveFileId": "10L0Pp7eMy_GAG1psfSE8X7uC1cQAqYTZ",
             "driveUrl": "https://drive.google.com/file/d/10L0Pp7eMy_GAG1psfSE8X7uC1cQAqYTZ/view"
           },
-          "note": "Preserves entire original program scan with neutral margins; no text added"
+          "note": "800×600 center-cropped from user-supplied enhanced color image; replacement uploaded in place to existing Google Drive file ID"
         },
         {
           "type": "ENH",
@@ -4154,7 +4154,7 @@
       },
       "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
       "originalStatus": "user-provided-program-scan-preserved-in-google-drive",
-      "thumbnailStatus": "800x600-created-and-saved-to-google-drive-staging; github-publication-pending",
+      "thumbnailStatus": "800x600-enhanced-image-thumbnail-replaced-in-place-in-google-drive; github-publication-pending",
       "relatedRecords": [
         "CTI-022"
       ],
@@ -4172,7 +4172,7 @@
         ],
         "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
       },
-      "recordReviewStatus": "original-enhanced-thumbnail-staged; github-publication-pending",
+      "recordReviewStatus": "original-enhanced-and-final-thumbnail-staged; github-publication-pending",
       "files": [
         {
           "type": "enhanced",
@@ -4223,7 +4223,7 @@
             "driveFileId": "1bffKswn0EBaSWkjKbP5nGWL-PGKqzD5E",
             "driveUrl": "https://drive.google.com/file/d/1bffKswn0EBaSWkjKbP5nGWL-PGKqzD5E/view"
           },
-          "note": "Preserves entire original program scan with neutral margins; no text added"
+          "note": "800×600 center-cropped from user-supplied enhanced color image; replacement uploaded in place to existing Google Drive file ID"
         },
         {
           "type": "ENH",
@@ -4242,7 +4242,7 @@
       },
       "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
       "originalStatus": "user-provided-program-scan-preserved-in-google-drive",
-      "thumbnailStatus": "800x600-created-and-saved-to-google-drive-staging; github-publication-pending",
+      "thumbnailStatus": "800x600-enhanced-image-thumbnail-replaced-in-place-in-google-drive; github-publication-pending",
       "relatedRecords": [
         "CTI-022",
         "CTI-038"
@@ -4261,7 +4261,7 @@
         ],
         "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
       },
-      "recordReviewStatus": "original-enhanced-thumbnail-staged; github-publication-pending",
+      "recordReviewStatus": "original-enhanced-and-final-thumbnail-staged; github-publication-pending",
       "files": [
         {
           "type": "enhanced",
