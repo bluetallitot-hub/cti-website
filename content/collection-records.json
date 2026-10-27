@@ -181,7 +181,7 @@
         "cti-2006-kitchen-dedication-photo.png"
       ],
       "files": [],
-      "originalImage": "",
+      "originalImage": "https://drive.google.com/file/d/1e-zYDEnEwcQWEDa0CZWoEZscn-0_V6cw/view",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
@@ -276,10 +276,13 @@
         "description": "Photograph associated with the CTI kitchen dedication; a historical invitation dates the celebration to June 11, 2006.",
         "enhancedImage": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
         "thumbnail": "assets/collections/CTI-007-THM-1.png",
-        "originalImage": null,
+        "originalImage": "https://drive.google.com/file/d/1e-zYDEnEwcQWEDa0CZWoEZscn-0_V6cw/view",
         "provenanceNote": "Original user-provided scan and AI reconstructed enhanced version preserved separately. Do not present enhanced image as documentary original.",
         "originalDriveFileId": "1e-zYDEnEwcQWEDa0CZWoEZscn-0_V6cw",
-        "enhancedDriveFileId": "1VwAoc57zsYjUH3njxw5GrbrxKpyn0acF"
+        "enhancedDriveFileId": "1VwAoc57zsYjUH3njxw5GrbrxKpyn0acF",
+        "originalLinkLabel": "View Original Photograph",
+        "originalImageVersion": "CTI-007-ORG-1",
+        "originalLinkTarget": "https://drive.google.com/file/d/1e-zYDEnEwcQWEDa0CZWoEZscn-0_V6cw/view"
       },
       "supportingDocuments": [
         {
