@@ -506,7 +506,9 @@
       "publicationNotes": [
         "Verify CTI-038 related Gallery link renders beneath left column."
       ],
-      "timelineTitle": "Tifereth Israel Honors the Pikelnys"
+      "timelineTitle": "Tifereth Israel Honors the Pikelnys",
+      "editorialApproval": "approved",
+      "publicationStatus": "pending-final-asset-upload"
     },
     {
       "id": "CTI-010",
@@ -1767,7 +1769,10 @@
         "status": "staged-in-google-drive",
         "sepiaDriveFileId": "154g2ob22shGokP_LjXDHPHuHBwkQlzHi",
         "thumbnailDriveFileId": "1XGcrLebea2M9tOBaE2QesLpqFTBHjN5v"
-      }
+      },
+      "editorialStatus": "complete-pending-upload",
+      "editorialApproval": "approved",
+      "publicationStatus": "pending-final-asset-upload"
     },
     {
       "id": "CTI-022",
