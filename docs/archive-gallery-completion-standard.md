@@ -1,27 +1,37 @@
-# CTI Archive & Gallery — Final Completion Standard
+# CTI Archive & Gallery — Collection Completion and Publication Workflow
 
-Scope: all 34 current master collection records, and all future records.
+Scope: all 34 current collection records.
 
-## Goal
-Each record is prepared, validated, published, and checked once, so no routine follow-up for missing assets, captions, links, titles, formatting, or provenance is required. Later discoveries may still justify a factual correction.
+## Sequence (mandatory)
+1. **Finish all 34 records first.** Verify historical facts, dates, source provenance, authentic headlines and subtitles where present, editorial timeline titles, transcriptions, captions, document attachments, links between records, and image selections. Assign final standardized filenames. Resolve all record-level data issues before moving on.
+2. **Audit and stage all assets.** Ensure the Google Drive staging area contains the exact originals, enhancements, thumbnails, and supporting documents required by the completed records. Preserve originals; label AI-derived versions. Produce a definitive upload manifest.
+3. **User performs one coordinated upload** of the prepared files to the designated website repository folder(s). Do not require individual GitHub image uploads while reviewing records.
+4. **Only after data and asset upload, build the renderers** for Archive, Gallery, expanded photograph/document view, and timeline. Renderers use the completed database rather than hand-authored record-specific markup.
+5. **Verify and publish** all presentation views, links, original images, attached documents, and desktop/mobile layouts.
 
-## Statuses
-- `in-progress`: any editorial, source, image, metadata, file, or relationship task remains.
-- `ready-for-publication`: editorial and technical preparation finished, files standardized and present, references verified; only deployment and live testing remain.
-- `complete`: deployed, visually reviewed on desktop and mobile, original/document links and cross-links tested, and approved; no known outstanding work.
+## Record-level completion
+`data-complete` means the record itself needs no further routine historical or metadata editing. It does **not** require the public renderer to exist or the assets to have been uploaded to the website.
 
-Legacy `complete-pending-upload` is a historical review marker, **not** proof of readiness or final completion.
+`staging-complete` means all required named files are present in the staging folder and the record's asset references match the upload manifest.
 
-## Required per-record checklist
-1. Identity, date, title, type (Archive or Gallery), and historical facts verified; uncertainties explicitly documented.
-2. Exact original headline and any authentic subtitle retained for Archive articles; optional concise `timelineTitle` for timeline use.
-3. Transcription completed and checked against source where applicable; photo and document captions finalized.
-4. Authentic original scans preserved and identified; enhanced/AI-derived images clearly differentiated from documentary originals.
-5. All required images and documents standardized (`CTI-###-ORG-N`, `ENH-N`, `THM-N`, `DOC-N`, etc.), stored, and linked to the correct record.
-6. Thumbnails, index images, expanded images, and original links all point to the intended assets.
-7. Supporting documents have title, caption when applicable, source/provenance, and explicit expanded-view visibility.
-8. Archive–Gallery cross-links and original-file links verified, with no self-links or broken targets.
-9. Public presentation verified: Archive two-column layout, Gallery detail, captions, links, timeline title, desktop/mobile.
-10. No unresolved blockers or placeholder metadata; unavailable historical details noted without inventing facts.
+`published-complete` means files are uploaded, renderers work, and the entry is visually and functionally verified.
 
-Do not label a record `ready-for-publication` or `complete` while any required item is pending. Optional future historical enrichment is distinct from known incomplete work.
+Prior `complete-pending-upload` status denotes editorial approval, but requires the final record/asset audit before being treated as `data-complete`.
+
+## Required data checklist
+- Identity, dates, historical facts, uncertainties and source/provenance checked
+- Archive headline preserved; authentic subtitle when present; timelineTitle if needed
+- Transcriptions and captions finalized; no invented source text
+- Original scans preserved, derivative images identified, approved thumbnails chosen
+- Standardized filenames `CTI-###-ORG-N`, `ENH-N`, `THM-N`, `DOC-N` etc. assigned
+- Supporting document titles, captions, visibility and source relationships recorded
+- Gallery/Archive cross-links consistent; no accidental self-links
+- No outstanding record-level metadata or historical work
+
+## Renderer rules
+- Build the public presentation only after the 34 records and the asset upload are complete.
+- Gallery index shows photographic thumbnails and captions; expanded Gallery shows approved image, original photograph link (ORG-1 where specified), and supporting document links with appropriate visibility.
+- Archive details preserve headline and genuine subheadline, transcription and provenance; timeline uses `timelineTitle || title`.
+- Avoid per-record special cases where general database fields can express the requirement.
+
+Later newly discovered historical evidence may still warrant corrections, but ordinary cleanup should not be deferred.
