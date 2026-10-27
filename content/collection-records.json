@@ -3892,7 +3892,17 @@
           "role": "enhanced-main-image",
           "reviewStatus": "pending-inscription-verification"
         }
-      ]
+      ],
+      "stagedThumbnail": {
+        "fileName": "CTI-037-THUMB-1.png",
+        "driveFileId": "16UBMbxkDVNUrM48RR2rNZT-zRVecRUT7",
+        "driveUrl": "https://drive.google.com/file/d/16UBMbxkDVNUrM48RR2rNZT-zRVecRUT7/view",
+        "sourceFileName": "CTI-037-ENH-1.png",
+        "width": 241,
+        "height": 360,
+        "role": "archive-thumbnail",
+        "reviewStatus": "pending-inscription-verification"
+      }
     },
     {
       "id": "CTI-038",
