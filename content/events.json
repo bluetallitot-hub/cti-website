@@ -1,29 +1,3 @@
 {
-  "events": [
-    {
-      "id": "event-b3c77f30-35f4-4fe1-bd7d-e950a2bd22b1",
-      "title": "CTI Admin Test",
-      "date": "0026-10-22",
-      "time": "5:00 PM",
-      "location": "CTI Social Hall",
-      "description": "This is a test"
-    },
-    {
-      "id": "cti-test-coffee-2026",
-      "title": "TEST ONLY — Coffee Hour",
-      "date": "2026-11-22",
-      "time": "10:00 AM",
-      "location": "CTI Social Hall",
-      "description": "Temporary test event for checking editing and deletion. Not a real CTI event."
-    },
-    {
-      "id": "cti-expiry-test-20261022",
-      "title": "TEST ONLY — Automatic Expiration",
-      "date": "2026-10-22",
-      "time": "11:30 AM",
-      "endTime": "11:45 AM",
-      "location": "CTI Social Hall",
-      "description": "Temporary test of automatic removal from the public calendar at 11:45 AM Eastern."
-    }
-  ]
+  "events": []
 }
