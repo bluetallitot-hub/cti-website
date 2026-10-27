@@ -1370,7 +1370,41 @@
         "sourceImage": "assets/archive/originals/cti-1972-salem-news-golden-anniversary-original.jpg",
         "verification": "source-transcription-not-yet-proofread",
         "htmlDeletionSafe": true
-      }
+      },
+      "relatedRecords": [
+        "CTI-028",
+        "CTI-022",
+        "CTI-024",
+        "CTI-027"
+      ],
+      "collectionComponents": [
+        {
+          "role": "primary-source",
+          "kind": "newspaper-clipping",
+          "path": "assets/archive/originals/cti-1972-salem-news-golden-anniversary-original.jpg",
+          "verified": "referenced-in-repository-database; file-content-not-independently-inspected"
+        },
+        {
+          "role": "supporting-artifact",
+          "kind": "anniversary-ticket",
+          "path": "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
+          "verified": "referenced-in-repository-database; file-content-not-independently-inspected"
+        },
+        {
+          "role": "thumbnail",
+          "kind": "800x600-landscape",
+          "path": "assets/collections/CTI-014-THM-1.png",
+          "derivedFrom": "anniversary-ticket",
+          "verified": "referenced-in-repository-database; dimensions-not-independently-inspected"
+        },
+        {
+          "role": "transcription",
+          "field": "transcript",
+          "verified": "approved-for-publication-in-existing-record; not independently proofread against clipping"
+        }
+      ],
+      "consolidationStatus": "1972-article-and-ticket-logically-grouped; asset-verification-pending",
+      "consolidationNote": "1972 article and anniversary ticket belong to one archival entry. Other anniversary articles remain separate and cross-referenced. No leadership photograph merged without event-specific evidence."
     },
     {
       "id": "CTI-015",
@@ -2592,7 +2626,10 @@
         "sourceImage": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
         "verification": "source-transcription-not-yet-proofread",
         "htmlDeletionSafe": true
-      }
+      },
+      "relatedRecords": [
+        "CTI-014"
+      ]
     },
     {
       "id": "CTI-023",
@@ -2917,7 +2954,10 @@
       "driveReconciledDate": "2026-10-27",
       "photoCollectionApproval": "approved-based-on-completed-work",
       "photoCollectionApprovalDate": "2026-10-27",
-      "photoCollectionStatus": "complete-approved"
+      "photoCollectionStatus": "complete-approved",
+      "relatedRecords": [
+        "CTI-014"
+      ]
     },
     {
       "id": "CTI-025",
@@ -3230,7 +3270,10 @@
         "sourceImage": "assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg",
         "verification": "source-transcription-not-yet-proofread",
         "htmlDeletionSafe": true
-      }
+      },
+      "relatedRecords": [
+        "CTI-014"
+      ]
     },
     {
       "id": "CTI-028",
@@ -3278,7 +3321,10 @@
         ],
         "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
         "reconciled": "2026-10-22"
-      }
+      },
+      "relatedRecords": [
+        "CTI-014"
+      ]
     },
     {
       "id": "CTI-029",
