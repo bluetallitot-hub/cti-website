@@ -4116,6 +4116,17 @@
       "thumbnailImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
       "imageVersions": [
         {
+          "type": "ORG",
+          "version": 1,
+          "driveFile": {
+            "fileName": "CTI-002-ORG-1.png",
+            "driveFileId": "1tZq-Kya-lMDoWgDaMhlK89DKoKE9hOSg",
+            "driveUrl": "https://drive.google.com/file/d/1tZq-Kya-lMDoWgDaMhlK89DKoKE9hOSg/view"
+          },
+          "dimensions": "846x658",
+          "note": "User-provided historical program scan; original photograph negative/print not verified"
+        },
+        {
           "type": "ENH",
           "version": 1,
           "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
@@ -4127,22 +4138,24 @@
         "verbatimOriginalCaption": true
       },
       "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
-      "originalStatus": "original-photograph-not-independently-verified",
+      "originalStatus": "user-provided-program-scan-preserved-in-google-drive",
       "thumbnailStatus": "existing-enhanced-image-used-as-display-fallback; 800x600-thumbnail-not-created",
       "relatedRecords": [
         "CTI-022"
       ],
       "assetInventory": {
-        "sourceFiles": [],
+        "sourceFiles": [
+          "CTI-002-ORG-1.png"
+        ],
         "presentationFiles": [
           "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg"
         ],
         "fileReferences": [
           "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg"
         ],
-        "sourceVerification": "Existing enhanced image verified in GitHub; original photograph not independently identified"
+        "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
       },
-      "recordReviewStatus": "metadata-complete; archival-original-and-dedicated-thumbnail-pending",
+      "recordReviewStatus": "historical-program-scan-preserved; dedicated-thumbnail-pending",
       "files": [
         {
           "type": "enhanced",
@@ -4174,6 +4187,17 @@
       "thumbnailImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
       "imageVersions": [
         {
+          "type": "ORG",
+          "version": 1,
+          "driveFile": {
+            "fileName": "CTI-003-ORG-1.png",
+            "driveFileId": "186MAFk_RJSp89ja9E7rXKQR_dFbyZW0B",
+            "driveUrl": "https://drive.google.com/file/d/186MAFk_RJSp89ja9E7rXKQR_dFbyZW0B/view"
+          },
+          "dimensions": "844x514",
+          "note": "User-provided historical program scan; original photograph negative/print not verified"
+        },
+        {
           "type": "ENH",
           "version": 1,
           "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
@@ -4185,23 +4209,25 @@
         "verbatimOriginalCaption": true
       },
       "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
-      "originalStatus": "original-photograph-not-independently-verified",
+      "originalStatus": "user-provided-program-scan-preserved-in-google-drive",
       "thumbnailStatus": "existing-enhanced-image-used-as-display-fallback; 800x600-thumbnail-not-created",
       "relatedRecords": [
         "CTI-022",
         "CTI-038"
       ],
       "assetInventory": {
-        "sourceFiles": [],
+        "sourceFiles": [
+          "CTI-003-ORG-1.png"
+        ],
         "presentationFiles": [
           "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg"
         ],
         "fileReferences": [
           "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg"
         ],
-        "sourceVerification": "Existing enhanced image verified in GitHub; original photograph not independently identified"
+        "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
       },
-      "recordReviewStatus": "metadata-complete; archival-original-and-dedicated-thumbnail-pending",
+      "recordReviewStatus": "historical-program-scan-preserved; dedicated-thumbnail-pending",
       "files": [
         {
           "type": "enhanced",
