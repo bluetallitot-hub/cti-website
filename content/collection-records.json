@@ -218,9 +218,19 @@
           "type": "DOCUMENT",
           "version": 1,
           "path": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
-          "note": "Original invitation supporting Gallery photograph; standardized copy pending",
+          "note": "AI-rendered straightened invitation rendition; original source is ORG-2",
           "id": "CTI-007-DOC-1",
-          "fileName": "CTI-007-DOC-1.jpg"
+          "fileName": "CTI-007-DOC-1.jpg",
+          "driveFileId": "1toofaYJXib3LqD0DzM4mJ7KpS-_khVbJ",
+          "driveUrl": "https://drive.google.com/file/d/1toofaYJXib3LqD0DzM4mJ7KpS-_khVbJ/view"
+        },
+        {
+          "type": "ORG",
+          "version": 2,
+          "fileName": "CTI-007-ORG-2.jpg",
+          "driveFileId": "1kBhc3SC4qgOMfkLmBCGOvKgkkjdbPnbe",
+          "driveUrl": "https://drive.google.com/file/d/1kBhc3SC4qgOMfkLmBCGOvKgkkjdbPnbe/view",
+          "note": "Uncropped unstraightened photograph of invitation; authoritative source for invitation content"
         }
       ],
       "thumbnailSpecification": {
@@ -281,7 +291,12 @@
           "placement": "expanded-gallery-below-caption",
           "linkLabel": "View Kitchen Dedication Invitation",
           "status": "source-preserved; standardized-file-copy-pending",
-          "visibility": "expanded"
+          "visibility": "expanded",
+          "driveFileId": "1toofaYJXib3LqD0DzM4mJ7KpS-_khVbJ",
+          "driveUrl": "https://drive.google.com/file/d/1toofaYJXib3LqD0DzM4mJ7KpS-_khVbJ/view",
+          "caption": "Invitation to the June 11, 2006 kitchen dedication in loving memory of Sheryl Becker.",
+          "productionNote": "AI-rendered straightened rendition; compare with ORG-2 for authoritative text and appearance.",
+          "originalSourceId": "CTI-007-ORG-2"
         }
       ]
     },
