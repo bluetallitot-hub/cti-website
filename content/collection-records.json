@@ -3241,7 +3241,7 @@
       "source": "Jewish Journal",
       "citation": "November 1, 2018; letter by Elliot Hershoff",
       "attribution": "Elliot Hershoff",
-      "transcript": "November 1, 2018\n\nOn October 18, 2018, the Jewish Journal published an article by Michael Wittner titled “Jewish Peabody: Pride and Perseverance.” I was dismayed to read that there were only three synagogues in Peabody, when there are four. Our synagogue, Congregation Tifereth Israel, is a small but active congregation on Pierpont Street in Peabody.\n\nOur synagogue is 96 years old and has been at the same location for over 60 years. We are a small but active community. We hold services every Friday night and Saturday morning, as well as all the holidays. We have an active Sisterhood and Men’s Club, and have several social events throughout the year.\n\nWe are currently without a rabbi, and are searching for one. Our congregation is made up of Jews from all backgrounds, including Sephardic and Ashkenazi. We are a welcoming congregation, and invite anyone who is interested to attend our services and events.\n\nI hope this letter sheds some light on who we are.\n\nElliot Hershoff\nPresident\nCongregation Tifereth Israel\nPeabody\n\nView the original at Jewish Journal →",
+      "transcript": "NOVEMBER 1, 2018 – CTI is a Sephardic Synagogue located at 8 Pierpont St., Peabody, founded in 1922. Most people on the North Shore don’t even know we exist. We seem to be ignored regarding issues, celebrations and other pertinent info. All synagogues on the North Shore should be treated equal. We are an active synagogue with under 100 congregants.\n\nI hope this letter sheds some light on who we are.\n\nElliot Hershoff, President\nCongregation Tifereth Israel",
       "indexImage": "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
       "archiveImage": "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
       "pdf": null,
@@ -3258,17 +3258,31 @@
       "preservationStatus": "awaiting-original-verification",
       "imageVersions": [
         {
-          "type": "THM",
+          "type": "ORG",
           "version": 1,
-          "path": "assets/collections/CTI-025-THM-1.png",
-          "derivedFrom": "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
-          "method": "full-image contain with softened background"
+          "filename": "CTI-025-ORG-1.png",
+          "driveFileId": "1VPIPzbAOB1fluic5iqEqU3eyKFw71qI-",
+          "driveUrl": "https://drive.google.com/file/d/1VPIPzbAOB1fluic5iqEqU3eyKFw71qI-/view",
+          "description": "User-supplied original Jewish Journal article screenshot",
+          "publicationStatus": "staged-in-drive; github-standardized-copy-pending"
         },
         {
-          "type": "ARTICLE",
+          "type": "ENH",
           "version": 1,
-          "path": "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg",
-          "note": "Original published-letter image, separate from portrait photograph"
+          "filename": "CTI-025-ENH-1.png",
+          "driveFileId": "1VF3-KaKSOGsP4xn_MoyhQB-ie2OhiHwD",
+          "driveUrl": "https://drive.google.com/file/d/1VF3-KaKSOGsP4xn_MoyhQB-ie2OhiHwD/view",
+          "description": "User-approved enhanced portrait of Elliot Hershoff",
+          "publicationStatus": "staged-in-drive; github-standardized-copy-pending"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "filename": "CTI-025-THM-1.png",
+          "driveFileId": "1IQrMwxIRwgM13fOTIt5EIFZijntqf-MP",
+          "driveUrl": "https://drive.google.com/file/d/1IQrMwxIRwgM13fOTIt5EIFZijntqf-MP/view",
+          "description": "Approved landscape portrait thumbnail, AI-assisted background extension",
+          "publicationStatus": "staged-in-drive; github-standardized-copy-pending"
         }
       ],
       "thumbnailSpecification": {
@@ -3276,11 +3290,11 @@
         "height": 600,
         "aspectRatio": "4:3",
         "noAddedText": true,
-        "background": "appropriate neutral or complementary",
+        "background": "extended portrait background",
         "retouched": true
       },
       "existingImageCandidate": "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "approved-landscape-thumbnail-staged-in-drive; github-publication-pending",
       "originalStatus": "unverified-do-not-count-as-confirmed-absent",
       "assetInventory": {
         "sourceFiles": [
@@ -3295,15 +3309,32 @@
           "assets/collections/CTI-025-THM-1.png",
           "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg"
         ],
-        "sourceVerification": "no confirmed original-source file linked",
-        "captionVerification": "printed caption not transcribed"
+        "sourceVerification": "Original article screenshot supplied and saved to Drive; old GitHub paths retained until migration",
+        "captionVerification": "Original screenshot contains article headline, publication date, and byline/signature; no separate photograph caption",
+        "driveStagingFiles": [
+          {
+            "type": "ORG",
+            "filename": "CTI-025-ORG-1.png",
+            "driveFileId": "1VPIPzbAOB1fluic5iqEqU3eyKFw71qI-"
+          },
+          {
+            "type": "ENH",
+            "filename": "CTI-025-ENH-1.png",
+            "driveFileId": "1VF3-KaKSOGsP4xn_MoyhQB-ie2OhiHwD"
+          },
+          {
+            "type": "THM",
+            "filename": "CTI-025-THM-1.png",
+            "driveFileId": "1IQrMwxIRwgM13fOTIt5EIFZijntqf-MP"
+          }
+        ]
       },
       "captionProvenance": {
         "status": "no-existing-caption",
         "note": "No existing display caption; source caption not yet transcribed.",
         "verbatimOriginalCaption": false
       },
-      "articleHtml": "<p class=\"archive-article-date\"><time>November 1, 2018</time></p><p>On October 18, 2018, the Jewish Journal published an article by Michael Wittner titled “Jewish Peabody: Pride and Perseverance.” I was dismayed to read that there were only three synagogues in Peabody, when there are four. Our synagogue, Congregation Tifereth Israel, is a small but active congregation on Pierpont Street in Peabody.</p><p>Our synagogue is 96 years old and has been at the same location for over 60 years. We are a small but active community. We hold services every Friday night and Saturday morning, as well as all the holidays. We have an active Sisterhood and Men’s Club, and have several social events throughout the year.</p><p>We are currently without a rabbi, and are searching for one. Our congregation is made up of Jews from all backgrounds, including Sephardic and Ashkenazi. We are a welcoming congregation, and invite anyone who is interested to attend our services and events.</p><p>I hope this letter sheds some light on who we are.</p><p><strong>Elliot Hershoff</strong><br>President<br>Congregation Tifereth Israel<br>Peabody</p><p><a href=\"https://jewishjournal.org/2018/11/01/letter-to-the-editor-peabody-congregation-feels-ignored/\">View the original at Jewish Journal →</a></p>",
+      "articleHtml": "<p>NOVEMBER 1, 2018 – CTI is a Sephardic Synagogue located at 8 Pierpont St., Peabody, founded in 1922. Most people on the North Shore don’t even know we exist. We seem to be ignored regarding issues, celebrations and other pertinent info. All synagogues on the North Shore should be treated equal. We are an active synagogue with under 100 congregants.</p><p>I hope this letter sheds some light on who we are.</p><p>Elliot Hershoff, President<br>Congregation Tifereth Israel</p>",
       "articleMigrationSource": "archives/archive-2018-hershoff-letter.html",
       "archiveItemImage": "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg",
       "galleryPhoto": {
@@ -3321,15 +3352,19 @@
         "article-secondary"
       ],
       "recordPresentationNote": "Archive index uses portrait thumbnail linking to gallery photograph; article title links to archived letter. Original newspaper clipping remains secondary archive source; no verified original portrait is available.",
-      "transcriptHtml": "<p class=\"archive-article-date\"><time>November 1, 2018</time></p><p>On October 18, 2018, the Jewish Journal published an article by Michael Wittner titled “Jewish Peabody: Pride and Perseverance.” I was dismayed to read that there were only three synagogues in Peabody, when there are four. Our synagogue, Congregation Tifereth Israel, is a small but active congregation on Pierpont Street in Peabody.</p><p>Our synagogue is 96 years old and has been at the same location for over 60 years. We are a small but active community. We hold services every Friday night and Saturday morning, as well as all the holidays. We have an active Sisterhood and Men’s Club, and have several social events throughout the year.</p><p>We are currently without a rabbi, and are searching for one. Our congregation is made up of Jews from all backgrounds, including Sephardic and Ashkenazi. We are a welcoming congregation, and invite anyone who is interested to attend our services and events.</p><p>I hope this letter sheds some light on who we are.</p><p><strong>Elliot Hershoff</strong><br>President<br>Congregation Tifereth Israel<br>Peabody</p><p><a href=\"https://jewishjournal.org/2018/11/01/letter-to-the-editor-peabody-congregation-feels-ignored/\">View the original at Jewish Journal →</a></p>",
-      "transcriptDerivation": "Plain text derived from preserved articleHtml; not independently verified against source scan",
+      "transcriptHtml": "<p>NOVEMBER 1, 2018 – CTI is a Sephardic Synagogue located at 8 Pierpont St., Peabody, founded in 1922. Most people on the North Shore don’t even know we exist. We seem to be ignored regarding issues, celebrations and other pertinent info. All synagogues on the North Shore should be treated equal. We are an active synagogue with under 100 congregants.</p><p>I hope this letter sheds some light on who we are.</p><p>Elliot Hershoff, President<br>Congregation Tifereth Israel</p>",
+      "transcriptDerivation": "Transcribed directly from user-supplied original Jewish Journal webpage image dated November 1, 2018; replaces inaccurate previous transcription.",
       "transcriptPreservation": {
-        "richTextField": "transcriptHtml",
         "plainTextField": "transcript",
-        "sourcePage": "archives/archive-2018-hershoff-letter.html",
-        "sourceImage": "assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg",
-        "verification": "source-transcription-not-yet-proofread",
-        "htmlDeletionSafe": true
+        "richTextField": "transcriptHtml",
+        "sourceImageDriveId": "1VPIPzbAOB1fluic5iqEqU3eyKFw71qI-",
+        "verification": "verified against supplied original image",
+        "verificationDate": "2026-10-27"
+      },
+      "metadataReview": {
+        "status": "original-source-transcription-verified; images-reconciled-in-drive",
+        "date": "2026-10-27",
+        "notes": "Replaced materially incorrect transcript with text from supplied original; recorded original, enhanced portrait and landscape thumbnail Drive IDs. Existing GitHub asset paths left unchanged pending heritage migration."
       }
     },
     {
