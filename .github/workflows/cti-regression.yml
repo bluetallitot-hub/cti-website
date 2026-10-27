@@ -18,6 +18,10 @@ jobs:
       - name: Wait for Pages to settle
         if: github.event_name == 'workflow_run'
         run: sleep 30
+      - name: Check admin authentication wiring
+        id: admin
+        continue-on-error: true
+        run: set -o pipefail; python3 tests/test_admin_source.py | tee cti-admin-audit.txt
       - name: Audit existing public content data
         id: content
         continue-on-error: true
@@ -35,8 +39,9 @@ jobs:
             cti-test-results.csv
             cti-test-results.json
             cti-content-audit.txt
+            cti-admin-audit.txt
           if-no-files-found: warn
           retention-days: 30
       - name: Fail job if any public checks failed
-        if: steps.crawl.outcome == 'failure' || steps.content.outcome == 'failure'
+        if: steps.crawl.outcome == 'failure' || steps.content.outcome == 'failure' || steps.admin.outcome == 'failure'
         run: exit 1
