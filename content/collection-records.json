@@ -2745,7 +2745,7 @@
       "originalImage": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
-      "restoredImage": null,
+      "restoredImage": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
       "thumbnailImage": "assets/collections/CTI-022-THM-1.png",
       "preservationStatus": "source-scan-present-provenance-documented",
       "imageVersions": [
@@ -2760,9 +2760,16 @@
           "type": "THM",
           "version": 1,
           "path": "assets/collections/CTI-022-THM-1.png",
-          "derivedFrom": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
+          "derivedFrom": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
           "method": "full-image contain with softened background",
-          "note": "Existing thumbnail must be regenerated from confirmed authentic cover before publication"
+          "note": "Regenerate from user-confirmed CTI-022-ENH-01.png"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "filename": "CTI-022-ENH-01.png",
+          "path": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
+          "note": "User identified this existing image as enhanced version; standardized copy pending"
         }
       ],
       "thumbnailSpecification": {
@@ -2774,7 +2781,7 @@
         "retouched": true
       },
       "existingImageCandidate": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
-      "thumbnailStatus": "needs-regeneration-from-confirmed-authentic-cover",
+      "thumbnailStatus": "needs-regeneration-from-confirmed-enhanced-image",
       "originalStatus": "authentic-original-confirmed; standardized-filename-copy-pending",
       "assetInventory": {
         "sourceFiles": [
@@ -2815,7 +2822,8 @@
         "CTI-002",
         "CTI-003"
       ],
-      "originalFilenameStandard": "CTI-022-ORG-1.jpg"
+      "originalFilenameStandard": "CTI-022-ORG-1.jpg",
+      "enhancedFilenameStandard": "CTI-022-ENH-01.png"
     },
     {
       "id": "CTI-023",
