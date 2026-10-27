@@ -18,6 +18,10 @@ jobs:
       - name: Wait for Pages to settle
         if: github.event_name == 'workflow_run'
         run: sleep 30
+      - name: Audit existing public content data
+        id: content
+        continue-on-error: true
+        run: set -o pipefail; python3 tests/test_content.py | tee cti-content-audit.txt
       - name: Run read-only website checks
         id: crawl
         continue-on-error: true
@@ -30,8 +34,9 @@ jobs:
           path: |
             cti-test-results.csv
             cti-test-results.json
+            cti-content-audit.txt
           if-no-files-found: warn
           retention-days: 30
       - name: Fail job if any public checks failed
-        if: steps.crawl.outcome == 'failure'
+        if: steps.crawl.outcome == 'failure' || steps.content.outcome == 'failure'
         run: exit 1
