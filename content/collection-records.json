@@ -2095,7 +2095,7 @@
         "cti-2012-shofar-gift-group-portrait.png"
       ],
       "files": [],
-      "originalImage": "CTI-024-ORG-1.jpeg",
+      "originalImage": "CTI-024-ORG-STITCHED-1.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": "CTI-024-ENH-1.png",
@@ -2135,6 +2135,17 @@
           "fileName": "CTI-024-ORG-2.jpeg",
           "driveId": "14_eG1ZFaHiP-HZtd6ONkMGRlWhJzwujO",
           "note": "Correct second source page of same 2012 article"
+        },
+        {
+          "type": "ORG-STITCHED",
+          "version": 1,
+          "fileName": "CTI-024-ORG-STITCHED-1.jpg",
+          "driveId": "1QfUFX1Gq4jSPkIOawuLenzZS7oTl1P8q",
+          "derivedFrom": [
+            "CTI-024-ORG-1.jpeg",
+            "CTI-024-ORG-2.jpeg"
+          ],
+          "method": "pixel-preserving cropping, side-by-side layout on white, mild contrast adjustment; no text regeneration"
         }
       ],
       "thumbnailSpecification": {
@@ -2147,11 +2158,12 @@
       },
       "existingImageCandidate": "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
       "thumbnailStatus": "800x600-saved-to-drive",
-      "originalStatus": "user-supplied-source-clipping-preserved",
+      "originalStatus": "stitched-source-composite-from-two-authentic-photographs",
       "assetInventory": {
         "sourceFiles": [
           "CTI-024-ORG-1.jpeg",
-          "CTI-024-ORG-2.jpeg"
+          "CTI-024-ORG-2.jpeg",
+          "CTI-024-ORG-STITCHED-1.jpg"
         ],
         "presentationFiles": [
           "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
@@ -2188,7 +2200,7 @@
         "verification": "source-transcription-not-yet-proofread",
         "htmlDeletionSafe": true
       },
-      "originalImageDriveId": "1z_WTwK2mrHKIQ1qgZj-VuKYsJwRrbxF2",
+      "originalImageDriveId": "1QfUFX1Gq4jSPkIOawuLenzZS7oTl1P8q",
       "enhancedImageDriveId": "1cIAfwXiuWtCpYt5nP3PS_qDVWgyLe8iB",
       "thumbnailDriveId": "1mOqeCP02e3OWJx5chQztTDtWYaqTeu1N",
       "supportingDocuments": [
@@ -2218,7 +2230,8 @@
         "CTI-012"
       ],
       "migrationNotes": "CTI-012 merged. CTI-024-ORG-1.jpeg is first page, CTI-024-ORG-2.jpeg is the correct page-3 continuation. Separate centennial article is not part of CTI-024.",
-      "compositeStatus": "do-not-use: prior composite combined two unrelated articles"
+      "compositeStatus": "do-not-use: prior composite combined two unrelated articles",
+      "publicationNotes": "Use stitched source JPG as principal source-image display. Keep original two camera photographs as separate archival files. Stitched source is a composite, not a single unaltered scan."
     },
     {
       "id": "CTI-025",
