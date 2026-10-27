@@ -4127,12 +4127,6 @@
           "note": "User-provided historical program scan; original photograph negative/print not verified"
         },
         {
-          "type": "ENH",
-          "version": 1,
-          "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
-          "note": "Existing enhanced and colorized photograph verified in GitHub; original not independently verified"
-        },
-        {
           "type": "THM",
           "version": 1,
           "dimensions": "800x600",
@@ -4142,6 +4136,16 @@
             "driveUrl": "https://drive.google.com/file/d/10L0Pp7eMy_GAG1psfSE8X7uC1cQAqYTZ/view"
           },
           "note": "Preserves entire original program scan with neutral margins; no text added"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "driveFile": {
+            "fileName": "CTI-002-ENH-1.png",
+            "driveFileId": "1TUE2VkYAT6VI4sfvpJWidtElAa9p-6Ho",
+            "driveUrl": "https://drive.google.com/file/d/1TUE2VkYAT6VI4sfvpJWidtElAa9p-6Ho/view"
+          },
+          "note": "User-approved enhanced color photograph, staged for GitHub publication"
         }
       ],
       "captionProvenance": {
@@ -4160,14 +4164,15 @@
         ],
         "presentationFiles": [
           "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
-          "CTI-002-THM-1.png"
+          "CTI-002-THM-1.png",
+          "CTI-002-ENH-1.png"
         ],
         "fileReferences": [
           "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg"
         ],
         "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
       },
-      "recordReviewStatus": "original-program-scan-and-thumbnail-staged; github-publication-pending",
+      "recordReviewStatus": "original-enhanced-thumbnail-staged; github-publication-pending",
       "files": [
         {
           "type": "enhanced",
@@ -4210,12 +4215,6 @@
           "note": "User-provided historical program scan; original photograph negative/print not verified"
         },
         {
-          "type": "ENH",
-          "version": 1,
-          "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
-          "note": "Existing enhanced and colorized photograph verified in GitHub; original not independently verified"
-        },
-        {
           "type": "THM",
           "version": 1,
           "dimensions": "800x600",
@@ -4225,6 +4224,16 @@
             "driveUrl": "https://drive.google.com/file/d/1bffKswn0EBaSWkjKbP5nGWL-PGKqzD5E/view"
           },
           "note": "Preserves entire original program scan with neutral margins; no text added"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "driveFile": {
+            "fileName": "CTI-003-ENH-1.png",
+            "driveFileId": "15YrhQ4MCXQut3b8CUBuHhyR9fouRHZo7",
+            "driveUrl": "https://drive.google.com/file/d/15YrhQ4MCXQut3b8CUBuHhyR9fouRHZo7/view"
+          },
+          "note": "User-approved enhanced color photograph, staged for GitHub publication"
         }
       ],
       "captionProvenance": {
@@ -4244,14 +4253,15 @@
         ],
         "presentationFiles": [
           "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
-          "CTI-003-THM-1.png"
+          "CTI-003-THM-1.png",
+          "CTI-003-ENH-1.png"
         ],
         "fileReferences": [
           "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg"
         ],
         "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
       },
-      "recordReviewStatus": "original-program-scan-and-thumbnail-staged; github-publication-pending",
+      "recordReviewStatus": "original-enhanced-thumbnail-staged; github-publication-pending",
       "files": [
         {
           "type": "enhanced",
