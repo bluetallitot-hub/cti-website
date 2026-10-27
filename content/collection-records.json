@@ -2753,7 +2753,8 @@
           "type": "ORG",
           "version": 1,
           "path": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
-          "note": "Existing source scan or program cover; printed caption not yet transcribed"
+          "note": "Authentic original cover confirmed by user; source currently retained at legacy path pending standardized asset copy",
+          "filename": "CTI-022-ORG-1.jpg"
         },
         {
           "type": "THM",
@@ -2774,7 +2775,7 @@
       },
       "existingImageCandidate": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
       "thumbnailStatus": "needs-regeneration-from-confirmed-authentic-cover",
-      "originalStatus": "authentic-program-cover-confirmed-by-user",
+      "originalStatus": "authentic-original-confirmed; standardized-filename-copy-pending",
       "assetInventory": {
         "sourceFiles": [
           "assets/images/anniversaries/1997-75th-anniversary-cover.jpg"
@@ -2813,7 +2814,8 @@
         "CTI-014",
         "CTI-002",
         "CTI-003"
-      ]
+      ],
+      "originalFilenameStandard": "CTI-022-ORG-1.jpg"
     },
     {
       "id": "CTI-023",
