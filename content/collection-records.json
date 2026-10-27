@@ -580,7 +580,23 @@
           "driveFileId": "18-sTYI-RwwK_bNOKIokfu4XAYQYckAkx",
           "driveUrl": "https://drive.google.com/file/d/18-sTYI-RwwK_bNOKIokfu4XAYQYckAkx/view"
         }
-      ]
+      ],
+      "archiveLayout": {
+        "leftColumn": {
+          "relatedGalleryLinks": [
+            {
+              "recordId": "CTI-038",
+              "label": "Lucky Thirteen — Honoring Rabbi Dov and Barbara Pikelny",
+              "placement": "bottom",
+              "target": "gallery-entry",
+              "display": "text-link"
+            }
+          ]
+        },
+        "rightColumn": {
+          "content": "article-transcription"
+        }
+      }
     },
     {
       "id": "CTI-010",
