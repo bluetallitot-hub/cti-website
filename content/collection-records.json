@@ -1313,7 +1313,15 @@
       "originalFilenames": [
         "cti-1972-golden-anniversary-ticket-retouched.png"
       ],
-      "files": [],
+      "files": [
+        {
+          "type": "THM",
+          "version": 2,
+          "filename": "CTI-014-THM-2.png",
+          "driveId": "1qA83FCgc496LNNZKCdHtbN9C6FfAYP7_",
+          "url": "https://drive.google.com/file/d/1qA83FCgc496LNNZKCdHtbN9C6FfAYP7_/view"
+        }
+      ],
       "originalImage": "assets/archive/originals/cti-1972-salem-news-golden-anniversary-original.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
@@ -1327,18 +1335,26 @@
           "path": "assets/collections/CTI-014-THM-1.png",
           "derivedFrom": "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
           "method": "full-image contain with softened background"
+        },
+        {
+          "type": "THM",
+          "version": 2,
+          "filename": "CTI-014-THM-2.png",
+          "driveId": "1qA83FCgc496LNNZKCdHtbN9C6FfAYP7_",
+          "width": 800,
+          "height": 600,
+          "method": "cropped background bands from supplied ticket thumbnail; resized ticket to fill 800x600 landscape"
         }
       ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
         "aspectRatio": "4:3",
-        "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
+        "orientation": "landscape",
+        "background": "ticket-fills-frame"
       },
       "existingImageCandidate": "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "revised-800x600-landscape-staged-in-drive",
       "originalStatus": "unverified-do-not-count-as-confirmed-absent",
       "assetInventory": {
         "sourceFiles": [],
