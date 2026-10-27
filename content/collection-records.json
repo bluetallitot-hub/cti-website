@@ -4093,7 +4093,10 @@
       "thumbnailStatus": "filename-matched-thumbnail-present-in-google-drive-dimensions-not-independently-verified",
       "photoCollectionApproval": "approved-based-on-completed-work",
       "photoCollectionApprovalDate": "2026-10-27",
-      "photoCollectionStatus": "complete-approved"
+      "photoCollectionStatus": "complete-approved",
+      "relatedRecords": [
+        "CTI-003"
+      ]
     },
     {
       "id": "CTI-002",
@@ -4185,7 +4188,8 @@
       "originalStatus": "original-photograph-not-independently-verified",
       "thumbnailStatus": "existing-enhanced-image-used-as-display-fallback; 800x600-thumbnail-not-created",
       "relatedRecords": [
-        "CTI-022"
+        "CTI-022",
+        "CTI-038"
       ],
       "assetInventory": {
         "sourceFiles": [],
