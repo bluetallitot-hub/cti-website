@@ -750,13 +750,13 @@
       "id": "CTI-013",
       "collection": "gallery",
       "status": "active",
-      "title": "Ladies' Auxiliary officers — historical photograph",
-      "caption": "CTI Ladies' Auxiliary officers, historical newspaper group photograph. Digitally restored and colorized interpretation; date and individual identities pending verification.",
+      "title": "Ladies' Auxiliary officers installation at the Proctor House",
+      "caption": "Installation of officers of the Temple Tifereth Israel of Peabody Ladies' Auxiliary at the Proctor House on Lowell Street. From left: Myrna Schlesinger (president), Stella Mordy (corresponding secretary), Brenda Barry (vice president), JoAnne Pressman (secretary), and Millie Becker (president). Esther Goldberg (treasurer) was not present. Date unverified.",
       "date": "",
-      "description": "Historical Ladies' Auxiliary officers photograph. The colorized gallery presentation and black-and-white archival restoration represent the same original image, preserved together in the source binder with the Leo Gibely dedication article (CTI-018). Their proximity does not establish that the Ladies' Auxiliary organized that event.",
-      "source": "CTI historical photograph collection (individual provenance unverified)",
-      "citation": "",
-      "attribution": "",
+      "description": "Newspaper photograph of the Ladies' Auxiliary officer installation at the Proctor House on Lowell Street, Peabody. The photographed original caption identifies five officers and notes that treasurer Esther Goldberg was absent. This clipping was kept in the same scrapbook as the Leo Gibely dedication article (CTI-018), but no event connection is established.",
+      "source": "The Salem News; CTI historical scrapbook, photographed original clipping",
+      "citation": "The Salem News, photograph credited to Dave Matt; date and page unverified",
+      "attribution": "Photograph: Dave Matt / The Salem News",
       "transcript": "",
       "indexImage": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
       "archiveImage": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
@@ -766,19 +766,33 @@
         "cti-ladies-auxiliary-officers-colorized.png"
       ],
       "files": [],
-      "originalImage": null,
+      "originalImage": "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
-      "restoredImage": null,
+      "restoredImage": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
       "thumbnailImage": "assets/collections/CTI-013-THM-1.png",
-      "preservationStatus": "awaiting-original-verification",
+      "preservationStatus": "original-and-derivatives-located; pending visual and thumbnail verification",
       "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "path": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png"
+        },
+        {
+          "type": "COL",
+          "version": 1,
+          "path": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png"
+        },
         {
           "type": "THM",
           "version": 1,
           "path": "assets/collections/CTI-013-THM-1.png",
-          "derivedFrom": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
-          "method": "near-white-border-trim and 4:3 center crop; no text added"
+          "derivedFrom": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png"
         }
       ],
       "thumbnailSpecification": {
@@ -791,25 +805,30 @@
       },
       "existingImageCandidate": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
       "thumbnailStatus": "regenerated-800x600-review-source-content",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "originalStatus": "original-file-located-in-github",
       "associatedHistoricalRecord": "historical-record.html?id=archive-ladies-auxiliary-officers",
       "assetInventory": {
-        "sourceFiles": [],
+        "sourceFiles": [
+          "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg"
+        ],
         "presentationFiles": [
+          "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
           "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
           "assets/collections/CTI-013-THM-1.png"
         ],
         "fileReferences": [
+          "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg",
+          "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
           "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
           "assets/collections/CTI-013-THM-1.png"
         ],
-        "sourceVerification": "no confirmed original-source file linked",
-        "captionVerification": "printed caption not transcribed"
+        "sourceVerification": "files confirmed in GitHub; fidelity not yet visually verified",
+        "captionVerification": "names, offices, venue and photo credit legible in supplied original clipping"
       },
       "captionProvenance": {
-        "status": "existing-caption-pending-source-comparison",
-        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
-        "verbatimOriginalCaption": false
+        "status": "transcribed-from-user-provided-newspaper-clipping",
+        "verbatimOriginalCaption": false,
+        "note": "Names, roles, venue and credit read from photographed newspaper caption; exact newspaper date unverified."
       },
       "relatedRecords": [
         "CTI-018",
@@ -818,18 +837,15 @@
       "alternateImageVersions": [
         {
           "type": "original",
-          "path": "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg",
-          "verification": "pending"
+          "path": "assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg"
         },
         {
           "type": "black-and-white restoration",
-          "path": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
-          "record": "CTI-019"
+          "path": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png"
         },
         {
           "type": "colorized interpretation",
-          "path": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png",
-          "record": "CTI-013"
+          "path": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png"
         }
       ],
       "binderContext": "Filed together with the Leo Gibely article (CTI-018); organizational connection not established by the article."
@@ -1464,7 +1480,7 @@
       "title": "Ladies' Auxiliary officers",
       "caption": "",
       "date": "Undated · CTI historical photograph",
-      "description": "Archival black-and-white presentation of the same Ladies' Auxiliary photograph represented by CTI-013. Preserved as an inactive legacy archive record to retain existing paths and historical asset references; do not count as a separate photograph.",
+      "description": "Inactive legacy duplicate of CTI-013, retained for reference and existing URL compatibility; the original, restored and colorized photograph are consolidated in the CTI-013 Gallery record.",
       "source": "CTI historical photograph collection (publication unidentified)",
       "citation": "",
       "attribution": "",
