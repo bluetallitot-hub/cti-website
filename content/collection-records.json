@@ -4110,13 +4110,13 @@
       "restoredImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
       "indexImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
       "archiveImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
       "imageVersions": [
         {
           "type": "ENH",
           "version": 1,
           "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
-          "note": "Existing AI-enhanced and colorized image reproduced in CTI-022; historical original not yet individually located"
+          "note": "Existing enhanced and colorized photograph verified in GitHub; original not independently verified"
         }
       ],
       "captionProvenance": {
@@ -4124,8 +4124,8 @@
         "verbatimOriginalCaption": true
       },
       "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
-      "originalStatus": "original-photograph-not-yet-separately-located",
-      "thumbnailStatus": "not-yet-created",
+      "originalStatus": "original-photograph-not-independently-verified",
+      "thumbnailStatus": "existing-enhanced-image-used-as-display-fallback; 800x600-thumbnail-not-created",
       "relatedRecords": [
         "CTI-022"
       ],
@@ -4137,8 +4137,21 @@
         "fileReferences": [
           "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg"
         ],
-        "sourceVerification": "existing asset referenced by CTI-022"
-      }
+        "sourceVerification": "Existing enhanced image verified in GitHub; original photograph not independently identified"
+      },
+      "recordReviewStatus": "metadata-complete; archival-original-and-dedicated-thumbnail-pending",
+      "files": [
+        {
+          "type": "enhanced",
+          "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+          "status": "verified-github"
+        },
+        {
+          "type": "thumbnail-display-fallback",
+          "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+          "status": "verified-github"
+        }
+      ]
     },
     {
       "id": "CTI-003",
@@ -4155,13 +4168,13 @@
       "restoredImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
       "indexImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
       "archiveImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
-      "thumbnailImage": null,
+      "thumbnailImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
       "imageVersions": [
         {
           "type": "ENH",
           "version": 1,
           "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
-          "note": "Existing AI-enhanced and colorized image reproduced in CTI-022; historical original not yet individually located"
+          "note": "Existing enhanced and colorized photograph verified in GitHub; original not independently verified"
         }
       ],
       "captionProvenance": {
@@ -4169,8 +4182,8 @@
         "verbatimOriginalCaption": true
       },
       "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
-      "originalStatus": "original-photograph-not-yet-separately-located",
-      "thumbnailStatus": "not-yet-created",
+      "originalStatus": "original-photograph-not-independently-verified",
+      "thumbnailStatus": "existing-enhanced-image-used-as-display-fallback; 800x600-thumbnail-not-created",
       "relatedRecords": [
         "CTI-022"
       ],
@@ -4182,8 +4195,21 @@
         "fileReferences": [
           "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg"
         ],
-        "sourceVerification": "existing asset referenced by CTI-022"
-      }
+        "sourceVerification": "Existing enhanced image verified in GitHub; original photograph not independently identified"
+      },
+      "recordReviewStatus": "metadata-complete; archival-original-and-dedicated-thumbnail-pending",
+      "files": [
+        {
+          "type": "enhanced",
+          "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+          "status": "verified-github"
+        },
+        {
+          "type": "thumbnail-display-fallback",
+          "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+          "status": "verified-github"
+        }
+      ]
     }
   ],
   "assetPolicy": {
