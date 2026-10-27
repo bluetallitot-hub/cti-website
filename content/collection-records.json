@@ -3770,14 +3770,14 @@
       "id": "CTI-037",
       "collection": "archive",
       "status": "unapproved",
-      "title": "Ladino and Hebrew gravestone documentation",
-      "caption": "",
-      "date": "Unknown",
-      "description": "Handwritten description of a Ladino/Hebrew-inscribed gravestone in Danvers, accompanied by photographs and a separate note about Jacob Behar. Relationship of documents to be verified.",
-      "source": "JHC I-581, Box 1, Folder 15 (Google Drive archival scan)",
-      "citation": "I-581-01-15-028.jpg; I-581-01-15-029.jpg; I-581-01-15-030.jpg; I-581-01-15-032.jpg",
-      "attribution": "",
-      "providedBy": "",
+      "title": "Jacob Behar Gravestone — Hebrew Inscription, Ladino Transliteration, and English Translation",
+      "caption": "Gravestone of Jacob Behar in the Spanish Section of the Sons of Jacob/Temple Shalom cemetery, Danvers, Massachusetts. Died 8 Elul 5684 (1924), aged 45.",
+      "date": "1924 (8 Elul 5684; death date)",
+      "description": "Archival documentation of Jacob Behar's gravestone in Danvers, Massachusetts, including a photograph of its Hebrew inscription, a handwritten historical introduction from Congregation Tifereth Israel, a Ladino transliteration, an English translation, and an additional source scan. The source introduction describes the gravestone as an example of local Sephardic funerary heritage. The gravestone photograph is ORG-2; the enhanced derivative and landscape thumbnail are staged separately. Historical uniqueness claims in the introduction are preserved as attributed source statements, not independently verified facts.",
+      "source": "Jewish Historical Center (JHC), I-581, Box 1, Folder 15; Congregation Tifereth Israel archival documentation",
+      "citation": "I-581-01-15-028.jpg; I-581-01-15-029.jpg; I-581-01-15-030.jpg; I-581-01-15-031.jpg; I-581-01-15-032.jpg",
+      "attribution": "Jewish Historical Center (JHC), I-581, Box 1, Folder 15",
+      "providedBy": "Jewish Historical Center",
       "transcript": "English\n\nAbout Jacob Behar\n\nIt is a reason to cry. In 5-minutes\nthey took away his life. With sorrow his\nfamily was left in the middle of the street.\n(an expression meaning the family was abandoned\nwithout a husband/father.) His death\nresulted in the world suddenly stopping,\nand shock to his family and children.\nWe pray he rests in peace in the Garden of\nEden. His death was very quick,\non the eighth day of Elul 5684 (1924)\n45 years old.\n\nLadino\n\nDe Yaacov Behar\n\nEs una manzia de yorah. En cinco\nminutos Le tomarowin la vida. En\nTreesteza desho su familia en medio La\nKiyeh; Fue matatho, que quetho Todo el\nmundo, encantatho odyo delas alturas da\npasenzia a su familia y creeaturas.\nRogamos repose enganethen.\nAdon su alma que fue una muerte\nmuy Kalma.\n\nEn 8 Elul 5684 (1924)\n45 years old.",
       "articleHtml": "",
       "originalImage": null,
@@ -3816,12 +3816,20 @@
           "relation": "Archival scan referenced by this record; original source retained in Google Drive",
           "repositoryPath": null,
           "repositoryStatus": "not-found-in-repository-tree"
+        },
+        {
+          "fileName": "I-581-01-15-031.jpg",
+          "driveFileId": "1pjgDMd7QzEA9pYIVS9WVTby3zNtLXbNx",
+          "driveUrl": "https://drive.google.com/file/d/1pjgDMd7QzEA9pYIVS9WVTby3zNtLXbNx/view",
+          "relation": "User-provided archival Ladino transliteration scan, preserved as CTI-037-ORG-5.jpg in Google Drive",
+          "repositoryPath": null,
+          "repositoryStatus": "not-found-in-repository-tree"
         }
       ],
       "preservationStatus": "source-in-drive-awaiting-review-and-publication",
       "captionProvenance": {
-        "status": "unapproved-awaiting-admin-identification",
-        "note": "Identification is provisional; original source scan retained in Google Drive."
+        "status": "documented-awaiting-final-inscription-verification",
+        "note": "Identity and date appear in the accompanying archival English and Ladino translation scans; location is stated in the handwritten CTI introduction. AI-enhanced image must not be used as a literal source for Hebrew letterforms."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
       "archiveAcknowledgmentSource": "JHC archival material",
@@ -3847,6 +3855,11 @@
             "fileName": "I-581-01-15-032.jpg",
             "driveFileId": "1IQF9HqISmccARXDCZo2erwL31IEC5Ju3",
             "driveUrl": "https://drive.google.com/file/d/1IQF9HqISmccARXDCZo2erwL31IEC5Ju3/view"
+          },
+          {
+            "fileName": "I-581-01-15-031.jpg",
+            "driveFileId": "1pjgDMd7QzEA9pYIVS9WVTby3zNtLXbNx",
+            "driveUrl": "https://drive.google.com/file/d/1pjgDMd7QzEA9pYIVS9WVTby3zNtLXbNx/view"
           }
         ],
         "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
@@ -3912,7 +3925,18 @@
       },
       "ladinoTranscription": "Ladino\n\nDe Yaacov Behar\n\nEs una manzia de yorah. En cinco\nminutos Le tomarowin la vida. En\nTreesteza desho su familia en medio La\nKiyeh; Fue matatho, que quetho Todo el\nmundo, encantatho odyo delas alturas da\npasenzia a su familia y creeaturas.\nRogamos repose enganethen.\nAdon su alma que fue una muerte\nmuy Kalma.\n\nEn 8 Elul 5684 (1924)\n45 years old.",
       "ladinoTranscriptionStatus": "draft-awaiting-character-by-character-verification",
-      "transcriptionStatus": "draft-awaiting-verification-against-original-scans"
+      "transcriptionStatus": "draft-awaiting-verification-against-original-scans",
+      "mainPhotograph": "CTI-037-ORG-2.jpg",
+      "displayImageCandidate": "CTI-037-ENH-1.png",
+      "thumbnailCandidate": "CTI-037-THUMB-1-800x600.png",
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "orientation": "landscape",
+        "aspectRatio": "4:3"
+      },
+      "editorialStatus": "reconciled-awaiting-inscription-verification",
+      "publicationNotes": "Five originals, one enhanced derivative, and one 800x600 landscape thumbnail preserved in Google Drive. English and Ladino transcriptions combined in transcript field. Do not publish until inscription and transcription are verified; display assets are staged in Drive, not published in repository."
     },
     {
       "id": "CTI-038",
