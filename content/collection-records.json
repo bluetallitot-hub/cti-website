@@ -124,8 +124,8 @@
           "driveUrl": "https://drive.google.com/file/d/1oUoyRbxWcnUQM6QwCvSyQk9-p9Xrpk0M/view"
         }
       ],
-      "editorialStatus": "complete-pending-upload",
-      "editorialStatusLabel": "Gallery Complete — Pending Upload",
+      "editorialStatus": "approved",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
       "editorialCompletedDate": "2026-10-27",
       "publicationNotes": [
         "Verify original image pointer uses approved Drive original, not rejected candidate."
@@ -161,7 +161,10 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved"
     },
     {
       "id": "CTI-004",
@@ -256,8 +259,8 @@
         "verbatimOriginalCaption": false,
         "note": "Removed restoration instructions from display caption. Names, date, roles, and photographer credit are inherited from existing record; original printed caption remains unverified."
       },
-      "editorialStatus": "complete-pending-upload",
-      "editorialStatusLabel": "Gallery Complete — Pending Upload",
+      "editorialStatus": "approved",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
       "editorialCompletedDate": "2026-10-27",
       "publicationNotes": [],
       "driveImageInventory": [
@@ -291,7 +294,10 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved"
     },
     {
       "id": "CTI-007",
@@ -403,7 +409,7 @@
         "retouched": true
       },
       "existingImageCandidate": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "repository-thumbnail-present-drive-copy-not-confirmed",
       "originalStatus": "filename-matched-original-present-in-google-drive-content-not-independently-verified",
       "associatedSourceDocument": {
         "path": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
@@ -511,7 +517,8 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-present-thumbnail-not-in-staging",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "photoCollectionStatus": "thumbnail-present-in-repository-awaiting-drive-staging"
     },
     {
       "id": "CTI-009",
@@ -712,8 +719,8 @@
           "content": "article-transcription"
         }
       },
-      "editorialStatus": "complete-pending-upload",
-      "editorialStatusLabel": "Archive Complete — Pending Upload",
+      "editorialStatus": "approved",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
       "editorialCompletedDate": "2026-10-27",
       "publicationNotes": [
         "Verify CTI-038 related Gallery link renders beneath left column."
@@ -752,7 +759,10 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved"
     },
     {
       "id": "CTI-010",
@@ -878,8 +888,8 @@
       "recordType": "photograph",
       "galleryPhoto": true,
       "eventDateDisplay": "April 7, 2024",
-      "editorialStatus": "complete-pending-upload",
-      "editorialStatusLabel": "Complete — Pending Upload",
+      "editorialStatus": "approved",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
       "editorialApproval": "approved",
       "publicationStatus": "pending-final-asset-upload",
       "publicationNotes": "Original, AI-enhanced derivative, and landscape thumbnail saved in Google Drive staging. Publish using approved gallery renderer after final GitHub upload. Do not infer or publish individual identifications from generated name-tag details.",
@@ -919,7 +929,10 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved"
     },
     {
       "id": "CTI-011",
@@ -1052,11 +1065,11 @@
       "transcriptStatus": "complete-from-user-provided-scan",
       "originalImageDriveId": "1GfIEXn4tiAhkLqxiqv-rc6wpRh_6y2_B",
       "enhancedImageDriveId": "116g0waJYKpm9IbQCfSSRYzdsay546ZmW",
-      "editorialStatus": "complete-pending-upload",
+      "editorialStatus": "approved",
       "publicationStatus": "pending-final-asset-upload",
       "publicationNotes": "Use approved CTI-011-ENH-2.png for enhanced presentation; retain CTI-011-ORG-1.png as unchanged archival original. Earlier ENH-1 retained as superseded derivative.",
       "thumbnailDriveId": "1u5XuC1m99ngK3pwMXcrYIkJfzkP43oYC",
-      "editorialStatusLabel": "Complete — Pending Upload",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
       "editorialApproval": "approved",
       "driveImageInventory": [
         {
@@ -1082,7 +1095,10 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved"
     },
     {
       "id": "CTI-013",
@@ -1218,7 +1234,7 @@
         }
       ],
       "binderContext": "Filed together with the Leo Gibely article (CTI-018); organizational connection not established by the article.",
-      "editorialStatus": "Complete — Pending Upload",
+      "editorialStatus": "approved",
       "stagedDriveFiles": [
         {
           "type": "ORG",
@@ -1272,7 +1288,11 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved"
     },
     {
       "id": "CTI-014",
@@ -1519,8 +1539,8 @@
           "driveFileId": "1NDy6WjHTtFQeyDezzSwFR-zKToOFQngr"
         }
       ],
-      "editorialStatus": "complete-pending-upload",
-      "editorialStatusLabel": "Archive Complete — Pending Upload",
+      "editorialStatus": "approved",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
       "editorialCompletedDate": "2026-10-27",
       "publicationNotes": [
         "Verify standardized assets and public detail rendering."
@@ -1566,7 +1586,10 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved"
     },
     {
       "id": "CTI-016",
@@ -1896,8 +1919,8 @@
           "driveFileId": "17ySPMkbQuIRJ6qKKW758-IMTUgR3DrJT"
         }
       ],
-      "editorialStatus": "complete-pending-upload",
-      "editorialStatusLabel": "Archive Complete — Pending Upload",
+      "editorialStatus": "approved",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
       "editorialCompletedDate": "2026-10-27",
       "publicationNotes": [
         "Verify standardized assets and public detail rendering."
@@ -1943,7 +1966,10 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved"
     },
     {
       "id": "CTI-018",
@@ -2066,7 +2092,13 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "editorialStatus": "approved",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved",
+      "transcriptionStatus": "draft-requires-verbatim-comparison-with-authentic-clipping"
     },
     {
       "id": "CTI-020",
@@ -2417,7 +2449,7 @@
         "sepiaDriveFileId": "154g2ob22shGokP_LjXDHPHuHBwkQlzHi",
         "thumbnailDriveFileId": "1XGcrLebea2M9tOBaE2QesLpqFTBHjN5v"
       },
-      "editorialStatus": "complete-pending-upload",
+      "editorialStatus": "approved",
       "editorialApproval": "approved",
       "publicationStatus": "pending-final-asset-upload",
       "timelineTitle": "Peabody's Ashkenazi and Sephardic Jewish Communities (1995)",
@@ -2464,7 +2496,11 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved"
     },
     {
       "id": "CTI-022",
@@ -2844,12 +2880,12 @@
       "timelineDate": "2012-10-11",
       "metadataStatus": "complete",
       "transcriptStatus": "approved-with-two-explicit-source-gaps",
-      "editorialStatus": "complete-pending-upload",
+      "editorialStatus": "approved",
       "publicationStatus": "pending-final-asset-upload",
       "transcriptCaption": "To raise money, Peabody's Tifereth Israel has compiled a cookbook of favorite Sephardic recipes, selling for $12.",
       "transcriptSource": "User-supplied transcription, October 27, 2026",
       "transcriptEditorialNote": "Text normalized for line breaks, punctuation, and obvious broken hyphenation. The opening Linsky quotation ends at 'of' and the final Becker passage ends at 'but she saw'; both gaps marked explicitly. Cookbook sentence kept as separate caption. Editorially approved with both source gaps retained and clearly marked; no missing text invented.",
-      "editorialStatusLabel": "Complete — Pending Upload",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
       "editorialApproval": "approved-with-marked-transcription-gaps",
       "driveImageInventory": [
         {
@@ -2875,7 +2911,10 @@
         }
       ],
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
-      "driveReconciledDate": "2026-10-27"
+      "driveReconciledDate": "2026-10-27",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved"
     },
     {
       "id": "CTI-025",
@@ -3797,8 +3836,8 @@
         }
       ],
       "imageProvenanceNote": "ORG is the authentic user-provided newspaper clipping. SEP and COL are AI-generated interpretations, not documentary evidence; THM derives from approved colorized version.",
-      "editorialStatus": "complete-pending-upload",
-      "editorialStatusLabel": "Gallery Complete — Pending Upload",
+      "editorialStatus": "approved",
+      "editorialStatusLabel": "Approved — Photo Collection Complete",
       "editorialCompletedDate": "2026-10-27",
       "publicationNotes": [
         "Connect existing thumbnail and index image paths in public renderer."
@@ -3866,7 +3905,10 @@
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
       "driveReconciledDate": "2026-10-27",
       "originalStatus": "filename-matched-original-present-in-google-drive-content-not-independently-verified",
-      "thumbnailStatus": "filename-matched-thumbnail-present-in-google-drive-dimensions-not-independently-verified"
+      "thumbnailStatus": "filename-matched-thumbnail-present-in-google-drive-dimensions-not-independently-verified",
+      "photoCollectionApproval": "approved-based-on-completed-work",
+      "photoCollectionApprovalDate": "2026-10-27",
+      "photoCollectionStatus": "complete-approved"
     }
   ],
   "assetPolicy": {
