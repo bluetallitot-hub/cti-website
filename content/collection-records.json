@@ -97,74 +97,6 @@
       ]
     },
     {
-      "id": "CTI-002",
-      "collection": "gallery",
-      "status": "inactive",
-      "title": "Brenda Barry, Millie Becker, and Jerry Pressman renovating CTI at 8 Pierpont Street, 1981.",
-      "caption": "Brenda Barry, Millie Becker, and Jerry Pressman renovating CTI at 8 Pierpont Street, 1981.",
-      "date": "1981",
-      "description": "Brenda Barry, Millie Becker, and Jerry Pressman during renovations at Congregation Tifereth Israel, 8 Pierpont Street, in 1981.",
-      "source": "CTI historical photograph collection (individual provenance unverified)",
-      "citation": "",
-      "attribution": "",
-      "transcript": "",
-      "indexImage": "assets/images/gallery/Congregation Renovation in Peabody.png",
-      "archiveImage": "assets/images/gallery/Congregation Renovation in Peabody.png",
-      "pdf": null,
-      "sourcePage": null,
-      "originalFilenames": [
-        "Congregation Renovation in Peabody.png"
-      ],
-      "files": [],
-      "originalImage": null,
-      "originalImageCaption": null,
-      "originalCaptionCorrections": [],
-      "restoredImage": null,
-      "thumbnailImage": "assets/collections/CTI-002-THM-1.png",
-      "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [
-        {
-          "type": "THM",
-          "version": 1,
-          "path": "assets/collections/CTI-002-THM-1.png",
-          "derivedFrom": "assets/images/gallery/Congregation Renovation in Peabody.png",
-          "method": "full-image contain with softened background"
-        }
-      ],
-      "thumbnailSpecification": {
-        "width": 800,
-        "height": 600,
-        "aspectRatio": "4:3",
-        "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
-      },
-      "existingImageCandidate": "assets/images/gallery/Congregation Renovation in Peabody.png",
-      "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
-      "assetInventory": {
-        "sourceFiles": [],
-        "presentationFiles": [
-          "assets/images/gallery/Congregation Renovation in Peabody.png",
-          "assets/collections/CTI-002-THM-1.png"
-        ],
-        "fileReferences": [
-          "assets/images/gallery/Congregation Renovation in Peabody.png",
-          "assets/collections/CTI-002-THM-1.png"
-        ],
-        "sourceVerification": "no confirmed original-source file linked",
-        "captionVerification": "printed caption not transcribed"
-      },
-      "captionProvenance": {
-        "status": "existing-caption-pending-source-comparison",
-        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
-        "verbatimOriginalCaption": false
-      },
-      "duplicateOf": "CTI-017",
-      "recordIdentityNote": "Retained for provenance and old links; merged into CTI-017. Do not approve or publish independently.",
-      "relatedArchiveRecordId": "CTI-017"
-    },
-    {
       "id": "CTI-003",
       "collection": "gallery",
       "status": "inactive",
@@ -1524,38 +1456,17 @@
       "photoAlbum": true,
       "photoAlbumCaption": "Brenda Barry, Millie Becker, and Jerry Pressman renovating CTI at 8 Pierpont Street, 1981.",
       "photoAlbumImage": "assets/images/gallery/Congregation Renovation in Peabody.png",
-      "relatedLegacyRecordIds": [
-        "CTI-002"
-      ],
-      "recordIdentityNote": "CTI-002 is the photographic presentation of the same 1981 Salem Evening News archival item; CTI-017 is canonical. Original clipping and transcription retained here.",
+      "relatedLegacyRecordIds": [],
       "photoSourceReference": "JHC I-581-01-15-025.jpg, original newspaper clipping with printed photograph and caption",
       "photoSourceDriveFileId": "17tMEfTLNr8HuxzP3csRQnSJH10As2z22",
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
       "archiveAcknowledgmentSource": "JHC archival material",
-      "relatedGalleryRecordId": "CTI-002",
-      "galleryPhoto": {
-        "legacyRecordId": "CTI-002",
-        "title": "Brenda Barry, Millie Becker, and Jerry Pressman renovating CTI at 8 Pierpont Street, 1981.",
-        "caption": "Brenda Barry, Millie Becker, and Jerry Pressman renovating CTI at 8 Pierpont Street, 1981.",
-        "date": "1981",
-        "description": "Brenda Barry, Millie Becker, and Jerry Pressman during renovations at Congregation Tifereth Israel, 8 Pierpont Street, in 1981.",
-        "source": "CTI historical photograph collection (individual provenance unverified)",
-        "enhancedImage": "assets/images/gallery/Congregation Renovation in Peabody.png",
-        "thumbnail": "assets/collections/CTI-002-THM-1.png",
-        "originalImage": null,
-        "originalFilenames": [
-          "Congregation Renovation in Peabody.png"
-        ],
-        "provenanceNote": "Historical photograph associated with this article."
-      },
       "presentationOrder": [
         "enhanced-photo-index",
         "article-secondary"
       ],
       "articleImage": "assets/archive/originals/I-581-01-15-025-web.jpg",
-      "relatedRecords": [
-        "CTI-002"
-      ],
+      "relatedRecords": [],
       "archivalOriginals": {
         "verifiedRepositoryFiles": [
           {
