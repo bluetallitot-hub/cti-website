@@ -301,7 +301,21 @@
           "productionNote": "AI-rendered straightened rendition; compare with ORG-2 for authoritative text and appearance.",
           "originalSourceId": "CTI-007-ORG-2"
         }
-      ]
+      ],
+      "editorialStatus": "complete-pending-upload",
+      "editorialStatusLabel": "Gallery Complete — Pending Upload",
+      "editorialCompletedDate": "2026-10-27",
+      "publicationChecklist": {
+        "editorialReview": "complete",
+        "photoOriginal": "complete",
+        "enhancedPhoto": "complete",
+        "supportingInvitation": "complete",
+        "documentCaption": "complete",
+        "identityVerification": "optional-future-enrichment",
+        "standardizedAssetUpload": "pending",
+        "thumbnailVerification": "pending",
+        "expandedGalleryLinkVerification": "pending"
+      }
     },
     {
       "id": "CTI-008",
