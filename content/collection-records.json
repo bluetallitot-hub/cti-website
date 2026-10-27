@@ -1689,7 +1689,7 @@
       "citation": "April 14–20, 1995, p. 12; archival scan I-581-01-15-035",
       "attribution": "Judith S. Antonelli",
       "transcript": "",
-      "indexImage": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
+      "indexImage": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
       "archiveImage": "assets/archive/originals/I-581-01-15-035-web.jpg",
       "pdf": null,
       "sourcePage": "archives/archive-1995-ashkenazi-sephardic-traditions.html",
@@ -1782,10 +1782,11 @@
       "recordMergeNote": "CTI-008 merged as a separately attributed related historical photograph. The 1995 article and the 1958 photo are distinct sources; do not describe the photo as an illustration from the article.",
       "articleImage": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
       "presentationOrder": [
+        "1958-menorah-photo-headline",
         "article-original",
         "supporting-documents"
       ],
-      "displayRelationshipNote": "The 1958 Peabody Hebrew School photograph is a supporting document, not the article's cover image and not an independent Gallery record.",
+      "displayRelationshipNote": "Use the authentic 1958 Peabody Hebrew School photograph as the Archive headline/index image, clearly captioned as related regional history, not a photograph printed with the 1995 article. Sepia enhancement and 800x600 thumbnail are pending creation from the actual source image.",
       "archivalOriginals": {
         "verifiedRepositoryFiles": [
           {
@@ -1813,7 +1814,18 @@
           "provenanceNote": "Related regional Jewish history; not documented as part of the 1995 article or as a CTI event. Standardized file copy pending.",
           "legacyRecordId": "CTI-008"
         }
-      ]
+      ],
+      "imageProductionPlan": {
+        "source": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+        "sepiaFileName": "CTI-021-SEP-1.png",
+        "thumbnailFileName": "CTI-021-THM-1.png",
+        "thumbnailWidth": 800,
+        "thumbnailHeight": 600,
+        "thumbnailAspectRatio": "4:3",
+        "thumbnailMethod": "contain entire authentic photograph without cropping people or adding text",
+        "enhancementRule": "Photographic tonal sepia conversion only; no generated people, objects, or invented historical details",
+        "status": "pending-authentic-source-processing"
+      }
     },
     {
       "id": "CTI-022",
