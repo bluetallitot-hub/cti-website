@@ -4131,6 +4131,17 @@
           "version": 1,
           "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
           "note": "Existing enhanced and colorized photograph verified in GitHub; original not independently verified"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "dimensions": "800x600",
+          "driveFile": {
+            "fileName": "CTI-002-THM-1.png",
+            "driveFileId": "10L0Pp7eMy_GAG1psfSE8X7uC1cQAqYTZ",
+            "driveUrl": "https://drive.google.com/file/d/10L0Pp7eMy_GAG1psfSE8X7uC1cQAqYTZ/view"
+          },
+          "note": "Preserves entire original program scan with neutral margins; no text added"
         }
       ],
       "captionProvenance": {
@@ -4139,7 +4150,7 @@
       },
       "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
       "originalStatus": "user-provided-program-scan-preserved-in-google-drive",
-      "thumbnailStatus": "existing-enhanced-image-used-as-display-fallback; 800x600-thumbnail-not-created",
+      "thumbnailStatus": "800x600-created-and-saved-to-google-drive-staging; github-publication-pending",
       "relatedRecords": [
         "CTI-022"
       ],
@@ -4148,14 +4159,15 @@
           "CTI-002-ORG-1.png"
         ],
         "presentationFiles": [
-          "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg"
+          "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+          "CTI-002-THM-1.png"
         ],
         "fileReferences": [
           "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg"
         ],
         "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
       },
-      "recordReviewStatus": "historical-program-scan-preserved; dedicated-thumbnail-pending",
+      "recordReviewStatus": "original-program-scan-and-thumbnail-staged; github-publication-pending",
       "files": [
         {
           "type": "enhanced",
@@ -4202,6 +4214,17 @@
           "version": 1,
           "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
           "note": "Existing enhanced and colorized photograph verified in GitHub; original not independently verified"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "dimensions": "800x600",
+          "driveFile": {
+            "fileName": "CTI-003-THM-1.png",
+            "driveFileId": "1bffKswn0EBaSWkjKbP5nGWL-PGKqzD5E",
+            "driveUrl": "https://drive.google.com/file/d/1bffKswn0EBaSWkjKbP5nGWL-PGKqzD5E/view"
+          },
+          "note": "Preserves entire original program scan with neutral margins; no text added"
         }
       ],
       "captionProvenance": {
@@ -4210,7 +4233,7 @@
       },
       "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
       "originalStatus": "user-provided-program-scan-preserved-in-google-drive",
-      "thumbnailStatus": "existing-enhanced-image-used-as-display-fallback; 800x600-thumbnail-not-created",
+      "thumbnailStatus": "800x600-created-and-saved-to-google-drive-staging; github-publication-pending",
       "relatedRecords": [
         "CTI-022",
         "CTI-038"
@@ -4220,14 +4243,15 @@
           "CTI-003-ORG-1.png"
         ],
         "presentationFiles": [
-          "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg"
+          "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+          "CTI-003-THM-1.png"
         ],
         "fileReferences": [
           "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg"
         ],
         "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
       },
-      "recordReviewStatus": "historical-program-scan-preserved; dedicated-thumbnail-pending",
+      "recordReviewStatus": "original-program-scan-and-thumbnail-staged; github-publication-pending",
       "files": [
         {
           "type": "enhanced",
