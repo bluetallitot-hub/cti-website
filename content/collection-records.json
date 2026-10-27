@@ -1299,12 +1299,12 @@
       "collection": "archive",
       "status": "active",
       "title": "Synagogue celebrates its 50th anniversary",
-      "caption": "",
+      "caption": "Congregation Tifereth Israel's golden anniversary celebration, October 1972. The collection includes contemporary Salem News coverage and a commemorative event ticket.",
       "date": "October 3, 1972",
       "description": "Newspaper coverage of Congregation Tifereth Israel's 50th anniversary in October 1972.",
       "source": "Salem News",
-      "citation": "",
-      "attribution": "",
+      "citation": "Salem News, October 3, 1972, “Synagogue celebrates its 50th anniversary” (article attribution as recorded; byline not verified).",
+      "attribution": "Salem News (newspaper article); Congregation Tifereth Israel (anniversary ticket).",
       "transcript": "October 3, 1972\n\nPEABODY — In 1911, a small band of Jews came to this area from Turkey.\n\nThese people, who traced their lineage back to pre-Christian Spain, formed the original congregation of Tifereth Israel, on Pierpont St., which celebrates its 50th anniversary this past weekend.\n\nSpecial synagogue services included memorial prayers for Mrs. Vickie Freedman, recently deceased president of the synagogue Women's Auxiliary. Also held was installation of officers. Installed were: President, Joseph Gibely II; vice president, Isaac Hasday; secretary, Victor Havian, and treasurer, Jack Yonis.\n\nA dinner-dance was held Sunday to culminate the weekend festivities.\n\nCongregants of the Tifereth Israel Synagogue are descended from Spanish (Sephardic) Jews who lived in that country prior to the fall of Jerusalem in 70 B.C. There they flourished and numbered among them physicians, bankers, skilled artisans and the greatest of Jewish scholars. The Spanish Inquisition (about the time of the discovery of America) saw the Jews dispersed throughout western Europe and Palestine.\n\nThe ancestors of the Peabody Congregation traveled to Turkey, where they took their places among the workers of that community.\n\nThe lure of America gripped the Sephardic Jew of Turkey and in 1911 the first of their number, Leon Eskenas and Myer Benater arrived in this area where they were soon joined by their wives Rebecca Eskenas and Regine Benater.\n\nShortly thereafter, the Gibely, Eskenazi, Yonis, Hasday, Leon, Havian, Pernitchi, Savy, Fermon and Erera families arrived and from this small group the sephardic synagogue, Congregation Tifereth Israel of Peabody and Salem emerged. (This synagogue is the only sephardic congregation north of Rhode Island.)\n\nThe Sephardic Jews have retained many of the customs acquired during the years their ancestors spent in Spain and the congregants speak a fluent “Ladino” (Spanish) despite the fact that not one of their number has set foot on the Spanish mainland in almost 5 centuries.\n\nTifereth Israel has never numbered more than 35 adult male members, although this number has remained constant and active in the 50 years since the congregation's inception. With the exception of the Leon, Erera and Menater families, whose descendants have moved out of the Salem-Peabody area, the children and grand-children of the congregation founders still remain active members of the synagogue.\n\nOf the original group who arrived here in 1911, only Rebecca Eskenas is alive today. She is living in retirement in Florida.\n\nTranscription status: AI Transcription · Approved for publication",
       "indexImage": "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
       "archiveImage": "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
@@ -1338,7 +1338,7 @@
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-014-THM-1.png",
-      "preservationStatus": "awaiting-original-verification",
+      "preservationStatus": "original-ticket-and-revised-thumbnail-staged-in-google-drive",
       "imageVersions": [
         {
           "type": "THM",
@@ -1365,19 +1365,22 @@
         "background": "ticket-fills-frame"
       },
       "existingImageCandidate": "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
-      "thumbnailStatus": "revised-800x600-landscape-staged-in-drive",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
+      "thumbnailStatus": "revised-landscape-800x600-staged-in-drive",
+      "originalStatus": "filename-matched-original-present-in-google-drive-content-not-independently-verified",
       "assetInventory": {
-        "sourceFiles": [],
+        "sourceFiles": [
+          "CTI-014-ORG-1.jpg"
+        ],
         "presentationFiles": [
-          "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
-          "assets/collections/CTI-014-THM-1.png"
+          "CTI-014-IMG-1.png",
+          "CTI-014-THM-v2.png"
         ],
         "fileReferences": [
-          "assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png",
-          "assets/collections/CTI-014-THM-1.png"
+          "https://drive.google.com/file/d/1tsFIqrgU38TptN0CF3Qzm3LJMaKe2kbl/view",
+          "https://drive.google.com/file/d/1o3U-dY5X3xPvnDgGmwqScDDZy6XYO7LH/view",
+          "https://drive.google.com/file/d/1qA83FCgc496LNNZKCdHtbN9C6FfAYP7_/view"
         ],
-        "sourceVerification": "no confirmed original-source file linked",
+        "sourceVerification": "Drive file present under canonical name; visual comparison not yet performed",
         "captionVerification": "printed caption not transcribed"
       },
       "captionProvenance": {
@@ -1395,7 +1398,7 @@
         "plainTextField": "transcript",
         "sourcePage": "press/press-1972-golden-anniversary.html",
         "sourceImage": "assets/archive/originals/cti-1972-salem-news-golden-anniversary-original.jpg",
-        "verification": "source-transcription-not-yet-proofread",
+        "verification": "not-yet-proofread-against-original-newspaper-scan",
         "htmlDeletionSafe": true
       },
       "relatedRecords": [
@@ -1422,7 +1425,9 @@
           "kind": "800x600-landscape",
           "path": "assets/collections/CTI-014-THM-1.png",
           "derivedFrom": "anniversary-ticket",
-          "verified": "referenced-in-repository-database; dimensions-not-independently-inspected"
+          "verified": "Drive file staged; 800x600 per generation metadata; visual dimensions not independently inspected",
+          "filename": "CTI-014-THM-v2.png",
+          "driveId": "1qA83FCgc496LNNZKCdHtbN9C6FfAYP7_"
         },
         {
           "role": "transcription",
@@ -1438,7 +1443,27 @@
         "thumbnail": "CTI-014-THM-v2.png"
       },
       "assetNamingStatus": "google-drive-canonical-names-confirmed-github-binary-migration-pending",
-      "assetNamingNotes": "Legacy files and existing website paths retained to avoid broken links. Drive file CTI-014-THM-2.png requires eventual canonical rename to CTI-014-THM-v2.png and binary sync to GitHub. Do not relabel the original newspaper clipping as the ticket."
+      "assetNamingNotes": "Canonical files renamed on Drive and registered in database; legacy GitHub binary paths retained until website migration.",
+      "eventMetadata": {
+        "event": "50th anniversary celebration",
+        "eventYear": 1972,
+        "articleDate": "1972-10-03",
+        "venue": "Lombardo's, East Boston (ticket)",
+        "historicalContext": "Congregation founded in 1922; article recounts Sephardic families' earlier arrival from Turkey.",
+        "namedPeople": [
+          "Joseph Gibely II",
+          "Isaac Hasday",
+          "Victor Havian",
+          "Jack Yonis",
+          "Vickie Freedman",
+          "Leon Eskenas",
+          "Myer Benater",
+          "Rebecca Eskenas",
+          "Regine Benater"
+        ]
+      },
+      "transcriptionStatus": "existing-publication-approved-text-awaiting-source-proofreading",
+      "metadataReconciledDate": "2026-10-27"
     },
     {
       "id": "CTI-015",
