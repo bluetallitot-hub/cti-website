@@ -3359,13 +3359,26 @@
         "richTextField": "transcriptHtml",
         "sourceImageDriveId": "1VPIPzbAOB1fluic5iqEqU3eyKFw71qI-",
         "verification": "verified against supplied original image",
-        "verificationDate": "2026-10-27"
+        "verificationDate": "2026-10-27",
+        "alternateTextField": "alternateTranscriptions",
+        "note": "Verified published letter is primary transcript; earlier unattributed-source database text retained separately and attributed provisionally to Elliot Hershoff."
       },
       "metadataReview": {
         "status": "original-source-transcription-verified; images-reconciled-in-drive",
         "date": "2026-10-27",
         "notes": "Replaced materially incorrect transcript with text from supplied original; recorded original, enhanced portrait and landscape thumbnail Drive IDs. Existing GitHub asset paths left unchanged pending heritage migration."
-      }
+      },
+      "alternateTranscriptions": [
+        {
+          "title": "Earlier database text attributed to Elliot Hershoff",
+          "attribution": "Elliot Hershoff (attributed; original source not identified)",
+          "verificationStatus": "unverified-source",
+          "note": "Preserved from earlier CTI database; not verified as the November 1, 2018 published letter and must not be presented as a verbatim transcription of that letter.",
+          "text": "November 1, 2018\n\nOn October 18, 2018, the Jewish Journal published an article by Michael Wittner titled “Jewish Peabody: Pride and Perseverance.” I was dismayed to read that there were only three synagogues in Peabody, when there are four. Our synagogue, Congregation Tifereth Israel, is a small but active congregation on Pierpont Street in Peabody.\n\nOur synagogue is 96 years old and has been at the same location for over 60 years. We are a small but active community. We hold services every Friday night and Saturday morning, as well as all the holidays. We have an active Sisterhood and Men’s Club, and have several social events throughout the year.\n\nWe are currently without a rabbi, and are searching for one. Our congregation is made up of Jews from all backgrounds, including Sephardic and Ashkenazi. We are a welcoming congregation, and invite anyone who is interested to attend our services and events.\n\nI hope this letter sheds some light on who we are.\n\nElliot Hershoff\nPresident\nCongregation Tifereth Israel\nPeabody\n\nView the original at Jewish Journal →",
+          "html": "<p class=\"archive-article-date\"><time>November 1, 2018</time></p><p>On October 18, 2018, the Jewish Journal published an article by Michael Wittner titled “Jewish Peabody: Pride and Perseverance.” I was dismayed to read that there were only three synagogues in Peabody, when there are four. Our synagogue, Congregation Tifereth Israel, is a small but active congregation on Pierpont Street in Peabody.</p><p>Our synagogue is 96 years old and has been at the same location for over 60 years. We are a small but active community. We hold services every Friday night and Saturday morning, as well as all the holidays. We have an active Sisterhood and Men’s Club, and have several social events throughout the year.</p><p>We are currently without a rabbi, and are searching for one. Our congregation is made up of Jews from all backgrounds, including Sephardic and Ashkenazi. We are a welcoming congregation, and invite anyone who is interested to attend our services and events.</p><p>I hope this letter sheds some light on who we are.</p><p><strong>Elliot Hershoff</strong><br>President<br>Congregation Tifereth Israel<br>Peabody</p><p><a href=\"https://jewishjournal.org/2018/11/01/letter-to-the-editor-peabody-congregation-feels-ignored/\">View the original at Jewish Journal →</a></p>",
+          "provenanceCommit": "cf07f5af8edc891894f340771b4682abd22c64be"
+        }
+      ]
     },
     {
       "id": "CTI-026",
