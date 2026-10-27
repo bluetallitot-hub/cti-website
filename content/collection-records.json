@@ -3567,6 +3567,15 @@
           "publicationStatus": "staged-in-drive; github-standardized-copy-pending"
         },
         {
+          "type": "ORG",
+          "version": 2,
+          "filename": "CTI-027-ORG-2.png",
+          "driveFileId": "1dW0f23rzIATV2UmX6Z3Ef_tnK0savFqo",
+          "driveUrl": "https://drive.google.com/file/d/1dW0f23rzIATV2UmX6Z3Ef_tnK0savFqo/view",
+          "description": "Original unedited user-supplied June 12, 2022 CTI centennial officers-and-honorees photograph",
+          "publicationStatus": "staged-in-drive; github-standardized-copy-pending"
+        },
+        {
           "type": "ENH",
           "version": 1,
           "filename": "CTI-027-ENH-1.png",
@@ -3632,6 +3641,12 @@
             "type": "THM",
             "filename": "CTI-027-THM-1.png",
             "driveFileId": "1ckZq5oTHX7z12QwpwiQ83arp34NXdmeS"
+          },
+          {
+            "type": "ORG",
+            "version": 2,
+            "filename": "CTI-027-ORG-2.png",
+            "driveFileId": "1dW0f23rzIATV2UmX6Z3Ef_tnK0savFqo"
           }
         ]
       },
@@ -3651,7 +3666,7 @@
         "thumbnail": "assets/collections/CTI-027-THM-1.png",
         "originalImage": null,
         "attribution": "Jakob Menendez",
-        "provenanceNote": "User-supplied event photograph with user-supplied identification of all six subjects. Original image awaits Drive staging and standardized GitHub migration; legacy building photograph retained."
+        "provenanceNote": "Unedited original event photo staged as CTI-027-ORG-2.png; enhanced group photo as CTI-027-ENH-1.png. Newspaper article scan separately staged as CTI-027-ORG-1.png."
       },
       "relatedGalleryRecordId": "CTI-027",
       "articleImage": "assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg",
@@ -3674,10 +3689,9 @@
         "CTI-014"
       ],
       "pendingOriginalPhoto": {
-        "filename": "CTI-027-ORG-1.png",
-        "source": "user-supplied photograph in conversation",
-        "eventDate": "2022-06-12",
-        "status": "user-original-event-photo-supplied-separately; article-scan-designated-ORG-by-user; event-photo-not-staged",
+        "filename": "CTI-027-ORG-2.png",
+        "driveFileId": "1dW0f23rzIATV2UmX6Z3Ef_tnK0savFqo",
+        "status": "staged-in-drive",
         "peopleLeftToRight": [
           "Jay Polonsky",
           "Betty Polonsky",
@@ -3688,9 +3702,9 @@
         ]
       },
       "metadataReview": {
-        "status": "all-three-images-staged-in-drive",
+        "status": "four-assets-staged-in-drive; transcription-proofreading-pending",
         "date": "2026-10-27",
-        "notes": "Article scan, AI-enhanced group photograph, and cropped thumbnail staged; legacy GitHub asset paths unchanged until migration. User's original unenhanced event photograph is separately available in conversation."
+        "notes": "Both originals (newspaper scan and unedited event photo), enhanced group photo and thumbnail staged with Drive IDs. Legacy GitHub paths unchanged until migration."
       }
     },
     {
