@@ -4187,7 +4187,38 @@
         ],
         "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
         "reconciled": "2026-10-22"
-      }
+      },
+      "stagedOriginals": [
+        {
+          "fileName": "CTI-037-ORG-1.jpg",
+          "driveFileId": "17eLj4ayY5Rdp5gXuVg4WChX4qwwlUB3G",
+          "driveUrl": "https://drive.google.com/file/d/17eLj4ayY5Rdp5gXuVg4WChX4qwwlUB3G/view",
+          "sourceFileName": "I-581-01-15-028.jpg",
+          "role": "preservation-original-staged-copy"
+        },
+        {
+          "fileName": "CTI-037-ORG-2.jpg",
+          "driveFileId": "11B4J_SepDoLgEIAICE0chKFJKzI8Sme9",
+          "driveUrl": "https://drive.google.com/file/d/11B4J_SepDoLgEIAICE0chKFJKzI8Sme9/view",
+          "sourceFileName": "I-581-01-15-029.jpg",
+          "role": "preservation-original-staged-copy"
+        },
+        {
+          "fileName": "CTI-037-ORG-3.jpg",
+          "driveFileId": "1NTVr5dn9UeViEA_hTJ2B7N-c9x2Xe89x",
+          "driveUrl": "https://drive.google.com/file/d/1NTVr5dn9UeViEA_hTJ2B7N-c9x2Xe89x/view",
+          "sourceFileName": "I-581-01-15-030.jpg",
+          "role": "preservation-original-staged-copy"
+        },
+        {
+          "fileName": "CTI-037-ORG-4.jpg",
+          "driveFileId": "1hT9bNB4SYZPnZpAdRch8GpgVZbGKlg3G",
+          "driveUrl": "https://drive.google.com/file/d/1hT9bNB4SYZPnZpAdRch8GpgVZbGKlg3G/view",
+          "sourceFileName": "I-581-01-15-032.jpg",
+          "role": "preservation-original-staged-copy"
+        }
+      ],
+      "stagingStatus": "four-originals-staged-in-google-drive; publication-pending"
     },
     {
       "id": "CTI-038",
