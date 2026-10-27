@@ -3408,10 +3408,31 @@
       "preservationStatus": "full-page-original-preserved-in-repository",
       "imageVersions": [
         {
+          "type": "ORG",
+          "version": 1,
+          "filename": "CTI-026-ORG-1.png",
+          "driveFileId": "1ZhrKHmRb-rQMXue13hdPByyccR_VYfQR",
+          "driveUrl": "https://drive.google.com/file/d/1ZhrKHmRb-rQMXue13hdPByyccR_VYfQR/view",
+          "description": "User-supplied full-page 2019 Jewish Journal scan; not an original standalone photograph",
+          "publicationStatus": "staged-in-drive; github-standardized-copy-pending"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "filename": "CTI-026-ENH-1.png",
+          "driveFileId": "1JE6jFsNEF_vZe0B9Ok3B_oLxTtRvHjQ7",
+          "driveUrl": "https://drive.google.com/file/d/1JE6jFsNEF_vZe0B9Ok3B_oLxTtRvHjQ7/view",
+          "description": "User-approved enhanced color photograph of Elliot and Doris Hershoff with Joanne Pressman",
+          "publicationStatus": "staged-in-drive; github-standardized-copy-pending"
+        },
+        {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-026-THM-1.png",
-          "derivedFrom": "assets/images/archive/CTI-026-2019-jewish-journal-photo.png"
+          "filename": "CTI-026-THM-1.png",
+          "driveFileId": "1zZXFOw74b506z8VkEAxxrEjfJwuuQhfn",
+          "driveUrl": "https://drive.google.com/file/d/1zZXFOw74b506z8VkEAxxrEjfJwuuQhfn/view",
+          "description": "Landscape thumbnail staged for archive/gallery presentation; verify faithful derivation before publication",
+          "publicationStatus": "staged-in-drive; github-standardized-copy-pending"
         },
         {
           "type": "ARTICLE",
@@ -3429,7 +3450,7 @@
         "retouched": true
       },
       "existingImageCandidate": "assets/images/archive/CTI-026-2019-jewish-journal-photo.png",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "staged-in-drive; publication-pending-verification",
       "originalStatus": "locally-preserved-photograph-original-publication-file-unverified",
       "assetInventory": {
         "sourceFiles": [
@@ -3444,8 +3465,25 @@
           "assets/collections/CTI-026-THM-1.png",
           "assets/archive/originals/cti-2019-jewish-journal-article-original.jpg"
         ],
-        "sourceVerification": "full newspaper page supplied in conversation; binary file pending upload to repository",
-        "captionVerification": "printed photo caption checked against user-supplied 2019 Jewish Journal page scan"
+        "sourceVerification": "Full-page newspaper scan supplied and staged in Drive; distinct from photographic original; existing GitHub source retained",
+        "captionVerification": "printed photo caption checked against user-supplied 2019 Jewish Journal page scan",
+        "driveStagingFiles": [
+          {
+            "type": "ORG",
+            "filename": "CTI-026-ORG-1.png",
+            "driveFileId": "1ZhrKHmRb-rQMXue13hdPByyccR_VYfQR"
+          },
+          {
+            "type": "ENH",
+            "filename": "CTI-026-ENH-1.png",
+            "driveFileId": "1JE6jFsNEF_vZe0B9Ok3B_oLxTtRvHjQ7"
+          },
+          {
+            "type": "THM",
+            "filename": "CTI-026-THM-1.png",
+            "driveFileId": "1zZXFOw74b506z8VkEAxxrEjfJwuuQhfn"
+          }
+        ]
       },
       "captionProvenance": {
         "status": "verified-from-user-supplied-newspaper-page",
@@ -3485,6 +3523,11 @@
         "sourceImage": "assets/archive/originals/cti-2019-jewish-journal-article-original.jpg",
         "verification": "source-transcription-not-yet-proofread",
         "htmlDeletionSafe": true
+      },
+      "metadataReview": {
+        "status": "drive-assets-reconciled; publication-pending",
+        "date": "2026-10-27",
+        "notes": "Three Drive files verified by ID and parent folder. Existing GitHub paths preserved until planned migration. THM visual fidelity not independently verified."
       }
     },
     {
