@@ -1436,21 +1436,39 @@
       "citation": "",
       "attribution": "",
       "transcript": "EDITORIAL NOTE — Draft transcription pending comparison with the original newspaper clipping. Date: June 29, year tentatively inferred as 1986; not printed on supplied clipping. The restored image is an AI reconstruction, not a reliable source for exact lettering.\n\nPEABODY — Sunday, June 29, will be a big day at Congregation Tifereth Israel on Pierpont Street.\n\nIt will be what Joe Gibely II, congregation president, describes as “one of the most important and pleasurable milestones in the 64-year history of the synagogue.”\n\nThe Leo Gibely Study, presented by Rabbi Dov and Barbara Pikelny, will be dedicated and an open house, featuring the newly renovated function room on the first floor, will take place.\n\nEveryone is excited about the day’s events and delighted that “Uncle Leo” is being honored.\n\nFor the past three decades, octogenarian Leo Gibely has acted as spiritual advisor to the congregation. As the synagogue’s patriarch, he sets the religious standards and rules for the congregation, chants a portion of the service in the Sephardic style and maintains the continuity of the community.\n\n“Uncle Leo still conducts worship services with Rabbi and Barbara Pikelny and myself and it’s a pleasure to sit back and listen to him belt out tunes, Sephardic style, during the holidays. If you want to hear chanting like that, you’d have to visit Sephardic congregations in New York, Alabama, or Israel, and we look forward to it year after year. It’s more Turkish or Arabic sounding than what one expects from the conventional worship,” Joe Gibely said.\n\nWithout a doubt, Uncle Leo is the oldest member of the synagogue, which was established in February of 1922 by Jews from Constantinople, (now Istanbul) Turkey. The congregants are descendants of Jews who fled Spain during the Inquisition, 500 years ago. Their language, other than the religious language of Hebrew and the secular language of English, continues to be Ladino, which derives from the pure Castilian Spanish of their ancestors and includes a mixture of Greek, Turkish and now English.\n\n“As a child, ‘Uncle Leo’ Gibely (as he is known to everyone) received private tutoring in the Talmud because his parents were determined that he would never forget his heritage. When he was in Constantinople, he worked on Persian rugs — sewing and cutting. After arriving in the United States in 1916, he attended night school to learn English and met another Sephardic Jew, Esther, whom he married in 1923. They had four children, Joseph, Victor, Aaron and Rose and celebrated their golden wedding anniversary in 1973. Esther died the following year.\n\nGibely worked in the leather industry until his retirement from A.C. Lawrence in 1965; and in 1978, at the age of 77, he had a triple by-pass and valve operation for a very painful heart condition, according to his nephew, Joe, who adds, “Uncle Leo’s number one love, besides his family, is his total dedication to his synagogue.”\n\nJoe Gibely describes the congregation’s patriarch, as, “Truly and without fanfare, a man who best exemplifies that which is good in all of us and today, in this troubled world, more of his type would eradicate a good deal of the problems that beset us. He is God fearing, kind, sincere, honest, hard working, fair, understanding, amiable and above all, an outstanding American and a good Jew. Presentation of the study by Rabbi and Barbara couldn’t have a more deserving recipient.”\n\nIn addition to viewing the Leo Gibely Study, visitors will be able to view the other work recently completed at the synagogue. Two rooms, two closets and three alcoves have been transformed. The lavatories have been relocated; there is a new ceiling, new lights, new floor, new doors, a new and modern kitchen and new paneling.\n\n“All this and more was necessary for the beautiful and larger function room now on the first floor,” said an excited Joe Gibely, who adds, “One has to see it to believe it. It was a cooperative charity, determination and planning by the members of the congregation that brought this about.”",
-      "indexImage": "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg",
-      "archiveImage": "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg",
+      "indexImage": null,
+      "archiveImage": null,
       "pdf": null,
       "sourcePage": "historical-record.html?id=archive-1986-leo-gibely-study",
       "originalFilenames": [
-        "cti-1986-leo-gibely-newspaper-original.jpg"
+        "CTI-018-ORG-1.png"
       ],
-      "files": [],
-      "originalImage": "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg",
+      "files": [
+        {
+          "type": "ORG",
+          "driveId": "1PIoPbiiQRWR03Jql7ncpFtI4oVVPv7Kc",
+          "filename": "CTI-018-ORG-1.png"
+        },
+        {
+          "type": "ENH",
+          "driveId": "11KMcwlsg8UT7hZiXucdC55tI83LMf6Cs",
+          "filename": "CTI-018-ENH-1.png"
+        }
+      ],
+      "originalImage": null,
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": null,
-      "preservationStatus": "article-only-original-pending-verification",
-      "imageVersions": [],
+      "preservationStatus": "original-and-enhanced-staged-pending-publication",
+      "imageVersions": [
+        {
+          "type": "ENH",
+          "version": 1,
+          "driveId": "11KMcwlsg8UT7hZiXucdC55tI83LMf6Cs",
+          "method": "AI-generated straightened grayscale reconstruction; lettering requires verification against original"
+        }
+      ],
       "thumbnailSpecification": {
         "width": 800,
         "height": 600,
@@ -1461,16 +1479,19 @@
       },
       "existingImageCandidate": null,
       "thumbnailStatus": "not-required-article-only",
-      "originalStatus": "original-file-path-present-authenticity-unverified",
+      "originalStatus": "user-provided-authentic-clipping-photo-staged",
       "assetInventory": {
         "sourceFiles": [
-          "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg"
+          "https://drive.google.com/file/d/1PIoPbiiQRWR03Jql7ncpFtI4oVVPv7Kc/view"
         ],
-        "presentationFiles": [],
+        "presentationFiles": [
+          "https://drive.google.com/file/d/11KMcwlsg8UT7hZiXucdC55tI83LMf6Cs/view"
+        ],
         "fileReferences": [
-          "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg"
+          "CTI-018-ORG-1.png",
+          "CTI-018-ENH-1.png"
         ],
-        "sourceVerification": "Original article path retained; scan authenticity and legibility still require verification",
+        "sourceVerification": "Original user-provided photograph of clipping verified and staged",
         "captionVerification": "No separate portrait caption"
       },
       "captionProvenance": {
@@ -1480,7 +1501,7 @@
       },
       "articleHtml": "",
       "articleMigrationSource": "historical-record.html",
-      "archiveItemImage": "assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg",
+      "archiveItemImage": null,
       "relatedRecords": [],
       "binderContext": "Originally filed near CTI-013; no documented historical relationship. Not linked.",
       "portraitResearchStatus": "No verified Leo portrait attached; add only after exact identification."
