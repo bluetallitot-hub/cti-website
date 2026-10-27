@@ -3882,7 +3882,17 @@
           "role": "preservation-original-staged-copy"
         }
       ],
-      "stagingStatus": "four-originals-staged-in-google-drive; publication-pending"
+      "stagingStatus": "four-originals-staged-in-google-drive; publication-pending",
+      "enhancedImages": [
+        {
+          "fileName": "CTI-037-ENH-1.png",
+          "driveFileId": "10eXphIVoA2TJn9Y4Zfj9FoWf7Oe-iuqg",
+          "driveUrl": "https://drive.google.com/file/d/10eXphIVoA2TJn9Y4Zfj9FoWf7Oe-iuqg/view",
+          "sourceFileName": "CTI-037-ORG-2.jpg",
+          "role": "enhanced-main-image",
+          "reviewStatus": "pending-inscription-verification"
+        }
+      ]
     },
     {
       "id": "CTI-038",
