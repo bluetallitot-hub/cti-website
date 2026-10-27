@@ -3558,11 +3558,31 @@
       "preservationStatus": "awaiting-original-verification",
       "imageVersions": [
         {
+          "type": "ORG",
+          "version": 1,
+          "filename": "CTI-027-ORG-1.png",
+          "driveFileId": "1OlKXnnKrokXLiZ7D95AZqpVs2uuuG3iP",
+          "driveUrl": "https://drive.google.com/file/d/1OlKXnnKrokXLiZ7D95AZqpVs2uuuG3iP/view",
+          "description": "Original February 10, 2022 Weekly News article scan, not original event photograph",
+          "publicationStatus": "staged-in-drive; github-standardized-copy-pending"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "filename": "CTI-027-ENH-1.png",
+          "driveFileId": "1Uq3y9ZeBcr2j_c2V8PabdMg6P3fpSnaO",
+          "driveUrl": "https://drive.google.com/file/d/1Uq3y9ZeBcr2j_c2V8PabdMg6P3fpSnaO/view",
+          "description": "AI-enhanced reconstruction of user-supplied June 12, 2022 officers-and-honorees group photograph",
+          "publicationStatus": "staged-in-drive; github-standardized-copy-pending"
+        },
+        {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-027-THM-1.png",
-          "derivedFrom": "assets/images/anniversaries/cti-2022-building-ai-retouched.jpg",
-          "method": "full-image contain with softened background"
+          "filename": "CTI-027-THM-1.png",
+          "driveFileId": "1ckZq5oTHX7z12QwpwiQ83arp34NXdmeS",
+          "driveUrl": "https://drive.google.com/file/d/1ckZq5oTHX7z12QwpwiQ83arp34NXdmeS/view",
+          "description": "800x600 faithful crop of enhanced group image",
+          "publicationStatus": "staged-in-drive; github-standardized-copy-pending"
         },
         {
           "type": "ARTICLE",
@@ -3580,7 +3600,7 @@
         "retouched": true
       },
       "existingImageCandidate": "assets/images/anniversaries/cti-2022-building-ai-retouched.jpg",
-      "thumbnailStatus": "local-file-linked",
+      "thumbnailStatus": "800x600 thumbnail staged in Drive; github-publication-pending",
       "originalStatus": "unverified-do-not-count-as-confirmed-absent",
       "assetInventory": {
         "sourceFiles": [
@@ -3596,7 +3616,24 @@
           "assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg"
         ],
         "sourceVerification": "no confirmed original-source file linked",
-        "captionVerification": "printed caption not transcribed"
+        "captionVerification": "printed caption not transcribed",
+        "driveStagingFiles": [
+          {
+            "type": "ORG",
+            "filename": "CTI-027-ORG-1.png",
+            "driveFileId": "1OlKXnnKrokXLiZ7D95AZqpVs2uuuG3iP"
+          },
+          {
+            "type": "ENH",
+            "filename": "CTI-027-ENH-1.png",
+            "driveFileId": "1Uq3y9ZeBcr2j_c2V8PabdMg6P3fpSnaO"
+          },
+          {
+            "type": "THM",
+            "filename": "CTI-027-THM-1.png",
+            "driveFileId": "1ckZq5oTHX7z12QwpwiQ83arp34NXdmeS"
+          }
+        ]
       },
       "captionProvenance": {
         "status": "no-existing-caption",
@@ -3640,7 +3677,7 @@
         "filename": "CTI-027-ORG-1.png",
         "source": "user-supplied photograph in conversation",
         "eventDate": "2022-06-12",
-        "status": "awaiting-drive-staging",
+        "status": "user-original-event-photo-supplied-separately; article-scan-designated-ORG-by-user; event-photo-not-staged",
         "peopleLeftToRight": [
           "Jay Polonsky",
           "Betty Polonsky",
@@ -3651,9 +3688,9 @@
         ]
       },
       "metadataReview": {
-        "status": "new event photograph identified; image staging pending",
+        "status": "all-three-images-staged-in-drive",
         "date": "2026-10-27",
-        "notes": "Article and transcript preserved. Existing image paths left unchanged until photo is staged and published."
+        "notes": "Article scan, AI-enhanced group photograph, and cropped thumbnail staged; legacy GitHub asset paths unchanged until migration. User's original unenhanced event photograph is separately available in conversation."
       }
     },
     {
