@@ -155,6 +155,38 @@ if(url.pathname==='/meldathos/manage'&&['GET','POST'].includes(request.method)){
  record.ids=ids;record.serviceMonths=b.serviceMonths||[];await subs.put(key,JSON.stringify(record));return respond({ok:true});
 }
 
+// Public double-opt-in subscriptions; never add an address until its email link is confirmed.
+if((url.pathname==='/subscriptions/request'||url.pathname==='/subscriptions/confirm')&&request.method==='POST'){
+ const store=env.CTI_MAILING_LISTS;
+ if(!store||!env.RESEND_API_KEY||!env.CTI_ANNOUNCE_EMAIL_FROM)return respond({error:'Subscription service is not configured'},503);
+ const b=await request.json().catch(()=>null);
+ if(!b||typeof b!=='object')return respond({error:'Invalid request'},400);
+ if(url.pathname==='/subscriptions/request'){
+  const kind=b.kind, email=String(b.email||'').trim().toLowerCase(), name=String(b.name||'').trim();
+  if(!['torah','newsletter'].includes(kind)||b.consent!==true||name.length<1||name.length>120||email.length>254||!(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)))return respond({error:'Valid name, email, and consent are required'},400);
+  const throttle='subscription-rate:'+kind+':'+email;
+  if(await store.get(throttle))return respond({ok:true,message:'If this address can receive mail, a confirmation link has been sent.'});
+  const confirmation=crypto.randomUUID()+crypto.randomUUID();
+  await store.put('subscription-pending:'+confirmation,JSON.stringify({kind,email,name}),{expirationTtl:86400});
+  await store.put(throttle,'1',{expirationTtl:120});
+  const link=siteOrigin(env)+'/subscribe-'+(kind==='torah'?'torah':'newsletter')+'.html?confirm='+encodeURIComponent(confirmation);
+  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:[email],subject:'Confirm your CTI '+(kind==='torah'?"D’var Torah":'newsletter')+' subscription',text:'Hello '+name+',\\n\\nPlease confirm your Congregation Tifereth Israel email subscription by opening this link within 24 hours:\\n'+link+'\\n\\nIf you did not request this, ignore this message.'})});
+  if(!response.ok){await store.delete('subscription-pending:'+confirmation);return respond({error:'Unable to send confirmation email'},503)}
+  return respond({ok:true,message:'Check your email for a confirmation link.'});
+ }
+ const confirmation=String(b.token||'');
+ if(!/^[a-f0-9-]{72}$/.test(confirmation))return respond({error:'Invalid confirmation link'},400);
+ const key='subscription-pending:'+confirmation,pending=await store.get(key,'json');
+ if(!pending)return respond({error:'Confirmation link expired or already used'},410);
+ const listKey=pending.kind==='newsletter'?'congregation':'torah';
+ const existing=JSON.parse(await store.get(listKey)||'[]');
+ if(!Array.isArray(existing))return respond({error:'Subscription list unavailable'},503);
+ const emails=[...new Set([...existing.filter(x=>typeof x==='string'),pending.email].map(x=>x.trim().toLowerCase()).filter(Boolean))].sort();
+ await store.put(listKey,JSON.stringify(emails));
+ await store.delete('unsubscribed:'+pending.email);
+ await store.delete(key);
+ return respond({ok:true,message:'Your subscription is confirmed.'});
+}
 const role=await verify(request,env);
 if(url.pathname==='/meldathos/subscribers'&&request.method==='GET'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
