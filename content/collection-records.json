@@ -1888,12 +1888,6 @@
       ],
       "recordConnections": [
         {
-          "id": "CTI-032",
-          "type": "probable-same-event",
-          "evidence": "Photo handwritten caption dated 3/1/79 names Joseph Gibely and Nathan Cass; address dated March 1, 1979",
-          "verification": "same-event-not-yet-confirmed-from-image"
-        },
-        {
           "id": "CTI-014",
           "type": "historical-reference",
           "evidence": "Speech explicitly references CTI's golden anniversary seven years earlier"
@@ -1924,7 +1918,6 @@
       "thumbnailDriveId": "1GXb9CGwcJG1Kd46YSo7OamNje84YLJmP",
       "thumbnailDriveUrl": "https://drive.google.com/file/d/1GXb9CGwcJG1Kd46YSo7OamNje84YLJmP/view",
       "imageProvenance": {
-        "sourceRecord": "CTI-032 (consolidated)",
         "sourceArchive": "Jewish Historical Center, I-581, Box 1, Folder 15",
         "sourceFile": "I-581-01-15-004.jpg",
         "sourceDriveId": "1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla",
@@ -1932,9 +1925,6 @@
         "identityVerification": "handwritten annotation; association with speech date is strong but not independently documented",
         "preservation": "unaltered source remains on Google Drive; IMG is derivative copy; thumbnail crops handwritten margin"
       },
-      "consolidatedRecords": [
-        "CTI-032"
-      ],
       "publicationStatus": "speech-pdf-in-github; transcription-present-unverified-awaiting-joanne; enhanced-images-staged-in-drive-not-published",
       "transcriptionStatus": "unverified-awaiting-joanne-proofreading",
       "enhancedImage": {
