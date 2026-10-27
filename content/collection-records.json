@@ -1697,7 +1697,7 @@
         "I-581-01-15-035-web.jpg"
       ],
       "files": [],
-      "originalImage": "assets/archive/originals/I-581-01-15-035-web.jpg",
+      "originalImage": "https://drive.google.com/file/d/1UgsvnxhNiH8S1R0GF1GQGH8YTEzc8k9v/view",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
@@ -1707,8 +1707,11 @@
         {
           "type": "ORG",
           "version": 1,
-          "path": "assets/archive/originals/I-581-01-15-035-web.jpg",
-          "note": "Existing source scan or program cover; printed caption not yet transcribed"
+          "fileName": "CTI-021-ORG-1.jpg",
+          "driveFileId": "1UgsvnxhNiH8S1R0GF1GQGH8YTEzc8k9v",
+          "driveUrl": "https://drive.google.com/file/d/1UgsvnxhNiH8S1R0GF1GQGH8YTEzc8k9v/view",
+          "sourceFileName": "I-581-01-15-035.jpg",
+          "note": "Unmodified original archival article scan; source retained"
         },
         {
           "type": "THM",
