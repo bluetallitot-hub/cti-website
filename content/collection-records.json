@@ -2178,8 +2178,8 @@
         "plainTextField": "transcript",
         "sourcePage": "press/press-2012-milestones.html",
         "sourceImage": "assets/images/anniversaries/cti-2012-shuls-mark-historic-milestones.jpg",
-        "verification": "user-supplied transcription with explicit gaps; not complete article",
-        "htmlDeletionSafe": false
+        "verification": "approved user-provided transcription; two gaps explicitly marked",
+        "htmlDeletionSafe": true
       },
       "originalImageDriveId": "1QfUFX1Gq4jSPkIOawuLenzZS7oTl1P8q",
       "enhancedImageDriveId": "1cIAfwXiuWtCpYt5nP3PS_qDVWgyLe8iB",
@@ -2222,12 +2222,14 @@
       "timelineTitle": "Congregation Tifereth Israel Marks 90 Years",
       "timelineDate": "2012-10-11",
       "metadataStatus": "complete",
-      "transcriptStatus": "transcribed-from-user-supplied-text; two truncated passages marked; remainder not supplied",
-      "editorialStatus": "pending-article-transcription",
-      "publicationStatus": "pending-transcription-and-final-asset-upload",
+      "transcriptStatus": "approved-with-two-explicit-source-gaps",
+      "editorialStatus": "complete-pending-upload",
+      "publicationStatus": "pending-final-asset-upload",
       "transcriptCaption": "To raise money, Peabody's Tifereth Israel has compiled a cookbook of favorite Sephardic recipes, selling for $12.",
       "transcriptSource": "User-supplied transcription, October 27, 2026",
-      "transcriptEditorialNote": "Text normalized for line breaks, punctuation, and obvious broken hyphenation. The opening Linsky quotation ends at 'of' and the final Becker passage ends at 'but she saw'; both gaps marked explicitly. Cookbook sentence kept as separate caption."
+      "transcriptEditorialNote": "Text normalized for line breaks, punctuation, and obvious broken hyphenation. The opening Linsky quotation ends at 'of' and the final Becker passage ends at 'but she saw'; both gaps marked explicitly. Cookbook sentence kept as separate caption. Editorially approved with both source gaps retained and clearly marked; no missing text invented.",
+      "editorialStatusLabel": "Complete — Pending Upload",
+      "editorialApproval": "approved-with-marked-transcription-gaps"
     },
     {
       "id": "CTI-025",
