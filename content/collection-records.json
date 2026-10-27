@@ -1733,6 +1733,22 @@
           "driveId": "1EFvfTp07S-ldyna-tQGYI-2G5tQanE2-",
           "width": 800,
           "height": 600
+        },
+        {
+          "type": "IMG",
+          "filename": "CTI-016-IMG-1-v2.jpg",
+          "driveId": "1tHTfrfyIn8O1ZREMZSSneHh0aZznbb2a",
+          "url": "https://drive.google.com/file/d/1tHTfrfyIn8O1ZREMZSSneHh0aZznbb2a/view",
+          "status": "staged-in-drive"
+        },
+        {
+          "type": "THM",
+          "filename": "CTI-016-THM-v2.png",
+          "driveId": "1GXb9CGwcJG1Kd46YSo7OamNje84YLJmP",
+          "url": "https://drive.google.com/file/d/1GXb9CGwcJG1Kd46YSo7OamNje84YLJmP/view",
+          "width": 800,
+          "height": 600,
+          "status": "staged-in-drive"
         }
       ],
       "originalImage": "assets/archive/originals/cti-1979-gibely-address-original-page.jpg",
@@ -1932,7 +1948,21 @@
         "CTI-032"
       ],
       "publicationStatus": "photo-and-thumbnail-staged-in-drive; github-upload-and-transcription-repair-pending",
-      "transcriptionStatus": "requires-manual-proofreading-ocr-errors"
+      "transcriptionStatus": "requires-manual-proofreading-ocr-errors",
+      "enhancedImage": {
+        "filename": "CTI-016-IMG-1-v2.jpg",
+        "driveId": "1tHTfrfyIn8O1ZREMZSSneHh0aZznbb2a",
+        "url": "https://drive.google.com/file/d/1tHTfrfyIn8O1ZREMZSSneHh0aZznbb2a/view",
+        "status": "staged-in-drive"
+      },
+      "enhancedThumbnail": {
+        "filename": "CTI-016-THM-v2.png",
+        "driveId": "1GXb9CGwcJG1Kd46YSo7OamNje84YLJmP",
+        "url": "https://drive.google.com/file/d/1GXb9CGwcJG1Kd46YSo7OamNje84YLJmP/view",
+        "width": 800,
+        "height": 600,
+        "status": "staged-in-drive"
+      }
     },
     {
       "id": "CTI-017",
