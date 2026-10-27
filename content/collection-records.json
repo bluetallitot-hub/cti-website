@@ -747,93 +747,6 @@
       "editorialApproval": "approved"
     },
     {
-      "id": "CTI-012",
-      "collection": "gallery",
-      "status": "active",
-      "title": "Shofar Gift to Congregation Tifereth Israel (2012)",
-      "caption": "Elliot Hershoff, Rabbi Howard Kosovske, and Joanne Pressman accept an Israeli shofar on behalf of Congregation Tifereth Israel from Joanne (Gibely) Smadar, who was living in Israel.",
-      "date": "2012",
-      "description": "Group portrait associated with a 2012 shofar gift in the CTI historical collection.",
-      "source": "CTI historical photograph collection (individual provenance unverified)",
-      "citation": "",
-      "attribution": "Photo courtesy of Joanne Pressman",
-      "transcript": "",
-      "indexImage": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
-      "archiveImage": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
-      "pdf": null,
-      "sourcePage": null,
-      "originalFilenames": [
-        "cti-2012-shofar-gift-group-portrait.png"
-      ],
-      "files": [],
-      "originalImage": null,
-      "originalImageCaption": null,
-      "originalCaptionCorrections": [],
-      "restoredImage": null,
-      "thumbnailImage": "assets/collections/CTI-012-THM-1.png",
-      "preservationStatus": "enhanced-presentation-and-original-newspaper-clipping-photographs-preserved-in-google-drive",
-      "imageVersions": [
-        {
-          "type": "THM",
-          "version": 1,
-          "path": "assets/collections/CTI-012-THM-1.png",
-          "derivedFrom": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
-          "method": "near-white-border-trim and 4:3 center crop; no text added"
-        },
-        {
-          "type": "ENH",
-          "version": 1,
-          "fileName": "CTI-012-ENH-1.png",
-          "driveId": "1YJ5EGxf4yB6RwplO-0S2InaPlqx6hz69",
-          "method": "previously prepared captioned presentation image; not an untouched photographic original"
-        }
-      ],
-      "thumbnailSpecification": {
-        "width": 800,
-        "height": 600,
-        "aspectRatio": "4:3",
-        "noAddedText": true,
-        "background": "none",
-        "retouched": false
-      },
-      "existingImageCandidate": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
-      "thumbnailStatus": "regenerated-800x600-review-source-content",
-      "originalStatus": "uncaptioned-source-photograph-not-yet-located",
-      "assetInventory": {
-        "sourceFiles": [],
-        "presentationFiles": [
-          "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
-          "assets/collections/CTI-012-THM-1.png"
-        ],
-        "fileReferences": [
-          "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
-          "assets/collections/CTI-012-THM-1.png"
-        ],
-        "sourceVerification": "no confirmed original-source file linked",
-        "captionVerification": "printed caption not transcribed"
-      },
-      "captionProvenance": {
-        "status": "source-caption-confirmed-from-newspaper-clipping",
-        "note": "Names, event and Joanne Pressman credit supported by photographed 2012 Jewish Journal clipping",
-        "verbatimOriginalCaption": false
-      },
-      "enhancedImageDriveId": null,
-      "supportingDocuments": [
-        {
-          "fileName": "CTI-012-DOC-1.jpeg",
-          "driveId": "1DbSnGAqlr3O-K1U8tM4DDzR1ryo7OskY",
-          "description": "Photograph of October 11, 2012 Jewish Journal article, Shuls Mark Historic Milestones; contains shofar group photo and caption"
-        },
-        {
-          "fileName": "CTI-012-DOC-2.jpeg",
-          "driveId": "1rNY4dVedqKyhddbsW8BI5gXNgIIggXTh",
-          "description": "Photograph of newspaper clipping Peabody’s Tifereth Israel to mark its 100th anniversary"
-        }
-      ],
-      "relatedArchiveId": "CTI-024",
-      "publicationNotes": "Shofar presentation image and newspaper source materials transferred to CTI-024 per editorial instruction; Gallery record retained for now to avoid broken links; review whether to retire it."
-    },
-    {
       "id": "CTI-013",
       "collection": "gallery",
       "status": "active",
@@ -2166,19 +2079,20 @@
       "collection": "archive",
       "status": "active",
       "title": "Shuls Mark Historic Milestones",
-      "caption": "",
+      "caption": "Shofar presentation: Elliot Hershoff, Rabbi Howard Kosovske, and Joanne Pressman accept an Israeli shofar from Joanne (Gibely) Smadar on behalf of Congregation Tifereth Israel.",
       "date": "2012",
       "description": "2012 Jewish Journal coverage of historic synagogue milestones.",
       "source": "Jewish Journal",
       "citation": "",
-      "attribution": "",
+      "attribution": "Shofar presentation photograph courtesy of Joanne Pressman",
       "transcript": "Archive notes\n\nThe Jewish Journal feature marks historic synagogue milestones on the North Shore, including Congregation Tifereth Israel’s 90th anniversary.\n\nThe CTI-relevant portion is preserved on this page with the surviving scan rather than sending readers away from the congregation’s archive.\n\nA complete line-by-line transcription is still being verified.\n\nCTI 90th Anniversary Program (2012)\n\nView the 2012 anniversary program cover\n\nView the original, unedited program photograph",
       "indexImage": "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
       "archiveImage": "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
       "pdf": null,
       "sourcePage": "press-2012-milestones.html",
       "originalFilenames": [
-        "cti-2012-90th-anniversary-program-cropped.jpg"
+        "cti-2012-90th-anniversary-program-cropped.jpg",
+        "cti-2012-shofar-gift-group-portrait.png"
       ],
       "files": [],
       "originalImage": "CTI-024-ORG-1.jpeg",
@@ -2235,16 +2149,25 @@
       "thumbnailStatus": "800x600-saved-to-drive",
       "originalStatus": "user-supplied-source-clipping-preserved",
       "assetInventory": {
-        "sourceFiles": [],
+        "sourceFiles": [
+          "CTI-024-ORG-1.jpeg",
+          "CTI-024-ORG-2.jpeg"
+        ],
         "presentationFiles": [
           "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
-          "assets/collections/CTI-024-THM-1.png"
+          "assets/collections/CTI-024-THM-1.png",
+          "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
+          "assets/collections/CTI-012-THM-1.png",
+          "CTI-024-ENH-1.png",
+          "CTI-024-THM-1.png"
         ],
         "fileReferences": [
           "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
-          "assets/collections/CTI-024-THM-1.png"
+          "assets/collections/CTI-024-THM-1.png",
+          "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
+          "assets/collections/CTI-012-THM-1.png"
         ],
-        "sourceVerification": "no confirmed original-source file linked",
+        "sourceVerification": "2012 newspaper source photograph saved to Drive; separate centennial clipping requires reassignment",
         "captionVerification": "printed caption not transcribed"
       },
       "captionProvenance": {
@@ -2279,7 +2202,22 @@
           "driveId": "1B2Wkbg7Us3ux2Q_2XHamJcjdv2hooaLM",
           "description": "Separate Peabody’s Tifereth Israel to mark its 100th anniversary clipping; retained as associated source pending correct article assignment"
         }
-      ]
+      ],
+      "relatedGalleryImages": [
+        {
+          "description": "2012 shofar presentation group portrait, formerly cataloged as CTI-012",
+          "caption": "Elliot Hershoff, Rabbi Howard Kosovske, and Joanne Pressman accept an Israeli shofar on behalf of Congregation Tifereth Israel from Joanne (Gibely) Smadar, who was living in Israel.",
+          "attribution": "Photo courtesy of Joanne Pressman",
+          "originalRepositoryPath": "assets/images/gallery/cti-2012-shofar-gift-group-portrait.png",
+          "formerThumbnailRepositoryPath": "assets/collections/CTI-012-THM-1.png",
+          "enhancedDriveId": "1cIAfwXiuWtCpYt5nP3PS_qDVWgyLe8iB",
+          "thumbnailDriveId": "1mOqeCP02e3OWJx5chQztTDtWYaqTeu1N"
+        }
+      ],
+      "legacyRecordIds": [
+        "CTI-012"
+      ],
+      "migrationNotes": "Former CTI-012 Gallery record merged into CTI-024; source caption, attribution, existing GitHub file references and staging assets retained. Original uncaptained shofar photograph has not been located. Old GitHub files retained until final site cleanup."
     },
     {
       "id": "CTI-025",
