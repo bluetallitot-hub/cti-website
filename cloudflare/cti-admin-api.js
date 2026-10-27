@@ -163,14 +163,14 @@ if((url.pathname==='/subscriptions/request'||url.pathname==='/subscriptions/conf
  if(!b||typeof b!=='object')return respond({error:'Invalid request'},400);
  if(url.pathname==='/subscriptions/request'){
   const kind=b.kind, email=String(b.email||'').trim().toLowerCase(), name=String(b.name||'').trim();
-  if(!['torah','newsletter'].includes(kind)||b.consent!==true||name.length<1||name.length>120||email.length>254||!(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)))return respond({error:'Valid name, email, and consent are required'},400);
+  if(!['torah','newsletter'].includes(kind)||b.consent!==true||name.length<1||name.length>120||email.length>254||!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)))return respond({error:'Valid name, email, and consent are required'},400);
   const throttle='subscription-rate:'+kind+':'+email;
   if(await store.get(throttle))return respond({ok:true,message:'If this address can receive mail, a confirmation link has been sent.'});
   const confirmation=crypto.randomUUID()+crypto.randomUUID();
   await store.put('subscription-pending:'+confirmation,JSON.stringify({kind,email,name}),{expirationTtl:86400});
   await store.put(throttle,'1',{expirationTtl:120});
   const link=siteOrigin(env)+'/subscribe-'+(kind==='torah'?'torah':'newsletter')+'.html?confirm='+encodeURIComponent(confirmation);
-  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:[email],subject:'Confirm your CTI '+(kind==='torah'?"D’var Torah":'newsletter')+' subscription',text:'Hello '+name+',\\n\\nPlease confirm your Congregation Tifereth Israel email subscription by opening this link within 24 hours:\\n'+link+'\\n\\nIf you did not request this, ignore this message.'})});
+  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:[email],subject:'Confirm your CTI '+(kind==='torah'?"D’var Torah":'newsletter')+' subscription',text:'Hello '+name+',\n\nPlease confirm your Congregation Tifereth Israel email subscription by opening this link within 24 hours:\n'+link+'\n\nIf you did not request this, ignore this message.'})});
   if(!response.ok){await store.delete('subscription-pending:'+confirmation);return respond({error:'Unable to send confirmation email'},503)}
   return respond({ok:true,message:'Check your email for a confirmation link.'});
  }
