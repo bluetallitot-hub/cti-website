@@ -1724,14 +1724,14 @@
         },
         {
           "type": "IMG",
-          "filename": "CTI-016-IMG-1-v2.jpg",
+          "filename": "CTI-016-IMG-1.jpg",
           "driveId": "1tHTfrfyIn8O1ZREMZSSneHh0aZznbb2a",
           "url": "https://drive.google.com/file/d/1tHTfrfyIn8O1ZREMZSSneHh0aZznbb2a/view",
           "status": "staged-in-drive"
         },
         {
           "type": "THM",
-          "filename": "CTI-016-THM-v2.png",
+          "filename": "CTI-016-THM-1.png",
           "driveId": "1GXb9CGwcJG1Kd46YSo7OamNje84YLJmP",
           "url": "https://drive.google.com/file/d/1GXb9CGwcJG1Kd46YSo7OamNje84YLJmP/view",
           "width": 800,
@@ -1938,13 +1938,13 @@
       "publicationStatus": "speech-pdf-in-github; transcription-present-unverified-awaiting-joanne; enhanced-images-staged-in-drive-not-published",
       "transcriptionStatus": "unverified-awaiting-joanne-proofreading",
       "enhancedImage": {
-        "filename": "CTI-016-IMG-1-v2.jpg",
+        "filename": "CTI-016-IMG-1.jpg",
         "driveId": "1tHTfrfyIn8O1ZREMZSSneHh0aZznbb2a",
         "url": "https://drive.google.com/file/d/1tHTfrfyIn8O1ZREMZSSneHh0aZznbb2a/view",
         "status": "staged-in-drive"
       },
       "enhancedThumbnail": {
-        "filename": "CTI-016-THM-v2.png",
+        "filename": "CTI-016-THM-1.png",
         "driveId": "1GXb9CGwcJG1Kd46YSo7OamNje84YLJmP",
         "url": "https://drive.google.com/file/d/1GXb9CGwcJG1Kd46YSo7OamNje84YLJmP/view",
         "width": 800,
@@ -1952,12 +1952,12 @@
         "status": "staged-in-drive"
       },
       "canonicalAssetNames": {
-        "mainImage": "CTI-016-IMG-1-v2.jpg",
-        "thumbnail": "CTI-016-THM-v2.png",
+        "mainImage": "CTI-016-IMG-1.jpg",
+        "thumbnail": "CTI-016-THM-1.png",
         "sourceScan": "I-581-01-15-004.jpg",
         "speechPdf": "cti-1979-joseph-gibely-address.pdf"
       },
-      "assetNamingNotes": "Google Drive filenames checked 2026-10-27: enhanced image and thumbnail retain -v2 suffix; prior unenhanced files remain in Drive but are excluded from active CTI-016 asset inventory. Do not claim rename/deletion until Drive operations succeed."
+      "assetNamingNotes": "2026-10-27: verified enhanced files renamed in Google Drive to CTI-016-IMG-1.jpg and CTI-016-THM-1.png. Superseded unenhanced copies renamed DO-NOT-USE; not part of active record. GitHub binary assets not yet migrated."
     },
     {
       "id": "CTI-017",
