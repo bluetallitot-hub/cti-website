@@ -188,12 +188,14 @@
       "hebrewYearOfDeath": 5771,
       "dateOfDeath": "2011-08-13",
       "rememberedBy": "",
-      "biography": "Sophie (Havian) Pernitchi was part of the interrelated Havian and Pernitchi families of Peabody.",
+      "biography": "Sophie Pernitchi (March 19, 1921–August 13, 2011) was memorialized by Stanetsky-Hymanson Memorial Chapel in Salem, Massachusetts. She was part of the Havian and Pernitchi families of Peabody.",
       "photo": "",
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Stanetsky obituary and death index; 2011-08-13, Hebrew year 5771. Direct source URL not included in pasted handoff for this record; retain source verification task."
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Stanetsky obituary and death index; 2011-08-13, Hebrew year 5771. Direct source URL not included in pasted handoff for this record; retain source verification task. 2026-10-27: Independently verified exact civil-to-Hebrew date and Stanetsky-Hymanson source https://www.dignitymemorial.com/obituaries/salem-ma/sophie-pernitchi-4777099. Relatives listed in obituary are family context, not a CTI memorial dedication. Photograph not verified.",
+      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/sophie-pernitchi-4777099",
+      "familyFromObituary": false
     },
     {
       "id": "newsletter-amy-macomber-av",
@@ -1106,14 +1108,15 @@
       "hebrewMonth": "Tishrei",
       "hebrewYearOfDeath": 5777,
       "dateOfDeath": "2016-10-29",
-      "rememberedBy": "Children Joshua and Jaclyn Gans; mother Libby Gans; siblings Ronald Hunter and William Gans",
-      "biography": "Michael Alan Gans was the son of Libby Gans and the late Nathan Gans. His obituary requested memorial donations to Congregation Tifereth Israel.",
+      "rememberedBy": "Children Joshua and Jaclyn Gans; mother Libby Gans; father the late Nathan Gans; brothers Ronald Hunter and William Gans",
+      "biography": "Michael Alan Gans (December 22, 1959–October 29, 2016) lived in Peabody. He was the son of Libby Gans and the late Nathan Gans, father of Joshua and Jaclyn Gans, and brother of Ronald Hunter and William Gans. His obituary requested memorial donations to Congregation Tifereth Israel.",
       "photo": "",
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Dignity Memorial / Stanetsky-Hymanson obituary; reported civil death 2016-10-29 and Hebrew year 5777; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification.",
-      "familyFromObituary": true
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Dignity Memorial / Stanetsky-Hymanson obituary; reported civil death 2016-10-29 and Hebrew year 5777; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. 2026-10-27: Independently verified exact civil-to-Hebrew date and Stanetsky-Hymanson source https://www.dignitymemorial.com/obituaries/salem-ma/michael-gans-7151763. Relatives listed in obituary are family context, not a CTI memorial dedication. Photograph not verified.",
+      "familyFromObituary": true,
+      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/michael-gans-7151763"
     },
     {
       "id": "newsletter-isaac-eskenazi-cheshvan",
@@ -1251,14 +1254,15 @@
       "hebrewMonth": "Cheshvan",
       "hebrewYearOfDeath": 5780,
       "dateOfDeath": "2019-11-07",
-      "rememberedBy": "Children William Gans and Ronald Hunter; late son Michael Gans",
-      "biography": "Libby Gans, widow of Nathan Gans, was the daughter of Simpson and Matilda Barber. She worked in human resources at Jordan Marsh, University Hospital and Digital Equipment and was a dedicated member of Congregation Tifereth Israel.",
+      "rememberedBy": "Children William Gans and Ronald Hunter; late son Michael Gans; sister Adele Schackelford; late brother Merrill Barber",
+      "biography": "Libby (Elaine Barber) Gans (June 19, 1932–November 7, 2019), of Peabody, was the widow of Nathan Gans and daughter of Simpson and Matilda Barber. She worked in human resources for Jordan Marsh, University Hospital and Digital Equipment Corporation and was a dedicated member of Congregation Tifereth Israel. Her children were William Gans, Ronald Hunter and the late Michael Gans.",
       "photo": "",
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Dignity Memorial / Stanetsky-Hymanson obituary; reported civil death 2019-11-07 and Hebrew year 5780; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification.",
-      "familyFromObituary": true
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. Research handoff 2026-10-23: Dignity Memorial / Stanetsky-Hymanson obituary; reported civil death 2019-11-07 and Hebrew year 5780; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. 2026-10-27: Independently verified exact civil-to-Hebrew date and Stanetsky-Hymanson source https://www.dignitymemorial.com/obituaries/salem-ma/libby-gans-8918149. Relatives listed in obituary are family context, not a CTI memorial dedication. Photograph not verified.",
+      "familyFromObituary": true,
+      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/libby-gans-8918149"
     },
     {
       "id": "newsletter-ethel-kosovske-cheshvan",
@@ -1413,14 +1417,15 @@
       "hebrewMonth": "Cheshvan",
       "hebrewYearOfDeath": 5774,
       "dateOfDeath": "2013-10-20",
-      "rememberedBy": "Libby Gans; Michael Gans; William Gans; Ronald Hunter",
-      "biography": "Nathan Gans was the husband of Libby (Barber) Gans and father of Michael and William Gans; the family was associated with Congregation Tifereth Israel.",
+      "rememberedBy": "Wife Libby (Elaine Barber) Gans; children Michael Gans, William Gans and Ronald Hunter",
+      "biography": "Nathan Gans (November 27, 1929–October 20, 2013), of Peabody, was raised in Dorchester, the son of Louis and Ida (Federman) Gans. A Franklin Institute graduate, he worked as a machinist. He was the husband of Libby (Elaine Barber) Gans and father of Michael and William Gans and Ronald Hunter. His obituary requested memorial donations to Congregation Tifereth Israel.",
       "photo": "",
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Salem News and Stanetsky obituary; 2013-10-20, Hebrew year 5774. Direct source URL not included in pasted handoff for this record; retain source verification task.",
-      "familyFromObituary": true
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-10-23 additional research handoff: Salem News and Stanetsky obituary; 2013-10-20, Hebrew year 5774. Direct source URL not included in pasted handoff for this record; retain source verification task. 2026-10-27: Independently verified exact civil-to-Hebrew date and Stanetsky-Hymanson source https://www.dignitymemorial.com/obituaries/salem-ma/nathan-gans-5706026. Relatives listed in obituary are family context, not a CTI memorial dedication. Photograph not verified.",
+      "familyFromObituary": true,
+      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/nathan-gans-5706026"
     },
     {
       "id": "newsletter-leon-eskenas-cheshvan",
