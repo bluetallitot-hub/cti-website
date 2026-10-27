@@ -1689,7 +1689,7 @@
       "citation": "April 14–20, 1995, p. 12; archival scan I-581-01-15-035",
       "attribution": "Judith S. Antonelli",
       "transcript": "",
-      "indexImage": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
+      "indexImage": "assets/collections/CTI-021-THM-1.png",
       "archiveImage": "assets/archive/originals/I-581-01-15-035-web.jpg",
       "pdf": null,
       "sourcePage": "archives/archive-1995-ashkenazi-sephardic-traditions.html",
@@ -1715,11 +1715,28 @@
           "note": "Unmodified original archival article scan; source retained"
         },
         {
+          "type": "DOC",
+          "version": 1,
+          "fileName": "CTI-021-DOC-1.png",
+          "driveFileId": "1GoW5OCxomsY__nhZ-9G-l2w6aFcvUNXy",
+          "driveUrl": "https://drive.google.com/file/d/1GoW5OCxomsY__nhZ-9G-l2w6aFcvUNXy/view",
+          "note": "User-supplied 1958 photograph, original as provided"
+        },
+        {
+          "type": "SEP",
+          "version": 1,
+          "fileName": "CTI-021-SEP-1.png",
+          "driveFileId": "154g2ob22shGokP_LjXDHPHuHBwkQlzHi",
+          "driveUrl": "https://drive.google.com/file/d/154g2ob22shGokP_LjXDHPHuHBwkQlzHi/view",
+          "note": "AI-assisted sepia enhancement derived from user-supplied photograph; preserve original separately"
+        },
+        {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-008-THM-1.png",
-          "derivedFrom": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
-          "method": "Index thumbnail from enhanced related 1958 Peabody Hebrew School photograph"
+          "fileName": "CTI-021-THM-1.png",
+          "driveFileId": "1XGcrLebea2M9tOBaE2QesLpqFTBHjN5v",
+          "driveUrl": "https://drive.google.com/file/d/1XGcrLebea2M9tOBaE2QesLpqFTBHjN5v/view",
+          "note": "800x600 landscape thumbnail of sepia-enhanced photograph"
         }
       ],
       "thumbnailSpecification": {
@@ -1786,7 +1803,7 @@
         "article-original",
         "supporting-documents"
       ],
-      "displayRelationshipNote": "Use the authentic 1958 Peabody Hebrew School photograph as the Archive headline/index image, clearly captioned as related regional history, not a photograph printed with the 1995 article. Sepia enhancement and 800x600 thumbnail are pending creation from the actual source image.",
+      "displayRelationshipNote": "Use sepia-enhanced 1958 Peabody Hebrew School photograph as headline with 800x600 thumbnail. It is related regional history, not a photograph printed with the 1995 article. Images are staged in Google Drive pending GitHub upload.",
       "archivalOriginals": {
         "verifiedRepositoryFiles": [
           {
@@ -1811,8 +1828,10 @@
           "sourcePath": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
           "visibility": "expanded",
           "linkLabel": "View 1958 Peabody Hebrew School Photograph",
-          "provenanceNote": "Related regional Jewish history; not documented as part of the 1995 article or as a CTI event. Standardized file copy pending.",
-          "legacyRecordId": "CTI-008"
+          "provenanceNote": "Original user-supplied 1958 photograph saved in Drive staging; regional Peabody Hebrew School history, not documented as a photograph in the 1995 article or as a CTI event.",
+          "legacyRecordId": "CTI-008",
+          "driveFileId": "1GoW5OCxomsY__nhZ-9G-l2w6aFcvUNXy",
+          "driveUrl": "https://drive.google.com/file/d/1GoW5OCxomsY__nhZ-9G-l2w6aFcvUNXy/view"
         }
       ],
       "imageProductionPlan": {
@@ -1824,7 +1843,9 @@
         "thumbnailAspectRatio": "4:3",
         "thumbnailMethod": "contain entire authentic photograph without cropping people or adding text",
         "enhancementRule": "Photographic tonal sepia conversion only; no generated people, objects, or invented historical details",
-        "status": "pending-authentic-source-processing"
+        "status": "staged-in-google-drive",
+        "sepiaDriveFileId": "154g2ob22shGokP_LjXDHPHuHBwkQlzHi",
+        "thumbnailDriveFileId": "1XGcrLebea2M9tOBaE2QesLpqFTBHjN5v"
       }
     },
     {
