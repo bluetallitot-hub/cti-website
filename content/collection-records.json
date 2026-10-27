@@ -333,7 +333,7 @@
     {
       "id": "CTI-008",
       "collection": "gallery",
-      "status": "inactive",
+      "status": "unapproved",
       "title": "Menorah lighting at the Peabody Hebrew School, 1958. Regional Jewish history, not identified as CTI.",
       "caption": "Menorah lighting at the Peabody Hebrew School, 1958. Regional Jewish history, not identified as CTI.",
       "date": "1958",
@@ -397,10 +397,14 @@
       "relatedRecords": [
         "CTI-021"
       ],
-      "relationshipNote": "1958 photograph retained within CTI-021 relatedHistoricalImages; not documented as appearing in the 1995 article.",
-      "duplicateOf": "CTI-021",
-      "recordIdentityNote": "Merged into CTI-021 as a related regional historical image, NOT an identical photograph or duplicate source. Legacy record retained for provenance and old links; no independent publication.",
-      "relatedArchiveRecordId": "CTI-021"
+      "relationshipNote": "Related regional Jewish history to CTI-021, but a distinct photograph and independent Gallery record; no assertion that it appeared in the CTI-021 article.",
+      "recordIdentityNote": "Independent Gallery photograph of a 1958 menorah lighting at Peabody Hebrew School; CTI affiliation unverified. Not a duplicate of CTI-021.",
+      "relatedArchiveRecordId": "CTI-021",
+      "editorialStatus": "in-progress",
+      "publicationNotes": [
+        "Verify original photograph and printed caption, provenance, and CTI relationship before public activation.",
+        "Prepare standardized ORG/ENH/THM assets in Drive staging."
+      ]
     },
     {
       "id": "CTI-009",
