@@ -3551,7 +3551,7 @@
       ],
       "files": [],
       "originalImage": "assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg",
-      "originalImageCaption": null,
+      "originalImageCaption": "Congregation Tifereth Israel has been a gathering place for Sephardic Jews since 1922.",
       "originalCaptionCorrections": [],
       "restoredImage": null,
       "thumbnailImage": "assets/collections/CTI-027-THM-1.png",
@@ -3651,9 +3651,10 @@
         ]
       },
       "captionProvenance": {
-        "status": "no-existing-caption",
-        "note": "No existing display caption; source caption not yet transcribed.",
-        "verbatimOriginalCaption": false
+        "status": "verified-against-original-scan",
+        "note": "Printed caption beneath Jakob Menendez building photograph in February 10, 2022 Weekly News article; distinct from the June 12 event photograph caption.",
+        "verbatimOriginalCaption": true,
+        "photoCredit": "Jakob Menendez"
       },
       "articleHtml": "<p class=\"archive-article-date\"><time>February 10, 2022</time></p><p>Congregation Tifereth Israel, a Sephardic synagogue, is turning 100 years old on Feb. 15.</p><p>To celebrate the occasion, the temple will be holding an anniversary dinner at the Continental Restaurant on Jun. 12, 2022. More details about the dinner will be released in their newsletter.</p><p>Congregation Tifereth Israel was founded on Feb. 15, 1922 by several Sephardic Jewish families who had immigrated to Peabody and Salem primarily from the country of Turkey.</p><p>Sephardic Jews, or Sephardim, are members of the Jewish Diaspora whose ancestors settled in the Iberian Peninsula, known today as Spain and Portugal. The term Sephardim comes from the Hebrew word Sefarad, or Spain.</p><p>Sephardic Jews also lived in Turkey and Greece and, in the early 1910s, some immigrated to the United States because of the uprisings, revolutions and wars in Turkey.</p><p>According to the Jewish Heritage Center of the North Shore, located in Lynn, one of the cities Sephardic Jewish immigrants were attracted to was Peabody, namely because of the leather industry. Many Sephardic settlers were shoemakers by trade.</p><p>“The prosperity of the town was thus attributed to the leather businesses, which continued to grow,” the Heritage Center said. “The more factories, the more businesses.”</p><p>As for Congregation Tifereth Israel, many of those same immigrants who fled Turkey went on to found the synagogue. They were forced to live as Catholics in Spain but carried their traditions in secret with their families. The Congregation’s foundation came at a time when Sephardic Jews were not as comfortable with the newly-formed Ashkenazi synagogue. Ashkenazi Jews are those who descend from Eastern European countries such as Poland, Russia or Lithuania.</p><p>Sephardic services vary from Ashkenazi styles; for instance, Sephardic Jews may speak Ladino — a Judeo-Spanish language — as opposed to Yiddish, a Judeo-Germanic language spoken by many Ashkenazi families.</p><p>Despite their differences, Tifereth Israel is on very good terms with the Ashkenazi community in Peabody and welcomes them into their congregation, as they too are family. From humble beginnings to finding community in Peabody, this congregation has lasted for 100 years and seeks to keep moving forward year after year, generation after generation.</p>",
       "articleMigrationSource": "press/press-2022-centennial.html",
@@ -3682,7 +3683,7 @@
         "plainTextField": "transcript",
         "sourcePage": "press/press-2022-centennial.html",
         "sourceImage": "assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg",
-        "verification": "source-transcription-not-yet-proofread",
+        "verification": "visually-compared-against-CTI-027-ORG-1-newspaper-scan-2026-10-27",
         "htmlDeletionSafe": true
       },
       "relatedRecords": [
@@ -3702,9 +3703,16 @@
         ]
       },
       "metadataReview": {
-        "status": "four-assets-staged-in-drive; transcription-proofreading-pending",
+        "status": "article-body-transcription-verified; four-assets-staged-in-drive; github-image-migration-pending",
         "date": "2026-10-27",
         "notes": "Both originals (newspaper scan and unedited event photo), enhanced group photo and thumbnail staged with Drive IDs. Legacy GitHub paths unchanged until migration."
+      },
+      "transcriptionStatus": "verified-against-original-newspaper-scan",
+      "transcriptionReview": {
+        "date": "2026-10-27",
+        "result": "body-text-word-for-word-match",
+        "sourceFilename": "CTI-027-ORG-1.png",
+        "notes": "Original article scan visually compared to database plain-text body. Printed headline and building-photo caption retained separately as metadata; line-wrap hyphenation normalized."
       }
     },
     {
