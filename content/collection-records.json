@@ -514,13 +514,13 @@
       "id": "CTI-010",
       "collection": "gallery",
       "status": "active",
-      "title": "April 7, 2024 — Joint Ladies Auxiliary brunch with Temple Emanu-El of Marblehead.",
-      "caption": "April 7, 2024 — Joint Ladies Auxiliary brunch with Temple Emanu-El of Marblehead.",
-      "date": "April 7, 2024",
-      "description": "Joint Ladies Auxiliary brunch with Temple Emanu-El of Marblehead on April 7, 2024.",
-      "source": "CTI historical photograph collection (individual provenance unverified)",
+      "title": "Ladies Auxiliary Brunch with Temple Emanu-El (2024)",
+      "caption": "Group photograph from the joint Ladies Auxiliary brunch with Temple Emanu-El of Marblehead, April 7, 2024.",
+      "date": "2024-04-07",
+      "description": "Group portrait taken at the joint Ladies Auxiliary brunch with Temple Emanu-El of Marblehead on April 7, 2024. Individual identities have not been independently confirmed.",
+      "source": "CTI historical photograph collection; original supplied by CTI for preservation on October 27, 2026",
       "citation": "",
-      "attribution": "",
+      "attribution": "Courtesy of Congregation Tifereth Israel",
       "transcript": "",
       "indexImage": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
       "archiveImage": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
@@ -532,7 +532,7 @@
       ],
       "files": [],
       "originalImage": "CTI-010-ORG-1.png",
-      "originalImageCaption": null,
+      "originalImageCaption": "Joint Ladies Auxiliary brunch with Temple Emanu-El of Marblehead, April 7, 2024 (event description from existing CTI catalog; not an inscription on the photograph).",
       "originalCaptionCorrections": [],
       "restoredImage": "CTI-010-ENH-1.png",
       "thumbnailImage": "CTI-010-THM-1.png",
@@ -576,7 +576,9 @@
         "aspectRatio": "4:3",
         "noAddedText": true,
         "background": "none",
-        "retouched": false
+        "retouched": true,
+        "method": "AI-assisted landscape composition; not a pixel-preserving crop",
+        "dimensionsVerified": false
       },
       "existingImageCandidate": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
       "thumbnailStatus": "saved-to-drive-staging-landscape-ai-assisted-derivative",
@@ -596,17 +598,37 @@
           "assets/collections/CTI-010-THM-1.png"
         ],
         "sourceVerification": "user-provided original uploaded to Drive staging",
-        "captionVerification": "printed caption not transcribed"
+        "captionVerification": "existing CTI event identification retained; individual names not verified"
       },
       "captionProvenance": {
-        "status": "existing-caption-pending-source-comparison",
-        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
+        "status": "existing-event-caption-accepted",
+        "note": "Event and date taken from pre-existing CTI catalog; not independently corroborated by photo inscription.",
         "verbatimOriginalCaption": false
       },
       "originalImageDriveId": "1O6YZaxri5FtIA_I0GGTRDDOkBMO6tUIY",
       "originalImageDriveUrl": "https://drive.google.com/file/d/1O6YZaxri5FtIA_I0GGTRDDOkBMO6tUIY/view",
       "enhancedImageDriveId": "1drym8Tik0CZiwtvSSDc7dub0vmryEv53",
-      "thumbnailDriveId": "1-lnSYB0jVF89T6dTmAMIYeGRPlgyK7Ix"
+      "thumbnailDriveId": "1-lnSYB0jVF89T6dTmAMIYeGRPlgyK7Ix",
+      "recordType": "photograph",
+      "galleryPhoto": true,
+      "eventDateDisplay": "April 7, 2024",
+      "editorialStatus": "complete-pending-upload",
+      "editorialStatusLabel": "Complete — Pending Upload",
+      "editorialApproval": "approved",
+      "publicationStatus": "pending-final-asset-upload",
+      "publicationNotes": "Original, AI-enhanced derivative, and landscape thumbnail saved in Google Drive staging. Publish using approved gallery renderer after final GitHub upload. Do not infer or publish individual identifications from generated name-tag details.",
+      "galleryMetadata": {
+        "event": "Joint Ladies Auxiliary brunch",
+        "partnerOrganization": "Temple Emanu-El of Marblehead",
+        "place": "Not independently established",
+        "people": "Nine women pictured; identities unverified",
+        "imageCount": 1,
+        "additionalPhotos": "Not yet located or verified",
+        "transcriptionRequired": false,
+        "primaryImage": "CTI-010-ENH-1.png",
+        "thumbnail": "CTI-010-THM-1.png",
+        "original": "CTI-010-ORG-1.png"
+      }
     },
     {
       "id": "CTI-011",
