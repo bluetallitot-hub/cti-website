@@ -278,10 +278,10 @@
           "title": "Kitchen Dedication Invitation",
           "type": "invitation",
           "repositoryPath": "assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg",
-          "placement": null,
-          "linkLabel": null,
+          "placement": "expanded-gallery-below-caption",
+          "linkLabel": "View Kitchen Dedication Invitation",
           "status": "source-preserved; standardized-file-copy-pending",
-          "visibility": "hidden"
+          "visibility": "expanded"
         }
       ]
     },
