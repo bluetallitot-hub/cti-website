@@ -1,0 +1,37 @@
+name: CTI Public Website Regression Tests
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 11 * * *"
+  workflow_run:
+    workflows: ["Deploy CTI Website to GitHub Pages"]
+    types: [completed]
+permissions:
+  contents: read
+jobs:
+  public-crawl:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for Pages to settle
+        if: github.event_name == 'workflow_run'
+        run: sleep 30
+      - name: Run read-only website checks
+        id: crawl
+        continue-on-error: true
+        run: python3 tests/test_site.py
+      - name: Upload detailed CSV and JSON results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cti-public-regression-results
+          path: |
+            cti-test-results.csv
+            cti-test-results.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Fail job if any public checks failed
+        if: steps.crawl.outcome == 'failure'
+        run: exit 1
