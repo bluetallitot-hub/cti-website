@@ -1420,7 +1420,14 @@
         }
       ],
       "consolidationStatus": "1972-article-and-ticket-logically-grouped; asset-verification-pending",
-      "consolidationNote": "1972 article and anniversary ticket belong to one archival entry. Other anniversary articles remain separate and cross-referenced. No leadership photograph merged without event-specific evidence."
+      "consolidationNote": "1972 article and anniversary ticket belong to one archival entry. Other anniversary articles remain separate and cross-referenced. No leadership photograph merged without event-specific evidence.",
+      "canonicalAssetNames": {
+        "originalClipping": "CTI-014-ORG-1.jpg",
+        "restoredTicket": "CTI-014-IMG-1.png",
+        "thumbnail": "CTI-014-THM-v2.png"
+      },
+      "assetNamingStatus": "canonical-names-assigned; github-binary-migration-pending",
+      "assetNamingNotes": "Legacy files and existing website paths retained to avoid broken links. Drive file CTI-014-THM-2.png requires eventual canonical rename to CTI-014-THM-v2.png and binary sync to GitHub. Do not relabel the original newspaper clipping as the ticket."
     },
     {
       "id": "CTI-015",
