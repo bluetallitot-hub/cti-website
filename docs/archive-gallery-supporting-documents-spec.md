@@ -27,3 +27,11 @@ Example:
   "linkLabel": "View Kitchen Dedication Invitation"
 }
 ```
+
+## Archive titles and timeline display
+
+- Every Archive record retains its historically accurate `title` (the source headline).
+- An optional `subtitle` stores only a verified original subheadline, not an editorial line break or shortened title.
+- An optional `timelineTitle` provides a concise editorial label for timeline cards (target approximately 45 characters, not a hard limit).
+- Timeline rendering uses `timelineTitle || title`; Archive detail pages use `title` and display `subtitle` only when actually recorded.
+- Existing static timeline markup must be migrated or explicitly updated to honor `timelineTitle`; storing the field alone does not change static headings.
