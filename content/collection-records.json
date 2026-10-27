@@ -1315,9 +1315,20 @@
       ],
       "files": [
         {
+          "type": "ORG",
+          "filename": "CTI-014-ORG-1.jpg",
+          "driveId": "1tsFIqrgU38TptN0CF3Qzm3LJMaKe2kbl",
+          "url": "https://drive.google.com/file/d/1tsFIqrgU38TptN0CF3Qzm3LJMaKe2kbl/view"
+        },
+        {
+          "type": "IMG",
+          "filename": "CTI-014-IMG-1.png",
+          "driveId": "1o3U-dY5X3xPvnDgGmwqScDDZy6XYO7LH",
+          "url": "https://drive.google.com/file/d/1o3U-dY5X3xPvnDgGmwqScDDZy6XYO7LH/view"
+        },
+        {
           "type": "THM",
-          "version": 2,
-          "filename": "CTI-014-THM-2.png",
+          "filename": "CTI-014-THM-v2.png",
           "driveId": "1qA83FCgc496LNNZKCdHtbN9C6FfAYP7_",
           "url": "https://drive.google.com/file/d/1qA83FCgc496LNNZKCdHtbN9C6FfAYP7_/view"
         }
@@ -1339,7 +1350,7 @@
         {
           "type": "THM",
           "version": 2,
-          "filename": "CTI-014-THM-2.png",
+          "filename": "CTI-014-THM-v2.png",
           "driveId": "1qA83FCgc496LNNZKCdHtbN9C6FfAYP7_",
           "width": 800,
           "height": 600,
@@ -1426,7 +1437,7 @@
         "restoredTicket": "CTI-014-IMG-1.png",
         "thumbnail": "CTI-014-THM-v2.png"
       },
-      "assetNamingStatus": "canonical-names-assigned; github-binary-migration-pending",
+      "assetNamingStatus": "google-drive-canonical-names-confirmed-github-binary-migration-pending",
       "assetNamingNotes": "Legacy files and existing website paths retained to avoid broken links. Drive file CTI-014-THM-2.png requires eventual canonical rename to CTI-014-THM-v2.png and binary sync to GitHub. Do not relabel the original newspaper clipping as the ticket."
     },
     {
