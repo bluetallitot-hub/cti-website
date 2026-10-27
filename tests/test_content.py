@@ -49,6 +49,19 @@ for kind, filename, key in (
             if re.search(r"\bTEST ONLY\b|\bAdmin Test\b", title, re.I):
                 issues.append(f"{context}: test event in production data: {title!r}")
 
+# Service overrides are published records too; validate their dates and IDs.
+seen_overrides = set()
+for index, record in enumerate(check_file("content/services.json", "overrides")):
+    context = f"content/services.json.overrides[{index}]"
+    if not isinstance(record, dict):
+        issues.append(f"{context}: expected object")
+        continue
+    check_date(record.get("date"), context)
+    identifier = record.get("id")
+    if not identifier or identifier in seen_overrides:
+        issues.append(f"{context}: missing/duplicate override ID {identifier!r}")
+    seen_overrides.add(identifier)
+
 torah = check_file("content/dvar-torah/index.json", "items")
 for index, record in enumerate(torah):
     if not isinstance(record, dict):
