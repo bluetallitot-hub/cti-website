@@ -1772,7 +1772,9 @@
       },
       "editorialStatus": "complete-pending-upload",
       "editorialApproval": "approved",
-      "publicationStatus": "pending-final-asset-upload"
+      "publicationStatus": "pending-final-asset-upload",
+      "timelineTitle": "Peabody's Ashkenazi and Sephardic Jewish Communities (1995)",
+      "transcriptStatus": "articleHtml-transcribed; original scan requires final proofreading; separate transcript field empty"
     },
     {
       "id": "CTI-022",
