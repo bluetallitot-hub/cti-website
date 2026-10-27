@@ -1453,6 +1453,11 @@
           "type": "ENH",
           "driveId": "11KMcwlsg8UT7hZiXucdC55tI83LMf6Cs",
           "filename": "CTI-018-ENH-1.png"
+        },
+        {
+          "type": "THM",
+          "driveId": "1wnwgKU9NBdElgyO0Ej_rFpzHIs_XxJ6e",
+          "filename": "CTI-018-THM-1.png"
         }
       ],
       "originalImage": null,
@@ -1467,6 +1472,15 @@
           "version": 1,
           "driveId": "11KMcwlsg8UT7hZiXucdC55tI83LMf6Cs",
           "method": "AI-generated straightened grayscale reconstruction; lettering requires verification against original"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "driveId": "1wnwgKU9NBdElgyO0Ej_rFpzHIs_XxJ6e",
+          "width": 800,
+          "height": 600,
+          "derivedFrom": "AI-generated thumbnail rendition",
+          "method": "resized generated thumbnail to 800x600; text may differ from original"
         }
       ],
       "thumbnailSpecification": {
@@ -1478,18 +1492,20 @@
         "retouched": true
       },
       "existingImageCandidate": null,
-      "thumbnailStatus": "not-required-article-only",
+      "thumbnailStatus": "staged-800x600",
       "originalStatus": "user-provided-authentic-clipping-photo-staged",
       "assetInventory": {
         "sourceFiles": [
           "https://drive.google.com/file/d/1PIoPbiiQRWR03Jql7ncpFtI4oVVPv7Kc/view"
         ],
         "presentationFiles": [
-          "https://drive.google.com/file/d/11KMcwlsg8UT7hZiXucdC55tI83LMf6Cs/view"
+          "https://drive.google.com/file/d/11KMcwlsg8UT7hZiXucdC55tI83LMf6Cs/view",
+          "https://drive.google.com/file/d/1wnwgKU9NBdElgyO0Ej_rFpzHIs_XxJ6e/view"
         ],
         "fileReferences": [
           "CTI-018-ORG-1.png",
-          "CTI-018-ENH-1.png"
+          "CTI-018-ENH-1.png",
+          "CTI-018-THM-1.png"
         ],
         "sourceVerification": "Original user-provided photograph of clipping verified and staged",
         "captionVerification": "No separate portrait caption"
