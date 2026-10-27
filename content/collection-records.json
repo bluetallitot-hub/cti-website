@@ -2128,6 +2128,13 @@
           "fileName": "CTI-024-THM-1.png",
           "driveId": "1mOqeCP02e3OWJx5chQztTDtWYaqTeu1N",
           "method": "AI-assisted caption-free composition, resized to 800x600"
+        },
+        {
+          "type": "ORG",
+          "version": 2,
+          "fileName": "CTI-024-ORG-2.jpeg",
+          "driveId": "14_eG1ZFaHiP-HZtd6ONkMGRlWhJzwujO",
+          "note": "Correct second source page of same 2012 article"
         }
       ],
       "thumbnailSpecification": {
@@ -2143,7 +2150,8 @@
       "originalStatus": "user-supplied-source-clipping-preserved",
       "assetInventory": {
         "sourceFiles": [
-          "CTI-024-ORG-1.jpeg"
+          "CTI-024-ORG-1.jpeg",
+          "CTI-024-ORG-2.jpeg"
         ],
         "presentationFiles": [
           "assets/images/anniversaries/cti-2012-90th-anniversary-program-cropped.jpg",
@@ -2188,6 +2196,11 @@
           "fileName": "CTI-024-ORG-1.jpeg",
           "driveId": "1z_WTwK2mrHKIQ1qgZj-VuKYsJwRrbxF2",
           "description": "Shuls Mark Historic Milestones, 2012 Jewish Journal first page and continuation, original user photograph"
+        },
+        {
+          "fileName": "CTI-024-ORG-2.jpeg",
+          "driveId": "14_eG1ZFaHiP-HZtd6ONkMGRlWhJzwujO",
+          "description": "Original photograph of page 3 continuation of Shuls Mark Historic Milestones, October 11, 2012; contains shofar presentation photograph"
         }
       ],
       "relatedGalleryImages": [
@@ -2204,7 +2217,7 @@
       "legacyRecordIds": [
         "CTI-012"
       ],
-      "migrationNotes": "Former CTI-012 Gallery record merged into CTI-024; source caption, attribution, existing GitHub file references and staging assets retained. Original uncaptained shofar photograph has not been located. Old GitHub files retained until final site cleanup. Separate 100th-anniversary article removed from CTI-024; source preserved on Drive pending assignment to correct Archive record.",
+      "migrationNotes": "CTI-012 merged. CTI-024-ORG-1.jpeg is first page, CTI-024-ORG-2.jpeg is the correct page-3 continuation. Separate centennial article is not part of CTI-024.",
       "compositeStatus": "do-not-use: prior composite combined two unrelated articles"
     },
     {
