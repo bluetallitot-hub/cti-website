@@ -1700,7 +1700,7 @@
       "collection": "archive",
       "status": "active",
       "title": "Joseph Gibely address on CTI and Sephardic history",
-      "caption": "",
+      "caption": "Joseph Gibely and Nathan Cass at a podium, March 1, 1979. Handwritten source caption: “3/1/79 Joseph Gibely Pres. Nathan Cass”.",
       "date": "March 1, 1979",
       "description": "Joseph Gibely's March 1, 1979 address about CTI and Sephardic history, preserved as a twelve-page annotated typescript with a transcription.",
       "source": "Congregation Tifereth Israel; Joseph Gibely address",
@@ -1715,7 +1715,26 @@
         "Warm Vintage Portrait of an Older Gentleman.png",
         "cti-1979-gibely-address-original-page.jpg"
       ],
-      "files": [],
+      "files": [
+        {
+          "type": "ORG",
+          "filename": "I-581-01-15-004.jpg",
+          "driveId": "1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla",
+          "note": "unaltered archival scan, retained with original name"
+        },
+        {
+          "type": "IMG",
+          "filename": "CTI-016-IMG-1.jpg",
+          "driveId": "1X7d03tIEsKrot01m6JihHUEUlZ6nZMTF"
+        },
+        {
+          "type": "THM",
+          "filename": "CTI-016-THM-1.png",
+          "driveId": "1EFvfTp07S-ldyna-tQGYI-2G5tQanE2-",
+          "width": 800,
+          "height": 600
+        }
+      ],
       "originalImage": "assets/archive/originals/cti-1979-gibely-address-original-page.jpg",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
@@ -1857,7 +1876,6 @@
         "htmlDeletionSafe": true
       },
       "relatedRecords": [
-        "CTI-032",
         "CTI-014",
         "CTI-015",
         "CTI-017",
@@ -1896,7 +1914,25 @@
           "type": "shared-history",
           "evidence": "Sephardic migration from Constantinople to Peabody"
         }
-      ]
+      ],
+      "mainImageDriveId": "1X7d03tIEsKrot01m6JihHUEUlZ6nZMTF",
+      "mainImageDriveUrl": "https://drive.google.com/file/d/1X7d03tIEsKrot01m6JihHUEUlZ6nZMTF/view",
+      "thumbnailDriveId": "1EFvfTp07S-ldyna-tQGYI-2G5tQanE2-",
+      "thumbnailDriveUrl": "https://drive.google.com/file/d/1EFvfTp07S-ldyna-tQGYI-2G5tQanE2-/view",
+      "imageProvenance": {
+        "sourceRecord": "CTI-032 (consolidated)",
+        "sourceArchive": "Jewish Historical Center, I-581, Box 1, Folder 15",
+        "sourceFile": "I-581-01-15-004.jpg",
+        "sourceDriveId": "1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla",
+        "handwrittenCaption": "3/1/79 Joseph Gibely Pres. Nathan Cass",
+        "identityVerification": "handwritten annotation; association with speech date is strong but not independently documented",
+        "preservation": "unaltered source remains on Google Drive; IMG is derivative copy; thumbnail crops handwritten margin"
+      },
+      "consolidatedRecords": [
+        "CTI-032"
+      ],
+      "publicationStatus": "photo-and-thumbnail-staged-in-drive; github-upload-and-transcription-repair-pending",
+      "transcriptionStatus": "requires-manual-proofreading-ocr-errors"
     },
     {
       "id": "CTI-017",
@@ -3580,64 +3616,6 @@
         "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
         "reconciled": "2026-10-22"
       }
-    },
-    {
-      "id": "CTI-032",
-      "collection": "gallery",
-      "status": "unapproved",
-      "title": "Joseph Gibely and Nathan Cass at podium, 1979",
-      "caption": "",
-      "date": "March 1, 1979 (handwritten caption)",
-      "description": "Handwritten source caption reads '3/1/79 Joseph Gibely Pres. Nathan Cass'. Context and identities should be reviewed.",
-      "source": "JHC I-581, Box 1, Folder 15 (Google Drive archival scan)",
-      "citation": "I-581-01-15-004.jpg",
-      "attribution": "",
-      "providedBy": "",
-      "transcript": "",
-      "articleHtml": "",
-      "originalImage": null,
-      "archiveItemImage": null,
-      "thumbnailImage": null,
-      "restoredImage": null,
-      "googleDriveSourceFiles": [
-        {
-          "fileName": "I-581-01-15-004.jpg",
-          "driveFileId": "1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla",
-          "driveUrl": "https://drive.google.com/file/d/1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla/view",
-          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
-          "repositoryPath": null,
-          "repositoryStatus": "not-found-in-repository-tree"
-        }
-      ],
-      "preservationStatus": "source-in-drive-awaiting-review-and-publication",
-      "captionProvenance": {
-        "status": "unapproved-awaiting-admin-identification",
-        "note": "Identification is provisional; original source scan retained in Google Drive."
-      },
-      "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
-      "archiveAcknowledgmentSource": "JHC archival material",
-      "archivalOriginals": {
-        "verifiedRepositoryFiles": [],
-        "driveOnlyFiles": [
-          {
-            "fileName": "I-581-01-15-004.jpg",
-            "driveFileId": "1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla",
-            "driveUrl": "https://drive.google.com/file/d/1dsBdp1P6OXOLesS-Wq2joh-_fK_cUIla/view"
-          }
-        ],
-        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
-        "reconciled": "2026-10-22"
-      },
-      "relatedRecords": [
-        "CTI-016"
-      ],
-      "recordConnections": [
-        {
-          "id": "CTI-016",
-          "type": "probable-same-event",
-          "verification": "not-yet-confirmed"
-        }
-      ]
     },
     {
       "id": "CTI-033",
