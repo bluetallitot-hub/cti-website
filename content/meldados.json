@@ -2692,7 +2692,7 @@
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Jewish Journal historical feature; obituary not recovered; reported civil death 1945-05-22 and Hebrew year 5705; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification.",
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Research handoff 2026-10-23: Jewish Journal historical feature; obituary not recovered; reported civil death 1945-05-22 and Hebrew year 5705; exact CTI memorial day/month agreement reported. Original source URL not supplied in handoff; retain for follow-up verification. 2026-10-27: Recovered original Jewish Journal feature https://jewishjournal.org/2019/05/16/on-memorial-day-remembering-the-jews-who-didnt-return (2019-05-16). Brother Joe Yonis and sister Doris Hershoff provide firsthand family testimony; article confirms Ralph was 19, served in the Philippines, was killed 1945-05-22, attended Peabody High School, and belonged to a family at CTI. Civil death = 10 Sivan 5705. Historical feature is NOT an obituary; do not set obituaryUrl. Article illustrates a portrait painting, NOT a verified photograph; reproduction rights unverified.",
       "familyFromObituary": true
     },
     {
