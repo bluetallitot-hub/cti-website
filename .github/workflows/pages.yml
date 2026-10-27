@@ -24,7 +24,7 @@ jobs:
       - name: Prepare public website artifact
         run: |
           mkdir -p _site
-          rsync -a --exclude="/.git/" --exclude="/.github/" --exclude="/tests/" --exclude="/_site/" ./ _site/
+          rsync -a --exclude="/.git/" --exclude="/.github/" --exclude="/tests/" --exclude="/cloudflare/" --exclude="/_site/" ./ _site/
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
