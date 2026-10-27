@@ -3721,10 +3721,10 @@
       "status": "draft",
       "title": "Peabody Temple To Mark Its 60th Anniversary",
       "caption": "",
-      "date": "1982 (inferred from 1922 founding; verify printed date)",
-      "description": "Newspaper clipping about Congregation Tifereth Israel's 60th anniversary. Original JHC archive scan I-581-01-15-031.jpg. Source publication, exact date, full transcription and rights review pending.",
-      "source": "Unidentified newspaper clipping in JHC I-581 Box 1 Folder 15",
-      "citation": "I-581-01-15-031.jpg; newspaper title and date pending verification",
+      "date": "1982 (inferred; not verified)",
+      "description": "Newspaper clipping titled 'Peabody Temple To Mark Its 60th Anniversary.' The original scan has not yet been positively identified. Prior attribution to I-581-01-15-031.jpg was incorrect and has been withdrawn.",
+      "source": "Unidentified newspaper clipping; source scan pending reconciliation",
+      "citation": "Source file pending identification; former I-581-01-15-031.jpg attribution withdrawn",
       "attribution": "",
       "transcript": "",
       "articleHtml": "",
@@ -3733,38 +3733,24 @@
       "restoredImage": null,
       "thumbnailImage": null,
       "providedBy": "",
-      "googleDriveSourceFiles": [
-        {
-          "fileName": "I-581-01-15-031.jpg",
-          "driveFileId": "1aDHlofzL0ad0JLqVUehHY32Yl8IFi7Iw",
-          "driveUrl": "https://drive.google.com/file/d/1aDHlofzL0ad0JLqVUehHY32Yl8IFi7Iw/view",
-          "relation": "Archival scan referenced by this record; original source retained in Google Drive",
-          "repositoryPath": null,
-          "repositoryStatus": "not-found-in-repository-tree"
-        }
-      ],
-      "preservationStatus": "original-in-google-drive-not-yet-published",
+      "googleDriveSourceFiles": [],
+      "preservationStatus": "draft-source-identification-pending",
       "captionProvenance": {
-        "status": "awaiting-original-caption-transcription",
-        "note": "Newspaper headline visually confirmed from Drive scan; no article text yet."
+        "status": "source-mismatch-confirmed-by-editor",
+        "note": "Previously linked image does not depict the 60th-anniversary article; do not display or publish as CTI-028."
       },
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
       "archiveAcknowledgmentSource": "JHC archival material",
       "archivalOriginals": {
         "verifiedRepositoryFiles": [],
-        "driveOnlyFiles": [
-          {
-            "fileName": "I-581-01-15-031.jpg",
-            "driveFileId": "1aDHlofzL0ad0JLqVUehHY32Yl8IFi7Iw",
-            "driveUrl": "https://drive.google.com/file/d/1aDHlofzL0ad0JLqVUehHY32Yl8IFi7Iw/view"
-          }
-        ],
-        "identificationBasis": "JHC I-581 archival scan identifier recorded in this item; does not imply the scan is the original standalone photograph",
+        "driveOnlyFiles": [],
+        "identificationBasis": "Prior source scan reference withdrawn after user reported incorrect image; source identification pending.",
         "reconciled": "2026-10-22"
       },
       "relatedRecords": [
         "CTI-014"
-      ]
+      ],
+      "publicationNotes": "Incorrect Drive source association removed on 2026-10-27; identify correct anniversary article before image assignment and publication. No Drive file deleted."
     },
     {
       "id": "CTI-037",
