@@ -101,7 +101,7 @@
       "collection": "gallery",
       "status": "active",
       "title": "July 24, 1976 — Two honored for 30 years of service. Morris Gibeley (left) and Victor Havian (center) were rec",
-      "caption": "July 24, 1976 — Two honored for 30 years of service. Morris Gibeley (left) and Victor Havian (center) were recognized by Congregation Tifereth Israel; congregation president Joseph Gibely (right) congratulated them. Photograph credited to Peter Zaharis. Digitally restored from a newspaper clipping; consult the original for archival accuracy.",
+      "caption": "July 24, 1976 — Morris Gibeley (left) and Victor Havian (center) were recognized by Congregation Tifereth Israel for 30 years of service. Congregation president Joseph Gibely (right) congratulated them. Photograph credited to Peter Zaharis.",
       "date": "July 24, 1976",
       "description": "Historical photograph of Morris Gibeley and Victor Havian being recognized for 30 years of service on July 24, 1976.",
       "source": "CTI historical photograph collection (individual provenance unverified)",
@@ -153,12 +153,12 @@
           "assets/collections/CTI-004-THM-1.png"
         ],
         "sourceVerification": "no confirmed original-source file linked",
-        "captionVerification": "printed caption not transcribed"
+        "captionVerification": "editorial caption finalized; original printed caption not independently verified"
       },
       "captionProvenance": {
-        "status": "existing-caption-pending-source-comparison",
-        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
-        "verbatimOriginalCaption": false
+        "status": "editorial-caption-based-on-existing-record; original-clipping-not-verified",
+        "verbatimOriginalCaption": false,
+        "note": "Removed restoration instructions from display caption. Names, date, roles, and photographer credit are inherited from existing record; original printed caption remains unverified."
       }
     },
     {
