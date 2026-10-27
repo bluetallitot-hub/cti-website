@@ -634,14 +634,14 @@
       "id": "CTI-011",
       "collection": "archive",
       "status": "active",
-      "title": "Our Religious Leaders — original historical page identifying Joseph Havien, David Leon and Ralph Bencangey and",
-      "caption": "Our Religious Leaders — original historical page identifying Joseph Havien, David Leon and Ralph Bencangey and describing their role in CTI's earliest religious services. The source spells the first surname Havien.",
+      "title": "Our First Religious Leaders: Joseph Havien, David Leon, and Ralph Bencangey",
+      "caption": "Historical tribute to Joseph Havien, David Leon, and Ralph Bencangey, who led early Sephardic worship in the Peabody–Salem area.",
       "date": "",
-      "description": "Historical page titled 'Our Religious Leaders,' identifying Joseph Havien, David Leon, and Ralph Bencangey.",
-      "source": "CTI historical photograph collection (individual provenance unverified)",
+      "description": "Historical page honoring Joseph Havien, David Leon, and Ralph Bencangey as the congregation's early religious and spiritual leaders. The text says they arrived in the United States in 1914, held services in homes, and later established a dedicated room for worship. Publication date not established.",
+      "source": "CTI historical commemorative page, supplied by user; publication date unknown",
       "citation": "",
-      "attribution": "",
-      "transcript": "",
+      "attribution": "Courtesy of Congregation Tifereth Israel",
+      "transcript": "OUR RELIGIOUS LEADERS\n\nMr. Joseph Havien, Mr. David Leon and Mr. Ralph Bencangey, our three religious and spiritual leaders, came to these United States in 1914 and settled in Peabody-Salem area. Assisted by only a very small group of families of the Spanish Jewish faith, they, with their wealth of Jewish culture and inspiration, conducted services in each other's homes. In later years, when the Sephardic community became larger, they hired a room and with everyone taking part, transformed it into a place of worship. In the small, but highly significant Synagogue, the three above mentioned men conducted all the services. These men always have given their all for the perpetuation of the Jewish religion and for the law of God. Repeatedly they have told us: \"Be sincere, faithful, tolerant, a good Jew, and make America strong.\"",
       "indexImage": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
       "archiveImage": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
       "pdf": null,
@@ -650,12 +650,12 @@
         "cti-early-religious-leaders-original.jpg"
       ],
       "files": [],
-      "originalImage": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
+      "originalImage": "CTI-011-ORG-1.png",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
-      "restoredImage": null,
+      "restoredImage": "CTI-011-ENH-1.png",
       "thumbnailImage": "assets/collections/CTI-011-THM-1.png",
-      "preservationStatus": "repository-source-file-present-originality-unverified",
+      "preservationStatus": "original-preserved-in-google-drive",
       "imageVersions": [
         {
           "type": "ORG",
@@ -669,6 +669,21 @@
           "path": "assets/collections/CTI-011-THM-1.png",
           "derivedFrom": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
           "method": "full-image contain with softened background"
+        },
+        {
+          "type": "ORG",
+          "version": 1,
+          "fileName": "CTI-011-ORG-1.png",
+          "driveId": "1GfIEXn4tiAhkLqxiqv-rc6wpRh_6y2_B",
+          "method": "unchanged original page from user"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "fileName": "CTI-011-ENH-1.png",
+          "driveId": "1m5DilWa1Yj_cgioebxz-wU31Ftc2zqSE",
+          "derivedFrom": "CTI-011-ORG-1.png",
+          "method": "crop to all three portraits, tonal adjustment and sharpening; no generative changes"
         }
       ],
       "thumbnailSpecification": {
@@ -681,7 +696,7 @@
       },
       "existingOriginalCandidate": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
       "thumbnailStatus": "local-file-linked",
-      "originalStatus": "repository-source-file-verified-caption-untranscribed",
+      "originalStatus": "user-provided-original-preserved-on-drive",
       "assetInventory": {
         "sourceFiles": [
           "assets/archive/originals/cti-early-religious-leaders-original.jpg"
@@ -702,7 +717,13 @@
         "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
         "verbatimOriginalCaption": false
       },
-      "archiveItemImage": "assets/archive/originals/cti-early-religious-leaders-original.jpg"
+      "archiveItemImage": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
+      "timelineTitle": "CTI's First Religious Leaders",
+      "transcriptStatus": "complete-from-user-provided-scan",
+      "originalImageDriveId": "1GfIEXn4tiAhkLqxiqv-rc6wpRh_6y2_B",
+      "enhancedImageDriveId": "1m5DilWa1Yj_cgioebxz-wU31Ftc2zqSE",
+      "editorialStatus": "enhanced-and-transcribed-pending-thumbnail",
+      "publicationStatus": "pending-final-asset-upload"
     },
     {
       "id": "CTI-012",
