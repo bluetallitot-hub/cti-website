@@ -2733,8 +2733,8 @@
       "citation": "May 18, 1997; Honoring the Past — Planning the Future",
       "attribution": "",
       "transcript": "75th Anniversary Program\n\nCongregation Tifereth Israel celebrated its 75th anniversary on May 18, 1997 under the theme “Honoring the Past — Planning the Future.”\n\nCharter Members\n\nLeon Eskenas\nNissim Eskenazi\nMorris Gibely\nRobert Hasday\nJoseph Havian\nDavid Leon\nJoseph Pernitchi\n\nCongregation Presidents\n\n1922–1940 — Leon Eskenas\n1940–1943 — Victor Eskenas\n1943–1945 — David Fermon\n1945–1955 — William Behar\n1955–1972 — Joseph Gibely, I\n1972–Present — Joseph Gibely, II\n\nLadies Auxiliary Presidents\n\nSeptember, 1954–November, 1964 — Gertie Gibely\nNovember, 1964–September, 1972 — Vickie Freedman\nSeptember, 1972–September, 1974 — Ida Polonsky\nSeptember, 1974–September, 1976 — Norma Mazur\nSeptember, 1976–June, 1982 — Myrna Schlesinger\nJune, 1982–September, 1987 — Millie Becker\nSeptember, 1987–September, 1995 — Rose Harsfield\nSeptember, 1995–Present — Joanne Pressman\n\nReligious Leaders\n\n1922–1956 — Joseph Havian\n1956–1988 — Leo Gibely\n1960–1969 — Michael Faro\n1971–1982 — Lenny Stein\n1972–Present — Joseph Gibely, II\n1982–Present — Rabbi Dov B. & Barbara D. Pikelny\n1983–Present — Thomas Bloom\n1988–1993 — Maurice Arieli\n1990–Present — Joanne Pressman\n1995–Present — Benjamin Behar\n\nProgram\n\nWelcome — Joseph Gibely, II, Congregation President\nGreetings from the City of Peabody — Mayor Peter Torigian\nBlessing — Rabbi Dov B. Pikelny\nDinner\nCandle Lighting — Representatives of Charter Members\n“From Here to ?” — Rabbi Dov B. Pikelny\nPresentation — Joanne Pressman, Auxiliary President\n\nCongregation Tifereth Israel Timeline — Do You Remember?\n\n02/15/22 — Chartered\n1957 — Purchased our own building on Pierpont Street\n04/24/66 — Testimonial to “Uncle” Leo Gibely, at Kings Grant, Danvers\n07/10/66 — The first of many Annual Picnics, at Genoda Park, Gloucester\n12/13/70 — Testimonial to Joseph Gibely, I and Sophie Pernitchi, at Colonial Country Club, Lynnfield\n12/70 — First issue of our “Newsletter”\n10/01/72 — 50th Anniversary Celebration, at Lombardo’s East Boston\n07/24/76 — Testimonial to Victor Havian, and Morris Gibely’s retirement party, at Beef & Oyster, Salem\n12/19/76 — The first of several annual Hanukkah children’s parties\n04/19/80 — Retirement party for Yanto Gibely, Izzy Hasday, Ralph Polonsky, Sam Savy, and Josh Yonis, at Augustine’s, Saugus\n10/08/82 — The first of our monthly Friday evening family services with Rabbi Dov B. and Barbara D. Pikelny officiating.\n04/03/83 — A “Strawberry Festival” and “Kitchen Shower” held by the Ladies Auxiliary to stock our newly remodeled kitchen\n11/05/83 — Testimonial to Lionel Harsfield and Izzy Hasday, at the synagogue, in recognition of work done in major renovations to social hall\n06/29/86 — Dedication of Leo Gibely Study, at the synagogue, presented by Rabbi Dov & Barbara Pikelny\n05/03/87 — Testimonial to Joseph Gibely, II at the synagogue\n05/07/89 — “A Night with Millie”, sponsored by the Ladies Auxiliary\n10/02/94 — Testimonial to honor Rabbi Dov & Barbara Pikelny on their 13th year of service, at the synagogue.\n\nSeptember, 1983: (Left to right) Thomas Bloom, “Uncle” Leo Gibely, Jodi Becker, Joseph Gibely, II, Judi Barry, David Greenbaum, Steven Pressman, and Joel Barry, prepare for High Holiday Services. These young Bar Mitzvah students represent a fourth generation of member participation at Congregation Tifereth Israel.\nEnhanced and colorized by AI from the original 1997 program photograph.\nOctober, 1994: Rabbi and Mrs. Dov B. Pikelny receive plaques commemorating their thirteen years of service to Congregation Tifereth Israel. (Left to right) Jerry Pressman, Barbara D. Pikelny, Rose Harsfield, Rabbi Dov B. Pikelny, and Joseph Gibely, II.\nEnhanced and colorized by AI from the original 1997 program photograph.",
-      "indexImage": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
-      "archiveImage": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
+      "indexImage": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
+      "archiveImage": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
       "pdf": "assets/archive/originals/cti-1997-75th-anniversary-program-web.pdf",
       "sourcePage": "archives/archive-1997-75th-anniversary.html",
       "originalFilenames": [
@@ -2752,36 +2752,45 @@
         {
           "type": "ORG",
           "version": 1,
+          "filename": "CTI-022-ORG-1.jpg",
+          "driveFileId": "17eemwNVIqTMjRFM8v1AVVoSJm4a_lRCV",
+          "driveUrl": "https://drive.google.com/file/d/17eemwNVIqTMjRFM8v1AVVoSJm4a_lRCV/view",
           "path": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
-          "note": "Authentic original cover confirmed by user; source currently retained at legacy path pending standardized asset copy",
-          "filename": "CTI-022-ORG-1.jpg"
-        },
-        {
-          "type": "THM",
-          "version": 1,
-          "path": "assets/collections/CTI-022-THM-1.png",
-          "derivedFrom": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
-          "method": "full-image contain with softened background",
-          "note": "Regenerate from user-confirmed CTI-022-ENH-01.png"
+          "publicationStatus": "staged-in-drive; standardized-github-copy-pending"
         },
         {
           "type": "ENH",
           "version": 1,
-          "filename": "CTI-022-ENH-01.png",
+          "filename": "CTI-022-ENH-1.png",
+          "driveFileId": "16iNi0UgT4TyXXFAVWML0WMAvibMXW1PO",
+          "driveUrl": "https://drive.google.com/file/d/16iNi0UgT4TyXXFAVWML0WMAvibMXW1PO/view",
           "path": "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
-          "note": "User identified this existing image as enhanced version; standardized copy pending"
+          "publicationStatus": "staged-in-drive; standardized-github-copy-pending"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "filename": "CTI-022-THM-1.png",
+          "driveFileId": "1CeAv5gRxSVAbXwbwGsrY_aVjq5gLD4vC",
+          "driveUrl": "https://drive.google.com/file/d/1CeAv5gRxSVAbXwbwGsrY_aVjq5gLD4vC/view",
+          "path": "assets/collections/CTI-022-THM-1.png",
+          "publicationStatus": "staged-in-drive; standardized-github-copy-pending",
+          "width": 600,
+          "height": 800,
+          "derivedFrom": "CTI-022-ENH-1.png",
+          "method": "background extended to portrait canvas; original invitation content preserved"
         }
       ],
       "thumbnailSpecification": {
-        "width": 800,
-        "height": 600,
-        "aspectRatio": "4:3",
+        "width": 600,
+        "height": 800,
+        "aspectRatio": "3:4",
         "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
+        "background": "extended from existing invitation background",
+        "retouched": false
       },
       "existingImageCandidate": "assets/images/anniversaries/1997-75th-anniversary-cover.jpg",
-      "thumbnailStatus": "needs-regeneration-from-confirmed-enhanced-image",
+      "thumbnailStatus": "final-600x800-portrait-saved-to-google-drive; github-publication-pending",
       "originalStatus": "authentic-original-confirmed; standardized-filename-copy-pending",
       "assetInventory": {
         "sourceFiles": [
@@ -2796,9 +2805,26 @@
           "assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png",
           "assets/collections/CTI-022-THM-1.png"
         ],
-        "sourceVerification": "repository-file-present; archival-original status and printed caption require human verification",
+        "sourceVerification": "Authentic cover identified by user; original, enhanced and corrected portrait thumbnail saved to Google Drive staging",
         "captionVerification": "printed caption not transcribed",
-        "originalFilenameReconciled": true
+        "originalFilenameReconciled": true,
+        "driveStagingFiles": [
+          {
+            "type": "ORG",
+            "filename": "CTI-022-ORG-1.jpg",
+            "driveFileId": "17eemwNVIqTMjRFM8v1AVVoSJm4a_lRCV"
+          },
+          {
+            "type": "ENH",
+            "filename": "CTI-022-ENH-1.png",
+            "driveFileId": "16iNi0UgT4TyXXFAVWML0WMAvibMXW1PO"
+          },
+          {
+            "type": "THM",
+            "filename": "CTI-022-THM-1.png",
+            "driveFileId": "1CeAv5gRxSVAbXwbwGsrY_aVjq5gLD4vC"
+          }
+        ]
       },
       "captionProvenance": {
         "status": "cover-identified-by-user",
@@ -2823,7 +2849,8 @@
         "CTI-003"
       ],
       "originalFilenameStandard": "CTI-022-ORG-1.jpg",
-      "enhancedFilenameStandard": "CTI-022-ENH-01.png"
+      "enhancedFilenameStandard": "CTI-022-ENH-1.png",
+      "recordReviewStatus": "content-complete; three-image-set-reconciled-in-drive; github-publication-and-live-verification-pending"
     },
     {
       "id": "CTI-023",
