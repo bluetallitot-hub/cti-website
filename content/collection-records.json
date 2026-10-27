@@ -3880,9 +3880,16 @@
           "driveUrl": "https://drive.google.com/file/d/1hT9bNB4SYZPnZpAdRch8GpgVZbGKlg3G/view",
           "sourceFileName": "I-581-01-15-032.jpg",
           "role": "preservation-original-staged-copy"
+        },
+        {
+          "fileName": "CTI-037-ORG-5.jpg",
+          "driveFileId": "1pjgDMd7QzEA9pYIVS9WVTby3zNtLXbNx",
+          "driveUrl": "https://drive.google.com/file/d/1pjgDMd7QzEA9pYIVS9WVTby3zNtLXbNx/view",
+          "sourceFileName": "I-581-01-15-031.jpg",
+          "role": "preservation-original-staged-copy"
         }
       ],
-      "stagingStatus": "four-originals-staged-in-google-drive; publication-pending",
+      "stagingStatus": "five-originals-staged-in-google-drive; publication-pending",
       "enhancedImages": [
         {
           "fileName": "CTI-037-ENH-1.png",
@@ -3902,7 +3909,9 @@
         "height": 600,
         "role": "archive-gallery-timeline-thumbnail",
         "reviewStatus": "pending-inscription-verification"
-      }
+      },
+      "ladinoTranscription": "Ladino\n\nDe Yaacov Behar\n\nEs una manzia de yorah. En cinco\nminutos Le tomarowin la vida. En\nTreesteza desho su familia en medio La\nKiyeh; Fue matatho, que quetho Todo el\nmundo, encantatho odyo delas alturas da\npasenzia a su familia y creeaturas.\nRogamos repose enganethen.\nAdon su alma que fue una muerte\nmuy Kalma.\n\nEn 8 Elul 5684 (1924)\n45 years old.",
+      "ladinoTranscriptionStatus": "draft-awaiting-character-by-character-verification"
     },
     {
       "id": "CTI-038",
