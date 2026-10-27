@@ -535,7 +535,7 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": "CTI-010-ENH-1.png",
-      "thumbnailImage": "assets/collections/CTI-010-THM-1.png",
+      "thumbnailImage": "CTI-010-THM-1.png",
       "preservationStatus": "original-preserved-in-google-drive",
       "imageVersions": [
         {
@@ -560,6 +560,14 @@
           "driveId": "1drym8Tik0CZiwtvSSDc7dub0vmryEv53",
           "derivedFrom": "CTI-010-ORG-1.png",
           "method": "AI-assisted enhancement; derivative, not original"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "fileName": "CTI-010-THM-1.png",
+          "driveId": "1-lnSYB0jVF89T6dTmAMIYeGRPlgyK7Ix",
+          "derivedFrom": "CTI-010-ENH-1.png",
+          "method": "AI-assisted landscape thumbnail"
         }
       ],
       "thumbnailSpecification": {
@@ -571,7 +579,7 @@
         "retouched": false
       },
       "existingImageCandidate": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
-      "thumbnailStatus": "regenerated-800x600-review-source-content",
+      "thumbnailStatus": "saved-to-drive-staging-landscape-ai-assisted-derivative",
       "originalStatus": "user-provided-original-saved-google-drive",
       "assetInventory": {
         "sourceFiles": [
@@ -580,7 +588,8 @@
         "presentationFiles": [
           "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
           "assets/collections/CTI-010-THM-1.png",
-          "CTI-010-ENH-1.png"
+          "CTI-010-ENH-1.png",
+          "CTI-010-THM-1.png"
         ],
         "fileReferences": [
           "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
@@ -596,7 +605,8 @@
       },
       "originalImageDriveId": "1O6YZaxri5FtIA_I0GGTRDDOkBMO6tUIY",
       "originalImageDriveUrl": "https://drive.google.com/file/d/1O6YZaxri5FtIA_I0GGTRDDOkBMO6tUIY/view",
-      "enhancedImageDriveId": "1drym8Tik0CZiwtvSSDc7dub0vmryEv53"
+      "enhancedImageDriveId": "1drym8Tik0CZiwtvSSDc7dub0vmryEv53",
+      "thumbnailDriveId": "1-lnSYB0jVF89T6dTmAMIYeGRPlgyK7Ix"
     },
     {
       "id": "CTI-011",
