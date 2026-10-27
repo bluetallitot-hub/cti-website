@@ -2034,9 +2034,7 @@
         "width": 800,
         "height": 600,
         "aspectRatio": "4:3",
-        "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
+        "orientation": "landscape"
       },
       "existingImageCandidate": null,
       "thumbnailStatus": "filename-matched-thumbnail-present-in-google-drive-dimensions-not-independently-verified",
@@ -2094,11 +2092,16 @@
       "drivePhotoCollectionStatus": "original-and-thumbnail-present",
       "driveReconciledDate": "2026-10-27",
       "editorialStatus": "approved",
-      "editorialStatusLabel": "Approved — Photo Collection Complete",
+      "editorialStatusLabel": "Approved — Photo Collection and Transcription",
       "photoCollectionApproval": "approved-based-on-completed-work",
       "photoCollectionApprovalDate": "2026-10-27",
       "photoCollectionStatus": "complete-approved",
-      "transcriptionStatus": "draft-requires-verbatim-comparison-with-authentic-clipping"
+      "transcriptionStatus": "approved-with-publication-year-unconfirmed",
+      "transcriptionVerification": {
+        "source": "CTI-018-ORG-1.png",
+        "reviewDate": "2026-10-27",
+        "note": "Transcription reviewed against original clipping; publication year is inferred, not printed. Retain uncertainty about year."
+      }
     },
     {
       "id": "CTI-020",
