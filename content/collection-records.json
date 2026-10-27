@@ -331,83 +331,6 @@
       ]
     },
     {
-      "id": "CTI-008",
-      "collection": "gallery",
-      "status": "inactive",
-      "title": "Menorah lighting at the Peabody Hebrew School, 1958. Regional Jewish history, not identified as CTI.",
-      "caption": "Menorah lighting at the Peabody Hebrew School, 1958. Regional Jewish history, not identified as CTI.",
-      "date": "1958",
-      "description": "1958 menorah lighting at the Peabody Hebrew School. Regional Jewish history; affiliation with CTI is not established.",
-      "source": "Peabody Hebrew School historical photograph (CTI affiliation unverified)",
-      "citation": "",
-      "attribution": "",
-      "transcript": "",
-      "indexImage": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
-      "archiveImage": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
-      "pdf": null,
-      "sourcePage": null,
-      "originalFilenames": [
-        "peabody-hebrew-school-menorah-1958.png"
-      ],
-      "files": [],
-      "originalImage": null,
-      "originalImageCaption": null,
-      "originalCaptionCorrections": [],
-      "restoredImage": null,
-      "thumbnailImage": "assets/collections/CTI-008-THM-1.png",
-      "preservationStatus": "awaiting-original-verification",
-      "imageVersions": [
-        {
-          "type": "THM",
-          "version": 1,
-          "path": "assets/collections/CTI-008-THM-1.png",
-          "derivedFrom": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
-          "method": "full-image contain with softened background"
-        }
-      ],
-      "thumbnailSpecification": {
-        "width": 800,
-        "height": 600,
-        "aspectRatio": "4:3",
-        "noAddedText": true,
-        "background": "appropriate neutral or complementary",
-        "retouched": true
-      },
-      "existingImageCandidate": "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
-      "thumbnailStatus": "local-file-linked",
-      "originalStatus": "unverified-do-not-count-as-confirmed-absent",
-      "assetInventory": {
-        "sourceFiles": [],
-        "presentationFiles": [
-          "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
-          "assets/collections/CTI-008-THM-1.png"
-        ],
-        "fileReferences": [
-          "assets/images/gallery/peabody-hebrew-school-menorah-1958.png",
-          "assets/collections/CTI-008-THM-1.png"
-        ],
-        "sourceVerification": "no confirmed original-source file linked",
-        "captionVerification": "printed caption not transcribed"
-      },
-      "captionProvenance": {
-        "status": "existing-caption-pending-source-comparison",
-        "note": "Pre-existing collection caption retained. May derive from source image; compare names, dates and wording against source before treating as verbatim.",
-        "verbatimOriginalCaption": false
-      },
-      "relatedRecords": [
-        "CTI-021"
-      ],
-      "relationshipNote": "Related regional Jewish history to CTI-021, but a distinct photograph and independent Gallery record; no assertion that it appeared in the CTI-021 article.",
-      "recordIdentityNote": "Retired independent Gallery record; preserved as CTI-021-DOC-1 supporting document for Archive CTI-021.",
-      "relatedArchiveRecordId": "CTI-021",
-      "editorialStatus": "consolidated",
-      "publicationNotes": [
-        "Verify original photograph and printed caption, provenance, and CTI relationship before public activation.",
-        "Prepare standardized ORG/ENH/THM assets in Drive staging."
-      ],
-      "duplicateOf": "CTI-021"
-    },
-    {
       "id": "CTI-009",
       "collection": "archive",
       "status": "active",
@@ -1791,10 +1714,8 @@
       ],
       "archiveAcknowledgment": "Special thanks to Rebecca Harrison at the Jewish Historical Center.",
       "archiveAcknowledgmentSource": "JHC archival material",
-      "relatedRecords": [
-        "CTI-008"
-      ],
-      "relationshipNote": "Related regional Peabody Jewish history: see CTI-008, a 1958 Peabody Hebrew School menorah photograph. The photo is not documented as a CTI event or as part of this 1995 article.",
+      "relatedRecords": [],
+      "relationshipNote": "The 1958 Peabody Hebrew School photograph is preserved as CTI-021-DOC-1 supporting documentation; it is a distinct historical source, not part of the 1995 article.",
       "relatedHistoricalImages": [],
       "recordMergeNote": "CTI-008 merged as a separately attributed related historical photograph. The 1995 article and the 1958 photo are distinct sources; do not describe the photo as an illustration from the article.",
       "articleImage": "assets/images/gallery/cti-1995-jewish-advocate-headline.jpg",
