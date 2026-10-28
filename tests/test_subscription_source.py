@@ -37,6 +37,13 @@ if "['congregation','torah']" not in unsubscribe:
     issues.append('Unsubscribe request must check both email lists')
 if "await env.CTI_MAILING_LISTS.put('unsubscribed:'+email" not in unsubscribe:
     issues.append('Unsubscribe confirmation must persist global suppression')
+color_settings = worker.split("if(url.pathname==='/site-colors'", 1)[-1].split("const area=routeArea", 1)[0]
+if color_settings.count("file.content.replace(/\\s/g,'')") < 1:
+    issues.append('Color settings must decode GitHub base64 with whitespace removal')
+if "const format=colors=>keys.map(k=>k+': '+colors[k]).join('\\n')" not in color_settings:
+    issues.append('Color notification formatting must use actual newlines')
+if "JSON.stringify(next,null,2)+'\\n'" not in color_settings:
+    issues.append('Color settings must save a newline-terminated JSON file')
 for issue in issues:
     print("FAIL " + issue)
 print(f"CTI subscription source audit: {len(issues)} issue(s)")
