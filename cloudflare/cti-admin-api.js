@@ -536,12 +536,12 @@ if(url.pathname==='/unsubscribe/request'&&request.method==='POST'){
  if(!env.CTI_MAILING_LISTS||!env.RESEND_API_KEY||!env.CTI_ANNOUNCE_EMAIL_FROM)return respond({error:'Unsubscribe service is not configured'},503);
  const body=await request.json();const email=String(body.email||'').trim().toLowerCase();
  if(email.length>254||!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)))return respond({error:'Enter a valid email address'},400);
- const list=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
- if(list.some(s=>typeof s==='string'&&s.trim().toLowerCase()===email)){
+ const lists=await Promise.all(['congregation','torah'].map(async key=>JSON.parse(await env.CTI_MAILING_LISTS.get(key)||'[]')));
+ if(lists.some(list=>Array.isArray(list)&&list.some(s=>typeof s==='string'&&s.trim().toLowerCase()===email))){
   const token=crypto.randomUUID()+crypto.randomUUID();
   await env.CTI_MAILING_LISTS.put('unsubscribe-token:'+token,email,{expirationTtl:3600});
   const link=site+'/unsubscribe.html?token='+encodeURIComponent(token);
-  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:[email],subject:'Confirm your CTI email unsubscribe',text:'To unsubscribe from CTI congregational emails, please confirm here:\n'+link+'\n\nThis does not affect individual Meldatho reminders. If you did not request this, ignore this message.'})});
+  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:[email],subject:'Confirm your CTI email unsubscribe',text:'To unsubscribe from CTI congregational and D’var Torah emails, please confirm here:\n'+link+'\n\nThis does not affect individual Meldatho reminders. If you did not request this, ignore this message.'})});
   if(!response.ok)return respond({error:'Unable to send confirmation email'},502);
  }
  return respond({ok:true,message:'If that address is subscribed, a confirmation link has been emailed.'});
@@ -552,10 +552,9 @@ if(url.pathname==='/unsubscribe/confirm'&&request.method==='POST'){
  if(!/^[0-9a-f-]{72}$/.test(token))return respond({error:'Invalid or expired confirmation link'},400);
  const key='unsubscribe-token:'+token;const email=await env.CTI_MAILING_LISTS.get(key);
  if(!email)return respond({error:'Invalid or expired confirmation link'},400);
- const list=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
  await env.CTI_MAILING_LISTS.put('unsubscribed:'+email,new Date().toISOString());
  await env.CTI_MAILING_LISTS.delete(key);
- return respond({ok:true,message:'You have been unsubscribed from CTI congregational emails.'});
+ return respond({ok:true,message:'You have been unsubscribed from CTI congregational and D’var Torah emails.'});
 }
 if(url.pathname==='/mailing-list'&&(request.method==='GET'||request.method==='POST')){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
