@@ -52,14 +52,12 @@ if(btn&&nav){btn.addEventListener('click',()=>{const open=nav.classList.toggle('
 // Page HTML may be older; JavaScript normalizes it so clicking between sections never changes headings or spacing.
 const canonicalNav=[
   ['about.html','About'],
+  ['history.html','Our History'],
   ['leadership.html','Leadership Team'],
   ['services.html','Services'],
+  ['meldados.html','Meldathos'],
   ['torah.html','D’var Torah'],
   ['resources.html','Resources'],
-  ['meldados.html','Meldathos'],
-  ['newsletter.html','Newsletter'],
-  ['gallery.html','Gallery'],
-  ['press.html','Press & Archives'],
   ['give.html','Give','givebtn']
 ];
 document.querySelectorAll('nav.links').forEach(nav=>{
