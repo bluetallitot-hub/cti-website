@@ -4482,9 +4482,9 @@
       "date": "",
       "dateDisplay": "2012 (inferred from 90th anniversary; exact issue date unverified)",
       "description": "Jeff Shmase profiles Congregation Tifereth Israel on its 90th anniversary, exploring the congregation’s Sephardic origins, its welcome of Ashkenazi members, its history on Pierpont Street, and the Ladies Auxiliary anniversary cookbook.",
-      "source": "Weekly News, p. 3 (issue date unverified)",
-      "citation": "Jeff Shmase, “One happy family: Congregation Tifereth Israel welcomes Sephardic, Ashkenazi Jews,” Weekly News, p. 3, circa 2012.",
-      "attribution": "Article and photograph by Jeff Shmase, Weekly News.",
+      "source": "Peabody Weekly News, p. 3 (issue date unverified)",
+      "citation": "Jeff Shmase, “One happy family: Congregation Tifereth Israel welcomes Sephardic, Ashkenazi Jews,” Peabody Weekly News, p. 3, circa 2012.",
+      "attribution": "Article and photograph by Jeff Shmase, Peabody Weekly News.",
       "transcript": "",
       "originalImage": "CTI-008-ORG-1.jpeg",
       "originalImageCaption": "User-supplied scan of Weekly News page 3. Printed caption identifies Rabbi Howard Kosovke, Elliot Hershoff, Joanne Pressman and Doris Hershoff.",
@@ -4506,7 +4506,8 @@
         "Exact issue date unverified; 2012 inferred from CTI's 90th anniversary.",
         "Source image supplied in conversation, but not yet stored in Google Drive or GitHub; do not claim preservation complete.",
         "Keep unpublished pending original file upload and transcription review."
-      ]
+      ],
+      "publication": "Peabody Weekly News"
     }
   ],
   "assetPolicy": {
