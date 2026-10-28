@@ -163,3 +163,10 @@ body:has(.leadership-subnav) .leadership-subnav .wrap{max-width:1040px}
 .leadership-heritage-grid .heritage-person-copy h3{margin:4px 0 8px}
 .leadership-heritage-grid .heritage-person-copy p{margin:4px 0 10px}
 .leadership-heritage-grid .heritage-person.missing::before{content:"Portrait unavailable";display:grid;place-items:center;min-height:170px;aspect-ratio:4/3;background:var(--site-image-placeholder-background);color:var(--muted);font-size:14px}
+
+/* Shared dimensions for both four-tab sections: History and Leadership. */
+body:has(.history-subnav) .history-home-hero,body:has(.leadership-subnav) .leadership-section-hero{padding:16px 0 18px!important}
+body:has(.history-subnav) .history-home-hero h1,body:has(.leadership-subnav) .leadership-section-hero h1{font-size:clamp(38px,4.4vw,58px)!important;line-height:1.12!important;margin:0 0 12px!important}
+body:has(.history-subnav) .history-subnav .wrap,body:has(.leadership-subnav) .leadership-subnav .wrap{width:calc(100% - 32px);max-width:1040px!important;margin-inline:auto}
+body:has(.history-subnav) .history-home-tabs,body:has(.leadership-subnav) .leadership-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0}
+body:has(.history-subnav) .history-home-tab,body:has(.leadership-subnav) .leadership-tab{min-height:46px;padding:8px 6px}
