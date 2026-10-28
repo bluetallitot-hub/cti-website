@@ -4504,6 +4504,12 @@
           "version": 1,
           "fileName": "CTI-008-ENH-1.png",
           "note": "User-approved AI-enhanced color rendition; local file created, Drive/repository upload pending. Original newspaper photograph remains authoritative."
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "fileName": "CTI-008-THM-1.png",
+          "note": "User-approved thumbnail, resized to 800x600; local file saved, permanent Drive/repository upload pending."
         }
       ],
       "preservationStatus": "original-upload-pending",
@@ -4514,7 +4520,14 @@
         "Keep unpublished pending original file upload and transcription review."
       ],
       "publication": "Peabody Weekly News",
-      "restoredImage": "CTI-008-ENH-1.png"
+      "restoredImage": "CTI-008-ENH-1.png",
+      "thumbnailImage": "CTI-008-THM-1.png",
+      "thumbnailSpecification": {
+        "width": 800,
+        "height": 600,
+        "aspectRatio": "4:3",
+        "noAddedText": true
+      }
     }
   ],
   "assetPolicy": {
