@@ -4349,7 +4349,7 @@
       "id": "CTI-005",
       "collection": "archive",
       "status": "unapproved",
-      "title": "Our Building — Congregation Tifereth Israel, 8 Pierpont Street",
+      "title": "Our Home — Congregation Tifereth Israel, 8 Pierpont Street",
       "caption": "Congregation Tifereth Israel at 8 Pierpont Street, Peabody, Massachusetts.",
       "date": "",
       "description": "Historical record of the congregation's building at 8 Pierpont Street. The congregation established its home here in the mid-1950s; sources differ on whether the acquisition occurred in 1955 or 1957. Building photographs and historical documentation will be reconciled before publication.",
@@ -4361,7 +4361,22 @@
       "archiveImage": "assets/images/gallery/cti-building-8-pierpont-street.png",
       "thumbnailImage": null,
       "originalImage": "https://www.jhcns.org/art-Sephardic-Peabody/Cong-Tifereth-Israel-May-09_x602.jpg",
-      "files": [],
+      "files": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "filename": "CTI-005-ORG-1.png",
+          "driveId": "1fMU2d0xJtdHLxdQx-WcQkJnVI0ePwpUr",
+          "url": "https://drive.google.com/file/d/1fMU2d0xJtdHLxdQx-WcQkJnVI0ePwpUr/view?usp=drivesdk"
+        },
+        {
+          "type": "ORG",
+          "version": 2,
+          "filename": "CTI-005-ORG-2.jpg",
+          "driveId": "1SmlxcGyaClqgHr0nZ1xPSceM8OditBdh",
+          "url": "https://drive.google.com/file/d/1SmlxcGyaClqgHr0nZ1xPSceM8OditBdh/view?usp=drivesdk"
+        }
+      ],
       "supportingDocuments": [],
       "onTimeline": true,
       "timelineEvent": "Today — The Story Continues",
@@ -4369,7 +4384,29 @@
       "publicationNotes": [
         "Confirm original photograph attribution and whether the building image should remain in the gallery as a linked photo.",
         "Confirm acquisition date against deed; do not assert 1955 or 1957 as verified.",
-        "Prepare standardized CTI-005 image assets before approval."
+        "Prepare standardized CTI-005 image assets before approval.",
+        "Sanctuary tour internal URL needs confirmation before link is added; do not invent destination.",
+        "Two building photographs found in Google Drive staging; standardized website uploads pending."
+      ],
+      "supportingImages": [
+        {
+          "label": "Building photograph — staging 1",
+          "driveId": "1fMU2d0xJtdHLxdQx-WcQkJnVI0ePwpUr",
+          "filename": "CTI-005-ORG-1.png"
+        },
+        {
+          "label": "Building photograph — staging 2",
+          "driveId": "1SmlxcGyaClqgHr0nZ1xPSceM8OditBdh",
+          "filename": "CTI-005-ORG-2.jpg"
+        },
+        {
+          "label": "Existing CTI building photograph",
+          "path": "assets/images/gallery/cti-building-8-pierpont-street.png"
+        },
+        {
+          "label": "Historical exterior photograph (date unverified)",
+          "path": "assets/archive/originals/I-581-01-15-024-web.jpg"
+        }
       ]
     }
   ],
