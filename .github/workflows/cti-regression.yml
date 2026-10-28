@@ -1,6 +1,12 @@
 name: CTI Public Website Regression Tests
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'cloudflare/cti-admin-api.js'
+      - 'tests/**'
+      - '.github/workflows/cti-regression.yml'
   schedule:
     - cron: "23 11 * * *"
   workflow_run:
