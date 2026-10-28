@@ -44,6 +44,12 @@ if "const format=colors=>keys.map(k=>k+': '+colors[k]).join('\\n')" not in color
     issues.append('Color notification formatting must use actual newlines')
 if "JSON.stringify(next,null,2)+'\\n'" not in color_settings:
     issues.append('Color settings must save a newline-terminated JSON file')
+public_unsubscribe_guard = "if(!role&&!['/unsubscribe/request','/unsubscribe/confirm'].includes(url.pathname))"
+public_area_guard = "if(area&&!['/unsubscribe/request','/unsubscribe/confirm'].includes(url.pathname)&&!permitted(role,area))"
+if public_unsubscribe_guard not in worker:
+    issues.append('Public unsubscribe must bypass the sign-in gate')
+if public_area_guard not in worker:
+    issues.append('Public unsubscribe must bypass the administrative area gate')
 for issue in issues:
     print("FAIL " + issue)
 print(f"CTI subscription source audit: {len(issues)} issue(s)")
