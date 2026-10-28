@@ -16,6 +16,16 @@
   root.setProperty('--site-card-background',`color-mix(in srgb, ${c.background} 90%, white)`);
   root.setProperty('--site-header-background',`color-mix(in srgb, ${c.background} 95%, transparent)`);
   root.setProperty('--site-footer-background',`color-mix(in srgb, ${c.primary} 88%, black)`);
+  root.setProperty('--line',`color-mix(in srgb, ${c.primary} 18%, ${c.background})`);
+  root.setProperty('--site-archive-thumbnail-background',`color-mix(in srgb, ${c.background} 88%, ${c.accent})`);
+  root.setProperty('--site-gallery-thumbnail-background',`color-mix(in srgb, ${c.background} 92%, ${c.primary})`);
+  root.setProperty('--site-gallery-image-background',`color-mix(in srgb, ${c.background} 94%, ${c.primary})`);
+  root.setProperty('--site-image-placeholder-background',`color-mix(in srgb, ${c.background} 84%, ${c.primary})`);
+  root.setProperty('--site-album-placeholder-background',`color-mix(in srgb, ${c.background} 76%, ${c.primary})`);
+  root.setProperty('--site-embed-placeholder-background',`color-mix(in srgb, ${c.background} 90%, ${c.accent})`);
+  root.setProperty('--site-rotated-photo-background',`var(--site-image-placeholder-background)`);
+  root.setProperty('--site-history-connector-background',`color-mix(in srgb, ${c.primary} 22%, transparent)`);
+  root.setProperty('--photo-placeholder-overlay',`linear-gradient(180deg,transparent 30%,color-mix(in srgb, ${c.background} 65%,transparent))`);
   root.setProperty('--site-notice-background',`color-mix(in srgb, ${c.background} 90%, ${c.accent})`);
   root.setProperty('--photo-placeholder-gradient',`linear-gradient(135deg,color-mix(in srgb, ${c.background} 78%, ${c.primary}),color-mix(in srgb, ${c.background} 85%, ${c.accent}))`);
   root.setProperty('--leader-photo-placeholder-gradient','var(--photo-placeholder-gradient)');
