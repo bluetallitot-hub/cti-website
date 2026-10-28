@@ -167,6 +167,183 @@
       "photoCollectionStatus": "complete-approved"
     },
     {
+      "id": "CTI-002",
+      "collection": "gallery",
+      "status": "active",
+      "title": "Preparing for the High Holidays",
+      "date": "September 1983",
+      "caption": "September, 1983: (Left to right) Thomas Bloom, “Uncle” Leo Gibely, Jodi Becker, Joseph Gibely, II, Judi Barry, David Greenbaum, Steven Pressman, and Joel Barry, prepare for High Holiday Services. These young Bar Mitzvah students represent a fourth generation of member participation at Congregation Tifereth Israel.",
+      "description": "September, 1983: (Left to right) Thomas Bloom, “Uncle” Leo Gibely, Jodi Becker, Joseph Gibely, II, Judi Barry, David Greenbaum, Steven Pressman, and Joel Barry, prepare for High Holiday Services. These young Bar Mitzvah students represent a fourth generation of member participation at Congregation Tifereth Israel.",
+      "source": "Congregation Tifereth Israel 75th Anniversary Program (May 18, 1997)",
+      "citation": "75th Anniversary Program, historical photograph caption; September 1983",
+      "attribution": "Congregation Tifereth Israel 75th Anniversary Program",
+      "originalImage": null,
+      "restoredImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+      "indexImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+      "archiveImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+      "thumbnailImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+      "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "driveFile": {
+            "fileName": "CTI-002-ORG-1.png",
+            "driveFileId": "1tZq-Kya-lMDoWgDaMhlK89DKoKE9hOSg",
+            "driveUrl": "https://drive.google.com/file/d/1tZq-Kya-lMDoWgDaMhlK89DKoKE9hOSg/view"
+          },
+          "dimensions": "846x658",
+          "note": "User-provided historical program scan; original photograph negative/print not verified"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "dimensions": "800x600",
+          "driveFile": {
+            "fileName": "CTI-002-THM-1.png",
+            "driveFileId": "10L0Pp7eMy_GAG1psfSE8X7uC1cQAqYTZ",
+            "driveUrl": "https://drive.google.com/file/d/10L0Pp7eMy_GAG1psfSE8X7uC1cQAqYTZ/view"
+          },
+          "note": "800×600 center-cropped from user-supplied enhanced color image; replacement uploaded in place to existing Google Drive file ID"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "driveFile": {
+            "fileName": "CTI-002-ENH-1.png",
+            "driveFileId": "1TUE2VkYAT6VI4sfvpJWidtElAa9p-6Ho",
+            "driveUrl": "https://drive.google.com/file/d/1TUE2VkYAT6VI4sfvpJWidtElAa9p-6Ho/view"
+          },
+          "note": "User-approved enhanced color photograph, staged for GitHub publication"
+        }
+      ],
+      "captionProvenance": {
+        "status": "transcribed-from-1997-anniversary-program",
+        "verbatimOriginalCaption": true
+      },
+      "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
+      "originalStatus": "user-provided-program-scan-preserved-in-google-drive",
+      "thumbnailStatus": "800x600-enhanced-image-thumbnail-replaced-in-place-in-google-drive; github-publication-pending",
+      "relatedRecords": [
+        "CTI-022"
+      ],
+      "assetInventory": {
+        "sourceFiles": [
+          "CTI-002-ORG-1.png"
+        ],
+        "presentationFiles": [
+          "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+          "CTI-002-THM-1.png",
+          "CTI-002-ENH-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg"
+        ],
+        "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
+      },
+      "recordReviewStatus": "original-enhanced-and-final-thumbnail-staged; github-publication-pending",
+      "files": [
+        {
+          "type": "enhanced",
+          "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+          "status": "verified-github"
+        },
+        {
+          "type": "thumbnail-display-fallback",
+          "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
+          "status": "verified-github"
+        }
+      ]
+    },
+    {
+      "id": "CTI-003",
+      "collection": "gallery",
+      "status": "active",
+      "title": "Honoring Rabbi Dov and Barbara Pikelny",
+      "date": "October 1994",
+      "caption": "October, 1994: Rabbi and Mrs. Dov B. Pikelny receive plaques commemorating their thirteen years of service to Congregation Tifereth Israel. (Left to right) Jerry Pressman, Barbara D. Pikelny, Rose Harsfield, Rabbi Dov B. Pikelny, and Joseph Gibely, II.",
+      "description": "October, 1994: Rabbi and Mrs. Dov B. Pikelny receive plaques commemorating their thirteen years of service to Congregation Tifereth Israel. (Left to right) Jerry Pressman, Barbara D. Pikelny, Rose Harsfield, Rabbi Dov B. Pikelny, and Joseph Gibely, II.",
+      "source": "Congregation Tifereth Israel 75th Anniversary Program (May 18, 1997)",
+      "citation": "75th Anniversary Program, historical photograph caption; October 1994",
+      "attribution": "Congregation Tifereth Israel 75th Anniversary Program",
+      "originalImage": null,
+      "restoredImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+      "indexImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+      "archiveImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+      "thumbnailImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+      "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "driveFile": {
+            "fileName": "CTI-003-ORG-1.png",
+            "driveFileId": "186MAFk_RJSp89ja9E7rXKQR_dFbyZW0B",
+            "driveUrl": "https://drive.google.com/file/d/186MAFk_RJSp89ja9E7rXKQR_dFbyZW0B/view"
+          },
+          "dimensions": "844x514",
+          "note": "User-provided historical program scan; original photograph negative/print not verified"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "dimensions": "800x600",
+          "driveFile": {
+            "fileName": "CTI-003-THM-1.png",
+            "driveFileId": "1bffKswn0EBaSWkjKbP5nGWL-PGKqzD5E",
+            "driveUrl": "https://drive.google.com/file/d/1bffKswn0EBaSWkjKbP5nGWL-PGKqzD5E/view"
+          },
+          "note": "800×600 center-cropped from user-supplied enhanced color image; replacement uploaded in place to existing Google Drive file ID"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "driveFile": {
+            "fileName": "CTI-003-ENH-1.png",
+            "driveFileId": "15YrhQ4MCXQut3b8CUBuHhyR9fouRHZo7",
+            "driveUrl": "https://drive.google.com/file/d/15YrhQ4MCXQut3b8CUBuHhyR9fouRHZo7/view"
+          },
+          "note": "User-approved enhanced color photograph, staged for GitHub publication"
+        }
+      ],
+      "captionProvenance": {
+        "status": "transcribed-from-1997-anniversary-program",
+        "verbatimOriginalCaption": true
+      },
+      "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
+      "originalStatus": "user-provided-program-scan-preserved-in-google-drive",
+      "thumbnailStatus": "800x600-enhanced-image-thumbnail-replaced-in-place-in-google-drive; github-publication-pending",
+      "relatedRecords": [
+        "CTI-022",
+        "CTI-038"
+      ],
+      "assetInventory": {
+        "sourceFiles": [
+          "CTI-003-ORG-1.png"
+        ],
+        "presentationFiles": [
+          "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+          "CTI-003-THM-1.png",
+          "CTI-003-ENH-1.png"
+        ],
+        "fileReferences": [
+          "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg"
+        ],
+        "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
+      },
+      "recordReviewStatus": "original-enhanced-and-final-thumbnail-staged; github-publication-pending",
+      "files": [
+        {
+          "type": "enhanced",
+          "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+          "status": "verified-github"
+        },
+        {
+          "type": "thumbnail-display-fallback",
+          "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
+          "status": "verified-github"
+        }
+      ]
+    },
+    {
       "id": "CTI-004",
       "collection": "gallery",
       "status": "active",
@@ -298,6 +475,127 @@
       "photoCollectionApproval": "approved-based-on-completed-work",
       "photoCollectionApprovalDate": "2026-10-27",
       "photoCollectionStatus": "complete-approved"
+    },
+    {
+      "id": "CTI-005",
+      "collection": "archive",
+      "status": "unapproved",
+      "title": "Our Home — Congregation Tifereth Israel, 8 Pierpont Street",
+      "caption": "Congregation Tifereth Israel at 8 Pierpont Street, Peabody, Massachusetts.",
+      "date": "",
+      "description": "The story of Congregation Tifereth Israel's home at 8 Pierpont Street, purchased from the Church of the Nazarene in 1955 according to the Jewish Historical Center of the North Shore.",
+      "source": "CTI website historical collection; building photograph credited to Jewish Historical Center of the North Shore",
+      "citation": "",
+      "attribution": "Photograph source: Jewish Historical Center of the North Shore",
+      "transcript": "",
+      "indexImage": "assets/images/gallery/cti-building-8-pierpont-street.png",
+      "archiveImage": "assets/images/gallery/cti-building-8-pierpont-street.png",
+      "thumbnailImage": "assets/collections/CTI-005-THM-1.png",
+      "originalImage": "https://www.jhcns.org/art-Sephardic-Peabody/Cong-Tifereth-Israel-May-09_x602.jpg",
+      "files": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "filename": "CTI-005-ORG-1.png",
+          "driveId": "1fMU2d0xJtdHLxdQx-WcQkJnVI0ePwpUr",
+          "url": "https://drive.google.com/file/d/1fMU2d0xJtdHLxdQx-WcQkJnVI0ePwpUr/view?usp=drivesdk"
+        },
+        {
+          "type": "ORG",
+          "version": 2,
+          "filename": "CTI-005-ORG-2.jpg",
+          "driveId": "1SmlxcGyaClqgHr0nZ1xPSceM8OditBdh",
+          "url": "https://drive.google.com/file/d/1SmlxcGyaClqgHr0nZ1xPSceM8OditBdh/view?usp=drivesdk"
+        }
+      ],
+      "supportingDocuments": [],
+      "onTimeline": true,
+      "timelineEvent": "Today — The Story Continues",
+      "editorialStatus": "editorial-approved-assets-pending-publication",
+      "publicationNotes": [
+        "Approved enhanced building photo and 800x600 thumbnail require upload to GitHub before activation.",
+        "1922 photograph not yet verified or attached; do not misidentify it as the 8 Pierpont Street building.",
+        "Sanctuary tour link not yet verified."
+      ],
+      "supportingImages": [
+        {
+          "label": "Building photograph — staging 1",
+          "driveId": "1fMU2d0xJtdHLxdQx-WcQkJnVI0ePwpUr",
+          "filename": "CTI-005-ORG-1.png"
+        },
+        {
+          "label": "Building photograph — staging 2",
+          "driveId": "1SmlxcGyaClqgHr0nZ1xPSceM8OditBdh",
+          "filename": "CTI-005-ORG-2.jpg"
+        },
+        {
+          "label": "Existing CTI building photograph",
+          "path": "assets/images/gallery/cti-building-8-pierpont-street.png"
+        },
+        {
+          "label": "Historical exterior photograph (date unverified)",
+          "path": "assets/archive/originals/I-581-01-15-024-web.jpg"
+        }
+      ],
+      "editorialNarrative": "A synagogue is more than a building. It is the people who gather within its walls, the prayers that fill its rooms, and the memories carried from one generation to the next.\n\nFor Congregation Tifereth Israel, the journey to 8 Pierpont Street began long before we had a permanent home. Our founders, Sephardic Jewish immigrants from Turkey, first gathered for worship in private homes and rented rooms. They brought with them the traditions of their ancestors: the melodies of Sephardic prayer, the Ladino language, and a deep commitment to preserving Jewish life.\n\nIn 1955, our congregation found a lasting home in a former church building on Pierpont Street. It was a modest place, but it became the heart of a remarkable community.\n\nA 1976 newspaper article described our synagogue as a small white clapboard building, with a Star of David on its front door. Inside, members devoted countless hours to preparing for holidays, arranging prayer books, changing the ceremonial coverings, and making certain everything was ready for worship.\n\nIn 1981, as the congregation prepared to welcome new families, members once again rolled up their sleeves, painting and improving the building themselves. That spirit of personal dedication has sustained Tifereth Israel for generations.\n\nWithin these walls, children have celebrated becoming b'nai mitzvah, families have gathered for holidays, friends have shared meals, and generations have remembered loved ones. The sounds of Hebrew prayer and Sephardic melodies have connected our congregation to a Jewish heritage reaching back through Turkey to medieval Spain.\n\nOur building has never been grand, and perhaps that is part of what makes it special. Its importance has never been measured by its size, but by the warmth of the community it shelters.\n\nFor more than seventy years, 8 Pierpont Street has been more than our synagogue. It has been our home.",
+      "editorialNarrativeSources": [
+        "CTI-011",
+        "CTI-015",
+        "CTI-017"
+      ],
+      "buildingAcquisitionYear": 1955,
+      "buildingAcquisitionSource": "https://www.jhcns.org/Sephardic-Community-Peabody.html",
+      "buildingAcquisitionVerification": "Historical source accepted by congregation; original deed not independently verified",
+      "enhancedImage": "assets/collections/CTI-005-ENH-1.png",
+      "primaryImageProvenance": {
+        "relatedRecordId": "CTI-027",
+        "photographer": "Jakob Menendez",
+        "source": "Weekly News, February 10, 2022",
+        "processing": "AI-enhanced photograph; pedestrian and vehicle removed",
+        "status": "approved image supplied in conversation; upload pending"
+      },
+      "imageVersions": [
+        {
+          "type": "ENH",
+          "version": 1,
+          "filename": "CTI-005-ENH-1.png",
+          "publicationStatus": "approved; local file awaiting upload"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "filename": "CTI-005-THM-1.png",
+          "width": 800,
+          "height": 600,
+          "publicationStatus": "generated; local file awaiting upload"
+        }
+      ]
+    },
+    {
+      "id": "CTI-006",
+      "collection": "archive",
+      "status": "unapproved",
+      "title": "Peabody's Tifereth Israel to mark its 100th anniversary",
+      "caption": "Newspaper clipping about Congregation Tifereth Israel of Peabody's centennial.",
+      "date": "",
+      "description": "Newspaper article about Congregation Tifereth Israel's 100th anniversary; publication and date pending verification from the original clipping.",
+      "source": "Newspaper clipping — publication not yet verified",
+      "citation": "",
+      "attribution": "Newspaper author and publication pending verification",
+      "transcript": "",
+      "files": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "filename": "CTI-006-ORG-1.jpeg",
+          "status": "uploaded to conversation; Google Drive staging pending"
+        }
+      ],
+      "publicationNotes": [
+        "Original uploaded as CTI-024-ORG-2.jpeg; do not confuse with existing CTI-024 2012 article.",
+        "Confirm newspaper name, date, byline and full transcription before activation.",
+        "Preserve original clipping without AI reconstruction."
+      ]
     },
     {
       "id": "CTI-007",
@@ -4167,278 +4465,6 @@
       ],
       "onTimeline": true,
       "timelineEvent": "1994 Honoring Rabbi and Cantor Pikelny"
-    },
-    {
-      "id": "CTI-002",
-      "collection": "gallery",
-      "status": "active",
-      "title": "Preparing for the High Holidays",
-      "date": "September 1983",
-      "caption": "September, 1983: (Left to right) Thomas Bloom, “Uncle” Leo Gibely, Jodi Becker, Joseph Gibely, II, Judi Barry, David Greenbaum, Steven Pressman, and Joel Barry, prepare for High Holiday Services. These young Bar Mitzvah students represent a fourth generation of member participation at Congregation Tifereth Israel.",
-      "description": "September, 1983: (Left to right) Thomas Bloom, “Uncle” Leo Gibely, Jodi Becker, Joseph Gibely, II, Judi Barry, David Greenbaum, Steven Pressman, and Joel Barry, prepare for High Holiday Services. These young Bar Mitzvah students represent a fourth generation of member participation at Congregation Tifereth Israel.",
-      "source": "Congregation Tifereth Israel 75th Anniversary Program (May 18, 1997)",
-      "citation": "75th Anniversary Program, historical photograph caption; September 1983",
-      "attribution": "Congregation Tifereth Israel 75th Anniversary Program",
-      "originalImage": null,
-      "restoredImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
-      "indexImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
-      "archiveImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
-      "thumbnailImage": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
-      "imageVersions": [
-        {
-          "type": "ORG",
-          "version": 1,
-          "driveFile": {
-            "fileName": "CTI-002-ORG-1.png",
-            "driveFileId": "1tZq-Kya-lMDoWgDaMhlK89DKoKE9hOSg",
-            "driveUrl": "https://drive.google.com/file/d/1tZq-Kya-lMDoWgDaMhlK89DKoKE9hOSg/view"
-          },
-          "dimensions": "846x658",
-          "note": "User-provided historical program scan; original photograph negative/print not verified"
-        },
-        {
-          "type": "THM",
-          "version": 1,
-          "dimensions": "800x600",
-          "driveFile": {
-            "fileName": "CTI-002-THM-1.png",
-            "driveFileId": "10L0Pp7eMy_GAG1psfSE8X7uC1cQAqYTZ",
-            "driveUrl": "https://drive.google.com/file/d/10L0Pp7eMy_GAG1psfSE8X7uC1cQAqYTZ/view"
-          },
-          "note": "800×600 center-cropped from user-supplied enhanced color image; replacement uploaded in place to existing Google Drive file ID"
-        },
-        {
-          "type": "ENH",
-          "version": 1,
-          "driveFile": {
-            "fileName": "CTI-002-ENH-1.png",
-            "driveFileId": "1TUE2VkYAT6VI4sfvpJWidtElAa9p-6Ho",
-            "driveUrl": "https://drive.google.com/file/d/1TUE2VkYAT6VI4sfvpJWidtElAa9p-6Ho/view"
-          },
-          "note": "User-approved enhanced color photograph, staged for GitHub publication"
-        }
-      ],
-      "captionProvenance": {
-        "status": "transcribed-from-1997-anniversary-program",
-        "verbatimOriginalCaption": true
-      },
-      "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
-      "originalStatus": "user-provided-program-scan-preserved-in-google-drive",
-      "thumbnailStatus": "800x600-enhanced-image-thumbnail-replaced-in-place-in-google-drive; github-publication-pending",
-      "relatedRecords": [
-        "CTI-022"
-      ],
-      "assetInventory": {
-        "sourceFiles": [
-          "CTI-002-ORG-1.png"
-        ],
-        "presentationFiles": [
-          "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
-          "CTI-002-THM-1.png",
-          "CTI-002-ENH-1.png"
-        ],
-        "fileReferences": [
-          "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg"
-        ],
-        "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
-      },
-      "recordReviewStatus": "original-enhanced-and-final-thumbnail-staged; github-publication-pending",
-      "files": [
-        {
-          "type": "enhanced",
-          "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
-          "status": "verified-github"
-        },
-        {
-          "type": "thumbnail-display-fallback",
-          "path": "assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg",
-          "status": "verified-github"
-        }
-      ]
-    },
-    {
-      "id": "CTI-003",
-      "collection": "gallery",
-      "status": "active",
-      "title": "Honoring Rabbi Dov and Barbara Pikelny",
-      "date": "October 1994",
-      "caption": "October, 1994: Rabbi and Mrs. Dov B. Pikelny receive plaques commemorating their thirteen years of service to Congregation Tifereth Israel. (Left to right) Jerry Pressman, Barbara D. Pikelny, Rose Harsfield, Rabbi Dov B. Pikelny, and Joseph Gibely, II.",
-      "description": "October, 1994: Rabbi and Mrs. Dov B. Pikelny receive plaques commemorating their thirteen years of service to Congregation Tifereth Israel. (Left to right) Jerry Pressman, Barbara D. Pikelny, Rose Harsfield, Rabbi Dov B. Pikelny, and Joseph Gibely, II.",
-      "source": "Congregation Tifereth Israel 75th Anniversary Program (May 18, 1997)",
-      "citation": "75th Anniversary Program, historical photograph caption; October 1994",
-      "attribution": "Congregation Tifereth Israel 75th Anniversary Program",
-      "originalImage": null,
-      "restoredImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
-      "indexImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
-      "archiveImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
-      "thumbnailImage": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
-      "imageVersions": [
-        {
-          "type": "ORG",
-          "version": 1,
-          "driveFile": {
-            "fileName": "CTI-003-ORG-1.png",
-            "driveFileId": "186MAFk_RJSp89ja9E7rXKQR_dFbyZW0B",
-            "driveUrl": "https://drive.google.com/file/d/186MAFk_RJSp89ja9E7rXKQR_dFbyZW0B/view"
-          },
-          "dimensions": "844x514",
-          "note": "User-provided historical program scan; original photograph negative/print not verified"
-        },
-        {
-          "type": "THM",
-          "version": 1,
-          "dimensions": "800x600",
-          "driveFile": {
-            "fileName": "CTI-003-THM-1.png",
-            "driveFileId": "1bffKswn0EBaSWkjKbP5nGWL-PGKqzD5E",
-            "driveUrl": "https://drive.google.com/file/d/1bffKswn0EBaSWkjKbP5nGWL-PGKqzD5E/view"
-          },
-          "note": "800×600 center-cropped from user-supplied enhanced color image; replacement uploaded in place to existing Google Drive file ID"
-        },
-        {
-          "type": "ENH",
-          "version": 1,
-          "driveFile": {
-            "fileName": "CTI-003-ENH-1.png",
-            "driveFileId": "15YrhQ4MCXQut3b8CUBuHhyR9fouRHZo7",
-            "driveUrl": "https://drive.google.com/file/d/15YrhQ4MCXQut3b8CUBuHhyR9fouRHZo7/view"
-          },
-          "note": "User-approved enhanced color photograph, staged for GitHub publication"
-        }
-      ],
-      "captionProvenance": {
-        "status": "transcribed-from-1997-anniversary-program",
-        "verbatimOriginalCaption": true
-      },
-      "enhancementDisclosure": "Enhanced and colorized by AI from the original 1997 program photograph.",
-      "originalStatus": "user-provided-program-scan-preserved-in-google-drive",
-      "thumbnailStatus": "800x600-enhanced-image-thumbnail-replaced-in-place-in-google-drive; github-publication-pending",
-      "relatedRecords": [
-        "CTI-022",
-        "CTI-038"
-      ],
-      "assetInventory": {
-        "sourceFiles": [
-          "CTI-003-ORG-1.png"
-        ],
-        "presentationFiles": [
-          "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
-          "CTI-003-THM-1.png",
-          "CTI-003-ENH-1.png"
-        ],
-        "fileReferences": [
-          "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg"
-        ],
-        "sourceVerification": "User-provided program scan saved in Google Drive staging; no separate original photographic print verified"
-      },
-      "recordReviewStatus": "original-enhanced-and-final-thumbnail-staged; github-publication-pending",
-      "files": [
-        {
-          "type": "enhanced",
-          "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
-          "status": "verified-github"
-        },
-        {
-          "type": "thumbnail-display-fallback",
-          "path": "assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg",
-          "status": "verified-github"
-        }
-      ]
-    },
-    {
-      "id": "CTI-005",
-      "collection": "archive",
-      "status": "unapproved",
-      "title": "Our Home — Congregation Tifereth Israel, 8 Pierpont Street",
-      "caption": "Congregation Tifereth Israel at 8 Pierpont Street, Peabody, Massachusetts.",
-      "date": "",
-      "description": "The story of Congregation Tifereth Israel's home at 8 Pierpont Street, purchased from the Church of the Nazarene in 1955 according to the Jewish Historical Center of the North Shore.",
-      "source": "CTI website historical collection; building photograph credited to Jewish Historical Center of the North Shore",
-      "citation": "",
-      "attribution": "Photograph source: Jewish Historical Center of the North Shore",
-      "transcript": "",
-      "indexImage": "assets/images/gallery/cti-building-8-pierpont-street.png",
-      "archiveImage": "assets/images/gallery/cti-building-8-pierpont-street.png",
-      "thumbnailImage": "assets/collections/CTI-005-THM-1.png",
-      "originalImage": "https://www.jhcns.org/art-Sephardic-Peabody/Cong-Tifereth-Israel-May-09_x602.jpg",
-      "files": [
-        {
-          "type": "ORG",
-          "version": 1,
-          "filename": "CTI-005-ORG-1.png",
-          "driveId": "1fMU2d0xJtdHLxdQx-WcQkJnVI0ePwpUr",
-          "url": "https://drive.google.com/file/d/1fMU2d0xJtdHLxdQx-WcQkJnVI0ePwpUr/view?usp=drivesdk"
-        },
-        {
-          "type": "ORG",
-          "version": 2,
-          "filename": "CTI-005-ORG-2.jpg",
-          "driveId": "1SmlxcGyaClqgHr0nZ1xPSceM8OditBdh",
-          "url": "https://drive.google.com/file/d/1SmlxcGyaClqgHr0nZ1xPSceM8OditBdh/view?usp=drivesdk"
-        }
-      ],
-      "supportingDocuments": [],
-      "onTimeline": true,
-      "timelineEvent": "Today — The Story Continues",
-      "editorialStatus": "editorial-approved-assets-pending-publication",
-      "publicationNotes": [
-        "Approved enhanced building photo and 800x600 thumbnail require upload to GitHub before activation.",
-        "1922 photograph not yet verified or attached; do not misidentify it as the 8 Pierpont Street building.",
-        "Sanctuary tour link not yet verified."
-      ],
-      "supportingImages": [
-        {
-          "label": "Building photograph — staging 1",
-          "driveId": "1fMU2d0xJtdHLxdQx-WcQkJnVI0ePwpUr",
-          "filename": "CTI-005-ORG-1.png"
-        },
-        {
-          "label": "Building photograph — staging 2",
-          "driveId": "1SmlxcGyaClqgHr0nZ1xPSceM8OditBdh",
-          "filename": "CTI-005-ORG-2.jpg"
-        },
-        {
-          "label": "Existing CTI building photograph",
-          "path": "assets/images/gallery/cti-building-8-pierpont-street.png"
-        },
-        {
-          "label": "Historical exterior photograph (date unverified)",
-          "path": "assets/archive/originals/I-581-01-15-024-web.jpg"
-        }
-      ],
-      "editorialNarrative": "A synagogue is more than a building. It is the people who gather within its walls, the prayers that fill its rooms, and the memories carried from one generation to the next.\n\nFor Congregation Tifereth Israel, the journey to 8 Pierpont Street began long before we had a permanent home. Our founders, Sephardic Jewish immigrants from Turkey, first gathered for worship in private homes and rented rooms. They brought with them the traditions of their ancestors: the melodies of Sephardic prayer, the Ladino language, and a deep commitment to preserving Jewish life.\n\nIn 1955, our congregation found a lasting home in a former church building on Pierpont Street. It was a modest place, but it became the heart of a remarkable community.\n\nA 1976 newspaper article described our synagogue as a small white clapboard building, with a Star of David on its front door. Inside, members devoted countless hours to preparing for holidays, arranging prayer books, changing the ceremonial coverings, and making certain everything was ready for worship.\n\nIn 1981, as the congregation prepared to welcome new families, members once again rolled up their sleeves, painting and improving the building themselves. That spirit of personal dedication has sustained Tifereth Israel for generations.\n\nWithin these walls, children have celebrated becoming b'nai mitzvah, families have gathered for holidays, friends have shared meals, and generations have remembered loved ones. The sounds of Hebrew prayer and Sephardic melodies have connected our congregation to a Jewish heritage reaching back through Turkey to medieval Spain.\n\nOur building has never been grand, and perhaps that is part of what makes it special. Its importance has never been measured by its size, but by the warmth of the community it shelters.\n\nFor more than seventy years, 8 Pierpont Street has been more than our synagogue. It has been our home.",
-      "editorialNarrativeSources": [
-        "CTI-011",
-        "CTI-015",
-        "CTI-017"
-      ],
-      "buildingAcquisitionYear": 1955,
-      "buildingAcquisitionSource": "https://www.jhcns.org/Sephardic-Community-Peabody.html",
-      "buildingAcquisitionVerification": "Historical source accepted by congregation; original deed not independently verified",
-      "enhancedImage": "assets/collections/CTI-005-ENH-1.png",
-      "primaryImageProvenance": {
-        "relatedRecordId": "CTI-027",
-        "photographer": "Jakob Menendez",
-        "source": "Weekly News, February 10, 2022",
-        "processing": "AI-enhanced photograph; pedestrian and vehicle removed",
-        "status": "approved image supplied in conversation; upload pending"
-      },
-      "imageVersions": [
-        {
-          "type": "ENH",
-          "version": 1,
-          "filename": "CTI-005-ENH-1.png",
-          "publicationStatus": "approved; local file awaiting upload"
-        },
-        {
-          "type": "THM",
-          "version": 1,
-          "filename": "CTI-005-THM-1.png",
-          "width": 800,
-          "height": 600,
-          "publicationStatus": "generated; local file awaiting upload"
-        }
-      ]
     }
   ],
   "assetPolicy": {
