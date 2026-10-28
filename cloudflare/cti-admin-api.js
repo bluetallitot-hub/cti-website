@@ -244,7 +244,7 @@ if(url.pathname==='/meldathos/reminder-test'&&request.method==='POST'){
  await sendMail(email,'CTI Meldatho reminder — administrator test','This is a TEST of the CTI eight-day candle-lighting reminder email system.\n\nNo actual memorial reminder is being issued.\n\nCurrent Hebrew date: '+today.day+' '+today.month+' '+today.year+'\n\nCongregation Tifereth Israel, Peabody');
  return respond({ok:true});
 }
-if(!role)return respond({error:'Please sign in'},401);
+if(!role&&!['/unsubscribe/request','/unsubscribe/confirm'].includes(url.pathname))return respond({error:'Please sign in'},401);
 if(url.pathname==='/session')return respond({role});
 if(url.pathname==='/site-colors'&&request.method==='GET'){
  if(!['rabbi','secretary'].includes(role))return respond({error:'Access not permitted'},403);
