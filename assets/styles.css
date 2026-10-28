@@ -221,3 +221,17 @@ body:has(.resources-subnav)>header{position:fixed!important;top:0;left:0;right:0
 .resources-tab.active,.resources-tab[aria-current="page"]{background:var(--site-background);color:var(--deep)}
 @media(max-width:760px){.resources-section-hero{height:auto;min-height:164px}}
 @media(max-width:520px){.resources-tabs{gap:4px}.resources-tab{font-size:12px;padding:8px 3px}}
+
+/* Meldathos section navigation: consistent with CTI's other four-tab sections. */
+body:has(.meldados-subnav){padding-top:104px}
+body:has(.meldados-subnav)>header{position:fixed!important;top:0;left:0;right:0;width:100%;z-index:100;background:var(--site-header-background)}
+.meldados-section-hero{height:164px;box-sizing:border-box;padding:16px 0 18px!important}
+.meldados-section-hero h1{font-size:clamp(38px,4.4vw,58px)!important;line-height:1.12!important;margin:0 0 12px!important}
+.meldados-subnav{position:sticky;top:104px;z-index:90;padding:10px 0;background:var(--cream);border-bottom:1px solid var(--line)}
+.meldados-subnav .wrap{width:calc(100% - 32px);max-width:1040px!important;margin:0 auto}
+.meldados-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.meldados-tab{display:flex;align-items:center;justify-content:center;text-align:center;min-height:46px;padding:8px 6px;border:1px solid var(--deep);border-radius:999px;background:var(--deep);color:#fff;font-weight:650}
+.meldados-tab:hover,.meldados-tab:focus-visible{background:var(--ink);color:#fff}
+.meldados-tab.active,.meldados-tab[aria-current="page"]{background:var(--site-background);color:var(--deep)}
+@media(max-width:760px){.meldados-section-hero{height:auto;min-height:164px}}
+@media(max-width:520px){.meldados-tabs{gap:4px}.meldados-tab{font-size:12px;padding:8px 3px}}
