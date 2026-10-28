@@ -4533,6 +4533,36 @@
       "transcriptionStatus": "complete-community-corrections-welcome",
       "assetPackage": "CTI-008-archive-assets.zip",
       "reviewPolicy": "Completed record; future board editors may proofread and correct transcription and metadata."
+    },
+    {
+      "id": "CTI-012",
+      "collection": "archive",
+      "status": "unapproved",
+      "title": "The only Sephardic Temple north of Boston",
+      "caption": "Joanne Pressman's history of Congregation Tifereth Israel, published in Shalom Magazine, Rosh Hashanah/Fall 2019, Edition 37.",
+      "date": "Fall 2019",
+      "description": "First-person congregational history by cantorial soloist Joanne Pressman, identifying the seven founders and February 15, 1922 founding date; describing Turkish Jewish immigration, Ladino/Sephardic traditions, the congregational community, leadership and worship.",
+      "source": "Shalom Magazine, Rosh Hashanah/Fall 2019, Edition 37",
+      "citation": "Joanne Pressman, “The only Sephardic Temple north of Boston,” Shalom Magazine, Rosh Hashanah/Fall 2019, Edition 37 (page number not visible).",
+      "attribution": "Joanne Pressman",
+      "transcript": "The only Sephardic Temple north of Boston\nBy Joanne Pressman\n\nOn a quiet side street near the Peabody-Salem line sits a small, nondescript building that is the home of Congregation Tifereth Israel, the synagogue that has been my religious home for my entire life.\n\nUnless you are looking for the shul, you could drive right by without noticing it. But this synagogue has a history that goes back almost 100 years.\n\nOn February 15, 1922, our Congregation was begun by seven Jewish men who came to the United States from Turkey. Leon Eskenas, Nisim Eskenazi, Morris Gibely, Joseph Havian, Robert Hasday, David Leon, and Joseph Pernitchi were men who had a dream of a better life and religious freedom. Try to imagine what life may have been like at that time. Imagine, if you can, leaving your home and your loved ones - giving up everything that is known and familiar to you to travel a great distance to a foreign country.\n\nWhen you get to this strange, new place, with nothing but what you were able to carry with you, you need to find a job and somewhere to live; to learn the language, and to save enough money to send for your family and then to sustain them. With all the problems involved in just providing food, clothing, and shelter, how many of us would give religion the priority and importance in our lives that they did in theirs?\n\nThese were men of great courage and vision. Nothing was handed to them or made easy for them; nor did they expect that it would be. They [several lines partly obscured in supplied clipping] to form a “Congregation” to worship in their [obscured]. [Obscured] not even a “synagogue,” but a Congregation [obscured] men and women who practiced religion in every facet [obscured]. It did not matter that they had no building of [obscured] this congregation. Their dedication and enthusiasm [obscured] physical structure, but to a religious ideal.\n\n[Obscured] in their children a strong connection to Sephardic [obscured] and tenets of Judaism. For nearly a century, we have retained these traditions and rituals and kept our synagogue alive. In every generation, there have been members who stepped forward and made the commitment to continue this legacy of caring and sharing. The family of Congregation Tifereth Israel is an extremely close-knit community whose members are always there for one another.\n\nDuring our 97-year history, we have had only seven presidents; and the current president, Elliot Hershoff, is the first of Ashkenazi descent. One reason we are unique is that traditionally, our religious leadership comes from within our own membership, which currently is approaching 100 members - and there is no full or part-time professional religious leadership.\n\nIn every generation, there have been members who stepped forward and made the commitment to continue our legacy by maintaining the Sephardic traditions and rituals. As a granddaughter of both Joseph Havian and Joseph Pernitchi, I have been privileged to be our cantorial soloist since 1991, and to co-officiate in leading our High Holiday and monthly Shabbat services.\n\nWhen you attend our services and listen to the centuries-old Sephardic melodies chanted exactly as they were so many years ago, you can close your eyes and feel yourself taken back to the time of our grandparents. Like many of our other members, I have made the commitment to continue what was started so long ago, and to continue its existence for our next generation.\n\nWhile a large number of our members are descendants of our founders and related to each other, those new members that join us soon discover the warmth, the caring, and the camaraderie of being a part of our friendly congregation. Our heritage has lasted for over 90 years. I pray that we may continue to go from “Strength to Strength” for many, many more.\n\nJoanne Pressman is the cantorial soloist at Congregation Tifereth Israel.",
+      "originalImage": "CTI-012-ORG-1.jpg",
+      "files": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "filename": "CTI-012-ORG-1.jpg",
+          "status": "user-supplied image in conversation; permanent Drive upload pending"
+        }
+      ],
+      "transcriptionStatus": "substantially-complete-obscured-lines-marked",
+      "editorialStatus": "awaiting-approval-and-permanent-image-upload",
+      "publicationNotes": [
+        "Original is a photograph of two-part magazine clipping and Shalom Magazine masthead; keep as one original source.",
+        "Some lines in the lower half of the left article column are obscured by glare and overlap; no invented reconstruction.",
+        "Cross-reference founding names with CTI-006 and other source records; preserve each source's spelling.",
+        "Not yet approved or published."
+      ]
     }
   ],
   "assetPolicy": {
