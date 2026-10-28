@@ -62,4 +62,50 @@ with sync_playwright() as p:
         expired.get_by_text('Confirmation link expired or already used').wait_for()
         print(f'PASS {kind}: expired confirmation displays error')
         expired.close()
+    # Public unsubscribe flow is exercised with mocked API only.
+    unsub = browser.new_page()
+    requests = []
+    def mock_unsubscribe(route):
+        requests.append((route.request.url, route.request.post_data_json))
+        route.fulfill(status=200, content_type='application/json',
+                      body='{"ok":true,"message":"If that address is subscribed, a confirmation link has been emailed."}')
+    unsub.route('**/unsubscribe/request', mock_unsubscribe)
+    unsub.goto((ROOT / 'unsubscribe.html').as_uri())
+    unsub.locator('#email').fill('browser-test@example.invalid')
+    unsub.locator('#send').click()
+    unsub.get_by_text('If that address is subscribed, a confirmation link has been emailed.').wait_for()
+    assert requests == [('https://cti-admin-api.bluetallitot.workers.dev/unsubscribe/request',
+                         {'email': 'browser-test@example.invalid'})]
+    assert unsub.locator('#send').is_enabled()
+    print('PASS unsubscribe: request payload, status, button reset')
+    unsub.close()
+
+    confirmed_unsub = browser.new_page()
+    confirm_calls = []
+    def mock_unsub_confirm(route):
+        confirm_calls.append(route.request.post_data_json)
+        route.fulfill(status=200, content_type='application/json',
+                      body='{"ok":true,"message":"You have been unsubscribed."}')
+    confirmed_unsub.route('**/unsubscribe/confirm', mock_unsub_confirm)
+    confirmed_unsub.goto((ROOT / 'unsubscribe.html').as_uri() + '?token=browser-test-token')
+    assert confirmed_unsub.locator('#request').is_hidden()
+    confirmed_unsub.locator('#finish').click()
+    confirmed_unsub.get_by_text('You have been unsubscribed.').wait_for()
+    assert confirm_calls == [{'token': 'browser-test-token'}]
+    assert confirmed_unsub.locator('#confirm').is_hidden()
+    print('PASS unsubscribe: confirmation payload and completion')
+    confirmed_unsub.close()
+
+    rejected_unsub = browser.new_page()
+    def mock_unsub_error(route):
+        route.fulfill(status=400, content_type='application/json',
+                      body='{"error":"Invalid or expired confirmation link"}')
+    rejected_unsub.route('**/unsubscribe/confirm', mock_unsub_error)
+    rejected_unsub.goto((ROOT / 'unsubscribe.html').as_uri() + '?token=expired-browser-test')
+    rejected_unsub.locator('#finish').click()
+    rejected_unsub.get_by_text('Invalid or expired confirmation link').wait_for()
+    assert rejected_unsub.locator('#finish').is_enabled()
+    assert rejected_unsub.locator('#confirm').is_visible()
+    print('PASS unsubscribe: invalid confirmation permits retry')
+    rejected_unsub.close()
     browser.close()
