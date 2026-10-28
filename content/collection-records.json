@@ -587,22 +587,24 @@
         {
           "type": "ORG",
           "version": 1,
-          "filename": "CTI-006-ORG-1.jpeg",
-          "status": "high-resolution source supplied in conversation; permanent upload pending"
+          "filename": "CTI-006-ORG-1.jpg",
+          "driveId": "1o5Alga9ViAJ6COnzFym7V8rsT19dvhyt",
+          "driveUrl": "https://drive.google.com/file/d/1o5Alga9ViAJ6COnzFym7V8rsT19dvhyt/view",
+          "status": "uploaded-to-google-drive"
         }
       ],
       "publicationNotes": [
         "High-resolution original clipping supplied October 2026, replacing prior 320×200 source for transcription purposes.",
         "Exact issue date and page number not visible; 2022 inferred from centennial.",
         "Photograph in clipping is legible but user requests a better photograph before publication; record MUST remain inactive.",
-        "Original scan supplied in conversation; permanent Drive/GitHub image upload not yet verified.",
         "Article names founding members Joseph Pernitchi, Joseph Havian, Leon Eskenas, Nissim Eskenazi, Morris Gibely, Robert Hasday, David Leon; retain source spellings pending independent corroboration.",
-        "Bottom of left text column partially obstructed by clipping overlap; verify wording against a flat scan if available."
+        "Bottom of left text column partially obstructed by clipping overlap; verify wording against a flat scan if available.",
+        "Original and applicable derivative image assets uploaded to CTI Google Drive staging folder and linked in files metadata."
       ],
       "dateDisplay": "2022 (inferred from 1922 centennial; publication date unverified)",
       "transcriptionStatus": "substantially-complete-from-high-resolution-scan",
       "originalImage": "CTI-006-ORG-1.jpeg",
-      "editorialStatus": "transcribed-awaiting-better-photograph-inactive",
+      "editorialStatus": "inactive-awaiting-better-photo",
       "publication": "Jewish Journal"
     },
     {
@@ -4552,17 +4554,38 @@
           "type": "ORG",
           "version": 1,
           "filename": "CTI-012-ORG-1.jpg",
-          "status": "user-supplied image in conversation; permanent Drive upload pending"
+          "driveId": "1zw4lFw3lqtFgW086rFuMkp3fbkG2qwqj",
+          "driveUrl": "https://drive.google.com/file/d/1zw4lFw3lqtFgW086rFuMkp3fbkG2qwqj/view",
+          "status": "uploaded-to-google-drive"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "filename": "CTI-012-ENH-1.png",
+          "driveId": "1ebTo_B-yNjCcxZ-R5ZFUn47cH-6y3f-s",
+          "driveUrl": "https://drive.google.com/file/d/1ebTo_B-yNjCcxZ-R5ZFUn47cH-6y3f-s/view",
+          "status": "uploaded-to-google-drive"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "filename": "CTI-012-THM-1.jpg",
+          "driveId": "19aaLXPfOB-Mg3WgKskFTSvjBkdGwHmqj",
+          "driveUrl": "https://drive.google.com/file/d/19aaLXPfOB-Mg3WgKskFTSvjBkdGwHmqj/view",
+          "status": "uploaded-to-google-drive"
         }
       ],
       "transcriptionStatus": "substantially-complete-obscured-lines-marked",
-      "editorialStatus": "awaiting-approval-and-permanent-image-upload",
+      "editorialStatus": "assets-stored-awaiting-approval",
       "publicationNotes": [
         "Original is a photograph of two-part magazine clipping and Shalom Magazine masthead; keep as one original source.",
         "Some lines in the lower half of the left article column are obscured by glare and overlap; no invented reconstruction.",
         "Cross-reference founding names with CTI-006 and other source records; preserve each source's spelling.",
-        "Not yet approved or published."
-      ]
+        "Not yet approved or published.",
+        "Original and applicable derivative image assets uploaded to CTI Google Drive staging folder and linked in files metadata."
+      ],
+      "enhancedImage": "CTI-012-ENH-1.png",
+      "thumbnailImage": "CTI-012-THM-1.jpg"
     }
   ],
   "assetPolicy": {
