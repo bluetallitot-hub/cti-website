@@ -37,12 +37,15 @@ jobs:
         continue-on-error: true
         run: set -o pipefail; python3 tests/test_subscription_source.py | tee cti-subscriptions-audit.txt
       - name: Install browser test dependencies
+        id: browser-deps
+        continue-on-error: true
         run: |
           python3 -m pip install playwright
           python3 -m playwright install --with-deps chromium
       - name: Exercise subscription forms in a real browser with mocked API
         id: browser
         continue-on-error: true
+        if: steps.browser-deps.outcome == 'success'
         run: set -o pipefail; python3 tests/test_subscription_browser.py | tee cti-browser-audit.txt
       - name: Verify Cloudflare API health and anonymous access denial
         id: api
@@ -52,6 +55,9 @@ jobs:
         id: crawl
         continue-on-error: true
         run: python3 tests/test_site.py
+      - name: Report browser dependency installation failure
+        if: steps.browser-deps.outcome == 'failure'
+        run: echo 'Browser dependency installation failed; browser tests were not run.' | tee cti-browser-audit.txt
       - name: Upload detailed CSV and JSON results
         if: always()
         uses: actions/upload-artifact@v4
@@ -68,5 +74,5 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
       - name: Fail job if any public checks failed
-        if: steps.crawl.outcome == 'failure' || steps.content.outcome == 'failure' || steps.admin.outcome == 'failure' || steps.api.outcome == 'failure' || steps.subscriptions.outcome == 'failure' || steps.browser.outcome == 'failure'
+        if: steps.crawl.outcome == 'failure' || steps.content.outcome == 'failure' || steps.admin.outcome == 'failure' || steps.api.outcome == 'failure' || steps.subscriptions.outcome == 'failure' || steps.browser.outcome == 'failure' || steps.browser-deps.outcome == 'failure'
         run: exit 1
