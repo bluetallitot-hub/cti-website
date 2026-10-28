@@ -107,9 +107,13 @@ for path, payload in (
     )
     try:
         with urllib.request.urlopen(req, timeout=15) as response:
-            code, response_body = response.status, response.read(1000).decode("utf-8", "replace")
+            code = response.status
+            response_body = response.read(1000).decode("utf-8", "replace")
+            response_headers = response.headers
     except urllib.error.HTTPError as error:
-        code, response_body = error.code, error.read(1000).decode("utf-8", "replace")
+        code = error.code
+        response_body = error.read(1000).decode("utf-8", "replace")
+        response_headers = error.headers
     except Exception as error:
         failures.append(f"{path}: transport error: {error}")
         continue
@@ -118,7 +122,17 @@ for path, payload in (
     elif code != 400:
         failures.append(f"{path}: invalid token should return 400, got {code}")
     else:
-        print(f"PASS {path}: invalid token rejected with HTTP 400")
+        try:
+            payload = json.loads(response_body)
+        except (ValueError, TypeError):
+            failures.append(f"{path}: HTTP 400 did not contain JSON")
+            continue
+        if not isinstance(payload, dict) or not isinstance(payload.get("error"), str):
+            failures.append(f"{path}: HTTP 400 missing JSON error")
+        elif response_headers.get("Access-Control-Allow-Origin") != origin:
+            failures.append(f"{path}: HTTP 400 missing expected browser CORS origin")
+        else:
+            print(f"PASS {path}: invalid token rejected with JSON error and browser CORS")
 
 for problem in failures:
     print("FAIL " + problem)
