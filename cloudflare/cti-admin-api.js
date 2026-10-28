@@ -92,7 +92,7 @@ async function sendMeldathoReminders(env,now=new Date()){
  return {dateKey,matched:matches.size,sent};
 }
 
-export default {async scheduled(event,env,ctx){ctx.waitUntil(sendMeldathoReminders(env).then(result=>console.log('Meldatho reminders',JSON.stringify(result))).catch(error=>console.error('Meldatho reminder run failed',error.message)))},async fetch(request,env){const ORIGIN=siteOrigin(env);const origin=request.headers.get('origin');const headers={'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type','vary':'Origin'};if(request.method==='OPTIONS')return new Response(null,{status:204,headers});if(origin&&origin!==ORIGIN)return json({error:'Origin not allowed'},403,headers);const url=new URL(request.url);const respond=(o,s=200)=>json(o,s,headers);try{
+export default {async scheduled(event,env,ctx){ctx.waitUntil(sendMeldathoReminders(env).then(result=>console.log('Meldatho reminders',JSON.stringify(result))).catch(error=>console.error('Meldatho reminder run failed',error.message)))},async fetch(request,env){const ORIGIN=siteOrigin(env);const ALLOWED_ORIGIN=new URL(ORIGIN).origin;const origin=request.headers.get('origin');const headers={'access-control-allow-origin':ALLOWED_ORIGIN,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type','vary':'Origin'};if(request.method==='OPTIONS')return new Response(null,{status:204,headers});if(origin&&origin!==ALLOWED_ORIGIN)return json({error:'Origin not allowed'},403,headers);const url=new URL(request.url);const respond=(o,s=200)=>json(o,s,headers);try{
 if(url.pathname==='/health')return respond({ok:true,service:'CTI administration API'});
 if(url.pathname==='/login'&&request.method==='POST'){const body=await request.json();if(typeof body.password!=='string'||body.password.length>256)return respond({error:'Invalid password'},400);let role=null;if(await passwordCheck(body.password,env.ADMIN_PASSWORD))role='rabbi';else if(await passwordCheck(body.password,env.SECRETARY_PASSWORD))role='secretary';else if(await passwordCheck(body.password,env.BOARD_PASSWORD))role='board';else if(await passwordCheck(body.password,env.MELDADOS_PASSWORD))role='congregant';if(!role)return respond({error:'Incorrect password'},401);if(!env.SESSION_SECRET)return respond({error:'Server session secret is not configured'},503);const session=await issue(role,env.SESSION_SECRET);
  return respond({token:session,role,expiresIn:28800})}
@@ -508,13 +508,13 @@ if(url.pathname==='/events/delete'&&request.method==='POST'){
 if(url.pathname==='/unsubscribe/request'&&request.method==='POST'){
  if(!env.CTI_MAILING_LISTS||!env.RESEND_API_KEY||!env.CTI_ANNOUNCE_EMAIL_FROM)return respond({error:'Unsubscribe service is not configured'},503);
  const body=await request.json();const email=String(body.email||'').trim().toLowerCase();
- if(email.length>254||!(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)))return respond({error:'Enter a valid email address'},400);
+ if(email.length>254||!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)))return respond({error:'Enter a valid email address'},400);
  const list=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
  if(list.some(s=>typeof s==='string'&&s.trim().toLowerCase()===email)){
   const token=crypto.randomUUID()+crypto.randomUUID();
   await env.CTI_MAILING_LISTS.put('unsubscribe-token:'+token,email,{expirationTtl:3600});
   const link=site+'/unsubscribe.html?token='+encodeURIComponent(token);
-  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:[email],subject:'Confirm your CTI email unsubscribe',text:'To unsubscribe from CTI congregational emails, please confirm here:\\n'+link+'\\n\\nThis does not affect individual Meldatho reminders. If you did not request this, ignore this message.'})});
+  const response=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:[email],subject:'Confirm your CTI email unsubscribe',text:'To unsubscribe from CTI congregational emails, please confirm here:\n'+link+'\n\nThis does not affect individual Meldatho reminders. If you did not request this, ignore this message.'})});
   if(!response.ok)return respond({error:'Unable to send confirmation email'},502);
  }
  return respond({ok:true,message:'If that address is subscribed, a confirmation link has been emailed.'});
