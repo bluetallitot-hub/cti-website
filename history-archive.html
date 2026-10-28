@@ -10,7 +10,7 @@ const approvedThumb=x=>safeAsset(x.thumbnailImage)?x.thumbnailImage:null;
 const appendText=(parent,tag,value,className)=>{if(value){const el=make(tag,value);if(className)el.className=className;parent.append(el)}};
 const back=()=>{const a=link('← Back to Historical Archive','history-archive.html');a.className='btn archive-back';return a};
 const image=(src,alt)=>{const im=make('img');im.src=src;im.alt=alt||'';im.loading='lazy';return im};
-function renderDetail(x){
+function renderDetail(x,manifest=[]){
  index.hidden=true;detail.hidden=false;detail.replaceChildren(back());
  appendText(detail,'h2',x.title,'archive-detail-title');
  appendText(detail,'p',x.date,'archive-date');
@@ -21,6 +21,7 @@ function renderDetail(x){
  addPicture(x.archiveImage||x.archiveItemImage||x.indexImage,'Archive image');
  for(const v of x.imageVersions||[])if(v.type!=='THM'&&v.type!=='THUMB')addPicture(v.path||v.fileName||v.filename,v.type||'Image');
  for(const [path,type] of [[x.originalImage,'Original'],[x.restoredImage,'Enhanced'],[x.archiveItemImage,'Archive image'],[x.indexImage,'Image']])addPicture(path,type);
+ for(const v of manifest)if(v.type!=='THM'&&v.type!=='THUMB')addPicture(v.path,v.type||'Image');
  if(pictures.length){
   let current=0;const photoButton=make('button');photoButton.type='button';photoButton.className='archive-image-button';photoButton.setAttribute('aria-label','Enlarge current archive image');
   const photo=image('',x.title);photoButton.append(photo);left.append(photoButton);
@@ -60,10 +61,9 @@ function renderIndex(rows){
   a.append(copy);card.append(a);index.append(card);
  }
 }
-fetch('content/collection-records.json',{cache:'no-store'})
-.then(r=>{if(!r.ok)throw Error('Database unavailable');return r.json()})
-.then(data=>{const rows=(data.items||[]).filter(x=>x.status==='active'&&x.collection==='archive');
-if(id){const x=rows.find(r=>r.id===id);if(x)renderDetail(x);else {detail.replaceChildren(back());detail.hidden=false;index.hidden=true;message.textContent='Archive record not found.'}}
+Promise.all([fetch('content/collection-records.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Database unavailable');return r.json()}),fetch('content/heritage-image-manifest.json',{cache:'no-store'}).then(r=>r.ok?r.json():{})])
+.then(([data,manifest])=>{const rows=(data.items||[]).filter(x=>x.status==='active'&&x.collection==='archive');
+if(id){const x=rows.find(r=>r.id===id);if(x)renderDetail(x,manifest[x.id]||[]);else {detail.replaceChildren(back());detail.hidden=false;index.hidden=true;message.textContent='Archive record not found.'}}
 else if(rows.length)renderIndex(rows);else message.textContent='No archive records are currently published.'})
 .catch(()=>{message.textContent='Archive records are temporarily unavailable.'});
 })();</script></body></html>
