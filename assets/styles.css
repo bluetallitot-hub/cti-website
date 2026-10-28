@@ -131,3 +131,11 @@ footer{background:var(--site-footer-background);color:#edf0ed;padding:58px 0 28p
 
 /* Newspaper transcription: publication date opens the article; title remains in page hero. */
 .archive-article-date{font-size:.88rem;font-weight:700;letter-spacing:.015em;color:var(--muted,#59636a);margin:0 0 1rem;padding-bottom:.65rem;border-bottom:1px solid rgba(0,0,0,.12)}
+
+/* Our History: keep the site header and four-tab section bar visible while content scrolls beneath. */
+body:has(.history-home-tabs) .history-home-hero{position:sticky;top:104px;z-index:19;padding-top:12px;padding-bottom:14px;background:var(--cream)}
+body:has(.history-home-tabs) .history-home-hero h1{font-size:clamp(32px,4vw,52px);margin:.1em 0}
+body:has(.history-home-tabs) .history-home-hero .lead{margin:.25em 0}
+body:has(.history-home-tabs) .history-home-tabs{margin-top:12px}
+body:has(.history-home-tabs) main section:not(.history-home-hero){scroll-margin-top:340px}
+@media(max-width:760px){body:has(.history-home-tabs) .history-home-hero{top:var(--cti-header-height,104px)}body:has(.history-home-tabs) .history-home-hero h1{font-size:32px}}
