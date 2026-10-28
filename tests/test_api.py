@@ -72,6 +72,7 @@ except urllib.error.HTTPError as error:
     code = error.code
     allowed_origin = error.headers.get("Access-Control-Allow-Origin")
     print("Invalid subscription HTTP response headers:", dict(error.headers))
+    print("Invalid subscription HTTP response body:", error.read(500).decode("utf-8", "replace"))
 except Exception as error:
     code, allowed_origin = 0, None
     failures.append(f"Invalid subscription request could not be tested: {error}")
