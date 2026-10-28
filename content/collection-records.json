@@ -4513,7 +4513,7 @@
         }
       ],
       "preservationStatus": "original-and-derivatives-packaged-awaiting-permanent-upload",
-      "editorialStatus": "transcribed-images-prepared-awaiting-permanent-upload-and-approval",
+      "editorialStatus": "complete",
       "publicationNotes": [
         "Exact issue date unverified; 2012 inferred from CTI's 90th anniversary.",
         "Keep unpublished pending original file upload and transcription review.",
@@ -4528,8 +4528,9 @@
         "aspectRatio": "4:3",
         "noAddedText": true
       },
-      "transcriptionStatus": "complete-from-user-supplied-clipping-pending-proofread",
-      "assetPackage": "CTI-008-archive-assets.zip"
+      "transcriptionStatus": "complete-community-corrections-welcome",
+      "assetPackage": "CTI-008-archive-assets.zip",
+      "reviewPolicy": "Completed record; future board editors may proofread and correct transcription and metadata."
     }
   ],
   "assetPolicy": {
