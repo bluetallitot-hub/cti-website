@@ -55,7 +55,7 @@ try:
             failures.append(f"Subscription CORS preflight: status={code}, origin={allowed_origin!r}, methods={methods!r}, headers={allowed_headers!r}")
         print(f"Subscription browser CORS preflight: {code}, origin={allowed_origin}")
 except Exception as error:
-    failures.append(f"Subscription browser CORS preflight failed: {error}")
+    failures.append(f"Subscription browser CORS preflight failed: {error}; headers={dict(error.headers) if isinstance(error, urllib.error.HTTPError) else {}}")
 
 # Invalid request is intentionally rejected before any KV write or email send.
 invalid = urllib.request.Request(
@@ -71,6 +71,7 @@ try:
 except urllib.error.HTTPError as error:
     code = error.code
     allowed_origin = error.headers.get("Access-Control-Allow-Origin")
+    print("Invalid subscription HTTP response headers:", dict(error.headers))
 except Exception as error:
     code, allowed_origin = 0, None
     failures.append(f"Invalid subscription request could not be tested: {error}")
