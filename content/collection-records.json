@@ -579,8 +579,8 @@
       "caption": "Newspaper clipping about Congregation Tifereth Israel of Peabody's centennial.",
       "date": "",
       "description": "Newspaper feature announcing Congregation Tifereth Israel of Peabody's 100th anniversary, with a photograph of people inside the synagogue. Exact publication, byline, date and article text require a higher-resolution scan.",
-      "source": "Unidentified newspaper clipping, likely 2022; newspaper title unverified",
-      "citation": "“Peabody's Tifereth Israel to mark its 100th anniversary,” unidentified newspaper, date and page unverified.",
+      "source": "Jewish Journal (publication identified from clipping; exact issue date unverified)",
+      "citation": "“Peabody's Tifereth Israel to mark its 100th anniversary,” Jewish Journal, issue date and page unverified.",
       "attribution": "Newspaper author and photographer unverified",
       "transcript": "Peabody's Tifereth Israel to mark its 100th anniversary\n\n[Remaining text not transcribed: supplied clipping is 320 × 200 pixels and body text is illegible at this resolution.]",
       "files": [
@@ -594,13 +594,14 @@
       "publicationNotes": [
         "Uploaded source image is 320x200 pixels, originally named CTI-024-ORG-2.jpeg; preserve original and rename CTI-006-ORG-1.jpeg when stored.",
         "Do not claim a full transcription from this thumbnail-sized image.",
-        "Identify newspaper, author, exact publication date, page and photograph subjects using higher-resolution original.",
-        "2022 is inferred from the 1922 centennial, not verified publication metadata."
+        "2022 is inferred from the 1922 centennial, not verified publication metadata.",
+        "Jewish Journal masthead identified by user from clipping; verify issue date, author, page and full text from higher-resolution scan."
       ],
       "dateDisplay": "2022 (inferred from 1922 centennial; publication date unverified)",
       "transcriptionStatus": "headline-only-source-resolution-insufficient",
       "originalImage": "CTI-006-ORG-1.jpeg",
-      "editorialStatus": "metadata-partial-needs-high-resolution-source"
+      "editorialStatus": "metadata-partial-needs-high-resolution-source",
+      "publication": "Jewish Journal"
     },
     {
       "id": "CTI-007",
