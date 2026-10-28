@@ -733,6 +733,18 @@ if(url.pathname==='/master/save'&&request.method==='POST'){
  await save(env,masterPath,JSON.stringify(d,null,2)+'\n',f.sha,'Update CTI master record '+b.id);
  return respond({ok:true,id:b.id});
 }
+if(url.pathname==='/master/timeline'&&request.method==='POST'){
+ if(!permitted(role,'history'))return respond({error:'Access not permitted for this role'},403);
+ if(!canApproveArchive(role))return respond({error:'Timeline changes require Rabbi or Secretary access'},403);
+ const b=await request.json();
+ if(!Array.isArray(b.ids)||b.ids.length>2000||b.ids.some(id=>typeof id!=='string'||!/^CTI-\\d{3,}$/.test(id)))return respond({error:'Invalid timeline selection'},400);
+ const f=await gh(env,masterPath),d=decodeCollection(f),known=new Set((d.items||[]).map(x=>x.id));
+ if(b.ids.some(id=>!known.has(id)))return respond({error:'Unknown record in timeline selection'},400);
+ const selected=new Set(b.ids);
+ for(const record of d.items||[])record.showOnTimeline=selected.has(record.id);
+ await save(env,masterPath,JSON.stringify(d,null,2)+'\n',f.sha,'Update CTI historical timeline selections');
+ return respond({ok:true,count:selected.size});
+}
 if(url.pathname==='/master/upload'&&request.method==='POST'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json(),f=await gh(env,masterPath),d=decodeCollection(f),record=(d.items||[]).find(x=>x.id===b.id);
