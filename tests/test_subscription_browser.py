@@ -39,4 +39,27 @@ with sync_playwright() as p:
         assert not confirm.locator('button[type="submit"]').is_visible()
         print(f'PASS {kind}: confirmation token, feedback, hidden form')
         confirm.close()
+        # Negative path: Worker rejects a request; do not clear the form.
+        rejected = browser.new_page()
+        def reject_request(route):
+            route.fulfill(status=503, content_type='application/json', body='{"error":"Service temporarily unavailable"}')
+        rejected.route('**/subscriptions/*', reject_request)
+        rejected.goto((ROOT / filename).as_uri())
+        rejected.locator('input[name="name"]').fill('CTI Browser Test')
+        rejected.locator('input[name="email"]').fill('browser-test@example.invalid')
+        rejected.locator('input[name="consent"]').check()
+        rejected.locator('button[type="submit"]').click()
+        rejected.get_by_text('Service temporarily unavailable').wait_for()
+        assert rejected.locator('input[name="email"]').input_value() == 'browser-test@example.invalid'
+        assert rejected.locator('button[type="submit"]').is_enabled()
+        print(f'PASS {kind}: API rejection preserves form and permits retry')
+        rejected.close()
+        expired = browser.new_page()
+        def expire_confirmation(route):
+            route.fulfill(status=410, content_type='application/json', body='{"error":"Confirmation link expired or already used"}')
+        expired.route('**/subscriptions/*', expire_confirmation)
+        expired.goto((ROOT / filename).as_uri() + '?confirm=expired-browser-test-token')
+        expired.get_by_text('Confirmation link expired or already used').wait_for()
+        print(f'PASS {kind}: expired confirmation displays error')
+        expired.close()
     browser.close()
