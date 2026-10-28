@@ -1,3 +1,30 @@
+
+// CTI theme: the original palette remains untouched unless a published custom scheme exists.
+(async function(){
+ try{
+  const response=await fetch(new URL('content/site-colors.json',document.baseURI),{cache:'no-cache'});
+  if(!response.ok)return;
+  const data=await response.json(),c=data.colors||{};
+  const original={primary:'#244642',background:'#fffdf8',accent:'#a78042'};
+  if(!Object.keys(original).every(k=>typeof c[k]==='string'&&/^#[0-9a-f]{6}$/i.test(c[k])))return;
+  if(Object.keys(original).every(k=>c[k].toLowerCase()===original[k]))return;
+  const root=document.documentElement.style;
+  root.setProperty('--deep',c.primary);
+  root.setProperty('--site-background',c.background);
+  root.setProperty('--gold',c.accent);
+  root.setProperty('--site-background-alt',`color-mix(in srgb, ${c.background} 92%, ${c.primary})`);
+  root.setProperty('--site-card-background',`color-mix(in srgb, ${c.background} 90%, white)`);
+  root.setProperty('--site-header-background',`color-mix(in srgb, ${c.background} 95%, transparent)`);
+  root.setProperty('--site-footer-background',`color-mix(in srgb, ${c.primary} 88%, black)`);
+  root.setProperty('--site-notice-background',`color-mix(in srgb, ${c.background} 90%, ${c.accent})`);
+  root.setProperty('--photo-placeholder-gradient',`linear-gradient(135deg,color-mix(in srgb, ${c.background} 78%, ${c.primary}),color-mix(in srgb, ${c.background} 85%, ${c.accent}))`);
+  root.setProperty('--leader-photo-placeholder-gradient','var(--photo-placeholder-gradient)');
+  const style=document.createElement('style');
+  style.textContent='.hero{background:linear-gradient(120deg,var(--deep),color-mix(in srgb,var(--deep) 78%,black))}';
+  document.head.appendChild(style);
+ }catch(e){console.warn('CTI theme unavailable; using original colors',e)}
+})();
+
 // Use the CTI menorah logo as the browser tab and bookmark icon on every page.
 (function(){
   const icon=document.querySelector('link[rel="icon"]')||document.createElement('link');
