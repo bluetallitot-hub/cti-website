@@ -32,6 +32,11 @@ if "const enabled=false" not in worker:
     issues.append("Bulk email safety lock unexpectedly changed")
 if "await store.delete('unsubscribed:'+pending.email)" in worker:
     issues.append("Confirmation bypasses global unsubscribe")
+unsubscribe = worker.split("if(url.pathname==='/unsubscribe/request'", 1)[-1].split("if(url.pathname==='/mailing-list'", 1)[0]
+if "['congregation','torah']" not in unsubscribe:
+    issues.append('Unsubscribe request must check both email lists')
+if "await env.CTI_MAILING_LISTS.put('unsubscribed:'+email" not in unsubscribe:
+    issues.append('Unsubscribe confirmation must persist global suppression')
 for issue in issues:
     print("FAIL " + issue)
 print(f"CTI subscription source audit: {len(issues)} issue(s)")
