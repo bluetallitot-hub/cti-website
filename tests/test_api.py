@@ -145,7 +145,7 @@ with open("cti-api-status.json", "w", encoding="utf-8") as output:
         "failures": failures,
         "inconclusive": inconclusive,
     }, output, indent=2)
-    output.write("\\n")
+    output.write("\n")
 
 for problem in failures:
     print("FAIL " + problem)
