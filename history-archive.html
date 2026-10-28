@@ -18,7 +18,7 @@ function renderDetail(x,manifest=[]){
  const left=make('div'),right=make('div');
  const seen=new Set(),pictures=[];
  const addPicture=(path,type)=>{if(!safeAsset(path)||seen.has(path)||/-(?:THM|THUMB)(?:-|\\.)/i.test(path))return;seen.add(path);pictures.push({path,type})};
- const heritageOnly=['CTI-009','CTI-011','CTI-014','CTI-015','CTI-016','CTI-017','CTI-018','CTI-020','CTI-021','CTI-022','CTI-023','CTI-024'].includes(x.id);
+ const heritageOnly=['CTI-009','CTI-011','CTI-014','CTI-015','CTI-016','CTI-017','CTI-018','CTI-020','CTI-021','CTI-022','CTI-023','CTI-024','CTI-025','CTI-026','CTI-027'].includes(x.id);
  for(const v of manifest)if(v.type!=='THM'&&v.type!=='THUMB')addPicture(v.path,v.type||'Image');
  if(!heritageOnly){
   addPicture(x.archiveImage||x.archiveItemImage||x.indexImage,'Archive image');
