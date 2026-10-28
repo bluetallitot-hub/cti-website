@@ -4,7 +4,8 @@
   "categories": [
     "current_leadership",
     "founder",
-    "past_president"
+    "past_president",
+    "historical_associate"
   ],
   "leaders": [
     {
@@ -359,17 +360,15 @@
       "id": "ralph-bencangey",
       "name": "Ralph Bencangey",
       "types": [
-        "founder"
+        "historical_associate"
       ],
       "introduction": "Charter member of Congregation Tifereth Israel.",
       "biography": "",
       "photo": "assets/images/leadership/ralph-bencangey-gallery.png",
-      "role": null,
+      "role": "Historical spiritual leader",
       "serviceYears": null,
       "links": {},
-      "order": {
-        "founder": 8
-      }
+      "order": {}
     },
     {
       "id": "david-fermon",
