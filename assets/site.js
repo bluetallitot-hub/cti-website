@@ -56,7 +56,7 @@ const canonicalNav=[
   ['leadership.html','Leadership Team'],
   ['services.html',"What's Happening"],
   ['meldados.html','Meldathos'],
-  ['torah.html','D’var Torah'],
+  ['torah.html',"Rabbi's Corner"],
   ['resources.html','Resources'],
   ['give.html','Give','givebtn']
 ];
