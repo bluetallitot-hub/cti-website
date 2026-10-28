@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Safely file CTI-001..015 intake assets into per-record Heritage directories."""
+"""Safely file CTI-001..016 intake assets into per-record Heritage directories."""
 import argparse
 import json
 import re
@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 NEW = ROOT / "assets" / "new"
 HERITAGE = ROOT / "assets" / "heritage"
 DB = ROOT / "content" / "collection-records.json"
-PATTERN = re.compile(r"^(CTI-(?:00[1-9]|01[0-5]))-(ORG|ENH|THM|SEP|COL|DOC|IMG|THUMB)-([0-9]+)\.(jpg|jpeg|png|webp|gif|pdf|tif|tiff)$", re.I)
+PATTERN = re.compile(r"^(CTI-(?:00[1-9]|01[0-6]))-(ORG|ENH|THM|SEP|COL|DOC|IMG|THUMB)-([0-9]+)\.(jpg|jpeg|png|webp|gif|pdf|tif|tiff)$", re.I)
 
 
 def replace_exact(obj, old, new):
@@ -27,11 +27,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="Perform changes (default: audit only)")
     args = parser.parse_args()
-    files = sorted(p for p in NEW.rglob("*") if p.is_file() and p.name != ".gitkeep")
+    files = sorted([p for p in NEW.rglob("*") if p.is_file() and p.name != ".gitkeep"] + [p for p in ROOT.iterdir() if p.is_file() and PATTERN.fullmatch(p.name)])
     planned, skipped, conflicts = [], [], []
     for src in files:
         match = PATTERN.fullmatch(src.name)
-        if not match or src.parent != NEW:
+        if not match or src.parent not in (NEW, ROOT):
             skipped.append(src.relative_to(ROOT).as_posix())
             continue
         dest = HERITAGE / match.group(1).upper() / src.name
