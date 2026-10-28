@@ -1100,7 +1100,7 @@
         {
           "type": "THM",
           "version": 1,
-          "filename": "CTI-010-THM-1.png",
+          "filename": "assets/heritage/CTI-010/CTI-010-THM-1.png",
           "driveId": "1-lnSYB0jVF89T6dTmAMIYeGRPlgyK7Ix",
           "url": "https://drive.google.com/file/d/1-lnSYB0jVF89T6dTmAMIYeGRPlgyK7Ix/view?usp=drivesdk"
         },
@@ -1123,13 +1123,13 @@
       "originalImageCaption": "Joint Ladies Auxiliary brunch with Temple Emanu-El of Marblehead, April 7, 2024 (event description from existing CTI catalog; not an inscription on the photograph).",
       "originalCaptionCorrections": [],
       "restoredImage": "CTI-010-ENH-1.png",
-      "thumbnailImage": "CTI-010-THM-1.png",
+      "thumbnailImage": "assets/heritage/CTI-010/CTI-010-THM-1.png",
       "preservationStatus": "original-preserved-in-google-drive",
       "imageVersions": [
         {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-010-THM-1.png",
+          "path": "assets/heritage/CTI-010/CTI-010-THM-1.png",
           "derivedFrom": "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
           "method": "near-white-border-trim and 4:3 center crop; no text added"
         },
@@ -1152,7 +1152,7 @@
         {
           "type": "THM",
           "version": 1,
-          "fileName": "CTI-010-THM-1.png",
+          "fileName": "assets/heritage/CTI-010/CTI-010-THM-1.png",
           "driveId": "1-lnSYB0jVF89T6dTmAMIYeGRPlgyK7Ix",
           "derivedFrom": "CTI-010-ENH-1.png",
           "method": "AI-assisted landscape thumbnail"
@@ -1179,7 +1179,7 @@
           "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
           "assets/collections/CTI-010-THM-1.png",
           "CTI-010-ENH-1.png",
-          "CTI-010-THM-1.png"
+          "assets/heritage/CTI-010/CTI-010-THM-1.png"
         ],
         "fileReferences": [
           "assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg",
@@ -1214,14 +1214,14 @@
         "additionalPhotos": "Not yet located or verified",
         "transcriptionRequired": false,
         "primaryImage": "CTI-010-ENH-1.png",
-        "thumbnail": "CTI-010-THM-1.png",
+        "thumbnail": "assets/heritage/CTI-010/CTI-010-THM-1.png",
         "original": "CTI-010-ORG-1.png"
       },
       "driveImageInventory": [
         {
           "type": "THM",
           "version": 1,
-          "filename": "CTI-010-THM-1.png",
+          "filename": "assets/heritage/CTI-010/CTI-010-THM-1.png",
           "driveId": "1-lnSYB0jVF89T6dTmAMIYeGRPlgyK7Ix",
           "url": "https://drive.google.com/file/d/1-lnSYB0jVF89T6dTmAMIYeGRPlgyK7Ix/view?usp=drivesdk"
         },
@@ -1269,30 +1269,30 @@
         {
           "type": "ENH",
           "version": 1,
-          "filename": "CTI-011-ENH-1.png",
+          "filename": "assets/heritage/CTI-011/CTI-011-ENH-1.png",
           "driveId": "116g0waJYKpm9IbQCfSSRYzdsay546ZmW",
           "url": "https://drive.google.com/file/d/116g0waJYKpm9IbQCfSSRYzdsay546ZmW/view?usp=drivesdk"
         },
         {
           "type": "THM",
           "version": 1,
-          "filename": "CTI-011-THM-1.png",
+          "filename": "assets/heritage/CTI-011/CTI-011-THM-1.png",
           "driveId": "1u5XuC1m99ngK3pwMXcrYIkJfzkP43oYC",
           "url": "https://drive.google.com/file/d/1u5XuC1m99ngK3pwMXcrYIkJfzkP43oYC/view?usp=drivesdk"
         },
         {
           "type": "ORG",
           "version": 1,
-          "filename": "CTI-011-ORG-1.png",
+          "filename": "assets/heritage/CTI-011/CTI-011-ORG-1.png",
           "driveId": "1GfIEXn4tiAhkLqxiqv-rc6wpRh_6y2_B",
           "url": "https://drive.google.com/file/d/1GfIEXn4tiAhkLqxiqv-rc6wpRh_6y2_B/view?usp=drivesdk"
         }
       ],
-      "originalImage": "CTI-011-ORG-1.png",
+      "originalImage": "assets/heritage/CTI-011/CTI-011-ORG-1.png",
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": "CTI-011-ENH-2.png",
-      "thumbnailImage": "CTI-011-THM-1.png",
+      "thumbnailImage": "assets/heritage/CTI-011/CTI-011-THM-1.png",
       "preservationStatus": "original-preserved-in-google-drive",
       "imageVersions": [
         {
@@ -1304,23 +1304,23 @@
         {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-011-THM-1.png",
+          "path": "assets/heritage/CTI-011/CTI-011-THM-1.png",
           "derivedFrom": "assets/archive/originals/cti-early-religious-leaders-original.jpg",
           "method": "full-image contain with softened background"
         },
         {
           "type": "ORG",
           "version": 1,
-          "fileName": "CTI-011-ORG-1.png",
+          "fileName": "assets/heritage/CTI-011/CTI-011-ORG-1.png",
           "driveId": "1GfIEXn4tiAhkLqxiqv-rc6wpRh_6y2_B",
           "method": "unchanged original page from user"
         },
         {
           "type": "ENH",
           "version": 1,
-          "fileName": "CTI-011-ENH-1.png",
+          "fileName": "assets/heritage/CTI-011/CTI-011-ENH-1.png",
           "driveId": "1m5DilWa1Yj_cgioebxz-wU31Ftc2zqSE",
-          "derivedFrom": "CTI-011-ORG-1.png",
+          "derivedFrom": "assets/heritage/CTI-011/CTI-011-ORG-1.png",
           "method": "crop to all three portraits, tonal adjustment and sharpening; no generative changes"
         },
         {
@@ -1328,13 +1328,13 @@
           "version": 2,
           "fileName": "CTI-011-ENH-2.png",
           "driveId": "116g0waJYKpm9IbQCfSSRYzdsay546ZmW",
-          "derivedFrom": "CTI-011-ORG-1.png",
+          "derivedFrom": "assets/heritage/CTI-011/CTI-011-ORG-1.png",
           "method": "AI-assisted reconstruction of full historical page, preserving three-portrait layout and text; approved by user"
         },
         {
           "type": "THM",
           "version": 1,
-          "fileName": "CTI-011-THM-1.png",
+          "fileName": "assets/heritage/CTI-011/CTI-011-THM-1.png",
           "driveId": "1u5XuC1m99ngK3pwMXcrYIkJfzkP43oYC",
           "derivedFrom": "CTI-011-ENH-2.png",
           "method": "AI-assisted three-portrait landscape composition, no text; resized to exact 800×600"
@@ -1387,21 +1387,21 @@
         {
           "type": "ENH",
           "version": 1,
-          "filename": "CTI-011-ENH-1.png",
+          "filename": "assets/heritage/CTI-011/CTI-011-ENH-1.png",
           "driveId": "116g0waJYKpm9IbQCfSSRYzdsay546ZmW",
           "url": "https://drive.google.com/file/d/116g0waJYKpm9IbQCfSSRYzdsay546ZmW/view?usp=drivesdk"
         },
         {
           "type": "THM",
           "version": 1,
-          "filename": "CTI-011-THM-1.png",
+          "filename": "assets/heritage/CTI-011/CTI-011-THM-1.png",
           "driveId": "1u5XuC1m99ngK3pwMXcrYIkJfzkP43oYC",
           "url": "https://drive.google.com/file/d/1u5XuC1m99ngK3pwMXcrYIkJfzkP43oYC/view?usp=drivesdk"
         },
         {
           "type": "ORG",
           "version": 1,
-          "filename": "CTI-011-ORG-1.png",
+          "filename": "assets/heritage/CTI-011/CTI-011-ORG-1.png",
           "driveId": "1GfIEXn4tiAhkLqxiqv-rc6wpRh_6y2_B",
           "url": "https://drive.google.com/file/d/1GfIEXn4tiAhkLqxiqv-rc6wpRh_6y2_B/view?usp=drivesdk"
         }
@@ -1429,37 +1429,37 @@
       "pdf": null,
       "sourcePage": null,
       "originalFilenames": [
-        "CTI-013-ORG-1.jpg",
-        "CTI-013-ENH-1.png",
-        "CTI-013-COL-1.png",
-        "CTI-013-THM-1.png"
+        "assets/heritage/CTI-013/CTI-013-ORG-1.jpg",
+        "assets/heritage/CTI-013/CTI-013-ENH-1.png",
+        "assets/heritage/CTI-013/CTI-013-COL-1.png",
+        "assets/heritage/CTI-013/CTI-013-THM-1.png"
       ],
       "files": [
         {
           "type": "COL",
           "version": 1,
-          "filename": "CTI-013-COL-1.png",
+          "filename": "assets/heritage/CTI-013/CTI-013-COL-1.png",
           "driveId": "1KgcS3u3NQpm_3HeSTEf-veOvzOHnM6Ps",
           "url": "https://drive.google.com/file/d/1KgcS3u3NQpm_3HeSTEf-veOvzOHnM6Ps/view?usp=drivesdk"
         },
         {
           "type": "THM",
           "version": 1,
-          "filename": "CTI-013-THM-1.png",
+          "filename": "assets/heritage/CTI-013/CTI-013-THM-1.png",
           "driveId": "1LRhfBwMaXysoXtuAyHffO_Cv7aPEYqVZ",
           "url": "https://drive.google.com/file/d/1LRhfBwMaXysoXtuAyHffO_Cv7aPEYqVZ/view?usp=drivesdk"
         },
         {
           "type": "ENH",
           "version": 1,
-          "filename": "CTI-013-ENH-1.png",
+          "filename": "assets/heritage/CTI-013/CTI-013-ENH-1.png",
           "driveId": "12D5tVBAw3vmQrItwBz8TN9UYsa_8My2I",
           "url": "https://drive.google.com/file/d/12D5tVBAw3vmQrItwBz8TN9UYsa_8My2I/view?usp=drivesdk"
         },
         {
           "type": "ORG",
           "version": 1,
-          "filename": "CTI-013-ORG-1.jpg",
+          "filename": "assets/heritage/CTI-013/CTI-013-ORG-1.jpg",
           "driveId": "1tF5tyobdLxpRnqxQO-_8MoRgQezEcI7F",
           "url": "https://drive.google.com/file/d/1tF5tyobdLxpRnqxQO-_8MoRgQezEcI7F/view?usp=drivesdk"
         }
@@ -1468,7 +1468,7 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": "assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png",
-      "thumbnailImage": "assets/collections/CTI-013-THM-1.png",
+      "thumbnailImage": "assets/heritage/CTI-013/CTI-013-THM-1.png",
       "preservationStatus": "complete-pending-upload",
       "imageVersions": [
         {
@@ -1489,7 +1489,7 @@
         {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-013-THM-1.png",
+          "path": "assets/heritage/CTI-013/CTI-013-THM-1.png",
           "derivedFrom": "assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png"
         }
       ],
@@ -1550,22 +1550,22 @@
       "stagedDriveFiles": [
         {
           "type": "ORG",
-          "name": "CTI-013-ORG-1.jpg",
+          "name": "assets/heritage/CTI-013/CTI-013-ORG-1.jpg",
           "id": "1tF5tyobdLxpRnqxQO-_8MoRgQezEcI7F"
         },
         {
           "type": "ENH",
-          "name": "CTI-013-ENH-1.png",
+          "name": "assets/heritage/CTI-013/CTI-013-ENH-1.png",
           "id": "12D5tVBAw3vmQrItwBz8TN9UYsa_8My2I"
         },
         {
           "type": "COL",
-          "name": "CTI-013-COL-1.png",
+          "name": "assets/heritage/CTI-013/CTI-013-COL-1.png",
           "id": "1KgcS3u3NQpm_3HeSTEf-veOvzOHnM6Ps"
         },
         {
           "type": "THM",
-          "name": "CTI-013-THM-1.png",
+          "name": "assets/heritage/CTI-013/CTI-013-THM-1.png",
           "id": "1LRhfBwMaXysoXtuAyHffO_Cv7aPEYqVZ"
         }
       ],
@@ -1573,28 +1573,28 @@
         {
           "type": "COL",
           "version": 1,
-          "filename": "CTI-013-COL-1.png",
+          "filename": "assets/heritage/CTI-013/CTI-013-COL-1.png",
           "driveId": "1KgcS3u3NQpm_3HeSTEf-veOvzOHnM6Ps",
           "url": "https://drive.google.com/file/d/1KgcS3u3NQpm_3HeSTEf-veOvzOHnM6Ps/view?usp=drivesdk"
         },
         {
           "type": "THM",
           "version": 1,
-          "filename": "CTI-013-THM-1.png",
+          "filename": "assets/heritage/CTI-013/CTI-013-THM-1.png",
           "driveId": "1LRhfBwMaXysoXtuAyHffO_Cv7aPEYqVZ",
           "url": "https://drive.google.com/file/d/1LRhfBwMaXysoXtuAyHffO_Cv7aPEYqVZ/view?usp=drivesdk"
         },
         {
           "type": "ENH",
           "version": 1,
-          "filename": "CTI-013-ENH-1.png",
+          "filename": "assets/heritage/CTI-013/CTI-013-ENH-1.png",
           "driveId": "12D5tVBAw3vmQrItwBz8TN9UYsa_8My2I",
           "url": "https://drive.google.com/file/d/12D5tVBAw3vmQrItwBz8TN9UYsa_8My2I/view?usp=drivesdk"
         },
         {
           "type": "ORG",
           "version": 1,
-          "filename": "CTI-013-ORG-1.jpg",
+          "filename": "assets/heritage/CTI-013/CTI-013-ORG-1.jpg",
           "driveId": "1tF5tyobdLxpRnqxQO-_8MoRgQezEcI7F",
           "url": "https://drive.google.com/file/d/1tF5tyobdLxpRnqxQO-_8MoRgQezEcI7F/view?usp=drivesdk"
         }
@@ -1628,13 +1628,13 @@
       "files": [
         {
           "type": "ORG",
-          "filename": "CTI-014-ORG-1.jpg",
+          "filename": "assets/heritage/CTI-014/CTI-014-ORG-1.jpg",
           "driveId": "1tsFIqrgU38TptN0CF3Qzm3LJMaKe2kbl",
           "url": "https://drive.google.com/file/d/1tsFIqrgU38TptN0CF3Qzm3LJMaKe2kbl/view"
         },
         {
           "type": "IMG",
-          "filename": "CTI-014-IMG-1.png",
+          "filename": "assets/heritage/CTI-014/CTI-014-IMG-1.png",
           "driveId": "1o3U-dY5X3xPvnDgGmwqScDDZy6XYO7LH",
           "url": "https://drive.google.com/file/d/1o3U-dY5X3xPvnDgGmwqScDDZy6XYO7LH/view"
         },
@@ -1681,10 +1681,10 @@
       "originalStatus": "filename-matched-original-present-in-google-drive-content-not-independently-verified",
       "assetInventory": {
         "sourceFiles": [
-          "CTI-014-ORG-1.jpg"
+          "assets/heritage/CTI-014/CTI-014-ORG-1.jpg"
         ],
         "presentationFiles": [
-          "CTI-014-IMG-1.png",
+          "assets/heritage/CTI-014/CTI-014-IMG-1.png",
           "CTI-014-THM-v2.png"
         ],
         "fileReferences": [
@@ -1750,8 +1750,8 @@
       "consolidationStatus": "1972-article-and-ticket-logically-grouped; asset-verification-pending",
       "consolidationNote": "1972 article and anniversary ticket belong to one archival entry. Other anniversary articles remain separate and cross-referenced. No leadership photograph merged without event-specific evidence.",
       "canonicalAssetNames": {
-        "originalClipping": "CTI-014-ORG-1.jpg",
-        "restoredTicket": "CTI-014-IMG-1.png",
+        "originalClipping": "assets/heritage/CTI-014/CTI-014-ORG-1.jpg",
+        "restoredTicket": "assets/heritage/CTI-014/CTI-014-IMG-1.png",
         "thumbnail": "CTI-014-THM-v2.png"
       },
       "assetNamingStatus": "google-drive-canonical-names-confirmed-github-binary-migration-pending",
@@ -1783,7 +1783,7 @@
       },
       "transcriptionReview": {
         "date": "2026-10-27",
-        "sourceFilename": "CTI-014-ORG-1.jpg",
+        "sourceFilename": "assets/heritage/CTI-014/CTI-014-ORG-1.jpg",
         "result": "verified",
         "notes": "Text compared against photographed original; paragraph line breaks normalized; source wording retained, including historical assertions and spelling. Source headline verified. Handwritten date/source identified separately."
       },
@@ -1814,28 +1814,28 @@
         {
           "type": "THM",
           "version": 1,
-          "filename": "CTI-015-THM-1.png",
+          "filename": "assets/heritage/CTI-015/CTI-015-THM-1.png",
           "driveId": "1NDy6WjHTtFQeyDezzSwFR-zKToOFQngr",
           "url": "https://drive.google.com/file/d/1NDy6WjHTtFQeyDezzSwFR-zKToOFQngr/view?usp=drivesdk"
         },
         {
           "type": "COL",
           "version": 1,
-          "filename": "CTI-015-COL-1.png",
+          "filename": "assets/heritage/CTI-015/CTI-015-COL-1.png",
           "driveId": "1TTDFNrQbDTCcSOrql77a9orQyacYhxvz",
           "url": "https://drive.google.com/file/d/1TTDFNrQbDTCcSOrql77a9orQyacYhxvz/view?usp=drivesdk"
         },
         {
           "type": "SEP",
           "version": 1,
-          "filename": "CTI-015-SEP-1.png",
+          "filename": "assets/heritage/CTI-015/CTI-015-SEP-1.png",
           "driveId": "1CNlT2hDi81QAoOzUVOPGv-nrZ8AiCTPO",
           "url": "https://drive.google.com/file/d/1CNlT2hDi81QAoOzUVOPGv-nrZ8AiCTPO/view?usp=drivesdk"
         },
         {
           "type": "ORG",
           "version": 1,
-          "filename": "CTI-015-ORG-1.jpg",
+          "filename": "assets/heritage/CTI-015/CTI-015-ORG-1.jpg",
           "driveId": "1t_s66_4X_xlHTbaTG0PavOxqVCMxX85U",
           "url": "https://drive.google.com/file/d/1t_s66_4X_xlHTbaTG0PavOxqVCMxX85U/view?usp=drivesdk"
         }
@@ -1844,7 +1844,7 @@
       "originalImageCaption": "Joseph Gibely in the sanctuary of Congregation Tifereth Israel.",
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/collections/CTI-015-THM-1.png",
+      "thumbnailImage": "assets/heritage/CTI-015/CTI-015-THM-1.png",
       "preservationStatus": "source-scan-present-provenance-documented",
       "imageVersions": [
         {
@@ -1862,7 +1862,7 @@
         {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-015-THM-1.png",
+          "path": "assets/heritage/CTI-015/CTI-015-THM-1.png",
           "note": "Approved Drive image; GitHub file pixels not yet synchronized or checked"
         }
       ],
@@ -1937,23 +1937,23 @@
       "googleDriveImageVersions": [
         {
           "type": "ORG",
-          "fileName": "CTI-015-ORG-1.jpg",
+          "fileName": "assets/heritage/CTI-015/CTI-015-ORG-1.jpg",
           "driveFileId": "1t_s66_4X_xlHTbaTG0PavOxqVCMxX85U"
         },
         {
           "type": "SEP",
-          "fileName": "CTI-015-SEP-1.png",
+          "fileName": "assets/heritage/CTI-015/CTI-015-SEP-1.png",
           "driveFileId": "1CNlT2hDi81QAoOzUVOPGv-nrZ8AiCTPO",
           "note": "Saved exactly as uploaded; image appears black-and-white, not verified sepia-toned"
         },
         {
           "type": "COL",
-          "fileName": "CTI-015-COL-1.png",
+          "fileName": "assets/heritage/CTI-015/CTI-015-COL-1.png",
           "driveFileId": "1TTDFNrQbDTCcSOrql77a9orQyacYhxvz"
         },
         {
           "type": "THM",
-          "fileName": "CTI-015-THM-1.png",
+          "fileName": "assets/heritage/CTI-015/CTI-015-THM-1.png",
           "driveFileId": "1NDy6WjHTtFQeyDezzSwFR-zKToOFQngr"
         }
       ],
@@ -1977,28 +1977,28 @@
         {
           "type": "THM",
           "version": 1,
-          "filename": "CTI-015-THM-1.png",
+          "filename": "assets/heritage/CTI-015/CTI-015-THM-1.png",
           "driveId": "1NDy6WjHTtFQeyDezzSwFR-zKToOFQngr",
           "url": "https://drive.google.com/file/d/1NDy6WjHTtFQeyDezzSwFR-zKToOFQngr/view?usp=drivesdk"
         },
         {
           "type": "COL",
           "version": 1,
-          "filename": "CTI-015-COL-1.png",
+          "filename": "assets/heritage/CTI-015/CTI-015-COL-1.png",
           "driveId": "1TTDFNrQbDTCcSOrql77a9orQyacYhxvz",
           "url": "https://drive.google.com/file/d/1TTDFNrQbDTCcSOrql77a9orQyacYhxvz/view?usp=drivesdk"
         },
         {
           "type": "SEP",
           "version": 1,
-          "filename": "CTI-015-SEP-1.png",
+          "filename": "assets/heritage/CTI-015/CTI-015-SEP-1.png",
           "driveId": "1CNlT2hDi81QAoOzUVOPGv-nrZ8AiCTPO",
           "url": "https://drive.google.com/file/d/1CNlT2hDi81QAoOzUVOPGv-nrZ8AiCTPO/view?usp=drivesdk"
         },
         {
           "type": "ORG",
           "version": 1,
-          "filename": "CTI-015-ORG-1.jpg",
+          "filename": "assets/heritage/CTI-015/CTI-015-ORG-1.jpg",
           "driveId": "1t_s66_4X_xlHTbaTG0PavOxqVCMxX85U",
           "url": "https://drive.google.com/file/d/1t_s66_4X_xlHTbaTG0PavOxqVCMxX85U/view?usp=drivesdk"
         }
@@ -2057,7 +2057,7 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/collections/CTI-016-THM-1.png",
+      "thumbnailImage": "assets/heritage/CTI-016/CTI-016-THM-1.png",
       "preservationStatus": "repository-source-file-present-originality-unverified",
       "imageVersions": [
         {
@@ -2069,7 +2069,7 @@
         {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-016-THM-1.png",
+          "path": "assets/heritage/CTI-016/CTI-016-THM-1.png",
           "derivedFrom": "assets/images/leadership/Warm Vintage Portrait of an Older Gentleman.png",
           "method": "full-image contain with softened background"
         }
@@ -4548,12 +4548,12 @@
       "citation": "Joanne Pressman, “The only Sephardic Temple north of Boston,” Shalom Magazine, Rosh Hashanah/Fall 2019, Edition 37 (page number not visible).",
       "attribution": "Joanne Pressman",
       "transcript": "The only Sephardic Temple north of Boston\nBy Joanne Pressman\n\nOn a quiet side street near the Peabody-Salem line sits a small, nondescript building that is the home of Congregation Tifereth Israel, the synagogue that has been my religious home for my entire life.\n\nUnless you are looking for the shul, you could drive right by without noticing it. But this synagogue has a history that goes back almost 100 years.\n\nOn February 15, 1922, our Congregation was begun by seven Jewish men who came to the United States from Turkey. Leon Eskenas, Nisim Eskenazi, Morris Gibely, Joseph Havian, Robert Hasday, David Leon, and Joseph Pernitchi were men who had a dream of a better life and religious freedom. Try to imagine what life may have been like at that time. Imagine, if you can, leaving your home and your loved ones - giving up everything that is known and familiar to you to travel a great distance to a foreign country.\n\nWhen you get to this strange, new place, with nothing but what you were able to carry with you, you need to find a job and somewhere to live; to learn the language, and to save enough money to send for your family and then to sustain them. With all the problems involved in just providing food, clothing, and shelter, how many of us would give religion the priority and importance in our lives that they did in theirs?\n\nThese were men of great courage and vision. Nothing was handed to them or made easy for them; nor did they expect that it would be. They [several lines partly obscured in supplied clipping] to form a “Congregation” to worship in their [obscured]. [Obscured] not even a “synagogue,” but a Congregation [obscured] men and women who practiced religion in every facet [obscured]. It did not matter that they had no building of [obscured] this congregation. Their dedication and enthusiasm [obscured] physical structure, but to a religious ideal.\n\n[Obscured] in their children a strong connection to Sephardic [obscured] and tenets of Judaism. For nearly a century, we have retained these traditions and rituals and kept our synagogue alive. In every generation, there have been members who stepped forward and made the commitment to continue this legacy of caring and sharing. The family of Congregation Tifereth Israel is an extremely close-knit community whose members are always there for one another.\n\nDuring our 97-year history, we have had only seven presidents; and the current president, Elliot Hershoff, is the first of Ashkenazi descent. One reason we are unique is that traditionally, our religious leadership comes from within our own membership, which currently is approaching 100 members - and there is no full or part-time professional religious leadership.\n\nIn every generation, there have been members who stepped forward and made the commitment to continue our legacy by maintaining the Sephardic traditions and rituals. As a granddaughter of both Joseph Havian and Joseph Pernitchi, I have been privileged to be our cantorial soloist since 1991, and to co-officiate in leading our High Holiday and monthly Shabbat services.\n\nWhen you attend our services and listen to the centuries-old Sephardic melodies chanted exactly as they were so many years ago, you can close your eyes and feel yourself taken back to the time of our grandparents. Like many of our other members, I have made the commitment to continue what was started so long ago, and to continue its existence for our next generation.\n\nWhile a large number of our members are descendants of our founders and related to each other, those new members that join us soon discover the warmth, the caring, and the camaraderie of being a part of our friendly congregation. Our heritage has lasted for over 90 years. I pray that we may continue to go from “Strength to Strength” for many, many more.\n\nJoanne Pressman is the cantorial soloist at Congregation Tifereth Israel.",
-      "originalImage": "CTI-012-ORG-1.jpg",
+      "originalImage": "assets/heritage/CTI-012/CTI-012-ORG-1.jpg",
       "files": [
         {
           "type": "ORG",
           "version": 1,
-          "filename": "CTI-012-ORG-1.jpg",
+          "filename": "assets/heritage/CTI-012/CTI-012-ORG-1.jpg",
           "driveId": "1zw4lFw3lqtFgW086rFuMkp3fbkG2qwqj",
           "driveUrl": "https://drive.google.com/file/d/1zw4lFw3lqtFgW086rFuMkp3fbkG2qwqj/view",
           "status": "uploaded-to-google-drive"
@@ -4561,7 +4561,7 @@
         {
           "type": "ENH",
           "version": 1,
-          "filename": "CTI-012-ENH-1.png",
+          "filename": "assets/heritage/CTI-012/CTI-012-ENH-1.png",
           "driveId": "1ebTo_B-yNjCcxZ-R5ZFUn47cH-6y3f-s",
           "driveUrl": "https://drive.google.com/file/d/1ebTo_B-yNjCcxZ-R5ZFUn47cH-6y3f-s/view",
           "status": "uploaded-to-google-drive"
@@ -4569,7 +4569,7 @@
         {
           "type": "THM",
           "version": 1,
-          "filename": "CTI-012-THM-1.jpg",
+          "filename": "assets/heritage/CTI-012/CTI-012-THM-1.jpg",
           "driveId": "19aaLXPfOB-Mg3WgKskFTSvjBkdGwHmqj",
           "driveUrl": "https://drive.google.com/file/d/19aaLXPfOB-Mg3WgKskFTSvjBkdGwHmqj/view",
           "status": "uploaded-to-google-drive"
@@ -4584,8 +4584,8 @@
         "Not yet approved or published.",
         "Original and applicable derivative image assets uploaded to CTI Google Drive staging folder and linked in files metadata."
       ],
-      "enhancedImage": "CTI-012-ENH-1.png",
-      "thumbnailImage": "CTI-012-THM-1.jpg"
+      "enhancedImage": "assets/heritage/CTI-012/CTI-012-ENH-1.png",
+      "thumbnailImage": "assets/heritage/CTI-012/CTI-012-THM-1.jpg"
     }
   ],
   "assetPolicy": {
