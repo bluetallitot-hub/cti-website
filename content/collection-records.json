@@ -4498,6 +4498,12 @@
           "version": 1,
           "fileName": "CTI-008-ORG-1.jpeg",
           "note": "Original source supplied in conversation; repository/Drive upload pending. Do not substitute generated image."
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "fileName": "CTI-008-ENH-1.png",
+          "note": "User-approved AI-enhanced color rendition; local file created, Drive/repository upload pending. Original newspaper photograph remains authoritative."
         }
       ],
       "preservationStatus": "original-upload-pending",
@@ -4507,7 +4513,8 @@
         "Source image supplied in conversation, but not yet stored in Google Drive or GitHub; do not claim preservation complete.",
         "Keep unpublished pending original file upload and transcription review."
       ],
-      "publication": "Peabody Weekly News"
+      "publication": "Peabody Weekly News",
+      "restoredImage": "CTI-008-ENH-1.png"
     }
   ],
   "assetPolicy": {
