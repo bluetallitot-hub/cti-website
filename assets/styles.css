@@ -6,6 +6,9 @@
   --site-card-background:#ffffff;
   --site-header-background:rgba(255,253,248,.95);
   --site-footer-background:#1f302e;
+  --site-notice-background:var(--site-notice-background);
+  --site-archive-thumbnail-background:#f4efe4;
+  --site-gallery-thumbnail-background:#f1eee7;
   --paper:var(--site-background); --cream:var(--site-background-alt);
   --max:1180px; --radius:18px;
 }
@@ -114,7 +117,7 @@ footer{background:var(--site-footer-background);color:#edf0ed;padding:58px 0 28p
 .archive-index-card .archive-thumb-presidents{display:block;width:100%;height:100%;max-height:100%;object-fit:contain;object-position:center;padding:8px;margin:0;background:transparent;border-radius:0;box-sizing:border-box}
 
 /* Matching extended parchment surround for the founders and presidents plaques. */
-.archive-index-card .archive-thumb-founders,.archive-index-card .archive-thumb-presidents{background:var(--site-background-alt);object-fit:contain;object-position:center;padding:20px;}
+.archive-index-card .archive-thumb-founders,.archive-index-card .archive-thumb-presidents{background:var(--site-archive-thumbnail-background);object-fit:contain;object-position:center;padding:20px;}
 
 /* Newspaper transcription: publication date opens the article; title remains in page hero. */
 .archive-article-date{font-size:.88rem;font-weight:700;letter-spacing:.015em;color:var(--muted,#59636a);margin:0 0 1rem;padding-bottom:.65rem;border-bottom:1px solid rgba(0,0,0,.12)}
