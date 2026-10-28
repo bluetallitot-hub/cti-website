@@ -34,7 +34,9 @@ with sync_playwright() as p:
         confirm.goto((ROOT / filename).as_uri() + '?confirm=browser-test-token')
         confirm.get_by_text('Your subscription is confirmed.').wait_for()
         assert confirmed == [{'token': 'browser-test-token'}]
-        assert not confirm.locator('#subscribe-form').is_visible()
+        assert confirm.locator('#subscribe-form').is_visible()
+        assert not confirm.locator('input[name="email"]').is_visible()
+        assert not confirm.locator('button[type="submit"]').is_visible()
         print(f'PASS {kind}: confirmation token, feedback, hidden form')
         confirm.close()
     browser.close()
