@@ -69,6 +69,7 @@ jobs:
             cti-content-audit.txt
             cti-admin-audit.txt
             cti-api-audit.txt
+            cti-api-status.json
             cti-subscriptions-audit.txt
             cti-browser-audit.txt
           if-no-files-found: warn
