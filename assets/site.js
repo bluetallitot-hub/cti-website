@@ -40,7 +40,7 @@
   const icon=document.querySelector('link[rel="icon"]')||document.createElement('link');
   icon.rel='icon';
   icon.type='image/png';
-  icon.href=new URL('assets/images/branding/CTI-logo-web.png',document.baseURI).href;
+  icon.href=new URL('images/branding/CTI-logo-web.png',document.querySelector('script[src*="assets/site.js"]')?.src||document.baseURI).href;
   if(!icon.parentNode)document.head.appendChild(icon);
 })();
 
