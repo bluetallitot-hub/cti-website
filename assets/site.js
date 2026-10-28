@@ -51,14 +51,13 @@ if(btn&&nav){btn.addEventListener('click',()=>{const open=nav.classList.toggle('
 // One canonical header navigation on every CTI page.
 // Page HTML may be older; JavaScript normalizes it so clicking between sections never changes headings or spacing.
 const canonicalNav=[
-  ['about.html','About'],
+  ['about.html','About CTI'],
   ['history.html','Our History'],
   ['leadership.html','Leadership Team'],
   ['services.html',"What's Happening"],
   ['meldados.html','Meldathos'],
   ['torah.html',"Rabbi's Corner"],
   ['resources.html','Congregational Resources'],
-  ['give.html','Give','givebtn']
 ];
 document.querySelectorAll('nav.links').forEach(nav=>{
   nav.replaceChildren(...canonicalNav.map(([href,label,cls])=>{
