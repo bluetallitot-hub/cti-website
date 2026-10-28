@@ -7,6 +7,7 @@ import urllib.request
 
 ROOT = "https://cti-admin-api.bluetallitot.workers.dev"
 failures = []
+inconclusive = []
 
 def get(path):
     req = urllib.request.Request(ROOT + path, headers={"User-Agent": "CTI-api-smoke/1.0"})
@@ -81,6 +82,7 @@ except Exception as error:
     code, allowed_origin = 0, None
     failures.append(f"Invalid subscription request could not be tested: {error}")
 if post_edge_blocked:
+    inconclusive.append("subscription POST: Cloudflare 1010")
     print("INCONCLUSIVE: Cloudflare 1010 blocked subscription POST before Worker execution")
 elif code != 400 or allowed_origin != origin:
     failures.append(f"Invalid subscription request: expected HTTP 400 with browser CORS, got {code}, origin={allowed_origin!r}")
@@ -92,6 +94,7 @@ if isinstance(preflight_error, urllib.error.HTTPError) and preflight_error.code 
     if "error code: 1010" in edge_body:
         print("INCONCLUSIVE: Cloudflare 1010 blocked GitHub Actions preflight before Worker execution")
         preflight_error = None
+        inconclusive.append("subscription preflight: Cloudflare 1010")
         print("INCONCLUSIVE: preflight blocked at Cloudflare edge; browser verification required")
 if preflight_error is not None:
     failures.append(f"Subscription browser CORS preflight failed: {preflight_error}")
@@ -118,6 +121,7 @@ for path, payload in (
         failures.append(f"{path}: transport error: {error}")
         continue
     if code == 403 and "error code: 1010" in response_body:
+        inconclusive.append(f"{path}: Cloudflare 1010")
         print(f"INCONCLUSIVE {path}: Cloudflare edge blocked test client")
     elif code != 400:
         failures.append(f"{path}: invalid token should return 400, got {code}")
@@ -136,5 +140,7 @@ for path, payload in (
 
 for problem in failures:
     print("FAIL " + problem)
-print(f"CTI API smoke audit: {len(failures)} issue(s)")
+print(f"CTI API smoke audit: {len(failures)} issue(s), {len(inconclusive)} inconclusive check(s)")
+for item in inconclusive:
+    print("UNVERIFIED " + item)
 sys.exit(bool(failures))
