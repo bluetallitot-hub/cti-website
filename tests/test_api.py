@@ -65,6 +65,7 @@ invalid = urllib.request.Request(
     method="POST",
     headers={"Origin": origin, "Content-Type": "application/json"},
 )
+post_edge_blocked = False
 try:
     with urllib.request.urlopen(invalid, timeout=15) as response:
         code = response.status
@@ -73,11 +74,15 @@ except urllib.error.HTTPError as error:
     code = error.code
     allowed_origin = error.headers.get("Access-Control-Allow-Origin")
     print("Invalid subscription HTTP response headers:", dict(error.headers))
-    print("Invalid subscription HTTP response body:", error.read(500).decode("utf-8", "replace"))
+    post_body = error.read(500).decode("utf-8", "replace")
+    print("Invalid subscription HTTP response body:", post_body)
+    post_edge_blocked = error.code == 403 and "error code: 1010" in post_body
 except Exception as error:
     code, allowed_origin = 0, None
     failures.append(f"Invalid subscription request could not be tested: {error}")
-if code != 400 or allowed_origin != origin:
+if post_edge_blocked:
+    print("INCONCLUSIVE: Cloudflare 1010 blocked subscription POST before Worker execution")
+elif code != 400 or allowed_origin != origin:
     failures.append(f"Invalid subscription request: expected HTTP 400 with browser CORS, got {code}, origin={allowed_origin!r}")
 print(f"Invalid subscription rejected: {code}, origin={allowed_origin}")
 
@@ -87,8 +92,7 @@ if isinstance(preflight_error, urllib.error.HTTPError) and preflight_error.code 
     if "error code: 1010" in edge_body:
         print("INCONCLUSIVE: Cloudflare 1010 blocked GitHub Actions preflight before Worker execution")
         preflight_error = None
-        failures[:] = [f for f in failures if not f.startswith("Invalid subscription request: expected HTTP 400")]
-        print("INCONCLUSIVE: subscription POST also blocked at Cloudflare edge; browser verification required")
+        print("INCONCLUSIVE: preflight blocked at Cloudflare edge; browser verification required")
 if preflight_error is not None:
     failures.append(f"Subscription browser CORS preflight failed: {preflight_error}")
 
