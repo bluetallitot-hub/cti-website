@@ -57,7 +57,7 @@ const canonicalNav=[
   ['services.html',"What's Happening"],
   ['meldados.html','Meldathos'],
   ['torah.html',"Rabbi's Corner"],
-  ['resources.html','Resources'],
+  ['resources.html','Congregational Resources'],
   ['give.html','Give','givebtn']
 ];
 document.querySelectorAll('nav.links').forEach(nav=>{
