@@ -274,7 +274,7 @@ if(url.pathname==='/site-colors'&&request.method==='POST'){
 }
 
  const area=routeArea(url.pathname);
- if(area&&!permitted(role,area))return respond({error:'This role cannot access '+area+' administration'},403);
+ if(area&&!['/unsubscribe/request','/unsubscribe/confirm'].includes(url.pathname)&&!permitted(role,area))return respond({error:'This role cannot access '+area+' administration'},403);
 if(url.pathname==='/file'&&request.method==='GET'){if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const path=url.searchParams.get('path');if(!adminFiles.has(path))return respond({error:'File not allowed'},400);if(!permitted(role,path==='content/services.json'?'schedule':'meldados'))return respond({error:'Access not permitted'},403);const f=await gh(env,path);return respond({sha:f.sha,content:new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))});}
 if(url.pathname==='/torah/source'&&request.method==='GET'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
