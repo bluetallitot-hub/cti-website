@@ -55,7 +55,7 @@
       "originalImageCaption": "LADINO AND HEBREW melodies are sung by the temple’s soloist, Joanne Pressman, on right. She stands at the bimah with her mother Sophie Pernitchi at a joint bat mitzvah. Joanne Pressman represents the fourth generation of Pernitchis to be members of the synagogue. Her grandparents were among the founders.",
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/collections/CTI-001-THM-1.png",
+      "thumbnailImage": "assets/heritage/CTI-001/CTI-001-THM-1.png",
       "preservationStatus": "authentic-original-in-drive-awaiting-site-publication",
       "imageVersions": [
         {
@@ -67,7 +67,7 @@
         {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-001-THM-1.png",
+          "path": "assets/heritage/CTI-001/CTI-001-THM-1.png",
           "derivedFrom": "assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png",
           "method": "near-white-border-trim and 4:3 center crop; no text added"
         },
@@ -396,13 +396,13 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/collections/CTI-004-THM-1.png",
+      "thumbnailImage": "assets/heritage/CTI-004/CTI-004-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
       "imageVersions": [
         {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-004-THM-1.png",
+          "path": "assets/heritage/CTI-004/CTI-004-THM-1.png",
           "derivedFrom": "assets/images/gallery/cti-1976-service-honorees-restored.png",
           "method": "near-white-border-trim and 4:3 center crop; no text added"
         }
@@ -490,7 +490,7 @@
       "transcript": "",
       "indexImage": "assets/images/gallery/cti-building-8-pierpont-street.png",
       "archiveImage": "assets/images/gallery/cti-building-8-pierpont-street.png",
-      "thumbnailImage": "assets/collections/CTI-005-THM-1.png",
+      "thumbnailImage": "assets/heritage/CTI-005/CTI-005-THM-1.png",
       "originalImage": "https://www.jhcns.org/art-Sephardic-Peabody/Cong-Tifereth-Israel-May-09_x602.jpg",
       "files": [
         {
@@ -883,13 +883,13 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/collections/CTI-009-THM-1.png",
+      "thumbnailImage": "assets/heritage/CTI-009/CTI-009-THM-1.png",
       "preservationStatus": "awaiting-original-verification",
       "imageVersions": [
         {
           "type": "THM",
           "version": 1,
-          "path": "assets/collections/CTI-009-THM-1.png",
+          "path": "assets/heritage/CTI-009/CTI-009-THM-1.png",
           "derivedFrom": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
           "method": "near-white-border-trim and 4:3 center crop; no text added"
         }
