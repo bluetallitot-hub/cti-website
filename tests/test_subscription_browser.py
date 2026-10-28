@@ -49,7 +49,7 @@ with sync_playwright() as p:
         rejected.locator('input[name="email"]').fill('browser-test@example.invalid')
         rejected.locator('input[name="consent"]').check()
         rejected.locator('button[type="submit"]').click()
-        rejected.get_by_text('Service temporarily unavailable').wait_for()
+        rejected.get_by_text('Subscription could not be completed. Please try again later.' if kind == 'torah' else 'Newsletter signup is not yet available. Your information has not been saved.').wait_for()
         assert rejected.locator('input[name="email"]').input_value() == 'browser-test@example.invalid'
         assert rejected.locator('button[type="submit"]').is_enabled()
         print(f'PASS {kind}: API rejection preserves form and permits retry')
