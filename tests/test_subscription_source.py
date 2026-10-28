@@ -24,6 +24,10 @@ for endpoint in ("/subscriptions/request", "/subscriptions/confirm"):
         issues.append("Worker missing " + endpoint)
 if "/subscriptions/confirm" not in confirm:
     issues.append("Confirmation handler missing Worker endpoint")
+if "const ALLOWED_ORIGIN=new URL(ORIGIN).origin" not in worker:
+    issues.append("Worker CORS must compare browser origin without site path")
+if "origin!==ALLOWED_ORIGIN" not in worker:
+    issues.append("Worker origin check does not use normalized origin")
 if "const enabled=false" not in worker:
     issues.append("Bulk email safety lock unexpectedly changed")
 if "await store.delete('unsubscribed:'+pending.email)" in worker:
