@@ -265,7 +265,8 @@ if(url.pathname==='/site-colors'&&request.method==='POST'){
  const original={primary:'#244642',background:'#fffdf8',accent:'#a78042'};
  const stamp=new Date().toISOString();
  const format=colors=>keys.map(k=>k+': '+colors[k]).join('\n');
- const textBody='CTI website color scheme changed\n\nChanged by role: '+role+'\nDate/time (UTC): '+stamp+'\n\nOriginal CTI colors:\n'+format(original)+'\n\nPrevious colors:\n'+format(old.colors)+'\n\nNew colors:\n'+format(b.colors)+'\n\nRestore at: '+siteOrigin(env)+'/admin/site-colors.html';
+ const restoreCode=colors=>'CTI1-'+keys.map(k=>colors[k].replace('#','').toUpperCase()).join('-');
+ const textBody='CTI website color scheme changed\n\nChanged by role: '+role+'\nDate/time (UTC): '+stamp+'\n\nOriginal CTI colors:\n'+format(original)+'\n\nPrevious colors:\n'+format(old.colors)+'\n\nNew colors:\n'+format(b.colors)+'\n\nOriginal color restoration code:\n'+restoreCode(original)+'\n\nPrevious color restoration code:\n'+restoreCode(old.colors)+'\n\nRestore at: '+siteOrigin(env)+'/admin/site-colors.html';
  const next={colors:Object.fromEntries(keys.map(k=>[k,b.colors[k].toLowerCase()])),updatedAt:stamp,updatedBy:role};
  const saved=await save(env,'content/site-colors.json',JSON.stringify(next,null,2)+'\n',file.sha,'CTI administration: update site color scheme');
  const email=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:['rabbi@ctipeabody.org'],subject:'CTI Website Color Scheme Changed',text:textBody})});
