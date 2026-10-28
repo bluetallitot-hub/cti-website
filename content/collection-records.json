@@ -1074,7 +1074,8 @@
       "photoCollectionApprovalDate": "2026-10-27",
       "photoCollectionStatus": "complete-approved",
       "onTimeline": true,
-      "timelineEvent": "1994 Honoring Rabbi and Cantor Pikelny"
+      "timelineEvent": "1994 Honoring Rabbi and Cantor Pikelny",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-010",
@@ -1410,7 +1411,8 @@
       "driveReconciledDate": "2026-10-27",
       "photoCollectionApproval": "approved-based-on-completed-work",
       "photoCollectionApprovalDate": "2026-10-27",
-      "photoCollectionStatus": "complete-approved"
+      "photoCollectionStatus": "complete-approved",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-013",
@@ -1788,7 +1790,8 @@
         "notes": "Text compared against photographed original; paragraph line breaks normalized; source wording retained, including historical assertions and spelling. Source headline verified. Handwritten date/source identified separately."
       },
       "onTimeline": true,
-      "timelineEvent": "1972 Golden Anniversary"
+      "timelineEvent": "1972 Golden Anniversary",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-015",
@@ -2007,7 +2010,8 @@
       "driveReconciledDate": "2026-10-27",
       "photoCollectionApproval": "approved-based-on-completed-work",
       "photoCollectionApprovalDate": "2026-10-27",
-      "photoCollectionStatus": "complete-approved"
+      "photoCollectionStatus": "complete-approved",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-016",
@@ -2261,7 +2265,8 @@
         "sourceScan": "I-581-01-15-004.jpg",
         "speechPdf": "cti-1979-joseph-gibely-address.pdf"
       },
-      "assetNamingNotes": "2026-10-27: verified enhanced files renamed in Google Drive to CTI-016-IMG-1.jpg and CTI-016-THM-1.png. Superseded unenhanced copies renamed DO-NOT-USE; not part of active record. GitHub binary assets not yet migrated."
+      "assetNamingNotes": "2026-10-27: verified enhanced files renamed in Google Drive to CTI-016-IMG-1.jpg and CTI-016-THM-1.png. Superseded unenhanced copies renamed DO-NOT-USE; not part of active record. GitHub binary assets not yet migrated.",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-017",
@@ -2481,7 +2486,8 @@
       "photoCollectionApprovalDate": "2026-10-27",
       "photoCollectionStatus": "complete-approved",
       "onTimeline": true,
-      "timelineEvent": "1981 Still Growing After 70 Years"
+      "timelineEvent": "1981 Still Growing After 70 Years",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-018",
@@ -2613,7 +2619,8 @@
         "source": "CTI-018-ORG-1.png",
         "reviewDate": "2026-10-27",
         "note": "Transcription reviewed against original clipping; publication year is inferred, not printed. Retain uncertainty about year."
-      }
+      },
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-020",
@@ -2787,7 +2794,8 @@
         "thumbnail": "CTI-020-THM-1.png"
       },
       "onTimeline": true,
-      "timelineEvent": "1992 In Search of a Home"
+      "timelineEvent": "1992 In Search of a Home",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-021",
@@ -3037,7 +3045,8 @@
       "editorialStatusLabel": "Approved — Photo Collection Complete",
       "photoCollectionApproval": "approved-based-on-completed-work",
       "photoCollectionApprovalDate": "2026-10-27",
-      "photoCollectionStatus": "complete-approved"
+      "photoCollectionStatus": "complete-approved",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-022",
@@ -3170,7 +3179,8 @@
       "enhancedFilenameStandard": "CTI-022-ENH-1.png",
       "recordReviewStatus": "content-complete; three-image-set-reconciled-in-drive; github-publication-and-live-verification-pending",
       "onTimeline": true,
-      "timelineEvent": "1997 75th Anniversary"
+      "timelineEvent": "1997 75th Anniversary",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-023",
@@ -3338,7 +3348,8 @@
       ],
       "originalImageDriveId": "1U3ruN6hnQ5GTj5ogjkmagMIPLgj8ZrSk",
       "enhancedImageDriveId": "1B3ouuXSPpQslFr-OsYcuv1PHdC0hb--o",
-      "thumbnailImageDriveId": "1kwsFSrtRvmzL4Dmhs3_m_oRIj3GPrq1t"
+      "thumbnailImageDriveId": "1kwsFSrtRvmzL4Dmhs3_m_oRIj3GPrq1t",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-024",
@@ -3550,7 +3561,8 @@
         "CTI-014"
       ],
       "onTimeline": true,
-      "timelineEvent": "2012 Celebrating 90 Years"
+      "timelineEvent": "2012 Celebrating 90 Years",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-025",
@@ -3700,7 +3712,8 @@
           "html": "<p class=\"archive-article-date\"><time>November 1, 2018</time></p><p>On October 18, 2018, the Jewish Journal published an article by Michael Wittner titled “Jewish Peabody: Pride and Perseverance.” I was dismayed to read that there were only three synagogues in Peabody, when there are four. Our synagogue, Congregation Tifereth Israel, is a small but active congregation on Pierpont Street in Peabody.</p><p>Our synagogue is 96 years old and has been at the same location for over 60 years. We are a small but active community. We hold services every Friday night and Saturday morning, as well as all the holidays. We have an active Sisterhood and Men’s Club, and have several social events throughout the year.</p><p>We are currently without a rabbi, and are searching for one. Our congregation is made up of Jews from all backgrounds, including Sephardic and Ashkenazi. We are a welcoming congregation, and invite anyone who is interested to attend our services and events.</p><p>I hope this letter sheds some light on who we are.</p><p><strong>Elliot Hershoff</strong><br>President<br>Congregation Tifereth Israel<br>Peabody</p><p><a href=\"https://jewishjournal.org/2018/11/01/letter-to-the-editor-peabody-congregation-feels-ignored/\">View the original at Jewish Journal →</a></p>",
           "provenanceCommit": "cf07f5af8edc891894f340771b4682abd22c64be"
         }
-      ]
+      ],
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-026",
@@ -3850,7 +3863,8 @@
         "status": "drive-assets-reconciled; publication-pending",
         "date": "2026-10-27",
         "notes": "Three Drive files verified by ID and parent folder. Existing GitHub paths preserved until planned migration. THM visual fidelity not independently verified."
-      }
+      },
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-027",
@@ -4037,7 +4051,8 @@
         "notes": "Original article scan visually compared to database plain-text body. Printed headline and building-photo caption retained separately as metadata; line-wrap hyphenation normalized."
       },
       "onTimeline": true,
-      "timelineEvent": "2022 One Hundred Years"
+      "timelineEvent": "2022 One Hundred Years",
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-028",
@@ -4307,7 +4322,8 @@
           "driveId": "1EeVbwp8AABf8uUVOUcR0D2MfnXCYcKBg",
           "url": "https://drive.google.com/file/d/1EeVbwp8AABf8uUVOUcR0D2MfnXCYcKBg/view"
         }
-      ]
+      ],
+      "thumbnailApproval": "pending-review"
     },
     {
       "id": "CTI-038",
