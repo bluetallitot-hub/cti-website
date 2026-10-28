@@ -153,3 +153,13 @@ body:has(.leadership-subnav) .leadership-subnav .wrap{max-width:1040px}
 .leadership-tab:hover,.leadership-tab:focus-visible{background:var(--ink);color:#fff}
 .leadership-tab.active,.leadership-tab[aria-current="page"]{background:var(--site-background);color:var(--deep)}
 @media(max-width:520px){.leadership-tabs{gap:4px}.leadership-tab{font-size:12px;padding:8px 3px}}
+
+/* Founders and Past Presidents use the Leadership Team card presentation. */
+.leadership-heritage-grid{align-items:stretch}
+.leadership-heritage-grid .heritage-person{display:flex;flex-direction:column;overflow:hidden}
+.leadership-heritage-grid .heritage-person>a:has(img){display:block}
+.leadership-heritage-grid .heritage-person img.leader-photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+.leadership-heritage-grid .heritage-person-copy{padding-top:12px}
+.leadership-heritage-grid .heritage-person-copy h3{margin:4px 0 8px}
+.leadership-heritage-grid .heritage-person-copy p{margin:4px 0 10px}
+.leadership-heritage-grid .heritage-person.missing::before{content:"Portrait unavailable";display:grid;place-items:center;min-height:170px;aspect-ratio:4/3;background:var(--site-image-placeholder-background);color:var(--muted);font-size:14px}
