@@ -2,7 +2,7 @@
 // CTI theme: the original palette remains untouched unless a published custom scheme exists.
 (async function(){
  try{
-  const response=await fetch(new URL('content/site-colors.json',document.baseURI),{cache:'no-cache'});
+  const response=await fetch(new URL('../content/site-colors.json',document.querySelector('script[src*="assets/site.js"]')?.src||document.baseURI),{cache:'no-cache'});
   if(!response.ok)return;
   const data=await response.json(),c=data.colors||{};
   const original={primary:'#244642',background:'#fffdf8',accent:'#a78042'};
