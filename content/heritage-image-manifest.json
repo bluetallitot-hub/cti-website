@@ -1,0 +1,384 @@
+{
+  "CTI-001": [
+    {
+      "path": "assets/heritage/CTI-001/CTI-001-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-001/CTI-001-SEP-1.png",
+      "type": "SEP",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-001/CTI-001-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-002": [
+    {
+      "path": "assets/heritage/CTI-002/CTI-002-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-002/CTI-002-ORG-1.png",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-003": [
+    {
+      "path": "assets/heritage/CTI-003/CTI-003-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-003/CTI-003-ORG-1.png",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-004": [
+    {
+      "path": "assets/heritage/CTI-004/CTI-004-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-004/CTI-004-SEP-1.png",
+      "type": "SEP",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-004/CTI-004-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-005": [
+    {
+      "path": "assets/heritage/CTI-005/CTI-005-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-005/CTI-005-ORG-1.png",
+      "type": "ORG",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-005/CTI-005-ORG-2.jpg",
+      "type": "ORG",
+      "number": 2
+    }
+  ],
+  "CTI-006": [
+    {
+      "path": "assets/heritage/CTI-006/CTI-006-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-007": [
+    {
+      "path": "assets/heritage/CTI-007/CTI-007-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-007/CTI-007-ORG-1.png",
+      "type": "ORG",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-007/CTI-007-ORG-2.jpg",
+      "type": "ORG",
+      "number": 2
+    },
+    {
+      "path": "assets/heritage/CTI-007/CTI-007-DOC-1.jpg",
+      "type": "DOC",
+      "number": 1
+    }
+  ],
+  "CTI-009": [
+    {
+      "path": "assets/heritage/CTI-009/CTI-009-COL-1.png",
+      "type": "COL",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-009/CTI-009-SEP-1.png",
+      "type": "SEP",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-009/CTI-009-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-011": [
+    {
+      "path": "assets/heritage/CTI-011/CTI-011-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-011/CTI-011-ORG-1.png",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-012": [
+    {
+      "path": "assets/heritage/CTI-012/CTI-012-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-012/CTI-012-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-013": [
+    {
+      "path": "assets/heritage/CTI-013/CTI-013-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-013/CTI-013-COL-1.png",
+      "type": "COL",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-013/CTI-013-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-014": [
+    {
+      "path": "assets/heritage/CTI-014/CTI-014-IMG-1.png",
+      "type": "IMG",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-014/CTI-014-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-015": [
+    {
+      "path": "assets/heritage/CTI-015/CTI-015-COL-1.png",
+      "type": "COL",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-015/CTI-015-SEP-1.png",
+      "type": "SEP",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-015/CTI-015-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-016": [
+    {
+      "path": "assets/heritage/CTI-016/CTI-016-IMG-1.jpg",
+      "type": "IMG",
+      "number": 1
+    }
+  ],
+  "CTI-017": [
+    {
+      "path": "assets/heritage/CTI-017/CTI-017-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-017/CTI-017-COL-1.png",
+      "type": "COL",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-017/CTI-017-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-018": [
+    {
+      "path": "assets/heritage/CTI-018/CTI-018-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-018/CTI-018-ORG-1.png",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-020": [
+    {
+      "path": "assets/heritage/CTI-020/CTI-020-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-020/CTI-020-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-021": [
+    {
+      "path": "assets/heritage/CTI-021/CTI-021-SEP-1.png",
+      "type": "SEP",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-021/CTI-021-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-021/CTI-021-DOC-1.png",
+      "type": "DOC",
+      "number": 1
+    }
+  ],
+  "CTI-022": [
+    {
+      "path": "assets/heritage/CTI-022/CTI-022-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-022/CTI-022-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-023": [
+    {
+      "path": "assets/heritage/CTI-023/CTI-023-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-023/CTI-023-ORG-1.png",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-024": [
+    {
+      "path": "assets/heritage/CTI-024/CTI-024-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-024/CTI-024-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-025": [
+    {
+      "path": "assets/heritage/CTI-025/CTI-025-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-025/CTI-025-ORG-1.png",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-026": [
+    {
+      "path": "assets/heritage/CTI-026/CTI-026-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-026/CTI-026-ORG-1.png",
+      "type": "ORG",
+      "number": 1
+    }
+  ],
+  "CTI-027": [
+    {
+      "path": "assets/heritage/CTI-027/CTI-027-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-027/CTI-027-ORG-1.png",
+      "type": "ORG",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-027/CTI-027-ORG-2.png",
+      "type": "ORG",
+      "number": 2
+    }
+  ],
+  "CTI-037": [
+    {
+      "path": "assets/heritage/CTI-037/CTI-037-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-037/CTI-037-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-037/CTI-037-ORG-2.jpg",
+      "type": "ORG",
+      "number": 2
+    },
+    {
+      "path": "assets/heritage/CTI-037/CTI-037-ORG-3.jpg",
+      "type": "ORG",
+      "number": 3
+    },
+    {
+      "path": "assets/heritage/CTI-037/CTI-037-ORG-4.jpg",
+      "type": "ORG",
+      "number": 4
+    },
+    {
+      "path": "assets/heritage/CTI-037/CTI-037-ORG-5.jpg",
+      "type": "ORG",
+      "number": 5
+    }
+  ],
+  "CTI-038": [
+    {
+      "path": "assets/heritage/CTI-038/CTI-038-COL-1.png",
+      "type": "COL",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-038/CTI-038-SEP-1.png",
+      "type": "SEP",
+      "number": 1
+    },
+    {
+      "path": "assets/heritage/CTI-038/CTI-038-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    }
+  ]
+}
