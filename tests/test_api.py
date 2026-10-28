@@ -96,6 +96,30 @@ if isinstance(preflight_error, urllib.error.HTTPError) and preflight_error.code 
 if preflight_error is not None:
     failures.append(f"Subscription browser CORS preflight failed: {preflight_error}")
 
+# Safe negative-path probes: invalid tokens never mutate KV or send email.
+for path, payload in (
+    ("/unsubscribe/confirm", {"token": "invalid"}),
+    ("/subscriptions/confirm", {"token": "invalid"}),
+):
+    req = urllib.request.Request(
+        ROOT + path, data=json.dumps(payload).encode(), method="POST",
+        headers={"Origin": origin, "Content-Type": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as response:
+            code, response_body = response.status, response.read(1000).decode("utf-8", "replace")
+    except urllib.error.HTTPError as error:
+        code, response_body = error.code, error.read(1000).decode("utf-8", "replace")
+    except Exception as error:
+        failures.append(f"{path}: transport error: {error}")
+        continue
+    if code == 403 and "error code: 1010" in response_body:
+        print(f"INCONCLUSIVE {path}: Cloudflare edge blocked test client")
+    elif code != 400:
+        failures.append(f"{path}: invalid token should return 400, got {code}")
+    else:
+        print(f"PASS {path}: invalid token rejected with HTTP 400")
+
 for problem in failures:
     print("FAIL " + problem)
 print(f"CTI API smoke audit: {len(failures)} issue(s)")
