@@ -246,6 +246,33 @@ if(url.pathname==='/meldathos/reminder-test'&&request.method==='POST'){
 }
 if(!role)return respond({error:'Please sign in'},401);
 if(url.pathname==='/session')return respond({role});
+if(url.pathname==='/site-colors'&&request.method==='GET'){
+ if(!['rabbi','secretary'].includes(role))return respond({error:'Access not permitted'},403);
+ const file=await gh(env,'content/site-colors.json');
+ const data=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));
+ return respond({colors:data.colors,updatedAt:data.updatedAt||null,updatedBy:data.updatedBy||null,sha:file.sha});
+}
+if(url.pathname==='/site-colors'&&request.method==='POST'){
+ if(!['rabbi','secretary'].includes(role))return respond({error:'Access not permitted'},403);
+ if(!env.RESEND_API_KEY||!env.CTI_ANNOUNCE_EMAIL_FROM)return respond({error:'Notification email is not configured; no changes made'},503);
+ const b=await request.json();
+ const keys=['primary','background','accent'];
+ if(!b||!b.colors||typeof b.expectedSha!=='string'||keys.some(k=>typeof b.colors[k]!=='string'||!/^#[0-9a-fA-F]{6}$/.test(b.colors[k]))||Object.keys(b.colors).length!==3)return respond({error:'Invalid colors'},400);
+ const file=await gh(env,'content/site-colors.json');
+ if(file.sha!==b.expectedSha)return respond({error:'Colors changed since you opened this page; reload first'},409);
+ const old=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));
+ if(keys.every(k=>old.colors[k].toLowerCase()===b.colors[k].toLowerCase()))return respond({ok:true,unchanged:true,sha:file.sha});
+ const original={primary:'#244642',background:'#fffdf8',accent:'#a78042'};
+ const stamp=new Date().toISOString();
+ const format=colors=>keys.map(k=>k+': '+colors[k]).join('\\n');
+ const textBody='CTI website color scheme changed\\n\\nChanged by role: '+role+'\\nDate/time (UTC): '+stamp+'\\n\\nOriginal CTI colors:\\n'+format(original)+'\\n\\nPrevious colors:\\n'+format(old.colors)+'\\n\\nNew colors:\\n'+format(b.colors)+'\\n\\nRestore at: '+siteOrigin(env)+'/admin/site-colors.html';
+ const email=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:['rabbi@ctipeabody.org'],subject:'CTI Website Color Scheme Changed',text:textBody})});
+ if(!email.ok)return respond({error:'Notification could not be sent; no changes made'},502);
+ const next={colors:Object.fromEntries(keys.map(k=>[k,b.colors[k].toLowerCase()])),updatedAt:stamp,updatedBy:role};
+ const saved=await save(env,'content/site-colors.json',JSON.stringify(next,null,2)+'\\n',file.sha,'CTI administration: update site color scheme');
+ return respond({ok:true,sha:saved.content?.sha||null,updatedAt:stamp});
+}
+
  const area=routeArea(url.pathname);
  if(area&&!permitted(role,area))return respond({error:'This role cannot access '+area+' administration'},403);
 if(url.pathname==='/file'&&request.method==='GET'){if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const path=url.searchParams.get('path');if(!adminFiles.has(path))return respond({error:'File not allowed'},400);if(!permitted(role,path==='content/services.json'?'schedule':'meldados'))return respond({error:'Access not permitted'},403);const f=await gh(env,path);return respond({sha:f.sha,content:new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))});}
