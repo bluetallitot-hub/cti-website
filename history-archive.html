@@ -18,10 +18,10 @@ function renderDetail(x,manifest=[]){
  const left=make('div'),right=make('div');
  const seen=new Set(),pictures=[];
  const addPicture=(path,type)=>{if(!safeAsset(path)||seen.has(path)||/-(?:THM|THUMB)(?:-|\\.)/i.test(path))return;seen.add(path);pictures.push({path,type})};
- addPicture(x.archiveImage||x.archiveItemImage||x.indexImage,'Archive image');
- for(const v of x.imageVersions||[])if(v.type!=='THM'&&v.type!=='THUMB')addPicture(v.path||v.fileName||v.filename,v.type||'Image');
- for(const [path,type] of [[x.originalImage,'Original'],[x.restoredImage,'Enhanced'],[x.archiveItemImage,'Archive image'],[x.indexImage,'Image']])addPicture(path,type);
  for(const v of manifest)if(v.type!=='THM'&&v.type!=='THUMB')addPicture(v.path,v.type||'Image');
+ addPicture(x.archiveImage||x.archiveItemImage||x.indexImage,'Archive image');
+ for(const v of x.imageVersions||[])if(v.type!=='THM'&&v.type!=='THUMB')addPicture(v.path||(v.fileName&&v.fileName.startsWith('assets/')?v.fileName:null),v.type||'Image');
+ for(const [path,type] of [[x.originalImage,'Original'],[x.restoredImage,'Enhanced'],[x.archiveItemImage,'Archive image'],[x.indexImage,'Image']])addPicture(path,type);
  if(pictures.length){
   let current=0;const photoButton=make('button');photoButton.type='button';photoButton.className='archive-image-button';photoButton.setAttribute('aria-label','Enlarge current archive image');
   const photo=image('',x.title);photoButton.append(photo);left.append(photoButton);
