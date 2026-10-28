@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-28",
+  "categories": [
+    "current_leadership",
+    "founder",
+    "past_president"
+  ],
+  "leaders": [
+    {
+      "id": "rabbi-phillip-blue",
+      "name": "Rabbi Phillip Blue",
+      "types": [
+        "current_leadership"
+      ],
+      "introduction": "Rabbi Blue is an educator and lifelong student of Torah who supports CTI through prayer, teaching, Jewish learning, and preservation of the congregation’s Sephardic traditions.",
+      "biography": "",
+      "photo": "assets/images/leadership/rabbi-blue-profile.jpg?v=20261002-2",
+      "role": "Rabbi",
+      "serviceYears": null,
+      "links": {
+        "current_leadership": "rabbi-bio.html"
+      },
+      "order": {
+        "current_leadership": 1
+      }
+    },
+    {
+      "id": "jerry-pressman",
+      "name": "Jerry Pressman",
+      "types": [
+        "current_leadership",
+        "past_president"
+      ],
+      "introduction": "Jerry Pressman serves as CTI President and helps guide the congregation as it carries its distinctive Sephardic heritage into its second century.",
+      "biography": "Jerry Pressman serves as President of Congregation Tifereth Israel for the 2026 board cycle.",
+      "photo": "assets/images/leadership/jerry-pressman-profile.png",
+      "role": "President",
+      "serviceYears": "2022–present",
+      "links": {
+        "current_leadership": "leader-profile.html?id=jerry-pressman",
+        "past_president": "leader-profile.html?id=jerry-pressman"
+      },
+      "order": {
+        "current_leadership": 2,
+        "past_president": 9
+      }
+    },
+    {
+      "id": "betty-polonsky",
+      "name": "Betty Polonsky",
+      "types": [
+        "current_leadership"
+      ],
+      "introduction": "Betty Polonsky serves as Vice President and is part of the volunteer leadership supporting CTI’s religious and communal life.",
+      "biography": "Betty Polonsky serves as Vice President of Congregation Tifereth Israel for the 2026 board cycle.",
+      "photo": "assets/images/leadership/betty-polonsky-profile.png",
+      "role": "Vice President",
+      "serviceYears": null,
+      "links": {
+        "current_leadership": "leader-profile.html?id=betty-polonsky"
+      },
+      "order": {
+        "current_leadership": 3
+      }
+    },
+    {
+      "id": "harvey-elefson",
+      "name": "Harvey Elefson",
+      "types": [
+        "current_leadership"
+      ],
+      "introduction": "Harvey Elefson serves as Treasurer, helping steward CTI’s financial and organizational life..",
+      "biography": "Harvey Elefson serves as Treasurer of Congregation Tifereth Israel for the 2026 board cycle.\n\nAs Treasurer, he is part of the elected leadership responsible for helping steward the congregation’s financial and organizational life.",
+      "photo": "assets/images/leadership/harvey-elefson-profile.png",
+      "role": "Treasurer",
+      "serviceYears": null,
+      "links": {
+        "current_leadership": "leader-profile.html?id=harvey-elefson"
+      },
+      "order": {
+        "current_leadership": 4
+      }
+    },
+    {
+      "id": "joanne-pressman",
+      "name": "Joanne Pressman",
+      "types": [
+        "current_leadership"
+      ],
+      "introduction": "A descendant of CTI’s founding families, Joanne is a longtime cantorial soloist who learned the congregation’s Sephardic melodies from her family and has helped transmit them to later generations.",
+      "biography": "Joanne Pressman serves as Secretary of Congregation Tifereth Israel for the 2026 board cycle, but her connection to CTI reaches far beyond a single term of office.\n\nJoanne is the granddaughter of two of the congregation's original founders. Over the years she has served as a historian, cantorial soloist, and one of the congregation's most important transmitters of its Sephardic musical and liturgical traditions.\n\nHer work has helped preserve melodies, customs, and communal memory that originated with the Turkish Sephardic families who established CTI in 1922. That role has made her an important bridge between the founding generation and the congregation today.\n\nA 2019 Jewish Journal feature on CTI's Sephardic traditions photographed Joanne at or near the congregation's ark with Elliot Hershoff and Doris Hershoff.",
+      "photo": "assets/images/leadership/joanne-pressman-profile.png",
+      "role": "Secretary",
+      "serviceYears": null,
+      "links": {
+        "current_leadership": "leader-profile.html?id=joanne-pressman"
+      },
+      "order": {
+        "current_leadership": 5
+      }
+    },
+    {
+      "id": "fran-arsenaultshaheen",
+      "name": "Fran Arsenault-Shaheen",
+      "types": [
+        "current_leadership"
+      ],
+      "introduction": "Fran Arsenault-Shaheen serves on CTI’s board and as President of the Ladies Auxiliary, helping organize its activities and annual luncheon.",
+      "biography": "Fran Arsenault-Shaheen serves on CTI’s board and as President of the Ladies Auxiliary, helping organize its activities and annual luncheon.",
+      "photo": "assets/images/leadership/cti-a-crisp-warmly-lit-professional-portrait-photo-i.png",
+      "role": "Board Member · Ladies Auxiliary President",
+      "serviceYears": null,
+      "links": {
+        "current_leadership": "leader-profile.html?id=fran-arsenault-shaheen"
+      },
+      "order": {
+        "current_leadership": 6
+      }
+    },
+    {
+      "id": "millie-becker",
+      "name": "Millie Becker",
+      "types": [
+        "current_leadership"
+      ],
+      "introduction": "Millie Becker serves on CTI’s board and supports the volunteer leadership that sustains the congregation and its community.",
+      "biography": "Millie Becker serves on CTI’s board and supports the volunteer leadership that sustains the congregation and its community.",
+      "photo": "assets/images/leadership/millie-becker-profile.png",
+      "role": "Board Member",
+      "serviceYears": null,
+      "links": {
+        "current_leadership": "leader-profile.html?id=millie-becker"
+      },
+      "order": {
+        "current_leadership": 7
+      }
+    },
+    {
+      "id": "doris-hershoff",
+      "name": "Doris Hershoff",
+      "types": [
+        "current_leadership"
+      ],
+      "introduction": "Doris Hershoff is an active member of CTI and serves on the board, continuing a longstanding commitment to congregational life and community gatherings.",
+      "biography": "Doris Hershoff is an active member of CTI and serves on the board, continuing a longstanding commitment to congregational life and community gatherings.",
+      "photo": "assets/images/leadership/doris-hershoff-profile.png",
+      "role": "Board Member",
+      "serviceYears": null,
+      "links": {
+        "current_leadership": "leader-profile.html?id=doris-hershoff"
+      },
+      "order": {
+        "current_leadership": 8
+      }
+    },
+    {
+      "id": "marvin-menovich",
+      "name": "Marvin Menovich",
+      "types": [
+        "current_leadership"
+      ],
+      "introduction": "Marvin Menovich serves on CTI’s board and is part of the volunteer leadership supporting the congregation.",
+      "biography": "Marvin Menovich serves on CTI’s board and is part of the volunteer leadership supporting the congregation.",
+      "photo": "assets/images/leadership/marvin-board-profile.png",
+      "role": "Board Member",
+      "serviceYears": null,
+      "links": {
+        "current_leadership": "leader-profile.html?id=marvin-menovich"
+      },
+      "order": {
+        "current_leadership": 9
+      }
+    },
+    {
+      "id": "david-podradchik",
+      "name": "David Podradchik",
+      "types": [
+        "current_leadership"
+      ],
+      "introduction": "David Podradchik serves on CTI’s board. He is also a Massachusetts pharmacist whose professional work includes ambulatory-care pharmacy.",
+      "biography": "David Podradchik serves on CTI’s board. He is also a Massachusetts pharmacist whose professional work includes ambulatory-care pharmacy.",
+      "photo": "assets/images/leadership/david-podradchik-profile.png",
+      "role": "Board Member",
+      "serviceYears": null,
+      "links": {
+        "current_leadership": "leader-profile.html?id=david-podradchik"
+      },
+      "order": {
+        "current_leadership": 10
+      }
+    },
+    {
+      "id": "jay-polonsky",
+      "name": "Jay Polonsky",
+      "types": [
+        "current_leadership"
+      ],
+      "introduction": "Jay Polonsky serves on CTI’s board and contributes to the congregation’s volunteer leadership and communal life.",
+      "biography": "Jay Polonsky serves on CTI’s board and contributes to the congregation’s volunteer leadership and communal life.",
+      "photo": "assets/images/leadership/jay-polonsky-profile.png",
+      "role": "Board Member",
+      "serviceYears": null,
+      "links": {
+        "current_leadership": "leader-profile.html?id=jay-polonsky"
+      },
+      "order": {
+        "current_leadership": 11
+      }
+    },
+    {
+      "id": "wendy-tirck",
+      "name": "Wendy Tirck",
+      "types": [
+        "current_leadership"
+      ],
+      "introduction": "Wendy Tirck serves on CTI’s board and is part of the volunteer leadership sustaining the congregation.",
+      "biography": "Wendy Tirck serves on CTI’s board and is part of the volunteer leadership sustaining the congregation.",
+      "photo": null,
+      "role": "Board Member",
+      "serviceYears": null,
+      "links": {
+        "current_leadership": "leader-profile.html?id=wendy-tirck"
+      },
+      "order": {
+        "current_leadership": 12
+      }
+    },
+    {
+      "id": "leon-eskenas",
+      "name": "Leon Eskenas",
+      "types": [
+        "founder",
+        "past_president"
+      ],
+      "introduction": "Charter member of Congregation Tifereth Israel.",
+      "biography": "",
+      "photo": null,
+      "role": null,
+      "serviceYears": "1922–1944",
+      "links": {
+        "founder": "meldado-person.html?id=newsletter-leon-eskenas-cheshvan",
+        "past_president": "meldado-person.html?id=newsletter-leon-eskenas-cheshvan"
+      },
+      "order": {
+        "founder": 1,
+        "past_president": 1
+      }
+    },
+    {
+      "id": "nissim-eskenazi",
+      "name": "Nissim Eskenazi",
+      "types": [
+        "founder"
+      ],
+      "introduction": "Charter member of Congregation Tifereth Israel.",
+      "biography": "",
+      "photo": null,
+      "role": null,
+      "serviceYears": null,
+      "links": {
+        "founder": "meldado-person.html?id=yahrzeit-nissimeskenazi-iyar-10"
+      },
+      "order": {
+        "founder": 2
+      }
+    },
+    {
+      "id": "morris-gibely",
+      "name": "Morris Gibely",
+      "types": [
+        "founder"
+      ],
+      "introduction": "Charter member of Congregation Tifereth Israel.",
+      "biography": "",
+      "photo": "assets/images/leadership/morris-gibely-gallery.png",
+      "role": null,
+      "serviceYears": null,
+      "links": {
+        "founder": "meldado-person.html?id=yahrzeit-morrisgibely-nissan-14"
+      },
+      "order": {
+        "founder": 3
+      }
+    },
+    {
+      "id": "robert-hasday",
+      "name": "Robert Hasday",
+      "types": [
+        "founder"
+      ],
+      "introduction": "Charter member of Congregation Tifereth Israel.",
+      "biography": "",
+      "photo": null,
+      "role": null,
+      "serviceYears": null,
+      "links": {
+        "founder": "meldado-person.html?id=yahrzeit-roberthasday-kislev-24"
+      },
+      "order": {
+        "founder": 4
+      }
+    },
+    {
+      "id": "joseph-havian",
+      "name": "Joseph Havian",
+      "types": [
+        "founder"
+      ],
+      "introduction": "Charter member of Congregation Tifereth Israel.",
+      "biography": "",
+      "photo": "assets/images/leadership/joseph-havian-gallery-uploaded.png",
+      "role": null,
+      "serviceYears": null,
+      "links": {
+        "founder": "meldado-person.html?id=yahrzeit-josephhavian-shevat-2"
+      },
+      "order": {
+        "founder": 5
+      }
+    },
+    {
+      "id": "david-leon",
+      "name": "David Leon",
+      "types": [
+        "founder"
+      ],
+      "introduction": "Charter member of Congregation Tifereth Israel.",
+      "biography": "",
+      "photo": "assets/images/leadership/david-leon-gallery.png",
+      "role": null,
+      "serviceYears": null,
+      "links": {
+        "founder": "meldado-person.html?id=newsletter-david-leon-tishrei"
+      },
+      "order": {
+        "founder": 6
+      }
+    },
+    {
+      "id": "joseph-pernitchi",
+      "name": "Joseph Pernitchi",
+      "types": [
+        "founder"
+      ],
+      "introduction": "Charter member of Congregation Tifereth Israel.",
+      "biography": "",
+      "photo": "assets/images/founders/cti-joseph-pernitchi-founder-7-portrait.jpg",
+      "role": null,
+      "serviceYears": null,
+      "links": {
+        "founder": "meldado-person.html?id=yahrzeit-josephpernitchi-shevat-3"
+      },
+      "order": {
+        "founder": 7
+      }
+    },
+    {
+      "id": "ralph-bencangey",
+      "name": "Ralph Bencangey",
+      "types": [
+        "founder"
+      ],
+      "introduction": "Charter member of Congregation Tifereth Israel.",
+      "biography": "",
+      "photo": "assets/images/leadership/ralph-bencangey-gallery.png",
+      "role": null,
+      "serviceYears": null,
+      "links": {},
+      "order": {
+        "founder": 8
+      }
+    },
+    {
+      "id": "david-fermon",
+      "name": "David Fermon",
+      "types": [
+        "past_president"
+      ],
+      "introduction": "Served as president of CTI, 1944–1945.",
+      "biography": "",
+      "photo": null,
+      "role": null,
+      "serviceYears": "1944–1945",
+      "links": {},
+      "order": {
+        "past_president": 2
+      }
+    },
+    {
+      "id": "victor-eskenas",
+      "name": "Victor Eskenas",
+      "types": [
+        "past_president"
+      ],
+      "introduction": "Served as president of CTI, 1945–1947.",
+      "biography": "",
+      "photo": null,
+      "role": null,
+      "serviceYears": "1945–1947",
+      "links": {
+        "past_president": "meldado-person.html?id=yahrzeit-victoreskenas-sivan-16"
+      },
+      "order": {
+        "past_president": 3
+      }
+    },
+    {
+      "id": "irving-gibely",
+      "name": "Irving Gibely",
+      "types": [
+        "past_president"
+      ],
+      "introduction": "Served as president of CTI, 1947–1948.",
+      "biography": "",
+      "photo": null,
+      "role": null,
+      "serviceYears": "1947–1948",
+      "links": {},
+      "order": {
+        "past_president": 4
+      }
+    },
+    {
+      "id": "william-benater",
+      "name": "William Benater",
+      "types": [
+        "past_president"
+      ],
+      "introduction": "Served as president of CTI, 1948–1957.",
+      "biography": "",
+      "photo": null,
+      "role": null,
+      "serviceYears": "1948–1957",
+      "links": {},
+      "order": {
+        "past_president": 5
+      }
+    },
+    {
+      "id": "joseph-gibely",
+      "name": "Joseph Gibely",
+      "types": [
+        "past_president"
+      ],
+      "introduction": "Served as president of CTI, 1957–1972.",
+      "biography": "",
+      "photo": null,
+      "role": null,
+      "serviceYears": "1957–1972",
+      "links": {
+        "past_president": "meldado-person.html?id=yahrzeit-josephgibely-tevet-12"
+      },
+      "order": {
+        "past_president": 6
+      }
+    },
+    {
+      "id": "joseph-gibely-ii",
+      "name": "Joseph Gibely II",
+      "types": [
+        "past_president"
+      ],
+      "introduction": "Served as president of CTI, 1972–2004.",
+      "biography": "",
+      "photo": "assets/images/leadership/Warm Vintage Portrait of an Older Gentleman.png",
+      "role": null,
+      "serviceYears": "1972–2004",
+      "links": {
+        "past_president": "meldado-person.html?id=newsletter-joseph-gibely-ii-cheshvan"
+      },
+      "order": {
+        "past_president": 7
+      }
+    },
+    {
+      "id": "elliot-hershoff",
+      "name": "Elliot Hershoff",
+      "types": [
+        "past_president"
+      ],
+      "introduction": "Served as president of CTI, 2004–2022.",
+      "biography": "",
+      "photo": "assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png",
+      "role": null,
+      "serviceYears": "2004–2022",
+      "links": {
+        "past_president": "meldado-person.html?id=newsletter-elliot-hershoff-tishrei"
+      },
+      "order": {
+        "past_president": 8
+      }
+    }
+  ]
+}
