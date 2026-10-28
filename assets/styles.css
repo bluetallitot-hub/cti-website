@@ -170,3 +170,12 @@ body:has(.history-subnav) .history-home-hero h1,body:has(.leadership-subnav) .le
 body:has(.history-subnav) .history-subnav .wrap,body:has(.leadership-subnav) .leadership-subnav .wrap{width:calc(100% - 32px);max-width:1040px!important;margin-inline:auto}
 body:has(.history-subnav) .history-home-tabs,body:has(.leadership-subnav) .leadership-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0}
 body:has(.history-subnav) .history-home-tab,body:has(.leadership-subnav) .leadership-tab{min-height:46px;padding:8px 6px}
+
+/* Unified section shell: identical header and tab placement across History and Leadership. */
+body:has(.history-subnav),body:has(.leadership-subnav){padding-top:104px}
+body:has(.history-subnav)>header,body:has(.leadership-subnav)>header{position:fixed!important;top:0;left:0;right:0;width:100%;z-index:100;background:var(--site-header-background)}
+body:has(.history-subnav) .history-home-hero,body:has(.leadership-subnav) .leadership-section-hero{height:164px;box-sizing:border-box;padding:16px 0 18px!important}
+body:has(.history-subnav) .history-home-hero .wrap,body:has(.leadership-subnav) .leadership-section-hero .wrap{max-width:1180px}
+body:has(.history-subnav) .history-subnav,body:has(.leadership-subnav) .leadership-subnav{position:sticky;top:104px;z-index:90;padding:10px 0;background:var(--cream)}
+body:has(.history-subnav) .history-subnav .wrap,body:has(.leadership-subnav) .leadership-subnav .wrap{width:calc(100% - 32px);max-width:1040px!important;margin:0 auto}
+@media(max-width:760px){body:has(.history-subnav) .history-home-hero,body:has(.leadership-subnav) .leadership-section-hero{height:auto;min-height:164px}}
