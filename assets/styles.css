@@ -138,3 +138,7 @@ body:has(.history-subnav) .history-subnav{position:sticky;top:104px;z-index:19;b
 body:has(.history-subnav) .history-home-tabs{margin:0}
 body:has(.history-subnav) main section:not(.history-home-hero){scroll-margin-top:180px}
 @media(max-width:760px){body:has(.history-subnav) .history-subnav{top:var(--cti-header-height,104px)}}
+
+/* Slightly narrower history subnavigation, centered under the section heading. */
+body:has(.history-subnav) .history-subnav .wrap{max-width:1040px}
+body:has(.history-subnav) .history-home-tab{min-height:46px;padding:8px 6px}
