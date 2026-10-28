@@ -179,3 +179,17 @@ body:has(.history-subnav) .history-home-hero .wrap,body:has(.leadership-subnav) 
 body:has(.history-subnav) .history-subnav,body:has(.leadership-subnav) .leadership-subnav{position:sticky;top:104px;z-index:90;padding:10px 0;background:var(--cream)}
 body:has(.history-subnav) .history-subnav .wrap,body:has(.leadership-subnav) .leadership-subnav .wrap{width:calc(100% - 32px);max-width:1040px!important;margin:0 auto}
 @media(max-width:760px){body:has(.history-subnav) .history-home-hero,body:has(.leadership-subnav) .leadership-section-hero{height:auto;min-height:164px}}
+
+/* What's Happening: consistent four-tab section navigation. */
+body:has(.happening-subnav){padding-top:104px}
+body:has(.happening-subnav)>header{position:fixed!important;top:0;left:0;right:0;width:100%;z-index:100;background:var(--site-header-background)}
+.happening-hero{height:164px;box-sizing:border-box;padding:16px 0 18px!important}
+.happening-hero h1{font-size:clamp(38px,4.4vw,58px)!important;line-height:1.12!important;margin:0 0 12px!important}
+.happening-subnav{position:sticky;top:104px;z-index:90;padding:10px 0;background:var(--cream);border-bottom:1px solid var(--line)}
+.happening-subnav .wrap{width:calc(100% - 32px);max-width:1040px!important;margin:0 auto}
+.happening-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.happening-tab{display:flex;align-items:center;justify-content:center;text-align:center;min-height:46px;padding:8px 6px;border:1px solid var(--deep);border-radius:999px;background:var(--deep);color:#fff;font-weight:650}
+.happening-tab:hover,.happening-tab:focus-visible{background:var(--ink);color:#fff}
+.happening-tab.active,.happening-tab[aria-current="page"]{background:var(--site-background);color:var(--deep)}
+@media(max-width:760px){.happening-hero{height:auto;min-height:164px}}
+@media(max-width:520px){.happening-tabs{gap:4px}.happening-tab{font-size:12px;padding:8px 3px}}
