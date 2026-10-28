@@ -48,11 +48,13 @@ def main():
     }
     print(json.dumps(report, indent=2))
     if conflicts:
-        raise SystemExit("Destination conflicts detected. No changes made; resolve duplicates first.")
+        print(f"REVIEW REQUIRED: {len(conflicts)} destination conflicts preserved in intake.")
     if not args.apply:
         return
     data = json.loads(DB.read_text(encoding="utf-8"))
+    moved_ids = set()
     for src, dest in planned:
+        moved_ids.add(dest.parent.name)
         dest.parent.mkdir(parents=True, exist_ok=True)
         subprocess.run(["git", "mv", "--", str(src.relative_to(ROOT)), str(dest.relative_to(ROOT))], cwd=ROOT, check=True)
         old = src.relative_to(ROOT).as_posix()
@@ -69,10 +71,18 @@ def main():
             for v in record.get("imageVersions", []):
                 if isinstance(v, dict) and isinstance(v.get("path"), str) and v["path"].split("/")[-1] == src.name and v["path"].startswith("assets/"):
                     v["path"] = new
+    # Resolve canonical thumbnail paths only when a real THM asset exists.
+    for record in data.get("items", []):
+        record_id = record.get("id", "")
+        if not re.fullmatch(r"CTI-\\d{3}", record_id):
+            continue
+        thumb = HERITAGE / record_id / f"{record_id}-THM-1.png"
+        if thumb.is_file() and record.get("thumbnailImage") != thumb.relative_to(ROOT).as_posix():
+            record["thumbnailImage"] = thumb.relative_to(ROOT).as_posix()
     if planned:
         DB.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         subprocess.run(["git", "add", "--", str(DB.relative_to(ROOT))], cwd=ROOT, check=True)
-    print(f"Moved {len(planned)} files. {len(skipped)} unmatched files remain untouched.")
+    print(f"Moved {len(planned)} files; {len(conflicts)} conflicts and {len(skipped)} unmatched files preserved.")
     if skipped:
         print("REVIEW REQUIRED: unmatched intake files were preserved.")
 
