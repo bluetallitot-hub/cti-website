@@ -6,7 +6,7 @@ const params=new URLSearchParams(location.search),id=params.get('id');
 const make=(tag,text)=>{const el=document.createElement(tag);if(text!==undefined&&text!==null)el.textContent=String(text);return el};
 const link=(text,url)=>{const a=make('a',text);a.href=url;return a};
 const safeAsset=p=>typeof p==='string'&&/^assets\/[\w./% -]+$/i.test(p)&&!p.includes('..');
-const approvedThumb=x=>x.thumbnailApproval==='approved'&&safeAsset(x.thumbnailImage)?x.thumbnailImage:null;
+const approvedThumb=x=>safeAsset(x.thumbnailImage)?x.thumbnailImage:null;
 const appendText=(parent,tag,value,className)=>{if(value){const el=make(tag,value);if(className)el.className=className;parent.append(el)}};
 const back=()=>{const a=link('← Back to Historical Archive','history-archive.html');a.className='btn archive-back';return a};
 const image=(src,alt)=>{const im=make('img');im.src=src;im.alt=alt||'';im.loading='lazy';return im};
@@ -32,7 +32,7 @@ function renderIndex(rows){
   const a=link('', 'history-archive.html?id='+encodeURIComponent(x.id));
   const thumb=approvedThumb(x);
   if(thumb)a.append(image(thumb,x.title));
-  else {const placeholder=make('div','Thumbnail pending approval');placeholder.className='archive-empty-image';a.append(placeholder)}
+  else {const placeholder=make('div','Thumbnail unavailable');placeholder.className='archive-empty-image';a.append(placeholder)}
   const copy=make('div');copy.className='archive-copy';appendText(copy,'h2',x.title);appendText(copy,'p',x.subtitle||x.date);
   a.append(copy);card.append(a);index.append(card);
  }
