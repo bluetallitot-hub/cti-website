@@ -4562,7 +4562,7 @@
     {
       "id": "CTI-012",
       "collection": "archive",
-      "status": "unapproved",
+      "status": "active",
       "title": "The only Sephardic Temple north of Boston",
       "caption": "Joanne Pressman's history of Congregation Tifereth Israel, published in Shalom Magazine, Rosh Hashanah/Fall 2019, Edition 37.",
       "date": "Fall 2019",
@@ -4599,16 +4599,17 @@
         }
       ],
       "transcriptionStatus": "substantially-complete-obscured-lines-marked",
-      "editorialStatus": "assets-stored-awaiting-approval",
+      "editorialStatus": "approved",
       "publicationNotes": [
         "Original is a photograph of two-part magazine clipping and Shalom Magazine masthead; keep as one original source.",
         "Some lines in the lower half of the left article column are obscured by glare and overlap; no invented reconstruction.",
         "Cross-reference founding names with CTI-006 and other source records; preserve each source's spelling.",
-        "Not yet approved or published.",
-        "Original and applicable derivative image assets uploaded to CTI Google Drive staging folder and linked in files metadata."
+        "Original and applicable derivative image assets uploaded to CTI Google Drive staging folder and linked in files metadata.",
+        "Approved for public archive publication October 28, 2026. Obscured transcription passages remain explicitly marked; no speculative reconstruction."
       ],
       "enhancedImage": "assets/heritage/CTI-012/CTI-012-ENH-1.png",
-      "thumbnailImage": "assets/heritage/CTI-012/CTI-012-THM-1.jpg"
+      "thumbnailImage": "assets/heritage/CTI-012/CTI-012-THM-1.jpg",
+      "editorialStatusLabel": "Approved for publication — obscured passages retained as marked"
     }
   ],
   "assetPolicy": {
