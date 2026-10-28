@@ -518,7 +518,9 @@
       ],
       "drivePhotoCollectionStatus": "original-present-thumbnail-not-in-staging",
       "driveReconciledDate": "2026-10-27",
-      "photoCollectionStatus": "thumbnail-present-in-repository-awaiting-drive-staging"
+      "photoCollectionStatus": "thumbnail-present-in-repository-awaiting-drive-staging",
+      "onTimeline": true,
+      "timelineEvent": "2006 Kitchen Dedication"
     },
     {
       "id": "CTI-009",
@@ -762,7 +764,9 @@
       "driveReconciledDate": "2026-10-27",
       "photoCollectionApproval": "approved-based-on-completed-work",
       "photoCollectionApprovalDate": "2026-10-27",
-      "photoCollectionStatus": "complete-approved"
+      "photoCollectionStatus": "complete-approved",
+      "onTimeline": true,
+      "timelineEvent": "1994 Honoring Rabbi and Cantor Pikelny"
     },
     {
       "id": "CTI-010",
@@ -1474,7 +1478,9 @@
         "sourceFilename": "CTI-014-ORG-1.jpg",
         "result": "verified",
         "notes": "Text compared against photographed original; paragraph line breaks normalized; source wording retained, including historical assertions and spelling. Source headline verified. Handwritten date/source identified separately."
-      }
+      },
+      "onTimeline": true,
+      "timelineEvent": "1972 Golden Anniversary"
     },
     {
       "id": "CTI-015",
@@ -2165,7 +2171,9 @@
       "driveReconciledDate": "2026-10-27",
       "photoCollectionApproval": "approved-based-on-completed-work",
       "photoCollectionApprovalDate": "2026-10-27",
-      "photoCollectionStatus": "complete-approved"
+      "photoCollectionStatus": "complete-approved",
+      "onTimeline": true,
+      "timelineEvent": "1981 Still Growing After 70 Years"
     },
     {
       "id": "CTI-018",
@@ -2469,7 +2477,9 @@
         "original": "CTI-020-ORG-1.jpg",
         "enhanced": "CTI-020-ENH-1.png",
         "thumbnail": "CTI-020-THM-1.png"
-      }
+      },
+      "onTimeline": true,
+      "timelineEvent": "1992 In Search of a Home"
     },
     {
       "id": "CTI-021",
@@ -2850,7 +2860,9 @@
       ],
       "originalFilenameStandard": "CTI-022-ORG-1.jpg",
       "enhancedFilenameStandard": "CTI-022-ENH-1.png",
-      "recordReviewStatus": "content-complete; three-image-set-reconciled-in-drive; github-publication-and-live-verification-pending"
+      "recordReviewStatus": "content-complete; three-image-set-reconciled-in-drive; github-publication-and-live-verification-pending",
+      "onTimeline": true,
+      "timelineEvent": "1997 75th Anniversary"
     },
     {
       "id": "CTI-023",
@@ -3228,7 +3240,9 @@
       "photoCollectionStatus": "complete-approved",
       "relatedRecords": [
         "CTI-014"
-      ]
+      ],
+      "onTimeline": true,
+      "timelineEvent": "2012 Celebrating 90 Years"
     },
     {
       "id": "CTI-025",
@@ -3713,7 +3727,9 @@
         "result": "body-text-word-for-word-match",
         "sourceFilename": "CTI-027-ORG-1.png",
         "notes": "Original article scan visually compared to database plain-text body. Printed headline and building-photo caption retained separately as metadata; line-wrap hyphenation normalized."
-      }
+      },
+      "onTimeline": true,
+      "timelineEvent": "2022 One Hundred Years"
     },
     {
       "id": "CTI-028",
@@ -4148,7 +4164,9 @@
       "photoCollectionStatus": "complete-approved",
       "relatedRecords": [
         "CTI-003"
-      ]
+      ],
+      "onTimeline": true,
+      "timelineEvent": "1994 Honoring Rabbi and Cantor Pikelny"
     },
     {
       "id": "CTI-002",
