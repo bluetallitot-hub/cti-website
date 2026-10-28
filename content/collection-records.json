@@ -574,7 +574,7 @@
     {
       "id": "CTI-006",
       "collection": "archive",
-      "status": "unapproved",
+      "status": "inactive",
       "title": "Peabody's Tifereth Israel to mark its 100th anniversary",
       "caption": "Newspaper clipping about Congregation Tifereth Israel of Peabody's centennial.",
       "date": "",
@@ -600,7 +600,7 @@
       "dateDisplay": "2022 (inferred from 1922 centennial; publication date unverified)",
       "transcriptionStatus": "headline-only-source-resolution-insufficient",
       "originalImage": "CTI-006-ORG-1.jpeg",
-      "editorialStatus": "metadata-partial-needs-high-resolution-source",
+      "editorialStatus": "unpublished-inactive",
       "publication": "Jewish Journal"
     },
     {
