@@ -30,6 +30,14 @@ jobs:
         id: subscriptions
         continue-on-error: true
         run: set -o pipefail; python3 tests/test_subscription_source.py | tee cti-subscriptions-audit.txt
+      - name: Install browser test dependencies
+        run: |
+          python3 -m pip install playwright
+          python3 -m playwright install --with-deps chromium
+      - name: Exercise subscription forms in a real browser with mocked API
+        id: browser
+        continue-on-error: true
+        run: set -o pipefail; python3 tests/test_subscription_browser.py | tee cti-browser-audit.txt
       - name: Verify Cloudflare API health and anonymous access denial
         id: api
         continue-on-error: true
@@ -50,8 +58,9 @@ jobs:
             cti-admin-audit.txt
             cti-api-audit.txt
             cti-subscriptions-audit.txt
+            cti-browser-audit.txt
           if-no-files-found: warn
           retention-days: 30
       - name: Fail job if any public checks failed
-        if: steps.crawl.outcome == 'failure' || steps.content.outcome == 'failure' || steps.admin.outcome == 'failure' || steps.api.outcome == 'failure' || steps.subscriptions.outcome == 'failure'
+        if: steps.crawl.outcome == 'failure' || steps.content.outcome == 'failure' || steps.admin.outcome == 'failure' || steps.api.outcome == 'failure' || steps.subscriptions.outcome == 'failure' || steps.browser.outcome == 'failure'
         run: exit 1
