@@ -4512,12 +4512,12 @@
           "note": "User-approved thumbnail, resized to 800x600; local file saved, permanent Drive/repository upload pending."
         }
       ],
-      "preservationStatus": "original-upload-pending",
-      "editorialStatus": "transcribed-awaiting-proofread-and-original-upload",
+      "preservationStatus": "original-and-derivatives-packaged-awaiting-permanent-upload",
+      "editorialStatus": "transcribed-images-prepared-awaiting-permanent-upload-and-approval",
       "publicationNotes": [
         "Exact issue date unverified; 2012 inferred from CTI's 90th anniversary.",
-        "Source image supplied in conversation, but not yet stored in Google Drive or GitHub; do not claim preservation complete.",
-        "Keep unpublished pending original file upload and transcription review."
+        "Keep unpublished pending original file upload and transcription review.",
+        "Original scan, enhanced photograph and 800x600 thumbnail packaged as CTI-008-archive-assets.zip for upload; GitHub/Drive asset transfer not yet verified."
       ],
       "publication": "Peabody Weekly News",
       "restoredImage": "CTI-008-ENH-1.png",
@@ -4528,7 +4528,8 @@
         "aspectRatio": "4:3",
         "noAddedText": true
       },
-      "transcriptionStatus": "complete-from-user-supplied-clipping-pending-proofread"
+      "transcriptionStatus": "complete-from-user-supplied-clipping-pending-proofread",
+      "assetPackage": "CTI-008-archive-assets.zip"
     }
   ],
   "assetPolicy": {
