@@ -4092,7 +4092,7 @@
       "articleHtml": "",
       "originalImage": "https://drive.google.com/file/d/11B4J_SepDoLgEIAICE0chKFJKzI8Sme9/view",
       "archiveItemImage": "https://drive.google.com/file/d/10eXphIVoA2TJn9Y4Zfj9FoWf7Oe-iuqg/view",
-      "thumbnailImage": "https://drive.google.com/file/d/1EeVbwp8AABf8uUVOUcR0D2MfnXCYcKBg/view",
+      "thumbnailImage": "assets/heritage/CTI-037/CTI-037-THUMB-1.png",
       "restoredImage": "https://drive.google.com/file/d/10eXphIVoA2TJn9Y4Zfj9FoWf7Oe-iuqg/view",
       "googleDriveSourceFiles": [
         {
@@ -4473,7 +4473,8 @@
         "CTI-003"
       ],
       "onTimeline": true,
-      "timelineEvent": "1994 Honoring Rabbi and Cantor Pikelny"
+      "timelineEvent": "1994 Honoring Rabbi and Cantor Pikelny",
+      "thumbnailImage": "assets/heritage/CTI-038/CTI-038-THM-1.png"
     },
     {
       "id": "CTI-008",
