@@ -138,6 +138,15 @@ for path, payload in (
         else:
             print(f"PASS {path}: invalid token rejected with JSON error and browser CORS")
 
+# Machine-readable status distinguishes verified checks from Cloudflare edge blocks.
+with open("cti-api-status.json", "w", encoding="utf-8") as output:
+    json.dump({
+        "status": "failed" if failures else ("partial" if inconclusive else "passed"),
+        "failures": failures,
+        "inconclusive": inconclusive,
+    }, output, indent=2)
+    output.write("\\n")
+
 for problem in failures:
     print("FAIL " + problem)
 print(f"CTI API smoke audit: {len(failures)} issue(s), {len(inconclusive)} inconclusive check(s)")
