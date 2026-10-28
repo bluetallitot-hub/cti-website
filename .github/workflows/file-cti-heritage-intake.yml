@@ -1,0 +1,41 @@
+name: File CTI Heritage Intake Images
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "assets/new/**"
+permissions:
+  contents: write
+concurrency:
+  group: cti-heritage-intake
+  cancel-in-progress: false
+jobs:
+  file-heritage-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Preview moves and identify conflicts
+        run: python3 scripts/file_heritage_intake.py
+      - name: Move verified record images and update references
+        run: python3 scripts/file_heritage_intake.py --apply
+      - name: Commit and push verified changes
+        run: |
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "File CTI-001 through CTI-009 intake assets into Heritage record folders"
+            git push
+          fi
+      - name: Verify no matched images remain in intake
+        run: |
+          python3 - <<'PY'
+          import pathlib,re
+          root=pathlib.Path("assets/new")
+          pat=re.compile(r"CTI-00[1-9]-(?:ORG|ENH|THM|SEP|COL|DOC|IMG|THUMB)-[0-9]+\.(?:jpg|jpeg|png|webp|gif|pdf|tif|tiff)$",re.I)
+          pending=[str(p) for p in root.iterdir() if p.is_file() and pat.fullmatch(p.name)]
+          if pending:
+              raise SystemExit("Recognized intake files still pending: "+", ".join(pending))
+          print("Verified: no recognized CTI-001..009 images remain in assets/new.")
+          PY
