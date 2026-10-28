@@ -2529,7 +2529,7 @@
       "originalImageCaption": null,
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/heritage/CTI-002/CTI-002-THM-1.png",
+      "thumbnailImage": "assets/heritage/CTI-018/CTI-018-THM-2.png",
       "preservationStatus": "original-and-enhanced-staged-pending-publication",
       "imageVersions": [
         {
@@ -2546,6 +2546,13 @@
           "height": 600,
           "derivedFrom": "AI-generated thumbnail rendition",
           "method": "resized generated thumbnail to 800x600; text may differ from original"
+        },
+        {
+          "type": "THM",
+          "version": 2,
+          "path": "assets/heritage/CTI-018/CTI-018-THM-2.png",
+          "derivedFrom": "assets/heritage/CTI-002/CTI-002-THM-1.png",
+          "method": "Exact copy of existing Gallery thumbnail; original CTI-018 thumbnail preserved"
         }
       ],
       "thumbnailSpecification": {
@@ -2555,7 +2562,7 @@
         "orientation": "landscape"
       },
       "existingImageCandidate": null,
-      "thumbnailStatus": "reused-existing-CTI-002-gallery-thumbnail",
+      "thumbnailStatus": "approved-gallery-photo-copy-for-archive",
       "originalStatus": "filename-matched-original-present-in-google-drive-content-not-independently-verified",
       "assetInventory": {
         "sourceFiles": [
