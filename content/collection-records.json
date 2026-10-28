@@ -4352,7 +4352,7 @@
       "title": "Our Home — Congregation Tifereth Israel, 8 Pierpont Street",
       "caption": "Congregation Tifereth Israel at 8 Pierpont Street, Peabody, Massachusetts.",
       "date": "",
-      "description": "An original editorial history of CTI's home at 8 Pierpont Street, drawing on the congregation's historical documents and 1976 and 1981 newspaper accounts.",
+      "description": "The story of Congregation Tifereth Israel's home at 8 Pierpont Street, purchased from the Church of the Nazarene in 1955 according to the Jewish Historical Center of the North Shore.",
       "source": "CTI website historical collection; building photograph credited to Jewish Historical Center of the North Shore",
       "citation": "",
       "attribution": "Photograph source: Jewish Historical Center of the North Shore",
@@ -4383,7 +4383,6 @@
       "editorialStatus": "new-record-pending-source-and-image-review",
       "publicationNotes": [
         "Confirm original photograph attribution and whether the building image should remain in the gallery as a linked photo.",
-        "Confirm acquisition date against deed; do not assert 1955 or 1957 as verified.",
         "Prepare standardized CTI-005 image assets before approval.",
         "Sanctuary tour internal URL needs confirmation before link is added; do not invent destination.",
         "Two building photographs found in Google Drive staging; standardized website uploads pending.",
@@ -4409,12 +4408,15 @@
           "path": "assets/archive/originals/I-581-01-15-024-web.jpg"
         }
       ],
-      "editorialNarrative": "A synagogue is more than a building. It is the people who gather within its walls, the prayers that fill its rooms, and the memories carried from one generation to the next.\n\nFor Congregation Tifereth Israel, the journey to 8 Pierpont Street began long before we had a permanent home. Our founders, Sephardic Jewish immigrants from Turkey, first gathered for worship in private homes and rented rooms. They brought with them the traditions of their ancestors: the melodies of Sephardic prayer, the Ladino language, and a deep commitment to preserving Jewish life.\n\nIn the mid-1950s, our congregation found a lasting home in a former church building on Pierpont Street. It was a modest place, but it became the heart of a remarkable community.\n\nA 1976 newspaper article described our synagogue as a small white clapboard building, with a Star of David on its front door. Inside, members devoted countless hours to preparing for holidays, arranging prayer books, changing the ceremonial coverings, and making certain everything was ready for worship.\n\nIn 1981, as the congregation prepared to welcome new families, members once again rolled up their sleeves, painting and improving the building themselves. That spirit of personal dedication has sustained Tifereth Israel for generations.\n\nWithin these walls, children have celebrated becoming b'nai mitzvah, families have gathered for holidays, friends have shared meals, and generations have remembered loved ones. The sounds of Hebrew prayer and Sephardic melodies have connected our congregation to a Jewish heritage reaching back through Turkey to medieval Spain.\n\nOur building has never been grand, and perhaps that is part of what makes it special. Its importance has never been measured by its size, but by the warmth of the community it shelters.\n\nFor more than seventy years, 8 Pierpont Street has been more than our synagogue. It has been our home.",
+      "editorialNarrative": "A synagogue is more than a building. It is the people who gather within its walls, the prayers that fill its rooms, and the memories carried from one generation to the next.\n\nFor Congregation Tifereth Israel, the journey to 8 Pierpont Street began long before we had a permanent home. Our founders, Sephardic Jewish immigrants from Turkey, first gathered for worship in private homes and rented rooms. They brought with them the traditions of their ancestors: the melodies of Sephardic prayer, the Ladino language, and a deep commitment to preserving Jewish life.\n\nIn 1955, our congregation found a lasting home in a former church building on Pierpont Street. It was a modest place, but it became the heart of a remarkable community.\n\nA 1976 newspaper article described our synagogue as a small white clapboard building, with a Star of David on its front door. Inside, members devoted countless hours to preparing for holidays, arranging prayer books, changing the ceremonial coverings, and making certain everything was ready for worship.\n\nIn 1981, as the congregation prepared to welcome new families, members once again rolled up their sleeves, painting and improving the building themselves. That spirit of personal dedication has sustained Tifereth Israel for generations.\n\nWithin these walls, children have celebrated becoming b'nai mitzvah, families have gathered for holidays, friends have shared meals, and generations have remembered loved ones. The sounds of Hebrew prayer and Sephardic melodies have connected our congregation to a Jewish heritage reaching back through Turkey to medieval Spain.\n\nOur building has never been grand, and perhaps that is part of what makes it special. Its importance has never been measured by its size, but by the warmth of the community it shelters.\n\nFor more than seventy years, 8 Pierpont Street has been more than our synagogue. It has been our home.",
       "editorialNarrativeSources": [
         "CTI-011",
         "CTI-015",
         "CTI-017"
-      ]
+      ],
+      "buildingAcquisitionYear": 1955,
+      "buildingAcquisitionSource": "https://www.jhcns.org/Sephardic-Community-Peabody.html",
+      "buildingAcquisitionVerification": "Historical source accepted by congregation; original deed not independently verified"
     }
   ],
   "assetPolicy": {
