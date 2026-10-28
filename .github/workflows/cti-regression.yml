@@ -60,19 +60,19 @@ jobs:
           path = Path("cti-api-status.json")
           summary = Path(os.environ["GITHUB_STEP_SUMMARY"])
           with summary.open("a", encoding="utf-8") as out:
-              out.write("## Cloudflare API verification\\n\\n")
+              out.write("## Cloudflare API verification\n\n")
               if not path.exists():
-                  out.write("**Unavailable:** API status report was not generated.\\n")
+                  out.write("**Unavailable:** API status report was not generated.\n")
               else:
                   data = json.loads(path.read_text(encoding="utf-8"))
                   state = data.get("status", "unknown")
-                  out.write(f"**Status:** {state.upper()}\\n\\n")
+                  out.write(f"**Status:** {state.upper()}\n\n")
                   for item in data.get("failures", []):
-                      out.write(f"- Failed: {item}\\n")
+                      out.write(f"- Failed: {item}\n")
                   for item in data.get("inconclusive", []):
-                      out.write(f"- Unverified: {item}\\n")
+                      out.write(f"- Unverified: {item}\n")
                   if state == "partial":
-                      out.write("\\nA successful workflow does not imply these Cloudflare-blocked probes passed.\\n")
+                      out.write("\nA successful workflow does not imply these Cloudflare-blocked probes passed.\n")
           PY
       - name: Run read-only website checks
         id: crawl
