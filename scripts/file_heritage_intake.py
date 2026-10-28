@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Safely file CTI-001..016 intake assets into per-record Heritage directories."""
+"""Safely file CTI-001..038 intake assets into per-record Heritage directories."""
 import argparse
 import json
 import re
@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 NEW = ROOT / "assets" / "new"
 HERITAGE = ROOT / "assets" / "heritage"
 DB = ROOT / "content" / "collection-records.json"
-PATTERN = re.compile(r"^(CTI-(?:00[1-9]|01[0-6]))-(ORG|ENH|THM|SEP|COL|DOC|IMG|THUMB)-([0-9]+)\.(jpg|jpeg|png|webp|gif|pdf|tif|tiff)$", re.I)
+PATTERN = re.compile(r"^(CTI-(?:00[1-9]|0[1-2][0-9]|03[0-8]))-(ORG|ENH|THM|SEP|COL|DOC|IMG|THUMB)-([0-9]+)\.(jpg|jpeg|png|webp|gif|pdf|tif|tiff)$", re.I)
 
 
 def replace_exact(obj, old, new):
