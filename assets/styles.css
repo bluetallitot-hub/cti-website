@@ -142,3 +142,14 @@ body:has(.history-subnav) main section:not(.history-home-hero){scroll-margin-top
 /* Slightly narrower history subnavigation, centered under the section heading. */
 body:has(.history-subnav) .history-subnav .wrap{max-width:1040px}
 body:has(.history-subnav) .history-home-tab{min-height:46px;padding:8px 6px}
+
+/* Leadership Team: same compact, sticky four-button subnavigation as Our History. */
+body:has(.leadership-subnav) .leadership-section-hero{padding:16px 0 18px}
+body:has(.leadership-subnav) .leadership-section-hero h1{font-size:clamp(38px,4.4vw,58px);margin:0 0 12px}
+body:has(.leadership-subnav) .leadership-subnav{position:sticky;top:104px;z-index:19;background:var(--cream);border-bottom:1px solid var(--line);padding:10px 0}
+body:has(.leadership-subnav) .leadership-subnav .wrap{max-width:1040px}
+.leadership-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.leadership-tab{display:flex;align-items:center;justify-content:center;text-align:center;min-height:46px;padding:8px 6px;border:1px solid var(--deep);border-radius:999px;background:var(--deep);color:#fff;font-weight:650}
+.leadership-tab:hover,.leadership-tab:focus-visible{background:var(--ink);color:#fff}
+.leadership-tab.active,.leadership-tab[aria-current="page"]{background:var(--site-background);color:var(--deep)}
+@media(max-width:520px){.leadership-tabs{gap:4px}.leadership-tab{font-size:12px;padding:8px 3px}}
