@@ -26,7 +26,7 @@ jobs:
           if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "File CTI-001 through CTI-016 intake assets into Heritage record folders"
+            git commit -m "File CTI-001 through CTI-038 intake assets into Heritage record folders"
             git push
           fi
       - name: Verify no matched images remain in intake
@@ -35,9 +35,9 @@ jobs:
           import pathlib,re
           root=pathlib.Path("assets/new")
           repo_root=pathlib.Path(".")
-          pat=re.compile(r"CTI-(?:00[1-9]|01[0-6])-(?:ORG|ENH|THM|SEP|COL|DOC|IMG|THUMB)-[0-9]+\.(?:jpg|jpeg|png|webp|gif|pdf|tif|tiff)$",re.I)
+          pat=re.compile(r"CTI-(?:00[1-9]|0[1-2][0-9]|03[0-8])-(?:ORG|ENH|THM|SEP|COL|DOC|IMG|THUMB)-[0-9]+\.(?:jpg|jpeg|png|webp|gif|pdf|tif|tiff)$",re.I)
           pending=[str(p) for base in (root,repo_root) for p in base.iterdir() if p.is_file() and pat.fullmatch(p.name)]
           if pending:
               raise SystemExit("Recognized intake files still pending: "+", ".join(pending))
-          print("Verified: no recognized CTI-001..016 images remain in assets/new.")
+          print("Verified: no recognized CTI-001..038 images remain in assets/new.")
           PY
