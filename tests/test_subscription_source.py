@@ -9,6 +9,7 @@ confirm = (root / "assets/subscribe-confirm.js").read_text()
 torah = (root / "assets/subscribe-torah.js").read_text()
 newsletter = (root / "subscribe-newsletter.html").read_text()
 torah_page = (root / "subscribe-torah.html").read_text()
+unsubscribe_page = (root / "unsubscribe.html").read_text()
 issues = []
 for kind, page, source in (("torah", torah_page, torah), ("newsletter", newsletter, newsletter)):
     if "/subscriptions/request" not in source:
@@ -50,6 +51,18 @@ if public_unsubscribe_guard not in worker:
     issues.append('Public unsubscribe must bypass the sign-in gate')
 if public_area_guard not in worker:
     issues.append('Public unsubscribe must bypass the administrative area gate')
+# Ensure the public unsubscribe page remains wired to the two public POST routes.
+for endpoint in ("/unsubscribe/request", "/unsubscribe/confirm"):
+    if endpoint not in unsubscribe_page:
+        issues.append("Unsubscribe page missing " + endpoint)
+    if "if(url.pathname==='" + endpoint + "'&&request.method==='POST')" not in worker:
+        issues.append("Worker missing POST-only route " + endpoint)
+if "new URLSearchParams(location.search).get('token')" not in unsubscribe_page:
+    issues.append("Unsubscribe confirmation must read the URL token")
+if "Individual Meldatho reminders are managed separately" not in unsubscribe_page:
+    issues.append("Unsubscribe page must explain Meldatho reminders are separate")
+if "if(!role&&!['/unsubscribe/request','/unsubscribe/confirm'].includes(url.pathname))" not in worker:
+    issues.append("Unsubscribe endpoints must remain publicly accessible")
 for issue in issues:
     print("FAIL " + issue)
 print(f"CTI subscription source audit: {len(issues)} issue(s)")
