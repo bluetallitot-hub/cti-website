@@ -26,6 +26,10 @@ jobs:
         id: content
         continue-on-error: true
         run: set -o pipefail; python3 tests/test_content.py | tee cti-content-audit.txt
+      - name: Check public subscription wiring and safeguards
+        id: subscriptions
+        continue-on-error: true
+        run: set -o pipefail; python3 tests/test_subscription_source.py | tee cti-subscriptions-audit.txt
       - name: Verify Cloudflare API health and anonymous access denial
         id: api
         continue-on-error: true
@@ -45,8 +49,9 @@ jobs:
             cti-content-audit.txt
             cti-admin-audit.txt
             cti-api-audit.txt
+            cti-subscriptions-audit.txt
           if-no-files-found: warn
           retention-days: 30
       - name: Fail job if any public checks failed
-        if: steps.crawl.outcome == 'failure' || steps.content.outcome == 'failure' || steps.admin.outcome == 'failure' || steps.api.outcome == 'failure'
+        if: steps.crawl.outcome == 'failure' || steps.content.outcome == 'failure' || steps.admin.outcome == 'failure' || steps.api.outcome == 'failure' || steps.subscriptions.outcome == 'failure'
         run: exit 1
