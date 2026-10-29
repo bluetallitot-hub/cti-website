@@ -245,7 +245,8 @@
       "order": {
         "founder": 1,
         "past_president": 1
-      }
+      },
+      "meldathoId": "newsletter-leon-eskenas-cheshvan"
     },
     {
       "id": "nissim-eskenazi",
@@ -263,7 +264,8 @@
       },
       "order": {
         "founder": 2
-      }
+      },
+      "meldathoId": "yahrzeit-nissimeskenazi-iyar-10"
     },
     {
       "id": "morris-gibely",
@@ -281,7 +283,8 @@
       },
       "order": {
         "founder": 3
-      }
+      },
+      "meldathoId": "yahrzeit-morrisgibely-nissan-14"
     },
     {
       "id": "robert-hasday",
@@ -299,7 +302,8 @@
       },
       "order": {
         "founder": 4
-      }
+      },
+      "meldathoId": "yahrzeit-roberthasday-kislev-24"
     },
     {
       "id": "joseph-havian",
@@ -317,7 +321,8 @@
       },
       "order": {
         "founder": 5
-      }
+      },
+      "meldathoId": "yahrzeit-josephhavian-shevat-2"
     },
     {
       "id": "david-leon",
@@ -335,7 +340,8 @@
       },
       "order": {
         "founder": 6
-      }
+      },
+      "meldathoId": "newsletter-david-leon-tishrei"
     },
     {
       "id": "joseph-pernitchi",
@@ -353,7 +359,8 @@
       },
       "order": {
         "founder": 7
-      }
+      },
+      "meldathoId": "yahrzeit-josephpernitchi-shevat-3"
     },
     {
       "id": "ralph-bencangey",
@@ -401,7 +408,8 @@
       },
       "order": {
         "past_president": 3
-      }
+      },
+      "meldathoId": "yahrzeit-victoreskenas-sivan-16"
     },
     {
       "id": "irving-gibely",
@@ -451,7 +459,8 @@
       },
       "order": {
         "past_president": 6
-      }
+      },
+      "meldathoId": "yahrzeit-josephgibely-tevet-12"
     },
     {
       "id": "joseph-gibely-ii",
@@ -469,7 +478,8 @@
       },
       "order": {
         "past_president": 7
-      }
+      },
+      "meldathoId": "newsletter-joseph-gibely-ii-cheshvan"
     },
     {
       "id": "elliot-hershoff",
@@ -487,7 +497,8 @@
       },
       "order": {
         "past_president": 8
-      }
+      },
+      "meldathoId": "newsletter-elliot-hershoff-tishrei"
     },
     {
       "id": "rabbi-dov-pikelny",
