@@ -298,3 +298,21 @@ body:has(.about-subnav)>header{position:fixed!important;top:0;left:0;right:0;wid
 [data-leaders-category="past_president"] .leader-card img.leader-photo{
   width:100%;height:auto;aspect-ratio:auto;max-height:none;object-fit:contain;object-position:center top;
 }
+
+
+/* CTI biography indexes: use the entire card width and a taller portrait area. */
+[data-leaders-category]{align-items:stretch}
+[data-leaders-category] .leader-card{width:100%;min-width:0;height:100%;padding:0;box-sizing:border-box}
+[data-leaders-category] .leader-card>a:has(.leader-photo){
+  display:block;width:100%;aspect-ratio:3/4;overflow:hidden;background:var(--site-image-placeholder-background)
+}
+[data-leaders-category] .leader-card img.leader-photo{
+  display:block;width:100%;height:100%;aspect-ratio:3/4;object-fit:contain;object-position:center center;max-height:none
+}
+[data-leaders-category] .leader-card .leader-photo-placeholder{
+  display:grid;place-items:center;width:100%;aspect-ratio:3/4;min-height:0;margin:0
+}
+[data-leaders-category] .leader-card .heritage-person-copy{
+  width:100%;box-sizing:border-box;padding:16px 18px 20px;flex:1
+}
+[data-leaders-category] .leader-card .leader-introduction{min-height:0;-webkit-line-clamp:unset;line-clamp:unset;display:block;overflow:visible}
