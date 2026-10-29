@@ -3,81 +3,695 @@
 **Review only; nothing deleted.** Starting at index.html, this audit follows discovered local HTML links and static asset references, including references in linked CSS, JS and JSON. Dynamic URL construction, external bookmarks, and references from other sites require manual verification.
 
 ## Summary
-- Tracked files: 191
-- Reachable through detected references: 131
-- Unreachable HTML: 10
-- Unreachable assets: 35
-- Identical-content groups: 2
+- Tracked files: 618
+- Reachable through detected references: 163
+- Unreachable HTML: 17
+- Unreachable assets: 291
+- Identical-content groups: 49
+- Unreviewed quarantine candidates: 169
 
 ## Unreachable HTML pages
-- \`admin/archive-add.html\`
-- \`admin/archives.html\`
-- \`admin/dvar-torah.html\`
-- \`admin/gallery.html\`
-- \`admin/index.html\`
-- \`admin/leadership.html\`
-- \`admin/newsletter.html\`
-- \`admin/schedule.html\`
-- \`archive-2022-jewish-journal-centennial.html\`
-- \`dvar-torah-2026-10-noach-who-belongs-inside-your-ark.html\`
+- \`archives/archive-2022-jewish-journal-centennial.html\`
+- \`email/lech-lecha-2026.html\`
+- \`facebook-coming-soon.html\`
+- \`history-story.html\`
+- \`leader-bio.html\`
+- \`meldado-elliot-hershoff-template.html\`
+- \`meldado-tribute.html\`
+- \`meldatho-publications.html\`
+- \`melodies-friday-evening.html\`
+- \`melodies-rosh-hashanah.html\`
+- \`melodies-yom-kippur.html\`
+- \`rabbi.html\`
+- \`resources/melodies-friday-evening.html\`
+- \`resources/melodies-rosh-hashanah.html\`
+- \`resources/melodies-yom-kippur.html\`
+- \`subscribe-newsletter.html\`
+- \`subscribe.html\`
 
 ## Unreachable assets (candidates for removal from published site)
+- \`assets/archive/cti-meldados-master-board.png\`
+- \`assets/archive/cti-meldados-master-board.webp\`
+- \`assets/archive/generated/image-inventory-2026-10-20.json\`
+- \`assets/archive/meldados-original-board.png\`
 - \`assets/archive/originals/I-581-01-15-006-web.jpg\`
-- \`assets/archive/originals/I-581-01-15-007-web.jpg\`
-- \`assets/archive/originals/I-581-01-15-026-web.jpg\`
-- \`assets/archive/originals/Vintage Synagogue Bat Mitzvah Clipping.png\`
-- \`assets/archive/originals/article.heic\`
-- \`assets/archive/originals/cti-1972-50th-anniversary-clippings-ticket.jpg\`
-- \`assets/archive/originals/cti-1972-50th-anniversary-clippings.jpg\`
-- \`assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-2.jpg\`
+- \`assets/archive/originals/I-581-01-15-025-web.jpg\`
+- \`assets/archive/originals/I-581-01-15-033-web.jpg\`
+- \`assets/archive/originals/I-581-01-15-034-web.jpg\`
+- \`assets/archive/originals/I-581-01-15-035-web.jpg\`
+- \`assets/archive/originals/cti-1972-salem-news-golden-anniversary-original.jpg\`
+- \`assets/archive/originals/cti-1979-gibely-address-original-page.jpg\`
+- \`assets/archive/originals/cti-1979-joseph-gibely-address.pdf\`
+- \`assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg\`
+- \`assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg\`
+- \`assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-1.jpg\`
+- \`assets/archive/originals/cti-1997-75th-anniversary-invitation.jpg\`
+- \`assets/archive/originals/cti-1997-75th-anniversary-program-web.pdf\`
 - \`assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg\`
+- \`assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg\`
+- \`assets/archive/originals/cti-2012-90th-anniversary-program-original.jpg\`
+- \`assets/archive/originals/cti-2019-jewish-journal-article-original.jpg\`
 - \`assets/archive/originals/cti-2022-centennial-article.jpg\`
+- \`assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg\`
+- \`assets/archive/originals/cti-2024-elliot-hershoff-obituary-clipping.png\`
 - \`assets/archive/originals/cti-early-religious-leaders-original.jpg\`
-- \`assets/archive/originals/cti-elliot-hershoff-obituary-display.jpg\`
-- \`assets/archive/originals/cti-leadership-profile-images (1).zip\`
+- \`assets/archive/originals/cti-elliot-hershoff-obituary-original.jpg\`
+- \`assets/archive/originals/cti-joseph-gibely-ii-1979-portrait.jpg\`
+- \`assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg\`
+- \`assets/archive/originals/cti-memorial-board-staged.png\`
 - \`assets/archive/originals/cti-october-1994-original-blue.jpg\`
-- \`assets/archive/originals/cti-presidents-plaque-original.jpeg\`
-- \`assets/archive/originals/cti-sephardic-temple-honors-patriarch-clipping.jpg\`
 - \`assets/archive/originals/cti-september-1983-original-blue.jpg\`
+- \`assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png\`
+- \`assets/archive/originals/david-leon-original.png\`
+- \`assets/archive/originals/joseph-havian-original-uploaded.png\`
+- \`assets/archive/originals/joseph-havian-original.png\`
+- \`assets/archive/originals/morris-gibely-original.png\`
+- \`assets/archive/unreviewed/fixed.png\`
+- \`assets/archive/unreviewed/fixed2.png\`
+- \`assets/biographies/CTI-BIO-001/CTI-BIO-001-ORG-1.jpg\`
+- \`assets/biographies/CTI-BIO-001/CTI-BIO-001-THM.jpg\`
+- \`assets/biographies/CTI-BIO-002/CTI-BIO-002-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-002/CTI-BIO-002-THM.jpg\`
+- \`assets/biographies/CTI-BIO-003/CTI-BIO-003-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-003/CTI-BIO-003-THM.jpg\`
+- \`assets/biographies/CTI-BIO-004/CTI-BIO-004-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-004/CTI-BIO-004-THM.jpg\`
+- \`assets/biographies/CTI-BIO-005/CTI-BIO-005-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-005/CTI-BIO-005-THM.jpg\`
+- \`assets/biographies/CTI-BIO-006/CTI-BIO-006-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-006/CTI-BIO-006-THM.jpg\`
+- \`assets/biographies/CTI-BIO-007/CTI-BIO-007-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-007/CTI-BIO-007-THM.jpg\`
+- \`assets/biographies/CTI-BIO-008/CTI-BIO-008-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-008/CTI-BIO-008-THM.jpg\`
+- \`assets/biographies/CTI-BIO-009/CTI-BIO-009-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-009/CTI-BIO-009-THM.jpg\`
+- \`assets/biographies/CTI-BIO-010/CTI-BIO-010-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-010/CTI-BIO-010-THM.jpg\`
+- \`assets/biographies/CTI-BIO-011/CTI-BIO-011-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-011/CTI-BIO-011-THM.jpg\`
+- \`assets/biographies/CTI-BIO-015/CTI-BIO-015-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-015/CTI-BIO-015-THM.jpg\`
+- \`assets/biographies/CTI-BIO-017/CTI-BIO-017-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-017/CTI-BIO-017-THM.jpg\`
+- \`assets/biographies/CTI-BIO-018/CTI-BIO-018-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-018/CTI-BIO-018-THM.jpg\`
+- \`assets/biographies/CTI-BIO-019/CTI-BIO-019-ORG-1.jpg\`
+- \`assets/biographies/CTI-BIO-019/CTI-BIO-019-THM.jpg\`
+- \`assets/biographies/CTI-BIO-020/CTI-BIO-020-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-020/CTI-BIO-020-THM.jpg\`
+- \`assets/biographies/CTI-BIO-026/CTI-BIO-026-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-026/CTI-BIO-026-THM.jpg\`
+- \`assets/biographies/CTI-BIO-027/CTI-BIO-027-ORG-1.png\`
+- \`assets/biographies/CTI-BIO-027/CTI-BIO-027-THM.jpg\`
+- \`assets/biographies/CTI-BIO-028/CTI-BIO-028-ORG-1.jpg\`
+- \`assets/biographies/download/CTI-biography-originals.zip\`
+- \`assets/biographies/migration-report.json\`
+- \`assets/biographies/portrait-review-report.json\`
+- \`assets/biographies/thumbnail-migration-report.json\`
+- \`assets/collections/CTI-001-THM-1.png\`
+- \`assets/collections/CTI-002-THM-1.png\`
+- \`assets/collections/CTI-003-THM-1.png\`
+- \`assets/collections/CTI-004-THM-1.png\`
+- \`assets/collections/CTI-005-THM-1.png\`
+- \`assets/collections/CTI-006-THM-1.png\`
+- \`assets/collections/CTI-007-THM-1.png\`
+- \`assets/collections/CTI-008-THM-1.png\`
+- \`assets/collections/CTI-009-THM-1.png\`
+- \`assets/collections/CTI-010-THM-1.png\`
+- \`assets/collections/CTI-011-THM-1.png\`
+- \`assets/collections/CTI-012-THM-1.png\`
+- \`assets/collections/CTI-013-THM-1.png\`
+- \`assets/collections/CTI-014-THM-1.png\`
+- \`assets/collections/CTI-015-THM-1.png\`
+- \`assets/collections/CTI-016-THM-1.png\`
+- \`assets/collections/CTI-017-THM-1.png\`
+- \`assets/collections/CTI-018-THM-1.png\`
+- \`assets/collections/CTI-019-THM-1.png\`
+- \`assets/collections/CTI-020-THM-1.png\`
+- \`assets/collections/CTI-021-THM-1.png\`
+- \`assets/collections/CTI-022-THM-1.png\`
+- \`assets/collections/CTI-023-THM-1.png\`
+- \`assets/collections/CTI-024-THM-1.png\`
+- \`assets/collections/CTI-025-THM-1.png\`
+- \`assets/collections/CTI-026-THM-1.png\`
+- \`assets/collections/CTI-027-THM-1.png\`
+- \`assets/heritage/CTI-001/CTI-001-ENH-1.png\`
+- \`assets/heritage/CTI-001/CTI-001-ORG-1.jpg\`
+- \`assets/heritage/CTI-001/CTI-001-SEP-1.png\`
+- \`assets/heritage/CTI-001/CTI-001-THM-1.png\`
+- \`assets/heritage/CTI-002/CTI-002-ENH-1.png\`
+- \`assets/heritage/CTI-002/CTI-002-ORG-1.png\`
+- \`assets/heritage/CTI-002/CTI-002-THM-1.png\`
+- \`assets/heritage/CTI-003/CTI-003-ENH-1.png\`
+- \`assets/heritage/CTI-003/CTI-003-ORG-1.png\`
+- \`assets/heritage/CTI-003/CTI-003-THM-1.png\`
+- \`assets/heritage/CTI-004/CTI-004-ENH-1.png\`
+- \`assets/heritage/CTI-004/CTI-004-ORG-1.jpg\`
+- \`assets/heritage/CTI-004/CTI-004-SEP-1.png\`
+- \`assets/heritage/CTI-004/CTI-004-THM-1.png\`
+- \`assets/heritage/CTI-005/CTI-005-ENH-1.png\`
+- \`assets/heritage/CTI-005/CTI-005-ORG-1.png\`
+- \`assets/heritage/CTI-005/CTI-005-ORG-2.jpg\`
+- \`assets/heritage/CTI-005/CTI-005-THM-1.png\`
+- \`assets/heritage/CTI-006/CTI-006-ORG-1.jpg\`
+- \`assets/heritage/CTI-007/CTI-007-DOC-1.jpg\`
+- \`assets/heritage/CTI-007/CTI-007-ENH-1.png\`
+- \`assets/heritage/CTI-007/CTI-007-ENH-2.png\`
+- \`assets/heritage/CTI-007/CTI-007-ORG-1.png\`
+- \`assets/heritage/CTI-007/CTI-007-ORG-2.jpg\`
+- \`assets/heritage/CTI-007/CTI-007-THM-1.png\`
+- \`assets/heritage/CTI-007/CTI-007-THM-OLD-1.png\`
+- \`assets/heritage/CTI-009/CTI-009-COL-1.png\`
+- \`assets/heritage/CTI-009/CTI-009-ORG-1.jpg\`
+- \`assets/heritage/CTI-009/CTI-009-SEP-1.png\`
+- \`assets/heritage/CTI-009/CTI-009-THM-1.png\`
+- \`assets/heritage/CTI-010/CTI-010-THM-1.png\`
+- \`assets/heritage/CTI-011/CTI-011-ENH-1.png\`
+- \`assets/heritage/CTI-011/CTI-011-ORG-1.png\`
+- \`assets/heritage/CTI-011/CTI-011-THM-1.png\`
+- \`assets/heritage/CTI-012/CTI-012-ENH-1.png\`
+- \`assets/heritage/CTI-012/CTI-012-ORG-1.jpg\`
+- \`assets/heritage/CTI-012/CTI-012-THM-1.jpg\`
+- \`assets/heritage/CTI-013/CTI-013-COL-1.png\`
+- \`assets/heritage/CTI-013/CTI-013-ENH-1.png\`
+- \`assets/heritage/CTI-013/CTI-013-ORG-1.jpg\`
+- \`assets/heritage/CTI-013/CTI-013-THM-1.png\`
+- \`assets/heritage/CTI-014/75th Anniversary Invitation.png\`
+- \`assets/heritage/CTI-014/CTI-014-IMG-1.png\`
+- \`assets/heritage/CTI-014/CTI-014-ORG-1.jpg\`
+- \`assets/heritage/CTI-014/CTI-014-THM-1.png\`
+- \`assets/heritage/CTI-015/CTI-015-COL-1.png\`
+- \`assets/heritage/CTI-015/CTI-015-ORG-1.jpg\`
+- \`assets/heritage/CTI-015/CTI-015-SEP-1.png\`
+- \`assets/heritage/CTI-015/CTI-015-THM-1.png\`
+- \`assets/heritage/CTI-016/CTI-016-IMG-1.jpg\`
+- \`assets/heritage/CTI-016/CTI-016-THM-1.png\`
+- \`assets/heritage/CTI-017/CTI-017-COL-1.png\`
+- \`assets/heritage/CTI-017/CTI-017-ENH-1.png\`
+- \`assets/heritage/CTI-017/CTI-017-ORG-1.jpg\`
+- \`assets/heritage/CTI-017/CTI-017-THM-1.png\`
+- \`assets/heritage/CTI-018/CTI-018-ENH-1.png\`
+- \`assets/heritage/CTI-018/CTI-018-ORG-1.png\`
+- \`assets/heritage/CTI-018/CTI-018-THM-1.png\`
+- \`assets/heritage/CTI-018/CTI-018-THM-2.png\`
+- \`assets/heritage/CTI-020/CTI-020-ENH-1.png\`
+- \`assets/heritage/CTI-020/CTI-020-ORG-1.jpg\`
+- \`assets/heritage/CTI-020/CTI-020-THM-1.png\`
+- \`assets/heritage/CTI-021/CTI-021-DOC-1.png\`
+- \`assets/heritage/CTI-021/CTI-021-ORG-1.jpg\`
+- \`assets/heritage/CTI-021/CTI-021-SEP-1.png\`
+- \`assets/heritage/CTI-021/CTI-021-THM-1.png\`
+- \`assets/heritage/CTI-022/CTI-022-ENH-1.png\`
+- \`assets/heritage/CTI-022/CTI-022-ORG-1.jpg\`
+- \`assets/heritage/CTI-022/CTI-022-THM-1.png\`
+- \`assets/heritage/CTI-023/CTI-023-ENH-1.png\`
+- \`assets/heritage/CTI-023/CTI-023-ORG-1.png\`
+- \`assets/heritage/CTI-023/CTI-023-THM-1.png\`
+- \`assets/heritage/CTI-024/CTI-024-ENH-1.png\`
+- \`assets/heritage/CTI-024/CTI-024-ORG-1.jpg\`
+- \`assets/heritage/CTI-024/CTI-024-THM-1.png\`
+- \`assets/heritage/CTI-025/CTI-025-ENH-1.png\`
+- \`assets/heritage/CTI-025/CTI-025-ORG-1.png\`
+- \`assets/heritage/CTI-025/CTI-025-THM-1.png\`
+- \`assets/heritage/CTI-026/CTI-026-ENH-1.png\`
+- \`assets/heritage/CTI-026/CTI-026-ORG-1.png\`
+- \`assets/heritage/CTI-026/CTI-026-THM-1.png\`
+- \`assets/heritage/CTI-027/CTI-027-ENH-1.png\`
+- \`assets/heritage/CTI-027/CTI-027-ORG-1.png\`
+- \`assets/heritage/CTI-027/CTI-027-ORG-2.png\`
+- \`assets/heritage/CTI-027/CTI-027-THM-1.png\`
+- \`assets/heritage/CTI-037/CTI-037-ENH-1.png\`
+- \`assets/heritage/CTI-037/CTI-037-ORG-1.jpg\`
+- \`assets/heritage/CTI-037/CTI-037-ORG-2.jpg\`
+- \`assets/heritage/CTI-037/CTI-037-ORG-3.jpg\`
+- \`assets/heritage/CTI-037/CTI-037-ORG-4.jpg\`
+- \`assets/heritage/CTI-037/CTI-037-ORG-5.jpg\`
+- \`assets/heritage/CTI-037/CTI-037-THUMB-1.png\`
+- \`assets/heritage/CTI-038/CTI-038-COL-1.png\`
+- \`assets/heritage/CTI-038/CTI-038-ORG-1.jpg\`
+- \`assets/heritage/CTI-038/CTI-038-SEP-1.png\`
+- \`assets/heritage/CTI-038/CTI-038-THM-1.png\`
+- \`assets/home-meldados.js\`
+- \`assets/images/anniversaries/1997-75th-anniversary-cover.jpg\`
+- \`assets/images/anniversaries/cti-1972-anniversary-celebration-photos-1.jpg\`
 - \`assets/images/anniversaries/cti-1972-anniversary-celebration-photos-2.jpg\`
-- \`assets/images/anniversaries/cti-1997-75th-anniversary-program-cover.jpg\`
-- \`assets/images/anniversaries/cti-2012-90th-anniversary-program.jpg\`
-- \`assets/images/branding/CTI-logo-modern-transparent.png\`
-- \`assets/images/founders/Congregation Tifereth Israel Founders Plaque.png\`
-- \`assets/images/gallery/Joseph Gibely Reading in the Sanctuary.png\`
-- \`assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.jpg\`
-- \`assets/images/gallery/cti-2006-kitchen-dedication-invitation.jpg\`
+- \`assets/images/anniversaries/cti-2012-90th-anniversary-officers.jpg\`
+- \`assets/images/anniversaries/cti-2012-shuls-mark-historic-milestones.jpg\`
+- \`assets/images/anniversaries/cti-2022-centennial-officers-honorees.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-01.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-02.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-03.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-04.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-05.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-06.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-07.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-08.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-09.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-10.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-11.jpg\`
+- \`assets/images/anniversaries/cti-anniversary-album-photo-12.jpg\`
+- \`assets/images/archive/CTI-026-2019-jewish-journal-photo.png\`
+- \`assets/images/founders/cti-founders-charter-members-plaque.jpg\`
+- \`assets/images/founders/cti-founders-plaque-ready-for-github.png\`
+- \`assets/images/gallery/cti-1976-service-honorees-restored.png\`
+- \`assets/images/gallery/cti-1994-pikelny-recognition.jpg\`
+- \`assets/images/gallery/cti-2006-kitchen-dedication-photo.png\`
+- \`assets/images/gallery/cti-2012-shofar-gift-group-portrait.png\`
+- \`assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg\`
 - \`assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg\`
-- \`assets/images/gallery/cti-community-members-photo-2006.jpg\`
-- \`assets/images/leadership/2012 Shofar Gift Group Portrait.png\`
-- \`assets/images/leadership/a_crisp_warmly_lit_professional_portrait_photo_i.png\`
-- \`assets/images/leadership/cti-joseph-gibely-ii-1979-portrait.jpg\`
-- \`assets/images/leadership/rabbi-blue-family.jpg\`
-- \`assets/images/presidents/cti-presidents-plaque-enhanced.png\`
-- \`assets/images/presidents/cti-presidents-plaque.jpg\`
+- \`assets/images/gallery/cti-building-8-pierpont-street.png\`
+- \`assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png\`
+- \`assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg\`
+- \`assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg\`
+- \`assets/images/gallery/peabody-hebrew-school-menorah-1958.png\`
+- \`assets/images/leadership/Synagogue Shofar Ceremony Group Portrait.png\`
+- \`assets/images/leadership/board-portrait-background-jerry-reference.png\`
+- \`assets/images/leadership/cti-fran-profile-portrait.png\`
+- \`assets/images/leadership/joseph-havian-gallery.png\`
+- \`assets/images/meldados-board-wood-approved.png\`
+- \`assets/images/meldados-board-wood-transparent.png\`
+- \`assets/images/meldados-board-wood.png\`
+- \`assets/images/meldados/newsletter-david-leon-tishrei.jpg\`
+- \`assets/images/meldados/newsletter-elliot-hershoff-tishrei.jpg\`
+- \`assets/images/meldados/newsletter-joseph-gibely-ii-cheshvan.jpg\`
+- \`assets/images/meldados/portraits/.gitkeep\`
+- \`assets/images/meldados/portraits/cti-joseph-pernitchi-meldado-portrait.jpg\`
+- \`assets/images/meldados/portraits/newsletter-harvey-goldberg-tishrei-placeholder.svg\`
+- \`assets/images/meldados/portraits/newsletter-shelley-schorr-tishrei.jpg\`
+- \`assets/images/meldados/portraits/robert-y-gibeley.jpg\`
+- \`assets/images/meldados/portraits/yahrzeit-idapolonsky-tammuz-29-placeholder.svg\`
+- \`assets/images/meldados/yahrzeit-josephhavian-shevat-2.jpg\`
+- \`assets/images/meldados/yahrzeit-morrisgibely-nissan-14.jpg\`
+- \`assets/images/original-photo-unavailable.svg\`
+- \`assets/images/presidents/cti-presidents-plaque-ready-for-github.png\`
+- \`assets/new/.gitkeep\`
+- \`assets/new/75th Anniversary Invitation.png\`
+- \`assets/new/CTI-028.png\`
+- \`assets/new/CTI-029.png\`
+- \`assets/new/CTI-BIO-001-THM.jpg\`
+- \`assets/new/CTI-BIO-002-THM.png\`
+- \`assets/new/CTI-BIO-003-THM.png\`
+- \`assets/new/CTI-BIO-004-THM.png\`
+- \`assets/new/CTI-BIO-005-THM.png\`
+- \`assets/new/CTI-BIO-006-THM.png\`
+- \`assets/new/CTI-BIO-007-THM.png\`
+- \`assets/new/CTI-BIO-008-THM.png\`
+- \`assets/new/CTI-BIO-009-THM.png\`
+- \`assets/new/CTI-BIO-010-THM.png\`
+- \`assets/new/CTI-BIO-011-THM.png\`
+- \`assets/new/CTI-BIO-015-THM.png\`
+- \`assets/new/CTI-BIO-017-THM.png\`
+- \`assets/new/CTI-BIO-018-THM.png\`
+- \`assets/new/CTI-BIO-019-THM.jpg\`
+- \`assets/new/CTI-BIO-020-THM.png\`
+- \`assets/new/CTI-BIO-026-THM.png\`
+- \`assets/new/CTI-BIO-027-THM.png\`
+- \`assets/possible-duplicates/assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-2.jpg\`
+- \`assets/possible-duplicates/assets/archive/originals/cti-sephardic-temple-honors-patriarch-clipping.jpg\`
+- \`assets/possible-duplicates/manifest.json\`
+- \`assets/resources/newsletters/2026/cti-newsletter-2026-05.pdf\`
+- \`assets/resources/newsletters/2026/cti-newsletter-july-2026.pdf\`
 - \`assets/resources/newsletters/2026/cti-newsletter-may-2026.pdf\`
-- \`assets/resources/newsletters/2026/cti-newsletter-september-2026.pdf\`
+- \`assets/sanctuary-tour/images/ark-curtain.jpg\`
+- \`assets/sanctuary-tour/images/bimah.jpg\`
+- \`assets/sanctuary-tour/images/entrance.jpg\`
+- \`assets/sanctuary-tour/images/rear.jpg\`
+- \`assets/sanctuary-tour/images/side.jpg\`
+- \`assets/sanctuary-tour/images/stained-glass.jpg\`
+- \`assets/subscribe-meldados.js\`
+- \`assets/subscribe.js\`
 
 ## Identical-content duplicate groups
-- \`DSP-SH.pdf\`, \`assets/resources/siddurim/DSP-SH.pdf\` (21,416,776 bytes each)
+- \`assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg\`, \`assets/heritage/CTI-020/CTI-020-ORG-1.jpg\` (5,023,286 bytes each)
+- \`assets/heritage/CTI-014/75th Anniversary Invitation.png\`, \`assets/heritage/CTI-022/CTI-022-THM-1.png\`, \`assets/new/75th Anniversary Invitation.png\` (2,198,185 bytes each)
+- \`assets/heritage/CTI-013/CTI-013-ENH-1.png\`, \`assets/images/archives/cti-ladies-auxiliary-officers-restored-bw.png\` (3,165,908 bytes each)
+- \`assets/biographies/CTI-BIO-008/CTI-BIO-008-ORG-1.png\`, \`assets/images/leadership/doris-hershoff-profile.png\` (2,964,591 bytes each)
+- \`assets/heritage/CTI-013/CTI-013-COL-1.png\`, \`assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png\` (2,856,101 bytes each)
+- \`assets/heritage/CTI-014/CTI-014-IMG-1.png\`, \`assets/images/anniversaries/cti-1972-golden-anniversary-ticket-retouched.png\` (2,700,451 bytes each)
+- \`assets/biographies/CTI-BIO-027/CTI-BIO-027-ORG-1.png\`, \`assets/images/leadership/Warm Portrait of a Smiling Elderly Gentleman.png\` (2,292,791 bytes each)
+- \`assets/heritage/CTI-022/CTI-022-ENH-1.png\`, \`assets/images/gallery/a_clean_minimalist_scanned_photocopied_invitatio.png\` (2,287,491 bytes each)
+- \`assets/biographies/CTI-BIO-026/CTI-BIO-026-ORG-1.png\`, \`assets/images/leadership/Warm Vintage Portrait of an Older Gentleman.png\` (2,186,044 bytes each)
+- \`assets/biographies/CTI-BIO-007/CTI-BIO-007-ORG-1.png\`, \`assets/images/leadership/millie-becker-profile.png\` (2,154,012 bytes each)
+- \`assets/biographies/CTI-BIO-009/CTI-BIO-009-ORG-1.png\`, \`assets/images/leadership/marvin-board-profile.png\` (2,148,362 bytes each)
+- \`assets/biographies/CTI-BIO-006/CTI-BIO-006-ORG-1.png\`, \`assets/images/leadership/cti-a-crisp-warmly-lit-professional-portrait-photo-i.png\` (2,141,460 bytes each)
+- \`assets/biographies/CTI-BIO-005/CTI-BIO-005-ORG-1.png\`, \`assets/images/leadership/joanne-pressman-profile.png\` (1,958,923 bytes each)
+- \`assets/biographies/CTI-BIO-004/CTI-BIO-004-ORG-1.png\`, \`assets/images/leadership/harvey-elefson-profile.png\` (1,942,960 bytes each)
+- \`assets/biographies/CTI-BIO-003/CTI-BIO-003-ORG-1.png\`, \`assets/images/leadership/betty-polonsky-profile.png\` (1,936,261 bytes each)
+- \`assets/archive/unreviewed/fixed2.png\`, \`assets/images/meldados/fixed2.png\` (1,922,144 bytes each)
+- \`assets/biographies/CTI-BIO-010/CTI-BIO-010-ORG-1.png\`, \`assets/images/leadership/david-podradchik-profile.png\` (1,908,123 bytes each)
+- \`assets/biographies/CTI-BIO-011/CTI-BIO-011-ORG-1.png\`, \`assets/images/leadership/jay-polonsky-profile.png\` (1,903,622 bytes each)
+- \`assets/archive/meldados-original-board.png\`, \`assets/archive/originals/cti-memorial-board-staged.png\` (1,836,655 bytes each)
+- \`assets/biographies/CTI-BIO-002/CTI-BIO-002-ORG-1.png\`, \`assets/images/leadership/jerry-pressman-profile.png\` (1,687,556 bytes each)
+- \`assets/biographies/CTI-BIO-017/CTI-BIO-017-ORG-1.png\`, \`assets/images/leadership/joseph-havian-gallery-uploaded.png\` (1,605,463 bytes each)
+- \`assets/heritage/CTI-022/CTI-022-ORG-1.jpg\`, \`assets/images/anniversaries/1997-75th-anniversary-cover.jpg\` (1,002,911 bytes each)
+- \`assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg\`, \`assets/heritage/CTI-013/CTI-013-ORG-1.jpg\` (952,451 bytes each)
+- \`assets/heritage/CTI-007/CTI-007-ORG-1.png\`, \`assets/images/gallery/cti-2006-kitchen-dedication-photo.png\` (903,016 bytes each)
+- \`assets/collections/CTI-013-THM-1.png\`, \`assets/heritage/CTI-013/CTI-013-THM-1.png\` (893,369 bytes each)
+- \`assets/biographies/CTI-BIO-018/CTI-BIO-018-ORG-1.png\`, \`assets/images/leadership/david-leon-gallery.png\` (839,447 bytes each)
+- \`assets/biographies/CTI-BIO-020/CTI-BIO-020-ORG-1.png\`, \`assets/images/leadership/ralph-bencangey-gallery.png\` (802,208 bytes each)
+- \`assets/collections/CTI-002-THM-1.png\`, \`assets/collections/CTI-017-THM-1.png\` (800,831 bytes each)
+- \`assets/heritage/CTI-002/CTI-002-THM-1.png\`, \`assets/heritage/CTI-018/CTI-018-THM-2.png\` (746,353 bytes each)
+- \`assets/collections/CTI-003-THM-1.png\`, \`assets/collections/CTI-015-THM-1.png\` (721,327 bytes each)
+- \`assets/collections/CTI-026-THM-1.png\`, \`assets/images/archive/CTI-026-2019-jewish-journal-photo.png\` (697,535 bytes each)
+- \`assets/biographies/CTI-BIO-015/CTI-BIO-015-ORG-1.png\`, \`assets/images/leadership/morris-gibely-gallery.png\` (656,214 bytes each)
+- \`assets/archive/originals/cti-1972-salem-news-golden-anniversary-original.jpg\`, \`assets/heritage/CTI-014/CTI-014-ORG-1.jpg\` (600,210 bytes each)
+- \`assets/collections/CTI-007-THM-1.png\`, \`assets/heritage/CTI-007/CTI-007-THM-OLD-1.png\` (546,850 bytes each)
+- \`assets/biographies/CTI-BIO-028/CTI-BIO-028-ORG-1.jpg\`, \`assets/images/gallery/cti-1994-pikelny-recognition.jpg\` (459,424 bytes each)
+- \`assets/collections/CTI-006-THM-1.png\`, \`assets/collections/CTI-020-THM-1.png\`, \`assets/heritage/CTI-005/CTI-005-ORG-1.png\` (218,291 bytes each)
+- \`assets/biographies/CTI-BIO-019/CTI-BIO-019-ORG-1.jpg\`, \`assets/images/founders/cti-joseph-pernitchi-founder-7-portrait.jpg\` (231,937 bytes each)
+- \`assets/heritage/CTI-021/CTI-021-DOC-1.png\`, \`assets/images/gallery/peabody-hebrew-school-menorah-1958.png\` (98,042 bytes each)
+- \`assets/biographies/CTI-BIO-001/CTI-BIO-001-ORG-1.jpg\`, \`assets/images/leadership/rabbi-blue-profile.jpg\` (83,867 bytes each)
+- \`content/dvar-torah/2026/sermon-2026-yom-kippur-mechilah.md\`, \`content/dvar-torah/Holiday/YK-26 (Mechila)-Reader.md\`, \`content/dvar-torah/Holidays/26-Reader (Yom Kippur).md\` (13,629 bytes each)
+- \`content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-1-pakad.md\`, \`content/dvar-torah/Holiday/RH1-26 (Pakad)-Reader.md\`, \`content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 1).md\` (11,820 bytes each)
+- \`content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-2-teshuvah.md\`, \`content/dvar-torah/Holiday/RH2-26 (Teshuvah)-Reader.md\`, \`content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 2).md\` (7,930 bytes each)
+- \`content/dvar-torah/2026/dvar-torah-2026-07-17-hope-is-not-optimism.md\`, \`content/dvar-torah/Deuteronomy/5-02-26-Reader (Vaetchanan).md\` (6,028 bytes each)
+- \`content/dvar-torah/2026/dvar-torah-2026-08-14-forgotten-new-year.md\`, \`content/dvar-torah/Holiday/ELUL-26 (Forgotten New Year)-Reader.md\`, \`content/dvar-torah/Holidays/26-Reader (Rosh Chodesh Elul).md\` (3,888 bytes each)
+- \`content/dvar-torah/2026/dvar-torah-2026-10-bereishit-naked-cunning-growing-up.md\`, \`content/dvar-torah/Genesis/1-01-26-Reader (Bereishit).md\` (5,491 bytes each)
+- \`content/dvar-torah/2026/dvar-torah-2026-10-noach-who-belongs-inside-your-ark.md\`, \`content/dvar-torah/Genesis/1-02-26-Reader (Noach).md\` (4,300 bytes each)
+- \`content/dvar-torah/2026/dvar-torah-2026-06-19-korach.md\`, \`content/dvar-torah/Numbers/4-05-26-Reader (Korach).md\` (3,312 bytes each)
+- \`admin/archive-add.html\`, \`admin/gallery.html\` (288 bytes each)
 - \`content/archive-additions.json\`, \`content/dvar-additions.json\` (18 bytes each)
 
+## Unreviewed quarantine candidates (not safe to move automatically)
+- \x60CTI-014-THM-v2.png\x60
+- \x60README.md\x60
+- \x60admin/newsletter-parser.js\x60
+- \x60admin/sermon-drive.js\x60
+- \x60admin/torah-studio.js\x60
+- \x60archives/archive-2022-jewish-journal-centennial.html\x60
+- \x60assets/archive/generated/image-inventory-2026-10-20.json\x60
+- \x60assets/archive/originals/I-581-01-15-006-web.jpg\x60
+- \x60assets/archive/originals/I-581-01-15-025-web.jpg\x60
+- \x60assets/archive/originals/I-581-01-15-033-web.jpg\x60
+- \x60assets/archive/originals/I-581-01-15-034-web.jpg\x60
+- \x60assets/archive/originals/I-581-01-15-035-web.jpg\x60
+- \x60assets/archive/originals/cti-1972-salem-news-golden-anniversary-original.jpg\x60
+- \x60assets/archive/originals/cti-1979-gibely-address-original-page.jpg\x60
+- \x60assets/archive/originals/cti-1979-joseph-gibely-address.pdf\x60
+- \x60assets/archive/originals/cti-1986-leo-gibely-newspaper-original.jpg\x60
+- \x60assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg\x60
+- \x60assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-1.jpg\x60
+- \x60assets/archive/originals/cti-1997-75th-anniversary-invitation.jpg\x60
+- \x60assets/archive/originals/cti-1997-75th-anniversary-program-web.pdf\x60
+- \x60assets/archive/originals/cti-1997-program-timeline-photos-original-blue.jpg\x60
+- \x60assets/archive/originals/cti-2006-kitchen-dedication-invitation-original.jpg\x60
+- \x60assets/archive/originals/cti-2012-90th-anniversary-program-original.jpg\x60
+- \x60assets/archive/originals/cti-2019-jewish-journal-article-original.jpg\x60
+- \x60assets/archive/originals/cti-2022-centennial-article.jpg\x60
+- \x60assets/archive/originals/cti-2022-weekly-news-centennial-article.jpg\x60
+- \x60assets/archive/originals/cti-2024-elliot-hershoff-obituary-clipping.png\x60
+- \x60assets/archive/originals/cti-early-religious-leaders-original.jpg\x60
+- \x60assets/archive/originals/cti-elliot-hershoff-obituary-original.jpg\x60
+- \x60assets/archive/originals/cti-joseph-gibely-ii-1979-portrait.jpg\x60
+- \x60assets/archive/originals/cti-ladies-auxiliary-officers-original.jpg\x60
+- \x60assets/archive/originals/cti-memorial-board-staged.png\x60
+- \x60assets/archive/originals/cti-october-1994-original-blue.jpg\x60
+- \x60assets/archive/originals/cti-september-1983-original-blue.jpg\x60
+- \x60assets/archive/originals/cti-vintage-synagogue-bat-mitzvah-clipping.png\x60
+- \x60assets/archive/originals/david-leon-original.png\x60
+- \x60assets/archive/originals/joseph-havian-original-uploaded.png\x60
+- \x60assets/archive/originals/joseph-havian-original.png\x60
+- \x60assets/archive/originals/morris-gibely-original.png\x60
+- \x60assets/archive/unreviewed/fixed.png\x60
+- \x60assets/archive/unreviewed/fixed2.png\x60
+- \x60assets/collections/CTI-001-THM-1.png\x60
+- \x60assets/collections/CTI-002-THM-1.png\x60
+- \x60assets/collections/CTI-003-THM-1.png\x60
+- \x60assets/collections/CTI-004-THM-1.png\x60
+- \x60assets/collections/CTI-005-THM-1.png\x60
+- \x60assets/collections/CTI-006-THM-1.png\x60
+- \x60assets/collections/CTI-007-THM-1.png\x60
+- \x60assets/collections/CTI-008-THM-1.png\x60
+- \x60assets/collections/CTI-009-THM-1.png\x60
+- \x60assets/collections/CTI-010-THM-1.png\x60
+- \x60assets/collections/CTI-011-THM-1.png\x60
+- \x60assets/collections/CTI-012-THM-1.png\x60
+- \x60assets/collections/CTI-013-THM-1.png\x60
+- \x60assets/collections/CTI-014-THM-1.png\x60
+- \x60assets/collections/CTI-015-THM-1.png\x60
+- \x60assets/collections/CTI-016-THM-1.png\x60
+- \x60assets/collections/CTI-017-THM-1.png\x60
+- \x60assets/collections/CTI-018-THM-1.png\x60
+- \x60assets/collections/CTI-019-THM-1.png\x60
+- \x60assets/collections/CTI-020-THM-1.png\x60
+- \x60assets/collections/CTI-021-THM-1.png\x60
+- \x60assets/collections/CTI-022-THM-1.png\x60
+- \x60assets/collections/CTI-023-THM-1.png\x60
+- \x60assets/collections/CTI-024-THM-1.png\x60
+- \x60assets/collections/CTI-025-THM-1.png\x60
+- \x60assets/collections/CTI-026-THM-1.png\x60
+- \x60assets/collections/CTI-027-THM-1.png\x60
+- \x60assets/images/anniversaries/1997-75th-anniversary-cover.jpg\x60
+- \x60assets/images/anniversaries/cti-1972-anniversary-celebration-photos-1.jpg\x60
+- \x60assets/images/anniversaries/cti-1972-anniversary-celebration-photos-2.jpg\x60
+- \x60assets/images/anniversaries/cti-2012-90th-anniversary-officers.jpg\x60
+- \x60assets/images/anniversaries/cti-2012-shuls-mark-historic-milestones.jpg\x60
+- \x60assets/images/anniversaries/cti-2022-centennial-officers-honorees.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-01.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-02.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-03.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-04.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-05.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-06.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-07.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-08.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-09.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-10.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-11.jpg\x60
+- \x60assets/images/anniversaries/cti-anniversary-album-photo-12.jpg\x60
+- \x60assets/images/archive/CTI-026-2019-jewish-journal-photo.png\x60
+- \x60assets/images/founders/cti-founders-charter-members-plaque.jpg\x60
+- \x60assets/images/founders/cti-founders-plaque-ready-for-github.png\x60
+- \x60assets/images/gallery/cti-1976-service-honorees-restored.png\x60
+- \x60assets/images/gallery/cti-1994-pikelny-recognition.jpg\x60
+- \x60assets/images/gallery/cti-2006-kitchen-dedication-photo.png\x60
+- \x60assets/images/gallery/cti-2012-shofar-gift-group-portrait.png\x60
+- \x60assets/images/gallery/cti-2018-hershoff-letter-jewish-journal.jpg\x60
+- \x60assets/images/gallery/cti-2024-ladies-auxiliary-temple-emanu-el-brunch.jpg\x60
+- \x60assets/images/gallery/cti-building-8-pierpont-street.png\x60
+- \x60assets/images/gallery/cti-ladies-auxiliary-officers-colorized.png\x60
+- \x60assets/images/gallery/cti-october-1994-ai-enhanced-colorized.jpg\x60
+- \x60assets/images/gallery/cti-september-1983-ai-enhanced-colorized.jpg\x60
+- \x60assets/images/gallery/peabody-hebrew-school-menorah-1958.png\x60
+- \x60assets/images/leadership/Synagogue Shofar Ceremony Group Portrait.png\x60
+- \x60assets/images/leadership/board-portrait-background-jerry-reference.png\x60
+- \x60assets/images/leadership/cti-fran-profile-portrait.png\x60
+- \x60assets/images/leadership/joseph-havian-gallery.png\x60
+- \x60assets/images/original-photo-unavailable.svg\x60
+- \x60assets/images/presidents/cti-presidents-plaque-ready-for-github.png\x60
+- \x60assets/new/.gitkeep\x60
+- \x60assets/new/75th Anniversary Invitation.png\x60
+- \x60assets/new/CTI-028.png\x60
+- \x60assets/new/CTI-029.png\x60
+- \x60assets/new/CTI-BIO-001-THM.jpg\x60
+- \x60assets/new/CTI-BIO-002-THM.png\x60
+- \x60assets/new/CTI-BIO-003-THM.png\x60
+- \x60assets/new/CTI-BIO-004-THM.png\x60
+- \x60assets/new/CTI-BIO-005-THM.png\x60
+- \x60assets/new/CTI-BIO-006-THM.png\x60
+- \x60assets/new/CTI-BIO-007-THM.png\x60
+- \x60assets/new/CTI-BIO-008-THM.png\x60
+- \x60assets/new/CTI-BIO-009-THM.png\x60
+- \x60assets/new/CTI-BIO-010-THM.png\x60
+- \x60assets/new/CTI-BIO-011-THM.png\x60
+- \x60assets/new/CTI-BIO-015-THM.png\x60
+- \x60assets/new/CTI-BIO-017-THM.png\x60
+- \x60assets/new/CTI-BIO-018-THM.png\x60
+- \x60assets/new/CTI-BIO-019-THM.jpg\x60
+- \x60assets/new/CTI-BIO-020-THM.png\x60
+- \x60assets/new/CTI-BIO-026-THM.png\x60
+- \x60assets/new/CTI-BIO-027-THM.png\x60
+- \x60assets/possible-duplicates/README.md\x60
+- \x60assets/possible-duplicates/assets/archive/originals/cti-1992-origins-peabody-sephardic-congregation-2.jpg\x60
+- \x60assets/possible-duplicates/assets/archive/originals/cti-sephardic-temple-honors-patriarch-clipping.jpg\x60
+- \x60assets/possible-duplicates/manifest.json\x60
+- \x60assets/resources/newsletters/2026/cti-newsletter-2026-05.pdf\x60
+- \x60assets/resources/newsletters/2026/cti-newsletter-july-2026.pdf\x60
+- \x60assets/resources/newsletters/2026/cti-newsletter-may-2026.pdf\x60
+- \x60assets/subscribe.js\x60
+- \x60docs/archive-gallery-completion-standard.md\x60
+- \x60docs/archive-gallery-supporting-documents-spec.md\x60
+- \x60docs/congregational-email-readiness.md\x60
+- \x60email/lech-lecha-2026.html\x60
+- \x60facebook-coming-soon.html\x60
+- \x60history-story.html\x60
+- \x60leader-bio.html\x60
+- \x60melodies-friday-evening.html\x60
+- \x60melodies-rosh-hashanah.html\x60
+- \x60melodies-yom-kippur.html\x60
+- \x60rabbi.html\x60
+- \x60resources/melodies-friday-evening.html\x60
+- \x60resources/melodies-rosh-hashanah.html\x60
+- \x60resources/melodies-yom-kippur.html\x60
+- \x60scripts/asset-intake.py\x60
+- \x60scripts/audit-site-links.py\x60
+- \x60scripts/build_collection_thumbnails.py\x60
+- \x60scripts/extract-archives.py\x60
+- \x60scripts/file_heritage_intake.py\x60
+- \x60scripts/generate_biography_portraits.py\x60
+- \x60scripts/import_biography_photo.py\x60
+- \x60scripts/localize_2019_photo.py\x60
+- \x60scripts/migrate-dvar-torah.py\x60
+- \x60scripts/migrate_staged_biography_thumbnails.py\x60
+- \x60scripts/package_biography_originals.py\x60
+- \x60scripts/reconcile-asset-registry.py\x60
+- \x60scripts/regenerate_collection_thumbnails.py\x60
+- \x60scripts/site-maintenance.py\x60
+- \x60scripts/stage_existing_biography_photos.py\x60
+- \x60scripts/sync-podcast.py\x60
+- \x60scripts/validate-assets.py\x60
+- \x60subscribe-newsletter.html\x60
+- \x60subscribe.html\x60
+
 ## Other unreachable tracked files
+- \`.github/workflows/admin-tests.yml\`
+- \`.github/workflows/asset-integrity.yml\`
 - \`.github/workflows/audit-unused-files.yml\`
+- \`.github/workflows/biography-photo-import.yml\`
+- \`.github/workflows/build-asset-registry.yml\`
+- \`.github/workflows/build-collection-thumbnails.yml\`
+- \`.github/workflows/cti-007-thumbnail.yml\`
+- \`.github/workflows/cti-regression.yml\`
+- \`.github/workflows/file-cti-026-intake.yml\`
+- \`.github/workflows/file-cti-heritage-intake.yml\`
+- \`.github/workflows/generate-biography-portraits.yml\`
+- \`.github/workflows/identify-uploaded-newsletter.yml\`
+- \`.github/workflows/legacy-leadership-redirects.yml\`
+- \`.github/workflows/localize-cti-2019-photo.yml\`
+- \`.github/workflows/meldados-email-reminders.yml\`
+- \`.github/workflows/migrate-dvar-torah.yml\`
+- \`.github/workflows/migrate-staged-biography-thumbnails.yml\`
+- \`.github/workflows/optimize-site-phase1.yml\`
+- \`.github/workflows/package-biography-originals.yml\`
 - \`.github/workflows/pages.yml\`
+- \`.github/workflows/phase3-archives.yml\`
+- \`.github/workflows/prepare-meldathos-leader-portraits.yml\`
 - \`.github/workflows/preserve-legacy-newsletter.yml\`
+- \`.github/workflows/quarantine-possible-duplicates.yml\`
+- \`.github/workflows/reconcile-asset-registry.yml\`
+- \`.github/workflows/regenerate-collection-thumbnails.yml\`
 - \`.github/workflows/reorganize-assets-once.yml\`
+- \`.github/workflows/restore-2012-anniversary-program.yml\`
 - \`.github/workflows/selective-backup.yml\`
-- \`DSP-SH.pdf\`
+- \`.github/workflows/site-link-audit.yml\`
+- \`.github/workflows/stage-existing-biographies.yml\`
+- \`.github/workflows/standardize-biographies.yml\`
+- \`.github/workflows/sync-podcast.yml\`
+- \`.github/workflows/verify-quarantined-media.yml\`
+- \`CTI-014-THM-v2.png\`
 - \`README.md\`
-- \`admin/config.yml\`
-- \`admin/reorganize-assets-once.py\`
-- \`assets/new/README.md\`
+- \`admin/meldados-name-request.js\`
+- \`admin/newsletter-parser.js\`
+- \`admin/sermon-drive.js\`
+- \`admin/torah-studio.js\`
+- \`assets/heritage/README.md\`
+- \`assets/heritage/building/README.md\`
+- \`assets/heritage/jhc-archive/README.md\`
+- \`assets/heritage/unidentified/README.md\`
+- \`assets/possible-duplicates/README.md\`
 - \`backup-audit/2026-10-15-github-drive-inventory.csv\`
 - \`backup-audit/2026-10-15-reorganization-map.json\`
 - \`backup-audit/README.md\`
+- \`backup-audit/quarantine-reference-verification.json\`
+- \`backup-audit/quarantine-reference-verification.md\`
+- \`backup-audit/site-validation.json\`
+- \`backup-audit/unused-file-audit.json\`
 - \`backup-audit/unused-file-review.md\`
+- \`cloudflare/cti-admin-api.js\`
+- \`cloudflare/email-delivery-ledger.md\`
+- \`cloudflare/torah-scheduler/README.md\`
+- \`cloudflare/torah-scheduler/schema.sql\`
+- \`content/ASSET-INTAKE-PROCEDURE.md\`
+- \`content/BOARD-PORTRAIT-BACKGROUND.md\`
+- \`content/CONTENT-ARCHITECTURE.md\`
+- \`content/CTI-CANONICAL-SOURCE-POLICY.md\`
+- \`content/CTI-WEB-IMAGE-CATALOG-CROSSWALK-2026-10-20.json\`
+- \`content/HOSTING-MIGRATION.md\`
+- \`content/IMAGE-ARCHIVE-DRIVE-RECONCILIATION-2026-10-20.md\`
+- \`content/IMAGE-ARCHIVE-SECOND-PASS-AUDIT-2026-10-20.json\`
+- \`content/IMAGE-ASSET-USAGE-AUDIT-PARTIAL-2026-10-20.json\`
+- \`content/MELDADOS-STAGING.md\`
 - \`content/README.md\`
+- \`content/WEBSITE-STRUCTURE.md\`
+- \`content/archive-additions.json\`
+- \`content/archive-captions.json\`
+- \`content/archives/transcriptions/archive-1976-sephardic-jews.txt\`
+- \`content/archives/transcriptions/archive-1979-joseph-gibely-address.txt\`
+- \`content/archives/transcriptions/archive-1986-leo-gibely-study.txt\`
+- \`content/archives/transcriptions/archive-1995-ashkenazi-sephardic-traditions.txt\`
+- \`content/archives/transcriptions/archive-1997-75th-anniversary.txt\`
+- \`content/archives/transcriptions/archive-2001-constantinople-to-peabody.txt\`
+- \`content/archives/transcriptions/archive-2018-hershoff-letter.txt\`
+- \`content/archives/transcriptions/archive-2019-sephardic-traditions.txt\`
+- \`content/archives/transcriptions/archive-2022-jewish-journal-centennial.txt\`
+- \`content/archives/transcriptions/archive-elliot-hershoff-obituary.txt\`
+- \`content/archives/transcriptions/archive-ladies-auxiliary-officers.txt\`
+- \`content/asset-registry.json\`
+- \`content/biography-directory.json\`
+- \`content/collection-schema-contract.md\`
+- \`content/collection-submissions.json\`
+- \`content/dvar-torah/2026/dvar-torah-2026-06-19-korach.md\`
+- \`content/dvar-torah/2026/dvar-torah-2026-07-17-hope-is-not-optimism.md\`
+- \`content/dvar-torah/2026/dvar-torah-2026-08-14-forgotten-new-year.md\`
+- \`content/dvar-torah/2026/dvar-torah-2026-10-bereishit-naked-cunning-growing-up.md\`
+- \`content/dvar-torah/2026/dvar-torah-2026-10-noach-who-belongs-inside-your-ark.md\`
+- \`content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-1-pakad.md\`
+- \`content/dvar-torah/2026/sermon-2026-rosh-hashanah-day-2-teshuvah.md\`
+- \`content/dvar-torah/2026/sermon-2026-yom-kippur-mechilah.md\`
+- \`content/dvar-torah/Deuteronomy/5-02-26-Reader (Vaetchanan).md\`
+- \`content/dvar-torah/Genesis/1-01-26-Reader (Bereishit).md\`
+- \`content/dvar-torah/Genesis/1-02-26-Reader (Noach).md\`
+- \`content/dvar-torah/Genesis/1-03-26-Email (Lech Lecha).md\`
+- \`content/dvar-torah/Genesis/1-03-26-Reader (Lech Lecha).md\`
+- \`content/dvar-torah/Genesis/1-04-26-Email (Vayera).md\`
+- \`content/dvar-torah/Genesis/1-04-26-Reader (Vayera).md\`
+- \`content/dvar-torah/Holiday/ELUL-26 (Forgotten New Year)-Reader.md\`
+- \`content/dvar-torah/Holiday/RH1-26 (Pakad)-Reader.md\`
+- \`content/dvar-torah/Holiday/RH2-26 (Teshuvah)-Reader.md\`
+- \`content/dvar-torah/Holiday/YK-26 (Mechila)-Reader.md\`
+- \`content/dvar-torah/Holidays/26-Reader (Rosh Chodesh Elul).md\`
+- \`content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 1).md\`
+- \`content/dvar-torah/Holidays/26-Reader (Rosh Hashanah Day 2).md\`
+- \`content/dvar-torah/Holidays/26-Reader (Yom Kippur).md\`
+- \`content/dvar-torah/Numbers/4-05-26-Reader (Korach).md\`
+- \`content/gallery.json\`
+- \`content/history-gallery.json\`
+- \`content/jhc-drive-source-register.json\`
+- \`content/jhc-scan-verification-2026-10-22.md\`
+- \`content/leaders.json\`
+- \`content/meldados-elliot-hershoff-draft.md\`
+- \`content/page-migration-map.json\`
+- \`content/thumbnail-build-manifest.json\`
+- \`docs/archive-gallery-completion-standard.md\`
+- \`docs/archive-gallery-supporting-documents-spec.md\`
+- \`docs/congregational-email-readiness.md\`
+- \`scripts/asset-intake.py\`
+- \`scripts/audit-site-links.py\`
+- \`scripts/build_collection_thumbnails.py\`
+- \`scripts/extract-archives.py\`
+- \`scripts/file_heritage_intake.py\`
+- \`scripts/generate_biography_portraits.py\`
+- \`scripts/import_biography_photo.py\`
+- \`scripts/localize_2019_photo.py\`
+- \`scripts/meldados-email-reminders.cjs\`
+- \`scripts/migrate-dvar-torah.py\`
+- \`scripts/migrate_staged_biography_thumbnails.py\`
+- \`scripts/package_biography_originals.py\`
+- \`scripts/prepare_meldathos_leader_portraits.py\`
+- \`scripts/reconcile-asset-registry.py\`
+- \`scripts/regenerate_collection_thumbnails.py\`
+- \`scripts/site-maintenance.py\`
+- \`scripts/stage_existing_biography_photos.py\`
+- \`scripts/sync-podcast.py\`
+- \`scripts/validate-assets.py\`
+- \`tests/admin-smoke.cjs\`
+- \`tests/test_admin_source.py\`
+- \`tests/test_api.py\`
+- \`tests/test_content.py\`
+- \`tests/test_site.py\`
+- \`tests/test_subscription_browser.py\`
+- \`tests/test_subscription_source.py\`
 
 ## Audit limits
 
