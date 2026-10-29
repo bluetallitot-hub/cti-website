@@ -520,11 +520,11 @@ if(url.pathname==='/leadership/photo'&&request.method==='POST'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
  const formats={'image/jpeg':'jpg','image/png':'png','image/webp':'webp'};
- if(typeof b.id!=='string'||!/^[a-z0-9-]+$/.test(b.id)||typeof b.thumbnail!=='string'||typeof b.original!=='string'||!formats[b.originalType]||b.thumbnail.length>3000000||b.original.length>11000000||!/^\\/9j\\/[A-Za-z0-9+/=]+$/.test(b.thumbnail))return respond({error:'Invalid photograph or file too large'},400);
- const magic={'image/jpeg':/^\\/9j\\//,'image/png':/^iVBORw0KGgo/,'image/webp':/^UklGR/};
+ if(typeof b.id!=='string'||!/^[a-z0-9-]+$/.test(b.id)||typeof b.thumbnail!=='string'||typeof b.original!=='string'||!formats[b.originalType]||b.thumbnail.length>3000000||b.original.length>11000000||!/^\/9j\/[A-Za-z0-9+/=]+$/.test(b.thumbnail))return respond({error:'Invalid photograph or file too large'},400);
+ const magic={'image/jpeg':/^\/9j\//,'image/png':/^iVBORw0KGgo/,'image/webp':/^UklGR/};
  if(!magic[b.originalType].test(b.original)||!/^[A-Za-z0-9+/=]+$/.test(b.original))return respond({error:'Original image format does not match upload'},400);
- const f=await gh(env,'content/leaders.json'),d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\\s/g,''))));
- const person=d.leaders?.find(x=>x.id===b.id);if(!person||!/^CTI-BIO-\\d{3,}$/.test(person.ctiId||''))return respond({error:'CTI-BIO record not found'},404);
+ const f=await gh(env,'content/leaders.json'),d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
+ const person=d.leaders?.find(x=>x.id===b.id);if(!person||!/^CTI-BIO-\d{3,}$/.test(person.ctiId||''))return respond({error:'CTI-BIO record not found'},404);
  const prefix='assets/biographies/'+person.ctiId+'/'+person.ctiId;
  const thumbPath=prefix+'-THM.jpg';
  const originals=Array.isArray(person.photoOriginals)?person.photoOriginals.slice():[];
@@ -537,7 +537,7 @@ if(url.pathname==='/leadership/photo'&&request.method==='POST'){
   const first=prefix+'-ORG-1.jpg';
   const found=await fileAt(first);
   if(!found){
-   await gh(env,first,'PUT',{message:'Preserve existing CTI-BIO thumbnail before replacement: '+person.ctiId,content:currentThumb.content.replace(/\\s/g,''),branch:'main'});
+   await gh(env,first,'PUT',{message:'Preserve existing CTI-BIO thumbnail before replacement: '+person.ctiId,content:currentThumb.content.replace(/\s/g,''),branch:'main'});
   }
   originals.push({number:1,path:first});existingNumbers.add(1);
  }
@@ -554,7 +554,7 @@ if(url.pathname==='/leadership/photo'&&request.method==='POST'){
  // Re-read the thumbnail SHA immediately before overwriting it.
  currentThumb=await fileAt(thumbPath);
  await gh(env,thumbPath,'PUT',{message:'Update CTI-BIO thumbnail: '+person.ctiId,content:b.thumbnail,...(currentThumb?{sha:currentThumb.sha}:{}),branch:'main'});
- const fresh=await gh(env,'content/leaders.json'),latest=JSON.parse(new TextDecoder().decode(un64(fresh.content.replace(/\\s/g,''))));
+ const fresh=await gh(env,'content/leaders.json'),latest=JSON.parse(new TextDecoder().decode(un64(fresh.content.replace(/\s/g,''))));
  const target=latest.leaders?.find(x=>x.id===b.id);if(!target)return respond({error:'Photographs saved; database update requires attention'},409);
  const merged=new Map((target.photoOriginals||[]).map(x=>[x.path,x]));
  for(const item of originals)merged.set(item.path,item);
@@ -563,7 +563,7 @@ if(url.pathname==='/leadership/photo'&&request.method==='POST'){
  target.photo=thumbPath;
  target.thumbnailStatus='published';
  target.thumbnailSpecification={width:600,height:800,aspectRatio:'3:4',format:'jpeg',padding:true,backgroundExtensionAllowed:true};
- await save(env,'content/leaders.json',JSON.stringify(latest,null,2)+'\\n',fresh.sha,'Update CTI-BIO photograph inventory: '+person.ctiId);
+ await save(env,'content/leaders.json',JSON.stringify(latest,null,2)+'\n',fresh.sha,'Update CTI-BIO photograph inventory: '+person.ctiId);
  return respond({ok:true,photo:thumbPath,originalPath,photoOriginals:target.photoOriginals});
 }
 if(url.pathname==='/events/list'&&request.method==='GET'){if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const f=await gh(env,'content/events.json');const d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));return respond({events:d.events||[]})}
