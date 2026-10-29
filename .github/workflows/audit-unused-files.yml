@@ -87,7 +87,9 @@ jobs:
           report += ['','## Identical-content duplicate groups']
           for group in sorted(dup,key=lambda v:-sum(Path(p).stat().st_size for p in v)):
             report.append('- '+', '.join('\`'+p+'\`' for p in group)+f' ({Path(group[0]).stat().st_size:,} bytes each)')
-          report += ['','## Unreviewed quarantine candidates (not safe to move automatically)']\n          report += ['- \\`'+p+'\\`' for p in quarantine_candidates] or ['None']\n          report += ['','## Other unreachable tracked files']
+          report += ['','## Unreviewed quarantine candidates (not safe to move automatically)']
+          report += ['- \\x60'+p+'\\x60' for p in quarantine_candidates] or ['None']
+          report += ['','## Other unreachable tracked files']
           report += ['- \`'+p+'\`' for p in unused if p not in unlinked_html and p not in unused_assets] or ['None']
           report += ['','## Audit limits','','Unreachable means not discovered from the home page by static parsing. Pages may be linked from outside CTI or constructed dynamically. Administrative files and historical originals can be unlinked yet intentional. This report is a deletion proposal input, not authorization to delete.']
           Path('backup-audit/unused-file-review.md').write_text('\n'.join(report)+'\n')
