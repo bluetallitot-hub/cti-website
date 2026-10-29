@@ -13,7 +13,7 @@ with zipfile.ZipFile(out,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=6) a
             src=root/photo["path"]
             if not src.is_file():
                 raise FileNotFoundError(f"Missing original for {person['ctiId']}: {src}")
-            z.write(src,arcname=f"{person['ctiId']}/{src.name}")
-            manifest.append({"id":person["ctiId"],"name":person["name"],"file":f"{person['ctiId']}/{src.name}"})
+            z.write(src,arcname=f"{person['ctiId']}-{src.name}")
+            manifest.append({"id":person["ctiId"],"name":person["name"],"file":f"{person['ctiId']}-{src.name}"})
     z.writestr("manifest.json",json.dumps(manifest,indent=2)+"\n")
 print(f"Created {out.relative_to(root)} with {len(manifest)} original images")
