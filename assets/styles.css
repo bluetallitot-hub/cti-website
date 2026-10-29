@@ -1,3 +1,5 @@
+/* Hebrew and Latin web fonts used by CTI typography. Fonts are loaded with swap to retain readable fallbacks. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+Hebrew:wght@400;500;600;700&display=swap');
 :root{
   /* CTI centralized typography: selectors may preview alternatives without publishing. */
   --font-heading:Georgia,serif;
@@ -253,3 +255,6 @@ body:has(.about-subnav)>header{position:fixed!important;top:0;left:0;right:0;wid
 .about-tab.active,.about-tab[aria-current="page"]{background:var(--site-background);color:var(--deep)}
 @media(max-width:760px){.about-section-hero{height:auto;min-height:164px}}
 @media(max-width:520px){.about-tabs{gap:4px}.about-tab{font-size:12px;padding:8px 3px}}
+
+/* Hebrew quotations and marked Hebrew text throughout public pages. */
+:where([lang="he"],.hebrew){font-family:var(--font-hebrew);direction:rtl;unicode-bidi:isolate}
