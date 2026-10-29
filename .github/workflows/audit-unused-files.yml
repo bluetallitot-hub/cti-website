@@ -59,7 +59,10 @@ jobs:
               for raw in re.findall(r'url\(\s*[\"\x27]?([^\"\x27)]+)',s):
                 target=resolve(p,raw)
                 if target:refs[p].add(target)
-          reachable={'index.html'};queue=deque(reachable)
+          # Administration is an independent entry point; its pages are not necessarily
+          # linked from the public homepage. Preserve all active admin entry points.
+          roots={'index.html'} | {p for p in paths if p.startswith('admin/') and p.endswith('.html')}
+          reachable=set(roots);queue=deque(sorted(roots))
           while queue:
             for target in refs[queue.popleft()]:
               if target not in reachable:
@@ -68,21 +71,27 @@ jobs:
           for p in paths:
             if Path(p).is_file():sha[hashlib.sha256(Path(p).read_bytes()).hexdigest()].append(p)
           dup=[v for v in sha.values() if len(v)>1]
+          # Unreachable does not mean disposable. Exclude protected records and
+          # assets from automated quarantine candidates, even when dynamically loaded.
+          protected_prefixes=('assets/heritage/','assets/biographies/','assets/sanctuary-tour/','content/','cloudflare/','.github/','tests/','backup-audit/')
+          protected_names=('rabbi-blue-family', 'meldado', 'meldatho', 'logo', 'placeholder')
+          protected=lambda p: p.startswith(protected_prefixes) or any(n in p.lower() for n in protected_names)
           unused=[p for p in paths if p not in reachable and p!='index.html']
+          quarantine_candidates=[p for p in unused if not protected(p)]
           unlinked_html=[p for p in unused if p.endswith('.html')]
           unused_assets=[p for p in unused if p.startswith('assets/') and not p.endswith('.md')]
-          report=['# CTI file audit — site reachability and duplicate content','','**Review only; nothing deleted.** Starting at index.html, this audit follows discovered local HTML links and static asset references, including references in linked CSS, JS and JSON. Dynamic URL construction, external bookmarks, and references from other sites require manual verification.','','## Summary',f'- Tracked files: {len(paths)}',f'- Reachable through detected references: {len(reachable)}',f'- Unreachable HTML: {len(unlinked_html)}',f'- Unreachable assets: {len(unused_assets)}',f'- Identical-content groups: {len(dup)}','','## Unreachable HTML pages'] 
+          report=['# CTI file audit — site reachability and duplicate content','','**Review only; nothing deleted.** Starting at index.html, this audit follows discovered local HTML links and static asset references, including references in linked CSS, JS and JSON. Dynamic URL construction, external bookmarks, and references from other sites require manual verification.','','## Summary',f'- Tracked files: {len(paths)}',f'- Reachable through detected references: {len(reachable)}',f'- Unreachable HTML: {len(unlinked_html)}',f'- Unreachable assets: {len(unused_assets)}',f'- Identical-content groups: {len(dup)}',f'- Unreviewed quarantine candidates: {len(quarantine_candidates)}','','## Unreachable HTML pages'] 
           report += ['- \`'+p+'\`' for p in unlinked_html] or ['None']
           report += ['','## Unreachable assets (candidates for removal from published site)']
           report += ['- \`'+p+'\`' for p in unused_assets] or ['None']
           report += ['','## Identical-content duplicate groups']
           for group in sorted(dup,key=lambda v:-sum(Path(p).stat().st_size for p in v)):
             report.append('- '+', '.join('\`'+p+'\`' for p in group)+f' ({Path(group[0]).stat().st_size:,} bytes each)')
-          report += ['','## Other unreachable tracked files']
+          report += ['','## Unreviewed quarantine candidates (not safe to move automatically)']\n          report += ['- \\`'+p+'\\`' for p in quarantine_candidates] or ['None']\n          report += ['','## Other unreachable tracked files']
           report += ['- \`'+p+'\`' for p in unused if p not in unlinked_html and p not in unused_assets] or ['None']
           report += ['','## Audit limits','','Unreachable means not discovered from the home page by static parsing. Pages may be linked from outside CTI or constructed dynamically. Administrative files and historical originals can be unlinked yet intentional. This report is a deletion proposal input, not authorization to delete.']
           Path('backup-audit/unused-file-review.md').write_text('\n'.join(report)+'\n')
-          Path('backup-audit/unused-file-audit.json').write_text(json.dumps({'reachable':sorted(reachable),'unreachable_html':unlinked_html,'unreachable_assets':unused_assets,'duplicates':dup,'references':{k:sorted(v) for k,v in refs.items()}},indent=2)+'\n')
+          Path('backup-audit/unused-file-audit.json').write_text(json.dumps({'reachable':sorted(reachable),'unreachable_html':unlinked_html,'unreachable_assets':unused_assets,'duplicates':dup,'quarantine_candidates':quarantine_candidates,'references':{k:sorted(v) for k,v in refs.items()}},indent=2)+'\n')
           print('Tracked:',len(paths),'reachable:',len(reachable),'unlinked HTML:',len(unlinked_html),'unlinked assets:',len(unused_assets),'duplicate groups:',len(dup))
           PY
       - name: Commit reports, never delete files
