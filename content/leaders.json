@@ -488,6 +488,51 @@
       "order": {
         "past_president": 8
       }
+    },
+    {
+      "id": "rabbi-dov-pikelny",
+      "name": "Rabbi Dov B. Pikelny",
+      "types": [
+        "past_rabbi"
+      ],
+      "introduction": "Served Congregation Tifereth Israel from 1982 to 2001. The congregation honored Rabbi Pikelny and Cantor Barbara Pikelny for thirteen years of service in October 1994.",
+      "biography": "Rabbi Dov B. Pikelny served Congregation Tifereth Israel from 1982 to 2001, according to the Jewish Journal's October 11, 2012 history of the congregation.\n\nIn October 1994, CTI honored Rabbi Dov B. Pikelny and Barbara Pikelny, who served as cantor, for thirteen years of involvement with the synagogue. Contemporary photographs and articles documenting the celebration are preserved in CTI archive records CTI-003, CTI-009, and CTI-038.",
+      "photo": "assets/images/gallery/cti-1994-pikelny-recognition.jpg",
+      "role": "Former Rabbi",
+      "serviceYears": "1982–2001",
+      "links": {
+        "archive": "historical-record.html?id=CTI-009"
+      },
+      "order": {
+        "past_rabbi": 1
+      },
+      "archiveRecordIds": [
+        "CTI-003",
+        "CTI-009",
+        "CTI-038"
+      ]
+    },
+    {
+      "id": "rabbi-howard-kosovske",
+      "name": "Rabbi Howard Kosovske",
+      "types": [
+        "past_rabbi"
+      ],
+      "introduction": "Served Congregation Tifereth Israel beginning in 2008; documented as rabbi in the congregation's 90th-anniversary coverage in 2012.",
+      "biography": "A Jewish Journal article dated October 11, 2012 identifies Rabbi Howard Kosovske as serving Congregation Tifereth Israel from 2008 through the article's publication. His final year of service is not yet verified.\n\nThe archive includes a photograph of Rabbi Kosovske at a 2012 shofar presentation (CTI-024) and a separate newspaper photograph outside the synagogue (CTI-008). The latter article inconsistently spells his surname Kosovke and Kosokove; the dated Jewish Journal article uses Kosovske.",
+      "photo": "",
+      "role": "Former Rabbi",
+      "serviceYears": "2008–at least 2012",
+      "links": {
+        "archive": "historical-record.html?id=CTI-024"
+      },
+      "order": {
+        "past_rabbi": 2
+      },
+      "archiveRecordIds": [
+        "CTI-008",
+        "CTI-024"
+      ]
     }
   ]
 }
