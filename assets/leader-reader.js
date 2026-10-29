@@ -15,7 +15,7 @@
   if(person.serviceYears){const p=document.createElement('p');p.textContent='Years of service: '+person.serviceYears;$('bio').append(p)}
   const biography=person.biography||person.introduction||'Additional biographical information has not yet been documented.';
   for(const paragraph of biography.split(/\n\s*\n/)){const p=document.createElement('p');p.textContent=paragraph;$('bio').append(p)}
-  const related=[...new Set(Object.values(person.links||{}).filter(url=>typeof url==='string'&&/^(meldado-person|historical-record|rabbi-bio)\\.html(?:\\?|$)/.test(url)))];
+  const related=[...new Set(Object.values(person.links||{}).filter(url=>typeof url==='string'&&/^(meldado-person|historical-record|rabbi-bio)\.html(?:\?|$)/.test(url)))];
   for(const url of related){const p=document.createElement('p'),a=document.createElement('a');a.href=url;a.className='textlink';a.textContent=url.startsWith('meldado-person')?'View memorial record →':url.startsWith('rabbi-bio')?'More about Rabbi Blue →':'View historical record →';p.append(a);$('bio').append(p)}
 
  }catch(e){fail(e.message)}
