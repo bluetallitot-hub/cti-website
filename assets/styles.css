@@ -277,3 +277,11 @@ body:has(.about-subnav)>header{position:fixed!important;top:0;left:0;right:0;wid
 [data-leaders-category] .leader-card .heritage-person-copy>.textlink:not(.leader-meldatho-link){margin-top:auto}
 [data-leaders-category] .leader-card .heritage-person-copy>.leader-meldatho-link{margin-top:6px}
 [data-leaders-category] .leader-card .heritage-person-copy{min-height:0}
+
+/* One shared index-card treatment for current leadership, founders and past leaders. */
+[data-leaders-category] .leader-card{display:flex;flex-direction:column;overflow:hidden}
+[data-leaders-category] .leader-card .heritage-person-copy{display:flex;flex-direction:column;flex:1;padding-top:12px}
+[data-leaders-category] .leader-card .heritage-person-copy h3{margin:4px 0 8px}
+[data-leaders-category] .leader-card .heritage-person-copy p{margin:4px 0 10px}
+[data-leaders-category] .leader-card .heritage-person-copy>.textlink:not(.leader-meldatho-link){margin-top:auto}
+[data-leaders-category] .leader-card .heritage-person-copy>.leader-meldatho-link{margin-top:6px}
