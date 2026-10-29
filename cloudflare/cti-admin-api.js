@@ -511,7 +511,7 @@ if(url.pathname==='/leadership/update'&&request.method==='POST'){
  const f=await gh(env,'content/leaders.json'),d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
  const person=d.leaders?.find(x=>x.id===b.id);if(!person)return respond({error:'Leader not found'},404);
  person.introduction=b.bio.trim();person.biography=b.fullBio.trim();
- await save(env,'content/leaders.json',JSON.stringify(d,null,2)+'\\n',f.sha,'Update leadership biography: '+person.name);
+ await save(env,'content/leaders.json',JSON.stringify(d,null,2)+'\n',f.sha,'Update leadership biography: '+person.name);
  return respond({ok:true});
 }
 if(url.pathname==='/leadership/photo'&&request.method==='POST'){
@@ -526,7 +526,7 @@ if(url.pathname==='/leadership/photo'&&request.method==='POST'){
  const fresh=await gh(env,'content/leaders.json'),latest=JSON.parse(new TextDecoder().decode(un64(fresh.content.replace(/\s/g,''))));
  const target=latest.leaders?.find(x=>x.id===b.id);if(!target)return respond({error:'Photograph saved; database update requires attention'},409);
  target.photo=path+'?v='+Date.now();
- await save(env,'content/leaders.json',JSON.stringify(latest,null,2)+'\\n',fresh.sha,'Refresh leadership photograph: '+person.name);
+ await save(env,'content/leaders.json',JSON.stringify(latest,null,2)+'\n',fresh.sha,'Refresh leadership photograph: '+person.name);
  return respond({ok:true,photo:target.photo});
 }
 if(url.pathname==='/events/list'&&request.method==='GET'){if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const f=await gh(env,'content/events.json');const d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));return respond({events:d.events||[]})}
