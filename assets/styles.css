@@ -285,3 +285,16 @@ body:has(.about-subnav)>header{position:fixed!important;top:0;left:0;right:0;wid
 [data-leaders-category] .leader-card .heritage-person-copy p{margin:4px 0 10px}
 [data-leaders-category] .leader-card .heritage-person-copy>.textlink:not(.leader-meldatho-link){margin-top:auto}
 [data-leaders-category] .leader-card .heritage-person-copy>.leader-meldatho-link{margin-top:6px}
+
+/* Historical portraits: never force a landscape crop onto a vertical headshot.
+   Preserve each source image's natural dimensions; card text remains aligned. */
+[data-leaders-category="founder"] .leader-card>a:has(.leader-photo),
+[data-leaders-category="historical_associate"] .leader-card>a:has(.leader-photo),
+[data-leaders-category="past_rabbi"] .leader-card>a:has(.leader-photo),
+[data-leaders-category="past_president"] .leader-card>a:has(.leader-photo){aspect-ratio:auto;overflow:visible}
+[data-leaders-category="founder"] .leader-card img.leader-photo,
+[data-leaders-category="historical_associate"] .leader-card img.leader-photo,
+[data-leaders-category="past_rabbi"] .leader-card img.leader-photo,
+[data-leaders-category="past_president"] .leader-card img.leader-photo{
+  width:100%;height:auto;aspect-ratio:auto;max-height:none;object-fit:contain;object-position:center top;
+}
