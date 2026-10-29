@@ -119,3 +119,21 @@ document.querySelectorAll('.footer-grid').forEach(footer=>{
   box.addEventListener('click',e=>{if(e.target===box) close();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!box.hidden) close();});
 })();
+
+/* Canonical public footer: identical links and labels on all pages.
+   Keep the existing footer-grid design; replace legacy footer markup at runtime. */
+(function(){
+  const footerHtml='<div class="wrap"><div class="footer-grid">'+
+    '<div><h4>Congregation Tifereth Israel</h4><p>8 Pierpont Street<br>Peabody, Massachusetts 01960</p><p><a href="mailto:info@ctipeabody.org">info@ctipeabody.org</a><br><a href="tel:+19785318135">978-531-8135</a></p></div>'+
+    '<div><h4>Explore</h4><a href="about.html">About</a><a href="history.html">Our History</a><a href="leadership.html">Leadership Team</a><a href="services.html">What’s Happening</a><a href="meldados.html">Meldathos</a><a href="torah.html">Rabbi’s Corner</a></div>'+
+    '<div><h4>Connect</h4><a href="newsletter.html">Newsletter</a><a href="contact.html">Contact</a><a href="resources.html">Resources</a><a href="give.html">Give</a></div>'+
+    '</div><div class="copyright">© Congregation Tifereth Israel. All rights reserved.</div></div>';
+  function updateFooter(){
+    if(document.body.closest('body')?.classList.contains('admin'))return;
+    let footer=document.querySelector('body > footer');
+    if(!footer){footer=document.createElement('footer');document.body.appendChild(footer);}
+    footer.innerHTML=footerHtml;
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',updateFooter);
+  else updateFooter();
+})();
