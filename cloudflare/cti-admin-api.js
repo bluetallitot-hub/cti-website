@@ -501,42 +501,33 @@ const validEventDate=d=>typeof d==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d)&&Numb
 const validEventTime=t=>!t||/^(?:0?[1-9]|1[0-2])(?::[0-5]\d)?\s*(?:AM|PM)$/i.test(t);
 if(url.pathname==='/leadership/list'&&request.method==='GET'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
- const [bios,directory]=await Promise.all([gh(env,'content/leadership-bios.json'),gh(env,'content/biography-directory.json')]);
- const data=JSON.parse(new TextDecoder().decode(un64(bios.content.replace(/\s/g,''))));
- const people=JSON.parse(new TextDecoder().decode(un64(directory.content.replace(/\s/g,'')))).people;
- return respond({leaders:data.leaders.map(x=>({...x,role:people.find(p=>p.name===x.name)?.role||'',photo:people.find(p=>p.name===x.name)?.photo||null}))});
+ const f=await gh(env,'content/leaders.json'),d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
+ return respond({leaders:(d.leaders||[]).map(p=>({id:p.id,name:p.name,types:p.types||[],role:p.role||'',serviceYears:p.serviceYears||'',bio:p.introduction||'',fullBio:p.biography||'',photo:p.photo||''}))});
 }
 if(url.pathname==='/leadership/update'&&request.method==='POST'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
- if(typeof b.name!=='string'||typeof b.bio!=='string'||typeof b.fullBio!=='string'||b.bio.length>180||b.fullBio.length>12000||!b.bio.trim()||!b.fullBio.trim())return respond({error:'Check biography text and length'},400);
- const file=await gh(env,'content/leadership-bios.json');
- const data=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
- const leader=data.leaders.find(x=>x.name===b.name);
- if(!leader)return respond({error:'Leader not found'},404);
- leader.bio=b.bio.trim();leader.fullBio=b.fullBio.trim();
- await save(env,'content/leadership-bios.json',JSON.stringify(data,null,2)+'\n',file.sha,'Update leadership biography: '+b.name);
+ if(typeof b.id!=='string'||!/^[a-z0-9-]+$/.test(b.id)||typeof b.bio!=='string'||typeof b.fullBio!=='string'||b.bio.length>500||b.fullBio.length>12000)return respond({error:'Check biography text and length'},400);
+ const f=await gh(env,'content/leaders.json'),d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
+ const person=d.leaders?.find(x=>x.id===b.id);if(!person)return respond({error:'Leader not found'},404);
+ person.introduction=b.bio.trim();person.biography=b.fullBio.trim();
+ await save(env,'content/leaders.json',JSON.stringify(d,null,2)+'\\n',f.sha,'Update leadership biography: '+person.name);
  return respond({ok:true});
 }
 if(url.pathname==='/leadership/photo'&&request.method==='POST'){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const b=await request.json();
- if(typeof b.name!=='string'||typeof b.image!=='string'||b.image.length>5000000||!/^iVBORw0KGgo[A-Za-z0-9+/=]*$/.test(b.image))return respond({error:'Select a PNG photograph smaller than 3.5 MB'},400);
- const directoryFile=await gh(env,'content/biography-directory.json');
- const directory=JSON.parse(new TextDecoder().decode(un64(directoryFile.content.replace(/\s/g,''))));
- const person=directory.people.find(x=>x.name===b.name);
- if(!person||!/^[-a-z0-9]+$/.test(person.id))return respond({error:'Leader not found'},404);
+ if(typeof b.id!=='string'||!/^[a-z0-9-]+$/.test(b.id)||typeof b.image!=='string'||b.image.length>5000000||!/^iVBORw0KGgo[A-Za-z0-9+/=]*$/.test(b.image))return respond({error:'Select a PNG photograph smaller than 3.5 MB'},400);
+ const f=await gh(env,'content/leaders.json'),d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
+ const person=d.leaders?.find(x=>x.id===b.id);if(!person)return respond({error:'Leader not found'},404);
  const path='assets/images/leadership/'+person.id+'-profile.png';
- let sha;
- try{sha=(await gh(env,path)).sha}catch(e){if(e.status!==404)throw e}
- await gh(env,path,'PUT',{message:'Update leadership photograph: '+b.name,content:b.image,...(sha?{sha}:{}),branch:'main'});
- const fresh=await gh(env,'content/biography-directory.json');
- const current=JSON.parse(new TextDecoder().decode(un64(fresh.content.replace(/\s/g,''))));
- const target=current.people.find(x=>x.name===b.name);
- if(!target)return respond({error:'Photograph saved, but profile refresh needs attention'},409);
- target.photo=path;
- await save(env,'content/biography-directory.json',JSON.stringify(current,null,2)+'\n',fresh.sha,'Refresh leadership photograph: '+b.name);
- return respond({ok:true});
+ let sha;try{sha=(await gh(env,path)).sha}catch(e){if(e.status!==404)throw e}
+ await gh(env,path,'PUT',{message:'Update leadership photograph: '+person.name,content:b.image,...(sha?{sha}:{}),branch:'main'});
+ const fresh=await gh(env,'content/leaders.json'),latest=JSON.parse(new TextDecoder().decode(un64(fresh.content.replace(/\s/g,''))));
+ const target=latest.leaders?.find(x=>x.id===b.id);if(!target)return respond({error:'Photograph saved; database update requires attention'},409);
+ target.photo=path+'?v='+Date.now();
+ await save(env,'content/leaders.json',JSON.stringify(latest,null,2)+'\\n',fresh.sha,'Refresh leadership photograph: '+person.name);
+ return respond({ok:true,photo:target.photo});
 }
 if(url.pathname==='/events/list'&&request.method==='GET'){if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const f=await gh(env,'content/events.json');const d=JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));return respond({events:d.events||[]})}
 if(url.pathname==='/events/add'&&request.method==='POST'){
