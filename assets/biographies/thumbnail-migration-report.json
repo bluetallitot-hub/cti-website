@@ -2,26 +2,36 @@
   "staged": [
     "assets/new/.gitkeep",
     "assets/new/75th Anniversary Invitation.png",
-    "assets/new/CTI-BIO-001-org-1.jpg",
-    "assets/new/CTI-BIO-002-org-1.png",
-    "assets/new/CTI-BIO-003-org-1.png",
-    "assets/new/CTI-BIO-004-org-1.png",
-    "assets/new/CTI-BIO-005-org-1.png",
-    "assets/new/CTI-BIO-006-org-1.png",
-    "assets/new/CTI-BIO-007-org-1.png",
-    "assets/new/CTI-BIO-008-org-1.png",
-    "assets/new/CTI-BIO-009-org-1.png",
-    "assets/new/CTI-BIO-010-org-1.png",
-    "assets/new/CTI-BIO-011-org-1.png",
-    "assets/new/CTI-BIO-015-org-1.png",
-    "assets/new/CTI-BIO-017-org-1.png",
-    "assets/new/CTI-BIO-018-org-1.png",
-    "assets/new/CTI-BIO-019-org-1.jpg",
-    "assets/new/CTI-BIO-020-org-1.png",
-    "assets/new/CTI-BIO-026-org-1.png",
-    "assets/new/CTI-BIO-027-org-1.png"
+    "assets/new/CTI-028.png",
+    "assets/new/CTI-029.png",
+    "assets/new/CTI-BIO-001-THM.jpg",
+    "assets/new/CTI-BIO-002-THM.png",
+    "assets/new/CTI-BIO-003-THM.png",
+    "assets/new/CTI-BIO-004-THM.png",
+    "assets/new/CTI-BIO-005-THM.png",
+    "assets/new/CTI-BIO-006-THM.png",
+    "assets/new/CTI-BIO-007-THM.png",
+    "assets/new/CTI-BIO-008-THM.png",
+    "assets/new/CTI-BIO-009-THM.png",
+    "assets/new/CTI-BIO-010-THM.png",
+    "assets/new/CTI-BIO-011-THM.png",
+    "assets/new/CTI-BIO-015-THM.png",
+    "assets/new/CTI-BIO-017-THM.png",
+    "assets/new/CTI-BIO-018-THM.png",
+    "assets/new/CTI-BIO-019-THM.jpg",
+    "assets/new/CTI-BIO-020-THM.png",
+    "assets/new/CTI-BIO-026-THM.png",
+    "assets/new/CTI-BIO-027-THM.png"
   ],
   "migrated": [
+    {
+      "source": "assets/new/CTI-028.png",
+      "destination": "assets/biographies/CTI-BIO-028/CTI-BIO-028-THM.jpg"
+    },
+    {
+      "source": "assets/new/CTI-029.png",
+      "destination": "assets/biographies/CTI-BIO-029/CTI-BIO-029-THM.jpg"
+    },
     {
       "source": "assets/new/CTI-BIO-001-THM.jpg",
       "destination": "assets/biographies/CTI-BIO-001/CTI-BIO-001-THM.jpg"
@@ -95,9 +105,7 @@
       "destination": "assets/biographies/CTI-BIO-027/CTI-BIO-027-THM.jpg"
     }
   ],
-  "unmatched": [
-    "assets/new/75th Anniversary Invitation.png"
-  ],
+  "unmatched": [],
   "errors": [],
   "originals": [
     "assets/biographies/CTI-BIO-001/CTI-BIO-001-ORG-1.jpg",
