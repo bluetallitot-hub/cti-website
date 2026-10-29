@@ -545,7 +545,8 @@ if(url.pathname==='/leadership/photo'&&request.method==='POST'){
  for(;;){
   while(existingNumbers.has(next))next++;
   originalPath=prefix+'-ORG-'+next+'.'+formats[b.originalType];
-  if(!(await fileAt(originalPath)))break;
+  const collisions=await Promise.all(['jpg','jpeg','png','webp'].map(ext=>fileAt(prefix+'-ORG-'+next+'.'+ext)));
+  if(!collisions.some(Boolean))break;
   existingNumbers.add(next);next++;
  }
  await gh(env,originalPath,'PUT',{message:'Preserve CTI-BIO original: '+person.ctiId+' #'+next,content:b.original,branch:'main'});
