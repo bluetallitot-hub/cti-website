@@ -271,3 +271,9 @@ body:has(.about-subnav)>header{position:fixed!important;top:0;left:0;right:0;wid
 [data-leaders-category] .leader-card .leader-photo{display:block;width:100%;height:100%;aspect-ratio:4/3;object-fit:contain;object-position:center center;background:var(--site-image-placeholder-background)}
 [data-leaders-category] .leader-card .leader-photo-placeholder{aspect-ratio:4/3;margin-bottom:0}
 [data-leaders-category] .leader-card .heritage-person-copy{padding-top:12px}
+
+/* Anchor biography actions to the bottom of each leadership card, regardless of text length. */
+[data-leaders-category] .leader-card .heritage-person-copy{display:flex;flex-direction:column;flex:1}
+[data-leaders-category] .leader-card .heritage-person-copy>.textlink:not(.leader-meldatho-link){margin-top:auto}
+[data-leaders-category] .leader-card .heritage-person-copy>.leader-meldatho-link{margin-top:6px}
+[data-leaders-category] .leader-card .heritage-person-copy{min-height:0}
