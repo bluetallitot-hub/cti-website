@@ -9,6 +9,33 @@ $('reset').onclick=choose;
 $('apply').textContent='Publish Biography';
 $('apply').onclick=async()=>{if(!confirm('Publish biography changes for '+current.name+'?'))return;try{await CTIAuth.api('/leadership/update',{id:current.id,bio:$('bio').value,fullBio:$('fullbio').value});current.bio=$('bio').value;current.fullBio=$('fullbio').value;$('status').textContent='Biography published successfully.'}catch(e){$('status').textContent=e.message}};
 $('photo-download').textContent='Publish Photograph';
-$('photo').onchange=async()=>{const file=$('photo').files[0];if(!file)return;const bmp=await createImageBitmap(file);const canvas=document.createElement('canvas');const scale=Math.min(1,1200/Math.max(bmp.width,bmp.height));canvas.width=Math.round(bmp.width*scale);canvas.height=Math.round(bmp.height*scale);canvas.getContext('2d').drawImage(bmp,0,0,canvas.width,canvas.height);bmp.close();const data=canvas.toDataURL('image/png');if(data.length>5000000){$('status').textContent='Image too large after resizing.';return}$('photo-preview').src=data;$('photo-download').disabled=false;$('photo-download').onclick=async()=>{if(!confirm('Publish this photograph for '+current.name+'?'))return;try{const result=await CTIAuth.api('/leadership/photo',{id:current.id,image:data.split(',')[1]});if(result.photo){current.photo=result.photo;$('photo-preview').src='../'+result.photo}$('status').textContent='Photograph published successfully.';$('photo-download').disabled=true}catch(e){$('status').textContent=e.message}}};
+$('photo').onchange=async()=>{
+ const file=$('photo').files[0];if(!file||!current)return;
+ const selected=current;
+ try{
+  if(!/^image\\/(jpeg|png|webp)$/.test(file.type))throw Error('Select a JPEG, PNG or WebP image.');
+  const bmp=await createImageBitmap(file),canvas=document.createElement('canvas');canvas.width=600;canvas.height=800;
+  const ctx=canvas.getContext('2d');ctx.fillStyle='#f7f3eb';ctx.fillRect(0,0,600,800);
+  const scale=Math.min(600/bmp.width,800/bmp.height),w=bmp.width*scale,h=bmp.height*scale;
+  ctx.drawImage(bmp,(600-w)/2,(800-h)/2,w,h);bmp.close();
+  const thumb=canvas.toDataURL('image/jpeg',0.88).split(',')[1];
+  const original=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result).split(',')[1]);reader.onerror=()=>reject(Error('Could not read original photograph'));reader.readAsDataURL(file)});
+  if(original.length>11000000)throw Error('Original is too large (maximum approximately 8 MB).');
+  $('photo-preview').src='data:image/jpeg;base64,'+thumb;
+  $('photo-info').textContent='Original: '+file.name+'; thumbnail: 600 × 800 JPEG. The original will be preserved.';
+  $('photo-download').disabled=false;
+  $('photo-download').onclick=async()=>{
+   if(current!==selected)return;
+   if(!confirm('Save original and publish new thumbnail for '+selected.name+'?'))return;
+   $('photo-download').disabled=true;$('status').textContent='Saving photograph…';
+   try{
+    const result=await CTIAuth.api('/leadership/photo',{id:selected.id,thumbnail:thumb,original,originalType:file.type});
+    selected.photo=result.photo;$('photo-preview').src='../'+result.photo+'?v='+Date.now();
+    $('photo-info').textContent='Original saved as '+result.originalPath;
+    $('status').textContent='Photograph and original saved successfully.';
+   }catch(e){$('status').textContent=e.message;$('photo-download').disabled=false}
+  };
+ }catch(e){$('status').textContent=e.message;$('photo-download').disabled=true}
+};
 CTIAuth.requireRole(true).then(()=>CTIAuth.api('/leadership/list')).then(d=>{leaders=d.leaders;populate();for(const id of ['leader','bio','fullbio','photo','apply','reset'])$(id).disabled=false;choose()}).catch(e=>{$('status').textContent=e.message});
 </script></body></html>
