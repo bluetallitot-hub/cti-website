@@ -11,7 +11,8 @@ from urllib.parse import urljoin, urlsplit, urldefrag
 
 BASE = "https://bluetallitot-hub.github.io/cti-website/"
 MAX_PAGES = 150
-EXCLUDED_NAMES = ("history", "gallery", "archive", "timeline", "meldados")
+# Public heritage and Meldathos pages are now part of final acceptance coverage.
+EXCLUDED_NAMES = ()
 EXCLUDED_PATHS = ("admin/",)
 class References(HTMLParser):
     def __init__(self):
