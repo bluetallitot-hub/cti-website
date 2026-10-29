@@ -1,0 +1,33 @@
+name: Stage Existing Biography Photographs
+on:
+  push:
+    paths:
+      - scripts/stage_existing_biography_photos.py
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: cti-biography-images
+  cancel-in-progress: false
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'Pillow>=11,<13'
+      - run: python scripts/stage_existing_biography_photos.py
+      - name: Commit originals and migration report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/leaders.json assets/biographies/
+          if ! git diff --cached --quiet; then
+            git commit -m "Stage existing biography originals under CTI-BIO IDs"
+            git pull --rebase origin main
+            git push
+          fi
