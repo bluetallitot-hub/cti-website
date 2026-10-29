@@ -281,12 +281,14 @@ if(url.pathname==='/site-colors/propose'&&request.method==='POST'){
  if(!env.RESEND_API_KEY||!env.CTI_ANNOUNCE_EMAIL_FROM)return respond({error:'Proposal email is not configured'},503);
  const b=await request.json().catch(()=>null);
  const keys=['primary','background','accent'];
- if(!b||!b.colors||Object.keys(b.colors).length!==3||keys.some(k=>typeof b.colors[k]!=='string'||!/^#[0-9a-fA-F]{6}$/.test(b.colors[k])))return respond({error:'Invalid proposed colors'},400);
- const code='CTI1-'+keys.map(k=>b.colors[k].slice(1).toUpperCase()).join('-');
- const body='CTI Website Color Proposal\\n\\nProposed by administrator role: '+role+'\\nDate/time (UTC): '+new Date().toISOString()+'\\n\\nProposed colors:\\n'+keys.map(k=>k+': '+b.colors[k]).join('\\n')+'\\n\\nPreview this proposal without changing the website:\\n'+siteOrigin(env)+'/admin/site-colors.html'+'\\n\\nPaste the following into the color code field and click Load Colors from Code. This only updates the preview.\\n\\nProposed Color Code:\\n'+code;
- const email=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:['rabbi@ctipeabody.org'],subject:'CTI Website — Proposed Color Scheme',text:body})});
+ const allowed={heading:['GE','PA','AR'],body:['IS','AR','GE'],hebrew:['NS','TN','AR']};
+ if(!b||!b.colors||Object.keys(b.colors).length!==3||keys.some(k=>typeof b.colors[k]!=='string'||!/^#[0-9a-fA-F]{6}$/.test(b.colors[k]))||!b.fonts||Object.keys(b.fonts).length!==3||Object.keys(allowed).some(k=>!allowed[k].includes(b.fonts[k])))return respond({error:'Invalid proposed appearance'},400);
+ const code='CTI2-'+keys.map(k=>b.colors[k].slice(1).toUpperCase()).join('-')+'-'+Object.keys(allowed).map(k=>b.fonts[k]).join('-');
+ const names={heading:{GE:'Georgia',PA:'Palatino',AR:'Arial'},body:{IS:'Inter / System',AR:'Arial',GE:'Georgia'},hebrew:{NS:'Noto Serif Hebrew',TN:'Times New Roman',AR:'Arial'}};
+ const body=['CTI Website Appearance Proposal','','Proposed by administrator role: '+role,'Date/time (UTC): '+new Date().toISOString(),'','Proposed colors:',...keys.map(k=>k+': '+b.colors[k]),'','Proposed fonts:',...Object.keys(allowed).map(k=>k+': '+names[k][b.fonts[k]]),'','Preview without changing the website:',siteOrigin(env)+'/admin/site-colors.html','','Paste this into the Appearance Code field and click Load Appearance from Code.','','Proposed Appearance Code:',code].join('\\n');
+ const email=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:['rabbi@ctipeabody.org'],subject:'CTI Website — Proposed Appearance Scheme',text:body})});
  if(!email.ok)return respond({error:'Proposal email could not be sent; no website changes were made'},502);
- return respond({ok:true,message:'Color proposal emailed. Website unchanged.'});
+ return respond({ok:true,message:'Appearance proposal emailed. Website unchanged.'});
 }
 if(url.pathname==='/site-colors'&&request.method==='POST'){
  if(role!=='rabbi')return respond({error:'Only the Rabbi may publish website colors'},403);
