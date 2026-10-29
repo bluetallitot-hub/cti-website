@@ -5,7 +5,7 @@
 *{box-sizing:border-box}body{margin:0;background:#f6f7f9;color:#193444;font:16px system-ui,sans-serif}main{max-width:850px;margin:40px auto;padding:24px}[hidden]{display:none!important}a{color:#145674}.panel{background:white;border:1px solid #d9e0e4;border-radius:12px;padding:24px;margin:18px 0}.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:16px}.controls label{display:flex;align-items:center;gap:12px;font-weight:600}.controls input{width:58px;height:45px;border:0;background:transparent;cursor:pointer}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}button{padding:11px 17px;border:0;border-radius:7px;background:#174a66;color:white;font:inherit;cursor:pointer}button.secondary{background:#e7ecef;color:#193444}.preview{border:1px solid #d9e0e4;border-radius:12px;overflow:hidden;background:var(--background);color:var(--primary)}.preview header{background:var(--background);border-bottom:1px solid color-mix(in srgb,var(--primary) 18%,transparent);padding:18px 24px;font-weight:700}.hero{background:linear-gradient(120deg,var(--primary),color-mix(in srgb,var(--primary) 75%,#111));color:white;padding:34px 24px}.hero h2{margin:0 0 8px}.hero p{margin:0}.sample{padding:24px}.sample h3{margin-top:0}.sample .card{background:color-mix(in srgb,var(--background) 86%,white);border:1px solid color-mix(in srgb,var(--primary) 20%,transparent);border-radius:10px;padding:18px}.sample .accent{color:var(--accent);font-weight:700}.sample .photo{height:90px;border-radius:8px;background:linear-gradient(135deg,color-mix(in srgb,var(--background) 78%,var(--primary)),color-mix(in srgb,var(--background) 85%,var(--accent)));display:grid;place-items:center;color:var(--primary);margin-top:12px}.preview footer{background:var(--primary);color:white;padding:16px 24px}.note{line-height:1.5;color:#52616b}
 </style></head>
 <body><main id="content" hidden><p><a href="index.html">← Back to Administration</a></p><h1>Adjust Site Color Scheme</h1><p class="note">Preview proposed colors here without changing the public website. Board members and administrators may preview and email proposed palettes without changing the public website. Publishing is currently disabled.</p>
-<section class="panel"><div class="controls"><label>Primary <input id="primary" type="color" value="#244642"></label><label>Background <input id="background" type="color" value="#fffdf8"></label><label>Accent <input id="accent" type="color" value="#a78042"></label></div><div class="actions"><button id="reset" type="button" class="secondary">Restore Original Colors (Preview)</button><button type="button" id="apply" disabled>Apply to Website</button><button type="button" id="propose" disabled>Send Color Proposal to Rabbi</button></div><div class="restore-code" style="margin-top:22px;border-top:1px solid #d9e0e4;padding-top:18px"><label for="restore-code" style="display:block;font-weight:600;margin-bottom:8px">Paste Color Restoration Code</label><div style="display:flex;gap:10px;flex-wrap:wrap"><input id="restore-code" type="text" autocomplete="off" spellcheck="false" placeholder="CTI1-244642-FFFDF8-A78042" style="flex:1;min-width:240px;padding:10px;border:1px solid #b6c5ca;border-radius:7px;font:inherit"><button type="button" id="load-code" class="secondary">Load Colors from Code</button></div><p class="note">The code loads colors into the preview only. It never publishes them.</p></div></section>
+<section class="panel"><div class="controls"><label>Primary <input id="primary" type="color" value="#244642"></label><label>Background <input id="background" type="color" value="#fffdf8"></label><label>Accent <input id="accent" type="color" value="#a78042"></label></div><div class="actions"><button id="reset" type="button" class="secondary">Restore Original Colors (Preview)</button><button type="button" id="apply" disabled>Apply to Website</button><button type="button" id="propose" disabled>Send Appearance Proposal to Rabbi</button></div><div class="restore-code" style="margin-top:22px;border-top:1px solid #d9e0e4;padding-top:18px"><label for="restore-code" style="display:block;font-weight:600;margin-bottom:8px">Paste Appearance Code</label><div style="display:flex;gap:10px;flex-wrap:wrap"><input id="restore-code" type="text" autocomplete="off" spellcheck="false" placeholder="CTI2-244642-FFFDF8-A78042-GE-IS-NS" style="flex:1;min-width:240px;padding:10px;border:1px solid #b6c5ca;border-radius:7px;font:inherit"><button type="button" id="load-code" class="secondary">Load Appearance from Code</button></div><p class="note">The code loads colors into the preview only. It never publishes them.</p></div></section>
 <section class="panel" aria-label="Typography controls"><h2>Typography — Preview Only</h2><p class="note">Choose fonts for headings, body text and Hebrew. These selections affect only the samples below; they are not published or emailed.</p><div class="controls">
 <label>Heading font <select id="font-heading"><option value="Georgia,serif">Georgia (CTI default)</option><option value="'Palatino Linotype',Palatino,serif">Palatino</option><option value="Arial,sans-serif">Arial</option></select></label>
 <label>Body font <select id="font-body"><option value="Inter,system-ui,sans-serif">Inter / System (CTI default)</option><option value="Arial,sans-serif">Arial</option><option value="Georgia,serif">Georgia</option></select></label>
@@ -13,7 +13,7 @@
 </div><div class="actions"><button type="button" class="secondary" id="reset-fonts">Reset Typography to CTI Defaults</button><button type="button" disabled>Apply Typography to Website</button></div>
 <div id="font-preview" style="margin-top:18px;border:1px solid #d9e0e4;border-radius:8px;padding:18px"><h2 id="sample-heading">Congregation Tifereth Israel</h2><p id="sample-body">Welcome to our community. This paragraph demonstrates readability and spacing across the website.</p><div id="sample-nav" style="display:flex;gap:12px;flex-wrap:wrap"><span>About</span><span>Services</span><span>Resources</span><button type="button" class="secondary" disabled>Sample button</button></div><p id="sample-hebrew" dir="rtl" lang="he" style="font-size:26px;line-height:2">בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ</p></div></section>
 <section aria-label="Color preview" class="preview" id="preview"><header>Congregation Tifereth Israel</header><div class="hero"><h2>Welcome to CTI</h2><p>A sample of the primary color and its derived gradient.</p></div><div class="sample"><p class="accent">COMMUNITY &amp; TRADITION</p><div class="card"><h3>Sample content card</h3><p>Page surfaces and borders follow the selected colors.</p><div class="photo">Photo placeholder</div></div></div><footer>Sample footer</footer></section>
-<section class="panel" aria-label="Notification email preview"><h2>Color Proposal Email</h2><p class="note">Send this proposed palette to <strong>rabbi@ctipeabody.org</strong> for review. Sending an email does not publish the colors.</p><p><strong>Subject:</strong> CTI Website — Proposed Color Scheme</p><pre id="email-preview" style="white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.6 ui-monospace,monospace;background:#f6f7f9;padding:16px;border-radius:8px"></pre></section>
+<section class="panel" aria-label="Notification email preview"><h2>Appearance Proposal Email</h2><p class="note">Send this proposed palette to <strong>rabbi@ctipeabody.org</strong> for review. Sending an email does not publish the colors.</p><p><strong>Subject:</strong> CTI Website — Proposed Appearance Scheme</p><pre id="email-preview" style="white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.6 ui-monospace,monospace;background:#f6f7f9;padding:16px;border-radius:8px"></pre></section>
 <p class="note" id="status" role="status">Original CTI colors are selected. No public changes have been made.</p>
 </main><script src="cti-auth.js?v=2"></script><script>
 const defaults={primary:"#244642",background:"#fffdf8",accent:"#a78042"};
@@ -21,11 +21,19 @@ const keys=Object.keys(defaults);
 let saved=null,sha=null,ready=false,currentRole=null;
 const status=document.getElementById("status"),apply=document.getElementById("apply"),propose=document.getElementById("propose");
 function values(){return Object.fromEntries(keys.map(k=>[k,document.getElementById(k).value.toLowerCase()]))}
-function restorationCode(c){return "CTI1-"+keys.map(k=>c[k].replace("#","").toUpperCase()).join("-")}
+function restorationCode(c){return "CTI2-"+keys.map(k=>c[k].replace("#","").toUpperCase()).join("-")+"-"+Object.keys(fontDefaults).map(k=>fontIds[k][document.getElementById("font-"+k).value]).join("-")}
 function decodeRestorationCode(code){
- const match=code.trim().match(/^CTI1-([0-9a-f]{6})-([0-9a-f]{6})-([0-9a-f]{6})$/i);
- if(!match)throw Error("Invalid restoration code. Expected CTI1-XXXXXX-XXXXXX-XXXXXX.");
- return Object.fromEntries(keys.map((k,i)=>[k,"#"+match[i+1].toLowerCase()]));
+ const match=code.trim().match(/^CTI([12])-([0-9a-f]{6})-([0-9a-f]{6})-([0-9a-f]{6})(?:-([A-Z]{2})-([A-Z]{2})-([A-Z]{2}))?$/i);
+ if(!match||(match[1]==="2"&&(!match[5]||!match[6]||!match[7])))throw Error("Invalid appearance code.");
+ const colors=Object.fromEntries(keys.map((k,i)=>[k,"#"+match[i+2].toLowerCase()]));
+ const fonts={};
+ if(match[1]==="2")for(const [i,k] of Object.keys(fontDefaults).entries()){
+  const id=match[5+i].toUpperCase();
+  const value=Object.keys(fontIds[k]).find(v=>fontIds[k][v]===id);
+  if(!value)throw Error("Unknown "+k+" font code: "+id);
+  fonts[k]=value;
+ }
+ return {colors,fonts};
 }
 function changed(){const c=values();return saved&&keys.some(k=>c[k]!==saved[k])}
 function refresh(){
@@ -36,6 +44,8 @@ function refresh(){
  status.textContent=ready?(changed()?"Preview only — changes have not been published.":"No unpublished changes."):"Loading published colors...";
  const lines=["To: rabbi@ctipeabody.org","Subject: CTI Website — Proposed Color Scheme","","Sample proposal — no email sent.","","Proposed colors:"];
  for(const k of keys)lines.push(k+": "+c[k]);
+ lines.push("","Proposed fonts:");
+ for(const k of Object.keys(fontDefaults))lines.push(k+": "+document.getElementById("font-"+k).selectedOptions[0].text);
  lines.push("","Preview at: https://bluetallitot-hub.github.io/cti-website/admin/site-colors.html","","Proposed Color Code:",restorationCode(c));
  document.getElementById("email-preview").textContent=lines.join(String.fromCharCode(10));
 }
@@ -57,9 +67,10 @@ for(const k of keys)document.getElementById(k).addEventListener("input",refresh)
 document.getElementById("reset").addEventListener("click",()=>{for(const k of keys)document.getElementById(k).value=defaults[k];refresh()});
 document.getElementById("load-code").addEventListener("click",()=>{
  try{
-  const c=decodeRestorationCode(document.getElementById("restore-code").value);
-  for(const k of keys)document.getElementById(k).value=c[k];
-  refresh();
+  const result=decodeRestorationCode(document.getElementById("restore-code").value);
+  for(const k of keys)document.getElementById(k).value=result.colors[k];
+  for(const k of Object.keys(result.fonts))document.getElementById("font-"+k).value=result.fonts[k];
+  refreshFonts();refresh();
   status.textContent="Restoration code loaded into preview. No public changes have been made.";
  }catch(e){status.textContent=e.message}
 });
@@ -69,7 +80,7 @@ propose.addEventListener("click",async()=>{
  propose.disabled=true;
  status.textContent="Sending color proposal...";
  try{
-  const result=await CTIAuth.api("/site-colors/propose",{colors:values()});
+  const result=await CTIAuth.api("/site-colors/propose",{colors:values(),fonts:Object.fromEntries(Object.keys(fontDefaults).map(k=>[k,fontIds[k][document.getElementById("font-"+k).value]]))});
   if(!result.ok)throw Error("Proposal delivery was not confirmed");
   status.textContent="Color proposal sent to the Rabbi. Website colors remain unchanged.";
  }catch(e){status.textContent="Proposal could not be sent: "+e.message}
@@ -87,6 +98,11 @@ apply.addEventListener("click",async()=>{
   status.textContent=result.notificationSent===false?"Colors published, but the notification email failed. Contact the administrator.":"Colors published. Notification email submitted to the mail provider.";
  }catch(e){status.textContent="Publishing could not be confirmed: "+e.message;apply.disabled=false}
 });
+const fontIds={
+ heading:{"Georgia,serif":"GE","'Palatino Linotype',Palatino,serif":"PA","Arial,sans-serif":"AR"},
+ body:{"Inter,system-ui,sans-serif":"IS","Arial,sans-serif":"AR","Georgia,serif":"GE"},
+ hebrew:{"'Noto Serif Hebrew','Times New Roman',serif":"NS","'Times New Roman',serif":"TN","Arial,sans-serif":"AR"}
+};
 const fontDefaults={heading:"Georgia,serif",body:"Inter,system-ui,sans-serif",hebrew:"'Noto Serif Hebrew','Times New Roman',serif"};
 function refreshFonts(){
  document.getElementById("sample-heading").style.fontFamily=document.getElementById("font-heading").value;
@@ -95,10 +111,10 @@ function refreshFonts(){
  document.getElementById("sample-nav").style.fontFamily=body;
  document.getElementById("sample-hebrew").style.fontFamily=document.getElementById("font-hebrew").value;
 }
-for(const k of Object.keys(fontDefaults))document.getElementById("font-"+k).addEventListener("change",refreshFonts);
+for(const k of Object.keys(fontDefaults))document.getElementById("font-"+k).addEventListener("change",()=>{refreshFonts();refresh()});
 document.getElementById("reset-fonts").addEventListener("click",()=>{
  for(const k of Object.keys(fontDefaults))document.getElementById("font-"+k).value=fontDefaults[k];
- refreshFonts();
+ refreshFonts();refresh();
 });
 refreshFonts();
 </script></body></html>
