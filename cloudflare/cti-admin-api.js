@@ -265,7 +265,7 @@ if(url.pathname==='/site-colors/propose'&&request.method==='POST'){
  return respond({ok:true,message:'Color proposal emailed. Website unchanged.'});
 }
 if(url.pathname==='/site-colors'&&request.method==='POST'){
- if(!['rabbi','secretary'].includes(role))return respond({error:'Access not permitted'},403);
+ if(role!=='rabbi')return respond({error:'Only the Rabbi may publish website colors'},403);
  if(!env.RESEND_API_KEY||!env.CTI_ANNOUNCE_EMAIL_FROM)return respond({error:'Notification email is not configured; no changes made'},503);
  const b=await request.json();
  const keys=['primary','background','accent'];
