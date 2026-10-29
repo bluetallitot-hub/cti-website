@@ -12,7 +12,7 @@
 </main><script src="cti-auth.js?v=2"></script><script>
 const defaults={primary:"#244642",background:"#fffdf8",accent:"#a78042"};
 const keys=Object.keys(defaults);
-let saved=null,sha=null,ready=false;
+let saved=null,sha=null,ready=false,currentRole=null;
 const status=document.getElementById("status"),apply=document.getElementById("apply"),propose=document.getElementById("propose");
 function values(){return Object.fromEntries(keys.map(k=>[k,document.getElementById(k).value.toLowerCase()]))}
 function restorationCode(c){return "CTI1-"+keys.map(k=>c[k].replace("#","").toUpperCase()).join("-")}
@@ -25,7 +25,7 @@ function changed(){const c=values();return saved&&keys.some(k=>c[k]!==saved[k])}
 function refresh(){
  const c=values();
  for(const k of keys)document.getElementById("preview").style.setProperty("--"+k,c[k]);
- apply.disabled=true; // Publishing intentionally paused.
+ apply.disabled=true; // Publishing intentionally paused, including for the Rabbi.
  propose.disabled=!ready;
  status.textContent=ready?(changed()?"Preview only — changes have not been published.":"No unpublished changes."):"Loading published colors...";
  const lines=["To: rabbi@ctipeabody.org","Subject: CTI Website — Proposed Color Scheme","","Sample proposal — no email sent.","","Proposed colors:"];
@@ -42,6 +42,8 @@ async function load(){
 }
 CTIAuth.requireRole(true).then(async({role})=>{
  if(!["rabbi","secretary","board"].includes(role)){location.replace("index.html");return}
+ currentRole=role;
+ if(role!=="rabbi")apply.hidden=true;
  document.getElementById("content").hidden=false;
  try{await load()}catch(e){status.textContent="Color controls unavailable: "+e.message}
 }).catch(()=>{});
