@@ -3419,15 +3419,17 @@
       "hebrewName": "",
       "hebrewDay": 12,
       "hebrewMonth": "Adar",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
-      "rememberedBy": "",
-      "biography": "",
+      "hebrewYearOfDeath": 5770,
+      "dateOfDeath": "2010-02-26",
+      "rememberedBy": "Obituary-listed family: son Marvin Menovich (wife Jan), daughter Carole Hanak (husband Ronnie), granddaughter Claudia Lyons; late husband Charles Menovich.",
+      "biography": "Evelyn (Zeltzerman) Menovich (approximately 1922–February 26, 2010), age 87, lived in Revere and formerly in Marblehead and Chelsea, Massachusetts. Daughter of Nathan and Lillian (Cohen) Zeltzerman, she was the widow of Charles Menovich and mother of Marvin Menovich of Peabody and Carole Hanak of New York. Her son Marvin and his wife Jan are independently documented as active in Congregation Tifereth Israel's 2026 newsletter. Her February 26, 2010 civil death date corresponds to 12 Adar 5770, matching the existing CTI memorial date.",
       "photo": "",
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-29 exact-person verification: Boston Globe/Stanetsky-Hymanson obituary dated 2010-02-28 gives Evelyn Menovich death 2010-02-26, 12 Adar 5770, parents Nathan and Lillian Zeltzerman, late husband Charles, son Marvin with wife Jan of Peabody, daughter Carole. Independent Chelsea Record obituary (2010-03-04) corroborates identity/date and relatives: http://chelsearecord.com/2010/03/04/obituaries-03-04-2010 . CTI 2026 newsletter independently identifies Jan and Marvin Menovich as congregational event sponsors: https://ctipeabody.org/newsletter.pdf . Obituary-listed relatives are NOT established CTI memorial dedicators. Death time not stated; no sunset discrepancy identified. No authenticated individual photograph.",
+      "obituaryUrl": "https://www.legacy.com/us/obituaries/bostonglobe/name/evelyn-menovich-obituary?id=23504395",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-raymondcastiglione-nissan-17",
