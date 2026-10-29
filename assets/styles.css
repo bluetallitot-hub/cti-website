@@ -332,3 +332,15 @@ body:has(.about-subnav)>header{position:fixed!important;top:0;left:0;right:0;wid
   line-height:1.5;min-height:0;display:-webkit-box;-webkit-box-orient:vertical;
   -webkit-line-clamp:5;line-clamp:5;overflow:hidden
 }
+
+
+/* Portraits and missing-photo placeholders share the exact 600:800 frame. */
+[data-leaders-category] .leader-card>a:has(.leader-photo),
+[data-leaders-category] .leader-card .leader-photo-placeholder{
+  display:grid;place-items:center;width:100%;height:auto;aspect-ratio:600/800;
+  min-height:0;max-height:none;overflow:hidden;box-sizing:border-box;flex:none;
+  background:var(--site-image-placeholder-background)
+}
+[data-leaders-category] .leader-card .leader-photo-placeholder{
+  margin:0;padding:16px;text-align:center
+}
