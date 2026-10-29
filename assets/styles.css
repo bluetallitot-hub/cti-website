@@ -258,3 +258,8 @@ body:has(.about-subnav)>header{position:fixed!important;top:0;left:0;right:0;wid
 
 /* Hebrew quotations and marked Hebrew text throughout public pages. */
 :where([lang="he"],.hebrew){font-family:var(--font-hebrew);direction:rtl;unicode-bidi:isolate}
+
+/* Consistent leader-card introduction height across index pages */
+[data-leaders-category] .leader-card .heritage-person-copy{display:flex;flex-direction:column;flex:1}
+[data-leaders-category] .leader-card .leader-introduction{line-height:1.5;min-height:7.5em;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;line-clamp:5;overflow:hidden}
+[data-leaders-category] .leader-card .heritage-person-copy>.textlink{margin-top:auto}
