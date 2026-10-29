@@ -435,7 +435,7 @@
       ],
       "introduction": "Charter member of Congregation Tifereth Israel.",
       "biography": "",
-      "photo": null,
+      "photo": "assets/biographies/CTI-BIO-013/CTI-BIO-013-THM.jpg",
       "role": null,
       "serviceYears": "1922–1944",
       "links": {
@@ -448,7 +448,22 @@
       },
       "meldathoId": "newsletter-leon-eskenas-cheshvan",
       "ctiId": "CTI-BIO-013",
-      "thumbnailStatus": "no-original"
+      "thumbnailStatus": "published",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-013/CTI-BIO-013-ORG-1.jpg"
+        }
+      ],
+      "originalPhoto": "assets/biographies/CTI-BIO-013/CTI-BIO-013-ORG-1.jpg",
+      "thumbnailSpecification": {
+        "width": 600,
+        "height": 800,
+        "aspectRatio": "3:4",
+        "format": "jpeg",
+        "padding": true,
+        "backgroundExtensionAllowed": true
+      }
     },
     {
       "id": "nissim-eskenazi",
