@@ -316,3 +316,19 @@ body:has(.about-subnav)>header{position:fixed!important;top:0;left:0;right:0;wid
   width:100%;box-sizing:border-box;padding:16px 18px 20px;flex:1
 }
 [data-leaders-category] .leader-card .leader-introduction{min-height:0;-webkit-line-clamp:unset;line-clamp:unset;display:block;overflow:visible}
+
+
+/* Fixed, uniform portrait height on every leadership index card. */
+[data-leaders-category] .leader-card>a:has(img.leader-photo){
+  width:100%;height:auto;aspect-ratio:3/4;overflow:hidden;flex:none
+}
+[data-leaders-category] .leader-card img.leader-photo{
+  width:100%;height:100%;aspect-ratio:auto;max-height:100%;object-fit:contain
+}
+[data-leaders-category] .leader-card .leader-photo-placeholder{
+  width:100%;height:auto;aspect-ratio:3/4;flex:none
+}
+[data-leaders-category] .leader-card .leader-introduction{
+  line-height:1.5;min-height:0;display:-webkit-box;-webkit-box-orient:vertical;
+  -webkit-line-clamp:5;line-clamp:5;overflow:hidden
+}
