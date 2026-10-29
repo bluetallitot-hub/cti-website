@@ -1,14 +1,15 @@
 /* Unified CTI leaders database renderer; static HTML remains as a fallback. */
 (async()=>{
- const grid=document.querySelector('[data-leaders-category]');if(!grid)return;
- const category=grid.dataset.leadersCategory;
+ const grids=[...document.querySelectorAll('[data-leaders-category]')];if(!grids.length)return;
  try{
   const response=await fetch('content/leaders.json',{cache:'no-store'});
   if(!response.ok)throw Error('Leaders database unavailable');
   const data=await response.json();
   if(!Array.isArray(data.leaders))throw Error('Invalid leaders database');
+  for(const grid of grids){
+  const category=grid.dataset.leadersCategory;
   const leaders=data.leaders.filter(p=>p.types?.includes(category)).sort((a,b)=>(a.order?.[category]??999)-(b.order?.[category]??999));
-  if(!leaders.length)throw Error('No leaders found');
+  if(!leaders.length)continue;
   const frag=document.createDocumentFragment();
   for(const person of leaders){
    const card=document.createElement('article');card.className='card leader-card heritage-person';
@@ -25,5 +26,6 @@
    const more=document.createElement('a');more.className='textlink';more.href=profile;more.textContent='Biography →';copy.append(more);card.append(copy);frag.append(card);
   }
   grid.replaceChildren(frag);
+  }
  }catch(error){console.warn('Using existing leadership cards:',error)}
 })();
