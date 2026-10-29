@@ -1,6 +1,7 @@
 from pathlib import Path
 import json
 import re
+import hashlib
 from PIL import Image, ImageOps
 
 root = Path(__file__).resolve().parents[1]
@@ -36,6 +37,10 @@ for src in sorted(stage.rglob("*")):
     dest = root / f"assets/biographies/CTI-BIO-{number:03d}/CTI-BIO-{number:03d}-THM.jpg"
     try:
         with Image.open(src) as im:
+            original = root / f"assets/biographies/CTI-BIO-{number:03d}/CTI-BIO-{number:03d}-ORG-1{src.suffix.lower()}"
+            if "ORG" in src.stem.upper() and original.exists() and hashlib.sha256(src.read_bytes()).digest() == hashlib.sha256(original.read_bytes()).digest():
+                results["unmatched"].append(f"{src.name}: identical to archived original, not a cropped thumbnail")
+                continue
             im = ImageOps.exif_transpose(im)
             if im.width * 4 != im.height * 3:
                 results["errors"].append(f"{src.name}: aspect ratio {im.width}x{im.height} is not 3:4; not published")
