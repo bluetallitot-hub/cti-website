@@ -21,7 +21,7 @@
    const copy=document.createElement('div');copy.className='heritage-person-copy';
    if(person.role&&category==='current_leadership'){const role=document.createElement('div');role.className='section-kicker';role.textContent=person.role;copy.append(role)}
    const title=document.createElement('h3');const a=document.createElement('a');a.href=profile;a.textContent=person.name;title.append(a);copy.append(title);
-   if(person.serviceYears&&['past_president','past_rabbi'].includes(category)){const p=document.createElement('p');p.textContent=person.serviceYears;copy.append(p)}
+   if(person.serviceYears&&['past_president','past_rabbi'].includes(category)){const p=document.createElement('p');p.className='meta';p.textContent='Years of service: '+person.serviceYears;copy.append(p)}
    if(person.introduction){const p=document.createElement('p');p.textContent=person.introduction;copy.append(p)}
    const more=document.createElement('a');more.className='textlink';more.href=profile;more.textContent='Biography →';copy.append(more);card.append(copy);frag.append(card);
   }
