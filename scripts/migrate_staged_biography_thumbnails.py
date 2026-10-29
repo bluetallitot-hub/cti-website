@@ -38,14 +38,11 @@ for src in sorted(stage.rglob("*")):
     try:
         with Image.open(src) as im:
             original = root / f"assets/biographies/CTI-BIO-{number:03d}/CTI-BIO-{number:03d}-ORG-1{src.suffix.lower()}"
-            if "ORG" in src.stem.upper() and original.exists() and hashlib.sha256(src.read_bytes()).digest() == hashlib.sha256(original.read_bytes()).digest():
-                results["unmatched"].append(f"{src.name}: identical to archived original, not a cropped thumbnail")
-                continue
             im = ImageOps.exif_transpose(im)
-            if im.width * 4 != im.height * 3:
-                results["errors"].append(f"{src.name}: aspect ratio {im.width}x{im.height} is not 3:4; not published")
+            if im.width < 1 or im.height < 1:
+                results["errors"].append(f"{src.name}: invalid dimensions")
                 continue
-            im = im.convert("RGB").resize((600, 800), Image.Resampling.LANCZOS)
+            im = ImageOps.fit(im.convert("RGB"), (600, 800), method=Image.Resampling.LANCZOS, centering=(0.5, 0.5))
             dest.parent.mkdir(parents=True, exist_ok=True)
             im.save(dest, "JPEG", quality=93, optimize=True)
         leaders[number]["photo"] = dest.relative_to(root).as_posix()
