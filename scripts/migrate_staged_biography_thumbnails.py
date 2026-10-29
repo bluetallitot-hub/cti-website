@@ -23,6 +23,7 @@ for src in sorted(stage.rglob("*")):
         r"CTI[-_ ]?BIO[-_ ]?0*(\d{1,3})[-_ ]?THM",
         r"THM[-_ ]?0*(\d{1,3})",
         r"0*(\d{1,3})[-_ ]?THM",
+        r"CTI[-_ ]?BIO[-_ ]?0*(\d{1,3})[-_ ]?ORG[-_ ]?1",
     ]
     number = None
     for pattern in patterns:
