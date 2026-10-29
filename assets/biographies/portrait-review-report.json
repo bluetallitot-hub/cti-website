@@ -1,0 +1,97 @@
+[
+  {
+    "id": "CTI-BIO-001",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-002",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-003",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-004",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-005",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-006",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-007",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-008",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-009",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-010",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-011",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-015",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-017",
+    "status": "manual-review",
+    "reason": "2 faces detected"
+  },
+  {
+    "id": "CTI-BIO-018",
+    "status": "manual-review",
+    "reason": "2 faces detected"
+  },
+  {
+    "id": "CTI-BIO-019",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-020",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-026",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-027",
+    "status": "manual-review",
+    "reason": "portrait requires background extension or different crop"
+  },
+  {
+    "id": "CTI-BIO-028",
+    "status": "manual-review",
+    "reason": "5 faces detected"
+  }
+]
