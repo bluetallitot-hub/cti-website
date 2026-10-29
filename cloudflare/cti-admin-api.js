@@ -98,7 +98,7 @@ if(url.pathname==='/congregation/zoom'&&request.method==='POST'){
  const body=await request.json().catch(()=>null);
  if(!body||typeof body.password!=='string'||body.password.length>256)return respond({error:'Invalid password'},400);
  if(!env.MELDADOS_PASSWORD)return respond({error:'Congregation access is not configured'},503);
- if(!await passwordCheck(body.password,env.MELDADOS_PASSWORD))return respond({error:'Incorrect congregation password'},401);
+ const authorized=await Promise.all([env.MELDADOS_PASSWORD,env.BOARD_PASSWORD,env.SECRETARY_PASSWORD,env.ADMIN_PASSWORD].map(secret=>passwordCheck(body.password,secret)));if(!authorized.some(Boolean))return respond({error:'Incorrect congregation password'},401);
  const link=typeof env.CTI_ZOOM_LINK==='string'?env.CTI_ZOOM_LINK.trim():'';
  if(link){try{const parsed=new URL(link);if(parsed.protocol==='https:'&&/(^|\\.)zoom\\.us$/.test(parsed.hostname))return respond({ok:true,configured:true,url:link})}catch{}}
  return respond({ok:true,configured:false,message:'Zoom link coming soon'});
