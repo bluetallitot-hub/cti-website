@@ -9,24 +9,6 @@
   ],
   "leaders": [
     {
-      "id": "rabbi-phillip-blue",
-      "name": "Rabbi Phillip Blue",
-      "types": [
-        "current_leadership"
-      ],
-      "introduction": "Rabbi Blue is an educator and lifelong student of Torah who supports CTI through prayer, teaching, Jewish learning, and preservation of the congregation’s Sephardic traditions.",
-      "biography": "",
-      "photo": "assets/images/leadership/rabbi-blue-profile.jpg?v=20261002-2",
-      "role": "Rabbi",
-      "serviceYears": null,
-      "links": {
-        "current_leadership": "rabbi-bio.html"
-      },
-      "order": {
-        "current_leadership": 1
-      }
-    },
-    {
       "id": "jerry-pressman",
       "name": "Jerry Pressman",
       "types": [
