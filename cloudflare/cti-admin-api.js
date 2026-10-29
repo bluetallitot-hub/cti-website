@@ -94,6 +94,16 @@ async function sendMeldathoReminders(env,now=new Date()){
 
 export default {async scheduled(event,env,ctx){ctx.waitUntil(sendMeldathoReminders(env).then(result=>console.log('Meldatho reminders',JSON.stringify(result))).catch(error=>console.error('Meldatho reminder run failed',error.message)))},async fetch(request,env){const ORIGIN=siteOrigin(env);const ALLOWED_ORIGIN=new URL(ORIGIN).origin;const origin=request.headers.get('origin');const headers={'access-control-allow-origin':ALLOWED_ORIGIN,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type','vary':'Origin'};if(request.method==='OPTIONS')return new Response(null,{status:204,headers});if(origin&&origin!==ALLOWED_ORIGIN)return json({error:'Origin not allowed'},403,headers);const url=new URL(request.url);const respond=(o,s=200)=>json(o,s,headers);try{
 if(url.pathname==='/health')return respond({ok:true,service:'CTI administration API'});
+if(url.pathname==='/congregation/zoom'&&request.method==='POST'){
+ const body=await request.json().catch(()=>null);
+ if(!body||typeof body.password!=='string'||body.password.length>256)return respond({error:'Invalid password'},400);
+ if(!env.MELDADOS_PASSWORD)return respond({error:'Congregation access is not configured'},503);
+ if(!await passwordCheck(body.password,env.MELDADOS_PASSWORD))return respond({error:'Incorrect congregation password'},401);
+ const link=typeof env.CTI_ZOOM_LINK==='string'?env.CTI_ZOOM_LINK.trim():'';
+ if(link){try{const parsed=new URL(link);if(parsed.protocol==='https:'&&/(^|\\.)zoom\\.us$/.test(parsed.hostname))return respond({ok:true,configured:true,url:link})}catch{}}
+ return respond({ok:true,configured:false,message:'Zoom link coming soon'});
+}
+
 // Congregation-only Zoom access. Configure CONGREGATION_PASSWORD as a Worker secret;
 // optionally configure CONGREGATION_ZOOM_LINK privately when the meeting is ready.
 // Do not expose the secret or link in the public GitHub repository.
