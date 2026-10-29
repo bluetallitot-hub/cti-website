@@ -13,7 +13,7 @@ $('photo').onchange=async()=>{
  const file=$('photo').files[0];if(!file||!current)return;
  const selected=current;
  try{
-  if(!/^image\\/(jpeg|png|webp)$/.test(file.type))throw Error('Select a JPEG, PNG or WebP image.');
+  if(!/^image\/(jpeg|png|webp)$/.test(file.type))throw Error('Select a JPEG, PNG or WebP image.');
   const bmp=await createImageBitmap(file),canvas=document.createElement('canvas');canvas.width=600;canvas.height=800;
   const ctx=canvas.getContext('2d');ctx.fillStyle='#f7f3eb';ctx.fillRect(0,0,600,800);
   const scale=Math.min(600/bmp.width,800/bmp.height),w=bmp.width*scale,h=bmp.height*scale;
