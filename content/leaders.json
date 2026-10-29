@@ -30,8 +30,7 @@
       "id": "jerry-pressman",
       "name": "Jerry Pressman",
       "types": [
-        "current_leadership",
-        "past_president"
+        "current_leadership"
       ],
       "introduction": "Jerry Pressman serves as CTI President and helps guide the congregation as it carries its distinctive Sephardic heritage into its second century.",
       "biography": "Jerry Pressman serves as President of Congregation Tifereth Israel for the 2026 board cycle.",
@@ -39,12 +38,10 @@
       "role": "President",
       "serviceYears": "2022–present",
       "links": {
-        "current_leadership": "leader-profile.html?id=jerry-pressman",
-        "past_president": "leader-profile.html?id=jerry-pressman"
+        "current_leadership": "leader-profile.html?id=jerry-pressman"
       },
       "order": {
-        "current_leadership": 2,
-        "past_president": 9
+        "current_leadership": 2
       }
     },
     {
