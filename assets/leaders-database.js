@@ -23,6 +23,10 @@
    if(person.introduction){const p=document.createElement('p');p.textContent=person.introduction;copy.append(p)}
    const more=document.createElement('a');more.className='textlink';more.href=profile;more.textContent='Biography →';copy.append(more);card.append(copy);frag.append(card);
   }
+  if(category==='current_leadership'){
+   const rabbiCard=grid.querySelector('.leader-card');
+   if(rabbiCard&&rabbiCard.textContent.includes('Rabbi Phillip Blue'))frag.prepend(rabbiCard);
+  }
   grid.replaceChildren(frag);
  }catch(error){console.warn('Using existing leadership cards:',error)}
 })();
