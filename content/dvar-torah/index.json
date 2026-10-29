@@ -99,6 +99,21 @@
       "status": "published"
     },
     {
+      "book": 1,
+      "portion": 4,
+      "year": 2026,
+      "name": "Vayera",
+      "date": "2026-10-30",
+      "description": "Abraham teaches justice through hospitality, and Lot carries that lesson into Sodom.",
+      "title": "Justice Through Hospitality",
+      "eyebrow": "D’var Torah · Vayera · October 2026",
+      "byline": "A Reader’s Edition · Rabbi Phillip Blue",
+      "category": "weekly",
+      "podcast": null,
+      "legacyIds": [],
+      "status": "published"
+    },
+    {
       "holidayCode": "RH1",
       "year": 2026,
       "name": "Pakad",
