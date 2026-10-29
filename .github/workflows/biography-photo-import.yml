@@ -1,0 +1,56 @@
+name: CTI Biography Photograph Import
+on:
+  workflow_dispatch:
+    inputs:
+      cti_id:
+        description: "Biography ID, e.g. CTI-BIO-017"
+        required: true
+        type: string
+      source:
+        description: "Existing repository image path (JPEG or PNG)"
+        required: true
+        type: string
+      crop:
+        description: "Optional normalized crop x,y,w,h; leave blank for centered draft"
+        required: false
+        type: string
+      activate:
+        description: "Publish new THM and make it active (only after checking framing)"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: cti-biography-images
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'Pillow>=11,<13'
+      - name: Import original and optionally publish thumbnail
+        env:
+          BIO_ID: ${{ inputs.cti_id }}
+          SOURCE: ${{ inputs.source }}
+          CROP: ${{ inputs.crop }}
+          ACTIVATE: ${{ inputs.activate }}
+        run: |
+          args=(--id "$BIO_ID" --source "$SOURCE")
+          if [ -n "$CROP" ]; then args+=(--crop "$CROP"); fi
+          if [ "$ACTIVATE" = "true" ]; then args+=(--activate); fi
+          python scripts/import_biography_photo.py "${args[@]}"
+      - name: Commit biography assets and database
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/leaders.json assets/biographies/
+          if ! git diff --cached --quiet; then
+            git commit -m "Import biography photograph"
+            git push
+          fi
