@@ -1,7 +1,6 @@
 from pathlib import Path
 import json
 import re
-import hashlib
 from PIL import Image, ImageOps
 
 root = Path(__file__).resolve().parents[1]
@@ -47,7 +46,12 @@ for src in sorted(stage.rglob("*")):
             im.save(dest, "JPEG", quality=93, optimize=True)
         leaders[number]["photo"] = dest.relative_to(root).as_posix()
         leaders[number]["thumbnailStatus"] = "published"
-        results["migrated"].append({"source": src.relative_to(root).as_posix(), "destination": leaders[number]["photo"]})
+        renamed = src.with_name(f"CTI-BIO-{number:03d}-THM{src.suffix.lower()}")
+        if src != renamed:
+            if renamed.exists():
+                raise FileExistsError(f"Cannot rename {src.name}: {renamed.name} already exists")
+            src.rename(renamed)
+        results["migrated"].append({"source": renamed.relative_to(root).as_posix(), "destination": leaders[number]["photo"]})
     except Exception as exc:
         results["errors"].append(f"{src.name}: {exc}")
 for number, leader in leaders.items():
