@@ -7,6 +7,9 @@
   if(!response.ok)throw Error('Leaders database unavailable');
   const data=await response.json(),person=data.leaders?.find(p=>p.id===id);
   if(!person)throw Error('This person has no database record.');
+  if(person.meldathoId&&/^[a-z0-9-]+$/.test(person.meldathoId)){
+   location.replace('meldado-person.html?id='+encodeURIComponent(person.meldathoId));return;
+  }
   $('name').textContent=person.name;$('role').textContent=person.role||person.types?.map(t=>({'founder':'Founder','past_president':'Past President','current_leadership':'Current Leadership','historical_associate':'Historical Figure','past_rabbi':'Past Rabbi'})[t]||t).join(' · ')||'Leadership';
   document.title=person.name+' | CTI Leadership';
   if(person.introduction){const intro=document.createElement('p');intro.className='lead';intro.textContent=person.introduction;$('bio').append(intro)}
