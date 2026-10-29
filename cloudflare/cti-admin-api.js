@@ -247,10 +247,22 @@ if(url.pathname==='/meldathos/reminder-test'&&request.method==='POST'){
 if(!role&&!['/unsubscribe/request','/unsubscribe/confirm'].includes(url.pathname))return respond({error:'Please sign in'},401);
 if(url.pathname==='/session')return respond({role});
 if(url.pathname==='/site-colors'&&request.method==='GET'){
- if(!['rabbi','secretary'].includes(role))return respond({error:'Access not permitted'},403);
+ if(!['rabbi','secretary','board'].includes(role))return respond({error:'Access not permitted'},403);
  const file=await gh(env,'content/site-colors.json');
  const data=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
  return respond({colors:data.colors,updatedAt:data.updatedAt||null,updatedBy:data.updatedBy||null,sha:file.sha});
+}
+if(url.pathname==='/site-colors/propose'&&request.method==='POST'){
+ if(!['rabbi','secretary','board'].includes(role))return respond({error:'Access not permitted'},403);
+ if(!env.RESEND_API_KEY||!env.CTI_ANNOUNCE_EMAIL_FROM)return respond({error:'Proposal email is not configured'},503);
+ const b=await request.json().catch(()=>null);
+ const keys=['primary','background','accent'];
+ if(!b||!b.colors||Object.keys(b.colors).length!==3||keys.some(k=>typeof b.colors[k]!=='string'||!/^#[0-9a-fA-F]{6}$/.test(b.colors[k])))return respond({error:'Invalid proposed colors'},400);
+ const code='CTI1-'+keys.map(k=>b.colors[k].slice(1).toUpperCase()).join('-');
+ const body='CTI Website Color Proposal\\n\\nProposed by administrator role: '+role+'\\nDate/time (UTC): '+new Date().toISOString()+'\\n\\nProposed colors:\\n'+keys.map(k=>k+': '+b.colors[k]).join('\\n')+'\\n\\nPreview this proposal without changing the website:\\n'+siteOrigin(env)+'/admin/site-colors.html'+'\\n\\nPaste the following into the color code field and click Load Colors from Code. This only updates the preview.\\n\\nProposed Color Code:\\n'+code;
+ const email=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:'Bearer '+env.RESEND_API_KEY,'content-type':'application/json'},body:JSON.stringify({from:env.CTI_ANNOUNCE_EMAIL_FROM,to:['rabbi@ctipeabody.org'],subject:'CTI Website — Proposed Color Scheme',text:body})});
+ if(!email.ok)return respond({error:'Proposal email could not be sent; no website changes were made'},502);
+ return respond({ok:true,message:'Color proposal emailed. Website unchanged.'});
 }
 if(url.pathname==='/site-colors'&&request.method==='POST'){
  if(!['rabbi','secretary'].includes(role))return respond({error:'Access not permitted'},403);
