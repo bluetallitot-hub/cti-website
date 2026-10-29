@@ -15,6 +15,16 @@ for src in sorted(stage.rglob("*")):
     if not src.is_file():
         continue
     results["staged"].append(src.relative_to(root).as_posix())
+    if src.name == "75th Anniversary Invitation.png":
+        archive = root / "assets/staging-archive/75th Anniversary Invitation.png"
+        archive.parent.mkdir(parents=True, exist_ok=True)
+        if not archive.exists():
+            src.rename(archive)
+        elif src.read_bytes() == archive.read_bytes():
+            src.unlink()
+        else:
+            results["errors"].append("75th Anniversary Invitation.png: archive conflict")
+        continue
     if src.suffix.lower() not in (".jpg", ".jpeg", ".png", ".webp"):
         continue
     name = src.stem
@@ -24,6 +34,7 @@ for src in sorted(stage.rglob("*")):
         r"THM[-_ ]?0*(\d{1,3})",
         r"0*(\d{1,3})[-_ ]?THM",
         r"CTI[-_ ]?BIO[-_ ]?0*(\d{1,3})[-_ ]?ORG[-_ ]?1",
+        r"CTI[-_ ]?0*(\d{1,3})",
     ]
     number = None
     for pattern in patterns:
@@ -47,12 +58,8 @@ for src in sorted(stage.rglob("*")):
             im.save(dest, "JPEG", quality=93, optimize=True)
         leaders[number]["photo"] = dest.relative_to(root).as_posix()
         leaders[number]["thumbnailStatus"] = "published"
-        renamed = src.with_name(f"CTI-BIO-{number:03d}-THM{src.suffix.lower()}")
-        if src != renamed:
-            if renamed.exists():
-                raise FileExistsError(f"Cannot rename {src.name}: {renamed.name} already exists")
-            src.rename(renamed)
-        results["migrated"].append({"source": renamed.relative_to(root).as_posix(), "destination": leaders[number]["photo"]})
+        results["migrated"].append({"source": src.relative_to(root).as_posix(), "destination": leaders[number]["photo"]})
+        src.unlink()  # Successfully published: remove the staging duplicate.
     except Exception as exc:
         results["errors"].append(f"{src.name}: {exc}")
 for number, leader in leaders.items():
