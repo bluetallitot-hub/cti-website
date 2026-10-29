@@ -1,0 +1,103 @@
+name: Overnight CTI safe quarantine
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 30 10 *' # October 30, 03:00 UTC = October 29, 11 PM EDT
+permissions:
+  contents: write
+concurrency:
+  group: cti-overnight-quarantine
+  cancel-in-progress: false
+jobs:
+  quarantine:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Move unreferenced staging and exact duplicate assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import subprocess,hashlib,collections,json,datetime,re
+          paths=[p for p in subprocess.check_output(['git','ls-files','-z']).decode().split('\0') if p]
+          live=[p for p in paths if Path(p).is_file() and not p.startswith(('quarantine/','backup-audit/','.github/'))]
+          texts={}
+          for p in live:
+              if Path(p).suffix.lower() in ('.html','.js','.css','.json','.md','.yml','.yaml','.xml','.txt'):
+                  texts[p]=Path(p).read_text(encoding='utf-8',errors='replace')
+          protected=('assets/heritage/','assets/biographies/','assets/sanctuary-tour/','assets/collections/','assets/resources/','assets/new/','assets/images/meldados/','content/','admin/','cloudflare/','tests/')
+          important=('meldado','meldatho','logo','placeholder','rabbi-blue-family')
+          def safe(p):
+              return p.startswith('assets/') and not p.startswith(protected) and not any(x in p.lower() for x in important)
+          def mentioned(p):
+              name=Path(p).name
+              # Conservative: full path, path relative to assets, or filename
+              # in ANY source text, not only pages linked from homepage.
+              forms=(p,p.removeprefix('assets/'),name)
+              return any(any(f in s for f in forms) for source,s in texts.items() if source!=p)
+          hashes=collections.defaultdict(list)
+          for p in live:
+              if Path(p).suffix.lower() in ('.jpg','.jpeg','.png','.webp','.gif','.svg','.pdf'):
+                  hashes[hashlib.sha256(Path(p).read_bytes()).hexdigest()].append(p)
+          def rank(p):
+              if p.startswith('assets/heritage/'):return 0
+              if p.startswith('assets/biographies/'):return 1
+              if p.startswith('assets/collections/'):return 2
+              if p.startswith('assets/images/meldados/'):return 3
+              return 10
+          staging=lambda p:p.startswith(('assets/possible-duplicates/','assets/archive/generated/','assets/archive/unreviewed/')) or p=='CTI-014-THM-v2.png'
+          candidates={}
+          for group in hashes.values():
+              if len(group)<2:continue
+              keeper=min(group,key=lambda p:(rank(p),p))
+              for p in group:
+                  if p!=keeper and safe(p) and not mentioned(p):
+                      candidates[p]=('identical-content duplicate',keeper)
+          for p in live:
+              if staging(p) and not mentioned(p) and not p.startswith('quarantine/'):
+                  candidates[p]=('unreferenced staging artifact','')
+          date=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d')
+          moved=[];skipped=[]
+          for p,(reason,keeper) in sorted(candidates.items()):
+              if not Path(p).is_file():continue
+              if not staging(p) and (not safe(p) or mentioned(p)):
+                  skipped.append(p);continue
+              dest='quarantine/2026-10-30/'+p
+              Path(dest).parent.mkdir(parents=True,exist_ok=True)
+              subprocess.run(['git','mv','--',p,dest],check=True)
+              moved.append({'original':p,'quarantine':dest,'reason':reason,'retained_copy':keeper})
+          Path('backup-audit').mkdir(exist_ok=True)
+          report={'run_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'moved_count':len(moved),'moved':moved,'skipped':skipped,'recovery':'git mv quarantine/2026-10-30/<original-path> <original-path>'}
+          Path('backup-audit/overnight-quarantine-results.json').write_text(json.dumps(report,indent=2)+'\n')
+          lines=['# Overnight quarantine results','',f'Run: {report["run_utc"]}',f'Moved: {len(moved)} files','', 'Quarantine excluded from GitHub Pages deployment. No files permanently deleted.','', '## Moved files']
+          lines += [f'- `{x["original"]}` → `{x["quarantine"]}` ({x["reason"]}; retained: `{x["retained_copy"] or "recovery copy"}`)' for x in moved] or ['None']
+          Path('backup-audit/overnight-quarantine-results.md').write_text('\n'.join(lines)+'\n')
+          print('Quarantined:',len(moved))
+          PY
+      - name: Verify quarantine stays unpublished
+        run: |
+          grep -q -- '--exclude="/quarantine/"' .github/workflows/pages.yml
+          git diff --cached --name-status
+      - name: Commit one recoverable batch
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add backup-audit/overnight-quarantine-results.json backup-audit/overnight-quarantine-results.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Quarantine unreferenced CTI staging and duplicate assets in one batch'
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo 'Concurrent changes conflict; no forced update to main'
+              exit 1
+            fi
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
