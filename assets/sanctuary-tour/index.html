@@ -23,7 +23,7 @@ nav button{border:1px solid #ffffff55;color:white;background:#12212ccc;border-ra
 <main id="stage" aria-label="Sanctuary photographic tour">
 <img id="scene" alt="Sanctuary interior">
 <div id="shade"></div><div id="hotspots"></div>
-<header><div><small>Congregation Tifereth Israel</small><h1>Explore Our Sanctuary</h1></div><div style="display:flex;gap:8px;align-items:center"><a class="btn" style="text-decoration:none" href="../../about.html#sanctuary-tour">← Our Synagogue</a><button class="btn" onclick="toggleFull()">⛶ Full screen</button></div></header>
+<header><div><small>Congregation Tifereth Israel</small><h1>Explore Our Sanctuary</h1></div><div style="display:flex;gap:8px;align-items:center"><a class="btn" style="text-decoration:none" href="../../about.html#sanctuary-tour">← Our Synagogue</a><a class="btn" style="text-decoration:none" href="../../index.html">⌂ Back to Website</a><button class="btn" onclick="toggleFull()">⛶ Full screen</button></div></header>
 <div id="note">Explore CTI through photographs. Drag to pan, zoom in, or choose another viewpoint. A full 360° capture is planned for a future update.</div>
 <nav id="nav" aria-label="Tour locations"></nav>
 <footer><div><h2 id="sceneTitle"></h2><p id="sceneDesc"></p></div><div class="controls"><button class="btn" onclick="zoom(-.25)">− Zoom</button><button class="btn" onclick="reset()">Reset view</button><button class="btn" onclick="zoom(.25)">+ Zoom</button></div></footer>
@@ -42,9 +42,9 @@ let current=0,scale=1,x=0,y=0,drag=null;
 function paint(){img.style.transform=`translate(${x}px,${y}px) scale(${scale})`}
 function reset(){scale=1;x=0;y=0;paint()}
 function zoom(n){scale=Math.min(3,Math.max(1,scale+n));if(scale===1){x=0;y=0}paint()}
-function show(i){current=i;const s=scenes[i];img.src='images/'+s.id+'.jpg';img.alt=s.name;document.getElementById('sceneTitle').textContent=s.name;document.getElementById('sceneDesc').textContent=s.desc;reset();nav.innerHTML='';scenes.forEach((v,j)=>{let b=document.createElement('button');b.textContent=v.name;b.className=j===i?'active':'';b.onclick=()=>show(j);nav.appendChild(b)});hotspots.innerHTML='';s.links.forEach(([label,id,left,top])=>{let b=document.createElement('button');b.className='hotspot';b.textContent='➜ '+label;b.style.left=left+'%';b.style.top=top+'%';b.onclick=()=>{const index=scenes.findIndex(v=>v.id===id);if(index>=0)show(index);else window.location.href='../../../'+id;};hotspots.appendChild(b)});location.hash=s.id}
+function show(i){current=i;const s=scenes[i];img.src='images/'+s.id+'.jpg';img.alt=s.name;document.getElementById('sceneTitle').textContent=s.name;document.getElementById('sceneDesc').textContent=s.desc;reset();nav.innerHTML='';scenes.forEach((v,j)=>{let b=document.createElement('button');b.textContent=v.name;b.className=j===i?'active':'';b.onclick=()=>show(j);nav.appendChild(b)});hotspots.innerHTML='';s.links.forEach(([label,id,left,top])=>{let b=document.createElement('button');b.className='hotspot';b.textContent='➜ '+label;b.style.left=left+'%';b.style.top=top+'%';b.onclick=()=>{const index=scenes.findIndex(v=>v.id===id);if(index>=0)show(index);else window.location.href='../../'+id;};hotspots.appendChild(b)});location.hash=s.id}
 function toggleFull(){if(!document.fullscreenElement)stage.requestFullscreen?.();else document.exitFullscreen?.()}
-stage.addEventListener('pointerdown',e=>{if(e.target.closest('button'))return;drag={px:e.clientX,py:e.clientY,x,y};stage.setPointerCapture(e.pointerId)});
+stage.addEventListener('pointerdown',e=>{if(e.target.closest('button,a'))return;drag={px:e.clientX,py:e.clientY,x,y};stage.setPointerCapture(e.pointerId)});
 stage.addEventListener('pointermove',e=>{if(!drag)return;x=drag.x+e.clientX-drag.px;y=drag.y+e.clientY-drag.py;paint()});
 stage.addEventListener('pointerup',()=>drag=null);
 stage.addEventListener('pointercancel',()=>drag=null);
