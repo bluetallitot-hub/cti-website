@@ -12,7 +12,8 @@
   const frag=document.createDocumentFragment();
   for(const person of leaders){
    const card=document.createElement('article');card.className='card leader-card heritage-person';
-   const profile='leader-profile.html?id='+encodeURIComponent(person.id);
+   const custom=typeof person.customPageLink==='string'&&/^[a-zA-Z0-9][a-zA-Z0-9/_-]*\.html(?:#[a-zA-Z0-9_-]+)?$/.test(person.customPageLink)&&!person.customPageLink.includes('..')?person.customPageLink:null;
+   const profile=custom||'leader-profile.html?id='+encodeURIComponent(person.id);
    if(person.photo&&/^assets\/(images|archive)\/[a-zA-Z0-9_./% -]+(?:png|jpe?g|webp)(?:\?[^<>]*)?$/.test(person.photo)&&!person.photo.includes('..')){
     const link=document.createElement('a');link.href=profile;const img=document.createElement('img');img.className='leader-photo';img.src=person.photo;img.alt=person.name;img.loading='lazy';img.onerror=()=>{link.replaceWith(Object.assign(document.createElement('div'),{className:'leader-photo-placeholder',textContent:'Portrait unavailable'}))};link.append(img);card.append(link);
    }else{const placeholder=document.createElement('div');placeholder.className='leader-photo-placeholder';placeholder.textContent='Portrait unavailable';card.append(placeholder)}
@@ -22,10 +23,6 @@
    if(person.serviceYears&&category==='past_president'){const p=document.createElement('p');p.textContent=person.serviceYears;copy.append(p)}
    if(person.introduction){const p=document.createElement('p');p.textContent=person.introduction;copy.append(p)}
    const more=document.createElement('a');more.className='textlink';more.href=profile;more.textContent='Biography →';copy.append(more);card.append(copy);frag.append(card);
-  }
-  if(category==='current_leadership'){
-   const rabbiCard=grid.querySelector('.leader-card');
-   if(rabbiCard&&rabbiCard.textContent.includes('Rabbi Phillip Blue'))frag.prepend(rabbiCard);
   }
   grid.replaceChildren(frag);
  }catch(error){console.warn('Using existing leadership cards:',error)}
