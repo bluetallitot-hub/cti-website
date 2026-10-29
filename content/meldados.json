@@ -3763,15 +3763,17 @@
       "hebrewName": "",
       "hebrewDay": 25,
       "hebrewMonth": "Kislev",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
-      "rememberedBy": "",
-      "biography": "",
+      "hebrewYearOfDeath": 5777,
+      "dateOfDeath": "2016-12-25",
+      "rememberedBy": "Obituary-listed relatives: son Robert Duerr (wife Nancy); children Susan Kaufold (husband Charles), David Duerr (wife Yvonne), Doug Duerr; late husband Elmer 'Bud' Duerr. Not identified CTI memorial dedicators.",
+      "biography": "Philomena 'Fanny' (Frank) Duerr (approximately 1926–December 25, 2016), age 90, lived in Bethel Park, Pennsylvania, and formerly in Munhall. She was the widow of Elmer 'Bud' Duerr and mother of Robert, Susan, David and Doug. Her funeral-home obituary identifies her son Robert and daughter-in-law Nancy Duerr; a CTI newsletter independently names Robert Duerr and Nancy Duerr among the congregation's community. Her death date corresponds to 25 Kislev 5777, exactly matching CTI's memorial entry. Funeral services took place at Christ United Methodist Church with interment at Calvary Cemetery; the family connection does not establish her personal religious affiliation or CTI membership.",
       "photo": "",
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-29: Exact family-cluster verification: Paul L. Henney Memorial Chapel obituary names Philomena 'Fanny' (Frank) Duerr, died 2016-12-25 age 90, and son Robert (Nancy) Duerr; CTI newsletter independently names Robert Duerr (October birthday) and Nancy Duerr (get-well wishes). 2016-12-25 converts to 25 Kislev 5777, matching CTI 25 Kislev. Obituary: https://www.henneyfuneralhome.com/obituary/PhilomenaFanny-Duerr ; CTI family context: https://ctipeabody.org/newsletter.pdf . The obituary lists Christian funeral and Calvary Cemetery burial; do not infer Jewish identity, CTI membership or memorial dedicator. Time of death not stated, no sunset discrepancy identified. Photo candidate on obituary page not authenticated or rights-cleared; no photo published.",
+      "obituaryUrl": "https://www.henneyfuneralhome.com/obituary/PhilomenaFanny-Duerr",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-esthermiller-tevet-23",
