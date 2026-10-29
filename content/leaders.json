@@ -414,7 +414,7 @@
       ],
       "introduction": "Wendy Tirck serves on CTI’s board and is part of the volunteer leadership sustaining the congregation.",
       "biography": "Wendy Tirck serves on CTI’s board and is part of the volunteer leadership sustaining the congregation.",
-      "photo": null,
+      "photo": "assets/biographies/CTI-BIO-012/CTI-BIO-012-THM.jpg",
       "role": "Board Member",
       "serviceYears": null,
       "links": {
@@ -424,7 +424,22 @@
         "current_leadership": 12
       },
       "ctiId": "CTI-BIO-012",
-      "thumbnailStatus": "no-original"
+      "thumbnailStatus": "published",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-012/CTI-BIO-012-ORG-1.jpg"
+        }
+      ],
+      "originalPhoto": "assets/biographies/CTI-BIO-012/CTI-BIO-012-ORG-1.jpg",
+      "thumbnailSpecification": {
+        "width": 600,
+        "height": 800,
+        "aspectRatio": "3:4",
+        "format": "jpeg",
+        "padding": true,
+        "backgroundExtensionAllowed": true
+      }
     },
     {
       "id": "leon-eskenas",
