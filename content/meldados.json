@@ -964,15 +964,17 @@
       "hebrewName": "",
       "hebrewDay": 20,
       "hebrewMonth": "Tishrei",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
-      "rememberedBy": "",
-      "biography": "",
+      "hebrewYearOfDeath": 5763,
+      "dateOfDeath": "2002-09-26",
+      "rememberedBy": "Obituary-listed relatives: children Harvey Goldberg (wife Lorna) and Nancy Aldredge (husband William); grandchildren Shimona, Allison, Matthew, Michael and Scott; late husband Samuel Goldberg. Not established CTI memorial dedicators.",
+      "biography": "Lillian ('Lil') Goldberg (died September 26, 2002), of Peabody, Massachusetts, formerly of Framingham, was the widow of Samuel Goldberg. Her children were Harvey Goldberg of Peabody, husband of Lorna (Linsky) Goldberg, and Nancy Aldredge of College Station, Texas. She was grandmother to Shimona, Allison, Matthew, Michael and Scott, and great-grandmother to Claudia. The Boston Globe/Stanetsky-Hymanson obituary identifies her as Harvey's mother; Harvey's independent 2023 obituary names his parents as Sam and Lil Goldberg and documents the family's CTI connection. Her death date corresponds to 20 Tishrei 5763, matching the CTI memorial.",
       "photo": "",
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. "
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied.  2026-10-29: Verified exact identity and Hebrew date via three-way corroboration. Boston Globe/Stanetsky-Hymanson obituary published 2002-09-29 gives death 2002-09-26, spouse Samuel, children Harvey (Lorna) Goldberg of Peabody and Nancy (William) Aldredge; 2002-09-26 = 20 Tishrei 5763. Independent Harvey J. Goldberg obituary (2023) names parents Sam and Lil Goldberg and CTI memorial contributions: https://www.dignitymemorial.com/obituaries/salem-ma/harvey-goldberg-11462600 . Original Lillian obituary: https://www.legacy.com/us/obituaries/bostonglobe/name/lillian-goldberg-obituary?id=27993244 . CTI newsletter lists Lillian at 20 Tishrei and Lorna Goldberg family. Family listed in obituary is not a CTI memorial dedication. Time of death not stated; no sunset discrepancy identified. No authenticated photo.",
+      "obituaryUrl": "https://www.legacy.com/us/obituaries/bostonglobe/name/lillian-goldberg-obituary?id=27993244",
+      "familyFromObituary": true
     },
     {
       "id": "newsletter-david-leon-tishrei",
