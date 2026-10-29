@@ -27,7 +27,13 @@
       "order": {
         "current_leadership": 1
       },
-      "ctiId": "CTI-BIO-001"
+      "ctiId": "CTI-BIO-001",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-001/org-1.jpg"
+        }
+      ]
     },
     {
       "id": "jerry-pressman",
@@ -46,7 +52,13 @@
       "order": {
         "current_leadership": 2
       },
-      "ctiId": "CTI-BIO-002"
+      "ctiId": "CTI-BIO-002",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-002/org-1.png"
+        }
+      ]
     },
     {
       "id": "betty-polonsky",
@@ -65,7 +77,13 @@
       "order": {
         "current_leadership": 3
       },
-      "ctiId": "CTI-BIO-003"
+      "ctiId": "CTI-BIO-003",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-003/org-1.png"
+        }
+      ]
     },
     {
       "id": "harvey-elefson",
@@ -84,7 +102,13 @@
       "order": {
         "current_leadership": 4
       },
-      "ctiId": "CTI-BIO-004"
+      "ctiId": "CTI-BIO-004",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-004/org-1.png"
+        }
+      ]
     },
     {
       "id": "joanne-pressman",
@@ -103,7 +127,13 @@
       "order": {
         "current_leadership": 5
       },
-      "ctiId": "CTI-BIO-005"
+      "ctiId": "CTI-BIO-005",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-005/org-1.png"
+        }
+      ]
     },
     {
       "id": "fran-arsenaultshaheen",
@@ -122,7 +152,13 @@
       "order": {
         "current_leadership": 6
       },
-      "ctiId": "CTI-BIO-006"
+      "ctiId": "CTI-BIO-006",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-006/org-1.png"
+        }
+      ]
     },
     {
       "id": "millie-becker",
@@ -141,7 +177,13 @@
       "order": {
         "current_leadership": 7
       },
-      "ctiId": "CTI-BIO-007"
+      "ctiId": "CTI-BIO-007",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-007/org-1.png"
+        }
+      ]
     },
     {
       "id": "doris-hershoff",
@@ -160,7 +202,13 @@
       "order": {
         "current_leadership": 8
       },
-      "ctiId": "CTI-BIO-008"
+      "ctiId": "CTI-BIO-008",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-008/org-1.png"
+        }
+      ]
     },
     {
       "id": "marvin-menovich",
@@ -179,7 +227,13 @@
       "order": {
         "current_leadership": 9
       },
-      "ctiId": "CTI-BIO-009"
+      "ctiId": "CTI-BIO-009",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-009/org-1.png"
+        }
+      ]
     },
     {
       "id": "david-podradchik",
@@ -198,7 +252,13 @@
       "order": {
         "current_leadership": 10
       },
-      "ctiId": "CTI-BIO-010"
+      "ctiId": "CTI-BIO-010",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-010/org-1.png"
+        }
+      ]
     },
     {
       "id": "jay-polonsky",
@@ -217,7 +277,13 @@
       "order": {
         "current_leadership": 11
       },
-      "ctiId": "CTI-BIO-011"
+      "ctiId": "CTI-BIO-011",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-011/org-1.png"
+        }
+      ]
     },
     {
       "id": "wendy-tirck",
@@ -299,7 +365,13 @@
         "founder": 3
       },
       "meldathoId": "yahrzeit-morrisgibely-nissan-14",
-      "ctiId": "CTI-BIO-015"
+      "ctiId": "CTI-BIO-015",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-015/org-1.png"
+        }
+      ]
     },
     {
       "id": "robert-hasday",
@@ -339,7 +411,13 @@
         "founder": 5
       },
       "meldathoId": "yahrzeit-josephhavian-shevat-2",
-      "ctiId": "CTI-BIO-017"
+      "ctiId": "CTI-BIO-017",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-017/org-1.png"
+        }
+      ]
     },
     {
       "id": "david-leon",
@@ -359,7 +437,13 @@
         "founder": 6
       },
       "meldathoId": "newsletter-david-leon-tishrei",
-      "ctiId": "CTI-BIO-018"
+      "ctiId": "CTI-BIO-018",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-018/org-1.png"
+        }
+      ]
     },
     {
       "id": "joseph-pernitchi",
@@ -379,7 +463,13 @@
         "founder": 7
       },
       "meldathoId": "yahrzeit-josephpernitchi-shevat-3",
-      "ctiId": "CTI-BIO-019"
+      "ctiId": "CTI-BIO-019",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-019/org-1.jpg"
+        }
+      ]
     },
     {
       "id": "ralph-bencangey",
@@ -394,7 +484,13 @@
       "serviceYears": null,
       "links": {},
       "order": {},
-      "ctiId": "CTI-BIO-020"
+      "ctiId": "CTI-BIO-020",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-020/org-1.png"
+        }
+      ]
     },
     {
       "id": "david-fermon",
@@ -505,7 +601,13 @@
         "past_president": 7
       },
       "meldathoId": "newsletter-joseph-gibely-ii-cheshvan",
-      "ctiId": "CTI-BIO-026"
+      "ctiId": "CTI-BIO-026",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-026/org-1.png"
+        }
+      ]
     },
     {
       "id": "elliot-hershoff",
@@ -525,7 +627,13 @@
         "past_president": 8
       },
       "meldathoId": "newsletter-elliot-hershoff-tishrei",
-      "ctiId": "CTI-BIO-027"
+      "ctiId": "CTI-BIO-027",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-027/org-1.png"
+        }
+      ]
     },
     {
       "id": "rabbi-dov-pikelny",
@@ -549,7 +657,13 @@
         "CTI-009",
         "CTI-038"
       ],
-      "ctiId": "CTI-BIO-028"
+      "ctiId": "CTI-BIO-028",
+      "photoOriginals": [
+        {
+          "number": 1,
+          "path": "assets/biographies/CTI-BIO-028/org-1.jpg"
+        }
+      ]
     },
     {
       "id": "rabbi-howard-kosovske",
