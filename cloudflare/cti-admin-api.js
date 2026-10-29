@@ -94,6 +94,20 @@ async function sendMeldathoReminders(env,now=new Date()){
 
 export default {async scheduled(event,env,ctx){ctx.waitUntil(sendMeldathoReminders(env).then(result=>console.log('Meldatho reminders',JSON.stringify(result))).catch(error=>console.error('Meldatho reminder run failed',error.message)))},async fetch(request,env){const ORIGIN=siteOrigin(env);const ALLOWED_ORIGIN=new URL(ORIGIN).origin;const origin=request.headers.get('origin');const headers={'access-control-allow-origin':ALLOWED_ORIGIN,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'Authorization, Content-Type','vary':'Origin'};if(request.method==='OPTIONS')return new Response(null,{status:204,headers});if(origin&&origin!==ALLOWED_ORIGIN)return json({error:'Origin not allowed'},403,headers);const url=new URL(request.url);const respond=(o,s=200)=>json(o,s,headers);try{
 if(url.pathname==='/health')return respond({ok:true,service:'CTI administration API'});
+// Congregation-only Zoom access. Configure CONGREGATION_PASSWORD as a Worker secret;
+// optionally configure CONGREGATION_ZOOM_LINK privately when the meeting is ready.
+// Do not expose the secret or link in the public GitHub repository.
+if(url.pathname==='/congregation/zoom'&&request.method==='POST'){
+ const body=await request.json().catch(()=>null);
+ if(!body||typeof body.password!=='string'||body.password.length>128)return respond({error:'Enter the congregation password.'},400);
+ if(!env.CONGREGATION_PASSWORD)return respond({error:'Congregation access is not configured yet.'},503);
+ if(!(await passwordCheck(body.password,env.CONGREGATION_PASSWORD)))return respond({error:'Incorrect congregation password.'},401);
+ const link=(env.CONGREGATION_ZOOM_LINK||'').trim();
+ if(!link)return respond({ok:true,configured:false,message:'Zoom link coming soon. Please contact CTI for connection details.'});
+ try{const target=new URL(link);if(target.protocol!=='https:'||!/(^|\\.)zoom\\.us$/.test(target.hostname))throw Error('Invalid Zoom URL')}catch{return respond({error:'Zoom link is not configured correctly.'},503)}
+ return respond({ok:true,configured:true,url:link});
+}
+
 if(url.pathname==='/login'&&request.method==='POST'){const body=await request.json();if(typeof body.password!=='string'||body.password.length>256)return respond({error:'Invalid password'},400);let role=null;if(await passwordCheck(body.password,env.ADMIN_PASSWORD))role='rabbi';else if(await passwordCheck(body.password,env.SECRETARY_PASSWORD))role='secretary';else if(await passwordCheck(body.password,env.BOARD_PASSWORD))role='board';else if(await passwordCheck(body.password,env.MELDADOS_PASSWORD))role='congregant';if(!role)return respond({error:'Incorrect password'},401);if(!env.SESSION_SECRET)return respond({error:'Server session secret is not configured'},503);const session=await issue(role,env.SESSION_SECRET);
  return respond({token:session,role,expiresIn:28800})}
 
