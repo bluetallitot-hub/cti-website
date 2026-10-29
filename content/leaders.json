@@ -31,7 +31,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-001/org-1.jpg"
+          "path": "assets/biographies/CTI-BIO-001/CTI-BIO-001-ORG-1.jpg"
         }
       ],
       "activeOriginal": null,
@@ -44,7 +44,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-001/org-1.jpg"
+      "originalPhoto": "assets/biographies/CTI-BIO-001/CTI-BIO-001-ORG-1.jpg"
     },
     {
       "id": "jerry-pressman",
@@ -67,7 +67,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-002/org-1.png"
+          "path": "assets/biographies/CTI-BIO-002/CTI-BIO-002-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -80,7 +80,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-002/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-002/CTI-BIO-002-ORG-1.png"
     },
     {
       "id": "betty-polonsky",
@@ -103,7 +103,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-003/org-1.png"
+          "path": "assets/biographies/CTI-BIO-003/CTI-BIO-003-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -116,7 +116,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-003/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-003/CTI-BIO-003-ORG-1.png"
     },
     {
       "id": "harvey-elefson",
@@ -139,7 +139,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-004/org-1.png"
+          "path": "assets/biographies/CTI-BIO-004/CTI-BIO-004-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -152,7 +152,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-004/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-004/CTI-BIO-004-ORG-1.png"
     },
     {
       "id": "joanne-pressman",
@@ -175,7 +175,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-005/org-1.png"
+          "path": "assets/biographies/CTI-BIO-005/CTI-BIO-005-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -188,7 +188,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-005/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-005/CTI-BIO-005-ORG-1.png"
     },
     {
       "id": "fran-arsenaultshaheen",
@@ -211,7 +211,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-006/org-1.png"
+          "path": "assets/biographies/CTI-BIO-006/CTI-BIO-006-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -224,7 +224,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-006/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-006/CTI-BIO-006-ORG-1.png"
     },
     {
       "id": "millie-becker",
@@ -247,7 +247,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-007/org-1.png"
+          "path": "assets/biographies/CTI-BIO-007/CTI-BIO-007-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -260,7 +260,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-007/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-007/CTI-BIO-007-ORG-1.png"
     },
     {
       "id": "doris-hershoff",
@@ -283,7 +283,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-008/org-1.png"
+          "path": "assets/biographies/CTI-BIO-008/CTI-BIO-008-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -296,7 +296,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-008/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-008/CTI-BIO-008-ORG-1.png"
     },
     {
       "id": "marvin-menovich",
@@ -319,7 +319,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-009/org-1.png"
+          "path": "assets/biographies/CTI-BIO-009/CTI-BIO-009-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -332,7 +332,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-009/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-009/CTI-BIO-009-ORG-1.png"
     },
     {
       "id": "david-podradchik",
@@ -355,7 +355,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-010/org-1.png"
+          "path": "assets/biographies/CTI-BIO-010/CTI-BIO-010-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -368,7 +368,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-010/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-010/CTI-BIO-010-ORG-1.png"
     },
     {
       "id": "jay-polonsky",
@@ -391,7 +391,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-011/org-1.png"
+          "path": "assets/biographies/CTI-BIO-011/CTI-BIO-011-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -404,7 +404,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-011/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-011/CTI-BIO-011-ORG-1.png"
     },
     {
       "id": "wendy-tirck",
@@ -493,7 +493,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-015/org-1.png"
+          "path": "assets/biographies/CTI-BIO-015/CTI-BIO-015-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -506,7 +506,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-015/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-015/CTI-BIO-015-ORG-1.png"
     },
     {
       "id": "robert-hasday",
@@ -551,7 +551,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-017/org-1.png"
+          "path": "assets/biographies/CTI-BIO-017/CTI-BIO-017-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -564,7 +564,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-017/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-017/CTI-BIO-017-ORG-1.png"
     },
     {
       "id": "david-leon",
@@ -588,7 +588,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-018/org-1.png"
+          "path": "assets/biographies/CTI-BIO-018/CTI-BIO-018-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -601,7 +601,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-018/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-018/CTI-BIO-018-ORG-1.png"
     },
     {
       "id": "joseph-pernitchi",
@@ -625,7 +625,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-019/org-1.jpg"
+          "path": "assets/biographies/CTI-BIO-019/CTI-BIO-019-ORG-1.jpg"
         }
       ],
       "activeOriginal": null,
@@ -638,7 +638,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-019/org-1.jpg"
+      "originalPhoto": "assets/biographies/CTI-BIO-019/CTI-BIO-019-ORG-1.jpg"
     },
     {
       "id": "ralph-bencangey",
@@ -657,7 +657,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-020/org-1.png"
+          "path": "assets/biographies/CTI-BIO-020/CTI-BIO-020-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -670,7 +670,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-020/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-020/CTI-BIO-020-ORG-1.png"
     },
     {
       "id": "david-fermon",
@@ -790,7 +790,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-026/org-1.png"
+          "path": "assets/biographies/CTI-BIO-026/CTI-BIO-026-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -803,7 +803,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-026/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-026/CTI-BIO-026-ORG-1.png"
     },
     {
       "id": "elliot-hershoff",
@@ -827,7 +827,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-027/org-1.png"
+          "path": "assets/biographies/CTI-BIO-027/CTI-BIO-027-ORG-1.png"
         }
       ],
       "activeOriginal": null,
@@ -840,7 +840,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-027/org-1.png"
+      "originalPhoto": "assets/biographies/CTI-BIO-027/CTI-BIO-027-ORG-1.png"
     },
     {
       "id": "rabbi-dov-pikelny",
@@ -868,7 +868,7 @@
       "photoOriginals": [
         {
           "number": 1,
-          "path": "assets/biographies/CTI-BIO-028/org-1.jpg"
+          "path": "assets/biographies/CTI-BIO-028/CTI-BIO-028-ORG-1.jpg"
         }
       ],
       "activeOriginal": null,
@@ -881,7 +881,7 @@
         "padding": false,
         "backgroundExtensionAllowed": true
       },
-      "originalPhoto": "assets/biographies/CTI-BIO-028/org-1.jpg"
+      "originalPhoto": "assets/biographies/CTI-BIO-028/CTI-BIO-028-ORG-1.jpg"
     },
     {
       "id": "rabbi-howard-kosovske",
