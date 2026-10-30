@@ -1,0 +1,14 @@
+{
+  "run_utc": "2026-10-30T03:44:01.771223+00:00",
+  "moved_count": 1,
+  "moved": [
+    {
+      "original": "assets/archive/originals/cti-memorial-board-staged.png",
+      "quarantine": "quarantine/2026-10-30/assets/archive/originals/cti-memorial-board-staged.png",
+      "reason": "identical-content duplicate",
+      "retained_copy": "assets/archive/meldados-original-board.png"
+    }
+  ],
+  "skipped": [],
+  "recovery": "git mv quarantine/2026-10-30/<original-path> <original-path>"
+}
