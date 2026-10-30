@@ -73,10 +73,13 @@ jobs:
                   candidates[p]=('unreferenced staging artifact','')
           date=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d')
           # Refuse to touch content used by code, metadata or human-facing pages.
+          # git mv retains every byte under quarantine; no deletion commands are used.
           moved=[];skipped=[]
           for p,(reason,keeper) in sorted(candidates.items()):
               if not Path(p).is_file():continue
-              if not staging(p) and not extra(p) and (not safe(p) or mentioned(p)):
+              # A file is eligible only if no repository source references its path or filename.
+              # This applies to staging assets as well as duplicate images.
+              if mentioned(p) or (not staging(p) and not extra(p) and not safe(p)):
                   skipped.append(p);continue
               dest='quarantine/2026-10-30-bulk/'+p
               Path(dest).parent.mkdir(parents=True,exist_ok=True)
