@@ -4641,15 +4641,17 @@
       "hebrewName": "",
       "hebrewDay": 21,
       "hebrewMonth": "Tevet",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
+      "hebrewYearOfDeath": 5781,
+      "dateOfDeath": "2021-01-05",
       "rememberedBy": "",
-      "biography": "",
+      "biography": "Cindy L. Gibeley (February 23, 1962 – January 5, 2021) was born in Beverly, Massachusetts, to Robert and Dolores (Cashman) Gibeley. Earlier in her career she worked for Northwest Airlines. She enjoyed painting, cooking, music, and spending time with her grandchildren, nieces, and nephews, and helped care for her parents in Topsfield. Her obituary names daughters Laura and Leah Gibeley and grandchildren Layci Figueroa and Myles Rich. Her father Robert Y. Gibeley's obituary independently identifies her as his late daughter, Cindy Lyn Gibeley.",
       "photo": "",
       "source": "CTI Newsletter, Volume 56 No. 6, November 2026, Yahrzeit–Meldathos list",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Listed under December Tevet as 21 Tevet (Gregorian December 31). Death year and Hebrew name not supplied."
+      "notes": "Listed under December Tevet as 21 Tevet (Gregorian December 31). Death year and Hebrew name not supplied. 2026-10-30: Exact-person match verified by Twomey-LeBlanc and Conte funeral-home obituary (born 1962-02-23, died 2021-01-05; parents Robert and Dolores Cashman Gibeley; Beverly/Topsfield) and independent Robert Y. Gibeley obituary explicitly naming late daughter Cindy Lyn Gibeley. Gregorian 2021-01-05 converts to 21 Tevet 5781 before sunset, matching CTI 21 Tevet. No contrary time-of-death evidence found; if post-sunset evidence emerges, review memorial date. Relatives are obituary-listed family, NOT memorial dedicators; rememberedBy deliberately blank. Funeral-home portrait appears authentic but reproduction rights not established; photo field deliberately unchanged. Sources: https://www.tlcfuneralhome.com/obituary/Cindy-Gibeley ; https://www.dignitymemorial.com/obituaries/salem-ma/robert-gibeley-10627152 .",
+      "obituaryUrl": "https://www.tlcfuneralhome.com/obituary/Cindy-Gibeley",
+      "familyFromObituary": true
     }
   ],
   "description": "CTI newsletter-sourced memorial names and Hebrew yahrzeit dates; no fictional sample records.",
