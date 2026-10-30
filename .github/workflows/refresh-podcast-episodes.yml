@@ -1,0 +1,35 @@
+name: Refresh The Blue Thread Podcast Episodes
+on:
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/update_podcast_episodes.py
+      - .github/workflows/refresh-podcast-episodes.yml
+permissions:
+  contents: write
+concurrency:
+  group: cti-podcast-catalog
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/update_podcast_episodes.py
+      - name: Publish refreshed catalog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/podcast-episodes.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh The Blue Thread podcast RSS catalog"
+            git pull --rebase origin main
+            git push
+          fi
