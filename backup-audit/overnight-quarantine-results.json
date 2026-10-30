@@ -1,7 +1,146 @@
 {
-  "run_utc": "2026-10-30T11:58:35.835428+00:00",
-  "moved_count": 0,
-  "moved": [],
+  "run_utc": "2026-10-30T12:00:47.110116+00:00",
+  "moved_count": 23,
+  "moved": [
+    {
+      "original": "archive-record.html",
+      "quarantine": "quarantine/2026-10-30-bulk/archive-record.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "archives/archive-2022-jewish-journal-centennial.html",
+      "quarantine": "quarantine/2026-10-30-bulk/archives/archive-2022-jewish-journal-centennial.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "dvar-torah.html",
+      "quarantine": "quarantine/2026-10-30-bulk/dvar-torah.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "email/lech-lecha-2026.html",
+      "quarantine": "quarantine/2026-10-30-bulk/email/lech-lecha-2026.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "facebook-coming-soon.html",
+      "quarantine": "quarantine/2026-10-30-bulk/facebook-coming-soon.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "gallery-record.html",
+      "quarantine": "quarantine/2026-10-30-bulk/gallery-record.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "history-story.html",
+      "quarantine": "quarantine/2026-10-30-bulk/history-story.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "leader-bio.html",
+      "quarantine": "quarantine/2026-10-30-bulk/leader-bio.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "meldado-elliot-hershoff-template.html",
+      "quarantine": "quarantine/2026-10-30-bulk/meldado-elliot-hershoff-template.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "meldado-tribute.html",
+      "quarantine": "quarantine/2026-10-30-bulk/meldado-tribute.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "meldatho-publications.html",
+      "quarantine": "quarantine/2026-10-30-bulk/meldatho-publications.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "melodies-friday-evening.html",
+      "quarantine": "quarantine/2026-10-30-bulk/melodies-friday-evening.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "melodies-rosh-hashanah.html",
+      "quarantine": "quarantine/2026-10-30-bulk/melodies-rosh-hashanah.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "melodies-yom-kippur.html",
+      "quarantine": "quarantine/2026-10-30-bulk/melodies-yom-kippur.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "newsletter-archives.html",
+      "quarantine": "quarantine/2026-10-30-bulk/newsletter-archives.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "press-2022-centennial.html",
+      "quarantine": "quarantine/2026-10-30-bulk/press-2022-centennial.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "rabbi.html",
+      "quarantine": "quarantine/2026-10-30-bulk/rabbi.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "resources/melodies-friday-evening.html",
+      "quarantine": "quarantine/2026-10-30-bulk/resources/melodies-friday-evening.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "resources/melodies-rosh-hashanah.html",
+      "quarantine": "quarantine/2026-10-30-bulk/resources/melodies-rosh-hashanah.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "resources/melodies-yom-kippur.html",
+      "quarantine": "quarantine/2026-10-30-bulk/resources/melodies-yom-kippur.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "subscribe-newsletter.html",
+      "quarantine": "quarantine/2026-10-30-bulk/subscribe-newsletter.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "subscribe-torah.html",
+      "quarantine": "quarantine/2026-10-30-bulk/subscribe-torah.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    },
+    {
+      "original": "subscribe.html",
+      "quarantine": "quarantine/2026-10-30-bulk/subscribe.html",
+      "reason": "HTML not linked from main website",
+      "retained_copy": ""
+    }
+  ],
   "skipped": [],
   "recovery": "git mv quarantine/2026-10-30-bulk/<original-path> <original-path>"
 }
