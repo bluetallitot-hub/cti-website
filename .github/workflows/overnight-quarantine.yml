@@ -51,6 +51,33 @@ jobs:
               if p.startswith('assets/images/meldados/'):return 3
               return 10
           staging=lambda p:p.startswith(('assets/possible-duplicates/','assets/archive/generated/','assets/archive/unreviewed/')) or p=='CTI-014-THM-v2.png'
+          # Move orphan HTML, including old email preview pages, not linked from live site.
+          # Preserve admin HTML and pages reachable from homepage via local links.
+          from html.parser import HTMLParser
+          from urllib.parse import urlsplit,unquote
+          import posixpath
+          class LinkParser(HTMLParser):
+              def __init__(self):super().__init__();self.links=[]
+              def handle_starttag(self,tag,attrs):
+                  for k,v in attrs:
+                      if k in ('href','src') and v:self.links.append(v)
+          htmls={p for p in live if p.endswith('.html')}
+          linked=set(['index.html'])|{p for p in htmls if p.startswith('admin/')}
+          queue=list(linked)
+          while queue:
+              source=queue.pop()
+              raw=texts.get(source,'')
+              parser=LinkParser()
+              try:parser.feed(raw)
+              except Exception:pass
+              links=parser.links+re.findall(r'[A-Za-z0-9_./-]+\\.html',raw)
+              for url in links:
+                  u=urlsplit(url)
+                  if u.scheme or u.netloc:continue
+                  v=unquote(u.path)
+                  v=v.lstrip('/') if v.startswith('/') else posixpath.normpath(posixpath.join(posixpath.dirname(source),v))
+                  if v in htmls and v not in linked:linked.add(v);queue.append(v)
+          orphan_html={p for p in htmls if p not in linked and not p.startswith(('admin/','quarantine/'))}
           candidates={}
           # Expanded one-time cleanup: all unreferenced disposable staging files,
           # plus exact duplicate noncanonical images, including old collection thumbs.
@@ -71,6 +98,8 @@ jobs:
           for p in live:
               if staging(p) and not mentioned(p) and not p.startswith('quarantine/'):
                   candidates[p]=('unreferenced staging artifact','')
+          for p in orphan_html:
+              candidates[p]=('HTML not linked from main website','')
           date=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d')
           # Refuse to touch content used by code, metadata or human-facing pages.
           # git mv retains every byte under quarantine; no deletion commands are used.
@@ -79,7 +108,7 @@ jobs:
               if not Path(p).is_file():continue
               # A file is eligible only if no repository source references its path or filename.
               # This applies to staging assets as well as duplicate images.
-              if mentioned(p) or (not staging(p) and not extra(p) and not safe(p)):
+              if p not in orphan_html and (mentioned(p) or (not staging(p) and not extra(p) and not safe(p))):
                   skipped.append(p);continue
               dest='quarantine/2026-10-30-bulk/'+p
               Path(dest).parent.mkdir(parents=True,exist_ok=True)
