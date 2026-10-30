@@ -4634,6 +4634,22 @@
       "reviewStatus": "approved",
       "approved": true,
       "notes": "Name and Hebrew memorial day supplied directly; death year and Hebrew name not supplied."
+    },
+    {
+      "id": "newsletter-cindy-gibeley-tevet-21",
+      "englishName": "Cindy Gibeley",
+      "hebrewName": "",
+      "hebrewDay": 21,
+      "hebrewMonth": "Tevet",
+      "hebrewYearOfDeath": null,
+      "dateOfDeath": "",
+      "rememberedBy": "",
+      "biography": "",
+      "photo": "",
+      "source": "CTI Newsletter, Volume 56 No. 6, November 2026, Yahrzeit–Meldathos list",
+      "reviewStatus": "approved",
+      "approved": true,
+      "notes": "Listed under December Tevet as 21 Tevet (Gregorian December 31). Death year and Hebrew name not supplied."
     }
   ],
   "description": "CTI newsletter-sourced memorial names and Hebrew yahrzeit dates; no fictional sample records.",
