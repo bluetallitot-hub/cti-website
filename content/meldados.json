@@ -3357,15 +3357,17 @@
       "hebrewName": "",
       "hebrewDay": 25,
       "hebrewMonth": "Elul",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
-      "rememberedBy": "",
-      "biography": "",
+      "hebrewYearOfDeath": 5786,
+      "dateOfDeath": "2026-09-07",
+      "rememberedBy": "Obituary-listed relatives (not CTI memorial dedicators): wife Yvonne A. (Daw) Duerr; children Robbie (wife Debbie), Jeffrey and Laura; grandchildren Skye, Jonathan and William; parents Elmer and Philomena (Frank) Duerr; siblings Robert 'Bob' Duerr (wife Nancy), Susan 'Susie' Kaufold (husband Chuck), and Doug Duerr (wife Leslie).",
+      "biography": "David K. Duerr (August 14, 1957–September 7, 2026) was the son of Elmer and Philomena (Frank) Duerr and brother of CTI-connected Robert Duerr. David attended the University of Pittsburgh and worked as a software engineer. He and his wife Yvonne A. (Daw) Duerr were married for 45 years and raised Robbie, Jeffrey and Laura. He coached youth baseball and softball and volunteered at Prime Time Adult Day Care, assisting older adults and people living with dementia. His funeral-home obituary identifies his family, while CTI's November 2026 newsletter independently reports his September 7 death and names Robert Duerr as his brother. His religious affiliation and personal CTI membership are not established by these sources.",
       "photo": "",
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. 2026-10-31: Exact-person verification: David Henney Funeral Home obituary identifies David K. Duerr, died 2026-09-07, son of Elmer and Philomena (Frank) Duerr, brother of Robert 'Bob' (Nancy) Duerr; CTI November 2026 newsletter independently reports the death and calls Robert his brother. Gregorian 2026-09-07 corresponds to 25 Elul 5786 before sunset, matching canonical CTI 25 Elul; death time not supplied, no affirmative sunset conflict. Obituary: https://www.davidhenneyfuneralhome.com/obituary/David-Duerr ; CTI newsletter: https://bluetallitot-hub.github.io/cti-website/assets/resources/newsletters/2026/cti-newsletter-2026-11.pdf . Editorial discrepancy: same November newsletter's Kislev and Tevet lists also display 'David Duerr' on day 25; do not alter approved 25 Elul without source review. Funeral-home obituary includes a portrait, but rights not cleared; no photo published. No claim of Jewish affiliation, CTI membership or memorial dedication.",
+      "obituaryUrl": "https://www.davidhenneyfuneralhome.com/obituary/David-Duerr",
+      "familyFromObituary": true
     },
     {
       "id": "yahrzeit-josephromo-kislev-23",
