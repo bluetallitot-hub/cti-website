@@ -23,6 +23,8 @@ if(x.associatedSourceDocument?.path)add('Associated document',x.associatedSource
 if(x.pdf)add('Preserved PDF',x.pdf);
 for(const file of x.files||[])if(typeof file==='string')add('Attached file',file);else if(file?.path)add(file.label||'Attached file',file.path);
 for(const file of x.googleDriveSourceFiles||[])if(file.driveFileId)add(file.fileName||'Google Drive original','https://drive.google.com/file/d/'+encodeURIComponent(file.driveFileId)+'/view',true);
+for(const [kind,versions] of Object.entries(x.imageVersions||{})){const list=Array.isArray(versions)?versions:[versions];for(const v of list){if(typeof v==='string')add('Image version: '+kind,v);else if(v&&typeof v==='object')add('Image version: '+kind,v.path||v.url||v.file);}}
+for(const [kind,files] of Object.entries(x.assetInventory||{})){const list=Array.isArray(files)?files:[files];for(const v of list){if(typeof v==='string')add('Inventory: '+kind,v);else if(v&&typeof v==='object')add('Inventory: '+kind,v.path||v.url||v.file);}}
 if(!entries.length){container.textContent='No image or attached document registered';return}
 for(const item of entries){
  const figure=document.createElement('figure'),cap=document.createElement('figcaption'),heading=document.createElement('strong');
