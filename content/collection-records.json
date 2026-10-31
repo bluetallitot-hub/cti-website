@@ -612,7 +612,7 @@
       "collection": "gallery",
       "status": "active",
       "title": "CTI Kitchen Dedication — 2006",
-      "caption": "Three congregants pictured at the CTI kitchen dedication in 2006. The associated invitation announces a June 11, 2006 celebration honoring Sheryl Becker. Individuals in the photograph have not yet been identified.",
+      "caption": "CTI kitchen dedicated to Sheryl Becker in 2006.  Left to right Elliot Hershoff, Joanne Pressman, and Millie Becker. The invitation announces a June 11, 2006 celebration. ",
       "date": "June 11, 2006",
       "description": "Photograph from the CTI kitchen dedication, with the original dedication invitation preserved as a supporting document. The invitation identifies June 11, 2006 as the celebration date; the photograph's handwritten date should be checked separately.",
       "source": "CTI historical photograph collection (individual provenance unverified)",
@@ -621,7 +621,7 @@
       "transcript": "",
       "indexImage": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
       "archiveImage": "assets/images/gallery/cti-2006-kitchen-dedication-photo.png",
-      "pdf": null,
+      "pdf": "",
       "sourcePage": null,
       "originalFilenames": [
         "cti-2006-kitchen-dedication-photo.png"
@@ -828,7 +828,9 @@
       "driveReconciledDate": "2026-10-27",
       "photoCollectionStatus": "thumbnail-present-in-repository-awaiting-drive-staging",
       "onTimeline": true,
-      "timelineEvent": "2006 Kitchen Dedication"
+      "timelineEvent": "2006 Kitchen Dedication",
+      "providedBy": "",
+      "archiveAcknowledgment": ""
     },
     {
       "id": "CTI-009",
