@@ -216,13 +216,13 @@
   ],
   "CTI-018": [
     {
-      "path": "assets/heritage/CTI-018/CTI-018-ENH-1.png",
-      "type": "ENH",
-      "number": 1
+      "path": "assets/heritage/CTI-018/CTI-018-THM-2.png",
+      "type": "THM",
+      "number": 2
     },
     {
-      "path": "assets/heritage/CTI-018/CTI-018-ORG-1.png",
-      "type": "ORG",
+      "path": "assets/heritage/CTI-018/CTI-018-THM-1.png",
+      "type": "THM",
       "number": 1
     }
   ],
