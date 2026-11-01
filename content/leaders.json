@@ -414,7 +414,7 @@
       ],
       "introduction": "Wendy Tirck serves on CTI’s board and is part of the volunteer leadership sustaining the congregation.",
       "biography": "Wendy Tirck serves on CTI’s board and is part of the volunteer leadership sustaining the congregation.  She also manages the Ladies Auxiliary \"Happy Day Fund\" to send cards to acknowledge memorial donations, get well wishes, or other simchas.",
-      "photo": "assets/biographies/CTI-BIO-012/CTI-BIO-012-THM.jpg",
+      "photo": "",
       "role": "Board Member",
       "serviceYears": null,
       "links": {
@@ -424,14 +424,9 @@
         "current_leadership": 12
       },
       "ctiId": "CTI-BIO-012",
-      "thumbnailStatus": "published",
-      "photoOriginals": [
-        {
-          "number": 1,
-          "path": "assets/biographies/CTI-BIO-012/CTI-BIO-012-ORG-1.jpg"
-        }
-      ],
-      "originalPhoto": "assets/biographies/CTI-BIO-012/CTI-BIO-012-ORG-1.jpg",
+      "thumbnailStatus": "missing",
+      "photoOriginals": [],
+      "originalPhoto": "",
       "thumbnailSpecification": {
         "width": 600,
         "height": 800,
@@ -450,7 +445,7 @@
       ],
       "introduction": "Charter member of Congregation Tifereth Israel.",
       "biography": "",
-      "photo": "assets/biographies/CTI-BIO-013/CTI-BIO-013-THM.jpg",
+      "photo": "",
       "role": null,
       "serviceYears": "1922–1944",
       "links": {
@@ -463,14 +458,9 @@
       },
       "meldathoId": "newsletter-leon-eskenas-cheshvan",
       "ctiId": "CTI-BIO-013",
-      "thumbnailStatus": "published",
-      "photoOriginals": [
-        {
-          "number": 1,
-          "path": "assets/biographies/CTI-BIO-013/CTI-BIO-013-ORG-1.jpg"
-        }
-      ],
-      "originalPhoto": "assets/biographies/CTI-BIO-013/CTI-BIO-013-ORG-1.jpg",
+      "thumbnailStatus": "missing",
+      "photoOriginals": [],
+      "originalPhoto": "",
       "thumbnailSpecification": {
         "width": 600,
         "height": 800,
