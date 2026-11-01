@@ -13,7 +13,7 @@
   $('name').textContent=person.name;$('role').textContent=person.role||person.types?.map(t=>({'founder':'Founder','past_president':'Past President','current_leadership':'Current Leadership','historical_associate':'Historical Figure','past_rabbi':'Past Rabbi'})[t]||t).join(' · ')||'Leadership';
   document.title=person.name+' | CTI Leadership';
   if(person.introduction){const intro=document.createElement('p');intro.className='lead';intro.textContent=person.introduction;$('bio').append(intro)}
-  const validPhoto=path=>typeof path==='string'&&/^assets\\/biographies\\/CTI-BIO-\\d+\\/CTI-BIO-\\d+-(?:THM|ORG-\\d+)\\.(?:png|jpe?g|webp)$/i.test(path)&&!path.includes('..');
+  const validPhoto=path=>typeof path==='string'&&/^assets\/biographies\/CTI-BIO-\d+\/CTI-BIO-\d+-(?:THM|ORG-\d+)\.(?:png|jpe?g|webp)$/i.test(path)&&!path.includes('..');
   const originals=(person.photoOriginals||[]).filter(x=>Number.isInteger(x.number)&&validPhoto(x.path)).sort((a,b)=>a.number-b.number);
   const pictures=originals.length?originals.map(x=>x.path):validPhoto(person.photo)?[person.photo]:[];
   if(pictures.length){
