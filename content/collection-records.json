@@ -1853,7 +1853,7 @@
       "originalImageCaption": "Joseph Gibely in the sanctuary of Congregation Tifereth Israel.",
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/heritage/CTI-015/CTI-015-THM-1.png",
+      "thumbnailImage": "assets/new/CTI-BIO-026-THM.jpg",
       "preservationStatus": "source-scan-present-provenance-documented",
       "imageVersions": [
         {
@@ -1884,7 +1884,7 @@
         "retouched": true
       },
       "existingImageCandidate": "assets/images/gallery/cti-1976-joseph-gibely-photo-enhanced.png",
-      "thumbnailStatus": "filename-matched-thumbnail-present-in-google-drive-dimensions-not-independently-verified",
+      "thumbnailStatus": "Published thumbnail uses CTI-BIO-026 portrait from assets/new",
       "originalStatus": "filename-matched-original-present-in-google-drive-content-not-independently-verified",
       "assetInventory": {
         "sourceFiles": [
