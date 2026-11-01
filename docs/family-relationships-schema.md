@@ -29,3 +29,15 @@ Store directional parent-child links as parent_of. A relationship may have multi
 3. Save new evidence or update an existing relationship's sources without duplication.
 4. Keep obituary-derived relatives out of Remembered by; only CTI-authoritative memorial acknowledgments update that field.
 5. Flag uncertain identity matches for human review.
+
+## Unified identity and legacy ID compatibility
+Use one permanent PersonID for each person, living or deceased. A memorial is a separate record that references a person; it is not a second person identity.
+
+Proposed new ID namespaces (examples only; do not assign until records are created):
+- PersonID: `CTI-P-000001`
+- MeldathoID (new namespace): `CTI-M-000001`
+- HouseholdID: `CTI-H-000001`
+- RelationshipID: `CTI-R-000001`
+- MemorialAcknowledgmentID: `CTI-A-000001`
+
+Keep existing `content/meldados.json` record IDs unchanged as immutable legacy IDs; never silently replace or renumber them. When migrating, add a distinct new `meldathoId` and nullable `personId`, with a one-to-one legacy-ID mapping and uniqueness constraints. A PersonID can exist without a Meldatho. Memorial acknowledgments link `meldathoId` to `personId` when the remembering person's identity is confirmed; otherwise retain the historical text and source without guessing an ID. All new identifiers are opaque keys, not name/date encodings. Preserve referential integrity, subscription references, and redirects during any eventual migration.
