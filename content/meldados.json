@@ -161,7 +161,7 @@
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. "
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-11-01 human reconciliation: likely duplicate listing of Regina Havia / Havio; paired record submitted-regina-havio-av-12. Preserve both original approved source records until safe merge of subscriptions/references; do not count as two distinct individuals in research."
     },
     {
       "id": "newsletter-rachel-gibely-av",
@@ -277,7 +277,7 @@
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. "
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-11-01 human reconciliation: likely duplicate listing of Gertrude Gibely / Gibley; paired record submitted-gertrude-gibley-av-21. Preserve both original approved source records until safe merge of subscriptions/references; do not count as two distinct individuals in research."
     },
     {
       "id": "newsletter-samuel-pappos-av",
@@ -635,7 +635,7 @@
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. "
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. 2026-11-01 human reconciliation: likely duplicate listing of Charles Donald (Don) Romo; paired record submitted-charles-donald-romo-tishrei-4. Preserve both original approved source records until safe merge of subscriptions/references; do not count as two distinct individuals in research."
     },
     {
       "id": "newsletter-elliot-hershoff-tishrei",
@@ -1249,9 +1249,9 @@
       "biography": "",
       "photo": "assets/images/meldados/newsletter-joseph-gibely-ii-cheshvan.jpg",
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
-      "reviewStatus": "approved",
+      "reviewStatus": "needs_review",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. "
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied.  2026-11-01 human reconciliation requested: candidate civil death 2003-11-04 corresponds to 9 Cheshvan 5764; suffix II not independently confirmed. Preserve CTI date and existing photo; do not publish candidate death date until exact-person suffix verification."
     },
     {
       "id": "newsletter-libby-gans-cheshvan",
@@ -4590,7 +4590,7 @@
       "source": "CTI Meldathos additions supplied October 21, 2026",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial day supplied directly; death year and Hebrew name not supplied."
+      "notes": "Name and Hebrew memorial day supplied directly; death year and Hebrew name not supplied. 2026-11-01 human reconciliation: likely duplicate listing of Regina Havia / Havio; paired record newsletter-regina-havia-av. Preserve both original approved source records until safe merge of subscriptions/references; do not count as two distinct individuals in research."
     },
     {
       "id": "submitted-gertrude-gibley-av-21",
@@ -4606,7 +4606,7 @@
       "source": "CTI Meldathos additions supplied October 21, 2026",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial day supplied directly; death year and Hebrew name not supplied."
+      "notes": "Name and Hebrew memorial day supplied directly; death year and Hebrew name not supplied. 2026-11-01 human reconciliation: likely duplicate listing of Gertrude Gibely / Gibley; paired record newsletter-gertrude-gibely-av. Preserve both original approved source records until safe merge of subscriptions/references; do not count as two distinct individuals in research."
     },
     {
       "id": "submitted-charles-donald-romo-tishrei-4",
@@ -4622,7 +4622,7 @@
       "source": "CTI Meldathos additions supplied October 21, 2026",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial day supplied directly; death year and Hebrew name not supplied."
+      "notes": "Name and Hebrew memorial day supplied directly; death year and Hebrew name not supplied. 2026-11-01 human reconciliation: likely duplicate listing of Charles Donald (Don) Romo; paired record newsletter-charles-don-romo-tishrei. Preserve both original approved source records until safe merge of subscriptions/references; do not count as two distinct individuals in research."
     },
     {
       "id": "submitted-leonard-rosenberg-sivan-23",
