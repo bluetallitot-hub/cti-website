@@ -467,13 +467,13 @@ if(url.pathname==='/meldados/delete'&&request.method==='POST'){
  if(typeof b.recordId!=='string'||!/^[a-zA-Z0-9_-]{1,150}$/.test(b.recordId)||typeof b.expectedSha!=='string'||typeof b.confirmName!=='string')return respond({error:'Invalid removal request'},400);
  const file=await gh(env,'content/meldados.json');
  if(file.sha!==b.expectedSha)return respond({error:'Memorials changed since you loaded this page. Reload before removing.'},409);
- const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\\s/g,''))));
+ const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
  const index=doc.people.findIndex(p=>p.id===b.recordId);
  if(index<0)return respond({error:'Memorial not found'},404);
  const person=doc.people[index];
  if(person.englishName.trim()!==b.confirmName.trim())return respond({error:'Confirmation name does not match'},400);
  doc.people.splice(index,1);
- await save(env,'content/meldados.json',JSON.stringify(doc,null,2)+'\\n',file.sha,'Remove duplicate memorial: '+person.id+' ('+person.englishName+')');
+ await save(env,'content/meldados.json',JSON.stringify(doc,null,2)+'\n',file.sha,'Remove duplicate memorial: '+person.id+' ('+person.englishName+')');
  return respond({ok:true,removedId:person.id});
 }
 if(url.pathname==='/meldados/portrait'&&request.method==='POST'){const b=await request.json();if(typeof b.recordId!=='string'||!b.recordId.match(/^[a-zA-Z0-9_-]{1,150}$/)||typeof b.image!=='string'||b.image.length>1400000||!/^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(b.image))return respond({error:'Invalid portrait'},400);const file=await gh(env,'content/meldados.json');const doc=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));const person=doc.people.find(p=>p.id===b.recordId);if(!person||role==='congregant'&&!['approved','published','stub'].includes(person.reviewStatus))return respond({error:'Memorial not editable'},403);const path='assets/images/meldados/portraits/'+b.recordId+'.jpg';let sha;try{sha=(await gh(env,path)).sha}catch(e){if(e.status!==404)throw e}await gh(env,path,'PUT',{message:'Update memorial portrait: '+b.recordId,content:b.image.split(',')[1],sha,branch:'main'});const fresh=await gh(env,'content/meldados.json');const current=JSON.parse(new TextDecoder().decode(un64(fresh.content.replace(/\s/g,''))));const p=current.people.find(x=>x.id===b.recordId);p.photo=path;await save(env,'content/meldados.json',JSON.stringify(current,null,2)+'\n',fresh.sha,'Publish memorial portrait: '+b.recordId);return respond({ok:true})}
