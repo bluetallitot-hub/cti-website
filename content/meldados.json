@@ -1340,15 +1340,17 @@
       "hebrewName": "",
       "hebrewDay": 11,
       "hebrewMonth": "Cheshvan",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
+      "hebrewYearOfDeath": 5781,
+      "dateOfDeath": "2020-10-29",
       "rememberedBy": "",
-      "biography": "",
+      "biography": "Donald Joseph “E.M.” Deveau (December 19, 1931–October 29, 2020) grew up in Saugus, Massachusetts, and served in the U.S. Air Force as a radar specialist during the Korean War. He worked for the telephone company for 37 years, retiring in 1989. His wife, Gloria Ann (Lima) Deveau, predeceased him. In later life he shared 18 years of companionship with Adele Shakelford of Peabody, identified as Adele Shackelford in CTI's own newsletter. His obituary names his daughters Michelle Gallant and Robin Felton, their husbands Philip and Jeff, and seven grandchildren. He died in Halfmoon, New York. The CTI memorial date is 11 Cheshvan; his reported civil date corresponds to 11 Cheshvan 5781 before sunset. The actual time of death is not documented.",
       "photo": "",
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. "
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied.  2026-11-01 exact-match research: Legacy obituary (2020-11-04) https://www.legacy.com/us/obituaries/legacyremembers/donald-deveau-obituary?id=7714439 identifies Donald Joseph Deveau (2020-10-29), 18-year companion Adele Shakelford of Peabody; CTI primary newsletter https://ctipeabody.org/newsletter.pdf independently confirms Adele Shackelford in Ladies Auxiliary and lists Donald Deveau at 11 Cheshvan. Gregorian date maps to 11 Cheshvan 5781 before sunset; actual time unknown, CTI Hebrew memorial date retained. Obituary-listed relatives are biographical only, not a memorial dedication. No verified photo or reproduction rights; leave photo blank.",
+      "obituaryUrl": "https://www.legacy.com/us/obituaries/legacyremembers/donald-deveau-obituary?id=7714439",
+      "familyFromObituary": true
     },
     {
       "id": "newsletter-sheila-sprinsky-cheshvan",
