@@ -575,8 +575,8 @@
       "id": "CTI-006",
       "collection": "archive",
       "status": "inactive",
-      "title": "Peabody's Tifereth Israel to mark its 100th anniversary",
-      "caption": "Former president Elliot Hershoff, his wife Doris Hershoff, and cantorial soloist Joanne Pressman at the Tifereth Israel ark.",
+      "title": "Peabody's Congregation Tifereth Israel to mark its 100th anniversary",
+      "caption": "Former president Elliot Hershoff, his wife Doris Hershoff, and cantorial soloist Joanne Pressman at the Congregation Tifereth Israel ark.",
       "date": "",
       "description": "Steven A. Rosenberg's Jewish Journal feature on Congregation Tifereth Israel's centennial celebration in Saugus, Sephardic Turkish founding families, Ladino customs, early prayer locations, 1955 Pierpont Street synagogue, Ashkenazi membership, Zoom services and congregational continuity. Includes a photograph of Elliot and Doris Hershoff with Joanne Pressman at the ark.",
       "source": "Jewish Journal; Steven A. Rosenberg; exact issue date and page not visible in supplied clipping.",
@@ -605,7 +605,9 @@
       "transcriptionStatus": "substantially-complete-from-high-resolution-scan",
       "originalImage": "CTI-006-ORG-1.jpeg",
       "editorialStatus": "inactive-awaiting-better-photo",
-      "publication": "Jewish Journal"
+      "publication": "Jewish Journal",
+      "providedBy": "",
+      "archiveAcknowledgment": ""
     },
     {
       "id": "CTI-007",
