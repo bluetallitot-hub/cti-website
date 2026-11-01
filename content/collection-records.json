@@ -2679,7 +2679,7 @@
       "originalImageCaption": "IN SEARCH OF A HOME — Small synagogue remembers a big part of history",
       "originalCaptionCorrections": [],
       "restoredImage": null,
-      "thumbnailImage": "assets/new/CTI-BIO-026-THM.jpg",
+      "thumbnailImage": "assets/heritage/CTI-020/CTI-020-THM-2.svg",
       "preservationStatus": "repository-source-file-present-originality-unverified",
       "imageVersions": [
         {
@@ -2702,6 +2702,12 @@
           "fileName": "CTI-020-THM-1.png",
           "derivedFrom": "CTI-020-ENH-1.png",
           "note": "Approved landscape portrait thumbnail; GitHub replacement pending"
+        },
+        {
+          "type": "THM",
+          "version": 2,
+          "path": "assets/heritage/CTI-020/CTI-020-THM-2.svg",
+          "note": "800x600 landscape presentation of verified Joseph Gibely II portrait, original preserved"
         }
       ],
       "thumbnailSpecification": {
