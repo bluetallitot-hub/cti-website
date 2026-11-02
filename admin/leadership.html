@@ -14,11 +14,7 @@ $('photo').onchange=async()=>{
  const selected=current;
  try{
   if(!/^image\/(jpeg|png|webp)$/.test(file.type))throw Error('Select a JPEG, PNG or WebP image.');
-  const bmp=await createImageBitmap(file),canvas=document.createElement('canvas');canvas.width=600;canvas.height=800;
-  const ctx=canvas.getContext('2d');ctx.fillStyle='#f7f3eb';ctx.fillRect(0,0,600,800);
-  const scale=Math.min(600/bmp.width,800/bmp.height),w=bmp.width*scale,h=bmp.height*scale;
-  ctx.drawImage(bmp,(600-w)/2,(800-h)/2,w,h);bmp.close();
-  const thumb=canvas.toDataURL('image/jpeg',0.88).split(',')[1];
+  const thumb=await CTICrop(file,600,800);if(!thumb)return;
   const original=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result).split(',')[1]);reader.onerror=()=>reject(Error('Could not read original photograph'));reader.readAsDataURL(file)});
   if(original.length>11000000)throw Error('Original is too large (maximum approximately 8 MB).');
   $('photo-preview').src='data:image/jpeg;base64,'+thumb;
