@@ -2681,13 +2681,20 @@
           "originalName": "Vintage Speaker at the Podium.png",
           "active": true,
           "version": 1
+        },
+        {
+          "slot": "thumbnailImage",
+          "path": "assets/heritage/CTI-020/CTI-020-THM-1.png",
+          "originalName": "CTI-020-IMG-1.png",
+          "active": true,
+          "version": 1
         }
       ],
       "originalImage": "assets/archive/originals/cti-1992-in-search-of-a-home-stitched.jpg",
       "originalImageCaption": "IN SEARCH OF A HOME — Small synagogue remembers a big part of history",
       "originalCaptionCorrections": [],
       "restoredImage": "assets/collections/CTI-020-IMG-1.png",
-      "thumbnailImage": "assets/heritage/CTI-020/CTI-020-THM-2.svg",
+      "thumbnailImage": "assets/heritage/CTI-020/CTI-020-THM-1.png",
       "preservationStatus": "repository-source-file-present-originality-unverified",
       "imageVersions": [
         {
@@ -2709,7 +2716,8 @@
           "driveFileId": "1uNScHyAV_gbhUhebFCe8h0nkNxdAtT_1",
           "fileName": "CTI-020-THM-1.png",
           "derivedFrom": "CTI-020-ENH-1.png",
-          "note": "Approved landscape portrait thumbnail; GitHub replacement pending"
+          "note": "Website thumbnail from uploaded CTI-020-IMG-1.png; original upload preserved",
+          "path": "assets/heritage/CTI-020/CTI-020-THM-1.png"
         },
         {
           "type": "THM",
