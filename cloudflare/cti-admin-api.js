@@ -462,7 +462,7 @@ return respond({ok:true,message:'Memorial changes published to GitHub'});
 }catch(e){return respond({error:'Memorial update failed at '+stage+': '+(e?.message||'Unknown error')},500)}
 }
 if(url.pathname==='/meldados/delete'&&request.method==='POST'){
- if(!['rabbi','secretary','board'].includes(role))return respond({error:'Only administrators may remove memorials'},403);
+ if(!['rabbi','secretary'].includes(role))return respond({error:'Only the rabbi or secretary may remove memorials'},403);
  const b=await request.json();
  if(typeof b.recordId!=='string'||!/^[a-zA-Z0-9_-]{1,150}$/.test(b.recordId)||typeof b.expectedSha!=='string'||typeof b.confirmName!=='string')return respond({error:'Invalid removal request'},400);
  const file=await gh(env,'content/meldados.json');
