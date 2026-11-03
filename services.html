@@ -29,7 +29,7 @@ const time=d=>new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',t
 const dateText=key=>new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(key+'T12:00:00Z'));
 const source=(label,link)=>{sourceLabel.replaceChildren(document.createTextNode('Candle-lighting source: '));if(link){const a=document.createElement('a');a.href=link;a.textContent=label;a.target='_blank';a.rel='noopener';sourceLabel.append(a)}else sourceLabel.append(document.createTextNode(label));sourceLabel.append(document.createTextNode('. Times for Peabody, Massachusetts. Local customs may vary.'))};
 function nextFridayKey(){const now=new Date(),today=dayKey(now),weekday=new Date(today+'T12:00:00Z').getUTCDay(),offset=(5-weekday+7)%7;const d=new Date(today+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+offset);return d.toISOString().slice(0,10)}
-function fallback(){return fetch('content/shabbat-times-fallback.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Newsletter schedule unavailable');return r.json()}).then(data=>{const key=nextFridayKey(),value=data.candleLighting&&data.candleLighting[key];if(!value)throw Error('No newsletter time for '+key);heading.textContent='Shabbat';dateLabel.textContent='Friday evening, '+dateText(key);candlesLabel.textContent='Candle lighting: '+value;havdalahLabel.textContent='Havdalah: Time unavailable';source(data.source||'CTI Newsletter',data.sourceUrl)})}
+function fallback(){return fetch('content/shabbat-times-fallback.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Newsletter schedule unavailable');return r.json()}).then(data=>{const key=nextFridayKey(),value=data.candleLighting&&data.candleLighting[key];if(!value)throw Error('No newsletter time for '+key);heading.textContent='Shabbat';dateLabel.textContent='Friday evening, '+dateText(key);candlesLabel.textContent='Candle lighting: '+value;havdalahLabel.textContent='';source(data.source||'CTI Newsletter',data.sourceUrl)})}
 fetch(url).then(r=>{if(!r.ok)throw Error('Hebcal unavailable');return r.json()}).then(data=>{
 const items=Array.isArray(data.items)?data.items:[],now=Date.now();
 const candles=items.filter(x=>x.category==='candles'&&Number.isFinite(Date.parse(x.date))&&Date.parse(x.date)>=now-86400000).sort((a,b)=>Date.parse(a.date)-Date.parse(b.date));
@@ -40,7 +40,7 @@ const parasha=items.find(x=>x.category==='parashat'&&Math.abs(Date.parse(x.date)
 heading.textContent=parasha?'Shabbat '+parasha.title.replace(/^Parashat\s+/i,''):'Shabbat';
 const havdalah=items.filter(x=>x.category==='havdalah'&&Date.parse(x.date)>stamp&&Date.parse(x.date)-stamp<3*86400000).sort((a,b)=>Date.parse(a.date)-Date.parse(b.date))[0];
 candlesLabel.textContent='Candle lighting: '+time(candle);
-havdalahLabel.textContent='Havdalah: '+(havdalah?time(new Date(havdalah.date)):'Time unavailable');
+havdalahLabel.textContent=havdalah?'Havdalah: '+time(new Date(havdalah.date)):'';
 source('Hebcal','https://www.hebcal.com/home/197/shabbat-times-rest-api');
 }).catch(()=>fallback().catch(()=>{heading.textContent='Shabbat';dateLabel.textContent='';candlesLabel.textContent='Shabbat times are temporarily unavailable.';havdalahLabel.textContent='';source('Unavailable',null)}));
 })();</script></body></html>
