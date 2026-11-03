@@ -6,7 +6,7 @@ const fmt=new Intl.DateTimeFormat('en-u-ca-hebrew',{month:'long',day:'numeric',y
 const normalize=m=>(m||'').replace(/^Adar(?: I| II)?$/,'Adar').replace(/Heshvan/,'Cheshvan').replace(/Tamuz/,'Tammuz').replace(/Tishri/,'Tishrei').replace(/Nissan/,'Nisan');
 const parts=date=>{const p=fmt.formatToParts(date);return{month:normalize(p.find(x=>x.type==='month').value),day:Number(p.find(x=>x.type==='day').value),year:p.find(x=>x.type==='year').value}};
 const txt=(tag,value,cls)=>{const n=document.createElement(tag);n.textContent=value;if(cls)n.className=cls;return n};
-const approved=r=>r.reviewStatus==='approved'||r.reviewStatus==='published'||r.reviewStatus==='stub';
+const approved=r=>r.approved===true||r.reviewStatus==='approved'||r.reviewStatus==='published'||r.reviewStatus==='stub';
 let records=[],selected=0,active=null,services=[];
 function monthRecords(){return records.filter(r=>normalize(r.hebrewMonth)===months[selected]).sort((a,b)=>a.hebrewDay-b.hebrewDay||a.englishName.localeCompare(b.englishName))}
 function meldadoWeekDates(){const now=new Date();const localNoon=new Date(now.getFullYear(),now.getMonth(),now.getDate(),12);const sunday=new Date(localNoon);sunday.setDate(sunday.getDate()-sunday.getDay());const dates=new Set();for(let i=0;i<7;i++){const date=new Date(sunday);date.setDate(sunday.getDate()+i);const h=parts(date);dates.add(h.month+':'+h.day)}return dates}
