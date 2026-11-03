@@ -134,18 +134,19 @@
     {
       "id": "newsletter-nathaniel-blue-av",
       "englishName": "Nathaniel Blue",
-      "hebrewName": "",
+      "hebrewName": "נתנאל דוד בן יצחק הלוי",
       "hebrewDay": 11,
       "hebrewMonth": "Av",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
-      "rememberedBy": "",
+      "hebrewYearOfDeath": 2020,
+      "dateOfDeath": "2020-07-31",
+      "rememberedBy": "Phillip Blue\nMiriam Blue",
       "biography": "",
       "photo": "",
       "source": "CTI Yahrzeit–Meldathos newsletter lists, July–August and September–October 2026 (scans supplied October 20, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. "
+      "notes": "Memorial day and month transcribed from CTI newsletter; death year and Hebrew name not supplied. ",
+      "dateOfBirth": "1988-10-10"
     },
     {
       "id": "newsletter-regina-havia-av",
