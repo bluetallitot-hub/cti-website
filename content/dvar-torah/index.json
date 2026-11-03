@@ -126,7 +126,8 @@
       "category": "weekly",
       "podcast": null,
       "legacyIds": [],
-      "status": "published"
+      "status": "unpublished",
+      "published": false
     },
     {
       "holidayCode": "RH1",
