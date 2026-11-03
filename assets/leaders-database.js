@@ -15,7 +15,7 @@
    const card=document.createElement('article');card.className='card leader-card heritage-person';
    const custom=typeof person.customPageLink==='string'&&/^[a-zA-Z0-9][a-zA-Z0-9/_-]*\.html(?:#[a-zA-Z0-9_-]+)?$/.test(person.customPageLink)&&!person.customPageLink.includes('..')?person.customPageLink:null;
    const memorial=person.meldathoId&&/^[a-z0-9-]+$/.test(person.meldathoId)?'meldado-person.html?id='+encodeURIComponent(person.meldathoId):null;
-   const profile=memorial||custom||'leader-profile.html?id='+encodeURIComponent(person.id);
+   const profile=memorial&&['past_president','past_rabbi','founder'].includes(category)?memorial+'&from=leadership':memorial||custom||'leader-profile.html?id='+encodeURIComponent(person.id);
    if(person.photo&&/^assets\/(images|archive|heritage|biographies)\/[a-zA-Z0-9_./% -]+(?:png|jpe?g|webp)(?:\?[^<>]*)?$/.test(person.photo)&&!person.photo.includes('..')){
     const link=document.createElement('a');link.href=profile;const img=document.createElement('img');img.className='leader-photo';img.src=person.photo;img.alt=person.name;img.loading='lazy';img.onerror=()=>{link.replaceWith(Object.assign(document.createElement('div'),{className:'leader-photo-placeholder',textContent:'Portrait unavailable'}))};link.append(img);card.append(link);
    }else{const placeholder=document.createElement('div');placeholder.className='leader-photo-placeholder';placeholder.textContent='Portrait unavailable';card.append(placeholder)}
