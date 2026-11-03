@@ -1,0 +1,18 @@
+{
+  "timezone": "America/New_York",
+  "location": "Peabody, Massachusetts",
+  "source": "CTI Newsletter",
+  "issue": "November 2026",
+  "sourceUrl": "https://bluetallitot-hub.github.io/cti-website/assets/resources/newsletters/2026/cti-newsletter-2026-11.pdf",
+  "candleLighting": {
+    "2026-11-06": "4:13 PM",
+    "2026-11-13": "4:06 PM",
+    "2026-11-20": "4:00 PM",
+    "2026-11-27": "3:56 PM",
+    "2026-12-04": "3:54 PM",
+    "2026-12-11": "3:54 PM",
+    "2026-12-18": "3:55 PM",
+    "2026-12-25": "3:59 PM"
+  },
+  "note": "Only candle-lighting times appear in this issue; Havdalah must not be attributed to the newsletter."
+}
