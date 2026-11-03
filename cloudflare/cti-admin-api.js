@@ -96,7 +96,7 @@ async function sendMeldathoReminders(env,now=new Date()){
 /* Reader scheduler: private KV-backed queue; never store unpublished Markdown on public GitHub. */
 const torahQueue=env=>{if(!env.CTI_TORAH_QUEUE)throw Object.assign(Error('Private CTI_TORAH_QUEUE KV binding is not configured'),{status:503});return env.CTI_TORAH_QUEUE};
 const torahRecordKey=r=>r.holidayCode?'holiday-'+String(r.holidayCode).toLowerCase()+'-'+r.year+'-'+String(r.name).toLowerCase().replace(/[^a-z0-9]+/g,'-'):'torah-'+r.book+'-'+String(r.portion).padStart(2,'0')+'-'+r.year;
-const torahDecode=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\\s/g,''))));
+const torahDecode=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
 const torahNYParts=d=>Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(d).filter(p=>p.type!=='literal').map(p=>[p.type,p.value]));
 const torahNYInstant=(date,time)=>{const target=date+'T'+time;let t=Date.parse(target+':00Z');for(let i=0;i<4;i++){const p=torahNYParts(new Date(t)),actual=p.year+'-'+p.month+'-'+p.day+'T'+p.hour+':'+p.minute;t+=Math.round((Date.parse(target+':00Z')-Date.parse(actual+':00Z'))/60000)*60000}const p=torahNYParts(new Date(t));if(p.year+'-'+p.month+'-'+p.day+'T'+p.hour+':'+p.minute!==target)throw Error('Invalid Eastern publication time');return new Date(t).toISOString()};
 const torahServiceFriday=async(env,date)=>{const file=await gh(env,'content/services.json');const doc=torahDecode(file);const services=doc.services||[],overrides=doc.overrides||[];const cancelled=new Set(overrides.filter(x=>x.cancelled).map(x=>x.id));const friday=services.filter(x=>x.date===date&&!cancelled.has(x.id)&&!x.cancelled&&x.status!=='cancelled'&&/shabbat|friday|kabbalat|erev/i.test(x.description||''));const amended=overrides.filter(x=>x.date===date&&!x.cancelled&&/shabbat|friday|kabbalat|erev/i.test(x.description||''));if(friday.length||amended.length)return true;
@@ -104,12 +104,12 @@ const torahServiceFriday=async(env,date)=>{const file=await gh(env,'content/serv
 const hp=new Intl.DateTimeFormat('en-u-ca-hebrew',{timeZone:'UTC',day:'numeric',month:'long',year:'numeric'});
 const start=new Date(date+'T12:00:00Z');for(let n=-40;n<=0;n++){const d=new Date(start.getTime()+n*86400000);const h=hp.formatToParts(d);if(Number(h.find(p=>p.type==='day')?.value)!==1)continue;const sat=new Date(d.getTime()+((6-d.getUTCDay()+7)%7)*86400000),fri=new Date(sat.getTime()-86400000);if(fri.toISOString().slice(0,10)!==date)continue;const id='monthly:'+h.find(p=>p.type==='year')?.value+'-'+h.find(p=>p.type==='month')?.value;if(cancelled.has(id))return false;const override=overrides.find(x=>x.id===id);if(override)return !override.cancelled&&override.date===date;const manual=services.some(x=>x.description==='Monthly Shabbat Service'&&Math.abs(Date.parse(x.date+'T12:00:00Z')-start.getTime())<40*86400000);if(!manual)return true}
 return false};
-const torahScheduleTime=async(env,date,override)=>{if(!/^\\d{4}-\\d{2}-\\d{2}$/.test(date)||new Date(date+'T12:00:00Z').getUTCDay()!==5)throw Error('Publication date must be a Friday');const service=await torahServiceFriday(env,date);const defaultTime=service?'21:30':'15:00';if(override&& !/^([01]\\d|2[0-3]):[0-5]\\d$/.test(override))throw Error('Invalid publication time');return {date,time:override||defaultTime,service,releaseAt:torahNYInstant(date,override||defaultTime)}};
+const torahScheduleTime=async(env,date,override)=>{if(!/^\d{4}-\\d{2}-\\d{2}$/.test(date)||new Date(date+'T12:00:00Z').getUTCDay()!==5)throw Error('Publication date must be a Friday');const service=await torahServiceFriday(env,date);const defaultTime=service?'21:30':'15:00';if(override&& !/^([01]\d|2[0-3]):[0-5]\\d$/.test(override))throw Error('Invalid publication time');return {date,time:override||defaultTime,service,releaseAt:torahNYInstant(date,override||defaultTime)}};
 async function torahRelease(env,item){const kv=torahQueue(env);const current=await kv.get('reader:'+item.recordId,'json');if(!current||current.status!=='pending'||current.revision!==item.revision||Date.parse(current.releaseAt)>Date.now())return;
 try{const idx=await gh(env,'content/dvar-torah/index.json'),catalog=torahDecode(idx),entry=catalog.items.find(x=>torahRecordKey(x)===item.recordId);if(!entry)throw Error('Reader catalog entry missing');const path=current.sourcePath;let source=null;try{source=await gh(env,path)}catch(e){if(e.status!==404)throw e}
 if(source&&current.sourceSha&&source.sha!==current.sourceSha)throw Error('Source changed since approval');
-if(!source||new TextDecoder().decode(un64(source.content.replace(/\\s/g,'')))!==current.content)await save(env,path,current.content,source?.sha,'Release scheduled CTI Reader: '+item.recordId);
-if(entry.status!=='published'||entry.published===false){entry.status='published';delete entry.published;await save(env,'content/dvar-torah/index.json',JSON.stringify(catalog,null,2)+'\\n',idx.sha,'Publish scheduled CTI Reader index: '+item.recordId)}
+if(!source||new TextDecoder().decode(un64(source.content.replace(/\s/g,'')))!==current.content)await save(env,path,current.content,source?.sha,'Release scheduled CTI Reader: '+item.recordId);
+if(entry.status!=='published'||entry.published===false){entry.status='published';delete entry.published;await save(env,'content/dvar-torah/index.json',JSON.stringify(catalog,null,2)+'\n',idx.sha,'Publish scheduled CTI Reader index: '+item.recordId)}
 await kv.put('reader:'+item.recordId,JSON.stringify({...current,status:'published',publishedAt:new Date().toISOString(),content:undefined}));
 }catch(e){await kv.put('reader:'+item.recordId,JSON.stringify({...current,status:'failed',error:e.message,failedAt:new Date().toISOString()}));throw e}}
 async function torahRunQueue(env){if(!env.CTI_TORAH_QUEUE)return;let cursor;do{const page=await env.CTI_TORAH_QUEUE.list({prefix:'reader:',cursor});for(const key of page.keys){const item=await env.CTI_TORAH_QUEUE.get(key.name,'json');if(item?.status==='pending'&&Date.parse(item.releaseAt)<=Date.now())try{await torahRelease(env,item)}catch(e){console.error('Reader release failed',item.recordId,e.message)}}cursor=page.list_complete?undefined:page.cursor}while(cursor)}
@@ -382,6 +382,23 @@ if(url.pathname==='/torah/podcast'&&request.method==='POST'){
 }
 // Reader Edition: protected three-stage editorial workflow. Direct commits are forbidden.
 if(url.pathname==='/torah/commit')return respond({error:'Direct Markdown commits are disabled. Use Save Draft, Approve, Publish.'},410);
+if(url.pathname==='/torah/schedule'&&request.method==='GET'){
+ if(!permitted(role,'torah'))return respond({error:'Access not permitted'},403);
+ const id=url.searchParams.get('recordId');if(!/^[-a-z0-9]{3,100}$/.test(id||''))return respond({error:'Invalid record'},400);
+ const item=await torahQueue(env).get('reader:'+id,'json');if(!item)return respond({item:null});
+ const {content,...publicItem}=item;return respond({item:publicItem});
+}
+if(url.pathname==='/torah/schedule'&&request.method==='POST'){
+ if(!permitted(role,'torah'))return respond({error:'Access not permitted'},403);
+ const b=await request.json(),id=b.recordId;if(!/^[-a-z0-9]{3,100}$/.test(id||''))return respond({error:'Invalid record'},400);
+ const kv=torahQueue(env),current=await kv.get('reader:'+id,'json');if(!current)return respond({error:'No scheduled Reader exists'},404);
+ if(!['pending','failed'].includes(current.status))return respond({error:'Only pending or failed releases may be changed'},409);
+ if(b.action==='cancel'){await kv.put('reader:'+id,JSON.stringify({...current,status:'cancelled',content:undefined}));return respond({ok:true,status:'cancelled'})}
+ if(b.action!=='reschedule')return respond({error:'Invalid schedule action'},400);
+ const schedule=await torahScheduleTime(env,b.date,b.time||null);if(Date.parse(schedule.releaseAt)<=Date.now())return respond({error:'Choose a future release'},400);
+ await kv.put('reader:'+id,JSON.stringify({...current,...schedule,status:'pending',error:null,revision:crypto.randomUUID()}));
+ return respond({ok:true,status:'pending',...schedule});
+}
 if(['/torah/draft','/torah/approve','/torah/publish'].includes(url.pathname)){
  if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
  const body=request.method==='POST'?await request.json():{};
@@ -395,34 +412,27 @@ if(['/torah/draft','/torah/approve','/torah/publish'].includes(url.pathname)){
  const bookNames=['','Genesis','Exodus','Leviticus','Numbers','Deuteronomy'];
  const sourcePath=item.holidayCode?'content/dvar-torah/Holiday/'+item.holidayCode+'-'+String(item.year).slice(-2)+' ('+item.name+')-Reader.md':'content/dvar-torah/'+bookNames[item.book]+'/'+item.book+'-'+String(item.portion).padStart(2,'0')+'-'+String(item.year).slice(-2)+'-Reader ('+item.name+').md';
  const draftPath='content/dvar-torah/editorial-drafts/'+recordId+'.json';
- let draftFile=null,draft=null;
- try{draftFile=await gh(env,draftPath);draft=JSON.parse(new TextDecoder().decode(un64(draftFile.content.replace(/\s/g,''))))}catch(e){if(e.status!==404)throw e}
+ const kv=torahQueue(env);let draft=await kv.get('draft:'+recordId,'json');const draftFile=draft?{sha:draft.revision}:null;
  if(request.method==='GET'&&url.pathname==='/torah/draft')return respond({draft,sha:draftFile?.sha||null});
  if(request.method!=='POST')return respond({error:'Method not allowed'},405);
  if(url.pathname==='/torah/draft'){
   if(typeof body.content!=='string'||!body.content.trim()||body.content.length>200000||typeof body.sourceSha!=='string'||!/^[a-f0-9]{40}$/.test(body.sourceSha))return respond({error:'Invalid draft content'},400);
   if((body.expectedDraftSha||null)!==(draftFile?.sha||null))return respond({error:'Draft changed. Reload before saving.'},409);
-  const source=await gh(env,sourcePath);
-  if(source.sha!==body.sourceSha)return respond({error:'Published Reader Edition changed. Reload before saving.'},409);
+  let source=null;try{source=await gh(env,sourcePath)}catch(e){if(e.status!==404)throw e}
+  if((source?.sha||'unpublished')!==body.sourceSha)return respond({error:'Published Reader Edition changed. Reload before saving.'},409);
   const next={recordId,sourcePath,sourceSha:source.sha,content:body.content,approved:false,updatedAt:new Date().toISOString()};
-  const saved=await save(env,draftPath,JSON.stringify(next,null,2)+'\n',draftFile?.sha,'Save CTI editorial draft: '+recordId);
-  return respond({ok:true,sha:saved.content.sha,approved:false});
+  next.revision=crypto.randomUUID();await kv.put('draft:'+recordId,JSON.stringify(next));return respond({ok:true,sha:next.revision,approved:false});
  }
  if(!draft||!draftFile)return respond({error:'Save a draft first'},409);
  if(body.expectedDraftSha!==draftFile.sha)return respond({error:'Draft changed. Reload before continuing.'},409);
  if(url.pathname==='/torah/approve'){
-  if(draft.approved)return respond({ok:true,sha:draftFile.sha,approved:true});
-  draft.approved=true;draft.approvedAt=new Date().toISOString();
-  const saved=await save(env,draftPath,JSON.stringify(draft,null,2)+'\n',draftFile.sha,'Approve CTI editorial draft: '+recordId);
-  return respond({ok:true,sha:saved.content.sha,approved:true});
+  if(draft.approved)return respond({ok:true,sha:draft.revision,approved:true});
+  const schedule=await torahScheduleTime(env,body.date,body.time||null);if(Date.parse(schedule.releaseAt)<=Date.now())return respond({error:'Choose a future release'},400);
+  draft.approved=true;draft.approvedAt=new Date().toISOString();draft.revision=crypto.randomUUID();
+  await kv.put('draft:'+recordId,JSON.stringify(draft));await kv.put('reader:'+recordId,JSON.stringify({recordId,sourcePath,sourceSha:draft.sourceSha,content:draft.content,status:'pending',revision:crypto.randomUUID(),...schedule}));
+  return respond({ok:true,sha:draft.revision,approved:true,scheduled:true,...schedule});
  }
- if(!draft.approved)return respond({error:'Draft must be approved before publishing'},409);
- const source=await gh(env,sourcePath);
- if(source.sha!==draft.sourceSha)return respond({error:'Published source changed since drafting. Reload and review.'},409);
- const saved=await save(env,sourcePath,draft.content,source.sha,'Publish approved CTI Reader Edition: '+recordId);
- draft.approved=false;draft.publishedCommit=saved.commit.sha;draft.publishedAt=new Date().toISOString();draft.sourceSha=saved.content.sha;
- await save(env,draftPath,JSON.stringify(draft,null,2)+'\n',draftFile.sha,'Archive published CTI editorial draft: '+recordId);
- return respond({ok:true,sha:saved.content.sha,commit:saved.commit.sha});
+ return respond({error:'Immediate publishing is disabled. Approve and schedule the Reader.'},410);
 }
 if(url.pathname==='/github-check'&&request.method==='GET'){if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);const f=await gh(env,'content/meldados.json');return respond({ok:true,repository:env.GITHUB_REPOSITORY,sha:f.sha,access:'read'});}
 if(url.pathname==='/meldados/state'&&request.method==='GET'){const f=await gh(env,'content/meldados.json');return respond({sha:f.sha,people:JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,'')))).people})}
