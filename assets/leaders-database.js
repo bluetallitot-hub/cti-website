@@ -24,7 +24,7 @@
    const title=document.createElement('h3');const a=document.createElement('a');a.href=profile;a.textContent=person.name;title.append(a);copy.append(title);
    if(person.serviceYears&&['past_president','past_rabbi'].includes(category)){const p=document.createElement('p');p.className='meta';p.textContent='Years of service: '+person.serviceYears;copy.append(p)}
    if(person.introduction){const p=document.createElement('p');p.className='leader-introduction';const intro=person.introduction.trim();p.textContent=intro.length>300?intro.slice(0,297).replace(/\s+\S*$/,'')+'…':intro;copy.append(p)}
-   const more=document.createElement('a');more.className='textlink';more.href=profile;more.textContent=memorial?'View Meldatho →':person.id==='rabbi-phillip-blue'?'Rabbi’s Corner →':'Biography →';copy.append(more);card.append(copy);frag.append(card);
+   const more=document.createElement('a');more.className='textlink';more.href=profile;more.textContent=memorial?'View Meldatho →':person.id==='rabbi-phillip-blue'?'Rabbi’s Corner →':'Biography →';copy.append(more);if(['past_president','past_rabbi'].includes(category)){const archive=person.links?.archive;if(typeof archive==='string'&&/^historical-record\.html\?id=[a-zA-Z0-9_-]+$/.test(archive)){const link=document.createElement('a');link.className='textlink';link.href=archive;link.textContent='Historical archive →';const p=document.createElement('p');p.append(link);copy.append(p)}}card.append(copy);frag.append(card);
   }
   grid.replaceChildren(frag);
   }
