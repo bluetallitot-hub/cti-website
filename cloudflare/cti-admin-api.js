@@ -783,9 +783,36 @@ if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
  }else{
    await gh(env,path,'PUT',{message:'Upload '+title,content:b.pdf,branch:'main'});
  }
+
+ // Newsletter observances never modify the authoritative Meldathos database.
+ let candleTimesSaved=0,meldathosMatched=0;
+ const extracted=b.extracted&&typeof b.extracted==='object'?b.extracted:{};
+ if(Array.isArray(extracted.meldathos)&&extracted.meldathos.length){
+  const mf=await gh(env,'content/meldados.json');
+  const md=JSON.parse(new TextDecoder().decode(un64(mf.content.replace(/\\s/g,''))));
+  const norm=v=>String(v||'').toLowerCase().replace(/[^a-z]/g,'');
+  const names=new Set((md.people||[]).map(x=>norm(x.englishName)).filter(Boolean));
+  meldathosMatched=extracted.meldathos.filter(x=>x&&typeof x.name==='string'&&names.has(norm(x.name))).length;
+ }
+ if(extracted.candleLighting&&typeof extracted.candleLighting==='object'&&!Array.isArray(extracted.candleLighting)){
+  const fallbackPath='content/shabbat-times-fallback.json';
+  let f=null;
+  try{f=await gh(env,fallbackPath)}catch(e){if(e.status!==404)throw e}
+  const fallback=f?JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\\s/g,'')))):{timezone:'America/New_York',location:'Peabody, Massachusetts',candleLighting:{}};
+  const next={...(fallback.candleLighting||{})};
+  for(const [d,t] of Object.entries(extracted.candleLighting)){
+   if(!/^\\d{4}-\\d{2}-\\d{2}$/.test(d)||!/^\\d{1,2}:[0-5]\\d PM$/.test(t)||d.slice(0,4)!==b.month.slice(0,4)||Object.keys(extracted.candleLighting).length>16)continue;
+   const dt=new Date(d+'T12:00:00Z');if(!Number.isFinite(dt.getTime())||dt.toISOString().slice(0,10)!==d||dt.getUTCDay()!==5)continue;
+   next[d]=t;candleTimesSaved++;
+  }
+  if(candleTimesSaved){
+   fallback.candleLighting=next;fallback.source='CTI Newsletter';fallback.issue=title;fallback.sourceUrl=siteOrigin(env)+'/'+path;
+   await gh(env,fallbackPath,'PUT',{message:'Update newsletter Shabbat times from '+title,content:btoa(unescape(encodeURIComponent(JSON.stringify(fallback,null,2)+'\\n'))),...(f?{sha:f.sha}:{}),branch:'main'});
+  }
+ }
  data.issues.unshift({title,date,volume:String(b.volume||'').slice(0,80),description:'CTI congregational newsletter.',url:path});
  await save(env,'content/newsletters.json',JSON.stringify(data,null,2)+'\n',index.sha,'Publish '+title);
- return respond({ok:true,title,reusedExistingPdf});
+ return respond({ok:true,title,reusedExistingPdf,candleTimesSaved,meldathosMatched});
 }
 
 const decodeCollection=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
