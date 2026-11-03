@@ -1,0 +1,31 @@
+name: CTI Friday Reader release — Chayei Sarah
+on:
+  schedule:
+    - cron: '*/5 20 * * 5'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: cti-reader-release-2026-11-06
+  cancel-in-progress: false
+jobs:
+  publish-reader:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Publish only at or after Friday 3 PM Eastern
+        run: python3 scripts/release-chayei-sarah-2026.py
+      - name: Commit approved Reader and optional verified podcast
+        run: |
+          if git diff --quiet -- content/dvar-torah/index.json && [ ! -f 'content/dvar-torah/Genesis/1-05-26-Reader (Chayei Sarah).md' ]; then
+            echo 'Nothing due or already published'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add content/dvar-torah/index.json 'content/dvar-torah/Genesis/1-05-26-Reader (Chayei Sarah).md'
+          git commit -m 'Release Chayei Sarah Reader after Friday 3 PM Eastern'
+          git pull --rebase origin main
+          git push origin HEAD:main
