@@ -114,6 +114,21 @@
       "status": "published"
     },
     {
+      "book": 1,
+      "portion": 5,
+      "year": 2026,
+      "name": "Chayei Sarah",
+      "date": "2026-11-06",
+      "description": "Abraham trusts, Eliezer seeks reassurance, and Rebecca chooses to go without demanding certainty.",
+      "title": "Faith Without Conditions",
+      "eyebrow": "D’var Torah · Chayei Sarah · November 2026",
+      "byline": "A Reader’s Edition · Rabbi Phillip Blue",
+      "category": "weekly",
+      "podcast": null,
+      "legacyIds": [],
+      "status": "published"
+    },
+    {
       "holidayCode": "RH1",
       "year": 2026,
       "name": "Pakad",
