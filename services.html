@@ -37,7 +37,7 @@ if(!candles.length)throw Error('No upcoming candle-lighting time');
 const candle=new Date(candles[0].date),stamp=candle.getTime();
 dateLabel.textContent='Friday evening, '+dateText(dayKey(candle));
 const parasha=items.find(x=>x.category==='parashat'&&Math.abs(Date.parse(x.date)-stamp)<3*86400000);
-heading.textContent=parasha?'Shabbat '+parasha.title.replace(/^Parashat\\s+/i,''):'Shabbat';
+heading.textContent=parasha?'Shabbat '+parasha.title.replace(/^Parashat\s+/i,''):'Shabbat';
 const havdalah=items.filter(x=>x.category==='havdalah'&&Date.parse(x.date)>stamp&&Date.parse(x.date)-stamp<3*86400000).sort((a,b)=>Date.parse(a.date)-Date.parse(b.date))[0];
 candlesLabel.textContent='Candle lighting: '+time(candle);
 havdalahLabel.textContent='Havdalah: '+(havdalah?time(new Date(havdalah.date)):'Time unavailable');
