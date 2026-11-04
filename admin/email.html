@@ -54,7 +54,7 @@ pdf.onchange=async()=>{
 };
 button.onclick=async()=>{
  if(!issue||!pdf.files?.[0])return;
- const year=Number(yearInput.value),volume=volumeInput.value.trim(),number=numberInput.value.trim();if(!Number.isInteger(year)||year<1900||year>2100||!monthInput.value){uploadStatus.textContent='Please enter a valid month and year.';return}if((volume&&!/^\d{1,4}$/.test(volume))||(number&&!/^\d{1,3}$/.test(number))){uploadStatus.textContent='Please enter valid volume and issue numbers.';return}const correctedMonth=year+'-'+monthInput.value,correctedVolume=volume?'Volume '+volume+(number?', No. '+number:''):(number?'No. '+number:'');
+ const year=Number(yearInput.value),volume=volumeInput.value.trim(),number=numberInput.value.trim();if(!Number.isInteger(year)||year<1900||year>2100||!monthInput.value){uploadStatus.textContent='Please enter a valid month and year.';return}if(!/^\d{1,4}$/.test(volume)||!/^\d{1,2}$/.test(number)){uploadStatus.textContent='Please enter valid volume and issue numbers.';return}const correctedMonth=year+'-'+monthInput.value,correctedVolume=volume?'Volume '+volume+(number?', No. '+number:''):(number?'No. '+number:'');
  button.disabled=true;uploadStatus.textContent='Uploading the original newsletter PDF…';
  try{
   const bytes=new Uint8Array(await pdf.files[0].arrayBuffer());
@@ -64,7 +64,7 @@ button.onclick=async()=>{
   const extract=window.CTINewsletterExtract.extract(pages,correctedMonth);
   let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));
   const result=await CTIAuth.api('/newsletter/upload',{pdf:btoa(binary),month:correctedMonth,volume:Number(volume),issueNumber:Number(number),extracted:extract});
-  uploadStatus.textContent=result.title+' archived successfully. '+(result.candleTimesSaved||0)+' candle-lighting times saved; '+(result.meldathosMatched||0)+' Meldathos matched without changes. Website updates may take a few minutes.';
+  uploadStatus.textContent=result.title+' archived successfully. Website updates may take a few minutes.';
   issue=null;pdf.value='';details.hidden=true;await refreshIssues('assets/newsletters/'+year+'/'+year+'-vol'+volume+'-issue'+number+'.pdf');
  }catch(e){uploadStatus.textContent='Upload unsuccessful: '+e.message;button.disabled=false}
 };
