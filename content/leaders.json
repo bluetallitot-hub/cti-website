@@ -811,6 +811,10 @@
         {
           "number": 1,
           "path": "assets/biographies/CTI-BIO-026/CTI-BIO-026-ORG-1.png"
+        },
+        {
+          "number": 2,
+          "path": "assets/biographies/CTI-BIO-026/CTI-BIO-026-ORG-2.jpg"
         }
       ],
       "activeOriginal": null,
