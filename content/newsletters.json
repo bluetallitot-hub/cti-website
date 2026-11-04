@@ -4,29 +4,379 @@
       "title": "November 2026 Newsletter",
       "date": "2026-11-01",
       "volume": "Volume 56, No. 6",
+      "year": 2026,
+      "issue": 6,
       "description": "CTI congregational newsletter.",
-      "url": "assets/resources/newsletters/2026/cti-newsletter-2026-11.pdf"
-    },
-    {
-      "title": "May 2026 Newsletter",
-      "date": "2026-05-01",
-      "volume": "Volume 56, No. 3",
-      "description": "CTI congregational newsletter.",
-      "url": "assets/resources/newsletters/2026/cti-newsletter-2026-05.pdf"
+      "url": "assets/newsletters/2026/2026-vol56-issue6.pdf"
     },
     {
       "title": "September 2026 Newsletter",
       "date": "2026-09-01",
       "volume": "Volume 56, No. 5",
-      "description": "Includes September and October congregational news, service dates, announcements, birthdays, anniversaries, and Meldathos.",
-      "url": "assets/resources/newsletters/2026/cti-newsletter-september-2026.pdf"
+      "year": 2026,
+      "issue": 5,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2026/2026-vol56-issue5.pdf"
     },
     {
       "title": "July 2026 Newsletter",
       "date": "2026-07-01",
       "volume": "Volume 56, No. 4",
-      "description": "Includes July and August congregational news and service information.",
-      "url": "assets/resources/newsletters/2026/cti-newsletter-july-2026.pdf"
+      "year": 2026,
+      "issue": 4,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2026/2026-vol56-issue4.pdf"
+    },
+    {
+      "title": "May 2026 Newsletter",
+      "date": "2026-05-01",
+      "volume": "Volume 56, No. 3",
+      "year": 2026,
+      "issue": 3,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2026/2026-vol56-issue3.pdf"
+    },
+    {
+      "title": "March 2026 Newsletter",
+      "date": "2026-03-01",
+      "volume": "Volume 56, No. 2",
+      "year": 2026,
+      "issue": 2,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2026/2026-vol56-issue2.pdf"
+    },
+    {
+      "title": "January 2026 Newsletter",
+      "date": "2026-01-01",
+      "volume": "Volume 56, No. 1",
+      "year": 2026,
+      "issue": 1,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2026/2026-vol56-issue1.pdf"
+    },
+    {
+      "title": "November 2025 Newsletter",
+      "date": "2025-11-01",
+      "volume": "Volume 55, No. 6",
+      "year": 2025,
+      "issue": 6,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2025/2025-vol55-issue6.pdf"
+    },
+    {
+      "title": "September 2025 Newsletter",
+      "date": "2025-09-01",
+      "volume": "Volume 55, No. 5",
+      "year": 2025,
+      "issue": 5,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2025/2025-vol55-issue5.pdf"
+    },
+    {
+      "title": "July 2025 Newsletter",
+      "date": "2025-07-01",
+      "volume": "Volume 55, No. 4",
+      "year": 2025,
+      "issue": 4,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2025/2025-vol55-issue4.pdf"
+    },
+    {
+      "title": "May 2025 Newsletter",
+      "date": "2025-05-01",
+      "volume": "Volume 55, No. 3",
+      "year": 2025,
+      "issue": 3,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2025/2025-vol55-issue3.pdf"
+    },
+    {
+      "title": "March 2025 Newsletter",
+      "date": "2025-03-01",
+      "volume": "Volume 55, No. 2",
+      "year": 2025,
+      "issue": 2,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2025/2025-vol55-issue2.pdf"
+    },
+    {
+      "title": "January 2025 Newsletter",
+      "date": "2025-01-01",
+      "volume": "Volume 55, No. 1",
+      "year": 2025,
+      "issue": 1,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2025/2025-vol55-issue1.pdf"
+    },
+    {
+      "title": "November 2024 Newsletter",
+      "date": "2024-11-01",
+      "volume": "Volume 54, No. 6",
+      "year": 2024,
+      "issue": 6,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2024/2024-vol54-issue6.pdf"
+    },
+    {
+      "title": "September 2024 Newsletter",
+      "date": "2024-09-01",
+      "volume": "Volume 54, No. 5",
+      "year": 2024,
+      "issue": 5,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2024/2024-vol54-issue5.pdf"
+    },
+    {
+      "title": "July 2024 Newsletter",
+      "date": "2024-07-01",
+      "volume": "Volume 54, No. 4",
+      "year": 2024,
+      "issue": 4,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2024/2024-vol54-issue4.pdf"
+    },
+    {
+      "title": "May 2024 Newsletter",
+      "date": "2024-05-01",
+      "volume": "Volume 54, No. 3",
+      "year": 2024,
+      "issue": 3,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2024/2024-vol54-issue3.pdf"
+    },
+    {
+      "title": "March 2024 Newsletter",
+      "date": "2024-03-01",
+      "volume": "Volume 54, No. 2",
+      "year": 2024,
+      "issue": 2,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2024/2024-vol54-issue2.pdf"
+    },
+    {
+      "title": "January 2024 Newsletter",
+      "date": "2024-01-01",
+      "volume": "Volume 54, No. 1",
+      "year": 2024,
+      "issue": 1,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2024/2024-vol54-issue1.pdf"
+    },
+    {
+      "title": "November 2023 Newsletter",
+      "date": "2023-11-01",
+      "volume": "Volume 53, No. 6",
+      "year": 2023,
+      "issue": 6,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2023/2023-vol53-issue6.pdf"
+    },
+    {
+      "title": "September 2023 Newsletter",
+      "date": "2023-09-01",
+      "volume": "Volume 53, No. 5",
+      "year": 2023,
+      "issue": 5,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2023/2023-vol53-issue5.pdf"
+    },
+    {
+      "title": "July 2023 Newsletter",
+      "date": "2023-07-01",
+      "volume": "Volume 53, No. 4",
+      "year": 2023,
+      "issue": 4,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2023/2023-vol53-issue4.pdf"
+    },
+    {
+      "title": "May 2023 Newsletter",
+      "date": "2023-05-01",
+      "volume": "Volume 53, No. 3",
+      "year": 2023,
+      "issue": 3,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2023/2023-vol53-issue3.pdf"
+    },
+    {
+      "title": "March 2023 Newsletter",
+      "date": "2023-03-01",
+      "volume": "Volume 53, No. 2",
+      "year": 2023,
+      "issue": 2,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2023/2023-vol53-issue2.pdf"
+    },
+    {
+      "title": "January 2023 Newsletter",
+      "date": "2023-01-01",
+      "volume": "Volume 53, No. 1",
+      "year": 2023,
+      "issue": 1,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2023/2023-vol53-issue1.pdf"
+    },
+    {
+      "title": "November 2022 Newsletter",
+      "date": "2022-11-01",
+      "volume": "Volume 52, No. 6",
+      "year": 2022,
+      "issue": 6,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2022/2022-vol52-issue6.pdf"
+    },
+    {
+      "title": "September 2022 Newsletter",
+      "date": "2022-09-01",
+      "volume": "Volume 52, No. 5",
+      "year": 2022,
+      "issue": 5,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2022/2022-vol52-issue5.pdf"
+    },
+    {
+      "title": "July 2022 Newsletter",
+      "date": "2022-07-01",
+      "volume": "Volume 52, No. 4",
+      "year": 2022,
+      "issue": 4,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2022/2022-vol52-issue4.pdf"
+    },
+    {
+      "title": "May 2022 Newsletter",
+      "date": "2022-05-01",
+      "volume": "Volume 52, No. 3",
+      "year": 2022,
+      "issue": 3,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2022/2022-vol52-issue3.pdf"
+    },
+    {
+      "title": "March 2022 Newsletter",
+      "date": "2022-03-01",
+      "volume": "Volume 52, No. 2",
+      "year": 2022,
+      "issue": 2,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2022/2022-vol52-issue2.pdf"
+    },
+    {
+      "title": "January 2022 Newsletter",
+      "date": "2022-01-01",
+      "volume": "Volume 52, No. 1",
+      "year": 2022,
+      "issue": 1,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2022/2022-vol52-issue1.pdf"
+    },
+    {
+      "title": "November 2021 Newsletter",
+      "date": "2021-11-01",
+      "volume": "Volume 51, No. 6",
+      "year": 2021,
+      "issue": 6,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2021/2021-vol51-issue6.pdf"
+    },
+    {
+      "title": "September 2021 Newsletter",
+      "date": "2021-09-01",
+      "volume": "Volume 51, No. 5",
+      "year": 2021,
+      "issue": 5,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2021/2021-vol51-issue5.pdf"
+    },
+    {
+      "title": "July 2021 Newsletter",
+      "date": "2021-07-01",
+      "volume": "Volume 51, No. 4",
+      "year": 2021,
+      "issue": 4,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2021/2021-vol51-issue4.pdf"
+    },
+    {
+      "title": "May 2021 Newsletter",
+      "date": "2021-05-01",
+      "volume": "Volume 51, No. 3",
+      "year": 2021,
+      "issue": 3,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2021/2021-vol51-issue3.pdf"
+    },
+    {
+      "title": "March 2021 Newsletter",
+      "date": "2021-03-01",
+      "volume": "Volume 51, No. 2",
+      "year": 2021,
+      "issue": 2,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2021/2021-vol51-issue2.pdf"
+    },
+    {
+      "title": "January 2021 Newsletter",
+      "date": "2021-01-01",
+      "volume": "Volume 51, No. 1",
+      "year": 2021,
+      "issue": 1,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2021/2021-vol51-issue1.pdf"
+    },
+    {
+      "title": "November 2020 Newsletter",
+      "date": "2020-11-01",
+      "volume": "Volume 50, No. 6",
+      "year": 2020,
+      "issue": 6,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2020/2020-vol50-issue6.pdf"
+    },
+    {
+      "title": "September 2020 Newsletter",
+      "date": "2020-09-01",
+      "volume": "Volume 50, No. 5",
+      "year": 2020,
+      "issue": 5,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2020/2020-vol50-issue5.pdf"
+    },
+    {
+      "title": "July 2020 Newsletter",
+      "date": "2020-07-01",
+      "volume": "Volume 50, No. 4",
+      "year": 2020,
+      "issue": 4,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2020/2020-vol50-issue4.pdf"
+    },
+    {
+      "title": "May 2020 Newsletter",
+      "date": "2020-05-01",
+      "volume": "Volume 50, No. 3",
+      "year": 2020,
+      "issue": 3,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2020/2020-vol50-issue3.pdf"
+    },
+    {
+      "title": "March 2020 Newsletter",
+      "date": "2020-03-01",
+      "volume": "Volume 50, No. 2",
+      "year": 2020,
+      "issue": 2,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2020/2020-vol50-issue2.pdf"
+    },
+    {
+      "title": "January 2020 Newsletter",
+      "date": "2020-01-01",
+      "volume": "Volume 50, No. 1",
+      "year": 2020,
+      "issue": 1,
+      "description": "CTI congregational newsletter.",
+      "url": "assets/newsletters/2020/2020-vol50-issue1.pdf"
     }
   ]
 }
