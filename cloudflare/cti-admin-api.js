@@ -19,7 +19,7 @@ async function passwordCheck(input,secret){if(!secret)return false;const digest=
 async function issue(role,secret){const payload=b64(enc.encode(JSON.stringify({role,exp:Date.now()+8*3600e3,nonce:crypto.randomUUID()})));return payload+'.'+b64(await hmac(secret,payload))}
 const ADMIN_SESSION_KEY='auth:active-admin-session';
 const permitted=(role,area)=>({torah:['rabbi'],email:['rabbi','secretary'],schedule:['rabbi','secretary'],history:['rabbi','secretary','board'],meldados:['rabbi','secretary','board','congregant']})[area]?.includes(role)||false;
-const routeArea=path=>path.startsWith('/torah/')?'torah':path.startsWith('/newsletter/')||path==='/announcements/email'||path==='/congregational-email'||path==='/mailing-list'||path.startsWith('/unsubscribe/')||path.startsWith('/meldathos/reminder-')||path==='/meldathos/subscribers'?'email':path.startsWith('/events/')?'schedule':path.startsWith('/leadership/')||path.startsWith('/collections/')||path.startsWith('/master/')?'history':path.startsWith('/meldados/')?'meldados':null;
+const routeArea=path=>path.startsWith('/torah/')?'torah':(path==='/newsletter/upload'?'history':path.startsWith('/newsletter/')?'email':null)||path==='/announcements/email'||path==='/congregational-email'||path==='/mailing-list'||path.startsWith('/unsubscribe/')||path.startsWith('/meldathos/reminder-')||path==='/meldathos/subscribers'?'email':path.startsWith('/events/')?'schedule':path.startsWith('/leadership/')||path.startsWith('/collections/')||path.startsWith('/master/')?'history':path.startsWith('/meldados/')?'meldados':null;
 const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function verify(req,env){
  const token=(req.headers.get('authorization')||'').replace(/^Bearer\s+/i,'');
@@ -696,7 +696,7 @@ if(url.pathname==='/congregational-email'&&request.method==='POST'){
  if(!/^<div[\s>]/i.test(b.html.trim())||!b.html.includes('unsubscribe.html'))return respond({error:'Email template or unsubscribe link is missing'},400);
  let newsletterAttachment=null;
  if(b.type==='newsletter'){
-  if(typeof b.issueUrl!=='string'||!/^assets\/resources\/newsletters\/[0-9]{4}\/[a-zA-Z0-9._-]+\.pdf$/.test(b.issueUrl))return respond({error:'Select a valid archived newsletter PDF'},400);
+  if(typeof b.issueUrl!=='string'||!/^assets\/newsletters\/[0-9]{4}\/[a-zA-Z0-9._-]+\.pdf$/.test(b.issueUrl))return respond({error:'Select a valid archived newsletter PDF'},400);
   const archiveFile=await gh(env,'content/newsletters.json');
   const archive=JSON.parse(new TextDecoder().decode(un64(archiveFile.content.replace(/\s/g,''))));
   const issue=(archive.issues||[]).find(x=>x.url===b.issueUrl);
@@ -770,7 +770,7 @@ if(url.pathname==='/newsletter/email'&&request.method==='POST'){
  const archive=JSON.parse(new TextDecoder().decode(un64(file.content.replace(/\s/g,''))));
  const issue=archive.issues.find(i=>i.url===b.issueUrl);
  if(!issue)return respond({error:'Newsletter is not in the published archive'},404);
- if(!/^assets\/resources\/newsletters\/[0-9]{4}\/[a-zA-Z0-9._-]+\.pdf$/.test(issue.url))return respond({error:'Invalid archived newsletter path'},400);
+ if(!/^assets\/newsletters\/[0-9]{4}\/[a-zA-Z0-9._-]+\.pdf$/.test(issue.url))return respond({error:'Invalid archived newsletter path'},400);
  const list=JSON.parse(await env.CTI_MAILING_LISTS.get('congregation')||'[]');
  const eligible=await Promise.all(list.filter(s=>typeof s==='string').map(async s=>({email:s.trim().toLowerCase(),blocked:!!(await env.CTI_MAILING_LISTS.get('unsubscribed:'+s.trim().toLowerCase()))})));
  const recipients=[...new Set(eligible.filter(s=>!s.blocked).map(s=>s.email).filter(s=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)))];
@@ -792,61 +792,30 @@ if(url.pathname==='/newsletter/email'&&request.method==='POST'){
  return respond({ok:true,title:issue.title,recipientCount:recipients.length,sentAt:new Date().toISOString()});
 }
 if(url.pathname==='/newsletter/upload'&&request.method==='POST'){
- if(!permitted(role,routeArea(url.pathname)||'history'))return respond({error:'Access not permitted for this role'},403);
+ if(!permitted(role,'history'))return respond({error:'Access not permitted'},403);
  const b=await request.json();
- if(typeof b.pdf!=='string'||b.pdf.length>10500000||!b.pdf.startsWith('JVBERi0'))return respond({error:'Select a PDF smaller than 7 MB'},400);
- if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(b.month||''))return respond({error:'Newsletter month not identified'},400);
- const date=b.month+'-01',title=new Date(date+'T12:00:00Z').toLocaleString('en-US',{month:'long',year:'numeric',timeZone:'UTC'})+' Newsletter';
- const path='assets/resources/newsletters/'+b.month.slice(0,4)+'/cti-newsletter-'+b.month+'.pdf';
+ if(typeof b.pdf!=='string'||b.pdf.length>10500000||!/^JVBERi0[A-Za-z0-9+/]*={0,2}$/.test(b.pdf))return respond({error:'Select a PDF smaller than 7 MB'},400);
+ if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(b.month||''))return respond({error:'Enter a valid publication month and year'},400);
+ const year=Number(b.month.slice(0,4)),volume=Number(b.volume),number=Number(b.issueNumber??b.number);
+ if(year<1900||year>2100||!Number.isInteger(volume)||volume<1||volume>9999||!Number.isInteger(number)||number<1||number>99)return respond({error:'Year, volume, and issue number are required'},400);
+ const bytes=un64(b.pdf);
+ if(bytes.length>7*1024*1024||bytes.length<5||new TextDecoder().decode(bytes.slice(0,5))!=='%PDF-')return respond({error:'Invalid PDF file'},400);
+ const date=b.month+'-01',path='assets/newsletters/'+year+'/'+year+'-vol'+volume+'-issue'+number+'.pdf';
+ const title=new Date(date+'T12:00:00Z').toLocaleString('en-US',{month:'long',year:'numeric',timeZone:'UTC'})+' Newsletter';
  const index=await gh(env,'content/newsletters.json');
  const data=JSON.parse(new TextDecoder().decode(un64(index.content.replace(/\s/g,''))));
- if(data.issues.some(x=>x.date===date))return respond({error:'This month already has a newsletter'},409);
- // An archived PDF may exist even when its index entry was removed.
- // Reuse only if the uploaded bytes match the existing Git blob exactly.
- let existing=null;
+ if(!Array.isArray(data.issues))return respond({error:'Newsletter index is invalid'},503);
+ if(data.issues.some(x=>x.url===path||x.year===year&&x.issue===number&&Number(String(x.volume||'').match(/Volume\s+(\d+)/i)?.[1])===volume))return respond({error:'This volume and issue already exists. Existing newsletters cannot be overwritten.'},409);
+ let existing;
  try{existing=await gh(env,path)}catch(e){if(e.status!==404)throw e}
- let reusedExistingPdf=false;
- if(existing){
-   const bytes=un64(b.pdf),prefix=enc.encode('blob '+bytes.length+'\0');
-   const blob=new Uint8Array(prefix.length+bytes.length);
-   blob.set(prefix);blob.set(bytes,prefix.length);
-   const hash=new Uint8Array(await crypto.subtle.digest('SHA-1',blob));
-   const sha=Array.from(hash,x=>x.toString(16).padStart(2,'0')).join('');
-   if(sha!==existing.sha)return respond({error:'A different PDF is already stored for this issue month. The original was preserved. Contact the administrator to review the conflict.'},409);
-   reusedExistingPdf=true;
- }else{
-   await gh(env,path,'PUT',{message:'Upload '+title,content:b.pdf,branch:'main'});
- }
-
- // Newsletter observances never modify the authoritative Meldathos database.
- let candleTimesSaved=0,meldathosMatched=0;
- const extracted=b.extracted&&typeof b.extracted==='object'?b.extracted:{};
- if(Array.isArray(extracted.meldathos)&&extracted.meldathos.length){
-  const mf=await gh(env,'content/meldados.json');
-  const md=JSON.parse(new TextDecoder().decode(un64(mf.content.replace(/\\s/g,''))));
-  const norm=v=>String(v||'').toLowerCase().replace(/[^a-z]/g,'');
-  const names=new Set((md.people||[]).map(x=>norm(x.englishName)).filter(Boolean));
-  meldathosMatched=extracted.meldathos.filter(x=>x&&typeof x.name==='string'&&names.has(norm(x.name))).length;
- }
- if(extracted.candleLighting&&typeof extracted.candleLighting==='object'&&!Array.isArray(extracted.candleLighting)){
-  const fallbackPath='content/shabbat-times-fallback.json';
-  let f=null;
-  try{f=await gh(env,fallbackPath)}catch(e){if(e.status!==404)throw e}
-  const fallback=f?JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\\s/g,'')))):{timezone:'America/New_York',location:'Peabody, Massachusetts',candleLighting:{}};
-  const next={...(fallback.candleLighting||{})};
-  for(const [d,t] of Object.entries(extracted.candleLighting)){
-   if(!/^\\d{4}-\\d{2}-\\d{2}$/.test(d)||!/^\\d{1,2}:[0-5]\\d PM$/.test(t)||d.slice(0,4)!==b.month.slice(0,4)||Object.keys(extracted.candleLighting).length>16)continue;
-   const dt=new Date(d+'T12:00:00Z');if(!Number.isFinite(dt.getTime())||dt.toISOString().slice(0,10)!==d||dt.getUTCDay()!==5)continue;
-   next[d]=t;candleTimesSaved++;
-  }
-  if(candleTimesSaved){
-   fallback.candleLighting=next;fallback.source='CTI Newsletter';fallback.issue=title;fallback.sourceUrl=siteOrigin(env)+'/'+path;
-   await gh(env,fallbackPath,'PUT',{message:'Update newsletter Shabbat times from '+title,content:btoa(unescape(encodeURIComponent(JSON.stringify(fallback,null,2)+'\\n'))),...(f?{sha:f.sha}:{}),branch:'main'});
-  }
- }
- data.issues.unshift({title,date,volume:String(b.volume||'').slice(0,80),description:'CTI congregational newsletter.',url:path});
- await save(env,'content/newsletters.json',JSON.stringify(data,null,2)+'\n',index.sha,'Publish '+title);
- return respond({ok:true,title,reusedExistingPdf,candleTimesSaved,meldathosMatched});
+ if(existing)return respond({error:'The PDF already exists at this location. No files were changed.'},409);
+ await gh(env,path,'PUT',{message:'Archive newsletter '+year+' volume '+volume+' issue '+number,content:b.pdf,branch:'main'});
+ const issue={title,date,volume:'Volume '+volume+', No. '+number,year,issue:number,description:'CTI congregational newsletter.',url:path};
+ data.issues.push(issue);
+ data.issues.sort((a,b)=>String(b.date).localeCompare(String(a.date))||Number(b.issue||0)-Number(a.issue||0));
+ try{await save(env,'content/newsletters.json',JSON.stringify(data,null,2)+'\n',index.sha,'Index newsletter '+year+' volume '+volume+' issue '+number)}
+ catch(e){return respond({error:'PDF was saved, but the archive index could not be updated. Ask an administrator to reconcile '+path+'. '+e.message,path,indexPending:true},409)}
+ return respond({ok:true,title,path,issue});
 }
 
 const decodeCollection=f=>JSON.parse(new TextDecoder().decode(un64(f.content.replace(/\s/g,''))));
