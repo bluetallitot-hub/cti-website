@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D’var Torah | Congregation Tifereth Israel</title>
+<meta name="description" content="Read the weekly D’var Torah from Congregation Tifereth Israel.">
+<link rel="stylesheet" href="assets/styles.css">
+<style>.torah-reading{max-width:850px;margin:0 auto;padding:24px 0 60px;font:18px/1.75 Georgia,serif}.torah-reading p{margin:0 0 1.3em}.torah-reading h2{font:700 1.5em/1.25 Georgia,serif;margin:1.8em 0 .65em}.torah-reading h1{font:700 1.9em/1.2 Georgia,serif}.torah-reading blockquote{border-left:3px solid #c8a34a;padding-left:20px;margin:1.4em 0}.torah-actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.torah-header{padding:28px 0 12px}.torah-header h1{margin:.3em 0}.torah-reading a{overflow-wrap:anywhere}</style>
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap nav"><a class="brand" href="index.html" aria-label="Congregation Tifereth Israel home"><img class="brand-logo" src="assets/images/branding/CTI-logo-web.png" alt="Congregation Tifereth Israel"></a><button class="menu" aria-label="Menu" aria-expanded="false">☰</button><nav class="links"><a href="about.html">About</a><a href="history.html">Our History</a><a href="leadership.html">Leadership Team</a><a href="services.html">Services</a><a href="meldados.html">Meldathos</a><a href="torah.html">Rabbi’s Corner</a><a href="resources.html">Resources</a><a class="givebtn" href="give.html">Give</a></nav></div></header>
+<main id="main"><section class="page-hero"><div class="wrap torah-header"><div class="eyebrow" id="eyebrow">D’var Torah</div><h1 id="title">Loading D’var Torah…</h1><p class="lead" id="byline"></p></div></section>
+<section><div class="wrap"><div class="torah-actions"><a class="btn" href="torah.html">← All D’vrei Torah</a><a id="podcast" class="btn" href="#" target="_blank" rel="noopener noreferrer" hidden>Listen to podcast ↗</a></div><article id="reading" class="content torah-reading" aria-live="polite"></article></div></section></main>
+<footer><div class="wrap"><p>Congregation Tifereth Israel · 8 Pierpont Street · Peabody, MA 01960</p></div></footer>
+<script src="assets/site.js"></script><script src="assets/torah-files.js"></script><script src="assets/torah-markdown.js"></script><script>
+(async function(){
+ const title=document.getElementById('title'),reading=document.getElementById('reading');
+ try{
+ const id=new URLSearchParams(location.search).get('id');
+ if(!id)throw Error('No D’var Torah was selected.');
+ const response=await fetch('content/dvar-torah/index.json',{cache:'no-store'});
+ if(!response.ok)throw Error('The D’var Torah catalog could not be loaded.');
+ const catalog=await response.json(),record=CTITorahFiles.find(catalog.items||[],id);
+ if(!record||record.status!=='published')throw Error('This D’var Torah is not available.');
+ const path=CTITorahFiles.path(record,'Reader');
+ const file=await fetch(path);
+ if(!file.ok)throw Error('The published Reader Edition is temporarily unavailable.');
+ const markdown=await file.text();
+ title.textContent=record.title||record.name;document.title=(record.title||record.name)+' | CTI';
+ document.getElementById('eyebrow').textContent=record.eyebrow||'D’var Torah';
+ document.getElementById('byline').textContent=record.byline||'Rabbi Phillip Blue';
+ // The title is displayed in the page heading; do not duplicate its Markdown H1.
+ reading.innerHTML=CTITorahMarkdown.render(markdown.replace(/^\s*#\s+[^\n]+\n/, '').trim());
+ const link=record.podcast;
+ if(typeof link==='string'&&/^https:\/\//.test(link)){const a=document.getElementById('podcast');a.href=link;a.hidden=false;}
+ }catch(e){title.textContent='D’var Torah unavailable';reading.textContent=e.message;console.error(e)}
+})();
+</script></body></html>
