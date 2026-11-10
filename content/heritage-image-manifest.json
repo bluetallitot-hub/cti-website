@@ -228,11 +228,6 @@
   ],
   "CTI-020": [
     {
-      "path": "assets/heritage/CTI-020/CTI-020-ENH-1.png",
-      "type": "ENH",
-      "number": 1
-    },
-    {
       "path": "assets/heritage/CTI-020/CTI-020-ORG-1.jpg",
       "type": "ORG",
       "number": 1
