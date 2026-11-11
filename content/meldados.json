@@ -3904,15 +3904,16 @@
       "hebrewName": "",
       "hebrewDay": 26,
       "hebrewMonth": "Kislev",
-      "hebrewYearOfDeath": null,
-      "dateOfDeath": "",
+      "hebrewYearOfDeath": 5780,
+      "dateOfDeath": "2019-12-24",
       "rememberedBy": "",
-      "biography": "",
+      "biography": "Daniel Charles (“Danny”) Leavitt of Peabody died on December 24, 2019. Congregation Tifereth Israel reported his passing in its January 2020 newsletter.",
       "photo": "",
       "source": "CTI Yahrzeit master list (uploaded October 21, 2026)",
       "reviewStatus": "approved",
       "approved": true,
-      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied."
+      "notes": "Name and Hebrew memorial date transcribed from CTI Yahrzeit list; death year and Hebrew name not supplied. Verified 2026-11-10: the Stanetsky-Hymanson funeral-home obituary identifies Daniel Charles “Danny” Leavitt of Peabody, died 2019-12-24. CTI January 2020 newsletter, p. 2, independently reports Daniel Leavitt’s death on December 24; March 2020 newsletter, p. 1, acknowledges the Leavitt family in memory of their father Daniel. 2019-12-24 corresponds to 26 Kislev 5780 before sunset; actual time of death not assumed. Preserve canonical 26 Kislev; January 2020 newsletter’s repeated listings in other months are retained for review. Sources: https://www.dignitymemorial.com/obituaries/salem-ma/danny-leavitt-8972712 ; https://bluetallitot-hub.github.io/cti-website/assets/newsletters/2020/2020-vol50-issue1.pdf ; https://bluetallitot-hub.github.io/cti-website/assets/newsletters/2020/2020-vol50-issue2.pdf. No photograph or memorial sponsorship inferred.",
+      "obituaryUrl": "https://www.dignitymemorial.com/obituaries/salem-ma/danny-leavitt-8972712"
     },
     {
       "id": "yahrzeit-williamhalperin-tevet-27",
