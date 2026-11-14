@@ -21,7 +21,7 @@ from PIL import Image, UnidentifiedImageError
 SHEET_ID = "1ve2v3XZQDXR7vWYFf-DAnciSQ9OhYofdjHbYjpXbv00"
 FOLDER_ID = "14XQDDeJW_3W_qXYiVPovwLff-e_FnJqA"
 SCOPES = ["https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/spreadsheets"]
-URL_RE = re.compile(r"https?://[^\\s<>\\\"']+")
+URL_RE = re.compile(r"https?://[^\s<>\"']+")
 EXT = {"JPEG": ".jpg", "PNG": ".png", "GIF": ".gif", "WEBP": ".webp", "TIFF": ".tif", "BMP": ".bmp"}
 MIME = {"JPEG": "image/jpeg", "PNG": "image/png", "GIF": "image/gif", "WEBP": "image/webp", "TIFF": "image/tiff", "BMP": "image/bmp"}
 MAX_BYTES = 40 * 1024 * 1024
@@ -189,7 +189,7 @@ def main():
                     {"range": f"'Obituary Research'!X{row_no}",
                      "values": [[f"SAVED — original {fmt} {dims[0]}x{dims[1]}; {len(data)} bytes; SHA256 {sha}"]]},
                     {"range": f"'Obituary Research'!Z{row_no}",
-                     "values": [[(cell(row,25) + "\\n" if cell(row,25) else "") +
+                     "values": [[(cell(row,25) + "\n" if cell(row,25) else "") +
                        f"{filename} | {link} | original source: {url} | SHA256: {sha}"]]}
                 ])
                 counts["saved"] += 1
@@ -205,7 +205,7 @@ def main():
                 body={"valueInputOption": "RAW", "data": updates}).execute()
             readback = rows_for_sheet(sheets)
             for change in updates:
-                match = re.search(r"!([XZ])(\\d+)$", change["range"])
+                match = re.search(r"!([XZ])(\d+)$", change["range"])
                 col, row_no = match.group(1), int(match.group(2))
                 idx = 23 if col == "X" else 25
                 if cell(readback[row_no-1], idx) != change["values"][0][0]:
