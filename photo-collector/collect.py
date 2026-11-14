@@ -101,7 +101,7 @@ def append_log(sheets, entries):
     if not entries:
         return
     stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    values = [[stamp, *item] for item in entries]
+    metadata = sheets.spreadsheets().get(spreadsheetId=SHEET_ID, fields="sheets(properties(title))").execute()\n    if not any(x["properties"]["title"] == "Photo Collection Log" for x in metadata.get("sheets", [])):\n        sheets.spreadsheets().batchUpdate(spreadsheetId=SHEET_ID, body={"requests": [{"addSheet": {"properties": {"title": "Photo Collection Log"}}}]}).execute()\n    values = [[stamp, *item] for item in entries]
     sheets.spreadsheets().values().append(spreadsheetId=SHEET_ID,
         range="'Photo Collection Log'!A:D", valueInputOption="RAW",
         insertDataOption="INSERT_ROWS", body={"values": values}).execute()
