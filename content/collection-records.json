@@ -4606,10 +4606,10 @@
       "id": "CTI-039",
       "collection": "gallery",
       "status": "active",
-      "title": "Robert Hasday and an unidentified woman — historical studio portrait",
-      "caption": "Robert Hasday, a founding member of Congregation Tifereth Israel, pictured with an unidentified woman in a historical studio portrait.",
+      "title": "Robert Hasday and Fannie Havian — historical studio portrait",
+      "caption": "Robert Hasday, a founding member of Congregation Tifereth Israel, with his wife, Fannie Havian, in a historical studio portrait.",
       "date": "Date unknown",
-      "description": "Historical studio portrait identified by the congregation as Robert Hasday with an unidentified woman. The woman's identity and photograph date have not been established. The original scan is preserved alongside AI-enhanced versions.",
+      "description": "Historical studio portrait identified by the congregation as Robert Hasday and his wife, Fannie Havian. The photograph date has not been established. The original scan is preserved alongside AI-enhanced versions.",
       "source": "Congregant-supplied historical photograph; original photographer and date unverified",
       "citation": "",
       "attribution": "Photograph supplied to Congregation Tifereth Israel; photographer unknown.",
@@ -4661,7 +4661,19 @@
           "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-THM.jpg"
         }
       ],
-      "thumbnailStatus": "gallery-preview-uses-enhanced-couple-photo"
+      "thumbnailStatus": "gallery-preview-uses-enhanced-couple-photo",
+      "identifications": [
+        {
+          "name": "Robert Hasday",
+          "role": "CTI founder",
+          "status": "identified-by-congregant"
+        },
+        {
+          "name": "Fannie Havian",
+          "relationship": "wife of Robert Hasday",
+          "status": "identified-by-congregant"
+        }
+      ]
     },
     {
       "id": "CTI-040",
