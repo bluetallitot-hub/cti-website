@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "nextRecordNumber": 40,
+  "nextRecordNumber": 41,
   "items": [
     {
       "id": "CTI-001",
@@ -4662,6 +4662,84 @@
         }
       ],
       "thumbnailStatus": "gallery-preview-uses-enhanced-couple-photo"
+    },
+    {
+      "id": "CTI-040",
+      "collection": "gallery",
+      "status": "pending-assets",
+      "title": "Congregation group photograph with Joseph Gibeley",
+      "caption": "Eight people pictured together in front of a stone wall. Joseph Gibeley, a former president of Congregation Tifereth Israel, is at the far right. The other seven people have not yet been identified.",
+      "date": "Date unknown",
+      "description": "Congregant-supplied historical group photograph. Identification of the seven other individuals is invited. The original photograph is preserved unmodified; the alternate versions use only rotation, cropping, and modest color and contrast correction, with no AI-generated reconstruction.",
+      "source": "Congregant-supplied historical photograph; photographer, date, occasion, and seven other identities unverified",
+      "attribution": "Courtesy of the Congregation Tifereth Israel historical photograph collection.",
+      "archiveAcknowledgment": "From the personal collections of CTI congregants.",
+      "originalImage": "assets/heritage/CTI-040/CTI-040-ORG-1.jpg",
+      "archiveImage": "assets/heritage/CTI-040/CTI-040-ENH-1.jpg",
+      "restoredImage": "assets/heritage/CTI-040/CTI-040-ENH-1.jpg",
+      "thumbnailImage": "assets/heritage/CTI-040/CTI-040-THM-1.jpg",
+      "indexImage": "assets/heritage/CTI-040/CTI-040-THM-1.jpg",
+      "imageVersions": [
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/heritage/CTI-040/CTI-040-ORG-1.jpg",
+          "note": "Unmodified user-supplied image, including original orientation and borders"
+        },
+        {
+          "type": "CRO",
+          "version": 1,
+          "path": "assets/heritage/CTI-040/CTI-040-CRO-1.jpg",
+          "note": "Conventional rotation and crop only; no generative processing"
+        },
+        {
+          "type": "ENH",
+          "version": 1,
+          "path": "assets/heritage/CTI-040/CTI-040-ENH-1.jpg",
+          "note": "Conservative color, contrast and brightness adjustment; no generative processing"
+        },
+        {
+          "type": "THM",
+          "version": 1,
+          "path": "assets/heritage/CTI-040/CTI-040-THM-1.jpg",
+          "note": "800 × 600 gallery thumbnail, entire group retained"
+        }
+      ],
+      "relatedLeaderId": "joseph-gibely",
+      "relatedBiographyId": "CTI-BIO-025",
+      "identifications": [
+        {
+          "position": "far right",
+          "personId": "joseph-gibely",
+          "name": "Joseph Gibeley",
+          "status": "identified-by-congregant"
+        }
+      ],
+      "unidentifiedCount": 7,
+      "editorialStatus": "awaiting-upload",
+      "preservationStatus": "original-and-nongenerative-derivatives-prepared-for-upload",
+      "files": [
+        {
+          "type": "ORG",
+          "path": "assets/heritage/CTI-040/CTI-040-ORG-1.jpg",
+          "status": "awaiting-upload"
+        },
+        {
+          "type": "CRO",
+          "path": "assets/heritage/CTI-040/CTI-040-CRO-1.jpg",
+          "status": "awaiting-upload"
+        },
+        {
+          "type": "ENH",
+          "path": "assets/heritage/CTI-040/CTI-040-ENH-1.jpg",
+          "status": "awaiting-upload"
+        },
+        {
+          "type": "THM",
+          "path": "assets/heritage/CTI-040/CTI-040-THM-1.jpg",
+          "status": "awaiting-upload"
+        }
+      ]
     }
   ],
   "assetPolicy": {
