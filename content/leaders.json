@@ -536,7 +536,7 @@
       ],
       "introduction": "Charter member of Congregation Tifereth Israel.",
       "biography": "",
-      "photo": null,
+      "photo": "assets/new/CTI-BIO-016-THM.jpg",
       "role": null,
       "serviceYears": null,
       "links": {
@@ -547,7 +547,18 @@
       },
       "meldathoId": "yahrzeit-roberthasday-kislev-24",
       "ctiId": "CTI-BIO-016",
-      "thumbnailStatus": "no-original"
+      "thumbnailStatus": "published",
+      "originalPhoto": "assets/new/CTI-BIO-016-ORG-1.jpg",
+      "enhancedPhoto": "assets/new/CTI-BIO-016-ENH-1.png",
+      "aiPortrait": "assets/new/CTI-BIO-016-PORTRAIT-AI-1.png",
+      "thumbnailSpecification": {
+        "width": 600,
+        "height": 800,
+        "aspectRatio": "3:4",
+        "format": "jpeg",
+        "padding": false
+      },
+      "photoNote": "Thumbnail and individual portrait are AI-enhanced reconstructions from an original historical photograph; retain the original source image."
     },
     {
       "id": "joseph-havian",
