@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "nextRecordNumber": 39,
+  "nextRecordNumber": 40,
   "items": [
     {
       "id": "CTI-001",
@@ -4601,6 +4601,66 @@
       "editorialStatusLabel": "Approved for publication — obscured passages retained as marked",
       "providedBy": "",
       "archiveAcknowledgment": ""
+    },
+    {
+      "id": "CTI-039",
+      "collection": "gallery",
+      "status": "active",
+      "title": "Robert Hasday and an unidentified woman — historical studio portrait",
+      "caption": "Robert Hasday, a founding member of Congregation Tifereth Israel, pictured with an unidentified woman in a historical studio portrait.",
+      "date": "Date unknown",
+      "description": "Historical studio portrait identified by the congregation as Robert Hasday with an unidentified woman. The woman's identity and photograph date have not been established. The original scan is preserved alongside AI-enhanced versions.",
+      "source": "Congregant-supplied historical photograph; original photographer and date unverified",
+      "citation": "",
+      "attribution": "Photograph supplied to Congregation Tifereth Israel; photographer unknown.",
+      "archiveAcknowledgment": "From the personal collections of CTI congregants.",
+      "originalImage": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ORG-1.jpg",
+      "archiveImage": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ENH-1.png",
+      "restoredImage": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ENH-1.png",
+      "thumbnailImage": "assets/biographies/CTI-BIO-016/CTI-BIO-016-THM.jpg",
+      "indexImage": "assets/biographies/CTI-BIO-016/CTI-BIO-016-THM.jpg",
+      "imageVersions": [
+        {
+          "type": "ENH",
+          "version": 1,
+          "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ENH-1.png",
+          "note": "AI-enhanced and colorized reconstruction; not an unaltered historical photograph"
+        },
+        {
+          "type": "ORG",
+          "version": 1,
+          "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ORG-1.jpg",
+          "note": "Original user-supplied scan"
+        },
+        {
+          "type": "PORTRAIT-AI",
+          "version": 1,
+          "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-PORTRAIT-AI-1.png",
+          "note": "AI-generated individual portrait derived from historical image; reconstructed details"
+        }
+      ],
+      "enhancementDisclosure": "AI-enhanced and reconstructed images; the original historical scan is retained for reference.",
+      "relatedLeaderId": "robert-hasday",
+      "relatedBiographyId": "CTI-BIO-016",
+      "editorialStatus": "published",
+      "files": [
+        {
+          "type": "ORG",
+          "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ORG-1.jpg"
+        },
+        {
+          "type": "ENH",
+          "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ENH-1.png"
+        },
+        {
+          "type": "PORTRAIT-AI",
+          "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-PORTRAIT-AI-1.png"
+        },
+        {
+          "type": "THM",
+          "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-THM.jpg"
+        }
+      ]
     }
   ],
   "assetPolicy": {
