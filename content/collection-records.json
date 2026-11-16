@@ -4614,22 +4614,22 @@
       "citation": "",
       "attribution": "Photograph supplied to Congregation Tifereth Israel; photographer unknown.",
       "archiveAcknowledgment": "From the personal collections of CTI congregants.",
-      "originalImage": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ORG-1.jpg",
-      "archiveImage": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ENH-1.png",
-      "restoredImage": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ENH-1.png",
-      "thumbnailImage": "assets/biographies/CTI-BIO-016/CTI-BIO-016-THM.jpg",
-      "indexImage": "assets/biographies/CTI-BIO-016/CTI-BIO-016-THM.jpg",
+      "originalImage": "assets/heritage/CTI-039/CTI-039-ORG-1.jpg",
+      "archiveImage": "assets/heritage/CTI-039/CTI-039-ENH-1.png",
+      "restoredImage": "assets/heritage/CTI-039/CTI-039-ENH-1.png",
+      "thumbnailImage": "assets/heritage/CTI-039/CTI-039-ENH-1.png",
+      "indexImage": "assets/heritage/CTI-039/CTI-039-ENH-1.png",
       "imageVersions": [
         {
           "type": "ENH",
           "version": 1,
-          "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ENH-1.png",
+          "path": "assets/heritage/CTI-039/CTI-039-ENH-1.png",
           "note": "AI-enhanced and colorized reconstruction; not an unaltered historical photograph"
         },
         {
           "type": "ORG",
           "version": 1,
-          "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ORG-1.jpg",
+          "path": "assets/heritage/CTI-039/CTI-039-ORG-1.jpg",
           "note": "Original user-supplied scan"
         },
         {
@@ -4646,11 +4646,11 @@
       "files": [
         {
           "type": "ORG",
-          "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ORG-1.jpg"
+          "path": "assets/heritage/CTI-039/CTI-039-ORG-1.jpg"
         },
         {
           "type": "ENH",
-          "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ENH-1.png"
+          "path": "assets/heritage/CTI-039/CTI-039-ENH-1.png"
         },
         {
           "type": "PORTRAIT-AI",
@@ -4660,7 +4660,8 @@
           "type": "THM",
           "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-THM.jpg"
         }
-      ]
+      ],
+      "thumbnailStatus": "gallery-preview-uses-enhanced-couple-photo"
     }
   ],
   "assetPolicy": {
