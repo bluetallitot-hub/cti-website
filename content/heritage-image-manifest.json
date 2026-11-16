@@ -375,5 +375,22 @@
       "type": "ORG",
       "number": 1
     }
+  ],
+  "CTI-039": [
+    {
+      "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ENH-1.png",
+      "type": "ENH",
+      "number": 1
+    },
+    {
+      "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-ORG-1.jpg",
+      "type": "ORG",
+      "number": 1
+    },
+    {
+      "path": "assets/biographies/CTI-BIO-016/CTI-BIO-016-PORTRAIT-AI-1.png",
+      "type": "PORTRAIT-AI",
+      "number": 1
+    }
   ]
 }
