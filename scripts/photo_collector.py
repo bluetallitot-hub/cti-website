@@ -10,7 +10,7 @@ from googleapiclient.http import MediaInMemoryUpload
 
 SHEET_ID = "1ve2v3XZQDXR7vWYFf-DAnciSQ9OhYofdjHbYjpXbv00"
 FOLDER_ID = "14XQDDeJW_3W_qXYiVPovwLff-e_FnJqA"
-SCOPES = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.file"]
+SCOPES = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
 MAX_BYTES = 15 * 1024 * 1024
 MAX_FILES = 12
 HEADERS = {"User-Agent": "CTI-private-memorial-photo-collector/1.0 (contact CTI website administrator)"}
@@ -121,9 +121,9 @@ def main():
             except Exception as exc:
                 results.append(f"UNSAVED: {name} {url} — {str(exc)[:180]}")
     report = {"dry_run":dry_run,"reviewed_direct_urls":reviewed,"new_files_saved":saved,"existing_folder_files":len(existing),"results":results}
-    print(json.dumps(report,indent=2))
+    print(json.dumps({k:v for k,v in report.items() if k != "results"},indent=2))
     with open(os.environ.get("GITHUB_STEP_SUMMARY", "/tmp/cti-photo-summary.txt"),"a") as out:
-        out.write("## CTI private photo collector\\n\\n" + "\\n".join("- "+line for line in results) + f"\\n\\nNew files: {saved}; dry run: {dry_run}\\n")
+        out.write(f"## CTI private photo collector\\n\\nReviewed URLs: {reviewed}; new private files: {saved}; dry run: {dry_run}. Individual names and URLs are intentionally omitted from public Actions logs.\\n")
 
 if __name__ == "__main__":
     main()
