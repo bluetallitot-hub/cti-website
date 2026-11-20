@@ -130,6 +130,21 @@
     },
     {
       "book": 1,
+      "portion": 6,
+      "year": 2026,
+      "name": "Toledot",
+      "date": "2026-11-13",
+      "description": "Rivka's choices and leadership shape the future of Abraham's family.",
+      "title": "Rebecca: The CEO of Abraham's Family",
+      "eyebrow": "D’var Torah · Toledot · November 2026",
+      "byline": "A Reader’s Edition · Rabbi Phillip Blue",
+      "category": "weekly",
+      "podcast": null,
+      "legacyIds": [],
+      "status": "unpublished"
+    },
+    {
+      "book": 1,
       "portion": 7,
       "year": 2026,
       "name": "Vayetzei",
