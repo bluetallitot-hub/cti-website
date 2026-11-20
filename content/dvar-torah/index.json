@@ -139,9 +139,9 @@
       "eyebrow": "D’var Torah · Toledot · November 2026",
       "byline": "A Reader’s Edition · Rabbi Phillip Blue",
       "category": "weekly",
-      "podcast": null,
+      "podcast": "https://rss.com/podcasts/the-blue-thread/3317939",
       "legacyIds": [],
-      "status": "unpublished"
+      "status": "published"
     },
     {
       "book": 1,
@@ -154,9 +154,9 @@
       "eyebrow": "D’var Torah · Vayetzei · November 2026",
       "byline": "A Reader’s Edition · Rabbi Phillip Blue",
       "category": "weekly",
-      "podcast": null,
+      "podcast": "https://rss.com/podcasts/the-blue-thread/3339460",
       "legacyIds": [],
-      "status": "unpublished"
+      "status": "published"
     },
     {
       "holidayCode": "RH1",
