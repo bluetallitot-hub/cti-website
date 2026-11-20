@@ -129,6 +129,21 @@
       "status": "published"
     },
     {
+      "book": 1,
+      "portion": 7,
+      "year": 2026,
+      "name": "Vayetzei",
+      "date": "2026-11-20",
+      "description": "Yaakov and Lavan part ways, naming the same covenant mound in different languages; a reflection on uncertainty, humility, and preserving family relationships.",
+      "title": "Different Languages, Same Table",
+      "eyebrow": "D’var Torah · Vayetzei · November 2026",
+      "byline": "A Reader’s Edition · Rabbi Phillip Blue",
+      "category": "weekly",
+      "podcast": null,
+      "legacyIds": [],
+      "status": "unpublished"
+    },
+    {
       "holidayCode": "RH1",
       "year": 2026,
       "name": "Pakad",
