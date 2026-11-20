@@ -16,14 +16,17 @@ function score(item,ep){
  const contextual=[...topic].some(w=>details.has(w));
  return distinctive&&coverage>=0.5&&(common.length>=2||contextual)?0.78+0.1*coverage:0;
 }
+const APPLE_SHOW='https://podcasts.apple.com/us/podcast/the-blue-thread/id6821008829';
+function preferred(ep){return ep.appleUrl||APPLE_SHOW}
 function match(item,episodes){
  const candidates=episodes.map(ep=>({ep,score:score(item,ep)})).sort((a,b)=>b.score-a.score);
- if(candidates[0]?.score>=0.78&&(candidates.length===1||candidates[0].score-candidates[1].score>0.12))return candidates[0].ep.url;
+ if(candidates[0]?.score>=0.78&&(candidates.length===1||candidates[0].score-candidates[1].score>0.12))return preferred(candidates[0].ep);
  return null;
 }
 async function load(){
  if(!promise)promise=fetch('content/podcast-episodes.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Podcast catalog unavailable');return r.json()}).then(d=>d.episodes||[]).catch(()=>[]);
  return promise;
 }
-g.CTIPodcast={load,match,link:async item=>match(item,await load())||item.podcast||null};
+function fallback(url){if(!url)return null;if(/^https:\/\/podcasts\.apple\.com\//.test(url))return url;if(/^https:\/\/rss\.com\/podcasts\/the-blue-thread\//.test(url))return APPLE_SHOW;return url}
+g.CTIPodcast={load,match,link:async item=>match(item,await load())||fallback(item.podcast)};
 })(window);
