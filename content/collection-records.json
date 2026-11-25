@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "nextRecordNumber": 41,
+  "nextRecordNumber": 42,
   "items": [
     {
       "id": "CTI-001",
@@ -4752,6 +4752,187 @@
           "status": "awaiting-upload"
         }
       ]
+    },
+    {
+      "id": "CTI-041",
+      "collection": "archive",
+      "status": "draft",
+      "title": "Sephardic Heritage Shabbat at Congregation Shirat Hayam",
+      "date": "2026-11-20",
+      "endDate": "2026-11-21",
+      "description": "Congregation Shirat Hayam welcomed Congregation Tifereth Israel for Sephardic Heritage Shabbat on November 20–21, 2026. The supplied photographs document Rabbi Ragozin welcoming Rabbi Blue and the Sephardic Torah, Rabbi Kosovske and Janet celebrating their ninth anniversary, and members of both congregations gathering around the Torah. The flyer advertised guest musician Yoni Battat, musical services, dinner and educational programming. The source also notes Doris Hershoff (CTI), not pictured.",
+      "source": "User-supplied event documentation PDF, page 1",
+      "citation": "https://www.youtube.com/watch?v=VrA4zrXPloE",
+      "originalFilenames": [
+        "2026 11 20:21 CSH Sephardic Heritage Shabbat  .pdf"
+      ],
+      "sourcePage": 1,
+      "assets": [
+        {
+          "id": "PDF-1",
+          "role": "source-document",
+          "path": "assets/heritage/CTI-041/CTI-041-PDF-1.pdf",
+          "reviewStatus": "unreviewed"
+        },
+        {
+          "id": "IMG-1",
+          "role": "original-photo",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-1.jpg",
+          "caption": "(Left to right) Rabbi Ragozin (CSH) welcomes Rabbi Blue (CTI) & Sephardic Torah.",
+          "source": "Embedded image in supplied PDF, page 1",
+          "reviewStatus": "unreviewed"
+        },
+        {
+          "id": "IMG-2",
+          "role": "original-photo",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-2.jpg",
+          "caption": "(Left to right) Janet & Rabbi Kosovske (CTI Rabbi Emeritus) celebrate their nineth anniversary, Rabbi Ragozin & Sephardic Torah.",
+          "source": "Embedded image in supplied PDF, page 1",
+          "reviewStatus": "unreviewed"
+        },
+        {
+          "id": "IMG-3",
+          "role": "original-photo",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-3.jpg",
+          "caption": "(Left to right) Dr. Mark Messenger, Jerry & Joanne Pressman (CTI), Rabbi Ragozin (CSH) & Sephardic Torah, Marc Winer (CSH), Guest and Dr. Howard Abrams (CSH).",
+          "source": "Embedded image in supplied PDF, page 1",
+          "reviewStatus": "unreviewed"
+        },
+        {
+          "id": "IMG-4",
+          "role": "original-photo",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-4.jpg",
+          "caption": "CTI Members: Rabbi Kosovske, Harvey & Diane Elefson (CTI) and Leslie Emack (CSH&CTI).",
+          "source": "Embedded image in supplied PDF, page 1",
+          "reviewStatus": "unreviewed"
+        },
+        {
+          "id": "IMG-5",
+          "role": "original-photo",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-5.jpg",
+          "caption": "(Left to right) Dr. Mark Messner, Barry Lischinsky (CSH&CTI), Sephardic Torah, Milton Laub (CSH) and Dr. Howard Abrams.",
+          "source": "Embedded image in supplied PDF, page 1",
+          "reviewStatus": "unreviewed"
+        },
+        {
+          "id": "IMG-6",
+          "role": "supporting-document",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-6.jpg",
+          "caption": "Event flyer (supporting document).",
+          "source": "Embedded image in supplied PDF, page 1",
+          "reviewStatus": "unreviewed"
+        },
+        {
+          "id": "THM-1",
+          "role": "thumbnail",
+          "path": "assets/heritage/CTI-041/CTI-041-THM-1.jpg",
+          "derivedFromAssetId": "IMG-1",
+          "reviewStatus": "unreviewed"
+        }
+      ],
+      "archivePresentation": {
+        "sourceAssetIds": [
+          "PDF-1"
+        ],
+        "relatedGalleryPhotoAssetIds": [
+          "IMG-1",
+          "IMG-2",
+          "IMG-3",
+          "IMG-4",
+          "IMG-5"
+        ],
+        "thumbnailAssetId": "THM-1"
+      },
+      "galleryPresentations": [
+        {
+          "id": "CTI-041-G1",
+          "displayAssetId": "IMG-1",
+          "originalAssetId": "IMG-1",
+          "caption": "(Left to right) Rabbi Ragozin (CSH) welcomes Rabbi Blue (CTI) & Sephardic Torah.",
+          "linkedArchiveRecordId": "CTI-041"
+        },
+        {
+          "id": "CTI-041-G2",
+          "displayAssetId": "IMG-2",
+          "originalAssetId": "IMG-2",
+          "caption": "(Left to right) Janet & Rabbi Kosovske (CTI Rabbi Emeritus) celebrate their nineth anniversary, Rabbi Ragozin & Sephardic Torah.",
+          "linkedArchiveRecordId": "CTI-041"
+        },
+        {
+          "id": "CTI-041-G3",
+          "displayAssetId": "IMG-3",
+          "originalAssetId": "IMG-3",
+          "caption": "(Left to right) Dr. Mark Messenger, Jerry & Joanne Pressman (CTI), Rabbi Ragozin (CSH) & Sephardic Torah, Marc Winer (CSH), Guest and Dr. Howard Abrams (CSH).",
+          "linkedArchiveRecordId": "CTI-041"
+        },
+        {
+          "id": "CTI-041-G4",
+          "displayAssetId": "IMG-4",
+          "originalAssetId": "IMG-4",
+          "caption": "CTI Members: Rabbi Kosovske, Harvey & Diane Elefson (CTI) and Leslie Emack (CSH&CTI).",
+          "linkedArchiveRecordId": "CTI-041"
+        },
+        {
+          "id": "CTI-041-G5",
+          "displayAssetId": "IMG-5",
+          "originalAssetId": "IMG-5",
+          "caption": "(Left to right) Dr. Mark Messner, Barry Lischinsky (CSH&CTI), Sephardic Torah, Milton Laub (CSH) and Dr. Howard Abrams.",
+          "linkedArchiveRecordId": "CTI-041"
+        }
+      ],
+      "files": [
+        {
+          "type": "PDF",
+          "filename": "CTI-041-PDF-1.pdf",
+          "path": "assets/heritage/CTI-041/CTI-041-PDF-1.pdf",
+          "status": "awaiting-upload"
+        },
+        {
+          "type": "IMG",
+          "filename": "CTI-041-IMG-1.jpg",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-1.jpg",
+          "status": "awaiting-upload"
+        },
+        {
+          "type": "IMG",
+          "filename": "CTI-041-IMG-2.jpg",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-2.jpg",
+          "status": "awaiting-upload"
+        },
+        {
+          "type": "IMG",
+          "filename": "CTI-041-IMG-3.jpg",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-3.jpg",
+          "status": "awaiting-upload"
+        },
+        {
+          "type": "IMG",
+          "filename": "CTI-041-IMG-4.jpg",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-4.jpg",
+          "status": "awaiting-upload"
+        },
+        {
+          "type": "IMG",
+          "filename": "CTI-041-IMG-5.jpg",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-5.jpg",
+          "status": "awaiting-upload"
+        },
+        {
+          "type": "IMG",
+          "filename": "CTI-041-IMG-6.jpg",
+          "path": "assets/heritage/CTI-041/CTI-041-IMG-6.jpg",
+          "status": "awaiting-upload"
+        },
+        {
+          "type": "THM",
+          "filename": "CTI-041-THM-1.jpg",
+          "path": "assets/heritage/CTI-041/CTI-041-THM-1.jpg",
+          "status": "awaiting-upload"
+        }
+      ],
+      "editorialStatus": "awaiting-upload",
+      "preservationStatus": "awaiting-canonical-drive-and-github-upload",
+      "notes": "Original captions preserved; Mark Messenger / Mark Messner spelling discrepancy unresolved. Advertised program not independently verified. Asset paths are planned, not uploaded."
     }
   ],
   "assetPolicy": {
